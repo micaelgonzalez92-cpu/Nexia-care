@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nexia Care — Diagnóstico</title>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:0 auto;padding:24px;background:#0b1020;color:#eef2ff}
+.card{background:#151c33;border:1px solid #2b365d;border-radius:18px;padding:24px}
+button{display:block;width:100%;margin:10px 0;padding:14px;border:0;border-radius:12px;background:#536dfe;color:white;font-weight:700;cursor:pointer}
+.muted{color:#aab4d6}.hidden{display:none}.tag{display:inline-block;padding:6px 10px;border-radius:999px;background:#263052;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="tag">NEXIA CARE · MVP 0.1</div>
+<h1>¿Qué le ocurre a tu De’Longhi Magnifica?</h1>
+<p class="muted">Responde unas preguntas y te diremos qué comprobar antes de gastar dinero.</p>
+<div id="app"></div>
+</div>
+<script>
+const app=document.getElementById('app');
+const state={model:null,symptom:null};
+function render(){
+ if(!state.model){app.innerHTML='<h2>1. Tu modelo</h2><button onclick="pickModel(\'ECAM21/22.110\')">Magnifica S · ECAM21/22.110</button><button onclick="pickModel(\'unknown\')">No lo sé</button>';return}
+ if(!state.symptom){app.innerHTML='<h2>2. ¿Qué ocurre?</h2>'+['No sale café','Sale muy poco / gotea','Café aguado','Café frío','No hace espuma','Luz CALC','Fuga de agua','Alarma / no sé qué ocurre'].map((x,i)=>'<button onclick="pickSymptom('+i+')">'+x+'</button>').join('');return}
+ const advice=[
+ 'Comprueba primero el circuito de agua y si la máquina hace ruido. Si no hay flujo, no compres piezas a ciegas.',
+ 'Primero descalcificación y limpieza del grupo. Si persiste, revisar molienda/configuración antes de comprar piezas.',
+ 'Comprueba molienda, limpieza y mantenimiento. Si el problema aparece en todas las tazas, pasa al siguiente diagnóstico.',
+ 'Comprueba si también están fríos el agua y el vapor. Si hay avisos o no recupera temperatura, servicio técnico.',
+ 'Comprueba limpieza del sistema de leche y que el circuito esté correctamente montado.',
+ 'Si hace tiempo que no descalcificas, empieza por mantenimiento. Si ya lo hiciste recientemente, revisa el procedimiento antes de comprar.',
+ 'La ubicación de la fuga cambia completamente el diagnóstico. No compres una pieza sin identificar el punto de fuga.',
+ 'Necesitamos una comprobación adicional. Mejor servicio que comprar una pieza por intuición.'
+ ][state.symptom];
+ app.innerHTML='<h2>3. Primera acción</h2><p>'+advice+'</p><p class="muted">Modelo: '+state.model+'</p><button onclick="reset()">Empezar de nuevo</button>';
+}
+function pickModel(x){state.model=x;render()}
+function pickSymptom(x){state.symptom=x;render()}
+function reset(){state.model=null;state.symptom=null;render()}
+render();
+</script>
+</body>
+</html>
