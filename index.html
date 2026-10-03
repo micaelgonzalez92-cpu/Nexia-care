@@ -7,20 +7,21 @@
 <style>
 body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:0 auto;padding:24px;background:#0b1020;color:#eef2ff}
 .card{background:#151c33;border:1px solid #2b365d;border-radius:18px;padding:24px}
-button{display:block;width:100%;margin:10px 0;padding:14px;border:0;border-radius:12px;background:#536dfe;color:white;font-weight:700;cursor:pointer}
+button{display:block;width:100%;margin:10px 0;padding:14px;border:0;border-radius:12px;background:#536dfe;color:white;font-weight:700;cursor:pointer}.command{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:18px 0}.command button{margin:0;background:#202a49}.status{padding:12px;border:1px solid #2b365d;border-radius:12px;margin:12px 0;color:#cbd4f4;font-size:14px}
 .muted{color:#aab4d6}.hidden{display:none}.tag{display:inline-block;padding:6px 10px;border-radius:999px;background:#263052;margin-bottom:12px}.hud{margin:14px 0 20px}.hudrow{display:flex;justify-content:space-between;font-size:12px;color:#aab4d6;margin-bottom:7px}.bar{height:10px;background:#252e4d;border-radius:999px;overflow:hidden}.fill{height:100%;background:#536dfe;border-radius:999px;transition:width .25s ease}.xp{margin-top:8px;font-size:12px;color:#aab4d6}
 </style>
 </head>
 <body>
 <div class="card">
-<div class="tag">NEXIA CARE · MVP 0.2</div>
+<div class="tag">NEXIA CARE · MVP 0.3</div><div class="command"><button onclick="command('mission')">🎯 MISIÓN</button><button onclick="command('report')">📊 INFORME</button><button onclick="command('economy')">💰 ECONOMÍA</button><button onclick="command('tasks')">👤 MIS TAREAS</button></div><div id="command"></div>
 <h1>¿Qué le ocurre a tu De’Longhi Magnifica?</h1>
 <p class="muted">Responde unas preguntas y te diremos qué comprobar antes de gastar dinero.</p>
 <div id="app"></div>
 </div>
 <script>
-const app=document.getElementById('app');
+const app=document.getElementById('app'); const commandBox=document.getElementById('command');
 const state={model:null,symptom:null,answers:{}};
+function command(x){const messages={mission:"🎯 MISIÓN ACTUAL: completar el diagnóstico sin comprar piezas a ciegas.",report:"📊 INFORME: MVP 0.3 · validación · €0 gastados · 0 extracciones.",economy:"💰 ECONOMÍA: capital gastado €0 · inventario €0 · ingresos €0 · beneficio €0.",tasks:"👤 TAREAS: ninguna imprescindible ahora."};commandBox.innerHTML='<div class="status">'+messages[x]+'</div>'}
 function progress(){return state.symptom?3:state.model?2:1}
 function hud(){const p=progress();return '<div class="hud"><div class="hudrow"><span>PROGRESO DE MISIÓN</span><strong>'+p+'/3</strong></div><div class="bar"><div class="fill" style="width:'+(p/3*100)+'%"></div></div><div class="xp">NEXIA CARE · diagnóstico en curso</div></div>'}
 function render(){
