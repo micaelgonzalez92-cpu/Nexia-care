@@ -13,19 +13,22 @@ button{display:block;width:100%;margin:10px 0;padding:14px;border:0;border-radiu
 </head>
 <body>
 <div class="card">
-<div class="tag">NEXIA CARE · MVP 0.1</div>
+<div class="tag">NEXIA CARE · MVP 0.2</div>
 <h1>¿Qué le ocurre a tu De’Longhi Magnifica?</h1>
 <p class="muted">Responde unas preguntas y te diremos qué comprobar antes de gastar dinero.</p>
 <div id="app"></div>
 </div>
 <script>
 const app=document.getElementById('app');
-const state={model:null,symptom:null};
+const state={model:null,symptom:null,answers:{}};
 function render(){
  if(!state.model){app.innerHTML='<h2>1. Tu modelo</h2><button onclick="pickModel(\'ECAM21/22.110\')">Magnifica S · ECAM21/22.110</button><button onclick="pickModel(\'unknown\')">No lo sé</button>';return}
  if(!state.symptom){app.innerHTML='<h2>2. ¿Qué ocurre?</h2>'+['No sale café','Sale muy poco / gotea','Café aguado','Café frío','No hace espuma','Luz CALC','Fuga de agua','Alarma / no sé qué ocurre'].map((x,i)=>'<button onclick="pickSymptom('+i+')">'+x+'</button>').join('');return}
+ const s=state.symptom;
+ const q={0:['¿La máquina hace ruido al preparar café?','flow'],1:['¿La has descalcificado recientemente?','descaled'],2:['¿El café sale aguado en todas las preparaciones?','all'],3:['¿También salen fríos el agua caliente o el vapor?','hot'],5:['¿La has descalcificado recientemente?','descaled'],6:['¿Puedes identificar claramente de dónde sale el agua?','location']}[s];
+ if(q && state.answers[q[1]]===undefined){app.innerHTML='<h2>3. Comprobación</h2><p>'+q[0]+'</p><button onclick="answer(\''+q[1]+'\',\'yes\')">Sí</button><button onclick="answer(\''+q[1]+'\',\'no\')">No / no lo sé</button>';return}
  const advice=[
- 'Comprueba primero el circuito de agua y si la máquina hace ruido. Si no hay flujo, no compres piezas a ciegas.',
+ state.answers.flow==='no'?'Comprueba depósito, agua y circuito. Si sigue sin bombear, servicio técnico.':'Comprueba suministro y limpieza. Si el agua circula pero no sale café, revisa grupo y molienda antes de comprar.',
  'Primero descalcificación y limpieza del grupo. Si persiste, revisar molienda/configuración antes de comprar piezas.',
  'Comprueba molienda, limpieza y mantenimiento. Si el problema aparece en todas las tazas, pasa al siguiente diagnóstico.',
  'Comprueba si también están fríos el agua y el vapor. Si hay avisos o no recupera temperatura, servicio técnico.',
@@ -38,6 +41,7 @@ function render(){
 }
 function pickModel(x){state.model=x;render()}
 function pickSymptom(x){state.symptom=x;render()}
+function answer(k,v){state.answers[k]=v;render()}
 function reset(){state.model=null;state.symptom=null;render()}
 render();
 </script>
