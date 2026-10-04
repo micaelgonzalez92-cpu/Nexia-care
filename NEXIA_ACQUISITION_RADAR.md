@@ -33,5 +33,26 @@ NEXIA may research public cases and prepare individualized outreach. It must not
 EXP-001B — real-user diagnostic test.
 Success requires an actual person to use NEXIA Care and produce measurable evidence.
 
+
+
+## New high-priority candidate — 2026-10-05 scan
+
+5. Reddit / r/DeLonghi and r/Delonghidedica — 13 Aug 2026 — owner explicitly identifies **De'Longhi Magnifica S ECAM22.110.B**. Reports that for ~2 weeks the machine started grinding roughly 30–40% less coffee with the same settings/beans, producing weak coffee and irregular pucks. The owner says it was sent to service and the service could not identify a problem, and asks whether others have seen it. This is a stronger recruitment candidate than the older solved cases because it combines exact model + concrete symptom + recent activity + unresolved status. Source: Reddit threads returned by current scan.
+
+### Candidate status
+- Rank: **A**
+- Model: ECAM22.110.B
+- Problem: reduced grind dose / weak coffee / irregular pucks
+- Publicly unresolved: **yes, according to the post**
+- NEXIA Care fit: **high**
+- Contact authorized: **NO — Human Gate remains required**
+- Message prepared: **yes, but not sent**
+
+### Prepared outreach
+Hola. Estoy probando una herramienta gratuita que ayuda a diagnosticar problemas concretos de cafeteras De'Longhi Magnifica. He visto tu caso con la ECAM22.110.B y el problema de que empezó a moler bastante menos café y dejó los posos irregulares. Estoy probando el diagnóstico precisamente con casos reales y no hace falta comprar nada ni dar datos personales. Si te apetece, puedo pasarte la herramienta para que compruebes si te aporta algo.
+
+### Falsification / caution
+The Reddit post is evidence of a real problem report, not evidence that the person wants contact or that NEXIA Care will solve it. Do not DM/post/impersonate without an authorized external-contact path.
+
 ## Next zero-cost action
-Continue scanning for recent unresolved exact-model cases and prepare a small shortlist. Do not send messages without authorization.
+Continue scanning for recent unresolved exact-model cases, maintain the shortlist, and prepare individualized outreach. Do not send messages without authorization.
