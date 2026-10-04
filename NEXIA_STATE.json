@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -39,21 +39,35 @@
     "stage": "VETA / VALIDACIÓN",
     "evidence_level": "SEÑAL + MVP; evidencia de usuario real = 0"
   },
-  "evidence_engine": {
-    "status": "ACTIVE",
-    "rule": "Toda afirmación operativa relevante debe distinguir HECHO VERIFICADO, ESTIMACIÓN, HIPÓTESIS o RECOMENDACIÓN.",
-    "record_fields": ["source", "date", "claim", "what_it_proves", "what_it_does_not_prove", "confidence", "next_falsification"]
-  },
   "participant_acquisition_engine": {
     "status": "ACTIVE_BY_POLICY",
     "objective": "Reducir al mínimo el trabajo manual de Kael para conseguir participantes reales sin spam, suplantación, gasto ni contacto no autorizado.",
-    "pipeline": ["discover_public_case", "verify_model_and_problem", "prepare_individualized_message", "human_gate_for_external_contact", "run_test", "capture_evidence", "learn_and_repeat"],
-    "current_blocker": "External contact requires authorized human action with current capabilities."
+    "pipeline": ["discover_public_case","verify_model_and_problem","prepare_individualized_message","authorized_external_execution","run_test","capture_evidence","learn_and_repeat"],
+    "current_blocker": "No authorized Reddit execution path in current session.",
+    "ops_layer": "NEXIA_OPS_CAPABILITY_MATRIX.md"
   },
-  "learning_engine": {
-    "status": "ACTIVE",
-    "negative_learning": true,
-    "rule": "Los descartes y falsaciones se conservan como memoria para evitar repetir trabajo salvo que aparezca nueva evidencia."
+  "improvement_engine": {
+    "status": "ACTIVE_BY_POLICY",
+    "mode": "SAFE_AUTONOMOUS",
+    "objective": "Buscar y priorizar mejoras globales de NEXIA y aplicar directamente solo cambios seguros, reversibles, sin gasto ni compromiso externo.",
+    "gates": {
+      "green": "Ejecutar si es seguro, reversible, sin gasto y no altera evidencia válida.",
+      "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
+      "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
+    },
+    "last_action": "Se recuperó NEXIA_STATE.json, se investigó la capa operativa externa y se identificó una integración de navegador como vía candidata para reducir clics manuales.",
+    "next_review": "Conectar y verificar una vía autorizada de ejecución externa; mantener EXP-001B como cuello de botella comercial."
+  },
+  "external_ops": {
+    "status": "DESIGNED_NOT_CONNECTED",
+    "browser_workflow_candidate": "TinyFish",
+    "reddit_execution": "NOT_AVAILABLE",
+    "email_execution": "NOT_CONNECTED",
+    "crm_execution": "NOT_CONNECTED",
+    "analytics_execution": "NOT_CONNECTED",
+    "payments_execution": "NOT_CONNECTED",
+    "security_rule": "Prefer OAuth/official connectors; never request raw passwords in chat.",
+    "financial_rule": "Purchases, ads, subscriptions and material financial actions remain Kael-controlled."
   },
   "nexia_score": {
     "purpose": "Medir progreso por resultados reales, no por documentos, mensajes o complejidad visual.",
@@ -65,19 +79,6 @@
     "measurable_automations": 0,
     "human_time_reduced": 0,
     "reproducible_improvements": 0
-  },
-  "improvement_engine": {
-    "status": "ACTIVE_BY_POLICY",
-    "mode": "SAFE_AUTONOMOUS",
-    "objective": "Buscar y priorizar mejoras globales de NEXIA y aplicar directamente solo cambios seguros, reversibles, sin gasto ni compromiso externo.",
-    "gates": {
-      "green": "Ejecutar si es seguro, reversible, sin gasto y no altera evidencia válida.",
-      "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
-      "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
-    },
-    "priority_order": ["evidencia y demanda real", "captación de participantes/clientes", "rentabilidad", "reducción de riesgo", "automatización", "escalabilidad", "velocidad", "arquitectura"],
-    "last_action": "Se verificaron las rutas limpias NexaCare/NexaHQ, se documentó el límite del hostname personal de GitHub Pages y se creó NEXIA_INDEPENDENCE_ROADMAP.md para separar continuidad, identidad pública, runtime, operaciones y autonomía comercial.",
-    "next_review": "Verificar publicación real y avanzar hacia un runtime independiente sin gasto mientras se mantiene EXP-001B como cuello de botella comercial."
   },
   "public_interfaces": {
     "nexacare_path": "/NexaCare/",
@@ -93,7 +94,7 @@
     "notifications": "NOT_CONNECTED",
     "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS",
     "deployment": "GITHUB_PAGES_CONFIGURED; CLEAN_NEXACARE_AND_NEXAHQ_ROUTES_PRESENT; PUBLIC_RUNTIME_NOT_VERIFIED",
-    "floot": "NOT_RECOVERED_IN_CURRENT_CONTEXT",
+    "floot": "AVAILABLE_IN_CURRENT_CONTEXT",
     "continuity_layer": "ACTIVE",
     "continuity_source": "NEXIA_CONTINUITY.md",
     "session_independence": "DESIGNED"
