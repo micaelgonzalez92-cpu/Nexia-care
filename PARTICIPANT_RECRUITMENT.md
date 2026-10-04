@@ -42,15 +42,32 @@ El usuario alcanza una acción útil sin ayuda significativa.
 Abandona, necesita rescate significativo o el diagnóstico no conduce a una acción útil.
 
 ## Inteligencia de canal — 2026-10-04
-La búsqueda pública encontró una señal especialmente útil para el reclutamiento: ForoCafé (España) contiene un hilo publicado el 1 de abril de 2026 sobre una De'Longhi Magnifica S ECAM 22.110.B con un problema real de triángulo rojo/posos, y el autor confirmó que lo solucionó. Esto demuestra que existe conversación pública reciente en español alrededor del modelo exacto.
 
-Referencia pública: https://forocafe.es/foro/viewtopic.php?t=8743
+### Señal A — ForoCafé
+ForoCafé (España) contiene un hilo publicado el 1 de abril de 2026 sobre una De'Longhi Magnifica S ECAM 22.110.B con un problema real de triángulo rojo/posos. El autor confirmó posteriormente que estaba solucionado.
 
-**HECHO VERIFICADO:** existe ese hilo público reciente y el modelo coincide con el foco de EXP-001B.
+**HECHO VERIFICADO:** conversación pública reciente en español alrededor del modelo exacto.
 
-**LIMITACIÓN:** NEXIA no ha contactado al usuario ni ha enviado ningún mensaje. No se atribuye participación ni consentimiento.
+Referencia: https://forocafe.es/foro/viewtopic.php?t=8743
 
-**Siguiente experimento de canal:** usar comunidades públicas españolas relacionadas con café como fuente prioritaria de candidatos potenciales, siempre con contacto humano/autorizado y sin spam.
+### Señal B — Comunidad de cafeteras
+ForoCafé también mantiene hilos específicos sobre la Magnifica S / ECAM 22.110 y problemas de configuración, molienda y rendimiento. Un hilo recoge una consulta sobre flujo de café demasiado lento en una ECAM 22.110 y respuestas de usuarios sobre ajustes del molino. Otro hilo general recoge propietarios y compradores de Magnifica S.
+
+**HECHO VERIFICADO:** existe una segunda concentración de conversación pública relevante alrededor del mismo modelo y de problemas técnicos/configuración.
+
+### Señal C — ForoCoches
+Existe una conversación española donde propietarios hablan específicamente de la De'Longhi Magnifica S ECAM 22.110.B y de su uso doméstico.
+
+**HECHO VERIFICADO:** existe una comunidad adicional con propietarios españoles del modelo.
+
+### Limitación
+NEXIA no ha contactado con ningún usuario, no ha enviado mensajes y no atribuye participación ni consentimiento.
+
+### Hipótesis de canal
+Las comunidades públicas especializadas son un canal potencialmente más eficiente que la captación genérica porque concentran personas que ya poseen el producto y expresan dudas/problemas.
+
+### Próximo experimento de canal
+Priorizar casos públicos recientes donde el propietario haya expresado un problema concreto. Si se realiza contacto, deberá ser autorizado, relevante, individualizado y no spam.
 
 ## Siguiente paso
 Tras el primer participante, registrar el resultado y repetir hasta 3 participantes antes de declarar patrón.
