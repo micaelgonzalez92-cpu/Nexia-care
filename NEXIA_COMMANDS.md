@@ -19,6 +19,12 @@ Puedes decirlos en lenguaje natural. No necesitas memorizar una sintaxis exacta.
 - **NEXIA, riesgo** — riesgos abiertos, probabilidad/impacto cualitativos, límites y mitigaciones.
 - **NEXIA, gate** — Human Gate: gastos, compromisos o acciones irreversibles pendientes de aprobación.
 
+- **NEXIA, usuario** — estado del experimento NEXIA Care con foco en usuarios reales, feedback, fricciones y siguiente paso de validación.
+- **NEXIA, validación** — evidencia acumulada, qué está demostrado, qué sigue siendo hipótesis y qué prueba falta.
+- **NEXIA, costes** — desglose de costes reales y potenciales de la siguiente acción, antes de pedir aprobación.
+- **NEXIA, oportunidades activas** — oportunidades que siguen abiertas y por qué no han sido descartadas.
+- **NEXIA, cambios** — historial reciente de cambios aplicados a NEXIA y su motivo.
+
 ### Descubrimiento y experimentación
 - **NEXIA, radar** — oportunidades nuevas, evidencia, falsación, economía preliminar y descartes.
 - **NEXIA, experimentos** — experimentos activos/finalizados con hipótesis, acción, métrica, resultado y aprendizaje.
@@ -68,5 +74,5 @@ Este registro debe revisarse periódicamente junto con la mejora continua de NEX
 4. No crear comandos solo por estética.
 5. Registrar cambios reales en GitHub.
 
-**Versión:** 1.1
+**Versión:** 1.2
 **Última actualización:** 2026-10-04
