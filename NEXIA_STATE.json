@@ -1,7 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "updated_at": "2026-10-04",
   "project": "NEXIA CORE",
+  "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
   "phase": "VALIDACIÓN",
   "capital_eur": 0,
   "inventory_eur": 0,
@@ -37,6 +38,27 @@
     "model_focus": "De'Longhi Magnifica S / ECAM21-22.110",
     "stage": "VETA / VALIDACIÓN",
     "evidence_level": "SEÑAL + MVP; evidencia de usuario real = 0"
+  },
+  "improvement_engine": {
+    "status": "ACTIVE_BY_POLICY",
+    "mode": "SAFE_AUTONOMOUS",
+    "objective": "Buscar y priorizar mejoras globales de NEXIA y aplicar directamente solo cambios seguros, reversibles, sin gasto ni compromiso externo.",
+    "gates": {
+      "green": "Ejecutar si es seguro, reversible, sin gasto y no altera evidencia válida.",
+      "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
+      "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
+    },
+    "priority_order": [
+      "evidencia y demanda real",
+      "rentabilidad",
+      "reducción de riesgo",
+      "automatización",
+      "escalabilidad",
+      "velocidad",
+      "arquitectura"
+    ],
+    "last_action": "Se ha ampliado el modelo de NEXIA para no depender de e-commerce como único vehículo.",
+    "next_review": "En el siguiente ciclo operativo disponible."
   },
   "system": {
     "persistent_state": "PARTIAL",
