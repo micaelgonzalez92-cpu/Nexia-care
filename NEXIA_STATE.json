@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -42,28 +42,12 @@
   "evidence_engine": {
     "status": "ACTIVE",
     "rule": "Toda afirmación operativa relevante debe distinguir HECHO VERIFICADO, ESTIMACIÓN, HIPÓTESIS o RECOMENDACIÓN.",
-    "record_fields": [
-      "source",
-      "date",
-      "claim",
-      "what_it_proves",
-      "what_it_does_not_prove",
-      "confidence",
-      "next_falsification"
-    ]
+    "record_fields": ["source", "date", "claim", "what_it_proves", "what_it_does_not_prove", "confidence", "next_falsification"]
   },
   "participant_acquisition_engine": {
     "status": "ACTIVE_BY_POLICY",
     "objective": "Reducir al mínimo el trabajo manual de Kael para conseguir participantes reales sin spam, suplantación, gasto ni contacto no autorizado.",
-    "pipeline": [
-      "discover_public_case",
-      "verify_model_and_problem",
-      "prepare_individualized_message",
-      "human_gate_for_external_contact",
-      "run_test",
-      "capture_evidence",
-      "learn_and_repeat"
-    ],
+    "pipeline": ["discover_public_case", "verify_model_and_problem", "prepare_individualized_message", "human_gate_for_external_contact", "run_test", "capture_evidence", "learn_and_repeat"],
     "current_blocker": "External contact requires authorized human action with current capabilities."
   },
   "learning_engine": {
@@ -91,18 +75,9 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "priority_order": [
-      "evidencia y demanda real",
-      "captación de participantes/clientes",
-      "rentabilidad",
-      "reducción de riesgo",
-      "automatización",
-      "escalabilidad",
-      "velocidad",
-      "arquitectura"
-    ],
-    "last_action": "Se verificaron las rutas limpias NexaCare/NexaHQ y se separó el problema de identidad de producto del nombre del propietario de GitHub.",
-    "next_review": "Verificar publicación real y resolver dominio personalizado o identidad de alojamiento si se requiere eliminar por completo el identificador personal de la URL."
+    "priority_order": ["evidencia y demanda real", "captación de participantes/clientes", "rentabilidad", "reducción de riesgo", "automatización", "escalabilidad", "velocidad", "arquitectura"],
+    "last_action": "Se verificaron las rutas limpias NexaCare/NexaHQ, se documentó el límite del hostname personal de GitHub Pages y se creó NEXIA_INDEPENDENCE_ROADMAP.md para separar continuidad, identidad pública, runtime, operaciones y autonomía comercial.",
+    "next_review": "Verificar publicación real y avanzar hacia un runtime independiente sin gasto mientras se mantiene EXP-001B como cuello de botella comercial."
   },
   "public_interfaces": {
     "nexacare_path": "/NexaCare/",
