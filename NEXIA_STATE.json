@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updated_at": "2026-10-04",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -39,6 +39,49 @@
     "stage": "VETA / VALIDACIÓN",
     "evidence_level": "SEÑAL + MVP; evidencia de usuario real = 0"
   },
+  "evidence_engine": {
+    "status": "ACTIVE",
+    "rule": "Toda afirmación operativa relevante debe distinguir HECHO VERIFICADO, ESTIMACIÓN, HIPÓTESIS o RECOMENDACIÓN.",
+    "record_fields": [
+      "source",
+      "date",
+      "claim",
+      "what_it_proves",
+      "what_it_does_not_prove",
+      "confidence",
+      "next_falsification"
+    ]
+  },
+  "participant_acquisition_engine": {
+    "status": "ACTIVE_BY_POLICY",
+    "objective": "Reducir al mínimo el trabajo manual de Kael para conseguir participantes reales sin spam, suplantación, gasto ni contacto no autorizado.",
+    "pipeline": [
+      "discover_public_case",
+      "verify_model_and_problem",
+      "prepare_individualized_message",
+      "human_gate_for_external_contact",
+      "run_test",
+      "capture_evidence",
+      "learn_and_repeat"
+    ],
+    "current_blocker": "External contact requires authorized human action with current capabilities."
+  },
+  "learning_engine": {
+    "status": "ACTIVE",
+    "negative_learning": true,
+    "rule": "Los descartes y falsaciones se conservan como memoria para evitar repetir trabajo salvo que aparezca nueva evidencia."
+  },
+  "nexia_score": {
+    "purpose": "Medir progreso por resultados reales, no por documentos, mensajes o complejidad visual.",
+    "evidence_users": 0,
+    "completed_experiments": 0,
+    "validated_economics": 0,
+    "transactions": 0,
+    "repeatable_transactions": 0,
+    "measurable_automations": 0,
+    "human_time_reduced": 0,
+    "reproducible_improvements": 0
+  },
   "improvement_engine": {
     "status": "ACTIVE_BY_POLICY",
     "mode": "SAFE_AUTONOMOUS",
@@ -50,6 +93,7 @@
     },
     "priority_order": [
       "evidencia y demanda real",
+      "captación de participantes/clientes",
       "rentabilidad",
       "reducción de riesgo",
       "automatización",
@@ -57,7 +101,7 @@
       "velocidad",
       "arquitectura"
     ],
-    "last_action": "Se ha ampliado el modelo de NEXIA para no depender de e-commerce como único vehículo.",
+    "last_action": "Se activó la Torre de Control y se formalizaron Evidence Engine, Participant Acquisition Engine, aprendizaje negativo y NEXIA Score.",
     "next_review": "En el siguiente ciclo operativo disponible."
   },
   "system": {
@@ -66,7 +110,8 @@
     "telemetry": "NOT_CONNECTED",
     "notifications": "NOT_CONNECTED",
     "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS",
-    "deployment": "GITHUB_PAGES_CONFIGURED_BUT_PUBLIC_URL_REQUIRES_CURRENT_VERIFICATION"
+    "deployment": "GITHUB_PAGES_CONFIGURED_BUT_PUBLIC_URL_REQUIRES_CURRENT_VERIFICATION",
+    "floot": "NOT_RECOVERED_IN_CURRENT_CONTEXT"
   },
   "guardrails": {
     "weekly_budget_eur": 100,
