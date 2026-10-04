@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "updated_at": "2026-10-04",
+  "version": 4,
+  "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
   "phase": "VALIDACIÓN",
@@ -101,8 +101,15 @@
       "velocidad",
       "arquitectura"
     ],
-    "last_action": "Se creó NEXIA_CONTINUITY.md para hacer el núcleo independiente de conversaciones, clientes, permisos e interfaces.",
-    "next_review": "Auditar continuidad contra una nueva sesión y verificar que el estado se reconstruye sin depender del chat."
+    "last_action": "Se verificaron las rutas limpias NexaCare/NexaHQ y se separó el problema de identidad de producto del nombre del propietario de GitHub.",
+    "next_review": "Verificar publicación real y resolver dominio personalizado o identidad de alojamiento si se requiere eliminar por completo el identificador personal de la URL."
+  },
+  "public_interfaces": {
+    "nexacare_path": "/NexaCare/",
+    "nexahq_path": "/NexaHQ/",
+    "clean_route_status": "IMPLEMENTED_IN_REPOSITORY",
+    "personal_github_pages_hostname": "REMAINS_UNCHANGED_UNTIL_CUSTOM_DOMAIN_OR_HOSTING_IDENTITY_CHANGE",
+    "public_runtime_verification": "NOT_VERIFIED_BY_WEB_RUNTIME"
   },
   "system": {
     "persistent_state": "PARTIAL_WITH_RECOVERY_LAYER",
@@ -110,7 +117,7 @@
     "telemetry": "NOT_CONNECTED",
     "notifications": "NOT_CONNECTED",
     "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS",
-    "deployment": "GITHUB_PAGES_CONFIGURED_BUT_PUBLIC_URL_REQUIRES_CURRENT_VERIFICATION",
+    "deployment": "GITHUB_PAGES_CONFIGURED; CLEAN_NEXACARE_AND_NEXAHQ_ROUTES_PRESENT; PUBLIC_RUNTIME_NOT_VERIFIED",
     "floot": "NOT_RECOVERED_IN_CURRENT_CONTEXT",
     "continuity_layer": "ACTIVE",
     "continuity_source": "NEXIA_CONTINUITY.md",
