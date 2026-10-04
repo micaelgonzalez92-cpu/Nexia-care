@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-04",
+  "project": "NEXIA CORE",
+  "phase": "VALIDACIÓN",
+  "capital_eur": 0,
+  "inventory_eur": 0,
+  "debt_eur": 0,
+  "revenue_eur": 0,
+  "profit_eur": 0,
+  "extraction_count": 0,
+  "reproducibility_count": 0,
+  "active_experiment": {
+    "id": "EXP-001B",
+    "name": "Prueba de diagnóstico con usuario real",
+    "status": "BLOCKED_BY_HUMAN_REAL_WORLD_INPUT",
+    "cost_eur": 0,
+    "primary_metric": "% de usuarios que llegan a una acción útil sin ayuda significativa",
+    "participants": 0,
+    "target_participants": 3
+  },
+  "current_mission": {
+    "id": "MISSION-001",
+    "name": "Conseguir el primer usuario real para NEXIA Care",
+    "priority": "MAX",
+    "cost_eur": 0,
+    "human_action_required": true,
+    "reason": "Hace falta una persona real con una De'Longhi Magnifica compatible para generar evidencia."
+  },
+  "human_gate": {
+    "status": "WAITING",
+    "task": "Reclutar 1 participante real para probar NEXIA Care.",
+    "cost_eur": 0
+  },
+  "product": {
+    "name": "NEXIA Care",
+    "model_focus": "De'Longhi Magnifica S / ECAM21-22.110",
+    "stage": "VETA / VALIDACIÓN",
+    "evidence_level": "SEÑAL + MVP; evidencia de usuario real = 0"
+  },
+  "system": {
+    "persistent_state": "PARTIAL",
+    "real_hq": "INITIAL_READ_ONLY",
+    "telemetry": "NOT_CONNECTED",
+    "notifications": "NOT_CONNECTED",
+    "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS",
+    "deployment": "GITHUB_PAGES_CONFIGURED_BUT_PUBLIC_URL_REQUIRES_CURRENT_VERIFICATION"
+  },
+  "guardrails": {
+    "weekly_budget_eur": 100,
+    "current_spend_eur": 0,
+    "reserved_eur": 7.25,
+    "spending_requires_kael_approval": true
+  }
+}
