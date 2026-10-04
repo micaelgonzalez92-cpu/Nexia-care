@@ -51,22 +51,37 @@ ForoCafé (España) contiene un hilo publicado el 1 de abril de 2026 sobre una D
 Referencia: https://forocafe.es/foro/viewtopic.php?t=8743
 
 ### Señal B — Comunidad de cafeteras
-ForoCafé también mantiene hilos específicos sobre la Magnifica S / ECAM 22.110 y problemas de configuración, molienda y rendimiento. Un hilo recoge una consulta sobre flujo de café demasiado lento en una ECAM 22.110 y respuestas de usuarios sobre ajustes del molino. Otro hilo general recoge propietarios y compradores de Magnifica S.
+ForoCafé contiene otro hilo sobre Magnifica S / ECAM 22.110 con problemas de flujo y ajuste del molino.
 
-**HECHO VERIFICADO:** existe una segunda concentración de conversación pública relevante alrededor del mismo modelo y de problemas técnicos/configuración.
+**HECHO VERIFICADO:** existe conversación pública española específica sobre problemas de uso/configuración del modelo.
 
 ### Señal C — ForoCoches
-Existe una conversación española donde propietarios hablan específicamente de la De'Longhi Magnifica S ECAM 22.110.B y de su uso doméstico.
+Existe una conversación española sobre Magnifica S / ECAM 22.110.B entre propietarios y potenciales compradores.
 
-**HECHO VERIFICADO:** existe una comunidad adicional con propietarios españoles del modelo.
+**HECHO VERIFICADO:** existe una comunidad adicional con conversación sobre el modelo.
+
+### Señal D — Fuente especializada reciente
+Zumbados mantiene una guía revisada el 11 de agosto de 2026 dedicada a los problemas de la ECAM 22.110 y sus variantes. La página identifica explícitamente ECAM22.110.B, ECAM22.110.SB y ECAM22.110.W.
+
+**HECHO VERIFICADO:** existe contenido especializado reciente en español centrado en el modelo y sus incidencias.
+
+### Señal E — Problemas concretos repetibles
+La búsqueda actual encontró ejemplos del mismo modelo con:
+- triángulo rojo / interrupción al preparar café;
+- flujo de café lento o por gotas;
+- problemas durante descalcificación;
+- problemas de sensor/depósito;
+- café aguado o poco cuerpo.
+
+**HECHO VERIFICADO:** el espacio de problemas no depende de un único caso aislado; aparecen múltiples síntomas asociados al modelo en distintas comunidades y fechas.
 
 ### Limitación
 NEXIA no ha contactado con ningún usuario, no ha enviado mensajes y no atribuye participación ni consentimiento.
 
 ### Hipótesis de canal
-Las comunidades públicas especializadas son un canal potencialmente más eficiente que la captación genérica porque concentran personas que ya poseen el producto y expresan dudas/problemas.
+Las comunidades públicas especializadas son un canal potencialmente más eficiente que la captación genérica porque concentran propietarios que ya expresan una necesidad.
 
-### Próximo experimento de canal
+### Siguiente experimento de canal
 Priorizar casos públicos recientes donde el propietario haya expresado un problema concreto. Si se realiza contacto, deberá ser autorizado, relevante, individualizado y no spam.
 
 ## Siguiente paso
