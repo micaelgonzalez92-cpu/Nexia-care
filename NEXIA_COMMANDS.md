@@ -33,6 +33,12 @@ Puedes decirlos en lenguaje natural. No necesitas memorizar una sintaxis exacta.
 - **NEXIA, HQ** — estado del centro de mando y de sus fuentes de datos.
 - **NEXIA, telemetría** — qué métricas se capturan realmente y qué todavía no está instrumentado.
 
+### Voz e interacción
+- **NEXIA, modo escucha** — informa del estado del protocolo de activación por palabra clave.
+- **NEXIA, activa escucha** — solicita el modo de activación por palabra clave para la conversación.
+- **NEXIA, desactiva escucha** — solicita volver al comportamiento normal de conversación.
+- **Regla de activación propuesta:** una frase hablada solo se interpreta como dirigida a NEXIA cuando comienza con **“Nexia”** (admitiendo pausas o puntuación natural). Las frases que no comiencen con la palabra clave se tratan como conversación ambiente y no como instrucciones de NEXIA.
+
 ### Ejecución
 - **NEXIA, construye [mejora]** — ejecuta si es segura, reversible y sin gasto; si requiere aprobación, prepara la acción y la deja en Human Gate.
 - **NEXIA, prepara [experimento]** — devuelve hipótesis, acción, coste, métrica, éxito, fracaso, riesgo e información obtenida.
@@ -62,5 +68,5 @@ Este registro debe revisarse periódicamente junto con la mejora continua de NEX
 4. No crear comandos solo por estética.
 5. Registrar cambios reales en GitHub.
 
-**Versión:** 1.0
+**Versión:** 1.1
 **Última actualización:** 2026-10-04
