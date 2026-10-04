@@ -5,39 +5,52 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>NEXIA HQ</title>
 <style>
-:root{color-scheme:dark}body{margin:0;background:#090d16;color:#e8edf7;font-family:system-ui,-apple-system,sans-serif}main{max-width:1100px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap}.eyebrow{color:#8fa2bd;font-size:12px;letter-spacing:.14em}.title{font-size:clamp(28px,5vw,48px);font-weight:800;margin:4px 0}.sub{color:#9aa9bf}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:20px}.card{background:#101725;border:1px solid #202c40;border-radius:16px;padding:18px}.label{color:#8191a9;font-size:12px;text-transform:uppercase;letter-spacing:.08em}.value{font-size:25px;font-weight:750;margin-top:8px}.ok{color:#71d7a4}.warn{color:#f0c674}.danger{color:#ff8f8f}.mission{margin-top:20px;border:1px solid #394967;background:#111a2b;border-radius:18px;padding:22px}.mission h2{margin:5px 0 8px}.row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:10px 0;border-top:1px solid #202c40}.small{font-size:13px;color:#9aa9bf}.tag{display:inline-block;border:1px solid #35435c;border-radius:999px;padding:5px 9px;font-size:12px}.footer{margin-top:20px;color:#697991;font-size:12px}.error{color:#ff8f8f}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.engine{margin-top:20px;border:1px solid #2f5948;background:#101c18;border-radius:18px;padding:22px}.engine h2{margin:5px 0 8px}.pill{display:inline-block;border:1px solid #35634f;border-radius:999px;padding:5px 9px;font-size:12px;color:#8ee1b8;margin:3px}
+:root{color-scheme:dark}body{margin:0;background:#090d16;color:#e8edf7;font-family:system-ui,-apple-system,sans-serif}main{max-width:1160px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap}.eyebrow{color:#8fa2bd;font-size:12px;letter-spacing:.14em}.title{font-size:clamp(30px,5vw,52px);font-weight:850;margin:4px 0}.sub{color:#9aa9bf}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:20px}.card{background:#101725;border:1px solid #202c40;border-radius:16px;padding:18px}.label{color:#8191a9;font-size:12px;text-transform:uppercase;letter-spacing:.08em}.value{font-size:25px;font-weight:750;margin-top:8px}.ok{color:#71d7a4}.warn{color:#f0c674}.danger{color:#ff8f8f}.mission{margin-top:20px;border:1px solid #394967;background:#111a2b;border-radius:18px;padding:22px}.mission h2{margin:5px 0 8px}.row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:10px 0;border-top:1px solid #202c40}.small{font-size:13px;color:#9aa9bf}.tag,.pill{display:inline-block;border:1px solid #35435c;border-radius:999px;padding:5px 9px;font-size:12px}.footer{margin-top:20px;color:#697991;font-size:12px}.error{color:#ff8f8f}.engine{margin-top:20px;border:1px solid #2f5948;background:#101c18;border-radius:18px;padding:22px}.engine h2{margin:5px 0 8px}.pill{border-color:#35634f;color:#8ee1b8;margin:3px}.world{margin-top:20px;border:1px solid #2b3850;background:#0d1421;border-radius:20px;padding:22px}.world-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;align-items:center;margin-top:18px}.node{border:1px solid #33415a;border-radius:14px;padding:14px 8px;text-align:center;background:#111a29;min-height:48px}.node.active{border-color:#71d7a4;box-shadow:0 0 0 1px #274d3d}.node.locked{opacity:.5}.arrow{text-align:center;color:#64758f}.tree{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}.tech{padding:15px;border:1px solid #26344a;border-radius:14px;background:#0f1725}.tech b{display:block;margin-bottom:5px}.bar{height:8px;background:#1d293a;border-radius:999px;overflow:hidden;margin-top:10px}.fill{height:100%;background:#71d7a4;border-radius:999px}.event{margin-top:20px;border:1px solid #4d4151;background:#171321;border-radius:18px;padding:20px}.event strong{color:#f0c674}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.actions button{background:#121c2d;color:#dfe7f5;border:1px solid #35435c;border-radius:10px;padding:9px 12px;cursor:pointer}.actions button:hover{border-color:#71d7a4}
 </style>
 </head>
 <body><main id="hq">
-<div class="top"><div><div class="eyebrow">NEXIA CORE · COMMAND HQ</div><div class="title">OPERACIONES</div><div class="sub">Fuente persistente: NEXIA_STATE.json · lectura en tiempo real</div></div><span class="tag" id="status">CARGANDO</span></div>
+<div class="top"><div><div class="eyebrow">NEXIA CORE · COMMAND HQ</div><div class="title">COMMAND CENTER</div><div class="sub">Centro de mando · economía · misiones · agentes · evolución</div></div><span class="tag" id="status">CARGANDO</span></div>
+
 <section class="grid" id="metrics"></section>
+
+<section class="world">
+<div class="eyebrow">BUSINESS WORLD</div>
+<div class="world-grid">
+<div class="node active">🔎<br>RESEARCH</div><div class="arrow">→</div><div class="node active">🧪<br>VALIDATION</div><div class="arrow">→</div><div class="node locked">💰<br>EXTRACTION</div>
+</div>
+<div class="world-grid">
+<div class="node">🤖<br>AGENTS</div><div class="arrow">→</div><div class="node active">☕<br>NEXIA CARE</div><div class="arrow">→</div><div class="node locked">🚀<br>SCALE</div>
+</div>
+</section>
+
 <section class="mission"><div class="eyebrow">MISIÓN PRIORITARIA</div><h2 id="mission">—</h2><div class="row"><span>Experimento</span><strong id="exp">—</strong></div><div class="row"><span>Participantes</span><strong id="participants">—</strong></div><div class="row"><span>Coste</span><strong id="cost">—</strong></div><div class="row"><span>Human Gate</span><strong id="gate">—</strong></div><p class="small" id="reason">—</p></section>
-<section class="engine"><div class="eyebrow">NEXIA VALUE & IMPROVEMENT ENGINE</div><h2 id="engineStatus">—</h2><p class="small" id="engineObjective">—</p><div id="gates"></div><p class="small"><strong>Prioridad:</strong> evidencia → rentabilidad → riesgo → automatización → escalabilidad → velocidad → arquitectura</p><p class="small" id="lastAction">—</p></section>
+
+<section class="engine"><div class="eyebrow">AGENT NETWORK · VALUE ENGINE</div><h2 id="engineStatus">—</h2><p class="small" id="engineObjective">—</p><div id="gates"></div><p class="small"><strong>Prioridad:</strong> evidencia → rentabilidad → riesgo → automatización → escalabilidad → velocidad → arquitectura</p><p class="small" id="lastAction">—</p></section>
+
+<section class="tree">
+<div class="tech"><b>🔎 RESEARCH</b><span class="small">Radar · señales · oportunidades</span><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+<div class="tech"><b>🧪 VALIDATION</b><span class="small">Experimentos · sensores humanos</span><div class="bar"><div class="fill" style="width:45%"></div></div></div>
+<div class="tech"><b>💰 ECONOMY</b><span class="small">Unit economics · pricing</span><div class="bar"><div class="fill" style="width:25%"></div></div></div>
+<div class="tech"><b>🤖 AUTOMATION</b><span class="small">Agentes · memoria · ejecución segura</span><div class="bar"><div class="fill" style="width:35%"></div></div></div>
+<div class="tech"><b>🚀 SCALE</b><span class="small">Acquisition · conversion · replication</span><div class="bar"><div class="fill" style="width:8%"></div></div></div>
+</section>
+
+<section class="event"><div class="eyebrow">⚡ EVENT ENGINE</div><p><strong>EVENTO ACTUAL</strong></p><p class="small" id="event">Cargando inteligencia del estado…</p><div class="actions"><button type="button" data-action="observe">OBSERVAR</button><button type="button" data-action="validate">VALIDAR</button><button type="button" data-action="gate">HUMAN GATE</button></div></section>
+
 <section class="grid"><div class="card"><div class="label">Sistema</div><div id="system" class="small" style="margin-top:10px;line-height:1.8"></div></div><div class="card"><div class="label">Economía</div><div id="economy" class="small" style="margin-top:10px;line-height:1.8"></div></div></section>
-<div class="footer">NEXIA HQ: estado persistente + visualización + política de mejora. La ejecución autónoma, telemetría y notificaciones externas siguen siendo parciales.</div>
+<div class="footer">NEXIA HQ v2 · visualización de Command Center. Los niveles visuales son estado de sistema, no predicciones económicas.</div>
 </main>
 <script>
 (async function(){
- const status=document.getElementById('status');
+ const status=document.getElementById('status'),eventBox=document.getElementById('event');
+ document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>{eventBox.textContent='Acción de interfaz registrada: '+b.dataset.action.toUpperCase()+'. No modifica el estado persistente.';}));
  try{
-  const r=await fetch('NEXIA_STATE.json?ts='+Date.now(),{cache:'no-store'});
-  if(!r.ok) throw new Error('state '+r.status);
-  const m=await r.json();
-  status.textContent='ONLINE · ESTADO CARGADO'; status.className='tag ok';
-  document.getElementById('metrics').innerHTML=[
-   ['Capital',m.capital_eur+' €'],['Ingresos',m.revenue_eur+' €'],['Beneficio',m.profit_eur+' €'],['Extracciones',m.extraction_count],['Repetibilidad',m.reproducibility_count],['Gasto',m.guardrails.current_spend_eur+' €']
-  ].map(x=>'<div class="card"><div class="label">'+x[0]+'</div><div class="value">'+x[1]+'</div></div>').join('');
-  document.getElementById('mission').textContent=m.current_mission.name;
-  document.getElementById('exp').textContent=m.active_experiment.id+' · '+m.active_experiment.status;
-  document.getElementById('participants').textContent=m.active_experiment.participants+' / '+m.active_experiment.target_participants;
-  document.getElementById('cost').textContent=m.current_mission.cost_eur+' €';
-  document.getElementById('gate').textContent=m.human_gate.status;
-  document.getElementById('reason').textContent=m.current_mission.reason;
-  const ie=m.improvement_engine;
-  document.getElementById('engineStatus').innerHTML='<span class="pill">'+ie.status+'</span><span class="pill">'+ie.mode+'</span>';
-  document.getElementById('engineObjective').textContent=ie.objective;
-  document.getElementById('gates').innerHTML='<span class="pill">🟢 '+ie.gates.green+'</span><span class="pill">🟡 '+ie.gates.yellow+'</span><span class="pill">🔴 '+ie.gates.red+'</span>';
-  document.getElementById('lastAction').textContent='Última mejora: '+ie.last_action;
+  const r=await fetch('NEXIA_STATE.json?ts='+Date.now(),{cache:'no-store'}); if(!r.ok) throw new Error('state '+r.status); const m=await r.json();
+  status.textContent='ONLINE · ESTADO CARGADO';status.className='tag ok';
+  document.getElementById('metrics').innerHTML=[['Capital',m.capital_eur+' €'],['Ingresos',m.revenue_eur+' €'],['Beneficio',m.profit_eur+' €'],['Extracciones',m.extraction_count],['Repetibilidad',m.reproducibility_count],['Gasto',m.guardrails.current_spend_eur+' €']].map(x=>'<div class="card"><div class="label">'+x[0]+'</div><div class="value">'+x[1]+'</div></div>').join('');
+  document.getElementById('mission').textContent=m.current_mission.name;document.getElementById('exp').textContent=m.active_experiment.id+' · '+m.active_experiment.status;document.getElementById('participants').textContent=m.active_experiment.participants+' / '+m.active_experiment.target_participants;document.getElementById('cost').textContent=m.current_mission.cost_eur+' €';document.getElementById('gate').textContent=m.human_gate.status;document.getElementById('reason').textContent=m.current_mission.reason;
+  const ie=m.improvement_engine;document.getElementById('engineStatus').innerHTML='<span class="pill">'+ie.status+'</span><span class="pill">'+ie.mode+'</span>';document.getElementById('engineObjective').textContent=ie.objective;document.getElementById('gates').innerHTML='<span class="pill">🟢 '+ie.gates.green+'</span><span class="pill">🟡 '+ie.gates.yellow+'</span><span class="pill">🔴 '+ie.gates.red+'</span>';document.getElementById('lastAction').textContent='Última mejora: '+ie.last_action;
+  document.getElementById('event').textContent='NEXIA detecta que el cuello de botella actual sigue siendo obtener evidencia humana real para EXP-001B. No se ejecuta contacto externo sin autorización.';
   document.getElementById('system').innerHTML='Persistencia: '+m.system.persistent_state+'<br>HQ: '+m.system.real_hq+'<br>Telemetría: '+m.system.telemetry+'<br>Notificaciones: '+m.system.notifications+'<br>Automatización: '+m.system.autonomous_execution+'<br>Publicación: '+m.system.deployment;
   document.getElementById('economy').innerHTML='Presupuesto semanal: '+m.guardrails.weekly_budget_eur+' €<br>Gasto actual: '+m.guardrails.current_spend_eur+' €<br>Reservado: '+m.guardrails.reserved_eur+' €<br>Aprobación de gasto: '+(m.guardrails.spending_requires_kael_approval?'SÍ':'NO');
  }catch(e){status.textContent='OFFLINE · SIN ESTADO';status.className='tag danger';document.getElementById('metrics').innerHTML='<div class="card"><div class="error">No se pudo cargar NEXIA_STATE.json.</div></div>';}
