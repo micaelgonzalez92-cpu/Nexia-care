@@ -101,17 +101,20 @@
       "velocidad",
       "arquitectura"
     ],
-    "last_action": "Se activó la Torre de Control y se formalizaron Evidence Engine, Participant Acquisition Engine, aprendizaje negativo y NEXIA Score.",
-    "next_review": "En el siguiente ciclo operativo disponible."
+    "last_action": "Se creó NEXIA_CONTINUITY.md para hacer el núcleo independiente de conversaciones, clientes, permisos e interfaces.",
+    "next_review": "Auditar continuidad contra una nueva sesión y verificar que el estado se reconstruye sin depender del chat."
   },
   "system": {
-    "persistent_state": "PARTIAL",
+    "persistent_state": "PARTIAL_WITH_RECOVERY_LAYER",
     "real_hq": "INITIAL_READ_ONLY",
     "telemetry": "NOT_CONNECTED",
     "notifications": "NOT_CONNECTED",
     "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS",
     "deployment": "GITHUB_PAGES_CONFIGURED_BUT_PUBLIC_URL_REQUIRES_CURRENT_VERIFICATION",
-    "floot": "NOT_RECOVERED_IN_CURRENT_CONTEXT"
+    "floot": "NOT_RECOVERED_IN_CURRENT_CONTEXT",
+    "continuity_layer": "ACTIVE",
+    "continuity_source": "NEXIA_CONTINUITY.md",
+    "session_independence": "DESIGNED"
   },
   "guardrails": {
     "weekly_budget_eur": 100,
