@@ -41,5 +41,16 @@ El usuario alcanza una acción útil sin ayuda significativa.
 ## Fracaso
 Abandona, necesita rescate significativo o el diagnóstico no conduce a una acción útil.
 
+## Inteligencia de canal — 2026-10-04
+La búsqueda pública encontró una señal especialmente útil para el reclutamiento: ForoCafé (España) contiene un hilo publicado el 1 de abril de 2026 sobre una De'Longhi Magnifica S ECAM 22.110.B con un problema real de triángulo rojo/posos, y el autor confirmó que lo solucionó. Esto demuestra que existe conversación pública reciente en español alrededor del modelo exacto.
+
+Referencia pública: https://forocafe.es/foro/viewtopic.php?t=8743
+
+**HECHO VERIFICADO:** existe ese hilo público reciente y el modelo coincide con el foco de EXP-001B.
+
+**LIMITACIÓN:** NEXIA no ha contactado al usuario ni ha enviado ningún mensaje. No se atribuye participación ni consentimiento.
+
+**Siguiente experimento de canal:** usar comunidades públicas españolas relacionadas con café como fuente prioritaria de candidatos potenciales, siempre con contacto humano/autorizado y sin spam.
+
 ## Siguiente paso
 Tras el primer participante, registrar el resultado y repetir hasta 3 participantes antes de declarar patrón.
