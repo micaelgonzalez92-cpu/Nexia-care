@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEXIA HQ</title>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#090d16;color:#e8edf7;font-family:system-ui,-apple-system,sans-serif}main{max-width:1100px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap}.eyebrow{color:#8fa2bd;font-size:12px;letter-spacing:.14em}.title{font-size:clamp(28px,5vw,48px);font-weight:800;margin:4px 0}.sub{color:#9aa9bf}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:20px}.card{background:#101725;border:1px solid #202c40;border-radius:16px;padding:18px}.label{color:#8191a9;font-size:12px;text-transform:uppercase;letter-spacing:.08em}.value{font-size:25px;font-weight:750;margin-top:8px}.ok{color:#71d7a4}.warn{color:#f0c674}.danger{color:#ff8f8f}.mission{margin-top:20px;border:1px solid #394967;background:#111a2b;border-radius:18px;padding:22px}.mission h2{margin:5px 0 8px}.row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:10px 0;border-top:1px solid #202c40}.small{font-size:13px;color:#9aa9bf}.tag{display:inline-block;border:1px solid #35435c;border-radius:999px;padding:5px 9px;font-size:12px}.footer{margin-top:20px;color:#697991;font-size:12px}.error{color:#ff8f8f}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+</style>
+</head>
+<body><main id="hq">
+<div class="top"><div><div class="eyebrow">NEXIA CORE · COMMAND HQ</div><div class="title">OPERACIONES</div><div class="sub">Fuente persistente: NEXIA_STATE.json · lectura en tiempo real</div></div><span class="tag" id="status">CARGANDO</span></div>
+<section class="grid" id="metrics"></section>
+<section class="mission"><div class="eyebrow">MISIÓN PRIORITARIA</div><h2 id="mission">—</h2><div class="row"><span>Experimento</span><strong id="exp">—</strong></div><div class="row"><span>Participantes</span><strong id="participants">—</strong></div><div class="row"><span>Coste</span><strong id="cost">—</strong></div><div class="row"><span>Human Gate</span><strong id="gate">—</strong></div><p class="small" id="reason">—</p></section>
+<section class="grid"><div class="card"><div class="label">Sistema</div><div id="system" class="small" style="margin-top:10px;line-height:1.8"></div></div><div class="card"><div class="label">Economía</div><div id="economy" class="small" style="margin-top:10px;line-height:1.8"></div></div></section>
+<div class="footer">NEXIA HQ inicial: persistencia real + visualización real. La ejecución autónoma, telemetría y notificaciones externas aún no están conectadas.</div>
+</main>
+<script>
+(async function(){
+ const status=document.getElementById('status');
+ try{
+  const r=await fetch('NEXIA_STATE.json?ts='+Date.now(),{cache:'no-store'});
+  if(!r.ok) throw new Error('state '+r.status);
+  const s=await r.json();
+  status.textContent='ONLINE · ESTADO CARGADO'; status.className='tag ok';
+  const m=s; document.getElementById('metrics').innerHTML=[
+   ['Capital',m.capital_eur+' €'],['Ingresos',m.revenue_eur+' €'],['Beneficio',m.profit_eur+' €'],['Extracciones',m.extraction_count],['Repetibilidad',m.reproducibility_count],['Gasto',m.guardrails.current_spend_eur+' €']
+  ].map(x=>'<div class="card"><div class="label">'+x[0]+'</div><div class="value">'+x[1]+'</div></div>').join('');
+  document.getElementById('mission').textContent=m.current_mission.name;
+  document.getElementById('exp').textContent=m.active_experiment.id+' · '+m.active_experiment.status;
+  document.getElementById('participants').textContent=m.active_experiment.participants+' / '+m.active_experiment.target_participants;
+  document.getElementById('cost').textContent=m.current_mission.cost_eur+' €';
+  document.getElementById('gate').textContent=m.human_gate.status;
+  document.getElementById('reason').textContent=m.current_mission.reason;
+  document.getElementById('system').innerHTML='Persistencia: '+m.system.persistent_state+'<br>HQ: '+m.system.real_hq+'<br>Telemetría: '+m.system.telemetry+'<br>Notificaciones: '+m.system.notifications+'<br>Automatización: '+m.system.autonomous_execution+'<br>Publicación: '+m.system.deployment;
+  document.getElementById('economy').innerHTML='Presupuesto semanal: '+m.guardrails.weekly_budget_eur+' €<br>Gasto actual: '+m.guardrails.current_spend_eur+' €<br>Reservado: '+m.guardrails.reserved_eur+' €<br>Aprobación de gasto: '+(m.guardrails.spending_requires_kael_approval?'SÍ':'NO');
+ }catch(e){status.textContent='OFFLINE · SIN ESTADO';status.className='tag danger';document.getElementById('metrics').innerHTML='<div class="card"><div class="error">No se pudo cargar NEXIA_STATE.json.</div></div>';}
+})();
+</script></body></html>
