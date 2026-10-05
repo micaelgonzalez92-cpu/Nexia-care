@@ -68,7 +68,7 @@ Important: real-user evidence cannot be fabricated or fully automated.
 Repository: micaelgonzalez92-cpu/Nexia-care
 Default branch: main
 Public GitHub repository.
-Current public product interface: index.html / NexaCare diagnostic MVP. The repository also contains NexiaHQ/index.html, a read-only Command Center interface that loads NEXIA_STATE.json at runtime. NexiaHQ is part of the repository; private hosting/runtime status is NOT independently verified.
+Current public product interface: index.html / Nexia Care diagnostic MVP. The repository also contains NexiaHQ/index.html, a read-only Command Center interface that loads NEXIA_STATE.json at runtime. NexiaHQ is part of the repository; private hosting/runtime status is NOT independently verified.
 
 Current diagnostic scope:
 - Magnifica S / ECAM21/22.110
@@ -170,7 +170,7 @@ bfb6ed569e6e30058a3f410d7ca53e9e8ef5397d — chore: record NEXIA HQ evolution an
 5257be90bb42eafab6d1a56b2a3385e50891d844 — docs: record SLOT 3 integrity audit
 
 ## 11. CURRENT TECHNICAL NOTES
-index.html and NexaCare/index.html now identify themselves as MVP 0.5. The root entrypoint is synchronized with the NexaCare entrypoint. A UX patch was merged on 2026-10-05: the diagnostic result is explicitly labeled as the recommended first action, unknown model is clearly surfaced, the no-blind-purchase guardrail is reinforced, and the progress indicator now reaches 3/3 only when the diagnostic is actually complete. This patch is repository-verified in main; fresh public-runtime verification of the patched UX is not yet claimed.
+index.html and NexaCare/index.html now identify themselves publicly as **Nexia Care · MVP 0.5**. The root entrypoint is synchronized with the Nexa Care entrypoint. A UX patch was merged on 2026-10-05: the diagnostic result is explicitly labeled as the recommended first action, unknown model is clearly surfaced, the no-blind-purchase guardrail is reinforced, and the progress indicator now reaches 3/3 only when the diagnostic is actually complete. This patch is repository-verified in main; fresh public-runtime verification of the patched UX is not yet claimed.
 The mission progress bar now represents actual diagnostic completion: 1/3 before model selection, 2/3 after model selection, and 3/3 only after the required diagnostic check is answered or no additional check is required.
 NexiaHQ/index.html loads NEXIA_STATE.json from the parent path and refreshes every 60 seconds; this is verified from repository code, not from live-runtime behavior.
 Public runtime and functional behavior are VERIFIED as of 2026-10-05 for the two public GitHub Pages paths recorded in Section 18 below.
@@ -223,7 +223,7 @@ State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5
 ## 20. LATEST UX VERIFICATION — 2026-10-05
 
 - PR #6 merged successfully into `main` as `6ce6dca9c274077266114af5b35a3f6106169036`.
-- Both `index.html` and `NexaCare/index.html` now identify as **MVP 0.5**.
+- Both `index.html` and `NexaCare/index.html` now identify publicly as **Nexia Care · MVP 0.5**.
 - The progress indicator was corrected so **3/3 means diagnostic completion**, not merely symptom selection.
 - This is repository verification only; no fresh public-runtime verification of this patch is claimed.
 
@@ -231,6 +231,6 @@ State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5
 
 - Confirmed that the public NexaCare entrypoints incorrectly contained HQ-only controls: **Misión, Informe, Economía, Mis tareas**.
 - Those controls were removed from both `index.html` and `NexaCare/index.html`, including their unused command JavaScript.
-- NEXIA HQ remains the appropriate surface for command-center controls; NexaCare is now focused on the end-user diagnostic flow.
+- NEXIA HQ remains the appropriate surface for command-center controls; Nexia Care is now focused on the end-user diagnostic flow.
 - PR #7 was merged into `main` as `f5858a7cd458b575862c35b03b064c13984e7de2`.
 - Repository verification confirms the correction. Fresh public-runtime verification after this patch is not yet claimed.
