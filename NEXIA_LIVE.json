@@ -4,7 +4,7 @@
   "current_cycle": "NEXIA Core — persistence checkpoint closure + safe validation",
   "current_action": "Resume €0 validation, economics, falsification and acquisition preparation; no external contact.",
   "last_completed_action": "Closed CP-2026-10-05-003 and verified derived artifact synchronization.",
-  "evidence": "STATE v26 persisted; BOOT/LIVE/MASTER_BACKUP/EVENT_LOG synchronization is being verified; no spending or external contact.",
+  "evidence": "STATE v26 persisted; BOOT synchronization verified; remaining derived artifacts are being synchronized; no spending or external contact.",
   "capital_spent_eur": 0,
   "human_gate": "🔴 K-001: autorizar/conectar canal externo legítimo de adquisición. Además, la prueba de tiempo humano de EXP-DOC-001 requiere un operador humano.",
   "parallel_work": [
