@@ -6,6 +6,25 @@
 <style>.towergrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}.towerbox{padding:14px;border:1px solid #1e2b40;border-radius:14px;background:#0b1420}.towerbox b{display:block;font-size:10px;color:var(--muted);letter-spacing:.1em}.towerbox span{display:block;font-size:17px;font-weight:800;margin-top:7px}.towerbox small{display:block;color:var(--muted);margin-top:5px}.towertable{margin-top:12px}.towerrow{display:grid;grid-template-columns:1.2fr .9fr 1.2fr .7fr;gap:10px;padding:11px 0;border-top:1px solid #1b2739}.towerrow span{color:#a9b6c9}.towerrow b{font-size:12px}.towerrow small{color:var(--muted)}@media(max-width:850px){.towergrid{grid-template-columns:1fr 1fr}.towerrow{grid-template-columns:1fr 1fr}}@media(max-width:520px){.towergrid{grid-template-columns:1fr}}.tabs{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}.tab{background:#0d1725;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer;font-weight:700}.tab.active{border-color:var(--green);box-shadow:inset 0 0 0 1px #1d4938}.commandgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}.cmd{padding:14px;border:1px solid #1e2b40;border-radius:14px;background:#0b1420}.cmd code{color:var(--green);font-weight:800}.cmd small{display:block;color:var(--muted);margin-top:6px;line-height:1.45}.livegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}.livebox{padding:14px;border:1px solid #1e2b40;border-radius:14px;background:#0b1420}.livebox b{display:block;margin-bottom:6px}.livebox .v{font-size:18px;font-weight:800}.livebox small{display:block;color:var(--muted);margin-top:6px}.projectok{color:var(--green)}.projectwarn{color:var(--amber)}.projectoff{color:var(--red)}\n.buildbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.buildchip{padding:8px 11px;border:1px solid var(--line);border-radius:12px;background:#0b1420;color:#a9b6c9}.buildchip strong{color:var(--text)}.pulse{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--green);box-shadow:0 0 0 4px #17382b;margin-right:7px}.heroalert{margin-top:14px;padding:12px 14px;border:1px solid #2b4568;border-radius:14px;background:linear-gradient(90deg,#0d1a2b,#0b1420)}.heroalert b{color:var(--text)}.mini{font-size:11px;color:var(--muted)}\n
 :root{color-scheme:dark;--bg:#070b12;--panel:#0e1622;--line:#223148;--muted:#8291a7;--text:#edf3ff;--green:#65e0a3;--amber:#f2c66d;--red:#ff7f86;--blue:#78a9ff}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% -10%,#182844 0,#070b12 42%);color:var(--text);font:14px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1320px;margin:auto;padding:26px}.top{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;flex-wrap:wrap}.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}.title{font-size:clamp(34px,5vw,58px);font-weight:900;letter-spacing:-.04em;margin:5px 0}.sub{color:#a9b6c9}.tag,.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:11px}.ok{color:var(--green);border-color:#2e7658}.warn{color:var(--amber);border-color:#755b29}.danger{color:var(--red);border-color:#74363b}.btn{background:#111c2c;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 11px;cursor:pointer}.btn:hover{border-color:var(--green)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:10px;margin-top:18px}.card,.panel{background:linear-gradient(180deg,#101a29,#0b131f);border:1px solid var(--line);border-radius:18px;padding:17px}.label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.value{font-size:25px;font-weight:850;margin-top:7px}.layout{display:grid;grid-template-columns:1.4fr .8fr;gap:12px;margin-top:12px}.panel h2{margin:5px 0 10px;font-size:19px}.row{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #1b2739;padding:10px 0}.muted{color:var(--muted);line-height:1.6}.loop{display:grid;grid-template-columns:repeat(12,1fr);gap:7px;margin-top:14px}.step{grid-column:span 2;text-align:center;padding:12px 7px;border:1px solid var(--line);border-radius:13px;background:#0d1725}.step b{font-size:11px}.step small{display:block;color:var(--muted);margin-top:4px}.step.live{border-color:#34765a;box-shadow:inset 0 0 0 1px #1d4938}.step.gate{border-color:#735d2d}.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.item{padding:13px;border:1px solid #1e2b40;border-radius:14px;background:#0b1420}.item b{display:block;margin-bottom:5px}.bar{height:7px;background:#172336;border-radius:99px;overflow:hidden;margin-top:9px}.fill{height:100%;background:var(--green)}.fill.amber{background:var(--amber)}.fill.blue{background:var(--blue)}.statusline{display:flex;gap:7px;flex-wrap:wrap}.footer{margin-top:18px;color:#617089;font-size:11px}@media(max-width:850px){.layout{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.step{grid-column:span 4}}@media(max-width:520px){.step{grid-column:span 6}}
+
+/* NEXIA HQ readability pass v2 */
+:root{color-scheme:light;--bg:#f3f6fa;--panel:#ffffff;--line:#d7dee8;--muted:#536174;--text:#172033;--green:#087443;--amber:#8a5a00;--red:#b4232d;--blue:#2459b8}
+body{background:linear-gradient(180deg,#eef3f8 0%,#f7f9fc 55%,#eef2f6 100%);color:var(--text);font-size:15px;line-height:1.5}
+.card,.panel{background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px rgba(23,32,51,.06)}
+.sub,.muted,.towerrow span,.towerrow small,.livebox small,.cmd small,.step small,.item .muted{color:#536174}
+.label,.eyebrow{color:#435268}
+.value{color:#111827}
+.btn,.tab{background:#f8fafc;color:#172033;border-color:#c7d0dc}
+.tab.active{background:#eef8f2;border-color:#087443;box-shadow:inset 0 0 0 1px #b7dec8}
+.tag,.pill,.buildchip{background:#fff;color:#172033;border-color:#c7d0dc}
+.ok{color:#087443;border-color:#76b99a}.warn{color:#8a5a00;border-color:#d9b86b}.danger{color:#b4232d;border-color:#d99198}
+.towerbox,.cmd,.livebox,.item,.step{background:#f8fafc;border-color:#d7dee8}
+.row,.towerrow{border-top-color:#e1e6ed}
+.heroalert{background:#eef5ff;border-color:#b8cce8}.heroalert b{color:#172033}
+.bar{background:#e2e8f0}.fill{background:#087443}.fill.amber{background:#b77900}.fill.blue{background:#2459b8}
+.pulse{background:#087443;box-shadow:0 0 0 4px #d7eee3}
+.footer{color:#66758a}
+@media(max-width:850px){main{padding:18px}.layout,.cols{grid-template-columns:1fr}.loop{grid-template-columns:repeat(2,1fr)}.step{grid-column:span 1}}
 </style>
 </head>
 <body><main>
@@ -64,7 +83,7 @@
 <section id="tab-live" class="panel tabpane" hidden style="margin-top:12px;border-color:#34765a">
 <div class="eyebrow">NEXIA · LIVE CONTROL TOWER</div><h2>Visibilidad conjunta</h2>
 <div id="liveSystem" class="livegrid"><div class="item"><b>Estado</b><span class="muted">Cargando…</span></div></div>
-<p class="muted">Actualización automática: 15 s. Esto es polling sobre fuentes persistentes; no se presenta como pensamiento continuo en segundo plano. Un dato solo aparece como verificado si existe en la fuente correspondiente.</p>
+<p class="muted">Actualización automática: 10 s. Esto es polling sobre fuentes persistentes; no se presenta como pensamiento continuo en segundo plano. Un dato solo aparece como verificado si existe en la fuente correspondiente.</p>
 </section>
 
 <section class="panel" style="margin-top:12px"><div class="eyebrow">CENTRO DE CONTROL</div><h2>Estado completo de Nexia</h2><div id="controlCenter" class="livegrid">Cargando…</div></section>
@@ -85,7 +104,7 @@
 <div class="panel"><div class="eyebrow">SISTEMA</div><div id="system" class="muted">—</div></div>
 <div class="panel"><div class="eyebrow">SIGUIENTE ACCIÓN</div><h2 id="next">—</h2><p class="muted">Prioridad: reducir el cuello de botella sin gastar, sin contacto externo no autorizado y sin alterar evidencia válida.</p></div>
 </section>
-<div class="footer">NEXIA HQ · interfaz operativa basada en NEXIA_STATE.json. Las barras son indicadores de estado de sistema, no pronósticos de ingresos. Actualización automática cada 10 s · publicación GitHub Pages verificada por commit.</div>
+<div class="footer">NEXIA HQ · interfaz operativa basada en NEXIA_STATE.json. Las barras son indicadores de estado de sistema, no pronósticos de ingresos. Actualización automática cada 10 s · publicación GitHub Pages pendiente de verificación pública en esta sesión.</div>
 </main>
 <script>
 async function loadCommands(){
