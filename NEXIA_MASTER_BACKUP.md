@@ -242,3 +242,9 @@ State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5
 - PR #9 was merged into `main` as `f7e392564ddc19afaa14fe686de00730380eb38c`.
 - Evidence boundary preserved: community reports are demand/diagnostic signals, not validated product-market evidence and not a substitute for EXP-001B real-user testing.
 
+## 23. OFFICIAL MAGNIFICA FLOW GUIDANCE — 2026-10-05
+- Reviewed the official De’Longhi ECAM21.110 instructions and aligned Nexia Care's “no coffee” / “slow or dripping coffee” guidance with the documented cause of overly fine grinding.
+- The conservative action now recommends one click toward 7 while the grinder is operating, followed by at least two coffees before reassessment; persistent issues escalate rather than triggering speculative parts purchases.
+- Official De’Longhi documentation is used as the technical reference for this instruction. This does not constitute real-user validation.
+- PR #10 was merged into `main` as `be43f7ecafc05057b0ca11e0ae85c612906ccbdd`.
+
