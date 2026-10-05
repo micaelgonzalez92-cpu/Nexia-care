@@ -85,6 +85,32 @@ On entering a new session:
 7. Check authority/gate status before external actions.
 8. Report only confirmed execution.
 
+## Automatic ChatGPT bootstrap route — ADDED 2026-10-05
+
+When the GitHub connector is available, ChatGPT should treat the following repository as the first persistence lookup for every new NEXIA session:
+
+- Repository: micaelgonzalez92-cpu/Nexia-care
+- Canonical state: NEXIA_STATE.json
+- Startup index: NEXIA_BOOT.json
+- Learning ledger: NEXIA_MEMORY.md
+- Recovery snapshot: NEXIA_MASTER_BACKUP.md
+- Critical history: NEXIA_EVENT_LOG.jsonl
+- Continuity contract: NEXIA_CONTINUITY.md
+
+Startup sequence:
+1. Inspect the repository connection/capability.
+2. Read NEXIA_BOOT.json.
+3. Read NEXIA_STATE.json and verify its version/blob SHA against BOOT.
+4. Read NEXIA_MEMORY.md and recent event/decision information when required to resume safely.
+5. Identify mission, active experiment, Human Gate, blockers, last confirmed action and next safe action.
+6. Execute GREEN actions immediately.
+7. Surface YELLOW/RED actions as explicit TAREAS DE KAEL.
+8. Never ask Kael to restate state that is already present in the repository.
+9. If the GitHub connector is unavailable, explicitly report the capability limitation; do not claim state recovery.
+10. If the repository is reachable but STATE is missing/invalid, recover only from the latest verified repository commit/backup according to the persistence protocol.
+
+This section is an operational contract for persistence. It does not grant external authorization and does not imply background execution.
+
 ## Interface independence
 
 Floot is an optional interface layer. Its disappearance must not block NEXIA Core.
