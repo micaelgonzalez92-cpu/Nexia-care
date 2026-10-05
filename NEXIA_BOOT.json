@@ -13,7 +13,7 @@
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
   "last_verified_state_version": 32,
-  "last_verified_state_blob_sha": "0a136f067d8d38ac51e091a2bf510419f202c388",
+  "last_verified_state_blob_sha": "5ff27ea6ea86e252386315c2cc32d289a9673ea9",
   "phase": "VALIDACIÓN",
   "active_experiment": "EXP-001B",
   "mission": "MISSION-001",
