@@ -63,8 +63,8 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Implementada política de trabajo paralelo ante bloqueo y creado un ciclo diario de fallback sin gasto. Además se inició la transición del NexaHQ hacia un Command Center visual/operativo.",
-    "next_review": "Seguir desarrollando NexaHQ en capas visuales y operativas mientras EXP-001B espera entrada humana; mantener investigación y falsación en paralelo.",
+    "last_action": "Implementada como política persistente la obligación de escapar de cuellos de botella antes de permanecer inactiva.",
+    "next_review": "Ante cada bloqueo, intentar primero una ruta alternativa sin Kael y registrar resultado.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
     "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE"
   },
@@ -114,5 +114,24 @@
     "current_spend_eur": 0,
     "reserved_eur": 7.25,
     "spending_requires_kael_approval": true
+  },
+  "bottleneck_escape_policy": {
+    "status": "ACTIVE_BY_POLICY",
+    "rule": "Un bloqueo causado por una acción de Kael bloquea únicamente la ruta que necesita esa acción; NEXIA debe buscar activamente una ruta alternativa que no requiera a Kael antes de permanecer inactiva.",
+    "priority": [
+      "eliminar dependencia",
+      "sustituir acción humana por dato público o automatización disponible",
+      "cambiar experimento o canal",
+      "paralelizar otra misión segura",
+      "crear TAREA DE KAEL solo si no existe alternativa"
+    ],
+    "hard_limits": [
+      "no gastar sin aprobación",
+      "no contactar externamente sin vía autorizada",
+      "no asumir identidad ni permisos",
+      "no ejecutar acciones irreversibles",
+      "no falsear evidencia"
+    ],
+    "decision_rule": "Si existe una ruta segura, reversible y sin gasto que reduzca o elimine el cuello de botella, ejecutarla; si no existe, documentar por qué y emitir TAREA DE KAEL."
   }
 }
