@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -42,8 +42,16 @@
   "participant_acquisition_engine": {
     "status": "ACTIVE_BY_POLICY",
     "objective": "Reducir al mínimo el trabajo manual de Kael para conseguir participantes reales sin spam, suplantación, gasto ni contacto no autorizado.",
-    "pipeline": ["discover_public_case","verify_model_and_problem","prepare_individualized_message","authorized_external_execution","run_test","capture_evidence","learn_and_repeat"],
-    "current_blocker": "No authorized Reddit execution path in current session.",
+    "pipeline": [
+      "discover_public_case",
+      "verify_model_and_problem",
+      "prepare_individualized_message",
+      "authorized_external_execution",
+      "run_test",
+      "capture_evidence",
+      "learn_and_repeat"
+    ],
+    "current_blocker": "No hay vía autorizada de contacto Reddit/email/CRM disponible en la sesión actual.",
     "ops_layer": "NEXIA_OPS_CAPABILITY_MATRIX.md"
   },
   "improvement_engine": {
@@ -55,8 +63,8 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Se recuperó NEXIA_STATE.json, se investigó la capa operativa externa y se identificó una integración de navegador como vía candidata para reducir clics manuales.",
-    "next_review": "Conectar y verificar una vía autorizada de ejecución externa; mantener EXP-001B como cuello de botella comercial."
+    "last_action": "Se amplió y ejecutó el radar público de adquisición a coste €0, verificando nuevos casos Magnifica y actualizando NEXIA_ACQUISITION_RADAR.md. No se realizó ningún contacto externo.",
+    "next_review": "Conseguir una vía autorizada de contacto externo para convertir los candidatos A/B en participantes; mientras tanto continuar investigación pública sin gasto."
   },
   "external_ops": {
     "status": "DESIGNED_NOT_CONNECTED",
