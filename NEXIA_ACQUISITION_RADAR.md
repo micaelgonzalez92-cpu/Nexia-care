@@ -216,3 +216,19 @@ At least 7 strong Tier-1 Reddit candidates are now available for a single contro
 No private phone numbers, personal emails, addresses, or inferred identities were collected or added. No external contact was sent. Cost remains €0.
 
 Next safe action: Kael authorizes one authenticated Reddit account/channel; then contact the top candidates sequentially, starting with the primary ECAM22.110.B case, stopping after the first positive response rather than spamming the queue.
+
+
+## Revenue-intent signal — 2026-10-05
+
+16. Reddit / r/DeLonghi — “Delonghi Smart S : Grinder that never stops” — published 17 Mar 2026. Owner reports an out-of-warranty Magnifica S Smart with a grinder that runs too long, excessive dry grounds and failed normal extraction. The owner states De'Longhi offered a **€159 repair including travel, labor and parts**. This is not willingness-to-pay evidence for NEXIA and is not a participant result, but it is a useful market-price anchor showing that owners can face a materially higher repair decision than a low-cost diagnostic/triage offer.
+- Rank: A/B for monetization research; not primary EXP-001B target
+- Model: Magnifica S Smart
+- Symptom: grinder over-runs / extraction failure / wet grounds after workaround
+- Commercial anchor: €159 manufacturer repair offer reported by owner
+- Contact: NOT SENT
+- Source: https://www.reddit.com/r/DeLonghi/comments/1rw2yzn/delonghi_smart_s_grinder_that_never_stops/
+
+17. Public repair-content signal — The Guía del Café, July–September 2026, publishes dedicated Magnifica S diagnostic/repair content and explicitly frames “repair or replace” decisions, including internal-vs-user-service boundaries. This supports demand for diagnostic information, but it is content-market evidence, not proof of NEXIA conversion or revenue. Sources: https://www.laguiadelcafe.es/magnifica-s-no-muele/ and https://www.laguiadelcafe.es/reparar-o-cambiar-magnifica-s/
+
+### Falsation note
+The €159 repair anchor does **not** validate a €9–€19 NEXIA offer. It only supports testing whether a lower-cost diagnostic/triage product could capture value before a repair commitment. The next proof required is real-user behavior and, eventually, a real paid transaction.
