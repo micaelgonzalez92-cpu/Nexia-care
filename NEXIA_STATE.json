@@ -217,7 +217,7 @@
     "previous_state_version": 27,
     "current_state_version": 28,
     "previous_state_blob_sha": "97383c6dd4b2d56531c6550212d22f958fdd31f2",
-    "status": "VERIFIED_PENDING_FINAL_REREAD",
+    "status": "VERIFIED",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
     "verified_artifacts": [
@@ -230,7 +230,16 @@
       "NEXIA_INSTRUCTION_EVOLUTION.md",
       "NEXIA_EXTERNAL_CORE_SPEC.md"
     ],
-    "note": "Whole-system evolution doctrine recorded. No spending, external contact or change to validated business evidence."
+    "note": "Whole-system evolution review persisted and derived artifacts synchronized. No spending, external contact or change to validated business evidence.",
+    "verified_commit_chain": [
+      "2b682ba1b42bfa0f9aa23ecba3f0259ad39b129e",
+      "9b8806f583582c387ae6643f7dd2092959a7fdc0",
+      "96d6c81f098cb4ec6888bd69d18b78ac4dcc0fa3",
+      "ad3363f99949c7ef70aaa3904af87898abee6ca5",
+      "28c783158cf5268767b9f95e1eb0f4fdf22dddb9",
+      "f5df64d7b37632353d9bb35945dd384274df0098",
+      "0dd4a1e275ded96ce88d78738aee884089b13de4"
+    ]
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
