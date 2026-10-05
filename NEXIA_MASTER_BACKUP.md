@@ -259,3 +259,10 @@ State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5
 - Slow/dripping coffee guidance remains aligned with the documented one-click-toward-7 adjustment while grinding and the 2-coffee observation window.
 - This is technical documentation alignment, not real-user validation. EXP-001B remains at 0/3 and the Human Gate remains active.
 - Repository changes were applied directly to both public Nexia Care entrypoints and state/backup records; current live-runtime behavior of this latest patch has not been independently reverified.
+
+## 25. CALC / LEAK / UNKNOWN ALARM AUDIT — 2026-10-05
+- CALC: tightened guidance to follow the documented De’Longhi descaling procedure; if the request reappears immediately after descaling, review whether the cycle completed correctly before repeating it.
+- Water leak: guidance now requires identifying the source first and escalates internal/abundant/electrical-area leaks to power-off and authorised service rather than parts speculation.
+- Alarm / unknown: added a conservative minimum triage covering tank/tray, grounds container, brew group and spouts, explicitly without forcing or dismantling parts.
+- Official De’Longhi documentation confirms the Magnifica family uses indicator lights for insufficient/mis-seated water tank, grounds-container state, fine grinding and descaling status, and documents the related remedies.
+- Technical evidence only; EXP-001B remains real-user validation at 0/3.
