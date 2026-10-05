@@ -1,19 +1,19 @@
 {
   "updated_at": "2026-10-05T12:29:00+02:00",
   "status": "ACTIVE",
-  "current_cycle": "European Exception Desk — EXP-DOC-001",
-  "current_action": "Preparar experimento comercial sintético y paquete de oferta para Document Recovery.",
-  "last_completed_action": "Paquete EXP-DOC-001 creado y persistido en GitHub.",
-  "evidence": "VETA PRIORITARIA — problema demostrado; disposición a pagar NO validada",
+  "current_cycle": "European Exception Desk — EXP-DOC-001 falsificación",
+  "current_action": "Falsar Document Recovery frente a proveedores europeos y estrechar el wedge.",
+  "last_completed_action": "Falsación europea: SaaS genérico descartado como wedge; Exception Desk de cierre sigue abierta.",
+  "evidence": "VETA REFORZADA — demanda pública repetida; categoría genérica competitiva; disposición a pagar Nexia aún no validada",
   "capital_spent_eur": 0,
   "human_gate": "EXP-001B: 1 participante real pendiente. EXP-DOC-001: canal de outreach autorizado pendiente.",
   "parallel_work": [
-    "EXP-DOC-001 Document Recovery",
+    "EXP-DOC-001 Exception Desk de cierre",
     "Property Maintenance exceptions",
     "Mortgage document exceptions",
     "EXP-001B Care"
   ],
-  "next_action": "Mantener falsación europea y, cuando exista canal autorizado, ejecutar primer contacto comercial controlado.",
+  "next_action": "Construir dataset sintético de 20 expedientes y medir si la capa de excepciones produce una mejora clara antes de outreach.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
