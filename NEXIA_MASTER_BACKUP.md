@@ -290,7 +290,7 @@ Implemented and committed to `main`:
 
 **Integrity rule:** NEXIA_STATE.json is authoritative. BOOT, LIVE and MASTER BACKUP are derived/visibility artifacts. A stale backup cannot overwrite newer verified state.
 
-**Checkpoint:** CP-2026-10-05-001. Previous state version: 23. Current state version: 24. Financial impact: €0. Human Gate unchanged: K-001.
+**Checkpoint:** CP-2026-10-05-001. Previous STATE version: 28. Current STATE version: 28. Financial impact: €0. Human Gate unchanged: K-001.
 
 **Recovery behavior:** if a future write fails, Nexia must preserve the last known-good state, re-read the repository before retrying, avoid force-overwrites, and record the failure when possible. This layer reduces the risk of losing work across chats, sessions or partial writes; it does not eliminate the need for repository access or Git history.
 
@@ -317,4 +317,8 @@ State version **26** closed checkpoint **CP-2026-10-05-003** after synchronizing
 
 State version **27** records the verified current NexiaHQ commit `9b1cec575d4be902589ff104a8b5137da951c353` in `main`. The commit adds cache-control headers, visible state/read-clock indicators and 10-second refresh polling. Repository verification confirms the code and public STATE source are accessible. No spending, external contact, irreversible action or EXP-001B evidence change occurred.
 
-Checkpoint: **CP-2026-10-05-004**. Previous STATE v26 → current STATE v27. Financial impact: €0. Human Gate K-001 unchanged.
+Checkpoint: **CP-2026-10-05-004**. Previous STATE v26 → current STATE v28. Financial impact: €0. Human Gate K-001 unchanged.
+
+
+## 2026-10-06 evolution checkpoint
+System-wide evolution doctrine is active. GitHub write capability is verified. Master Operating Order and Instruction Evolution were updated; NEXIA_EXTERNAL_CORE_SPEC.md was restored. Financial impact: €0. No external contact or spending occurred.
