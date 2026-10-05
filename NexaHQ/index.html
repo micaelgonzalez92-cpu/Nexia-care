@@ -97,6 +97,26 @@ async function loadCommands(){
   box.innerHTML=html||'<div class="muted">No se pudieron interpretar comandos.</div>';
  }catch(e){box.innerHTML='<div class="muted">Registro de comandos no disponible ahora.</div>';}
 }
+
+async function fetchText(path){const r=await fetch('../'+path+'?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error(r.status);return await r.text();}
+function esc(v){return String(v??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));}
+function renderControlCenter(m){
+ const sync=(m.persistence_checkpoint?.status||'UNKNOWN');
+ document.getElementById('controlCenter').innerHTML=[
+  ['STATE','v'+m.version+' · '+m.phase,'Fuente canónica'],
+  ['SYNC',sync,'No se declara sincronizado sin verificación'],
+  ['AUTHORITY','GREEN / YELLOW / RED','Motor de autorización activo'],
+  ['AUTOMATIONS',m.automation_inventory.active+' activas','Arquitectura de 3 slots'],
+  ['CARE',m.product.stage,'Evidencia real: '+m.active_experiment.participants+'/'+m.active_experiment.target_participants],
+  ['CAPITAL',m.capital_eur+' €','Gasto actual: '+m.guardrails.current_spend_eur+' €']
+ ].map(x=>'<div class="livebox"><b>'+esc(x[0])+'</b><div class="v">'+esc(x[1])+'</div><small>'+esc(x[2])+'</small></div>').join('');
+}
+async function loadGovernance(m){
+ try{const d=await fetchText('NEXIA_DECISION_LOG.md');const rows=d.split(/\\r?\\n/).filter(x=>/^### D-/.test(x));document.getElementById('decisions').innerHTML=rows.length?rows.slice(-6).map(x=>'<div class="row"><b>'+esc(x.replace(/^### /,''))+'</b></div>').join(''):'Sin decisiones parseables';}catch(e){document.getElementById('decisions').textContent='Decision Log no disponible';}
+ try{const g=await fetchText('NEXIA_HUMAN_GATE_QUEUE_2026-10-05.md');const rows=g.split(/\\r?\\n/).filter(x=>/^### K-/.test(x));document.getElementById('humanQueue').innerHTML=rows.length?rows.map(x=>'<div class="row"><b>'+esc(x.replace(/^### /,''))+'</b></div>').join(''):'Sin gates parseables';}catch(e){document.getElementById('humanQueue').textContent='Cola de gates no disponible';}
+ document.getElementById('evidenceCenter').innerHTML=[['HECHO','STATE v'+m.version+' y gasto 0 €','VERIFICADO'],['HECHO','3 automatizaciones activas','VERIFICADO'],['HIPÓTESIS','NEXIA Care como capa de decisión','NO VALIDADA'],['HIPÓTESIS','Monetización de diagnóstico/decisión','NO VALIDADA'],['RECOMENDACIÓN','Conseguir evidencia real antes de escalar','ACTIVA'],['BLOQUEO','0/3 participantes','HUMAN GATE']].map(x=>'<div class="livebox"><b>'+esc(x[0])+'</b><div>'+esc(x[1])+'</div><small>'+esc(x[2])+'</small></div>').join('');
+ try{const e=await fetchText('NEXIA_EVENT_LOG.jsonl');const rows=e.trim().split(/\\r?\\n/).filter(Boolean).slice(-8).reverse();document.getElementById('eventTimeline').innerHTML=rows.map(line=>{let x;try{x=JSON.parse(line)}catch(_){return ''}return '<div class="towerrow"><b>'+esc(x.event_id)+'</b><span>'+esc(x.type)+'</span><span>'+esc(x.result)+'</span><small>STATE v'+esc(x.state_version)+'</small></div>'}).join('')||'<div class="muted">Sin eventos confirmados.</div>';}catch(e){document.getElementById('eventTimeline').innerHTML='<div class="muted">Event Log no disponible.</div>';}
+}
 async function load(){
  const s=document.getElementById('status'),u=document.getElementById('updated');
  try{
@@ -114,7 +134,7 @@ async function load(){
   document.getElementById('gates').innerHTML='<span class="pill ok">🟢 EJECUTAR SEGURO</span><span class="pill warn">🟡 PREPARAR</span><span class="pill danger">🔴 KAEL</span>';
   document.getElementById('event').textContent='Cuello de botella: evidencia humana real para EXP-001B. NEXIA continúa en paralelo con trabajo seguro de HQ, investigación, economía, documentación y resiliencia.';
   document.getElementById('system').innerHTML='Persistencia: '+m.system.persistent_state+'<br>HQ: '+m.system.real_hq+'<br>Telemetría: '+m.system.telemetry+'<br>Notificaciones: '+m.system.notifications+'<br>Automatización: '+m.system.autonomous_execution+'<br>Continuidad: '+m.system.continuity_layer;
-  document.getElementById('next').textContent=m.next_useful_action; renderLiveSystem(m,{});
+  document.getElementById('next').textContent=m.next_useful_action; renderLiveSystem(m,{}); renderControlCenter(m); await loadGovernance(m);
   document.getElementById('towerPhase').textContent=m.phase;
   document.getElementById('towerAuth').textContent=m.external_ops?.status||'—';
   document.getElementById('towerSync').textContent=m.system?.persistent_state||'—';
