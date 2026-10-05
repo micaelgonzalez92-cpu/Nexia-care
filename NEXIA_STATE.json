@@ -1,5 +1,5 @@
 {
-  "version": 15,
+  "version": 16,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -63,10 +63,11 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Corregido y fusionado en main el branding visible del HQ: NexaHQ/Nexa → NEXIA HQ en las tres entradas de la interfaz.",
+    "last_action": "Corregido el branding visible de NexaCare a Nexia Care en las dos entradas públicas de NEXIA CARE; ambas siguen sincronizadas en MVP 0.5.",
     "next_review": "En cada ciclo: comprobar integridad, capacidad disponible, cuello de botella, mejoras seguras y siguiente misión desbloqueable.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
-    "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE"
+    "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE",
+    "next_useful_action": "Auditar y mantener coherencia de branding, rutas y documentación; continuar mejoras seguras de UX y resiliencia mientras EXP-001B permanece bloqueado por el Human Gate."
   },
   "external_ops": {
     "status": "DESIGNED_NOT_CONNECTED",
