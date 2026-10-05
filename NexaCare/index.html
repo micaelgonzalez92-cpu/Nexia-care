@@ -13,7 +13,7 @@ button{display:block;width:100%;margin:10px 0;padding:14px;border:0;border-radiu
 </head>
 <body>
 <div class="card">
-<div class="tag">NexaCare · MVP 0.4</div><div class="command"><button onclick="command('mission')">🎯 MISIÓN</button><button onclick="command('report')">📊 INFORME</button><button onclick="command('economy')">💰 ECONOMÍA</button><button onclick="command('tasks')">👤 MIS TAREAS</button></div><div id="command"></div>
+<div class="tag">NexaCare · MVP 0.5</div><div class="command"><button onclick="command('mission')">🎯 MISIÓN</button><button onclick="command('report')">📊 INFORME</button><button onclick="command('economy')">💰 ECONOMÍA</button><button onclick="command('tasks')">👤 MIS TAREAS</button></div><div id="command"></div>
 <h1>¿Qué le ocurre a tu De’Longhi Magnifica?</h1>
 <p class="muted">Responde unas preguntas y te diremos qué comprobar antes de gastar dinero.</p>
 <div id="app"></div>
@@ -22,7 +22,11 @@ button{display:block;width:100%;margin:10px 0;padding:14px;border:0;border-radiu
 const app=document.getElementById('app'); const commandBox=document.getElementById('command');
 const state={model:null,symptom:null,answers:{}};
 function command(x){const messages={mission:"🎯 MISIÓN ACTUAL: completar el diagnóstico sin comprar piezas a ciegas.",report:"📊 INFORME: MVP 0.4 · validación · €0 gastados · evidencia pública incorporada.",economy:"💰 ECONOMÍA: capital gastado €0 · inventario €0 · ingresos €0 · beneficio €0.",tasks:"👤 TAREAS: ninguna imprescindible ahora."};commandBox.innerHTML='<div class="status">'+messages[x]+'</div>'}
-function progress(){return state.symptom!==null?3:state.model?2:1}
+function progress(){
+ const q=state.symptom===null?null:{0:'flow',1:'descaled',2:'all',3:'hot',5:'descaled',6:'location',8:'grounds'}[state.symptom];
+ const complete=state.symptom!==null && (!q || state.answers[q]!==undefined);
+ return complete?3:state.model?2:1
+}
 function hud(){const p=progress();return '<div class="hud"><div class="hudrow"><span>PROGRESO DE MISIÓN</span><strong>'+p+'/3</strong></div><div class="bar"><div class="fill" style="width:'+(p/3*100)+'%"></div></div><div class="xp">NexaCare · diagnóstico en curso</div></div>'}
 function render(){
  const h=hud();
