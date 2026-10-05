@@ -9,7 +9,7 @@
 </style>
 </head>
 <body><main id="hq">
-<div class="top"><div><div class="eyebrow">NEXIA CORE · NexaHQ</div><div class="title">NexaHQ</div><div class="sub">Centro de mando · economía · misiones · agentes · evolución · NexaHQ</div></div><span class="tag" id="status">CARGANDO</span></div>
+<div class="top"><div><div class="eyebrow">NEXIA CORE · NexaHQ</div><div class="title">NexaHQ</div><div class="sub">Centro de mando · economía · misiones · agentes · evolución · NexaHQ</div></div><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span class="tag" id="status">CARGANDO</span><button id="refresh" type="button" style="background:#121c2d;color:#dfe7f5;border:1px solid #35435c;border-radius:10px;padding:7px 10px;cursor:pointer">↻ ACTUALIZAR</button><span class="small" id="updated">—</span></div></div>
 
 <section class="grid" id="metrics"></section>
 
@@ -42,8 +42,9 @@
 </main>
 <script>
 (async function(){
- const status=document.getElementById('status'),eventBox=document.getElementById('event');
- document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>{eventBox.textContent='Acción de interfaz registrada: '+b.dataset.action.toUpperCase()+'. No modifica el estado persistente.';}));
+ function loadState(){
+ const status=document.getElementById('status'),eventBox=document.getElementById('event'),updated=document.getElementById('updated');
+ document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>{eventBox.textContent='Acción de interfaz registrada: '+b.dataset.action.toUpperCase()+'. No modifica el estado persistente.';})); document.getElementById('refresh').addEventListener('click',loadState);
  try{
   const r=await fetch('../NEXIA_STATE.json?ts='+Date.now(),{cache:'no-store'}); if(!r.ok) throw new Error('state '+r.status); const m=await r.json();
   status.textContent='ONLINE · ESTADO CARGADO';status.className='tag ok';
@@ -53,6 +54,9 @@
   document.getElementById('event').textContent='NEXIA detecta que el cuello de botella actual sigue siendo obtener evidencia humana real para EXP-001B. No se ejecuta contacto externo sin autorización.';
   document.getElementById('system').innerHTML='Persistencia: '+m.system.persistent_state+'<br>HQ: '+m.system.real_hq+'<br>Telemetría: '+m.system.telemetry+'<br>Notificaciones: '+m.system.notifications+'<br>Automatización: '+m.system.autonomous_execution+'<br>Publicación: '+m.system.deployment;
   document.getElementById('economy').innerHTML='Presupuesto semanal: '+m.guardrails.weekly_budget_eur+' €<br>Gasto actual: '+m.guardrails.current_spend_eur+' €<br>Reservado: '+m.guardrails.reserved_eur+' €<br>Aprobación de gasto: '+(m.guardrails.spending_requires_kael_approval?'SÍ':'NO');
- }catch(e){status.textContent='OFFLINE · SIN ESTADO';status.className='tag danger';document.getElementById('metrics').innerHTML='<div class="card"><div class="error">No se pudo cargar NEXIA_STATE.json.</div></div>';}
+ updated.textContent='Actualizado: '+new Date().toLocaleString('es-ES');
+ }catch(e){status.textContent='OFFLINE · SIN ESTADO';status.className='tag danger';updated.textContent='Error de lectura';document.getElementById('metrics').innerHTML='<div class="card"><div class="error">No se pudo cargar NEXIA_STATE.json.</div></div>';}
+ }
+ loadState(); setInterval(loadState,60000);
 })();
 </script></body></html>
