@@ -1,20 +1,20 @@
 {
   "updated_at": "2026-10-05T13:29:00+02:00",
-  "status": "ACTIVE / HUMAN GATE AT CRITICAL PATH",
-  "current_cycle": "NEXIA autonomous continuity + European revenue engine",
-  "current_action": "Ejecutar todas las rutas internas €0 y mantener dos gates de validación preparados.",
-  "last_completed_action": "Auditoría de cola: 10 workstreams activos; K-001 confirmado como único gate externo crítico.",
-  "evidence": "Estado operativo recuperado y persistido; validación comercial y medición humana real siguen pendientes.",
+  "status": "ACTIVE / CRITICAL PATH HUMAN-GATED",
+  "current_cycle": "NEXIA Core — autonomous work + critical-path readiness",
+  "current_action": "Mantener todas las rutas internas €0 activas y dejar listas las dos validaciones que requieren intervención humana.",
+  "last_completed_action": "Recuperación de NEXIA_STATE y consolidación del critical path; sin cambios de gasto ni contactos externos.",
+  "evidence": "Estado verificado: 0 usuarios reales, 0 transacciones, 0 EUR de ingresos; validación aún pendiente.",
   "capital_spent_eur": 0,
-  "human_gate": "🔴 K-001: autorizar/conectar canal externo legítimo para adquisición. Sin él no se puede contactar a participantes reales.",
+  "human_gate": "🔴 K-001: autorizar/conectar canal externo legítimo de adquisición. Además, la prueba de tiempo humano de EXP-DOC-001 requiere un operador humano.",
   "parallel_work": [
-    "EXP-DOC-001 Exception Desk / reproducibilidad",
-    "EXP-001B NEXIA Care / participante real",
+    "EXP-001B NEXIA Care",
+    "EXP-DOC-001 Exception Desk",
     "European opportunity falsification",
-    "Economics engine",
+    "Economics / alternative monetization",
     "HQ / resilience / continuity"
   ],
-  "next_action": "Seguir investigación y preparación interna; cuando K-001 esté autorizado, ejecutar contacto real y medición sin esperar reinicio.",
-  "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles.",
+  "next_action": "Cuando K-001 esté disponible, ejecutar inmediatamente adquisición y validaciones preparadas; hasta entonces continuar investigación, economía, preparación y regresión sin gasto.",
+  "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
