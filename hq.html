@@ -1,1 +1,188 @@
 <!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
+<title>NEXIA HQ · Command Center</title>
+<style>.towergrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}.towerbox{padding:14px;border:1px solid #1e2b40;border-radius:14px;background:#0b1420}.towerbox b{display:block;font-size:10px;color:var(--muted);letter-spacing:.1em}.towerbox span{display:block;font-size:17px;font-weight:800;margin-top:7px}.towerbox small{display:block;color:var(--muted);margin-top:5px}.towertable{margin-top:12px}.towerrow{display:grid;grid-template-columns:1.2fr .9fr 1.2fr .7fr;gap:10px;padding:11px 0;border-top:1px solid #1b2739}.towerrow span{color:#a9b6c9}.towerrow b{font-size:12px}.towerrow small{color:var(--muted)}@media(max-width:850px){.towergrid{grid-template-columns:1fr 1fr}.towerrow{grid-template-columns:1fr 1fr}}@media(max-width:520px){.towergrid{grid-template-columns:1fr}}.tabs{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}.tab{background:#0d1725;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer;font-weight:700}.tab.active{border-color:var(--green);box-shadow:inset 0 0 0 1px #1d4938}.commandgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}.cmd{padding:14px;border:1px solid #1e2b40;border-radius:14px;background:#0b1420}.cmd code{color:var(--green);font-weight:800}.cmd small{display:block;color:var(--muted);margin-top:6px;line-height:1.45}.livegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}.livebox{padding:14px;border:1px solid #1e2b40;border-radius:14px;background:#0b1420}.livebox b{display:block;margin-bottom:6px}.livebox .v{font-size:18px;font-weight:800}.livebox small{display:block;color:var(--muted);margin-top:6px}.projectok{color:var(--green)}.projectwarn{color:var(--amber)}.projectoff{color:var(--red)}\n.buildbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.buildchip{padding:8px 11px;border:1px solid var(--line);border-radius:12px;background:#0b1420;color:#a9b6c9}.buildchip strong{color:var(--text)}.pulse{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--green);box-shadow:0 0 0 4px #17382b;margin-right:7px}.heroalert{margin-top:14px;padding:12px 14px;border:1px solid #2b4568;border-radius:14px;background:linear-gradient(90deg,#0d1a2b,#0b1420)}.heroalert b{color:var(--text)}.mini{font-size:11px;color:var(--muted)}\n
+:root{color-scheme:dark;--bg:#070b12;--panel:#0e1622;--line:#223148;--muted:#8291a7;--text:#edf3ff;--green:#65e0a3;--amber:#f2c66d;--red:#ff7f86;--blue:#78a9ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% -10%,#182844 0,#070b12 42%);color:var(--text);font:14px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1320px;margin:auto;padding:26px}.top{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;flex-wrap:wrap}.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}.title{font-size:clamp(34px,5vw,58px);font-weight:900;letter-spacing:-.04em;margin:5px 0}.sub{color:#a9b6c9}.tag,.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:11px}.ok{color:var(--green);border-color:#2e7658}.warn{color:var(--amber);border-color:#755b29}.danger{color:var(--red);border-color:#74363b}.btn{background:#111c2c;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 11px;cursor:pointer}.btn:hover{border-color:var(--green)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:10px;margin-top:18px}.card,.panel{background:linear-gradient(180deg,#101a29,#0b131f);border:1px solid var(--line);border-radius:18px;padding:17px}.label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.value{font-size:25px;font-weight:850;margin-top:7px}.layout{display:grid;grid-template-columns:1.4fr .8fr;gap:12px;margin-top:12px}.panel h2{margin:5px 0 10px;font-size:19px}.row{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #1b2739;padding:10px 0}.muted{color:var(--muted);line-height:1.6}.loop{display:grid;grid-template-columns:repeat(12,1fr);gap:7px;margin-top:14px}.step{grid-column:span 2;text-align:center;padding:12px 7px;border:1px solid var(--line);border-radius:13px;background:#0d1725}.step b{font-size:11px}.step small{display:block;color:var(--muted);margin-top:4px}.step.live{border-color:#34765a;box-shadow:inset 0 0 0 1px #1d4938}.step.gate{border-color:#735d2d}.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.item{padding:13px;border:1px solid #1e2b40;border-radius:14px;background:#0b1420}.item b{display:block;margin-bottom:5px}.bar{height:7px;background:#172336;border-radius:99px;overflow:hidden;margin-top:9px}.fill{height:100%;background:var(--green)}.fill.amber{background:var(--amber)}.fill.blue{background:var(--blue)}.statusline{display:flex;gap:7px;flex-wrap:wrap}.footer{margin-top:18px;color:#617089;font-size:11px}@media(max-width:850px){.layout{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.step{grid-column:span 4}}@media(max-width:520px){.step{grid-column:span 6}}
+
+/* NEXIA HQ readability pass v2 */
+:root{color-scheme:light;--bg:#f3f6fa;--panel:#ffffff;--line:#d7dee8;--muted:#536174;--text:#172033;--green:#087443;--amber:#8a5a00;--red:#b4232d;--blue:#2459b8}
+body{background:linear-gradient(180deg,#eef3f8 0%,#f7f9fc 55%,#eef2f6 100%);color:var(--text);font-size:15px;line-height:1.5}
+.card,.panel{background:#fff;border:1px solid var(--line);box-shadow:0 4px 18px rgba(23,32,51,.06)}
+.sub,.muted,.towerrow span,.towerrow small,.livebox small,.cmd small,.step small,.item .muted{color:#536174}
+.label,.eyebrow{color:#435268}
+.value{color:#111827}
+.btn,.tab{background:#f8fafc;color:#172033;border-color:#c7d0dc}
+.tab.active{background:#eef8f2;border-color:#087443;box-shadow:inset 0 0 0 1px #b7dec8}
+.tag,.pill,.buildchip{background:#fff;color:#172033;border-color:#c7d0dc}
+.ok{color:#087443;border-color:#76b99a}.warn{color:#8a5a00;border-color:#d9b86b}.danger{color:#b4232d;border-color:#d99198}
+.towerbox,.cmd,.livebox,.item,.step{background:#f8fafc;border-color:#d7dee8}
+.row,.towerrow{border-top-color:#e1e6ed}
+.heroalert{background:#eef5ff;border-color:#b8cce8}.heroalert b{color:#172033}
+.bar{background:#e2e8f0}.fill{background:#087443}.fill.amber{background:#b77900}.fill.blue{background:#2459b8}
+.pulse{background:#087443;box-shadow:0 0 0 4px #d7eee3}
+.footer{color:#66758a}
+@media(max-width:850px){main{padding:18px}.layout,.cols{grid-template-columns:1fr}.loop{grid-template-columns:repeat(2,1fr)}.step{grid-column:span 1}}
+</style>
+</head>
+<body><main>
+<header class="top">
+<div><div class="eyebrow">NEXIA CORE · COMMAND CENTER</div><div class="title">NEXIA HQ</div><div class="sub">Estado operativo · misión · economía · agentes · radar · evolución</div></div>
+<div><span id="status" class="tag">CARGANDO</span> <button id="refresh" class="btn">↻ ACTUALIZAR</button><span id="updated" class="muted">—</span></div>
+</header>\n<div class="buildbar"><div class="buildchip"><span class="pulse"></span><strong>CORE LIVE</strong> · fuente canónica NEXIA_STATE</div><div class="buildchip">HQ build <strong id="hqBuild">FIX-ROOT-PATHS</strong></div><div class="buildchip">Estado <strong id="stateVersion">—</strong></div><div class="buildchip">Última lectura <strong id="readClock">—</strong></div></div>\n<div class="heroalert"><b>Centro de mando operativo.</b> Este panel muestra estado persistente, gates, decisiones, evidencia y actividad confirmada. Si el navegador muestra una versión antigua, usa <b>CTRL+F5</b> o abre la URL con <b>?v=52755d5</b>.</div>
+
+<section id="metrics" class="grid"></section>
+
+<section class="layout">
+<div class="panel"><div class="eyebrow">MISIÓN CONTROL</div><h2 id="mission">—</h2>
+<div class="row"><span class="muted">Experimento</span><strong id="exp">—</strong></div>
+<div class="row"><span class="muted">Participantes</span><strong id="participants">—</strong></div>
+<div class="row"><span class="muted">Human Gate</span><strong id="gate">—</strong></div>
+<div class="row"><span class="muted">Bloqueo</span><strong id="reason">—</strong></div></div>
+<div class="panel"><div class="eyebrow">ECONOMÍA</div><h2>Capital protegido</h2><div id="economy" class="muted">—</div></div>
+</section>
+
+<section class="panel" style="margin-top:12px"><div class="eyebrow">LOOP EVOLUTIVO</div><h2>Actualizar → mejorar → medir → volver a actualizar</h2>
+<div class="loop">
+<div class="step live"><b>OBSERVAR</b><small>estado</small></div><div class="step live"><b>INVESTIGAR</b><small>demanda</small></div><div class="step live"><b>DESCUBRIR</b><small>vías</small></div><div class="step live"><b>FILTRAR</b><small>falsar</small></div><div class="step live"><b>CONSTRUIR</b><small>sistemas</small></div><div class="step live"><b>MEDIR</b><small>resultado</small></div><div class="step live"><b>MEJORAR</b><small>capacidad</small></div><div class="step live"><b>AUTOMATIZAR</b><small>repetición</small></div><div class="step gate"><b>VALIDAR</b><small>evidencia</small></div><div class="step gate"><b>EXTRAER</b><small>€ real</small></div><div class="step live"><b>APRENDER</b><small>memoria</small></div><div class="step live"><b>REPETIR</b><small>más rápido</small></div>
+</div><p class="muted">Regla: un bloqueo humano bloquea una ruta, no la máquina. Se buscan rutas alternativas seguras, reversibles y sin gasto.</p></section>
+
+<section class="cols">
+<div class="item"><b>🔎 RADAR</b><span class="muted">Señales públicas → problemas → oportunidades → falsación.</span><div class="bar"><div class="fill" style="width:82%"></div></div></div>
+<div class="item"><b>🧪 LAB</b><span class="muted">EXP-001B: 0/3 usuarios reales. Evidencia real todavía 0.</span><div class="bar"><div class="fill amber" style="width:18%"></div></div></div>
+<div class="item"><b>🤖 AGENT NETWORK</b><span class="muted">Control Tower + Memory Review + trabajador dinámico activos.</span><div class="bar"><div class="fill blue" style="width:60%"></div></div></div>
+<div class="item"><b>☕ NEXIA CARE</b><span class="muted">VETA / VALIDACIÓN · Magnifica S / ECAM21-22.110.</span><div class="bar"><div class="fill amber" style="width:35%"></div></div></div>
+<div class="item"><b>🛡️ RESILIENCIA</b><span class="muted">Estado persistente, trazabilidad, backups verificables y límites de seguridad.</span><div class="bar"><div class="fill blue" style="width:70%"></div></div></div>
+<div class="item"><b>🚀 ESCALADO</b><span class="muted">Todavía bloqueado por falta de extracción económica real.</span><div class="bar"><div class="fill amber" style="width:5%"></div></div></div>
+</section>
+
+<section class="layout">
+<div class="panel"><div class="eyebrow">EVENT ENGINE</div><h2 id="eventTitle">Evento operativo</h2><p id="event" class="muted">—</p><div class="statusline"><button class="btn" data-a="OBSERVAR">OBSERVAR</button><button class="btn" data-a="FALSAR">FALSAR</button><button class="btn" data-a="HUMAN GATE">HUMAN GATE</button></div></div>
+<div class="panel"><div class="eyebrow">VALUE ENGINE</div><h2 id="engine">—</h2><p id="objective" class="muted">—</p><div id="gates"></div></div>
+</section>
+
+<section class="panel" style="margin-top:12px;border-color:#2e7658">
+<div class="eyebrow">CONTROL TOWER</div><h2>Cola operativa y verificación</h2>
+<div class="towergrid">
+<div class="towerbox"><b>FASE ACTUAL</b><span id="towerPhase">—</span><small>Fuente: NEXIA_STATE</small></div>
+<div class="towerbox"><b>AUTORIZACIÓN</b><span id="towerAuth">—</span><small>Authority Engine</small></div>
+<div class="towerbox"><b>SINCRONIZACIÓN</b><span id="towerSync">—</span><small>STATE como fuente canónica</small></div>
+<div class="towerbox"><b>PRÓXIMO GATE</b><span id="towerGate">—</span><small>Intervención de Kael</small></div>
+</div>
+<div class="towertable" id="towerQueue"></div>
+</section>
+
+<nav class="tabs" aria-label="HQ"><button class="tab active" data-tab="overview">CONTROL</button><button class="tab" data-tab="commands">COMANDOS CORE</button><button class="tab" data-tab="live">LIVE / SISTEMA</button></nav>
+<section id="tab-commands" class="panel tabpane" hidden style="margin-top:12px">
+<div class="eyebrow">NEXIA CORE · COMMAND CONSOLE</div><h2>Comandos disponibles para Kael</h2>
+<p class="muted">Lenguaje natural: no necesitas memorizar sintaxis exacta. Esta pestaña lee el registro persistente <b>NEXIA_COMMANDS.md</b> y lo presenta como interfaz de mando.</p>
+<div id="commands" class="commandgrid"><div class="muted">Cargando comandos…</div></div>
+</section>
+<section id="tab-live" class="panel tabpane" hidden style="margin-top:12px;border-color:#34765a">
+<div class="eyebrow">NEXIA · LIVE CONTROL TOWER</div><h2>Visibilidad conjunta</h2>
+<div id="liveSystem" class="livegrid"><div class="item"><b>Estado</b><span class="muted">Cargando…</span></div></div>
+<p class="muted">Actualización automática: 10 s. Esto es polling sobre fuentes persistentes; no se presenta como pensamiento continuo en segundo plano. Un dato solo aparece como verificado si existe en la fuente correspondiente.</p>
+</section>
+
+<section class="panel" style="margin-top:12px"><div class="eyebrow">CENTRO DE CONTROL</div><h2>Estado completo de Nexia</h2><div id="controlCenter" class="livegrid">Cargando…</div></section>
+<section class="layout"><div class="panel"><div class="eyebrow">DECISIONES</div><h2>Decision Log</h2><div id="decisions" class="muted">Cargando…</div></div><div class="panel"><div class="eyebrow">HUMAN GATES</div><h2>Cola de Kael</h2><div id="humanQueue" class="muted">Cargando…</div></div></section>
+<section class="panel" style="margin-top:12px"><div class="eyebrow">EVIDENCIA</div><h2>Hecho · Estimación · Hipótesis · Recomendación</h2><div id="evidenceCenter" class="livegrid">Cargando…</div></section>
+<section class="panel" style="margin-top:12px"><div class="eyebrow">ACTIVIDAD VERIFICADA</div><h2>Últimos checkpoints persistentes</h2><div id="eventTimeline" class="towertable">Cargando…</div></section>
+<section class="panel" style="margin-top:12px;border-color:#34765a">
+<div class="eyebrow">🔴 LIVE ACTIVITY</div><h2 id="liveTitle">—</h2>
+<div class="row"><span class="muted">Acción actual</span><strong id="liveAction">—</strong></div>
+<div class="row"><span class="muted">Última acción</span><strong id="liveLast">—</strong></div>
+<div class="row"><span class="muted">Evidencia</span><strong id="liveEvidence">—</strong></div>
+<div class="row"><span class="muted">Human Gate</span><strong id="liveGate">—</strong></div>
+<div class="row"><span class="muted">Siguiente</span><strong id="liveNext">—</strong></div>
+<p id="liveParallel" class="muted">—</p>
+</section>
+
+<section class="layout">
+<div class="panel"><div class="eyebrow">SISTEMA</div><div id="system" class="muted">—</div></div>
+<div class="panel"><div class="eyebrow">SIGUIENTE ACCIÓN</div><h2 id="next">—</h2><p class="muted">Prioridad: reducir el cuello de botella sin gastar, sin contacto externo no autorizado y sin alterar evidencia válida.</p></div>
+</section>
+<div class="footer">NEXIA HQ · interfaz operativa basada en NEXIA_STATE.json. Las barras son indicadores de estado de sistema, no pronósticos de ingresos. Actualización automática cada 10 s · fuente persistente pública · polling automático cada 10 s · estado y LIVE leídos desde la raíz canónica.</div>
+</main>
+<script>
+async function loadCommands(){
+ const box=document.getElementById('commands'); if(!box)return;
+ try{
+  const r=await fetch('./NEXIA_COMMANDS.md?ts='+Date.now(),{cache:'no-store'}); if(!r.ok)throw Error(r.status);
+  const md=await r.text(); const lines=md.split(/\r?\n/); let html=''; let section='';
+  for(const line of lines){
+   if(line.startsWith('### ')){section=line.slice(4); continue;}
+   const m=line.match(/^- \*\*(.+?)\*\* — (.+)$/);
+   if(m) html+='<div class="cmd"><div><span class="label">'+section+'</span></div><code>'+m[1]+'</code><small>'+m[2]+'</small></div>';
+  }
+  box.innerHTML=html||'<div class="muted">No se pudieron interpretar comandos.</div>';
+ }catch(e){box.innerHTML='<div class="muted">Registro de comandos no disponible ahora.</div>';}
+}
+
+async function fetchText(path){const r=await fetch('./'+path+'?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error(r.status);return await r.text();}
+function esc(v){return String(v??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));}
+function renderControlCenter(m){
+ const sync=(m.persistence_checkpoint?.status||'UNKNOWN');
+ document.getElementById('controlCenter').innerHTML=[
+  ['STATE','v'+m.version+' · '+m.phase,'Fuente canónica'],
+  ['SYNC',sync,'No se declara sincronizado sin verificación'],
+  ['AUTHORITY','GREEN / YELLOW / RED','Motor de autorización activo'],
+  ['AUTOMATIONS',m.automation_inventory.active+' activas','Arquitectura de 3 slots'],
+  ['CARE',m.product.stage,'Evidencia real: '+m.active_experiment.participants+'/'+m.active_experiment.target_participants],
+  ['CAPITAL',m.capital_eur+' €','Gasto actual: '+m.guardrails.current_spend_eur+' €']
+ ].map(x=>'<div class="livebox"><b>'+esc(x[0])+'</b><div class="v">'+esc(x[1])+'</div><small>'+esc(x[2])+'</small></div>').join('');
+}
+async function loadGovernance(m){
+ try{const d=await fetchText('NEXIA_DECISION_LOG.md');const rows=d.split(String.fromCharCode(10)).filter(x=>/^### D-/.test(x));document.getElementById('decisions').innerHTML=rows.length?rows.slice(-6).map(x=>'<div class="row"><b>'+esc(x.replace(/^### /,''))+'</b></div>').join(''):'Sin decisiones parseables';}catch(e){document.getElementById('decisions').textContent='Decision Log no disponible';}
+ try{const g=await fetchText('NEXIA_HUMAN_GATE_QUEUE_2026-10-05.md');const rows=g.split(String.fromCharCode(10)).filter(x=>/^### K-/.test(x));document.getElementById('humanQueue').innerHTML=rows.length?rows.map(x=>'<div class="row"><b>'+esc(x.replace(/^### /,''))+'</b></div>').join(''):'Sin gates parseables';}catch(e){document.getElementById('humanQueue').textContent='Cola de gates no disponible';}
+ document.getElementById('evidenceCenter').innerHTML=[['HECHO','STATE v'+m.version+' y gasto 0 €','VERIFICADO'],['HECHO','3 automatizaciones activas','VERIFICADO'],['HIPÓTESIS','NEXIA Care como capa de decisión','NO VALIDADA'],['HIPÓTESIS','Monetización de diagnóstico/decisión','NO VALIDADA'],['RECOMENDACIÓN','Conseguir evidencia real antes de escalar','ACTIVA'],['BLOQUEO','0/3 participantes','HUMAN GATE']].map(x=>'<div class="livebox"><b>'+esc(x[0])+'</b><div>'+esc(x[1])+'</div><small>'+esc(x[2])+'</small></div>').join('');
+ try{const e=await fetchText('NEXIA_EVENT_LOG.jsonl');const rows=e.trim().split(String.fromCharCode(10)).filter(Boolean).slice(-8).reverse();document.getElementById('eventTimeline').innerHTML=rows.map(line=>{let x;try{x=JSON.parse(line)}catch(_){return ''}return '<div class="towerrow"><b>'+esc(x.event_id)+'</b><span>'+esc(x.type)+'</span><span>'+esc(x.result)+'</span><small>STATE v'+esc(x.state_version)+'</small></div>'}).join('')||'<div class="muted">Sin eventos confirmados.</div>';}catch(e){document.getElementById('eventTimeline').innerHTML='<div class="muted">Event Log no disponible.</div>';}
+}
+function renderLiveSystem(m,l){document.getElementById('liveSystem').innerHTML=[['FASE',m.phase,'STATE v'+m.version],['MISIÓN',m.current_mission?.name||'—','misión activa'],['EXPERIMENTO',m.active_experiment?.id||'—',String(m.active_experiment?.status||'—')],['GATE',m.human_gate?.status||'—',m.human_gate?.id||'K-001'],['CAPITAL',(m.capital_eur??0)+' €','capital'],['GASTO',(m.guardrails?.current_spend_eur??0)+' €','gasto actual']].map(x=>'<div class="livebox"><b>'+esc(x[0])+'</b><div class="v">'+esc(x[1])+'</div><small>'+esc(x[2])+'</small></div>').join('');}
+async function load(){
+ const s=document.getElementById('status'),u=document.getElementById('updated');
+ try{
+  const r=await fetch('./NEXIA_STATE.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error(r.status);const m=await r.json();
+  s.textContent='ONLINE · ESTADO CARGADO';s.className='tag ok';const now=new Date();u.textContent=now.toLocaleString('es-ES');document.getElementById('readClock').textContent=now.toLocaleTimeString('es-ES');document.getElementById('stateVersion').textContent='v'+m.version;
+  const met=[['CAPITAL',m.capital_eur+' €'],['INGRESOS',m.revenue_eur+' €'],['BENEFICIO',m.profit_eur+' €'],['EXTRACCIONES',m.extraction_count],['REPETIBILIDAD',m.reproducibility_count],['GASTO',m.guardrails.current_spend_eur+' €']];
+  document.getElementById('metrics').innerHTML=met.map(x=>'<div class="card"><div class="label">'+x[0]+'</div><div class="value">'+x[1]+'</div></div>').join('');
+  document.getElementById('mission').textContent=m.current_mission.name;
+  document.getElementById('exp').textContent=m.active_experiment.id+' · '+m.active_experiment.status;
+  document.getElementById('participants').textContent=m.active_experiment.participants+' / '+m.active_experiment.target_participants;
+  document.getElementById('gate').textContent=m.human_gate.status;
+  document.getElementById('reason').textContent=m.current_mission.reason;
+  document.getElementById('economy').innerHTML='Presupuesto semanal: <b>'+m.guardrails.weekly_budget_eur+' €</b><br>Gasto actual: <b>'+m.guardrails.current_spend_eur+' €</b><br>Reservado: <b>'+m.guardrails.reserved_eur+' €</b><br>Gasto requiere aprobación: <b>'+ (m.guardrails.spending_requires_kael_approval?'SÍ':'NO')+'</b>';
+  const ie=m.improvement_engine;document.getElementById('engine').textContent=ie.status+' · '+ie.mode;document.getElementById('objective').textContent=ie.objective;
+  document.getElementById('gates').innerHTML='<span class="pill ok">🟢 EJECUTAR SEGURO</span><span class="pill warn">🟡 PREPARAR</span><span class="pill danger">🔴 KAEL</span>';
+  document.getElementById('event').textContent='Cuello de botella: evidencia humana real para EXP-001B. NEXIA continúa en paralelo con trabajo seguro de HQ, investigación, economía, documentación y resiliencia.';
+  document.getElementById('system').innerHTML='Persistencia: '+m.system.persistent_state+'<br>HQ: '+m.system.real_hq+'<br>Telemetría: '+m.system.telemetry+'<br>Notificaciones: '+m.system.notifications+'<br>Automatización: '+m.system.autonomous_execution+'<br>Continuidad: '+m.system.continuity_layer;
+  document.getElementById('next').textContent=m.next_useful_action; renderLiveSystem(m,{}); renderControlCenter(m); await loadGovernance(m);
+  document.getElementById('towerPhase').textContent=m.phase;
+  document.getElementById('towerAuth').textContent=m.external_ops?.status||'—';
+  document.getElementById('towerSync').textContent=m.system?.persistent_state||'—';
+  document.getElementById('towerGate').textContent=m.human_gate?.status||'—';
+  document.getElementById('towerQueue').innerHTML=[
+   ['EXP-001B','VALIDACIÓN',m.active_experiment.status,m.active_experiment.participants+'/'+m.active_experiment.target_participants],
+   ['K-001','HUMAN GATE',m.human_gate.status,'0 €'],
+   ['K-002','EXTERNO','AUTH PENDING','perfil creado'],
+   ['MONETIZACIÓN','FALSACIÓN','SIGNAL / NO VALIDADA','0 €']
+  ].map(x=>'<div class="towerrow"><b>'+x[0]+'</b><span>'+x[1]+'</span><span>'+x[2]+'</span><small>'+x[3]+'</small></div>').join('');
+  try{
+   const lr=await fetch('./NEXIA_LIVE.json?ts='+Date.now(),{cache:'no-store'});if(!lr.ok)throw Error(lr.status);const l=await lr.json();
+   document.getElementById('liveTitle').textContent=l.current_cycle;
+   document.getElementById('liveAction').textContent=l.current_action;
+   document.getElementById('liveLast').textContent=l.last_completed_action;
+   document.getElementById('liveEvidence').textContent=l.evidence;
+   document.getElementById('liveGate').textContent=l.human_gate;
+   document.getElementById('liveNext').textContent=l.next_action;
+   document.getElementById('liveParallel').textContent='Frentes paralelos: '+l.parallel_work.join(' · ')+' | '+l.rule;
+  }catch(e){document.getElementById('liveTitle').textContent='LIVE no disponible';}
+ }catch(e){s.textContent='OFFLINE · SIN ESTADO';s.className='tag danger';u.textContent='Error de lectura';}
+}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.tabpane').forEach(x=>x.hidden=true);b.classList.add('active');document.getElementById('tab-'+b.dataset.tab).hidden=false;});
+loadCommands();
+document.getElementById('refresh').onclick=load;setInterval(loadCommands,10000);document.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>document.getElementById('eventTitle').textContent='Evento: '+b.dataset.a+' · interfaz informativa');load();setInterval(load,10000);
+</script>
+</body></html>
