@@ -1,20 +1,20 @@
 {
   "updated_at": "2026-10-05T13:29:00+02:00",
-  "status": "ACTIVE",
-  "current_cycle": "European Exception Desk — reproducibility gate",
-  "current_action": "Casos sintéticos V1 preparados; pendiente únicamente de ejecución humana cronometrada.",
-  "last_completed_action": "Dataset cegado de 10 casos creado y persistido.",
-  "evidence": "VETA REFORZADA — test reproducible preparado; ningún ahorro humano medido todavía.",
+  "status": "ACTIVE / HUMAN GATE AT CRITICAL PATH",
+  "current_cycle": "NEXIA autonomous continuity + European revenue engine",
+  "current_action": "Ejecutar todas las rutas internas €0 y mantener dos gates de validación preparados.",
+  "last_completed_action": "Auditoría de cola: 10 workstreams activos; K-001 confirmado como único gate externo crítico.",
+  "evidence": "Estado operativo recuperado y persistido; validación comercial y medición humana real siguen pendientes.",
   "capital_spent_eur": 0,
-  "human_gate": "EXP-001B: 1 participante real pendiente. EXP-DOC-001: ejecución humana cronometrada + canal de outreach autorizado pendientes.",
+  "human_gate": "🔴 K-001: autorizar/conectar canal externo legítimo para adquisición. Sin él no se puede contactar a participantes reales.",
   "parallel_work": [
-    "EXP-DOC-001 Exception Desk de cierre",
+    "EXP-DOC-001 Exception Desk / reproducibilidad",
+    "EXP-001B NEXIA Care / participante real",
     "European opportunity falsification",
-    "Property Maintenance exceptions",
-    "Mortgage document exceptions",
-    "EXP-001B Care"
+    "Economics engine",
+    "HQ / resilience / continuity"
   ],
-  "next_action": "Ejecutar baseline y Exception Desk con operador humano y registrar tiempos/errores; después preparar piloto comercial si el resultado es reproducible.",
+  "next_action": "Seguir investigación y preparación interna; cuando K-001 esté autorizado, ejecutar contacto real y medición sin esperar reinicio.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
