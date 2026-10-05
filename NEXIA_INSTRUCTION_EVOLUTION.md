@@ -91,3 +91,13 @@ A fresh session must recover the latest verified state version, mission, active 
 
 ## Operational truth
 This protocol governs work when a session or authorized automation actually runs; it does not imply background execution. Never claim an action, automation, persistence or result without evidence.
+
+
+## Project-instruction character-limit investigation — 2026-10-06
+- VERIFIED FACT: OpenAI's current Projects help documentation explains where/how to add Project instructions but does not publish a numeric character limit for that field. citeturn0search5
+- VERIFIED FACT: OpenAI separately documents a 5,000-character limit for global Custom Instructions as of 2026-07-15. This is a different container and must not be treated as the Project-instruction limit. citeturn0search0
+- VERIFIED FACT: No official OpenAI source located in this review establishes that Project Instructions share the 5,000-character Custom Instructions limit.
+- HYPOTHESIS: The runtime may enforce an undocumented UI/backend limit, but the exact value cannot be inferred safely from the Custom Instructions limit or community reports.
+- RULE: Do not optimize Nexia's live Project Instructions against an assumed numeric limit.
+- NEXT SAFE ACTION: obtain a reproducible measurement of the actual Project Instructions field using a disposable/test project or an equivalent non-destructive UI test; record accepted length, overflow/rejection behavior, Unicode/newline counting, and a conservative usable margin before proposing any live bootstrap rewrite.
+- GOVERNANCE: Nexia must not alter the live Project Instructions field during this measurement. Any final live-field change remains a Kael action.
