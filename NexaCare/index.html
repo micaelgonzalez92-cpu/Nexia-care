@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NexaCare — Diagnóstico</title>
+<title>Nexia Care — Diagnóstico</title>
 <style>
 body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:0 auto;padding:24px;background:#0b1020;color:#eef2ff}
 .card{background:#151c33;border:1px solid #2b365d;border-radius:18px;padding:24px}
@@ -13,7 +13,7 @@ button{display:block;width:100%;margin:10px 0;padding:14px;border:0;border-radiu
 </head>
 <body>
 <div class="card">
-<div class="tag">NexaCare · MVP 0.5</div>
+<div class="tag">Nexia Care · MVP 0.5</div>
 <h1>¿Qué le ocurre a tu De’Longhi Magnifica?</h1>
 <p class="muted">Responde unas preguntas y te diremos qué comprobar antes de gastar dinero.</p>
 <div id="app"></div>
@@ -26,7 +26,7 @@ function progress(){
  const complete=state.symptom!==null && (!q || state.answers[q]!==undefined);
  return complete?3:state.model?2:1
 }
-function hud(){const p=progress();return '<div class="hud"><div class="hudrow"><span>PROGRESO DE MISIÓN</span><strong>'+p+'/3</strong></div><div class="bar"><div class="fill" style="width:'+(p/3*100)+'%"></div></div><div class="xp">NexaCare · diagnóstico en curso</div></div>'}
+function hud(){const p=progress();return '<div class="hud"><div class="hudrow"><span>PROGRESO DE MISIÓN</span><strong>'+p+'/3</strong></div><div class="bar"><div class="fill" style="width:'+(p/3*100)+'%"></div></div><div class="xp">Nexia Care · diagnóstico en curso</div></div>'}
 function render(){
  const h=hud();
  if(!state.model){app.innerHTML=h+'<h2>1. Tu modelo</h2><button onclick="pickModel(\'ECAM21/22.110\')">Magnifica S · ECAM21/22.110</button><button onclick="pickModel(\'unknown\')">No lo sé</button>';return}
