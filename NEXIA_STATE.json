@@ -1,6 +1,6 @@
 {
-  "version": 27,
-  "updated_at": "2026-10-05",
+  "version": 28,
+  "updated_at": "2026-10-06",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
   "phase": "VALIDACIÓN",
@@ -213,11 +213,11 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-05-004",
-    "previous_state_version": 26,
-    "current_state_version": 27,
-    "previous_state_blob_sha": "2db23f15017432401b6b14587189999ea3fe08ee",
-    "status": "VERIFIED_HQ_REPOSITORY_SYNC",
+    "checkpoint_id": "CP-2026-10-06-001",
+    "previous_state_version": 27,
+    "current_state_version": 28,
+    "previous_state_blob_sha": "97383c6dd4b2d56531c6550212d22f958fdd31f2",
+    "status": "VERIFIED_PENDING_FINAL_REREAD",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
     "verified_artifacts": [
@@ -225,8 +225,65 @@
       "NEXIA_BOOT.json",
       "NEXIA_LIVE.json",
       "NEXIA_MASTER_BACKUP.md",
-      "NEXIA_EVENT_LOG.jsonl"
+      "NEXIA_EVENT_LOG.jsonl",
+      "NEXIA_MASTER_OPERATING_ORDER.md",
+      "NEXIA_INSTRUCTION_EVOLUTION.md",
+      "NEXIA_EXTERNAL_CORE_SPEC.md"
     ],
-    "note": "Sincronización del commit real de NexiaHQ en main tras verificación del repositorio; no cambia evidencia de usuario ni economía."
+    "note": "Whole-system evolution doctrine recorded. No spending, external contact or change to validated business evidence."
+  },
+  "system_review": {
+    "review_id": "SYS-REVIEW-2026-10-06-001",
+    "status": "ACTIVE",
+    "doctrine": "EVOLUTION_FIRST",
+    "scope": [
+      "Core",
+      "HQ",
+      "Care",
+      "QA",
+      "dashboards",
+      "URLs/public interfaces",
+      "GitHub",
+      "connectors/tools",
+      "automations",
+      "governance",
+      "persistence",
+      "evidence",
+      "economics",
+      "security",
+      "recovery",
+      "ChatGPT interface"
+    ],
+    "verified_now": [
+      "Canonical STATE v27 and SHA verified before change",
+      "GitHub owner connection has push/write permission verified",
+      "NEXIA_MASTER_OPERATING_ORDER updated and committed",
+      "NEXIA_INSTRUCTION_EVOLUTION updated and committed",
+      "NEXIA_EXTERNAL_CORE_SPEC restored and committed"
+    ],
+    "not_verified_in_this_review": [
+      "All public URLs/runtime endpoints",
+      "All tool/connector account permissions",
+      "Dashboard functional state",
+      "External analytics/payments/CRM connectivity"
+    ],
+    "rule": "Do not claim a surface is healthy or connected unless inspected and verified in the current review."
+  },
+  "evolution_doctrine": {
+    "status": "ACTIVE",
+    "priority": "MAX",
+    "principle": "NEXIA must evolve as a whole machine, not only pursue revenue.",
+    "dimensions": [
+      "capability",
+      "truthfulness",
+      "observability",
+      "resilience",
+      "automation",
+      "reproducibility",
+      "independence",
+      "validated economics"
+    ],
+    "capital_principle": "Prefer €0 validation. Do not use personal capital as a substitute for business validation. When business-generated revenue exists, reinvestment must have measurable justification and remains under Kael approval.",
+    "target_policy": "When a financial target is reached, review and raise/reframe the target rather than treating it as the end of development."
   }
 }
