@@ -322,3 +322,21 @@ Checkpoint: **CP-2026-10-05-004**. Previous STATE v26 → current STATE v28. Fin
 
 ## 2026-10-06 evolution checkpoint
 System-wide evolution doctrine is active. GitHub write capability is verified. Master Operating Order and Instruction Evolution were updated; NEXIA_EXTERNAL_CORE_SPEC.md was restored. Financial impact: €0. No external contact or spending occurred.
+
+
+## 31. VOICE COMMAND SAFETY LAYER — 2026-10-06
+
+STATE advanced to version 30. Added `NEXIA_VOICE_COMMANDS.md` as the canonical voice/conversational command policy and registered it in `NEXIA_COMMANDS.md` v2.1.
+
+Design:
+- short canonical spoken phrases map to existing slash commands;
+- natural conversational intent is classified before mapping;
+- ambiguous transcription never authorizes material action;
+- YELLOW/RED voice actions require exact confirmation after scope, cost, exposure, benefit and risk are stated;
+- "ejecuta", "hazlo" and "adelante" are not universal authorization;
+- "PARA TODO", "DETÉN TODO" and "MODO SEGURO" invoke the emergency-brake/safe-mode intent where technically possible;
+- voice never bypasses Authority Engine, Security Shield, Human Gates or financial guardrails.
+
+Capability boundary: this persists the durable voice policy and mappings. It does not claim a separate public voice-execution service exists.
+
+Checkpoint: CP-2026-10-06-003. Financial impact: €0. Human Gate unchanged.
