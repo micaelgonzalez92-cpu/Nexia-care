@@ -98,3 +98,11 @@ Objetivo inmediato: demostrar utilidad real de NEXIA Care antes de buscar extrac
 
 ### Next action
 - If an authorized contact channel is available without additional approval, use it to invite one candidate to a 5–10 minute test. Otherwise emit a Human Gate task to Kael rather than attempting unauthorized contact.
+
+## Zero-cost public signal scan — 2026-10-05
+- A fresh public search was executed without contacting users or spending money.
+- Recent public cases surfaced compatible Magnifica-family themes: slow/dripping coffee, no coffee/no water, grinder/flow problems, warning/exclamation indicators, and weak/cold coffee.
+- One result specifically references a De'Longhi Magnifica S no-water/flow problem; another references an ECAM 22.110.B problem. These are anecdotal public signals only.
+- These signals support keeping the current diagnostic coverage broad, but they do not increase EXP-001B participant count and do not validate conversion, usability, or diagnostic accuracy with real users.
+- No authorized contact channel was available, so no outreach was performed.
+
