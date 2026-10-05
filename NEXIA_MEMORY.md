@@ -65,3 +65,11 @@ Acumular evidencia y aprendizaje operativo para evitar repetir experimentos, sep
 ## Status
 Fase: VALIDACIÓN
 Objetivo inmediato: demostrar utilidad real de NEXIA Care antes de buscar extracción económica.
+
+
+## Public evidence gathered — 2026-10-05
+- Safe route executed: public research only; no user was contacted and no money was spent.
+- De'Longhi official support for Magnifica S currently exposes help topics including weak coffee, warning lights, descaling and cappuccino-maker cleaning. This confirms that these are documented support/problem areas for the product family.
+- A public Reddit report for ECAM 22.110.B describes a red-triangle/grounds-container warning after grinding whole beans, with discussion of grinding/infusion/sensor-related causes. This is a public anecdotal report, not controlled user-test evidence.
+- Interpretation: public evidence can refine NEXIA Care's diagnostic coverage, but it does NOT satisfy EXP-001B's real-user evidence gate.
+- Human Gate remains active: 0/3 real participants.
