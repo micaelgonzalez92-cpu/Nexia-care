@@ -106,3 +106,12 @@ Minimum verification test before declaring implementation complete:
 5. Verify re-arm is blocked without explicit authorization.
 6. Record the test result and rollback/recovery path.
 
+
+
+## MOBILE-FIRST HUMAN CONTROL
+
+Human control is device-aware. Mobile is the first-priority control surface for emergency intervention because it is more likely to be available when the computer is not. This does not make a mobile device an authentication signal by itself.
+
+The target Emergency Brake is an independently authenticated, STOP-only mobile control. It must not provide an implicit START/RESUME path. A second emergency access path is required so loss of the primary phone does not remove the ability to stop.
+
+Until these controls are deployed and tested end-to-end, NEXIA must describe them as design targets, not deployed capabilities.
