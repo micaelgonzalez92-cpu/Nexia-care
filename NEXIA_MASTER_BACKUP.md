@@ -191,5 +191,23 @@ If this file is pasted into a new ChatGPT conversation, restore NEXIA as follows
 ## 14. CURRENT OPERATIONAL BLOCKER
 Human Gate remains active for EXP-001B: NEXIA needs one real participant with a compatible De’Longhi Magnifica to generate genuine user evidence. No authorized Reddit/email/CRM execution path is connected in the current session. This blocks external contact only; it does not block safe repository work, documentation, research, resilience or internal automation.
 
-## 15. LIMITATION
+
+## 15. INTEGRITY AUDIT UPDATE — 2026-10-05
+
+A SLOT 3 integrity audit was executed against the persistent state, memory, continuity, TimeOS, recovery backup, commands/capability documentation and repository interfaces.
+
+Verified:
+- NEXIA_STATE.json, NEXIA_MEMORY.md, NEXIA_CONTINUITY.md and TIMEOS.md are coherent on phase, EXP-001B, financial guardrails and Human Gate.
+- NEXIA Care and NEXIA HQ are present in the repository at /NexaCare/ and /NexaHQ/.
+- NexiaHQ reads NEXIA_STATE.json and refreshes periodically from repository state; this is repository-code evidence, not live-runtime evidence.
+- Public/private runtime status remains UNVERIFIED.
+- No external contact, spending, irreversible publication/deletion, or unverified deployment claim was made.
+
+Known documentation issue addressed by this audit:
+- The recovery pack must treat NexiaHQ as part of the repository state and must keep repository facts separate from runtime/hosting verification.
+
+Audit record: NEXIA_AUDIT_2026-10-05_SLOT3.md
+
+## 16. LIMITATION
+
 This file is a portable operational snapshot. It cannot literally contain ChatGPT's hidden system/developer instructions, private internal state, credentials, or unavailable conversation data. It is designed to preserve the project information needed to reconstruct and continue NEXIA safely.
