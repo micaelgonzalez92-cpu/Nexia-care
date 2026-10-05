@@ -225,8 +225,7 @@
       "NEXIA_STATE.json",
       "NEXIA_BOOT.json"
     ],
-    "note": "Emergency Brake technical contract persisted and re-read. No external control connected, no spending, no external contact, no authority change.",
-    "current_state_blob_sha": "2f2db3591a1c5caf3f7022e773375658734dd170"
+    "note": "Emergency Brake technical contract persisted and re-read. No external control connected, no spending, no external contact, no authority change. The final STATE blob SHA is intentionally kept in BOOT rather than self-referenced inside STATE."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
