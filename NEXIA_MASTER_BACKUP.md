@@ -211,3 +211,22 @@ Audit record: NEXIA_AUDIT_2026-10-05_SLOT3.md
 ## 16. LIMITATION
 
 This file is a portable operational snapshot. It cannot literally contain ChatGPT's hidden system/developer instructions, private internal state, credentials, or unavailable conversation data. It is designed to preserve the project information needed to reconstruct and continue NEXIA safely.
+
+
+## 17. NEXACARE CODE UPDATE — 2026-10-05
+
+Verified code access was recovered for the actual NexaCare implementation. The product is currently a lightweight static HTML/JS MVP, with both the repository root `/index.html` and `/NexaCare/index.html` serving the diagnostic interface.
+
+Implemented safely and reversibly:
+- Added a dedicated symptom path for "Triángulo rojo / aviso de posos" on De’Longhi Magnifica S / ECAM21-22.110.
+- Added a first diagnostic check for correct placement of the grounds container and drip tray.
+- Added conservative guidance to avoid buying parts blindly and to escalate persistent sensor/microswitch-related warnings to service.
+- Bumped the UI label from MVP 0.3 to MVP 0.4.
+- Synchronized the root entrypoint with the updated `/NexaCare/` entrypoint so the stale duplicate is not left behind.
+
+Commits:
+- `7ff0d7adf41b1e332bcf781ddefb9e523a762580` — feature update in `NexaCare/index.html`.
+- `42cdc2fd14fb8e7d86f1d46f6325e41cad0c73aa` — root `index.html` synchronization.
+- `0932f2d34c0e30bb3b4142d132fbc5da550ca695` — persistent state update.
+
+Evidence boundary remains unchanged: public evidence supports diagnostic coverage improvement but does not count as real-user validation. EXP-001B remains blocked at 0/3 participants.
