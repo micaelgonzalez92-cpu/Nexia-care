@@ -1,5 +1,5 @@
 {
-  "version": 17,
+  "version": 18,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -63,11 +63,11 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Refinada y fusionada en main la ruta del triángulo rojo de Nexia Care: el resultado ya no sugiere una causa única y mantiene el bloqueo de compra a ciegas.",
+    "last_action": "Alineada la guía de flujo de café de Nexia Care con el manual oficial De’Longhi ECAM21.110: molienda demasiado fina, corrección de un clic hacia 7 mientras muele y prueba de al menos 2 cafés, manteniendo escalado seguro.",
     "next_review": "En cada ciclo: comprobar integridad, capacidad disponible, cuello de botella, mejoras seguras y siguiente misión desbloqueable.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
     "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE",
-    "next_useful_action": "Validar el flujo con usuarios reales cuando exista una vía autorizada; mientras tanto seguir auditando lógica diagnóstica, coherencia de superficies, resiliencia y señales de demanda."
+    "next_useful_action": "Validar estas instrucciones con usuarios reales cuando se abra la vía autorizada; continuar auditando síntomas restantes y coherencia de diagnóstico sin comprar ni contactar externamente."
   },
   "external_ops": {
     "status": "DESIGNED_NOT_CONNECTED",
@@ -167,5 +167,5 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Reducir el Human Gate de EXP-001B por una vía autorizada; en paralelo continuar auditoría de lógica diagnóstica, UX, resiliencia y señales de demanda sin gastar ni contactar externamente."
+  "next_useful_action": "Reducir el Human Gate de EXP-001B por una vía autorizada; en paralelo completar la auditoría técnica del diagnóstico y preparar evidencia reproducible para usuarios reales."
 }
