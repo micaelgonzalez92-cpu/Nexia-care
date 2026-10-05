@@ -2,9 +2,9 @@
   "updated_at": "2026-10-06T23:41:00+02:00",
   "status": "ACTIVE / VOICE + SECURITY HARDENING",
   "current_cycle": "NEXIA Core — safe voice interface and security hardening",
-  "current_action": "Verify voice registry and synchronize recovery artifacts; continue system-wide security/interface audit.",
-  "last_completed_action": "Canonical voice command/conversational safety layer persisted; STATE advanced to v30.",
-  "evidence": "STATE v30; NEXIA_COMMANDS v2.1; NEXIA_VOICE_COMMANDS v1.0.",
+  "current_action": "Continue system-wide security/interface audit; verify external interfaces before exposing execution capability.",
+  "last_completed_action": "Voice command/conversational safety layer implemented and all recovery artifacts re-read.",
+  "evidence": "STATE v31; NEXIA_COMMANDS v2.1; NEXIA_VOICE_COMMANDS v1.0; BOOT/LIVE/BACKUP/EVENT_LOG re-read.",
   "capital_spent_eur": 0,
   "human_gate": "🔴 K-001: autorizar/conectar canal externo legítimo de adquisición. Además, la prueba de tiempo humano de EXP-DOC-001 requiere un operador humano.",
   "parallel_work": [
