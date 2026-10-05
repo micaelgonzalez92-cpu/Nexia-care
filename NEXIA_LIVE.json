@@ -1,10 +1,10 @@
 {
   "updated_at": "2026-10-06T23:41:00+02:00",
-  "status": "ACTIVE / SYSTEM-WIDE REVIEW",
-  "current_cycle": "NEXIA Core — evolution-first whole-system review",
-  "current_action": "Verify public URLs/runtime, dashboards, tools/connectors/automations and continue €0 validation/economics/falsification.",
-  "last_completed_action": "Recorded canonical STATE v28 and synchronized operating/instruction evolution plus External Core specification.",
-  "evidence": "STATE v28; GitHub write permission verified; three governance/spec artifacts updated or restored with commits.",
+  "status": "ACTIVE / COMMAND + SECURITY HARDENING",
+  "current_cycle": "NEXIA Core — command interface and security shield hardening",
+  "current_action": "Run a system-wide security hardening and command-interface review; keep command discovery always recoverable externally while exposing execution only through authenticated, authorized paths.",
+  "last_completed_action": "Command registry v2 and NEXIA Security Shield persisted; STATE advanced to v29.",
+  "evidence": "STATE v29; command registry v2; Security Shield; sequential GitHub commits verified.",
   "capital_spent_eur": 0,
   "human_gate": "🔴 K-001: autorizar/conectar canal externo legítimo de adquisición. Además, la prueba de tiempo humano de EXP-DOC-001 requiere un operador humano.",
   "parallel_work": [
@@ -14,7 +14,7 @@
     "Economics / alternative monetization",
     "HQ / resilience / continuity"
   ],
-  "next_action": "Inspect remaining unverified system surfaces before changing business direction.",
+  "next_action": "Run a system-wide security hardening and command-interface review; keep command discovery always recoverable externally while exposing execution only through authenticated, authorized paths.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
