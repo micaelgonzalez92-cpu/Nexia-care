@@ -89,3 +89,82 @@ Success requires an actual person to use NEXIA Care and produce measurable evide
 ## Next zero-cost action
 
 Continue scanning for recent unresolved cases across Magnifica variants, while preserving the primary ECAM22.110.B target. Do not spend money. Do not send messages without an executable authorized external-contact path.
+
+
+## Expanded acquisition scan — 2026-10-05
+
+A broader public-web scan was executed at €0. New cases were added only when the public result exposed a concrete Magnifica problem and enough context to qualify it as a research/recruitment lead.
+
+9. Reddit / r/DeLonghi — “Help needed with the Delonghi Magnifica S: I've tried everything.” Published 18 Jul 2026. Owner reports a Magnifica S that grinds but produces very diluted coffee, stops halfway, and expels hot water below the machine; they already tried the documented grind adjustment and hot-water step.
+- Rank: A
+- Model: Magnifica S (exact ECAM variant not visible in search excerpt)
+- Symptom: diluted coffee / stops / water below machine
+- Prior attempts: grind adjustment + hot-water activation
+- NEXIA Care fit: high, but leakage/water-path cases require strict safety escalation
+- Contact: NOT SENT
+- Source: https://www.reddit.com/r/DeLonghi/comments/1v06vrq/help_needed_with_the_delonghi_magnifica_s_ive/
+
+10. Reddit / r/DeLonghi — “Delonghi magnifica was great till”. Published 11 Sep 2026, with follow-up through 24 Sep 2026. Owner reports worsening water-tray overflow/leak after descaling and then inability to make coffee. Exact model is not yet established.
+- Rank: B
+- Model: Magnifica (exact model unknown)
+- Symptom: water leakage/overflow + unable to brew
+- NEXIA Care fit: medium; not preferred first participant because model and safety status are unclear
+- Contact: NOT SENT
+- Source: https://www.reddit.com/r/DeLonghi/comments/1wdad8l/delonghi_magnifica_was_great_till/
+
+11. Reddit / r/DeLonghi — “Replacement DeLonghi Magnifica Worked 5 Days”. Published 13 Apr 2026. Owner reports poor coffee quality and an apparent bypass-doser blockage despite beans being present; they were preparing a video for customer service. Exact model of the original poster is not established.
+- Rank: B
+- Model: Magnifica (exact model unknown)
+- Symptom: poor coffee + apparent grinder/doser blockage
+- NEXIA Care fit: medium
+- Contact: NOT SENT
+- Source: https://www.reddit.com/r/DeLonghi/comments/1sk9wgf/replacement_delonghi_magnifica_worked_5_days/
+
+12. Reddit / r/DeLonghi — “Grind time on Magnifica S”. Published 18 Mar 2026. Owner reports watery coffee and unusually short grind time after extensive maintenance and measurements, including a comparison showing ~50% shorter grinding than another Magnifica S. Strong diagnostic-pattern case but technically advanced.
+- Rank: A/B for diagnostic-pattern research; C for first-user recruitment
+- Model: Magnifica S
+- Symptom: watery coffee / short grind time / low dose
+- Prior attempts: extensive maintenance, pump/relief-valve replacement, resets/recalibration
+- NEXIA Care fit: high as an edge case, low as first nontechnical participant
+- Contact: NOT SENT
+- Source: https://www.reddit.com/r/DeLonghi/comments/1rwzzr5/grind_time_on_magnifica_s/
+
+13. Reddit / r/DeLonghi — “Magnifica Start making inconsistent amount of coffee”. Original post 9 Sep 2025; follow-up as recent as 31 Aug 2026. Owner reports inconsistent beverage volume; a later commenter with the same issue reports it happens ~90% of the time on the second cup. No confirmed root cause.
+- Rank: B
+- Model: Magnifica Start
+- Symptom: inconsistent coffee volume
+- Current/unresolved signal: yes
+- NEXIA Care fit: high for diagnostic UX
+- Contact: NOT SENT
+- Source: https://www.reddit.com/r/DeLonghi/comments/1ncctap/magnifica_start_making_inconsistent_amount_of/
+
+14. Reddit / r/superautomatic — “Huge issue with my Magnifica Duo, requesting recommendations.” Published 17 Aug 2026. Owner reports a new Magnifica Duo that will not brew and repeatedly displays an empty-container error despite emptying the containers; owner also tried grinder adjustment and contacted company support.
+- Rank: B
+- Model: Magnifica Duo
+- Symptom: cannot brew / repeated grounds-container-drip-tray error
+- Prior attempts: emptied containers, grinder adjustment, live support
+- NEXIA Care fit: medium for future generalization; outside primary product scope for now
+- Contact: NOT SENT
+- Source: https://www.reddit.com/r/superautomatic/comments/1vqspaj/huge_issue_with_my_magnifica_duo_requesting/
+
+## Acquisition funnel status after scan
+
+Public problem cases identified in this radar: 14
+High-priority recruitment candidates with sufficiently concrete problems: 4+
+Verified contact actions sent by NEXIA: 0
+Real participants: 0 / 3
+Real-user evidence: 0
+Spend: €0
+
+These are public signals / candidate leads, not validated NEXIA Care outcomes.
+
+## Decision
+
+Do not expand product scope based on this scan. Evidence supports expanding the acquisition funnel, not building more features.
+
+Next safe action:
+- maintain a shortlist of the strongest 4–6 cases;
+- prepare individualized outreach where a legitimate authorized contact path exists;
+- keep ECAM22.110.B as primary validation target;
+- use Start/Evo/S variants as secondary candidates;
+- require Kael approval before external contact where no authorized in-app path exists.
