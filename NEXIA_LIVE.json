@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-05T00:00:00+02:00",
+  "updated_at": "2026-10-05T12:29:00+02:00",
   "status": "ACTIVE",
-  "current_cycle": "B1 — Quote Recovery & Follow-up Desk",
-  "current_action": "Falsación de wedge: generación de presupuestos vs recuperación/seguimiento",
-  "last_completed_action": "Prototipo B1 documentado y persistido en GitHub",
-  "evidence": "SIGNAL / VETA candidato — no validado",
+  "current_cycle": "European Exception Desk — falsación comercial",
+  "current_action": "Comparar contabilidad, property management y mortgage; priorizar primer experimento de €0.",
+  "last_completed_action": "Decisión persistida: accounting/bookkeeping document recovery como VETA prioritaria.",
+  "evidence": "VETA PRIORITARIA — problema demostrado; negocio de Nexia aún no validado",
   "capital_spent_eur": 0,
   "human_gate": "EXP-001B sigue esperando 1 participante real",
   "parallel_work": [
-    "B1 seguimiento de presupuestos",
-    "C1 inteligencia competitiva",
-    "D1 QA/conversión",
+    "Exception Desk / Document Recovery",
+    "Property Maintenance exceptions",
+    "Mortgage document exceptions",
     "EXP-001B Care"
   ],
-  "next_action": "Mapear 3–5 negocios españoles con evidencia pública de workflow de presupuestos, sin contactar.",
+  "next_action": "Preparar experimento comercial sintético y definir el canal autorizado de primer contacto.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
