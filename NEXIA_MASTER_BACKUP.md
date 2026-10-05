@@ -168,10 +168,10 @@ bfb6ed569e6e30058a3f410d7ca53e9e8ef5397d — chore: record NEXIA HQ evolution an
 5257be90bb42eafab6d1a56b2a3385e50891d844 — docs: record SLOT 3 integrity audit
 
 ## 11. CURRENT TECHNICAL NOTES
-index.html currently identifies itself as MVP 0.3 in the visible tag/report. This remains a known cleanup item, not evidence of a deployed runtime.
+index.html and NexaCare/index.html now identify themselves as MVP 0.4. The root entrypoint is synchronized with the NexaCare entrypoint.
 The mission progress bar currently reaches 3/3 when a symptom is selected; this is a visual implementation and should later be aligned with actual diagnosis completion.
-NexiaHQ/index.html loads NEXIA_STATE.json from the parent path and refreshes every 60 seconds; this is verified from repository code, not from a live browser runtime.
-Public runtime/deployment verification is still NOT VERIFIED.
+NexiaHQ/index.html loads NEXIA_STATE.json from the parent path and refreshes every 60 seconds; this is verified from repository code, not from live-runtime behavior.
+Public runtime and functional behavior are VERIFIED as of 2026-10-05 for the two public GitHub Pages paths recorded in Section 18 below.
 NEXIA_MASTER_BACKUP.md is maintained as a portable recovery snapshot and must distinguish repository facts from runtime facts.
 A SLOT 3 integrity audit was recorded in NEXIA_AUDIT_2026-10-05_SLOT3.md.
 
@@ -193,3 +193,19 @@ Human Gate remains active for EXP-001B: NEXIA needs one real participant with a 
 
 ## 15. LIMITATION
 This file is a portable operational snapshot. It cannot literally contain ChatGPT's hidden system/developer instructions, private internal state, credentials, or unavailable conversation data. It is designed to preserve the project information needed to reconstruct and continue NEXIA safely.
+
+
+## 18. PUBLIC RUNTIME + FUNCTIONAL VERIFICATION — 2026-10-05
+
+Public runtime verification was executed against the deployed GitHub Pages site after the NexaCare MVP 0.4 code update.
+
+Verified:
+- `https://micaelgonzalez92-cpu.github.io/Nexia-care/` serves **NexaCare · MVP 0.4**.
+- `https://micaelgonzalez92-cpu.github.io/Nexia-care/NexaCare/` also serves **NexaCare · MVP 0.4**.
+- A non-destructive browser test selected **Magnifica S · ECAM21/22.110** and **Triángulo rojo / aviso de posos**.
+- The expected diagnostic question appeared: **“¿Has retirado y vuelto a colocar correctamente el recipiente de posos y la bandeja de goteo?”**, with “Sí” and “No / no lo sé”, at step 3/3.
+- No external form was submitted, no purchase was made and no user data was modified.
+
+Evidence boundary remains unchanged: this verifies deployment and functional behavior, but it is not real-user validation. EXP-001B remains at 0/3 participants and the Human Gate remains active.
+
+State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5d6d`.
