@@ -4,247 +4,340 @@ Updated: 2026-10-05
 
 ## Purpose
 
-Open independent monetization tracks outside the current De'Longhi/NEXIA Care route. The goal is not to distract from EXP-001B, but to create parallel shots at the first transaction and identify a route capable of scaling toward >= €1,000 net/month.
+Open independent monetization tracks outside the current De'Longhi/NEXIA Care route. These are separate projects with their own market, offer, evidence and economics.
 
-All routes below are hypotheses until a real customer, payment/contract, documented costs, net margin and repeatable execution exist.
+The objective is portfolio optionality: find at least one route capable of reaching the first transaction quickly and potentially scaling toward >= €1,000 net/month.
 
-## Market signals
+All routes remain hypotheses until a real customer, payment/contract, documented costs, net margin and repeatable execution exist.
 
-### P1 — AI automation / workflow implementation
+## Fresh market evidence
 
-VERIFIED SIGNAL:
-Upwork reports that AI Apps & Integration rose 34% month-over-month and 33% year-over-year in June 2026. In July, "AI automation" was the most-searched AI term; in August it remained the most-searched AI term, with AI automation expert, AI workflow automation and AI automation engineer among the fastest-growing AI searches. citeturn0search0turn0search3turn0search4
+### VERIFIED FACT — Spanish SME AI demand
 
-Hypothesis:
-Small businesses may pay for narrowly scoped automations that save time or recover revenue.
+Wolters Kluwer reports that 76% of surveyed Spanish SMEs use AI weekly or daily, 80% plan to increase AI investment, and 24% rank automation/digitisation among their top challenges. citeturn0search6turn0search7
 
-Possible productized offers:
-- lead-response automation
-- FAQ/support triage
-- quote/request classification
+### VERIFIED FACT — AI implementation demand
+
+Upwork reported AI Apps & Integration +34% month-over-month and +33% year-over-year in June 2026. CRM/ERP and lead-generation work also grew. In August, AI automation remained the most-searched AI term and AI workflow automation/AI automation engineer were among the fastest-growing searches. citeturn0search0turn0search5
+
+### VERIFIED FACT — higher-value AI work favors judgment + workflow integration
+
+Upwork's 2026 Future Workforce Index reports that complex AI-augmented work increased in earnings while lower-complexity AI execution became more commoditized. citeturn0search2turn0search4
+
+### VERIFIED FACT — Spanish services are currently expanding
+
+A Reuters report published 2026-10-05 says Spain led the September euro-zone service expansion in its PMI reading, with demand and business activity accelerating. This is macro context, not proof for any individual business idea. citeturn0news49
+
+## Independent project candidates
+
+### PROJECT B — SME AI Operations
+
+Concept:
+A productized service that removes one repetitive workflow from a Spanish SME rather than selling generic "AI consulting".
+
+Possible wedges:
+- incoming lead classification + response drafts
+- quote/request triage
+- FAQ/support assistant
+- document extraction into a structured sheet
+- weekly management report
 - appointment follow-up
-- spreadsheet/report automation
-- document-to-CRM workflows
+- review-response workflow
 
-Economics hypothesis:
-Higher ticket than affiliate/content, potentially €100–€500+ per small implementation, but requires acquisition and delivery capability. Pricing is NOT validated for NEXIA.
+Why now:
+Spanish SME AI usage and investment intent are high, while automation remains a stated challenge. citeturn0search6
 
-Priority: HIGH.
+Business model hypothesis:
+Fixed setup fee + optional monthly maintenance.
 
-### P2 — AI-assisted QA / website testing
+Capital:
+€0 prototype.
 
-VERIFIED SIGNAL:
-Upwork reported QA Testing growth of 20% in June 2026. citeturn0search0
+First transaction hypothesis:
+One narrow outcome can be sold before building a full SaaS.
 
-Hypothesis:
-A productized "website/app QA sweep" can be sold as a fixed deliverable: broken flows, mobile issues, forms, copy inconsistencies, obvious conversion blockers.
+Scalability:
+HIGH if the same workflow can be packaged for one vertical.
 
-Why attractive:
-- low capital
-- can produce a concrete before/after report
-- potentially repeatable
-- can be partially automated
+Status:
+SIGNAL → VETA candidate.
 
-Priority: HIGH as a service-to-product bridge.
+### PROJECT C — Business Intelligence Packs
 
-### P3 — Micro digital products
-
-VERIFIED SIGNAL:
-Gumroad currently charges no monthly fee and takes 10% + $0.50 on direct/profile sales; it acts as merchant of record for tax handling. citeturn0search15
-
-Hypothesis:
-Create narrow utility products rather than generic ebooks:
-- checklists
-- calculators
-- templates
-- SOP packs
-- niche diagnostic worksheets
-- prompt/workflow packs
-- small operational dashboards
-
-Priority: MEDIUM-HIGH because cost to test can be €0, but traffic/distribution is the main bottleneck.
-
-### P4 — Affiliate content engine
-
-VERIFIED SIGNAL:
-Amazon Spain states that its Associates program is free to join and offers commissions depending on product category, with published rates reaching up to 10% on its current overview; the program supports websites and social channels. citeturn0search1turn0search5
-
-VERIFIED SIGNAL:
-Awin says affiliates can join free and access 30,000+ brands; its creator program supports affiliate links across blogs, social posts, videos and newsletters. citeturn0search2turn0search10
-
-Hypothesis:
-NEXIA could build small, intent-driven content properties around purchase decisions rather than broad blogs.
+Concept:
+Sell a fixed, evidence-backed intelligence pack to a small business, not open-ended consulting.
 
 Examples:
-- "best X for Y" with strong buying intent
-- repair/replace comparisons
-- tools/software comparisons
-- local service comparisons
-- recurring consumables
-
-Risk:
-Traffic acquisition can take time; affiliate is unlikely to be the fastest first €1,000 without existing distribution.
-
-Priority: MEDIUM as a portfolio asset, not the only near-term route.
-
-### P5 — Productized research / intelligence
-
-Hypothesis:
-Sell a fixed research deliverable to small businesses:
 - competitor price map
+- local competitor/service map
 - supplier shortlist
-- local market scan
-- lead list with qualification criteria
-- product opportunity report
-- review/sentiment synthesis
+- product opportunity scan
+- review/complaint analysis
+- market-entry snapshot
+- lead qualification list
 
-Potential advantage:
-NEXIA's existing research/reasoning workflow can become the production engine.
+Differentiator:
+Deliver a decision-ready output, not a generic AI-generated report.
 
-Constraint:
-Avoid selling unverifiable data or scraping that violates platform terms. Deliver only evidence-backed outputs.
+Business model:
+Fixed price per pack → recurring monitoring subscription if useful.
 
-Priority: HIGH for first-transaction testing.
-
-### P6 — Lead-generation micro-sites
-
-Hypothesis:
-Create narrowly focused pages that capture high-intent demand and route leads to service providers.
-
-Examples:
-- repair
-- home services
-- local professional services
-- specialist B2B services
-
-Revenue:
-lead fee, referral fee, or later recurring placement.
-
-Constraint:
-No provider revenue should be counted until commercial terms are agreed and a real lead is accepted/paid.
-
-Priority: HIGH, but acquisition/distribution is the bottleneck.
-
-### P7 — Small utility SaaS / paid tool
-
-Hypothesis:
-Build a tiny tool solving one expensive/repetitive problem and charge monthly or per use.
-
-Candidate examples:
-- quote/proposal generator
-- document checker
-- lead qualification tool
-- niche calculator
-- support triage tool
-- compliance/checklist assistant
-
-Floot is available in current context, so prototype work may be possible without upfront external spend. Payment economics and demand remain unvalidated.
-
-Priority: MEDIUM-HIGH, but only after a clear pain signal; do not build blindly.
-
-### P8 — Marketplace product/service arbitrage
-
-Hypothesis:
-Identify a fragmented service where customers pay for an outcome and subcontract/automate repeatable components while retaining margin.
+Capital:
+€0.
 
 Risk:
-Can become labor-heavy and non-scalable.
+Clients may value the information but not pay.
+
+Scalability:
+MEDIUM initially; HIGH if a repeatable vertical pack is found.
+
+Status:
+SIGNAL → VETA candidate.
+
+### PROJECT D — Website Conversion / QA Clinic
+
+Concept:
+Fixed-scope audit for small websites/e-commerce stores:
+- broken forms
+- checkout friction
+- mobile defects
+- obvious conversion blockers
+- inconsistent messaging
+- dead links
+- performance/UX observations
+
+Market signal:
+Upwork reported QA Testing +20% among SMBs in June 2026. citeturn0search0
+
+Business model:
+Fixed audit → implementation package → recurring monitoring.
+
+Capital:
+€0.
+
+Advantage:
+Concrete deliverable and easy before/after evidence.
+
+Risk:
+Crowded market; generic audits commoditize quickly.
+
+Status:
+SIGNAL → VETA candidate.
+
+### PROJECT E — Vertical Micro-Tool
+
+Concept:
+A tiny web tool for one expensive repetitive task, sold per use or subscription.
+
+Candidates:
+- quote generator for one trade
+- lead qualification calculator
+- document completeness checker
+- niche pricing calculator
+- client intake assistant
+- compliance/checklist workflow
 
 Rule:
-Only pursue if gross margin, fulfillment time and repeatability can be demonstrated quickly.
+Do not build before a repeated pain signal exists.
 
-Priority: LOW-MEDIUM.
+Capital:
+€0 prototype possible.
 
-## Portfolio ranking
+Scalability:
+VERY HIGH if demand is proven.
 
-| Route | Capital | Speed to first € | Scalability | Main bottleneck |
-|---|---:|---:|---:|---|
-| P1 AI automation | €0 prototype | High | High | acquisition + delivery |
-| P2 QA sweep | €0 | High | Medium-High | acquisition |
-| P3 digital products | €0 | Medium | High | distribution |
-| P4 affiliate content | €0 | Low-Medium | High | traffic |
-| P5 productized research | €0 | High | Medium-High | acquisition |
-| P6 lead-gen micro-sites | €0 | Medium | High | traffic/provider deals |
-| P7 micro-SaaS | €0 prototype | Medium | Very High | validated demand |
-| P8 service arbitrage | Low | Medium | Low-Medium | margin + operations |
+Status:
+RUMOR → requires problem discovery first.
+
+### PROJECT F — Intent Micro-Sites / Lead Generation
+
+Concept:
+Build a small high-intent property around a single service problem and route qualified leads to providers.
+
+Potential verticals:
+- specialist home services
+- professional services
+- B2B specialist services
+- repair/service categories unrelated to NEXIA Care
+
+Revenue:
+Per accepted lead, referral fee or recurring placement.
+
+Rule:
+No revenue counted until a provider accepts a lead and commercial terms exist.
+
+Capital:
+€0.
+
+Risk:
+Traffic acquisition.
+
+Status:
+SIGNAL → VETA candidate.
+
+### PROJECT G — Digital Utility Products
+
+Concept:
+Small practical products, not generic ebooks:
+- calculators
+- templates
+- SOPs
+- operational checklists
+- spreadsheet tools
+- niche planning kits
+- small business forms/workflows
+
+Capital:
+€0.
+
+Scalability:
+HIGH.
+
+Risk:
+Distribution is usually harder than creation.
+
+Status:
+SIGNAL → low-priority portfolio asset.
+
+## Existing independent candidates retained
+
+### P1 — AI automation / workflow implementation
+Retained and promoted to PROJECT B because current market evidence is stronger than generic freelancing. Upwork reports sustained AI automation/integration demand. citeturn0search0turn0search5
+
+### P2 — AI-assisted QA
+Retained as PROJECT D. QA demand among SMBs grew in June 2026. citeturn0search0
+
+### P3 — Micro digital products
+Retained as PROJECT G.
+
+### P4 — Affiliate content
+Retained as a long-term asset, not a first-income priority.
+
+### P5 — Productized research
+Retained as PROJECT C.
+
+### P6 — Lead generation
+Retained as PROJECT F.
+
+### P7 — Micro-SaaS
+Retained as PROJECT E, but only after pain validation.
+
+## Portfolio ranking after fresh research
+
+| Project | First € speed | Capital | Scalability | Evidence strength | Priority |
+|---|---:|---:|---:|---:|---:|
+| B SME AI Operations | HIGH | €0 | HIGH | STRONG SIGNAL | 1 |
+| C Business Intelligence Packs | HIGH | €0 | MED-HIGH | MODERATE | 2 |
+| D Website QA/Conversion | HIGH | €0 | MED-HIGH | STRONG SIGNAL | 3 |
+| F Lead-generation micro-sites | MEDIUM | €0 | HIGH | MODERATE | 4 |
+| G Digital utilities | MEDIUM | €0 | HIGH | MODERATE | 5 |
+| E Vertical micro-tool | MEDIUM | €0 | VERY HIGH | WEAK until pain found | 6 |
+| Affiliate content | LOW-MEDIUM | €0 | HIGH | MARKET EXISTS | 7 |
 
 ## Immediate experiments
 
-### EXP-P1 — Sell one narrow automation outcome
-HYPOTHESIS: A business will pay for a narrowly defined workflow automation that removes a recurring manual task.
+### EXP-B1 — Find one SME workflow worth automating
 
-ACTION: identify one high-friction workflow and prepare a fixed-scope offer + proof/demo using existing capabilities.
+HYPOTHESIS:
+A specific Spanish SME workflow has enough repetitive cost/friction for an owner to pay for its removal.
 
-COST: €0.
+ACTION:
+Research one vertical and identify 3 repeated workflow pains. Build one zero-cost demonstration around the strongest pain.
 
-METRIC: qualified interest / offer acceptance / payment.
+COST:
+€0.
 
-SUCCESS: at least one explicit commercial conversation with a qualified prospect; strongest success = paid pilot.
+METRIC:
+qualified pain signal → willingness to discuss → willingness to pay → paid pilot.
 
-FAILURE: no qualified interest after a defined outreach sample.
+SUCCESS:
+at least one qualified prospect explicitly values the outcome; strongest success = paid pilot.
 
-RISK: becoming custom consulting instead of a repeatable product.
+FAILURE:
+pain is generic, already solved cheaply, or no willingness to pay.
 
-INFORMATION GAINED: price sensitivity, problem frequency, delivery time and repeatability.
+RISK:
+custom consulting trap.
 
-### EXP-P5 — Productized intelligence
-HYPOTHESIS: Small businesses will pay for a concise evidence-backed market/competitor report that saves them research time.
+INFORMATION:
+vertical, pain frequency, buyer, price sensitivity, delivery time, repeatability.
 
-ACTION: create one sample report for a narrowly defined niche.
+### EXP-C1 — One-page intelligence product
 
-COST: €0.
+HYPOTHESIS:
+A small business will pay for a fixed decision-ready intelligence pack.
 
-METRIC: qualified interest and willingness to pay.
+ACTION:
+Choose one narrow vertical and create one sample pack using public evidence.
 
-SUCCESS: explicit paid request or strong repeated willingness-to-pay signal.
+COST:
+€0.
 
-FAILURE: interest only when free.
+METRIC:
+qualified interest / willingness to pay.
 
-RISK: low perceived differentiation.
+SUCCESS:
+paid request or repeated explicit willingness-to-pay signal.
 
-INFORMATION GAINED: which research output has commercial value.
+FAILURE:
+users only want free information.
 
-### EXP-P2 — QA sweep
-HYPOTHESIS: Website owners will pay for a fixed-price usability/QA report.
+RISK:
+low differentiation.
 
-ACTION: create a standardized 15–30 point QA checklist and sample report.
+### EXP-D1 — Fixed website QA clinic
 
-COST: €0.
+HYPOTHESIS:
+A website owner will pay for a fixed-scope audit that identifies actionable conversion/UX problems.
 
-METRIC: qualified interest and paid pilot.
+ACTION:
+Create a standardized 20-point audit and sample report.
 
-SUCCESS: first paid QA sweep.
+COST:
+€0.
 
-FAILURE: no interest after a defined sample.
+METRIC:
+qualified interest / paid pilot.
 
-RISK: crowded freelance market.
+SUCCESS:
+first paid audit.
 
-INFORMATION GAINED: demand, pricing, repeatability and automation potential.
+FAILURE:
+no qualified interest after defined outreach.
 
-## Operating rule
+RISK:
+commoditization.
 
-Do not abandon NEXIA Care. EXP-001B remains active.
+## Operating architecture
 
-Run the portfolio in parallel:
-1. NEXIA Care evidence/revenue engine.
-2. P1 AI automation.
-3. P5 productized intelligence.
-4. P2 QA sweep.
-5. P3/P4 only as low-cost scalable assets.
-6. P7 only when a concrete pain signal justifies building.
+NEXIA now runs two layers:
+
+### Core engine
+NEXIA Care / EXP-001B remains active.
+
+### Parallel venture engine
+Independent projects B–G compete for evidence and first transaction.
+
+The independent engine must not consume capital or significant build time without evidence. Research, prototypes and market falsification remain €0-first.
+
+A project earns promotion when it obtains:
+1. real pain evidence,
+2. identifiable buyer,
+3. clear offer,
+4. plausible economics,
+5. acquisition route,
+6. first commercial signal,
+7. then transaction,
+8. then repeatability.
+
+A project is killed/deprioritized when evidence repeatedly fails to support demand, margin or acquisition.
+
+## Strategic conclusion
+
+The strongest independent route discovered so far is **PROJECT B — SME AI Operations**, but this is still a market signal, not validation.
+
+The key strategic insight is to avoid selling "AI" as a commodity. Sell a measurable business outcome: fewer manual hours, faster lead response, more organized quotes, fewer missed requests, or better operational visibility.
+
+NEXIA should therefore investigate independent projects in parallel while keeping NEXIA Care alive. The objective is not to build seven businesses; it is to discover which one earns the right to receive more resources.
 
 No spending without Kael approval.
-
-## Current recommendation
-
-The strongest non-e-commerce/non-Care candidates for fastest validation are:
-
-1. **AI automation for a narrowly defined business workflow**
-2. **Productized research/intelligence**
-3. **Fixed-scope website/app QA**
-4. **Lead generation**
-5. **Micro digital products**
-6. **Affiliate content**
-7. **Micro-SaaS after demand evidence**
-
-The portfolio should favor service/product hybrids first: sell a concrete outcome manually or semi-manually, then standardize and automate the repeatable parts. This minimizes capital risk while preserving a path to scalable products.
