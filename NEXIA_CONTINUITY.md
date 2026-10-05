@@ -1,6 +1,6 @@
 # NEXIA — CONTINUITY & RECOVERY LAYER
 
-Updated: 2026-10-04
+Updated: 2026-10-05
 Status: ACTIVE / SAFE / ZERO-COST
 
 ## Purpose
@@ -17,10 +17,12 @@ The persistent repository is the continuity anchor. ChatGPT, Safari, Chrome, the
 
 1. NEXIA_STATE.json — current machine-readable operational state.
 2. NEXIA_MEMORY.md — persistent learning and experiment ledger.
-3. NEXIA_MASTER_BACKUP.md — portable recovery snapshot.
-4. NEXIA_COMMANDS.md — human-facing control vocabulary.
-5. Application files — executable/public interfaces.
-6. Conversation context — temporary working context, never the sole source of truth.
+3. NEXIA_EVENT_LOG.jsonl — append-only critical change history.
+4. NEXIA_MASTER_BACKUP.md — portable recovery snapshot.
+5. NEXIA_BOOT.json — minimal startup index.
+6. NEXIA_COMMANDS.md — human-facing control vocabulary.
+7. Application files — executable/public interfaces.
+8. Conversation context — temporary working context, never the sole source of truth.
 
 ## Session independence
 
@@ -86,3 +88,8 @@ Telemetry and notifications are not connected. Scheduled automation is partial, 
 ## Design principle
 
 NEXIA should survive the loss of a chat, browser, device, permission session, or optional frontend without losing its operational memory.
+
+
+## Transactional persistence — 2026-10-05
+
+NEXIA now uses NEXIA_STATE.json as the canonical operational source, with NEXIA_BOOT.json as a minimal startup index, NEXIA_EVENT_LOG.jsonl as an append-only critical-event ledger, and NEXIA_PERSISTENCE_PROTOCOL.md as the transaction/recovery contract. Critical changes follow OBSERVE → EXECUTE → VERIFY → CHECKPOINT → BACKUP. A stale backup must never override a newer verified STATE. State version 24 is the first checkpoint under this layer.
