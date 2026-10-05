@@ -1,5 +1,5 @@
 {
-  "version": 29,
+  "version": 30,
   "updated_at": "2026-10-06",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -201,7 +201,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Run a system-wide security hardening and command-interface review; keep command discovery always recoverable externally while exposing execution only through authenticated, authorized paths.",
+  "next_useful_action": "Verify the voice registry, synchronize BOOT/LIVE/BACKUP and run the remaining system-wide security/interface audit.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -213,33 +213,19 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-06-002",
-    "previous_state_version": 28,
-    "current_state_version": 29,
-    "previous_state_blob_sha": "cab9bd1873a05cea0f45d685a58f7e10921e827d",
-    "status": "VERIFIED_AFTER_WRITE",
+    "checkpoint_id": "CP-2026-10-06-003",
+    "previous_state_version": 29,
+    "current_state_version": 30,
+    "previous_state_blob_sha": "3df4cad02f72b6078dd061840a8a707c6e3fcf5c",
+    "status": "PENDING_DERIVED_SYNC",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
     "verified_artifacts": [
-      "NEXIA_STATE.json",
-      "NEXIA_BOOT.json",
-      "NEXIA_LIVE.json",
-      "NEXIA_MASTER_BACKUP.md",
-      "NEXIA_EVENT_LOG.jsonl",
-      "NEXIA_MASTER_OPERATING_ORDER.md",
-      "NEXIA_INSTRUCTION_EVOLUTION.md",
-      "NEXIA_EXTERNAL_CORE_SPEC.md"
+      "NEXIA_VOICE_COMMANDS.md",
+      "NEXIA_COMMANDS.md",
+      "NEXIA_STATE.json"
     ],
-    "note": "Command registry v2 and Security Shield added. No spending, external contact or authority change. Optimal-command recommendation is now a canonical operating behavior.",
-    "verified_commit_chain": [
-      "2b682ba1b42bfa0f9aa23ecba3f0259ad39b129e",
-      "9b8806f583582c387ae6643f7dd2092959a7fdc0",
-      "96d6c81f098cb4ec6888bd69d18b78ac4dcc0fa3",
-      "ad3363f99949c7ef70aaa3904af87898abee6ca5",
-      "28c783158cf5268767b9f95e1eb0f4fdf22dddb9",
-      "f5df64d7b37632353d9bb35945dd384274df0098",
-      "0dd4a1e275ded96ce88d78738aee884089b13de4"
-    ]
+    "note": "Added canonical voice command/conversational safety layer. No spending, external contact or authority change."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -304,11 +290,15 @@
   "command_interface": {
     "status": "ACTIVE",
     "registry": "NEXIA_COMMANDS.md",
-    "version": "2.0",
+    "version": "2.1",
     "default_command": "/next",
     "optimal_command_policy": "NEXIA proactively states the optimal command before execution; Kael may choose another valid command.",
     "external_access": "GitHub persistent registry available independently of ChatGPT; HQ/public read-only interfaces are targets and must be separately verified.",
-    "execution_rule": "Commands never bypass Authority Engine, Human Gates or Security Shield."
+    "execution_rule": "Commands never bypass Authority Engine, Human Gates or Security Shield.",
+    "voice_registry": "NEXIA_VOICE_COMMANDS.md",
+    "voice_status": "ACTIVE_POLICY_ONLY",
+    "voice_execution": "No separate public voice execution endpoint implemented or claimed; ChatGPT conversational voice may express intents.",
+    "voice_safety": "Ambiguous transcription never authorizes material action; YELLOW/RED requires exact confirmation; emergency phrases invoke brake/safe mode where technically possible."
   },
   "security_shield": {
     "status": "ACTIVE",
@@ -324,6 +314,6 @@
       "business evidence"
     ],
     "rule": "Unknown material risk is never GREEN; least privilege; emergency brake; no raw credentials in chat.",
-    "current_action": "Harden security and verify every external interface before exposing execution capability."
+    "current_action": "Voice layer hardened; continue system-wide security hardening and verify external interfaces before exposing execution capability."
   }
 }
