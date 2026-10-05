@@ -230,3 +230,19 @@ Commits:
 - `0932f2d34c0e30bb3b4142d132fbc5da550ca695` — persistent state update.
 
 Evidence boundary remains unchanged: public evidence supports diagnostic coverage improvement but does not count as real-user validation. EXP-001B remains blocked at 0/3 participants.
+
+
+## 18. PUBLIC RUNTIME + FUNCTIONAL VERIFICATION — 2026-10-05
+
+Public runtime verification was executed against the deployed GitHub Pages site after the NexaCare MVP 0.4 code update.
+
+Verified:
+- `https://micaelgonzalez92-cpu.github.io/Nexia-care/` serves **NexaCare · MVP 0.4**.
+- `https://micaelgonzalez92-cpu.github.io/Nexia-care/NexaCare/` also serves **NexaCare · MVP 0.4**.
+- A non-destructive browser test selected **Magnifica S · ECAM21/22.110** and **Triángulo rojo / aviso de posos**.
+- The expected diagnostic question appeared: **“¿Has retirado y vuelto a colocar correctamente el recipiente de posos y la bandeja de goteo?”**, with “Sí” and “No / no lo sé”, at step 3/3.
+- No external form was submitted, no purchase was made and no user data was modified.
+
+Evidence boundary remains unchanged: this verifies deployment and functional behavior, but it is not real-user validation. EXP-001B remains at 0/3 participants and the Human Gate remains active.
+
+State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5d6d`.
