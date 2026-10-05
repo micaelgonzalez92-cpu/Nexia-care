@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -63,8 +63,8 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Persistida política de resiliencia: backups verificables + defensa en profundidad + continuidad operativa orientada a mejora.",
-    "next_review": "En cada ciclo de trabajo y backup, comprobar integridad, recuperabilidad, protección y siguiente tarea de mejora segura.",
+    "last_action": "Evolucionado NEXIA HQ a Command Center operativo: loop evolutivo, misión, economía, radar/lab/agentes, evento, resiliencia y siguiente acción conectados al estado persistente.",
+    "next_review": "En cada ciclo: comprobar integridad, capacidad disponible, cuello de botella, mejoras seguras y siguiente misión desbloqueable.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
     "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE"
   },
@@ -95,15 +95,17 @@
     "nexahq_path": "/NexaHQ/",
     "clean_route_status": "IMPLEMENTED_IN_REPOSITORY",
     "personal_github_pages_hostname": "REMAINS_UNCHANGED_UNTIL_CUSTOM_DOMAIN_OR_HOSTING_IDENTITY_CHANGE",
-    "public_runtime_verification": "NOT_VERIFIED_BY_WEB_RUNTIME"
+    "public_runtime_verification": "NOT_VERIFIED_BY_WEB_RUNTIME",
+    "nexiahq_path": "/NexaHQ/",
+    "nexahq_last_commit": "f754091f6941c949dd30f6e29d03669f93ba9223"
   },
   "system": {
     "persistent_state": "PARTIAL_WITH_RECOVERY_LAYER",
-    "real_hq": "INITIAL_READ_ONLY_WITH_AUTO_REFRESH",
+    "real_hq": "COMMAND_CENTER_READ_ONLY_WITH_AUTO_REFRESH",
     "telemetry": "NOT_CONNECTED",
     "notifications": "NOT_CONNECTED",
     "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS_AND_SAFE_REPOSITORY_WORK",
-    "deployment": "GITHUB_PAGES_CONFIGURED; CLEAN_NEXACARE_AND_NEXAHQ_ROUTES_PRESENT; PUBLIC_RUNTIME_NOT_VERIFIED",
+    "deployment": "GITHUB_PAGES_CONFIGURED; NEXACARE_AND_NEXIAHQ_ROUTES_PRESENT; PUBLIC_RUNTIME_NOT_VERIFIED",
     "floot": "AVAILABLE_IN_CURRENT_CONTEXT",
     "continuity_layer": "ACTIVE",
     "continuity_source": "NEXIA_CONTINUITY.md",
@@ -157,5 +159,12 @@
       "No inventar permisos, credenciales, resultados o evidencia.",
       "No ejecutar cambios irreversibles sin el gate correspondiente."
     ]
-  }
+  },
+  "automation_inventory": {
+    "active": 3,
+    "paused": 4,
+    "completed": 1,
+    "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
+  },
+  "next_useful_action": "Reducir el Human Gate de EXP-001B mediante vía autorizada de reclutamiento; mientras tanto continuar mejoras seguras de HQ, investigación, economía, documentación y resiliencia."
 }
