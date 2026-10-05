@@ -73,6 +73,19 @@
 <div class="footer">NEXIA HQ · interfaz operativa basada en NEXIA_STATE.json. Las barras son indicadores de estado de sistema, no pronósticos de ingresos. Actualización automática cada 60 s.</div>
 </main>
 <script>
+async function loadCommands(){
+ const box=document.getElementById('commands'); if(!box)return;
+ try{
+  const r=await fetch('../NEXIA_COMMANDS.md?ts='+Date.now(),{cache:'no-store'}); if(!r.ok)throw Error(r.status);
+  const md=await r.text(); const lines=md.split(/\r?\n/); let html=''; let section='';
+  for(const line of lines){
+   if(line.startsWith('### ')){section=line.slice(4); continue;}
+   const m=line.match(/^- \*\*(.+?)\*\* — (.+)$/);
+   if(m) html+='<div class="cmd"><div><span class="label">'+section+'</span></div><code>'+m[1]+'</code><small>'+m[2]+'</small></div>';
+  }
+  box.innerHTML=html||'<div class="muted">No se pudieron interpretar comandos.</div>';
+ }catch(e){box.innerHTML='<div class="muted">Registro de comandos no disponible ahora.</div>';}
+}
 async function load(){
  const s=document.getElementById('status'),u=document.getElementById('updated');
  try{
