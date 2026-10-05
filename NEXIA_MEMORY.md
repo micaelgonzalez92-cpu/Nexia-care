@@ -73,3 +73,28 @@ Objetivo inmediato: demostrar utilidad real de NEXIA Care antes de buscar extrac
 - A public Reddit report for ECAM 22.110.B describes a red-triangle/grounds-container warning after grinding whole beans, with discussion of grinding/infusion/sensor-related causes. This is a public anecdotal report, not controlled user-test evidence.
 - Interpretation: public evidence can refine NEXIA Care's diagnostic coverage, but it does NOT satisfy EXP-001B's real-user evidence gate.
 - Human Gate remains active: 0/3 real participants.
+
+
+## Operational review — 2026-10-05 10:10 CEST
+### Facts verified in current run
+- EXP-001B remains open and has 0/3 real participants; no user was contacted during this run.
+- Zero-cost public research was executed again to reduce the Human Gate without spending money.
+- Current public search surfaced multiple recent/usable De'Longhi Magnifica problem reports on Reddit, including grinding failures, no-water/flow issues, warning lights, weak coffee, and infuser/brew-unit issues.
+- Official De'Longhi support currently documents weak coffee, coffee not hot, flashing/steady lights, descaling, cappuccino-maker cleaning, and brewing-unit maintenance/troubleshooting for Magnifica-family products.
+- Public reports are evidence of recurring problem themes, not evidence that NEXIA Care works for those users.
+
+### Candidate source set — not contacted
+1. Reddit: "Delonghi Magnifica S ecam 22.110b Broken" — public problem report.
+2. Reddit: "Ecam 22.110.b magnifica s" — warning/grounding issue.
+3. Reddit: "Delonghi Magnifica S - no water comes out and strange ..." — flow/water issue.
+4. Reddit: "Delonghi magnifica s machine is not grinding my beans! ..." — grinder issue.
+5. Reddit: "Delonghi Magnifica S Repair" — recent repair/problem report.
+
+### Mission status
+- Highest-value mission remains EXP-001B real-user test.
+- Autonomous zero-cost preparation/research is complete for the current pass.
+- Human Gate remains the only material blocker: an authorized human contact/participant is still required for the actual test.
+- No spending, contracting, or external account action was performed.
+
+### Next action
+- If an authorized contact channel is available without additional approval, use it to invite one candidate to a 5–10 minute test. Otherwise emit a Human Gate task to Kael rather than attempting unauthorized contact.
