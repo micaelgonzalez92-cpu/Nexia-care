@@ -63,7 +63,7 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Auditoría técnica de 9 síntomas completada y nuevo escaneo público de señales ejecutado a coste 0: se encontraron casos públicos compatibles con problemas de flujo, molienda, avisos y café débil/frío. No hubo contacto externo.",
+    "last_action": "Escaneo público de señales ejecutado el 2026-10-05 a coste 0: se revalidaron casos recientes de Magnifica S con molienda reducida, poco flujo/café débil, no molienda y fallos de descalcificación. Se confirma que siguen existiendo candidatos públicos compatibles con EXP-001B, pero sin usuario participante ni contacto externo.",
     "next_review": "En cada ciclo: comprobar integridad, capacidad disponible, cuello de botella, mejoras seguras y siguiente misión desbloqueable.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
     "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE",
@@ -167,5 +167,5 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Abrir EXP-001B con un participante real mediante una vía autorizada. Sin esa vía, continuar solo con trabajo técnico/investigación de coste 0."
+  "next_useful_action": "Buscar una vía autorizada para el primer usuario real; mientras tanto, mantener EXP-001B preparado y convertir nuevas señales públicas en hipótesis, no en evidencia de validación."
 }
