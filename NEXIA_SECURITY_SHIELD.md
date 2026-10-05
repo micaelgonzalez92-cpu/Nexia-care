@@ -80,3 +80,29 @@ For material actions retain:
 
 ## Security objective
 The safest useful system is one that can do more without increasing Kael's exposure. When a capability increases exposure without a measurable benefit, reject or redesign it.
+
+
+## External emergency-stop technical contract — 2026-10-06
+
+Status: **DESIGNED / NOT YET CONNECTED TO AN INDEPENDENT EXECUTION PLANE**
+
+Purpose: convert the policy Emergency Brake into a fail-safe control that is independent of the chat interface and can stop authorized execution paths without granting any ability to start them.
+
+Required properties:
+- **STOP-only:** the brake may pause/revoke execution; it must never grant permission to resume or start material actions.
+- **Out-of-band:** the final control should live outside the worker/executor it is intended to stop.
+- **Fail-safe default:** loss of the control plane, ambiguous state or unknown material risk must not produce new external execution.
+- **Global scope:** when triggered, all material execution paths must enter PAUSED/SAFE_MODE, including scheduled workers and external connectors that support a pause/revocation hook.
+- **Preserve-before-reassess:** checkpoint the last known-good state, record the trigger and freeze scope before investigation.
+- **Recovery requires explicit re-arm:** returning from SAFE_MODE must require an explicit, scoped authorization; normal chat activity alone must not silently re-enable material execution.
+- **Audit:** trigger time, source, affected execution paths, last known-good checkpoint and recovery authorization must be recorded when the infrastructure permits it.
+- **No false assurance:** until an independent control and an end-to-end stop test exist, NEXIA must describe the brake as policy/design, not as a deployed safety switch.
+
+Minimum verification test before declaring implementation complete:
+1. Start a controlled, reversible worker.
+2. Trigger the independent stop.
+3. Verify the worker cannot continue material execution.
+4. Verify state/checkpoint preservation.
+5. Verify re-arm is blocked without explicit authorization.
+6. Record the test result and rollback/recovery path.
+
