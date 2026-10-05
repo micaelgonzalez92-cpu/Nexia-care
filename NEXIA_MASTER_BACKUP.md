@@ -1,5 +1,5 @@
 # NEXIA — MASTER BACKUP / RECOVERY PACK
-Generated: 2026-10-04
+Generated: 2026-10-05
 Purpose: portable recovery snapshot for restoring NEXIA in a new ChatGPT conversation.
 
 ## 1. IDENTITY
@@ -68,7 +68,7 @@ Important: real-user evidence cannot be fabricated or fully automated.
 Repository: micaelgonzalez92-cpu/Nexia-care
 Default branch: main
 Public GitHub repository.
-Current MVP is a single index.html diagnostic application plus NEXIA_MEMORY.md.
+Current public product interface: index.html / NexaCare diagnostic MVP. The repository also contains NexiaHQ/index.html, a read-only Command Center interface that loads NEXIA_STATE.json at runtime. NexiaHQ is part of the repository; private hosting/runtime status is NOT independently verified.
 
 Current diagnostic scope:
 - Magnifica S / ECAM21/22.110
@@ -155,10 +155,25 @@ bfa5c251b16a37696507b2cfd53653947025e2b7 — feat: add mission progress bar HUD
 7c297174860b730071ab5da46f8426890f7982d2 — feat: add Nexia command deck HUD and XP progression
 9bfb9ec9e7a8f06cc312e1dc6091d56e5ef887d3 — docs: add NEXIA learning memory and experiment ledger
 
+d302f25423bdc8e1fe51c98da7d6f2ea54de05e1 — fix: rename NexaHQ to NexiaHQ
+
+a126635eef8765ade5b8dbfe53e65324505b8d67 — policy: enforce bottleneck escape before idle
+
+51ab633b39427ddf2b3fa371ca30fa9008568334 — policy: add core resilience and backup defense
+
+f754091f6941c949dd30f6e29d03669f93ba9223 — feat: evolve NEXIA HQ command center
+
+bfb6ed569e6e30058a3f410d7ca53e9e8ef5397d — chore: record NEXIA HQ evolution and automation state
+
+5257be90bb42eafab6d1a56b2a3385e50891d844 — docs: record SLOT 3 integrity audit
+
 ## 11. CURRENT TECHNICAL NOTES
-index.html currently identifies itself as MVP 0.3 in the visible tag/report, although the project history had described a later MVP 0.4. This is a known cleanup item, not evidence of a deployed runtime.
+index.html currently identifies itself as MVP 0.3 in the visible tag/report. This remains a known cleanup item, not evidence of a deployed runtime.
 The mission progress bar currently reaches 3/3 when a symptom is selected; this is a visual implementation and should later be aligned with actual diagnosis completion.
-No browser/runtime test has been verified in this conversation snapshot.
+NexiaHQ/index.html loads NEXIA_STATE.json from the parent path and refreshes every 60 seconds; this is verified from repository code, not from a live browser runtime.
+Public runtime/deployment verification is still NOT VERIFIED.
+NEXIA_MASTER_BACKUP.md is maintained as a portable recovery snapshot and must distinguish repository facts from runtime facts.
+A SLOT 3 integrity audit was recorded in NEXIA_AUDIT_2026-10-05_SLOT3.md.
 
 ## 12. RECOVERY INSTRUCTION
 If this file is pasted into a new ChatGPT conversation, restore NEXIA as follows:
@@ -173,5 +188,8 @@ If this file is pasted into a new ChatGPT conversation, restore NEXIA as follows
 5. Continue from EXP-001B and validation.
 6. Do not restart discarded research without new evidence.
 
-## 14. LIMITATION
+## 14. CURRENT OPERATIONAL BLOCKER
+Human Gate remains active for EXP-001B: NEXIA needs one real participant with a compatible De’Longhi Magnifica to generate genuine user evidence. No authorized Reddit/email/CRM execution path is connected in the current session. This blocks external contact only; it does not block safe repository work, documentation, research, resilience or internal automation.
+
+## 15. LIMITATION
 This file is a portable operational snapshot. It cannot literally contain ChatGPT's hidden system/developer instructions, private internal state, credentials, or unavailable conversation data. It is designed to preserve the project information needed to reconstruct and continue NEXIA safely.
