@@ -168,3 +168,51 @@ Next safe action:
 - keep ECAM22.110.B as primary validation target;
 - use Start/Evo/S variants as secondary candidates;
 - require Kael approval before external contact where no authorized in-app path exists.
+
+
+## Contactability optimization scan — 2026-10-05
+
+Objective: increase the number of candidates that can be reached through a legitimate platform-native path, without exposing private contact data and without sending any message.
+
+### Newly verified public candidates
+
+15. Reddit / r/DeLonghi — “Quick help please” — published 23 Aug 2026. Public result identifies a De'Longhi Magnifica S and a concrete intermittent brewing failure: first coffee works, subsequent coffee produces no output and warning lights flash; hot-water/steam also fail intermittently. The post remains a concrete help request. Rank A/B. Contact route: Reddit account/message path exists in principle, but direct contact has NOT been executed or verified because authentication is required. Source: https://www.reddit.com/r/DeLonghi/comments/1vwbr1h/quick_help_please/
+
+16. Reddit / r/DeLonghi — “Help with magnifica S” — published 20 Feb 2026. Owner has a used Magnifica S with very watery coffee despite grinder adjustment; owner says the used coffee grind does not look right. Rank A/B. Contact route: Reddit account/message path in principle; NOT VERIFIED without authenticated session. Source: https://www.reddit.com/r/DeLonghi/comments/1r9w2w8/help_with_magnifica_s/
+
+17. Reddit / r/DeLonghi — “De'Longhi Magnifica S leaking water issues” — published 22 Sep 2026, with owner follow-up 1 Oct and a video. Exact model family is Magnifica S; concrete unresolved leakage/output problem at initial post, later repaired on 4 Oct by replacing an infusion piston. Rank B for recruitment, A for diagnostic-pattern research. Contact route: Reddit account/message path in principle; NOT VERIFIED without authenticated session. Source: https://www.reddit.com/r/DeLonghi/comments/1wng17w/delonghi_magnifica_s_leaking_water_issues/
+
+18. Reddit / r/DeLonghi — “DeLonghi Magnifica S grinder suddenly spinning without grinding” — published 25 Sep 2026. Owner has a new Magnifica S (13 days old); grinder motor spins but beans are not ground. Owner explicitly asks what can safely be checked and whether to contact seller. Rank A. Contact route: Reddit account/message path in principle; NOT VERIFIED without authenticated session. Source: https://www.reddit.com/r/DeLonghi/comments/1wpogh9/delonghi_magnifica_s_grinder_suddenly_spinning/
+
+19. Reddit / r/DeLonghi — “New Magnifica S 230.13.B not grinding” — published 3 Oct 2026. Brand-new Magnifica S 230.13.B does not grind beans; warning/tray light flashes; owner asks for ideas. Rank A. Contact route: Reddit account/message path in principle; NOT VERIFIED without authenticated session. Source: https://www.reddit.com/r/DeLonghi/comments/1ww9nag/new_magnifica_s_23013b_not_grinding/
+
+20. Reddit / r/DeLonghi — “De’Longhi Magnifica S – descale cycle starts once then stops / coffee barely dispensing” — published 25 Sep 2026. Owner reports normal grinding but very little coffee, weak output, same result with pre-ground coffee, strong hot-water/steam flow, and cleaning/descaling attempts. Rank A. Contact route: Reddit account/message path in principle; NOT VERIFIED without authenticated session. Source: https://www.reddit.com/r/DeLonghi/comments/1wq03bz/delonghi_magnifica_s_descale_cycle_starts_once/
+
+21. ToolPase — “De’Longhi throwing bean empty error with a full hopper, grind too fine?” — thread started 9 Jun 2026 by member Thomas Martinez; replies include a Magnifica S owner reporting the same issue and a successful adjustment. This is a forum-native identity/contact surface, but the visible participant is a replying member rather than an unresolved recruitment lead. Rank C for first participant; useful as a secondary channel to investigate. Source: https://toolpase.com/threads/delonghi-throwing-bean-empty-error-with-a-full-hopper-grind-too-fine.217/
+
+### Contactability classification
+
+- **Tier 1 — platform-native reachable:** Reddit candidates with a visible username and active/recent problem post. Legitimate route = contact through Reddit after Kael authorizes/provides an authenticated account. No message sent by NEXIA.
+- **Tier 2 — forum-native reachable:** forums such as ToolPase/Coffee Forums where a member identity and reply/login mechanism are visible. Requires account access and must remain within forum rules.
+- **Tier 3 — public review only:** Feefo/ProductReview and similar review pages. Useful demand evidence, but no direct owner-contact mechanism has been verified. Do not scrape or infer private contact details.
+
+### Current prioritized contact queue
+
+1. **u/bdoru — ECAM22.110.B — weak coffee/30–40% lower grinding — unresolved** — Tier 1 — PRIMARY.
+2. **u/-Tesserex- — Magnifica Start — low output/stops early — unresolved** — Tier 1 — HIGH.
+3. **New Magnifica S 230.13.B not grinding — 3 Oct 2026 — new machine** — Tier 1 — HIGH.
+4. **Magnifica S grinder suddenly spinning without grinding — 25 Sep 2026 — new machine** — Tier 1 — HIGH.
+5. **Magnifica S descale/low output — 25 Sep 2026 — multiple checks already done** — Tier 1 — HIGH.
+6. **Quick help please — Magnifica S — intermittent no-output/warning lights — 23 Aug 2026** — Tier 1 — HIGH.
+7. **u/Key-Pilot-4313 — Magnifica Evo — no milk frothing after descaling/filter change** — Tier 1 — MEDIUM/HIGH.
+8. **Magnifica S used machine — watery coffee — 20 Feb 2026** — Tier 1 — MEDIUM/HIGH.
+
+### Operational conclusion
+
+The acquisition problem is now better defined: there is no shortage of public candidates. The limiting factor is **authorized access to a legitimate outbound channel**, not discovery.
+
+At least 7 strong Tier-1 Reddit candidates are now available for a single controlled outreach experiment. This is sufficient to avoid betting the experiment on one account.
+
+No private phone numbers, personal emails, addresses, or inferred identities were collected or added. No external contact was sent. Cost remains €0.
+
+Next safe action: Kael authorizes one authenticated Reddit account/channel; then contact the top candidates sequentially, starting with the primary ECAM22.110.B case, stopping after the first positive response rather than spamming the queue.
