@@ -12,7 +12,7 @@ NEXIA should proactively state the **COMANDO ÓPTIMO** before the user needs to 
 
 Kael always retains command choice. If Kael explicitly chooses another valid command, execute that command subject to authority/security gates.
 
-Natural language aliases are accepted; exact slash commands are the preferred compact interface.
+Natural language aliases are accepted; exact slash commands are the preferred compact interface. Voice/conversational mappings are canonicalized in `NEXIA_VOICE_COMMANDS.md`.
 
 ### Default command
 **/next** — select and execute the highest-value safe next action.
@@ -124,3 +124,32 @@ Every material response distinguishes:
 - RECOMENDACIÓN
 
 The registry itself does not claim that an external interface exists until that interface has been implemented and verified.
+
+
+## 11. VOICE INTERFACE
+
+Canonical voice policy: **NEXIA_VOICE_COMMANDS.md**.
+
+Safe voice aliases include:
+- "Nexia, estado" → /status
+- "Nexia, siguiente acción" → /next
+- "Nexia, audita el sistema" → /audit
+- "Nexia, evoluciona el sistema" → /evolve
+- "Nexia, seguridad" → /security
+- "Nexia, protege el sistema" → /protect
+- "Nexia, dime qué necesitas de mí" → /kael
+- "Nexia, verifica [acción]" → /verify
+- "Nexia, investiga [tema]" → /research
+- "Nexia, prepara [acción]" → /prepare
+- "Nexia, guarda el estado" → /checkpoint
+- "Nexia, comandos" → /commands
+- "Nexia, ayuda" → /help
+
+Voice safety:
+- ambiguous transcription never triggers material action;
+- "ejecuta", "hazlo", "adelante" are not universal authorization;
+- YELLOW/RED actions require exact confirmation after scope/cost/exposure/benefit/risk are stated;
+- "PARA TODO", "DETÉN TODO" and "MODO SEGURO" invoke the emergency-brake/safe-mode intent where technically possible;
+- if uncertain between read-only and material execution, choose read-only/preparation;
+- no voice interface bypasses Authority Engine, Human Gates or Security Shield.
+
