@@ -307,3 +307,8 @@ Checkpoint CP-2026-10-05-002: €0 impact; Human Gate unchanged; no external con
 State version **25** hardens the critical-change protocol. Every critical write must begin by reading the current repository state/head, use the current blob SHA, verify the resulting artifact, then synchronize derived artifacts and append a checkpoint event. Stale writes must be rejected rather than force-overwritten. Artifact consistency requires BOOT to match STATE version/hash, LIVE to reflect the same operational phase, EVENT_LOG to remain append-only, and MASTER_BACKUP to declare the state version it represents.
 
 Checkpoint CP-2026-10-05-002: €0 impact; Human Gate unchanged; no external contact or spending.
+
+
+## 29. PERSISTENCE CHECKPOINT CLOSURE — 2026-10-05
+
+State version **26** closes checkpoint **CP-2026-10-05-003** after synchronizing derived recovery artifacts. BOOT references STATE v26 and its verified blob SHA; LIVE reflects the same operational phase. EVENT_LOG remains append-only. Financial impact: €0. Human Gate K-001 unchanged. No external contact, spending or irreversible action occurred.
