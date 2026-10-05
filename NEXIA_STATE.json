@@ -63,7 +63,7 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Ciclo de priorización ejecutado el 2026-10-05: se incorpora como objetivo operativo un timebox de 30 días hacia >=1.000 EUR de beneficio neto mensual, manteniendo EXP-001B como validación activa y exigiendo vías paralelas de monetización/falsación para no depender de un único canal.",
+    "last_action": "2026-10-06: /evolve converted the Emergency Brake from policy-only wording into a verified technical contract with explicit stop-only, out-of-band, fail-safe, preserve, re-arm and audit requirements. Independent control is still not connected.",
     "next_review": "En cada ciclo: comprobar integridad, capacidad disponible, cuello de botella, mejoras seguras y siguiente misión desbloqueable.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
     "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE",
@@ -217,7 +217,7 @@
     "previous_state_version": 31,
     "current_state_version": 32,
     "previous_state_blob_sha": "9c0bc50efe488bab73993da34f2693c746e55234",
-    "status": "PENDING_UNTIL_WRITE_AND_RE_READ",
+    "status": "VERIFIED_AFTER_WRITE",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
     "verified_artifacts": [
@@ -225,7 +225,8 @@
       "NEXIA_STATE.json",
       "NEXIA_BOOT.json"
     ],
-    "note": "Evolution cycle: converted Emergency Brake from policy-only concept into a precise technical contract without connecting external controls or spending."
+    "note": "Emergency Brake technical contract persisted and re-read. No external control connected, no spending, no external contact, no authority change.",
+    "current_state_blob_sha": "2f2db3591a1c5caf3f7022e773375658734dd170"
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
