@@ -2,18 +2,19 @@
   "updated_at": "2026-10-05T12:29:00+02:00",
   "status": "ACTIVE",
   "current_cycle": "European Exception Desk — EXP-DOC-001",
-  "current_action": "Ejecutar benchmark sintético de 20 expedientes y medir valor de la capa de excepciones.",
-  "last_completed_action": "Benchmark diseñado con umbrales explícitos de tiempo, cobertura, escalado y seguridad.",
-  "evidence": "VETA REFORZADA — múltiples señales europeas; wedge de Exception Desk sigue sin validación comercial",
+  "current_action": "Preparar siguiente prueba con tiempo humano real y canal autorizado.",
+  "last_completed_action": "Benchmark sintético ejecutado: modelo 75.65% de reducción; resultado marcado como simulación interna.",
+  "evidence": "VETA REFORZADA — lógica interna prometedora; ahorro real y disposición a pagar siguen NO validados",
   "capital_spent_eur": 0,
   "human_gate": "EXP-001B: 1 participante real pendiente. EXP-DOC-001: canal de outreach autorizado pendiente.",
   "parallel_work": [
     "EXP-DOC-001 Exception Desk de cierre",
+    "European falsification radar",
     "Property Maintenance exceptions",
     "Mortgage document exceptions",
     "EXP-001B Care"
   ],
-  "next_action": "Ejecutar el benchmark sintético y registrar resultado; si pasa, preparar oferta piloto para un canal autorizado.",
+  "next_action": "Diseñar prueba de tiempo humano reproducible y preparar paquete de piloto; no contactar ni gastar sin gate.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
