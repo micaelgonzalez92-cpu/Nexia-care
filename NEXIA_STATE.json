@@ -1,5 +1,5 @@
 {
-  "version": 25,
+  "version": 26,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -201,7 +201,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Continuar trabajo seguro sin gasto mientras se mantiene K-001 como Human Gate; en cada cambio crítico aplicar checkpoint transaccional y mantener BOOT/LIVE/BACKUP sincronizados.",
+  "next_useful_action": "Ejecutar trabajo seguro €0 de validación, economía, falsación y preparación de adquisición; mantener K-001 como único gate para contacto externo.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -213,12 +213,18 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-05-002",
-    "previous_state_version": 24,
-    "current_state_version": 25,
-    "previous_state_blob_sha": "b33ae772ce34a4b27eb7b36abc9228e7a968ef86",
-    "status": "PENDING_DERIVED_ARTIFACT_SYNC",
+    "checkpoint_id": "CP-2026-10-05-003",
+    "previous_state_version": 25,
+    "current_state_version": 26,
+    "previous_state_blob_sha": "a816b334f269ddd18081909eb414fe509a700391",
+    "status": "VERIFIED_DERIVED_ARTIFACT_SYNC",
     "financial_impact_eur": 0,
-    "human_gate_unchanged": true
+    "human_gate_unchanged": true,
+    "verified_artifacts": [
+      "NEXIA_BOOT.json",
+      "NEXIA_LIVE.json",
+      "NEXIA_MASTER_BACKUP.md",
+      "NEXIA_EVENT_LOG.jsonl"
+    ]
   }
 }
