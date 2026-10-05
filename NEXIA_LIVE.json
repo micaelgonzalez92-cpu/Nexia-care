@@ -3,7 +3,7 @@
   "status": "ACTIVE / CRITICAL PATH HUMAN-GATED",
   "current_cycle": "NEXIA Core — persistence hardening + validation readiness",
   "current_action": "Mantener rutas internas €0 activas y aplicar checkpoint transaccional a cambios críticos.",
-  "last_completed_action": "Hardening of critical-change transaction protocol recorded in STATE v25.",
+  "last_completed_action": "Critical-change transaction protocol hardened in STATE v25.",
   "evidence": "STATE v25 persisted; no spending, external contact or business result claimed.",
   "capital_spent_eur": 0,
   "human_gate": "🔴 K-001: autorizar/conectar canal externo legítimo de adquisición. Además, la prueba de tiempo humano de EXP-DOC-001 requiere un operador humano.",
@@ -14,7 +14,7 @@
     "Economics / alternative monetization",
     "HQ / resilience / continuity"
   ],
-  "next_action": "Synchronize BOOT/LIVE/BACKUP and append checkpoint event; then resume safe validation work.",
+  "next_action": "Synchronize remaining derived artifacts and append checkpoint event; then resume safe validation work.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
