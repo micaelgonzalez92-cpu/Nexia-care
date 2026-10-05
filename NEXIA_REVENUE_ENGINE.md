@@ -126,3 +126,34 @@ NEXIA CORE must run a dual engine:
 - Revenue engine: simultaneously identify and validate the fastest zero/low-capital route to a first transaction.
 
 The machine should pivot or add routes when a route fails to produce measurable traction, without abandoning accumulated evidence.
+
+
+## Fresh market-price falsation — 2026-10-05
+
+New public evidence changes the pricing hypothesis:
+
+- Sator Electrónica publicly advertises **diagnóstico desde 10 €** for DeLonghi coffee machines and accepts symptom/photo consultations from Spain. This means a €9–€19 remote NEXIA diagnostic is not automatically differentiated on price alone. citeturn0search6turn0search2
+- Tecnisan, an official service centre in Valencia, states that it charges a diagnostic deposit depending on the appliance and deducts it from the repair if accepted. This supports the existence of a paid-diagnosis model, but also shows that established repairers can bundle diagnosis with repair economics. citeturn0search3
+- Miss Pièces publicly lists DeLonghi bean-to-cup repair packages at €154.90 workshop / €184.90 with round-trip shipping before a €25 repair bonus, with diagnosis included. This reinforces the value of the repair decision, but is not evidence of NEXIA willingness-to-pay. citeturn0search13turn0search14
+
+### Pricing implication
+
+R1 should **not** be treated as validated merely because €9–€19 is cheaper than a repair. The stronger hypothesis is now:
+
+> NEXIA can win if it delivers a faster, self-service, model-specific decision before the owner commits to a workshop, and/or creates a qualified handoff that a repair provider values.
+
+This shifts the preferred test from “cheap diagnosis” toward **decision utility + qualified escalation**.
+
+### Revised 0€ experiment candidate
+
+**R1A — Free diagnostic → paid escalation test**
+- Hypothesis: users will complete a free symptom/model diagnosis and a subset will value a more detailed decision/report or professional handoff enough to accept a paid next step.
+- Action: use existing NEXIA Care flow; measure completion, unresolved cases, escalation intent and requests for deeper help.
+- Cost: €0.
+- Metric: diagnostic completion → escalation intent → willingness-to-pay signal.
+- Success: repeated user requests for deeper help plus at least one explicit willingness-to-pay signal.
+- Failure: users consume diagnosis but show no interest in deeper help.
+- Risk: confusing informational usefulness with commercial demand.
+- Information gained: whether the real monetizable unit is diagnosis, decision support, or qualified repair routing.
+
+R2 lead-generation remains a parallel candidate because established repairers already monetize diagnosis/repair, while NEXIA could potentially reduce their acquisition friction. No commercial terms are validated yet.
