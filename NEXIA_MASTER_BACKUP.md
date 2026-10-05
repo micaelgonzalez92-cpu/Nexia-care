@@ -248,3 +248,14 @@ State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5
 - Official De’Longhi documentation is used as the technical reference for this instruction. This does not constitute real-user validation.
 - PR #10 was merged into `main` as `be43f7ecafc05057b0ca11e0ae85c612906ccbdd`.
 
+
+
+## 24. OFFICIAL MAGNIFICA TROUBLESHOOTING AUDIT — 2026-10-05
+- Re-audited the remaining user-facing troubleshooting guidance against official De’Longhi documentation for the ECAM21.110 family.
+- Café aguado/poco cremoso: aligned with the documented coarse-grind remedy — one click toward 1 while grinding, then at least 2 coffees before reassessment.
+- No coffee from one/both spouts: added the documented low-risk check for blocked spouts and cleaning with a toothpick.
+- Café frío: added conservative cup preheating/rinse guidance and escalation if water/steam are also cold or the issue persists.
+- No milk foam: aligned with documented cappuccino-maker cleaning and milk-temperature/type guidance; no parts recommendation.
+- Slow/dripping coffee guidance remains aligned with the documented one-click-toward-7 adjustment while grinding and the 2-coffee observation window.
+- This is technical documentation alignment, not real-user validation. EXP-001B remains at 0/3 and the Human Gate remains active.
+- Repository changes were applied directly to both public Nexia Care entrypoints and state/backup records; current live-runtime behavior of this latest patch has not been independently reverified.
