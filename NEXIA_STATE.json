@@ -1,5 +1,5 @@
 {
-  "version": 23,
+  "version": 24,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -159,7 +159,19 @@
       "No realizar contacto externo no autorizado.",
       "No inventar permisos, credenciales, resultados o evidencia.",
       "No ejecutar cambios irreversibles sin el gate correspondiente."
-    ]
+    ],
+    "persistence_layer": {
+      "status": "ACTIVE",
+      "canonical_source": "NEXIA_STATE.json",
+      "boot_index": "NEXIA_BOOT.json",
+      "event_log": "NEXIA_EVENT_LOG.jsonl",
+      "protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
+      "backup": "NEXIA_MASTER_BACKUP.md",
+      "rule": "STATE is canonical; BOOT/LIVE/BACKUP are derived or visibility artifacts and cannot override newer verified STATE.",
+      "transaction": "OBSERVE -> EXECUTE -> VERIFY -> CHECKPOINT -> BACKUP",
+      "failure_policy": "Preserve last known-good state, re-read before retry, never force-overwrite a newer branch head.",
+      "recovery_test": "A fresh session must reconstruct mission, experiment, guardrails, Human Gate, last confirmed action and next safe action from BOOT + STATE."
+    }
   },
   "automation_inventory": {
     "active": 3,
@@ -167,7 +179,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Prioridad máxima: acelerar hacia ingresos reales y escalables dentro del timebox de 30 días; en paralelo desbloquear el primer usuario de EXP-001B, explorar rutas alternativas de monetización a coste 0 y mantener mejoras seguras de NEXIA Core/HQ/Care.",
+  "next_useful_action": "Continuar trabajo seguro sin gasto mientras se mantiene K-001 como Human Gate; en cada cambio crítico aplicar checkpoint transaccional y mantener BOOT/LIVE/BACKUP sincronizados.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -177,5 +189,15 @@
     "rule": "Priorizar generación de ingresos validable y escalable, sin sacrificar evidencia ni gastar sin aprobación.",
     "milestone_policy": "Al alcanzar >=1000 EUR netos mensuales de forma demostrable y sostenible, elevar el objetivo y escalar.",
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
+  },
+  "persistence_checkpoint": {
+    "checkpoint_id": "CP-2026-10-05-001",
+    "previous_state_version": 23,
+    "current_state_version": 24,
+    "previous_state_blob_sha": "a24755d0853956c67e3bff39a65ce53064900fc7",
+    "event_log_last_event": "EVT-2026-10-05-0001",
+    "status": "VERIFIED_AFTER_WRITE",
+    "financial_impact_eur": 0,
+    "human_gate_unchanged": true
   }
 }
