@@ -311,4 +311,10 @@ Checkpoint CP-2026-10-05-002: €0 impact; Human Gate unchanged; no external con
 
 ## 29. PERSISTENCE CHECKPOINT CLOSURE — 2026-10-05
 
-State version **26** closes checkpoint **CP-2026-10-05-003** after synchronizing derived recovery artifacts. BOOT references STATE v26 and its verified blob SHA; LIVE reflects the same operational phase. EVENT_LOG remains append-only. Financial impact: €0. Human Gate K-001 unchanged. No external contact, spending or irreversible action occurred.
+State version **26** closed checkpoint **CP-2026-10-05-003** after synchronizing derived recovery artifacts.
+
+## 30. HQ STATE SYNCHRONIZATION — 2026-10-05
+
+State version **27** records the verified current NexiaHQ commit `9b1cec575d4be902589ff104a8b5137da951c353` in `main`. The commit adds cache-control headers, visible state/read-clock indicators and 10-second refresh polling. Repository verification confirms the code and public STATE source are accessible. No spending, external contact, irreversible action or EXP-001B evidence change occurred.
+
+Checkpoint: **CP-2026-10-05-004**. Previous STATE v26 → current STATE v27. Financial impact: €0. Human Gate K-001 unchanged.
