@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-05T14:06:00+02:00",
+  "updated_at": "2026-10-05T14:12:00+02:00",
   "status": "ACTIVE / CRITICAL PATH HUMAN-GATED",
-  "current_cycle": "NEXIA Core — persistence hardening + validation readiness",
-  "current_action": "Mantener rutas internas €0 activas y aplicar checkpoint transaccional a cambios críticos.",
-  "last_completed_action": "Critical-change transaction protocol hardened in STATE v25.",
-  "evidence": "STATE v25 persisted; no spending, external contact or business result claimed.",
+  "current_cycle": "NEXIA Core — persistence checkpoint closure + safe validation",
+  "current_action": "Resume €0 validation, economics, falsification and acquisition preparation; no external contact.",
+  "last_completed_action": "Closed CP-2026-10-05-003 and verified derived artifact synchronization.",
+  "evidence": "STATE v26 persisted; BOOT/LIVE/MASTER_BACKUP/EVENT_LOG synchronization is being verified; no spending or external contact.",
   "capital_spent_eur": 0,
   "human_gate": "🔴 K-001: autorizar/conectar canal externo legítimo de adquisición. Además, la prueba de tiempo humano de EXP-DOC-001 requiere un operador humano.",
   "parallel_work": [
@@ -14,7 +14,7 @@
     "Economics / alternative monetization",
     "HQ / resilience / continuity"
   ],
-  "next_action": "Synchronize remaining derived artifacts and append checkpoint event; then resume safe validation work.",
+  "next_action": "Run the next safe validation/economics pass and preserve evidence in the repository.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
