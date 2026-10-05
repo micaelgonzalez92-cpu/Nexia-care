@@ -44,6 +44,16 @@
 <div class="panel"><div class="eyebrow">VALUE ENGINE</div><h2 id="engine">—</h2><p id="objective" class="muted">—</p><div id="gates"></div></div>
 </section>
 
+<section class="panel" style="margin-top:12px;border-color:#34765a">
+<div class="eyebrow">🔴 LIVE ACTIVITY</div><h2 id="liveTitle">—</h2>
+<div class="row"><span class="muted">Acción actual</span><strong id="liveAction">—</strong></div>
+<div class="row"><span class="muted">Última acción</span><strong id="liveLast">—</strong></div>
+<div class="row"><span class="muted">Evidencia</span><strong id="liveEvidence">—</strong></div>
+<div class="row"><span class="muted">Human Gate</span><strong id="liveGate">—</strong></div>
+<div class="row"><span class="muted">Siguiente</span><strong id="liveNext">—</strong></div>
+<p id="liveParallel" class="muted">—</p>
+</section>
+
 <section class="layout">
 <div class="panel"><div class="eyebrow">SISTEMA</div><div id="system" class="muted">—</div></div>
 <div class="panel"><div class="eyebrow">SIGUIENTE ACCIÓN</div><h2 id="next">—</h2><p class="muted">Prioridad: reducir el cuello de botella sin gastar, sin contacto externo no autorizado y sin alterar evidencia válida.</p></div>
@@ -68,9 +78,19 @@ async function load(){
   document.getElementById('gates').innerHTML='<span class="pill ok">🟢 EJECUTAR SEGURO</span><span class="pill warn">🟡 PREPARAR</span><span class="pill danger">🔴 KAEL</span>';
   document.getElementById('event').textContent='Cuello de botella: evidencia humana real para EXP-001B. NEXIA continúa en paralelo con trabajo seguro de HQ, investigación, economía, documentación y resiliencia.';
   document.getElementById('system').innerHTML='Persistencia: '+m.system.persistent_state+'<br>HQ: '+m.system.real_hq+'<br>Telemetría: '+m.system.telemetry+'<br>Notificaciones: '+m.system.notifications+'<br>Automatización: '+m.system.autonomous_execution+'<br>Continuidad: '+m.system.continuity_layer;
-  document.getElementById('next').textContent='Construir capacidad alrededor del Human Gate sin gastar ni contactar externamente.';
+  document.getElementById('next').textContent=m.next_useful_action;
+  try{
+   const lr=await fetch('../NEXIA_LIVE.json?ts='+Date.now(),{cache:'no-store'});if(!lr.ok)throw Error(lr.status);const l=await lr.json();
+   document.getElementById('liveTitle').textContent=l.current_cycle;
+   document.getElementById('liveAction').textContent=l.current_action;
+   document.getElementById('liveLast').textContent=l.last_completed_action;
+   document.getElementById('liveEvidence').textContent=l.evidence;
+   document.getElementById('liveGate').textContent=l.human_gate;
+   document.getElementById('liveNext').textContent=l.next_action;
+   document.getElementById('liveParallel').textContent='Frentes paralelos: '+l.parallel_work.join(' · ')+' | '+l.rule;
+  }catch(e){document.getElementById('liveTitle').textContent='LIVE no disponible';}
  }catch(e){s.textContent='OFFLINE · SIN ESTADO';s.className='tag danger';u.textContent='Error de lectura';}
 }
-document.getElementById('refresh').onclick=load;document.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>document.getElementById('eventTitle').textContent='Evento: '+b.dataset.a+' · interfaz informativa');load();setInterval(load,60000);
+document.getElementById('refresh').onclick=load;document.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>document.getElementById('eventTitle').textContent='Evento: '+b.dataset.a+' · interfaz informativa');load();setInterval(load,15000);
 </script>
 </body></html>
