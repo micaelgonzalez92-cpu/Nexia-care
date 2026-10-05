@@ -39,3 +39,24 @@ No repository evidence found connecting these route commits to Floot. Floot rema
 ## NEXT SAFE ACTION
 
 Keep the clean routes as the canonical product paths. Investigate zero-cost hosting/domain options and current GitHub Pages configuration. Do not purchase a domain or change external ownership without a Human Gate.
+
+
+## RUNTIME VERIFICATION — 2026-10-05
+
+Public runtime verification completed through a live browser run after the NexaCare MVP 0.4 code update.
+
+Verified URLs:
+- https://micaelgonzalez92-cpu.github.io/Nexia-care/
+- https://micaelgonzalez92-cpu.github.io/Nexia-care/NexaCare/
+
+Both served **NexaCare · MVP 0.4**.
+
+Functional verification on the /NexaCare/ route:
+- Magnifica S · ECAM21/22.110 selectable.
+- Triángulo rojo / aviso de posos selectable.
+- Step 3/3 displayed the expected check: ¿Has retirado y vuelto a colocar correctamente el recipiente de posos y la bandeja de goteo?
+- No external form, purchase or data mutation occurred.
+
+Browser verification run: d19020b5-10a5-4d2e-ac27-d28e56d1e24c.
+
+The hostname remains the GitHub account/repository hostname; branded/custom hostname remains a separate Human Gate and was not changed.
