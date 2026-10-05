@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-05T14:02:00+02:00",
+  "updated_at": "2026-10-05T14:06:00+02:00",
   "status": "ACTIVE / CRITICAL PATH HUMAN-GATED",
-  "current_cycle": "NEXIA Core — transactional continuity + critical-path readiness",
+  "current_cycle": "NEXIA Core — persistence hardening + validation readiness",
   "current_action": "Mantener rutas internas €0 activas y aplicar checkpoint transaccional a cambios críticos.",
-  "last_completed_action": "Instalación y verificación de NEXIA_BOOT, NEXIA_EVENT_LOG, NEXIA_PERSISTENCE_PROTOCOL y NEXIA_STATE v24.",
-  "evidence": "Persistencia verificada en GitHub: STATE v24, 0 usuarios reales, 0 transacciones, 0 EUR ingresos, 0 EUR gasto.",
+  "last_completed_action": "Hardening of critical-change transaction protocol recorded in STATE v25.",
+  "evidence": "STATE v25 persisted; no spending, external contact or business result claimed.",
   "capital_spent_eur": 0,
   "human_gate": "🔴 K-001: autorizar/conectar canal externo legítimo de adquisición. Además, la prueba de tiempo humano de EXP-DOC-001 requiere un operador humano.",
   "parallel_work": [
@@ -14,7 +14,7 @@
     "Economics / alternative monetization",
     "HQ / resilience / continuity"
   ],
-  "next_action": "Continuar trabajo seguro sin gasto; K-001 sigue bloqueando contacto externo.",
+  "next_action": "Synchronize BOOT/LIVE/BACKUP and append checkpoint event; then resume safe validation work.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
