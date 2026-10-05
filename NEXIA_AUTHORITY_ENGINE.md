@@ -3,6 +3,18 @@
 ## Purpose
 Centralize authorization so every Nexia action is classified before execution.
 
+## Risk classification
+Evaluate MONEY, REVERSIBILITY, EXTERNAL IMPACT, DATA/SECURITY and REPUTATION/LEGAL before execution. If material risk is unknown, never treat the action as GREEN.
+
+## Emergency Brake
+If an unexpected condition, scope drift, data anomaly, tool error or newly discovered risk appears: PAUSE -> preserve state -> do not expand scope -> reassess -> escalate if classification changes.
+
+## Scope Lock
+Approval authorizes only the exact approved action, scope, budget, account and time window. Derived actions require separate authorization.
+
+## Minimum Privilege
+Use the minimum access, data, money, permissions and external reach necessary.
+
 ## Action classes
 
 ### GREEN — Autonomous
