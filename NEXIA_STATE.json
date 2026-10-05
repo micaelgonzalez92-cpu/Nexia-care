@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -63,8 +63,10 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Se amplió y ejecutó el radar público de adquisición a coste €0, verificando nuevos casos Magnifica y actualizando NEXIA_ACQUISITION_RADAR.md. No se realizó ningún contacto externo.",
-    "next_review": "Conseguir una vía autorizada de contacto externo para convertir los candidatos A/B en participantes; mientras tanto continuar investigación pública sin gasto."
+    "last_action": "Implementada política de trabajo paralelo ante bloqueo y creado un ciclo diario de fallback sin gasto. Además se inició la transición del NexaHQ hacia un Command Center visual/operativo.",
+    "next_review": "Seguir desarrollando NexaHQ en capas visuales y operativas mientras EXP-001B espera entrada humana; mantener investigación y falsación en paralelo.",
+    "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
+    "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE"
   },
   "external_ops": {
     "status": "DESIGNED_NOT_CONNECTED",
@@ -97,10 +99,10 @@
   },
   "system": {
     "persistent_state": "PARTIAL_WITH_RECOVERY_LAYER",
-    "real_hq": "INITIAL_READ_ONLY",
+    "real_hq": "INITIAL_READ_ONLY_WITH_AUTO_REFRESH",
     "telemetry": "NOT_CONNECTED",
     "notifications": "NOT_CONNECTED",
-    "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS",
+    "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS_AND_SAFE_REPOSITORY_WORK",
     "deployment": "GITHUB_PAGES_CONFIGURED; CLEAN_NEXACARE_AND_NEXAHQ_ROUTES_PRESENT; PUBLIC_RUNTIME_NOT_VERIFIED",
     "floot": "AVAILABLE_IN_CURRENT_CONTEXT",
     "continuity_layer": "ACTIVE",
