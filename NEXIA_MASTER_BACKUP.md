@@ -234,3 +234,11 @@ State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5
 - NEXIA HQ remains the appropriate surface for command-center controls; Nexia Care is now focused on the end-user diagnostic flow.
 - PR #7 was merged into `main` as `f5858a7cd458b575862c35b03b064c13984e7de2`.
 - Repository verification confirms the correction. Fresh public-runtime verification after this patch is not yet claimed.
+
+## 22. DIAGNOSTIC SAFETY REFINEMENT — 2026-10-05
+- Research into De’Longhi Magnifica user reports indicates that the red-triangle warning can have multiple causes; it should not be presented as proof of a single fault. Recent community reports mention brew-group positioning/cleaning, grinder-related issues and other machine states.
+- Nexia Care was therefore refined so the red-triangle result explicitly avoids overconfident attribution and keeps the no-blind-purchase guardrail.
+- The low-risk first check remains the correct tray/grounds-container placement check; persistent warnings are escalated rather than turning into speculative parts advice.
+- PR #9 was merged into `main` as `f7e392564ddc19afaa14fe686de00730380eb38c`.
+- Evidence boundary preserved: community reports are demand/diagnostic signals, not validated product-market evidence and not a substitute for EXP-001B real-user testing.
+
