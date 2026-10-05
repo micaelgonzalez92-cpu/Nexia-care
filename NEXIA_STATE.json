@@ -1,5 +1,5 @@
 {
-  "version": 19,
+  "version": 20,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -63,11 +63,11 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Auditoría oficial del flujo Magnifica: se reforzaron café aguado/poco cremoso, surtidores obstruidos, café frío y espuma de leche con indicaciones conservadoras basadas en documentación oficial De’Longhi; se mantiene la prohibición de compra a ciegas.",
+    "last_action": "Auditoría oficial completada para CALC, fugas y alarmas/unknown: se reforzó la descalcificación según procedimiento, se añadió escalado seguro para fugas internas/abundantes y se mejoró el triage genérico sin desmontaje ni compra a ciegas.",
     "next_review": "En cada ciclo: comprobar integridad, capacidad disponible, cuello de botella, mejoras seguras y siguiente misión desbloqueable.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
     "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE",
-    "next_useful_action": "Validar estas instrucciones con usuarios reales cuando se abra la vía autorizada; continuar auditoría de CALC, fugas y alarmas sin comprar ni contactar externamente."
+    "next_useful_action": "Validar el flujo completo con usuarios reales cuando se abra la vía autorizada; preparar pruebas reproducibles de los 9 síntomas y revisar cualquier inconsistencia restante sin comprar ni contactar externamente."
   },
   "external_ops": {
     "status": "DESIGNED_NOT_CONNECTED",
