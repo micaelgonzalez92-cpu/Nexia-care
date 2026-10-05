@@ -293,3 +293,10 @@ Implemented and committed to `main`:
 **Checkpoint:** CP-2026-10-05-001. Previous state version: 23. Current state version: 24. Financial impact: €0. Human Gate unchanged: K-001.
 
 **Recovery behavior:** if a future write fails, Nexia must preserve the last known-good state, re-read the repository before retrying, avoid force-overwrites, and record the failure when possible. This layer reduces the risk of losing work across chats, sessions or partial writes; it does not eliminate the need for repository access or Git history.
+
+
+## 28. PERSISTENCE HARDENING — 2026-10-05
+
+State version **25** hardens the critical-change protocol. Every critical write must begin by reading the current repository state/head, use the current blob SHA, verify the resulting artifact, then synchronize derived artifacts and append a checkpoint event. Stale writes must be rejected rather than force-overwritten. Artifact consistency now explicitly requires BOOT to match STATE version/hash, LIVE to reflect the same operational phase, EVENT_LOG to remain append-only, and MASTER_BACKUP to declare the state version it represents.
+
+Checkpoint CP-2026-10-05-002: €0 impact; Human Gate unchanged; no external contact or spending.
