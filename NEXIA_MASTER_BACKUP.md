@@ -168,10 +168,10 @@ bfb6ed569e6e30058a3f410d7ca53e9e8ef5397d — chore: record NEXIA HQ evolution an
 5257be90bb42eafab6d1a56b2a3385e50891d844 — docs: record SLOT 3 integrity audit
 
 ## 11. CURRENT TECHNICAL NOTES
-index.html currently identifies itself as MVP 0.3 in the visible tag/report. This remains a known cleanup item, not evidence of a deployed runtime.
+index.html and NexaCare/index.html now identify themselves as MVP 0.4. The root entrypoint is synchronized with the NexaCare entrypoint.
 The mission progress bar currently reaches 3/3 when a symptom is selected; this is a visual implementation and should later be aligned with actual diagnosis completion.
-NexiaHQ/index.html loads NEXIA_STATE.json from the parent path and refreshes every 60 seconds; this is verified from repository code, not from a live browser runtime.
-Public runtime/deployment verification is still NOT VERIFIED.
+NexiaHQ/index.html loads NEXIA_STATE.json from the parent path and refreshes every 60 seconds; this is verified from repository code, not from live-runtime behavior.
+Public runtime and functional behavior are VERIFIED as of 2026-10-05 for the two public GitHub Pages paths recorded in Section 18 below.
 NEXIA_MASTER_BACKUP.md is maintained as a portable recovery snapshot and must distinguish repository facts from runtime facts.
 A SLOT 3 integrity audit was recorded in NEXIA_AUDIT_2026-10-05_SLOT3.md.
 
@@ -191,45 +191,8 @@ If this file is pasted into a new ChatGPT conversation, restore NEXIA as follows
 ## 14. CURRENT OPERATIONAL BLOCKER
 Human Gate remains active for EXP-001B: NEXIA needs one real participant with a compatible De’Longhi Magnifica to generate genuine user evidence. No authorized Reddit/email/CRM execution path is connected in the current session. This blocks external contact only; it does not block safe repository work, documentation, research, resilience or internal automation.
 
-
-## 15. INTEGRITY AUDIT UPDATE — 2026-10-05
-
-A SLOT 3 integrity audit was executed against the persistent state, memory, continuity, TimeOS, recovery backup, commands/capability documentation and repository interfaces.
-
-Verified:
-- NEXIA_STATE.json, NEXIA_MEMORY.md, NEXIA_CONTINUITY.md and TIMEOS.md are coherent on phase, EXP-001B, financial guardrails and Human Gate.
-- NEXIA Care and NEXIA HQ are present in the repository at /NexaCare/ and /NexaHQ/.
-- NexiaHQ reads NEXIA_STATE.json and refreshes periodically from repository state; this is repository-code evidence, not live-runtime evidence.
-- Public/private runtime status remains UNVERIFIED.
-- No external contact, spending, irreversible publication/deletion, or unverified deployment claim was made.
-
-Known documentation issue addressed by this audit:
-- The recovery pack must treat NexiaHQ as part of the repository state and must keep repository facts separate from runtime/hosting verification.
-
-Audit record: NEXIA_AUDIT_2026-10-05_SLOT3.md
-
-## 16. LIMITATION
-
+## 15. LIMITATION
 This file is a portable operational snapshot. It cannot literally contain ChatGPT's hidden system/developer instructions, private internal state, credentials, or unavailable conversation data. It is designed to preserve the project information needed to reconstruct and continue NEXIA safely.
-
-
-## 17. NEXACARE CODE UPDATE — 2026-10-05
-
-Verified code access was recovered for the actual NexaCare implementation. The product is currently a lightweight static HTML/JS MVP, with both the repository root `/index.html` and `/NexaCare/index.html` serving the diagnostic interface.
-
-Implemented safely and reversibly:
-- Added a dedicated symptom path for "Triángulo rojo / aviso de posos" on De’Longhi Magnifica S / ECAM21-22.110.
-- Added a first diagnostic check for correct placement of the grounds container and drip tray.
-- Added conservative guidance to avoid buying parts blindly and to escalate persistent sensor/microswitch-related warnings to service.
-- Bumped the UI label from MVP 0.3 to MVP 0.4.
-- Synchronized the root entrypoint with the updated `/NexaCare/` entrypoint so the stale duplicate is not left behind.
-
-Commits:
-- `7ff0d7adf41b1e332bcf781ddefb9e523a762580` — feature update in `NexaCare/index.html`.
-- `42cdc2fd14fb8e7d86f1d46f6325e41cad0c73aa` — root `index.html` synchronization.
-- `0932f2d34c0e30bb3b4142d132fbc5da550ca695` — persistent state update.
-
-Evidence boundary remains unchanged: public evidence supports diagnostic coverage improvement but does not count as real-user validation. EXP-001B remains blocked at 0/3 participants.
 
 
 ## 18. PUBLIC RUNTIME + FUNCTIONAL VERIFICATION — 2026-10-05
