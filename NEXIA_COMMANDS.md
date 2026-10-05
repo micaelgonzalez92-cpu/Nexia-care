@@ -1,77 +1,126 @@
-# NEXIA — Comandos de sistema
+# NEXIA — COMANDOS DE SISTEMA
 
-Registro vivo de comandos útiles para consultar, dirigir y auditar NEXIA sin tener que explicar el contexto cada vez.
+Status: ACTIVE / LIVE REGISTRY
+Version: 2.0
+Updated: 2026-10-06
 
-## Cómo usarlos
-Puedes decirlos en lenguaje natural. No necesitas memorizar una sintaxis exacta.
+## 1. COMMAND PRINCIPLE
 
-### Estado y control
-- **NEXIA, estado** — estado global: misión, experimento activo, capital, ingresos, beneficio, usuarios, bloqueos y Human Gate.
-- **NEXIA, avance** — qué ha cambiado desde la última revisión y qué se ha ejecutado realmente.
-- **NEXIA, misión** — misión prioritaria y criterios de éxito/fracaso.
-- **NEXIA, siguiente** — siguiente acción útil de mayor prioridad que pueda ejecutarse ahora.
-- **NEXIA, bloqueos** — bloqueos actuales, dependencia y qué los desbloquea.
-- **NEXIA, decisiones** — decisiones que requieren intervención de Kael, separadas de lo que NEXIA puede ejecutar sola.
-- **NEXIA, gates** — cola completa de Human Gates paralelos, prioridad, estado y acción requerida.
+This is the canonical command registry. It is continuously maintained in the persistent Core.
 
-### Autoridad, sincronización y auditoría
-- **NEXIA, autoridad** — clasifica una acción como GREEN/YELLOW/RED y explica qué autorización necesita.
-- **NEXIA, sincronización** — estado de consistencia entre STATE y artefactos derivados; nunca afirma sincronización sin verificación.
-- **NEXIA, auditoría** — busca inconsistencias, afirmaciones no verificadas, automatizaciones ficticias, datos obsoletos y trabajo duplicado.
-- **NEXIA, decisiones** — consulta el Decision Log antes de repetir una investigación.
-- **NEXIA, autorización [acción]** — prepara el contrato de autorización: hipótesis, acción, coste, métrica, éxito, fracaso, riesgo, información y stop/rollback.
-- **NEXIA, verifica [acción]** — comprueba evidencia de ejecución antes de marcarla como completada.
+NEXIA should proactively state the **COMANDO ÓPTIMO** before the user needs to choose one, based on current state, blocker, authority, risk and expected information/value gain.
 
-### Economía y riesgo
-- **NEXIA, economía** — ingresos, costes, margen, beneficio, capital disponible y economía de los experimentos activos.
-- **NEXIA, riesgo** — riesgos abiertos, probabilidad/impacto cualitativos, límites y mitigaciones.
-- **NEXIA, gate** — Human Gate: gastos, compromisos o acciones irreversibles pendientes de aprobación.
-- **NEXIA, costes** — desglose de costes reales y potenciales de la siguiente acción, antes de pedir aprobación.
+Kael always retains command choice. If Kael explicitly chooses another valid command, execute that command subject to authority/security gates.
 
-### Usuario y validación
-- **NEXIA, usuario** — estado del experimento NEXIA Care con foco en usuarios reales, feedback, fricciones y siguiente paso de validación.
-- **NEXIA, validación** — evidencia acumulada, qué está demostrado, qué sigue siendo hipótesis y qué prueba falta.
-- **NEXIA, experimentos** — experimentos activos/finalizados con hipótesis, acción, métrica, resultado y aprendizaje.
+Natural language aliases are accepted; exact slash commands are the preferred compact interface.
 
-### Descubrimiento y experimentación
-- **NEXIA, radar** — oportunidades nuevas, evidencia, falsación, economía preliminar y descartes.
-- **NEXIA, mejoras** — mejoras detectadas, aplicadas, pendientes y motivo de prioridad.
-- **NEXIA, comparar [A] vs [B]** — comparación factual por demanda, margen, riesgo, capital, automatización y escalabilidad.
-- **NEXIA, falsar [oportunidad]** — intenta encontrar primero las razones por las que la oportunidad podría no funcionar.
+### Default command
+**/next** — select and execute the highest-value safe next action.
 
-### Memoria y arquitectura
-- **NEXIA, memoria** — aprendizajes, descartes, hipótesis obsoletas y trabajo ya realizado.
-- **NEXIA, arquitectura** — estado de módulos, dependencias y cambios estructurales.
-- **NEXIA, automatización** — automatizaciones activas, propósito, frecuencia, límites y duplicados.
-- **NEXIA, HQ** — estado del centro de mando y de sus fuentes de datos.
-- **NEXIA, telemetría** — métricas capturadas realmente y qué todavía no está instrumentado.
+## 2. PRIMARY COMMANDS
 
-### Ejecución
-- **NEXIA, construye [mejora]** — ejecuta si es segura, reversible y sin gasto; si requiere aprobación, prepara la acción y la deja en Human Gate.
-- **NEXIA, prepara [experimento]** — hipótesis, acción, coste, métrica, éxito, fracaso, riesgo e información obtenida.
-- **NEXIA, informe** — hechos verificados, cambios reales, bloqueos, intervención humana imprescindible y siguiente misión.
+| Command | Purpose | Default authority |
+|---|---|---|
+| **/status** | Current canonical state, mission, experiment, gates, economics and blockers. | GREEN |
+| **/next** | Determine the optimal next action and execute it when authorized. | GREEN/YELLOW/RED by action |
+| **/audit** | Audit state, consistency, evidence, duplication, capabilities, security and blockers. | GREEN |
+| **/evolve** | Find and remove safe system limitations; improve the whole machine. | GREEN/YELLOW/RED by change |
+| **/research [topic]** | Research and falsify a question/opportunity. | GREEN |
+| **/experiment [name]** | Design/review an experiment with economics and stop conditions. | GREEN |
+| **/verify [action]** | Verify whether a claimed action/result actually happened. | GREEN |
+| **/kael** | Show only current human tasks/gates, with exact action, reason, cost and risk. | GREEN |
+| **/checkpoint** | Reconcile and persist verified state; never claim success without re-read. | GREEN |
+| **/help** | Show the current complete command registry and optimal-command recommendation. | GREEN |
 
-## Contrato de respuesta
-Cada comando debe distinguir:
-- **HECHO VERIFICADO**
-- **ESTIMACIÓN**
-- **HIPÓTESIS**
-- **RECOMENDACIÓN**
+## 3. STATE / OPERATIONS
 
-Y respetar:
-- 0 € mientras sea posible.
-- Ningún gasto, contratación o acción irreversible sin aprobación de Kael.
-- No afirmar ejecución, automatización, autorización o verificación sin evidencia.
-- Toda acción externa pasa por el Authority Engine.
-- Toda operación asíncrona conserva el estado REQUESTED/RUNNING/VERIFYING hasta obtener verificación.
-- Priorizar la siguiente acción que aumente evidencia, beneficio, automatización, escalabilidad o reduzca riesgo/coste.
+- **/advance** — changes since last verified checkpoint.
+- **/mission** — current mission and success/failure criteria.
+- **/blockers** — active blockers and escape routes.
+- **/gates** — all Human Gates and their status.
+- **/decisions** — decisions and unresolved choices.
+- **/authority [action]** — classify GREEN/YELLOW/RED.
+- **/sync** — compare STATE with derived artifacts.
+- **/economics** — economics of current opportunities/experiments.
+- **/risk** — open risks and mitigations.
+- **/costs [action]** — expected and actual cost exposure.
+- **/user** — user-validation status.
+- **/validation** — evidence versus hypothesis.
+- **/experiments** — experiment ledger.
+- **/radar** — opportunity radar.
+- **/falsify [opportunity]** — actively try to disprove it.
+- **/improvements** — detected/applied/pending improvements.
+- **/memory** — durable learning and prior work.
+- **/architecture** — modules/dependencies/structural state.
+- **/automation** — automation inventory and truth status.
+- **/hq** — command-center state and sources.
+- **/telemetry** — what is actually instrumented.
+- **/report** — concise operational report.
 
-## Mantenimiento automático
-1. Añadir comandos cuando aparezca una necesidad repetida.
-2. Eliminar/fusionar redundantes.
-3. Mantener descripciones accionables.
-4. No crear comandos por estética.
-5. Registrar cambios reales en GitHub.
+## 4. EXECUTION / BUILD
 
-**Versión:** 1.3
-**Última actualización:** 2026-10-05
+- **/build [improvement]** — implement only when authorized.
+- **/prepare [experiment/action]** — prepare an execution contract.
+- **/authorize [action]** — prepare the Human Gate contract; does not imply approval.
+- **/rollback [change]** — inspect and prepare/revert according to authority.
+- **/security** — current security posture, exposed surfaces and highest-risk gaps.
+- **/protect** — run a security-hardening review and apply safe €0 protections.
+- **/commands** — show this registry and the current optimal command.
+
+## 5. COMMAND SELECTION ENGINE
+
+Before a command is needed, NEXIA should surface:
+
+**COMANDO ÓPTIMO:** /[command]
+**POR QUÉ:** [current state/blocker/opportunity]
+**ACCIÓN:** [what the command will do]
+**COSTE:** €0 / known cost
+**RIESGO:** GREEN / YELLOW / RED
+**ALTERNATIVAS:** [other valid commands]
+**CONTROL DE KAEL:** you may choose another command.
+
+If the optimal command requires a Human Gate, NEXIA must say so before asking for approval.
+
+## 6. SECURITY RULES
+
+- Commands are an interface, not an authority bypass.
+- Public access may expose documentation/read-only command discovery only.
+- Never expose secrets, credentials, tokens, private data or internal authorization material.
+- Never send an external message, spend money or make an irreversible change because a command was issued alone.
+- All material external actions pass through the Authority Engine.
+- If benefit is not concrete enough to justify exposure: **NO BENEFIT -> NO RISK**.
+- Emergency Brake overrides normal command flow when unexpected material risk appears.
+
+## 7. EXTERNAL ACCESS
+
+The canonical registry is stored in GitHub and is therefore independently recoverable from ChatGPT.
+
+Target interfaces:
+1. ChatGPT / natural language
+2. NexiaHQ
+3. Public/read-only command registry
+4. Future external NEXIA Adapter/API/CLI
+5. Future secure integrations
+
+External command interfaces must preserve the same Core, state, authority and security rules. No interface becomes a second source of truth.
+
+## 8. MAINTENANCE
+
+NEXIA must update this registry when:
+- a command becomes necessary repeatedly;
+- two commands become redundant;
+- authority changes;
+- a capability is added/removed;
+- a safer or clearer command replaces an old one.
+
+Do not create commands for aesthetics. Persist real changes in GitHub and verify them.
+
+## 9. RESPONSE CONTRACT
+
+Every material response distinguishes:
+- HECHO VERIFICADO
+- ESTIMACIÓN
+- HIPÓTESIS
+- RECOMENDACIÓN
+
+The registry itself does not claim that an external interface exists until that interface has been implemented and verified.
