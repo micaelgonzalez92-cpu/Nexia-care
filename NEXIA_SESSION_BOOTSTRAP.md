@@ -5,12 +5,13 @@ Purpose: allow any new ChatGPT conversation/client in NEXIA Core to recover the 
 
 ## START HERE
 
-1. Read this file.
+1. Read NEXIA_BOOT.json.
 2. Read NEXIA_STATE.json.
 3. Read NEXIA_MEMORY.md only if experiment/history detail is needed.
 4. Read NEXIA_CONTINUITY.md for recovery rules.
-5. Inspect recent Git commits before assuming that a task is still pending.
-6. Resume the current mission; do not restart discarded research.
+5. Compare BOOT/STATE versions and hashes; STATE is canonical.
+6. Inspect recent Git commits before assuming that a task is still pending.
+7. Resume the current mission; do not restart discarded research.
 
 ## CURRENT MACHINE STATE
 
@@ -49,3 +50,13 @@ Always distinguish HECHO VERIFICADO / ESTIMACIÓN / HIPÓTESIS / RECOMENDACIÓN.
 ## NEXT PRIORITY
 
 Continue zero-cost acquisition/validation work for EXP-001B. The bottleneck is real-world user evidence, not more UI architecture.
+
+
+## PERSISTENCE SAFETY — 2026-10-05
+
+- Canonical operational state: NEXIA_STATE.json (version 24 at checkpoint installation).
+- Startup index: NEXIA_BOOT.json.
+- Append-only critical history: NEXIA_EVENT_LOG.jsonl.
+- Transaction contract: NEXIA_PERSISTENCE_PROTOCOL.md.
+- Portable backup: NEXIA_MASTER_BACKUP.md; it must never override a newer verified STATE.
+- Recovery rule: if artifacts disagree, prefer the newest verified STATE and reconcile stale artifacts before resuming work.
