@@ -1,10 +1,10 @@
 {
   "updated_at": "2026-10-05T13:29:00+02:00",
   "status": "ACTIVE",
-  "current_cycle": "European Exception Desk — competitive falsification",
-  "current_action": "Refinar Exception Desk sobre problemas de cierre que los portales existentes no resuelven.",
-  "last_completed_action": "Radar europeo actualizado: colección/chasing genérico confirmado como categoría competitiva; excepción de cierre queda como wedge.",
-  "evidence": "VETA REFORZADA — problema recurrente y mercado activo; wedge específico y disposición a pagar aún no validados.",
+  "current_cycle": "European Exception Desk — reproducibility gate",
+  "current_action": "Preparar y ejecutar prueba humana repetible sobre 10 casos sintéticos.",
+  "last_completed_action": "Radar europeo actualizado: month-end close exceptions aparecen como cuello de botella recurrente; mortgage y property siguen más competitivos/complejos.",
+  "evidence": "VETA REFORZADA — close exceptions son problema recurrente; beneficio real de Nexia aún no demostrado.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-001B: 1 participante real pendiente. EXP-DOC-001: canal de outreach autorizado pendiente.",
   "parallel_work": [
@@ -14,7 +14,7 @@
     "Mortgage document exceptions",
     "EXP-001B Care"
   ],
-  "next_action": "Preparar prueba reproducible de tiempo humano y preguntas de descubrimiento para primer buyer autorizado.",
+  "next_action": "Ejecutar medición humana reproducible; si pasa, preparar piloto comercial sin gasto.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
