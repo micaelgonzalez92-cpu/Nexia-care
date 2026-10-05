@@ -217,7 +217,7 @@ State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5
 
 - `main` contains the NexaCare UX improvement merged as `f448ab51873c3b2e627771424bc8177bc1c34be6`.
 - Both `index.html` and `NexaCare/index.html` contain the new explicit diagnostic-result presentation.
-- `NEXIA_STATE.json` was advanced to version 13 and records the latest UX improvement as the latest safe autonomous repository action.
+- `NEXIA_STATE.json` was advanced to version 14 and records the latest public-surface correction as the latest safe autonomous repository action.
 - This repository verification does not upgrade the evidence level of EXP-001B and does not replace the previously recorded public-runtime verification.
 
 ## 20. LATEST UX VERIFICATION — 2026-10-05
@@ -226,3 +226,11 @@ State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5
 - Both `index.html` and `NexaCare/index.html` now identify as **MVP 0.5**.
 - The progress indicator was corrected so **3/3 means diagnostic completion**, not merely symptom selection.
 - This is repository verification only; no fresh public-runtime verification of this patch is claimed.
+
+## 21. PUBLIC SURFACE SEPARATION FIX — 2026-10-05
+
+- Confirmed that the public NexaCare entrypoints incorrectly contained HQ-only controls: **Misión, Informe, Economía, Mis tareas**.
+- Those controls were removed from both `index.html` and `NexaCare/index.html`, including their unused command JavaScript.
+- NEXIA HQ remains the appropriate surface for command-center controls; NexaCare is now focused on the end-user diagnostic flow.
+- PR #7 was merged into `main` as `f5858a7cd458b575862c35b03b064c13984e7de2`.
+- Repository verification confirms the correction. Fresh public-runtime verification after this patch is not yet claimed.
