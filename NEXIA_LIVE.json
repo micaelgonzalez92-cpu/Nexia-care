@@ -1,19 +1,19 @@
 {
   "updated_at": "2026-10-05T12:29:00+02:00",
   "status": "ACTIVE",
-  "current_cycle": "European Exception Desk — falsación comercial",
-  "current_action": "Comparar contabilidad, property management y mortgage; priorizar primer experimento de €0.",
-  "last_completed_action": "Decisión persistida: accounting/bookkeeping document recovery como VETA prioritaria.",
-  "evidence": "VETA PRIORITARIA — problema demostrado; negocio de Nexia aún no validado",
+  "current_cycle": "European Exception Desk — EXP-DOC-001",
+  "current_action": "Preparar experimento comercial sintético y paquete de oferta para Document Recovery.",
+  "last_completed_action": "Paquete EXP-DOC-001 creado y persistido en GitHub.",
+  "evidence": "VETA PRIORITARIA — problema demostrado; disposición a pagar NO validada",
   "capital_spent_eur": 0,
-  "human_gate": "EXP-001B sigue esperando 1 participante real",
+  "human_gate": "EXP-001B: 1 participante real pendiente. EXP-DOC-001: canal de outreach autorizado pendiente.",
   "parallel_work": [
-    "Exception Desk / Document Recovery",
+    "EXP-DOC-001 Document Recovery",
     "Property Maintenance exceptions",
     "Mortgage document exceptions",
     "EXP-001B Care"
   ],
-  "next_action": "Preparar experimento comercial sintético y definir el canal autorizado de primer contacto.",
+  "next_action": "Mantener falsación europea y, cuando exista canal autorizado, ejecutar primer contacto comercial controlado.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
