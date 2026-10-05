@@ -1,5 +1,5 @@
 {
-  "version": 12,
+  "version": 13,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -63,7 +63,7 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Implementado y fusionado en main un ajuste UX reversible de NexaCare: resultado diagnóstico explícito, modelo no identificado claramente etiquetado y refuerzo de no comprar piezas a ciegas; raíz y /NexaCare/ sincronizados.",
+    "last_action": "Implementado y fusionado en main un ajuste UX reversible de NexaCare: MVP 0.5, progreso 3/3 reservado para diagnóstico completado y raíz /NexaCare/ sincronizados.",
     "next_review": "En cada ciclo: comprobar integridad, capacidad disponible, cuello de botella, mejoras seguras y siguiente misión desbloqueable.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
     "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE"
