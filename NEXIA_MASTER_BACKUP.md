@@ -163,12 +163,14 @@ a126635eef8765ade5b8dbfe53e65324505b8d67 — policy: enforce bottleneck escape b
 
 f754091f6941c949dd30f6e29d03669f93ba9223 — feat: evolve NEXIA HQ command center
 
+f448ab51873c3b2e627771424bc8177bc1c34be6 — merge: UX clarify NexaCare diagnostic result
+
 bfb6ed569e6e30058a3f410d7ca53e9e8ef5397d — chore: record NEXIA HQ evolution and automation state
 
 5257be90bb42eafab6d1a56b2a3385e50891d844 — docs: record SLOT 3 integrity audit
 
 ## 11. CURRENT TECHNICAL NOTES
-index.html and NexaCare/index.html now identify themselves as MVP 0.4. The root entrypoint is synchronized with the NexaCare entrypoint.
+index.html and NexaCare/index.html now identify themselves as MVP 0.4. The root entrypoint is synchronized with the NexaCare entrypoint. A later UX patch was merged on 2026-10-05: the diagnostic result is now explicitly labeled as the recommended first action, unknown model is clearly surfaced, and the no-blind-purchase guardrail is reinforced. This patch is repository-verified in main; fresh public-runtime verification of the patched UX is not yet claimed.
 The mission progress bar currently reaches 3/3 when a symptom is selected; this is a visual implementation and should later be aligned with actual diagnosis completion.
 NexiaHQ/index.html loads NEXIA_STATE.json from the parent path and refreshes every 60 seconds; this is verified from repository code, not from live-runtime behavior.
 Public runtime and functional behavior are VERIFIED as of 2026-10-05 for the two public GitHub Pages paths recorded in Section 18 below.
@@ -209,3 +211,11 @@ Verified:
 Evidence boundary remains unchanged: this verifies deployment and functional behavior, but it is not real-user validation. EXP-001B remains at 0/3 participants and the Human Gate remains active.
 
 State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5d6d`.
+
+
+## 19. LATEST REPOSITORY VERIFICATION — 2026-10-05
+
+- `main` contains the NexaCare UX improvement merged as `f448ab51873c3b2e627771424bc8177bc1c34be6`.
+- Both `index.html` and `NexaCare/index.html` contain the new explicit diagnostic-result presentation.
+- `NEXIA_STATE.json` was advanced to version 12 and records the UX improvement as the latest safe autonomous repository action.
+- This repository verification does not upgrade the evidence level of EXP-001B and does not replace the previously recorded public-runtime verification.
