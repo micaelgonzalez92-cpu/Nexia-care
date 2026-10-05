@@ -340,3 +340,8 @@ Design:
 Capability boundary: this persists the durable voice policy and mappings. It does not claim a separate public voice-execution service exists.
 
 Checkpoint: CP-2026-10-06-003. Financial impact: €0. Human Gate unchanged.
+
+
+## 32. VOICE CHECKPOINT CLOSURE — 2026-10-06
+
+STATE advanced to version 31 after re-reading and verifying the voice registry, command registry, STATE, BOOT, LIVE, MASTER_BACKUP and EVENT_LOG. Checkpoint CP-2026-10-06-003 is VERIFIED_AFTER_WRITE. Financial impact: €0. Human Gate unchanged.
