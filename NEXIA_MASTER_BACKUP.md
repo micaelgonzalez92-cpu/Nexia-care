@@ -276,3 +276,20 @@ State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5
 - No state/progress/index mismatch was found in the current flow. No code change was necessary from this audit.
 - Evidence boundary: this is reproducible repository/code verification, not fresh public-runtime verification and not real-user validation. EXP-001B remains 0/3; Human Gate remains active.
 
+
+
+## 27. TRANSACTIONAL PERSISTENCE LAYER — 2026-10-05
+
+Implemented and committed to `main`:
+- `NEXIA_STATE.json` advanced to version **24** and remains the canonical operational state.
+- `NEXIA_BOOT.json` added as a minimal startup/recovery index; it is explicitly non-canonical.
+- `NEXIA_EVENT_LOG.jsonl` added as an append-only critical-event ledger, initialized with baseline event `EVT-2026-10-05-0001`.
+- `NEXIA_PERSISTENCE_PROTOCOL.md` added with the transaction sequence **OBSERVE → EXECUTE → VERIFY → CHECKPOINT → BACKUP**, mismatch handling, rollback/recovery rules and Human Gate limits.
+- `NEXIA_LIVE.json` synchronized to the new continuity layer.
+- `NEXIA_CONTINUITY.md` and `NEXIA_SESSION_BOOTSTRAP.md` updated so new sessions check BOOT + STATE and reconcile stale artifacts.
+
+**Integrity rule:** NEXIA_STATE.json is authoritative. BOOT, LIVE and MASTER BACKUP are derived/visibility artifacts. A stale backup cannot overwrite newer verified state.
+
+**Checkpoint:** CP-2026-10-05-001. Previous state version: 23. Current state version: 24. Financial impact: €0. Human Gate unchanged: K-001.
+
+**Recovery behavior:** if a future write fails, Nexia must preserve the last known-good state, re-read the repository before retrying, avoid force-overwrites, and record the failure when possible. This layer reduces the risk of losing work across chats, sessions or partial writes; it does not eliminate the need for repository access or Git history.
