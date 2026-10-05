@@ -63,8 +63,8 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Implementada como política persistente la obligación de escapar de cuellos de botella antes de permanecer inactiva.",
-    "next_review": "Ante cada bloqueo, intentar primero una ruta alternativa sin Kael y registrar resultado.",
+    "last_action": "Persistida política de resiliencia: backups verificables + defensa en profundidad + continuidad operativa orientada a mejora.",
+    "next_review": "En cada ciclo de trabajo y backup, comprobar integridad, recuperabilidad, protección y siguiente tarea de mejora segura.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
     "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE"
   },
@@ -133,5 +133,29 @@
       "no falsear evidencia"
     ],
     "decision_rule": "Si existe una ruta segura, reversible y sin gasto que reduzca o elimine el cuello de botella, ejecutarla; si no existe, documentar por qué y emitir TAREA DE KAEL."
+  },
+  "core_resilience_policy": {
+    "status": "ACTIVE_BY_POLICY",
+    "objective": "Mantener NEXIA CORE protegido, recuperable, operativo y orientado continuamente a mejorar eficiencia y resultados.",
+    "backup_principles": [
+      "Toda copia de seguridad debe preservar la capacidad de recuperación y no sustituir al estado operativo.",
+      "Priorizar defensa en profundidad: estado persistente, backups verificables, integridad del repositorio y recuperación ante corrupción o pérdida.",
+      "Verificar que los backups son legibles y corresponden al estado esperado; no asumir que una copia existe solo porque fue solicitada.",
+      "No sobrescribir la última copia conocida como válida sin conservar una ruta de recuperación.",
+      "Registrar cambios críticos, commits y estado para mantener trazabilidad."
+    ],
+    "operating_principles": [
+      "Si una ruta está bloqueada, buscar una alternativa segura antes de permanecer inactivo.",
+      "Mantener trabajo seguro, reversible y sin gasto cuando exista capacidad disponible.",
+      "Priorizar tareas que mejoren resultados, eficiencia, automatización, resiliencia y reproducibilidad.",
+      "No afirmar conexión, actividad en segundo plano o ejecución continua si no existe una automatización o herramienta que lo sostenga.",
+      "Separar siempre estado persistente, capacidad disponible y capacidad no disponible."
+    ],
+    "security_limits": [
+      "No gastar sin aprobación de Kael.",
+      "No realizar contacto externo no autorizado.",
+      "No inventar permisos, credenciales, resultados o evidencia.",
+      "No ejecutar cambios irreversibles sin el gate correspondiente."
+    ]
   }
 }
