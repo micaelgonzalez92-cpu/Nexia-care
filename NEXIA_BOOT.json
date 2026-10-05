@@ -1,14 +1,17 @@
 {
   "schema_version": 1,
-  "boot_version": 1,
-  "generated_at": "2026-10-05T14:12:00+02:00",
+  "boot_version": 2,
+  "generated_at": "2026-10-05T23:41:00+02:00",
   "project": "NEXIA CORE",
+  "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
+  "persistence_connector": "GitHub",
   "canonical_state": "NEXIA_STATE.json",
   "live_state": "NEXIA_LIVE.json",
   "learning_ledger": "NEXIA_MEMORY.md",
   "portable_backup": "NEXIA_MASTER_BACKUP.md",
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
+  "continuity_protocol": "NEXIA_CONTINUITY.md",
   "last_verified_state_version": 27,
   "last_verified_state_blob_sha": "97383c6dd4b2d56531c6550212d22f958fdd31f2",
   "phase": "VALIDACIÓN",
@@ -22,5 +25,6 @@
   "profit_eur": 0,
   "guardrail": "No spending, external contact, irreversible action or material risk without Kael approval.",
   "integrity_rule": "Boot is an index, not an independent source of truth. If it disagrees with NEXIA_STATE.json, STATE wins and BOOT is marked stale.",
-  "recovery_rule": "If STATE is unavailable or invalid, recover from the latest verified repository commit and event log; never treat a stale backup as newer than a verified state."
+  "recovery_rule": "If STATE is unavailable or invalid, recover from the latest verified repository commit and event log; never treat a stale backup as newer than a verified state.",
+  "startup_rule": "On every new NEXIA session, use the GitHub connector to inspect this repository and load BOOT -> STATE -> MEMORY/RECENT EVENTS before asking Kael to restate project state."
 }
