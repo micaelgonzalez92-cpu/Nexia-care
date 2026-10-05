@@ -105,4 +105,11 @@ Objetivo inmediato: demostrar utilidad real de NEXIA Care antes de buscar extrac
 - One result specifically references a De'Longhi Magnifica S no-water/flow problem; another references an ECAM 22.110.B problem. These are anecdotal public signals only.
 - These signals support keeping the current diagnostic coverage broad, but they do not increase EXP-001B participant count and do not validate conversion, usability, or diagnostic accuracy with real users.
 - No authorized contact channel was available, so no outreach was performed.
+## Monetization signal audit — 2026-10-05
+- Fresh web research focused on the economic layer, not diagnostic repetition.
+- De'Longhi Germany currently publishes a fixed out-of-warranty repair price of €139 for Magnifica models, including fault analysis, repair, original parts, safety check, cleaning and descaling; it also lists a €79 maintenance service. This is not Spain pricing, but it is a first-party signal that Magnifica repair/maintenance is a paid service category.
+- De'Longhi Spain currently lists a €59 De'Longhi Care service product. This confirms an active paid care/service layer in Spain, but it does not establish that NEXIA can receive a commission.
+- Spanish repair-market references found in this run include a €35 starting De'Longhi diagnosis and a €45 general appliance diagnosis; these are third-party commercial references and should be treated as market signals, not verified NEXIA economics.
+- Learning: the strongest zero-cost economic hypothesis remains diagnosis as an acquisition layer for paid repair/maintenance/replacement, but commission structure, conversion and unit economics remain unvalidated.
+- No contact, purchase, contract or irreversible action performed.
 
