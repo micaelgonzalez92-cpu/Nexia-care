@@ -1,5 +1,5 @@
 {
-  "version": 24,
+  "version": 25,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -171,6 +171,28 @@
       "transaction": "OBSERVE -> EXECUTE -> VERIFY -> CHECKPOINT -> BACKUP",
       "failure_policy": "Preserve last known-good state, re-read before retry, never force-overwrite a newer branch head.",
       "recovery_test": "A fresh session must reconstruct mission, experiment, guardrails, Human Gate, last confirmed action and next safe action from BOOT + STATE."
+    },
+    "critical_change_protocol": {
+      "enabled": true,
+      "steps": [
+        "OBSERVE",
+        "EXECUTE",
+        "VERIFY",
+        "CHECKPOINT",
+        "BACKUP"
+      ],
+      "precondition": "Read current STATE and repository head before any critical write.",
+      "postcondition": "Re-read changed artifacts and confirm version/hash alignment before reporting completion.",
+      "concurrency": "Sequential writes only per path; reject stale blob SHA updates.",
+      "rollback": "Never force overwrite; recover from last verified commit/state.",
+      "audit": "Append one event for each critical checkpoint."
+    },
+    "artifact_consistency": {
+      "boot_must_match_state_version": true,
+      "boot_must_match_state_blob_sha": true,
+      "live_must_report_same_operational_phase": true,
+      "event_log_append_only": true,
+      "master_backup_must_declare_state_version": true
     }
   },
   "automation_inventory": {
@@ -191,12 +213,11 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-05-001",
-    "previous_state_version": 23,
-    "current_state_version": 24,
-    "previous_state_blob_sha": "a24755d0853956c67e3bff39a65ce53064900fc7",
-    "event_log_last_event": "EVT-2026-10-05-0001",
-    "status": "VERIFIED_AFTER_WRITE",
+    "checkpoint_id": "CP-2026-10-05-002",
+    "previous_state_version": 24,
+    "current_state_version": 25,
+    "previous_state_blob_sha": "b33ae772ce34a4b27eb7b36abc9228e7a968ef86",
+    "status": "PENDING_DERIVED_ARTIFACT_SYNC",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true
   }
