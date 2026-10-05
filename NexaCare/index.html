@@ -42,7 +42,7 @@ function render(){
  'Necesitamos una comprobación adicional. Mejor servicio que comprar una pieza por intuición.',
  state.answers.grounds==='no'?'Retira y vuelve a colocar correctamente la bandeja de goteo y el recipiente de posos, comprueba que estén completamente insertados y reinicia la máquina. Si el aviso persiste, no fuerces ni desmontes sensores: el siguiente paso es comprobar el grupo y los microinterruptores mediante servicio técnico.':'Si el recipiente de posos y la bandeja están correctamente colocados pero el triángulo rojo sigue apareciendo, no compres piezas a ciegas. Revisa primero grupo, limpieza y posibles sensores/microinterruptores; si persiste, servicio técnico.'
  ][state.symptom];
- app.innerHTML=h+'<h2>3. Primera acción</h2><p>'+advice+'</p><p class="muted">Modelo: '+state.model+'</p><button onclick="reset()">Empezar de nuevo</button>';
+ app.innerHTML=h+'<h2>Resultado</h2><div class="status"><strong>Primera acción recomendada</strong><br>'+advice+'</div><p class="muted">Modelo: '+(state.model==='unknown'?'no identificado':state.model)+'</p><p class="muted">No compres piezas todavía. Si esta comprobación no resuelve el problema, el siguiente paso debe basarse en el síntoma observado o en servicio técnico, no en una compra a ciegas.</p><button onclick="reset()">Empezar de nuevo</button>';
 }
 function pickModel(x){state.model=x;render()}
 function pickSymptom(x){state.symptom=x;render()}
