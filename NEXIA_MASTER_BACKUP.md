@@ -266,3 +266,13 @@ State commit recording this verification: `bb7f827625836640418a11ec9be2844015db5
 - Alarm / unknown: added a conservative minimum triage covering tank/tray, grounds container, brew group and spouts, explicitly without forcing or dismantling parts.
 - Official De’Longhi documentation confirms the Magnifica family uses indicator lights for insufficient/mis-seated water tank, grounds-container state, fine grinding and descaling status, and documents the related remedies.
 - Technical evidence only; EXP-001B remains real-user validation at 0/3.
+
+## 26. REPRODUCIBLE 9-SYMPTOM FLOW AUDIT — 2026-10-05
+- Audited the current root `index.html` and `NexaCare/index.html` end-to-end at repository/code level for all 9 symptom paths.
+- Verified model selection produces 1/3 → 2/3, and the required diagnostic-check symptoms (0, 1, 2, 3, 5, 6, 8) reach 3/3 only after their single check is answered.
+- Verified symptoms 4 (no milk foam) and 7 (alarm/unknown) intentionally go directly from symptom selection to a 3/3 result because no intermediate question is required by the current design.
+- Verified the 9 symptom options map to the 9 recommendation slots, including the conditional branches for symptoms 0 and 8.
+- Verified answer state is reset on `reset()`, and the two public Nexia Care entrypoints are byte-identical at the current repository snapshot.
+- No state/progress/index mismatch was found in the current flow. No code change was necessary from this audit.
+- Evidence boundary: this is reproducible repository/code verification, not fresh public-runtime verification and not real-user validation. EXP-001B remains 0/3; Human Gate remains active.
+
