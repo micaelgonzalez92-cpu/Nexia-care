@@ -341,3 +341,55 @@ The key strategic insight is to avoid selling "AI" as a commodity. Sell a measur
 NEXIA should therefore investigate independent projects in parallel while keeping NEXIA Care alive. The objective is not to build seven businesses; it is to discover which one earns the right to receive more resources.
 
 No spending without Kael approval.
+
+
+## 2026-10-05 pain-discovery cycle — concrete evidence
+
+### HECHO VERIFICADO — administrative load is a real Spanish SME problem
+A 2026 Qonto/IO Investigación study reported that Spanish micro and small businesses can spend up to 10 days per month on administrative tasks; 55% said administrative work takes time away from strategic work. This supports the existence of the pain, but does not prove willingness to pay for a specific offer.
+
+### HECHO VERIFICADO — quote/invoice workflow is visibly fragmented
+A recent small-business discussion describes the quote-to-payment process as fragmented across Word/Excel, PDF, email/WhatsApp, manual follow-up, payment details and invoicing. A separate service-business discussion reports owners spending 20–30 minutes formatting a quote/invoice before sending it through WhatsApp, while explicitly questioning whether customers would pay for a solution. These are direct problem signals, not validated demand.
+
+### HECHO VERIFICADO — automation targets match the pain
+A September 2026 Spanish SME study reported that administrative-process automation and report preparation were among the highest-potential AI use cases, while adopted firms reported measurable weekly time savings. This strengthens the workflow-automation thesis but still does not establish a paid niche.
+
+### HECHO VERIFICADO — competitive intelligence has an unmet small-business signal
+A 2026 small-business discussion reports that competitive research can take roughly an hour of manual searching and that enterprise tools feel too expensive for small operators. The author describes difficulty extracting useful positioning/pricing/content gaps. This is a credible signal for PROJECT C, but the discussion does not prove payment.
+
+## Current falsification result
+
+### PROJECT B — SME AI Operations
+**Best concrete wedge to test:** lead/request intake → structured quote draft → follow-up reminder for service SMEs that receive requests through WhatsApp/email.
+
+Why this wedge is preferable to generic AI consulting:
+- directly tied to revenue and response speed;
+- repetitive and rule-based;
+- fragmented across channels;
+- can be demonstrated without paid infrastructure;
+- can be sold as an outcome rather than as "AI".
+
+**Current evidence level:** SIGNAL / VETA candidate, not validated.
+
+**Primary falsification question:** will a real service-business owner provide a real workflow example and show willingness to pay for removing it?
+
+### PROJECT C — Business Intelligence Packs
+**Best concrete wedge to test:** fixed competitor price/offer map for one local service vertical, delivered as a decision-ready one-page pack.
+
+**Current evidence level:** SIGNAL.
+
+**Primary falsification question:** will an owner pay for a current competitor map instead of doing a quick Google search themselves?
+
+### PROJECT D — Website QA / Conversion
+The market signal remains credible, but current evidence is less direct than B and C. D should remain a lower-priority parallel test until a concrete owner pain or broken-flow example is found.
+
+## Next zero-cost experiments
+
+1. **B1 — workflow teardown:** identify 5 Spanish service businesses with public evidence of quote/contact workflows; map the likely manual steps without contacting them.
+2. **C1 — intelligence sample:** create one public-evidence competitor map for a narrow local service category and calculate delivery time/evidence density.
+3. **D1 — defect discovery:** find 5 public small-business websites with objectively testable conversion/UX defects; quantify whether a fixed audit would reveal actionable value.
+4. **Care parallel:** keep EXP-001B ready; do not let the external-contact gate stop independent research.
+
+## Decision rule after this cycle
+
+No project gets promoted to VALIDATED from market research alone. Promotion requires a real buyer signal and then a commercial result. The current portfolio remains €0 spend.
