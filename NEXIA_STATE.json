@@ -1,5 +1,5 @@
 {
-  "version": 22,
+  "version": 23,
   "updated_at": "2026-10-05",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -63,11 +63,11 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "Escaneo público de señales ejecutado el 2026-10-05 a coste 0: se revalidaron casos recientes de Magnifica S con molienda reducida, poco flujo/café débil, no molienda y fallos de descalcificación. Se confirma que siguen existiendo candidatos públicos compatibles con EXP-001B, pero sin usuario participante ni contacto externo.",
+    "last_action": "Ciclo de priorización ejecutado el 2026-10-05: se incorpora como objetivo operativo un timebox de 30 días hacia >=1.000 EUR de beneficio neto mensual, manteniendo EXP-001B como validación activa y exigiendo vías paralelas de monetización/falsación para no depender de un único canal.",
     "next_review": "En cada ciclo: comprobar integridad, capacidad disponible, cuello de botella, mejoras seguras y siguiente misión desbloqueable.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
     "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE",
-    "next_useful_action": "Buscar una vía autorizada para el primer usuario real; mientras tanto, conservar cobertura técnica y convertir nuevas señales públicas en hipótesis, no en evidencia de validación."
+    "next_useful_action": "Trabajar en paralelo en tres frentes: desbloquear el primer usuario real para EXP-001B, buscar rutas de monetización de 0 EUR y bajo riesgo que puedan producir ingresos antes, y mejorar Core/HQ/Care solo cuando aumenten probabilidad de evidencia, conversión, margen, automatización o escalabilidad."
   },
   "external_ops": {
     "status": "DESIGNED_NOT_CONNECTED",
@@ -167,5 +167,15 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Buscar una vía autorizada para el primer usuario real; mientras tanto, mantener EXP-001B preparado y convertir nuevas señales públicas en hipótesis, no en evidencia de validación."
+  "next_useful_action": "Prioridad máxima: acelerar hacia ingresos reales y escalables dentro del timebox de 30 días; en paralelo desbloquear el primer usuario de EXP-001B, explorar rutas alternativas de monetización a coste 0 y mantener mejoras seguras de NEXIA Core/HQ/Care.",
+  "revenue_objective": {
+    "primary_target_eur_net_monthly": 1000,
+    "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
+    "timebox_days": 30,
+    "clock_basis": "desde el inicio efectivo del proyecto; fecha exacta de inicio aún no consta de forma verificable en el estado persistente",
+    "status": "ACTIVE",
+    "rule": "Priorizar generación de ingresos validable y escalable, sin sacrificar evidencia ni gastar sin aprobación.",
+    "milestone_policy": "Al alcanzar >=1000 EUR netos mensuales de forma demostrable y sostenible, elevar el objetivo y escalar.",
+    "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
+  }
 }
