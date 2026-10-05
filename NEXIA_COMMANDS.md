@@ -1,7 +1,7 @@
 # NEXIA — COMANDOS DE SISTEMA
 
 Status: ACTIVE / LIVE REGISTRY
-Version: 2.0
+Version: 2.1
 Updated: 2026-10-06
 
 ## 1. COMMAND PRINCIPLE
