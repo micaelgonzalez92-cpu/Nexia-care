@@ -66,3 +66,17 @@ La oportunidad más prometedora para una primera monetización de Repair/Replace
 
 ### Próximo dato de mayor valor
 Obtener precios verificables de servicio técnico y mapear síntomas concretos a causas/recambios con suficiente confianza. Sin esos datos, no se establece todavía un umbral económico definitivo ni se declara economía validada.
+
+
+## Servicio técnico — nueva evidencia pública — 2026-10-06
+
+- **HECHO VERIFICADO:** la página oficial De'Longhi para ECAM22.110.B ofrece acceso a chat, teléfono, formulario y centros de servicio autorizados, pero en la información pública consultada no publica una tarifa de reparación para este modelo. citeturn0search2
+- **HECHO VERIFICADO:** un taller independiente especializado en De'Longhi/Magnifica (Sator Electrónica, Alicante) confirma diagnóstico técnico y reparación, pero no publica una tarifa cerrada en la página consultada. citeturn1search0
+- **SEÑAL / NO VALIDADA:** un servicio técnico independiente en Tenerife publica referencias orientativas desde 35 € de diagnóstico, 65 € de junta de grupo, 110 € de bomba, 75 € de sensor y 120 € de molinillo. No se consideran precios operativos para NEXIA porque son de otro proveedor, otra zona y no están confirmados para ECAM22.110.B. citeturn1search4
+- **SEÑAL / NO VALIDADA:** una fuente secundaria afirma un rango aproximado de 80–150 € para determinadas averías De'Longhi fuera de garantía, pero no es tarifa oficial y no se utilizará como umbral. citeturn1search7
+
+### Lectura económica actual
+Con reacondicionado oficial observado a 224,90 € y nuevo a 329,90 €, el diferencial nominal es 105 €. citeturn0search10turn0search11 La evidencia disponible sugiere que una reparación de componentes relativamente baratos puede tener espacio económico, pero **todavía no existe un precio de servicio verificable específico del modelo** que permita calcular beneficio neto o un umbral de reparación fiable.
+
+### Próximo dato de mayor valor
+Mapear 3–5 síntomas principales de NEXIA Care a causas y recambios compatibles, priorizando únicamente relaciones respaldadas por documentación/manuales o compatibilidad explícita del proveedor. Después calcular escenarios conservadores sin convertirlos en hechos.
