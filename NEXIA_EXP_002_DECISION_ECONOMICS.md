@@ -1,7 +1,7 @@
 # EXP-002 — Decision Economics v1
 
 ## Estado
-- Estado: IMPLEMENTADO, PENDIENTE DE QA
+- Estado: QA FUNCIONAL COMPLETADO
 - Coste: 0 €
 - Experimento activo principal no cambia: EXP-001B
 - Alcance: NEXIA Care / flujo de diagnóstico
@@ -26,6 +26,17 @@ Porcentaje de rutas de diagnóstico que terminan en una acción económica clara
 ## Éxito
 >=80% de las rutas probadas producen una siguiente acción comprensible sin compra prematura ni precio inventado.
 
+## Resultado QA — HECHO VERIFICADO
+Browser-QA terminal completado mediante el run existente, sin lanzar un segundo run:
+- Run ID: ec697659-b3ff-423c-b682-d6c4bd00a3b7
+- Rutas probadas: 2
+- Rutas con diagnóstico completo: 2/2
+- Rutas con decisión económica clara y segura: 2/2 = 100%
+- Errores visibles: 0
+- Ruta 1: “No sale café” → REPARAR PRIMERO → SERVICIO SI PERSISTE
+- Ruta 2: “Fuga de agua” → DIAGNÓSTICO → SERVICIO / REPARACIÓN
+- En ambas rutas se evitó recomendar compra de piezas mientras la causa era incierta.
+
 ## Fracaso
 - recomendación económica ambigua;
 - compra sugerida sin causa suficientemente identificada;
@@ -35,11 +46,14 @@ Porcentaje de rutas de diagnóstico que terminan en una acción económica clara
 ## Riesgo
 Bajo: cambio reversible, sin gasto, sin contacto externo y sin compromiso comercial.
 
-## Información buscada
-- qué síntomas pueden pasar directamente a mantenimiento;
-- cuáles requieren diagnóstico técnico;
-- cuáles justifican comparar reparación frente a reacondicionado/sustitución;
-- dónde hace falta más evidencia antes de monetizar.
+## Información obtenida
+- La capa económica cambia de ruta según el síntoma en lugar de aplicar una monetización única.
+- Las comprobaciones de bajo coste se priorizan antes de una compra.
+- La decisión “Repair/Service” queda separada del diagnóstico inicial.
+- El flujo es funcionalmente coherente en las dos rutas probadas.
 
-## Estado de evidencia
-La implementación existe en GitHub. La validación funcional depende del browser-QA ya abierto. No se declara éxito hasta disponer de resultado terminal verificable.
+## Limitación de evidencia
+El resultado 100% corresponde a una muestra de 2 rutas, no a todos los síntomas del producto ni a usuarios reales. Por tanto, EXP-002 queda funcionalmente validado para estas rutas, pero no constituye evidencia de conversión, utilidad con usuarios reales ni rentabilidad.
+
+## Siguiente acción
+Mantener EXP-001B como experimento principal y buscar evidencia de usuario real. En paralelo, continuar la matriz Repair/Replace sin gasto y sin repetir investigación pública de afiliación salvo que aparezca nueva evidencia.
