@@ -1,5 +1,5 @@
 # NEXIA — MASTER BACKUP / RECOVERY PACK
-Generated: 2026-10-05
+Generated: 2026-10-06
 Purpose: portable recovery snapshot for restoring NEXIA in a new ChatGPT conversation.
 
 ## 1. IDENTITY
@@ -345,3 +345,24 @@ Checkpoint: CP-2026-10-06-003. Financial impact: €0. Human Gate unchanged.
 ## 32. VOICE CHECKPOINT CLOSURE — 2026-10-06
 
 STATE advanced to version 31 after re-reading and verifying the voice registry, command registry, STATE, BOOT, LIVE, MASTER_BACKUP and EVENT_LOG. Checkpoint CP-2026-10-06-003 is VERIFIED_AFTER_WRITE. Financial impact: €0. Human Gate unchanged.
+
+## 33. MISSION-002 — REPAIR/REPLACE ECONOMIC FALSIFICATION — 2026-10-06
+
+**Canonical STATE after this checkpoint:** v34  
+**Mission:** MISSION-002 — Falsación económica Repair/Replace  
+**Financial impact:** 0 €  
+**Human Gate:** unchanged; EXP-001B remains 0/3.
+
+### Verified facts
+- De'Longhi Spain publishes an official affiliate programme and states that applicants can use affiliate networks such as AWIN or Tradedoubler, with trackable links and a 30-day cookie.
+- De'Longhi Spain currently sells De'Longhi Care at 29 €, 49 € and 59 €.
+- De'Longhi Spain directs repair/spare-part needs to authorized service centers.
+- Current De'Longhi Spain Magnifica pricing includes Magnifica S at 329 € and Magnifica Evo at 349,90 €.
+
+### Evidence boundary
+These facts establish a concrete, potentially testable monetization channel. They do **not** establish approval, commission rate, conversion, traffic requirements or positive NEXIA unit economics.
+
+### Current decision
+MISSION-002 is **SIGNAL FOUND / ECONOMICS NOT VALIDATED**.  
+Next safe action: model conservative unit economics from public data. External registration, contact or commitment remains behind the Kael Human Gate.
+
