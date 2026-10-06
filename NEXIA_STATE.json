@@ -201,7 +201,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Completar el trabajo cuantitativo Repair/Replace con datos públicos verificables y mantener EXP-001B abierta hasta obtener participantes reales; no gastar ni ejecutar contacto externo sin autorización.",
+  "next_useful_action": "Mantener EXP-001B abierta y priorizar 1 participante real; el trabajo cuantitativo Repair/Replace ya está documentado, por lo que no repetir investigación salvo que aparezca evidencia nueva. No gastar ni ejecutar contacto externo sin autorización.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
