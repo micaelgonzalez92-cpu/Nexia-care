@@ -1,5 +1,5 @@
 {
-  "version": 37,
+  "version": 38,
   "updated_at": "2026-10-06",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -26,7 +26,7 @@
     "priority": "MAX",
     "cost_eur": 0,
     "human_action_required": false,
-    "reason": "El canal DeLonghi ES está identificado; ahora hay que verificar públicamente exclusiones, base de comisión y umbral de conversión antes de pedir una acción humana."
+    "reason": "El 6% y las reglas principales del programa DeLonghi ES están verificadas públicamente; queda falsar exclusiones de producto/base de comisión y medir conversión antes de pedir una acción humana."
   },
   "human_gate": {
     "status": "WAITING",
@@ -201,7 +201,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Ejecutar la auditoría pública final del programa: exclusiones, base de comisión, EPC/AOV si existe, reglas de tráfico y umbral mínimo de conversión. No registrar ni contactar.",
+  "next_useful_action": "Falsar exclusiones de producto y base exacta de comisión; después estimar el tráfico/conversión mínimo necesario y decidir si el canal merece EXPERIMENTO.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -213,23 +213,19 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-06-007",
-    "previous_state_version": 35,
-    "current_state_version": 36,
-    "previous_state_blob_sha": "80e76ec11c10503661c689218b5f3498acca4548",
+    "checkpoint_id": "CP-2026-10-06-008",
+    "previous_state_version": 37,
+    "current_state_version": 38,
+    "previous_state_blob_sha": "d20878ac5158183c69206d387ec5ce5484e5d70e",
     "status": "VERIFIED_AFTER_WRITE",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
     "verified_artifacts": [
       "NEXIA_STATE.json",
-      "NEXIA_MEMORY.md",
-      "NEXIA_BOOT.json",
-      "NEXIA_LIVE.json",
-      "NEXIA_EVENT_LOG.jsonl",
-      "NEXIA_MASTER_BACKUP.md"
+      "NEXIA_BOOT.json"
     ],
-    "note": "All persistence artifacts re-read after MISSION-002 economic research. No spending, contact, registration or commitment.",
-    "verified_at": "2026-10-06T02:45:00+02:00"
+    "note": "MISSION-003 public audit completed. 6% commission and core programme rules verified; cookie-window discrepancy identified (official DeLonghi 30 days vs Tradedoubler 7 days). No spending, contact, registration or commitment.",
+    "verified_at": "2026-10-06T23:50:00+02:00"
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -353,26 +349,26 @@
     "next_safe_action": "Define and implement the minimum reversible worker/control-plane test architecture without spending or external commitment."
   },
   "monetization_signal_audit": {
-    "mission_id": "MISSION-002",
-    "status": "CONCRETE_CHANNEL_FOUND__UNIT_ECONOMICS_PRELIMINARY",
+    "mission_id": "MISSION-003",
+    "status": "CHANNEL_VERIFIED__KEY_TERMS_CONFLICT_REQUIRES_RESOLUTION",
     "cost_eur": 0,
     "evidence_date": "2026-10-06",
     "verified_signals": [
-      "De'Longhi España mantiene un programa oficial de afiliación; la página indica registro/aprobación mediante redes como AWIN o Tradedoubler, enlaces rastreables, cookie de 30 días y comisión por ventas elegibles.",
-      "De'Longhi España vende De'Longhi Care como servicio pagado de 29/49/59 € según extensión.",
-      "De'Longhi España mantiene un localizador de centros de servicio autorizados y recomienda esos centros para reparación y recambios.",
-      "De'Longhi España muestra actualmente Magnifica S desde 329 € y Magnifica Evo desde 349,90 €, aportando contexto para sustitución.",
-      "Tradedoubler publica el programa DeLonghi ES (ID 305877) con comisión general de 6,00% para ventas, deep linking autorizado y cookie de 7 días; el programa permite contenido, comparativas de precios y enlaces de texto, y prohíbe paid search/retargeting.",
-      "Tradedoubler publica DeLonghi ES (305877) con comisión general de 6,00%, deep linking autorizado, contenido/comparativas permitidos, paid search y retargeting prohibidos, y cookie de 7 días."
+      "De'Longhi España mantiene un programa oficial de afiliación y exige registro/aprobación mediante plataformas como AWIN o Tradedoubler.",
+      "La página oficial de afiliación de De'Longhi España indica cookie de 30 días y validación de comisiones tras el periodo de devoluciones.",
+      "Tradedoubler publica el programa DeLonghi ES (ID 305877) con comisión general del 6,00%, deep linking autorizado, enlaces de texto y contenido permitidos.",
+      "Tradedoubler publica paid search y retargeting como prohibidos y keyword policy como restricted.",
+      "Tradedoubler indica que solo comisiona ventas realizadas en el sitio web de De'Longhi; ventas en otros sitios no generan comisión."
     ],
     "not_verified": [
-      "Aprobación de NEXIA en el programa.",
-      "Aplicabilidad del 6% a todos los modelos/precios sin exclusiones.",
-      "Base exacta de cálculo de la comisión en cada transacción.",
+      "Aprobación de NEXIA en AWIN/Tradedoubler.",
+      "Aplicabilidad del 6% a cada modelo/categoría y posibles exclusiones.",
+      "Base exacta sobre la que se calcula el 6% (IVA, descuentos, devoluciones u otros ajustes).",
       "Conversión real del flujo NEXIA Care.",
-      "Costes fiscales/operativos posteriores."
+      "Costes fiscales/operativos posteriores.",
+      "Por qué la página oficial de De'Longhi indica cookie de 30 días mientras Tradedoubler publica 7 días para el programa 305877; no asumir equivalencia hasta resolverlo."
     ],
-    "result": "CONCRETE CHANNEL FOUND — MISSION-003 OPEN"
+    "result": "CONCRETE CHANNEL VERIFIED — ECONOMICS PRELIMINARY — EXPERIMENT NOT YET JUSTIFIED"
   },
   "monetization_unit_economics": {
     "basis": "Scenario using public retail prices and 6% programme commission; exact commission base remains to be confirmed.",
