@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-06T02:43:00+02:00",
+  "updated_at": "2026-10-06T02:45:00+02:00",
   "status": "ACTIVE / ECONOMIC VALIDATION",
   "current_cycle": "NEXIA Core — validate zero-cost affiliate economics",
   "current_action": "Falsify public exclusions and commission basis; prepare approval-gated test.",
   "last_completed_action": "Verified DeLonghi ES Tradedoubler listing at 6% general sale commission and calculated conservative scenarios.",
-  "evidence": "STATE v35; public affiliate programme verified; 0 € spend; no external commitment.",
+  "evidence": "STATE v36; MISSION-002 concrete affiliate signal; persistence checkpoint verified; 0 € spend; no external commitment.",
   "capital_spent_eur": 0,
   "human_gate": "🔴 K-001: real-user recruitment and any external registration/approval/contact remain human-controlled.",
   "parallel_work": [
