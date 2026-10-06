@@ -113,3 +113,32 @@ Objetivo inmediato: demostrar utilidad real de NEXIA Care antes de buscar extrac
 - Learning: the strongest zero-cost economic hypothesis remains diagnosis as an acquisition layer for paid repair/maintenance/replacement, but commission structure, conversion and unit economics remain unvalidated.
 - No contact, purchase, contract or irreversible action performed.
 
+
+
+## Automated memory review — 2026-10-06
+### Facts verified
+- Canonical STATE is v33, updated 2026-10-06; phase remains VALIDACIÓN.
+- EXP-001B remains BLOCKED_BY_HUMAN_REAL_WORLD_INPUT with 0/3 participants. No completed experiment is recorded; no validated economics, transactions or repeatable transactions exist.
+- Current mission in STATE remains MISSION-001: obtain the first real NEXIA Care user. The current-state fallback policy also requires parallel zero-cost monetization research when Human Gate blocks progress.
+- The repository records a recent Emergency Brake technical-contract evolution, but the independent kill switch is NOT connected and no 24/7 worker is deployed.
+- Fresh public research on 2026-10-06 found paid repair/diagnosis signals: De'Longhi Germany publishes €139 fixed-price out-of-warranty repair for Magnifica and €79 maintenance; Spanish repair references publish diagnosis/repair price points. These are market signals, not NEXIA revenue or commission evidence.
+
+### Repeated work / stale areas
+- Repeated HQ/persistence/resilience/interface work has produced infrastructure improvements, but it has not increased user evidence or revenue metrics.
+- Public problem research has been repeated enough to establish recurring symptom themes; repeating the same symptom search without a new decision question has low marginal value.
+- The old hypothesis that consumables/maintenance alone should be the primary economics is now weak and should not drive further work without new evidence.
+
+### Failures / learnings
+- EXP-001B has not progressed because public research cannot substitute for a real participant.
+- External participant acquisition remains unavailable without an authorized contact path; no outreach should be simulated.
+- The system correctly remains in zero-cost mode: no spending, contracts, purchases or irreversible external actions.
+- Learning: the next economic question is not whether repair exists, but whether NEXIA can capture value from the repair/replace decision with a concrete, accessible monetization path and positive unit economics.
+
+### Highest-value next mission
+MISSION-002 — Falsación económica Repair/Replace.
+Hypothesis: NEXIA Care can route high-intent diagnostic users toward a paid repair, maintenance or replacement outcome where a measurable monetization mechanism exists.
+Action: map public Spanish/European repair providers, service offers, affiliate/lead programs and replacement commerce; build a falsification matrix linking symptom -> likely resolution -> observed customer value -> monetization mechanism -> estimated NEXIA revenue -> required traffic/conversion.
+Cost: €0.
+Success: identify at least one concrete monetization route with observable terms and a plausible positive unit-economics case, or falsify the route and discard it.
+Failure: no accessible monetization mechanism or economics too weak to justify an experiment.
+Human gate: none for research; only required later for any external registration/contact/commitment.
