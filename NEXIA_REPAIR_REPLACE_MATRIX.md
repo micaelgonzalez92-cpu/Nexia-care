@@ -103,3 +103,36 @@ Solo después de que el flujo de diagnóstico descarte las causas simples docume
 **No validado:** frecuencia real de cada síntoma, tasa de resolución, intención de compra, conversión, comisión efectiva y beneficio.
 
 Fuentes de referencia consultadas: centro de soporte De'Longhi ECAM22.110.B y manual de instrucciones ECAM22.110/ECAM22.110.B; catálogo público de recambios compatible con ECAM22.110.B.
+
+
+## Economía por ruta — v2 — 2026-10-06
+
+### ESCENARIOS (no son beneficio NEXIA)
+Referencia de comparación: reacondicionado 224,90 € y nuevo 329,90 €.
+
+| Ruta | Coste de referencia | Diferencia frente a reacondicionado | Estado |
+|---|---:|---:|---|
+| Ajuste/mantenimiento documentado | 0 € en pieza | +224,90 € | HECHO / primera opción cuando procede |
+| Caudalímetro anunciado | 9,90 € | 215,00 € | PRECIO DE TERCERO; no implica causa |
+| Infusor anunciado | 31,99 € | 192,91 € | PRECIO DE TERCERO; no implica causa |
+| Infusor alternativo anunciado | 28,64 € | 196,26 € | PRECIO DE TERCERO; no implica causa |
+| Reacondicionado oficial | 224,90 € | 0 € | REFERENCIA pública; disponibilidad variable |
+| Nuevo ECAM22.110.B | 329,90 € | -105,00 € | REFERENCIA pública |
+
+### Inferencia operativa
+Existe una **zona económica potencial** entre recambios de bajo coste y sustitución, pero todavía no puede convertirse en una promesa de ahorro ni en una regla automática. Para que NEXIA recomiende una reparación concreta deben cumplirse simultáneamente:
+1. diagnóstico suficientemente específico;
+2. compatibilidad de pieza verificada;
+3. coste total conocido o acotado;
+4. riesgo DIY aceptable o derivación a técnico;
+5. comparación con reacondicionado/nuevo;
+6. evidencia de que el usuario realmente ejecuta la acción.
+
+### HIPÓTESIS DE MONETIZACIÓN
+La mayor oportunidad de corto plazo parece estar en **capturar la decisión**, no necesariamente en vender una pieza: si el diagnóstico consigue llevar al usuario a una acción útil, NEXIA puede después enrutar hacia recambio, servicio o sustitución según el caso. Esto sigue siendo hipótesis hasta medir usuarios reales y conversiones.
+
+### MÉTRICA QUE FALTA
+Para validar esta veta necesitamos al menos: 3 usuarios reales para EXP-001B, porcentaje que llega a una acción útil, síntomas elegidos, ruta recomendada, clic/acción comercial posterior y resultado económico real si existe.
+
+### DECISIÓN
+**VETA mantenida. No extracción. No economía validada.**
