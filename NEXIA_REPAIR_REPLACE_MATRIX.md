@@ -80,3 +80,26 @@ Con reacondicionado oficial observado a 224,90 € y nuevo a 329,90 €, el dife
 
 ### Próximo dato de mayor valor
 Mapear 3–5 síntomas principales de NEXIA Care a causas y recambios compatibles, priorizando únicamente relaciones respaldadas por documentación/manuales o compatibilidad explícita del proveedor. Después calcular escenarios conservadores sin convertirlos en hechos.
+
+
+## Mapeo inicial síntoma → causa → acción — 2026-10-06
+
+### HECHOS VERIFICADOS / documentación ECAM22.110
+1. **Café sale muy lento / gota a gota** → causa documentada: molienda demasiado fina. Acción documentada: mover el regulador de molienda un clic hacia "7" mientras funciona el molino y reevaluar tras al menos 2 cafés. 
+2. **Café no sale / sale muy poco** → el manual contempla molienda demasiado fina como causa; si persiste tras el ajuste, indica hacer pasar agua por el cappuccinador y contactar con servicio si el problema continúa. 
+3. **Café aguado / poco cremoso** → causa documentada: molienda demasiado gruesa o café inadecuado. Acción: un clic hacia una molienda más fina y reevaluar tras 2 cafés; usar café adecuado para espresso. 
+4. **Café frío** → causas documentadas: tazas sin precalentar o infusor enfriado tras 2–3 minutos. Acción: precalentar tazas y hacer un ciclo de enjuague antes de preparar. 
+5. **Leche no espuma / espuma deficiente** → causa documentada: cappuccinador sucio y, para espuma con burbujas grandes, leche no suficientemente fría/no adecuada. Acción: limpiar el cappuccinador y usar leche fría (~5 °C), preferentemente desnatada o semidesnatada.
+6. **Café no sale por uno de los surtidores** → causa documentada: surtidor obstruido. Acción: limpiar los orificios.
+
+### VALOR NEXIA
+Los seis casos anteriores permiten construir una primera capa de diagnóstico **sin vender una pieza por defecto**. En particular, los tres primeros problemas pueden tener una resolución inicial sin recambio; esto reduce riesgo de recomendación errónea y permite reservar la monetización de recambios/servicio para casos que superen el diagnóstico básico.
+
+### REGLA DE ESCALADO
+Solo después de que el flujo de diagnóstico descarte las causas simples documentadas se debe presentar una alternativa de recambio o servicio. La existencia de recambios compatibles a ~37 € para el grupo de infusión y ~25,79 € para una bomba compatible/original anunciada no demuestra que esos componentes sean la causa de un síntoma concreto. 
+
+### HIPÓTESIS DE PRIORIZACIÓN
+**Alta prioridad:** café lento/gotea, café aguado/poco cremoso, café no sale, fuga/agua, leche sin espuma. Motivo: son problemas fácilmente expresables por un usuario y permiten separar mantenimiento/ajuste de reparación.
+**No validado:** frecuencia real de cada síntoma, tasa de resolución, intención de compra, conversión, comisión efectiva y beneficio.
+
+Fuentes de referencia consultadas: centro de soporte De'Longhi ECAM22.110.B y manual de instrucciones ECAM22.110/ECAM22.110.B; catálogo público de recambios compatible con ECAM22.110.B.
