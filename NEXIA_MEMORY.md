@@ -212,3 +212,28 @@ Human gate: none for research; only required later for any external registration
 ### Next mission
 - Continue zero-cost falsification by checking programme exclusions/commission basis and designing the smallest approval-gated test.
 - Prepare a precise TAREA DE KAEL only if/when the evidence indicates registration is justified.
+
+
+## 34. MISSION-002 — CONCRETE AFFILIATE ECONOMICS SIGNAL — 2026-10-06
+
+### Facts verified
+- Tradedoubler's public directory lists DeLonghi ES (programme 305877) with a 6.00% general sale commission.
+- The programme listing allows content, price comparison, text links and deep linking; paid search and retargeting are forbidden; cookie period is 7 days.
+- De'Longhi Spain's own affiliate page confirms that applications are handled through affiliate networks such as AWIN or Tradedoubler and require approval.
+- Current De'Longhi Spain retail references: Magnifica S ECAM22.110.SB at 329 € and Magnifica Evo ECAM290.21.B at 349.90 €.
+- A simple 6% scenario gives 19.74 € and 20.99 € gross commission per sale. A conservative 6% calculation on price excluding 21% VAT gives about 16.31 € and 17.35 €.
+- At 1,000 qualified users, illustrative gross commission is about 163–210 € at 1% conversion, 489–630 € at 3%, 816–1,050 € at 5%, and 1,631–2,099 € at 10%. These are scenarios, not revenue.
+
+### Hypothesis status
+- H-MON-001 is now **CONCRETE / TESTABLE**, not merely speculative.
+- The channel exists publicly, but NEXIA eligibility, actual approval, product exclusions, commission base, conversion and net economics remain unvalidated.
+- The extraction gate is still NOT met.
+
+### Learning
+The highest-value economic evidence is now a specific Spanish affiliate programme with a published commission rate. The next unknown is no longer whether a channel exists, but whether NEXIA can qualify and generate enough conversion for worthwhile economics.
+
+### Human Gate
+No registration, contact, purchase or commitment was performed. Registration/approval remains a human-controlled external action.
+
+### Next action
+Continue zero-cost falsification of exclusions, commission basis and conversion assumptions; prepare the smallest possible approval-gated test only after the public evidence is sufficient.
