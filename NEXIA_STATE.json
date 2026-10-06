@@ -1,5 +1,5 @@
 {
-  "version": 35,
+  "version": 36,
   "updated_at": "2026-10-06",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -214,16 +214,22 @@
   },
   "persistence_checkpoint": {
     "checkpoint_id": "CP-2026-10-06-007",
-    "previous_state_version": 34,
-    "current_state_version": 35,
-    "previous_state_blob_sha": "4d188f59030471c13d1d21989516b12e17ce0561",
-    "status": "PENDING_VERIFICATION",
+    "previous_state_version": 35,
+    "current_state_version": 36,
+    "previous_state_blob_sha": "80e76ec11c10503661c689218b5f3498acca4548",
+    "status": "VERIFIED_AFTER_WRITE",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
     "verified_artifacts": [
-      "NEXIA_STATE.json"
+      "NEXIA_STATE.json",
+      "NEXIA_MEMORY.md",
+      "NEXIA_BOOT.json",
+      "NEXIA_LIVE.json",
+      "NEXIA_EVENT_LOG.jsonl",
+      "NEXIA_MASTER_BACKUP.md"
     ],
-    "note": "Zero-cost public research only. No registration, contact, purchase or commitment."
+    "note": "All persistence artifacts re-read after MISSION-002 economic research. No spending, contact, registration or commitment.",
+    "verified_at": "2026-10-06T02:45:00+02:00"
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
