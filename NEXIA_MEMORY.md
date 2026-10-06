@@ -183,3 +183,32 @@ Human gate: none for research; only required later for any external registration
 - MISSION-002 research pass: **SIGNAL FOUND / ECONOMICS NOT VALIDATED**.
 - EXP-001B remains open at **0/3 real participants**.
 - Financial impact: 0 €.
+
+
+## 34. MISSION-002 — CONCRETE AFFILIATE ECONOMICS SIGNAL — 2026-10-06
+
+### Facts verified
+- Tradedoubler's public directory lists **DeLonghi ES**, programme ID **305877**, with a **6.00% general sale commission**.
+- The same public programme listing states: deep linking authorised; content and price-comparison publishing allowed; text links allowed; paid search and retargeting forbidden; cookie period 7 days.
+- De'Longhi Spain's own affiliate page confirms that Spain has an affiliate programme and that applications are handled through networks such as AWIN or Tradedoubler, with approval required.
+- Current De'Longhi Spain retail references used for the scenario are 329 € for Magnifica S ECAM22.110.SB and 349.90 € for Magnifica Evo ECAM290.21.B.
+- At a simple 6% of displayed retail price, the gross commission would be approximately 19.74 € and 20.99 € respectively. A more conservative calculation at 6% of price excluding 21% VAT gives approximately 16.31 € and 17.35 €. The exact commission base must be confirmed from the approved programme/feed and transaction terms.
+- At 1,000 qualified NEXIA users, the illustrative gross commission range is approximately 163–210 € at 1% conversion, 489–630 € at 3%, 816–1,050 € at 5%, and 1,631–2,099 € at 10%. These are scenarios, not revenue.
+
+### Hypothesis status
+- H-MON-001 is now **CONCRETE / TESTABLE**, not merely speculative.
+- The channel itself is evidenced; NEXIA's eligibility, actual approval, conversion, exclusions and net economics remain unvalidated.
+- The extraction gate is still NOT met.
+
+### Key learning
+- The most valuable economic evidence found so far is a specific public commission rate attached to the Spanish De'Longhi programme, rather than a generic statement that affiliate marketing exists.
+- NEXIA can potentially test monetization without paid traffic because its current acquisition plan is organic/zero-cost.
+- The highest-value unknown has shifted from "does a channel exist?" to "will NEXIA be approved and can diagnostic intent produce enough conversion to make the channel worthwhile?"
+
+### Human Gate
+- Registration/approval is an external account action and therefore remains behind Kael's decision.
+- No registration, contact, payment or commitment was performed.
+
+### Next mission
+- Continue zero-cost falsification by checking programme exclusions/commission basis and designing the smallest approval-gated test.
+- Prepare a precise TAREA DE KAEL only if/when the evidence indicates registration is justified.
