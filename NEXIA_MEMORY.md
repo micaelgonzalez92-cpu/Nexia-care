@@ -142,3 +142,44 @@ Cost: €0.
 Success: identify at least one concrete monetization route with observable terms and a plausible positive unit-economics case, or falsify the route and discard it.
 Failure: no accessible monetization mechanism or economics too weak to justify an experiment.
 Human gate: none for research; only required later for any external registration/contact/commitment.
+
+
+## 33. MISSION-002 — REPAIR/REPLACE ECONOMIC FALSIFICATION — 2026-10-06
+
+### Facts verified
+- Public research was executed at zero cost; no user was contacted, no account was registered, no purchase was made and no external commitment was created.
+- De'Longhi Spain currently exposes an official affiliate programme. Its page states that publishers can apply through affiliate networks such as AWIN or Tradedoubler, receive trackable affiliate links, use a 30-day cookie and earn commission on eligible sales. This is direct evidence of an available monetization mechanism, not proof that NEXIA will be approved or earn a specific commission.
+- De'Longhi Spain currently sells De'Longhi Care at 29 €, 49 € and 59 € depending on extension length.
+- De'Longhi Spain directs customers needing repair or spare parts toward authorized service centers and maintains a service-center locator.
+- De'Longhi Spain currently lists Magnifica S at 329 € and Magnifica Evo at 349,90 €, providing a current replacement-value reference.
+- De'Longhi Spain also has a consumer referral programme (De'Longhi Together), but its eligibility is tied to existing De'Longhi customers; this is not currently treated as an available NEXIA channel.
+
+### Hypotheses
+- H-MON-001: NEXIA Care can monetize high-intent diagnostic users by routing them to an eligible De'Longhi purchase through affiliate tracking.
+- H-MON-002: Repair/maintenance referrals may have higher economic value per user than consumable-only recommendations.
+- H-MON-001 is now **strengthened but not validated**. Commission percentage, approval, conversion, traffic requirement and net profit remain unknown.
+- No validated economics should be recorded yet.
+
+### Repeated work avoided
+- No further generic symptom-search round was treated as progress.
+- The research question was narrowed to an actual monetization mechanism and observable commercial terms.
+
+### Learning
+- The biggest new evidence is not another machine symptom: it is that De'Longhi itself publishes an affiliate acquisition route in Spain.
+- Therefore MISSION-002 has moved from a purely speculative monetization hypothesis to a **concretely testable channel hypothesis**.
+- The next unknown is the economics of the channel, not whether a channel exists.
+
+### Failure / limitation
+- Affiliate commission rates are not publicly disclosed on the accessible De'Longhi Spain page.
+- Approval is required before using the programme.
+- Repair referral commission has not been found as a public, verified NEXIA-accessible programme.
+- Consequently, monetization remains unvalidated and the extraction gate is not met.
+
+### Next action
+- Build the minimum unit-economics model using public Magnifica prices and conservative commission scenarios, clearly labelled as estimates.
+- If the model shows a plausible positive range, the next human gate is optional registration/approval to the affiliate network; do not register or make commitments without Kael's explicit decision.
+
+### Experiment status
+- MISSION-002 research pass: **SIGNAL FOUND / ECONOMICS NOT VALIDATED**.
+- EXP-001B remains open at **0/3 real participants**.
+- Financial impact: 0 €.
