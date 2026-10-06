@@ -26,7 +26,7 @@
     "priority": "MAX",
     "cost_eur": 0,
     "human_action_required": false,
-    "reason": "Existe un canal de afiliación De'Longhi ES publicado en Tradedoubler con comisión general de 6%; aún hay que validar elegibilidad, exclusiones y economía real antes de cualquier registro o compromiso."
+    "reason": "Se ha encontrado un canal de afiliación DeLonghi ES públicamente listado con comisión general del 6%; aún falta validar elegibilidad, exclusiones y economía real."
   },
   "human_gate": {
     "status": "WAITING",
@@ -201,7 +201,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Falsar el canal con una prueba de elegibilidad y economía: revisar exclusiones del feed, modelar conversiones conservadoras y preparar el registro como TAREA DE KAEL; no registrarse ni comprometerse sin decisión humana.",
+  "next_useful_action": "Falsar exclusiones y base de comisión con información pública; preparar un posible registro como decisión humana posterior. Mantener EXP-001B abierta.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -216,19 +216,14 @@
     "checkpoint_id": "CP-2026-10-06-007",
     "previous_state_version": 34,
     "current_state_version": 35,
-    "previous_state_blob_sha": "4ca94ae8be911141cd4731f7aec2ebfc93c4e897",
+    "previous_state_blob_sha": "4d188f59030471c13d1d21989516b12e17ce0561",
     "status": "PENDING_VERIFICATION",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
     "verified_artifacts": [
-      "NEXIA_STATE.json",
-      "NEXIA_MEMORY.md",
-      "NEXIA_BOOT.json",
-      "NEXIA_LIVE.json",
-      "NEXIA_EVENT_LOG.jsonl",
-      "NEXIA_MASTER_BACKUP.md"
+      "NEXIA_STATE.json"
     ],
-    "note": "MISSION-002 strengthened by public Tradedoubler listing for DeLonghi ES: 6% general sale commission. No registration, contact, purchase or external commitment."
+    "note": "Zero-cost public research only. No registration, contact, purchase or commitment."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -361,7 +356,8 @@
       "De'Longhi España vende De'Longhi Care como servicio pagado de 29/49/59 € según extensión.",
       "De'Longhi España mantiene un localizador de centros de servicio autorizados y recomienda esos centros para reparación y recambios.",
       "De'Longhi España muestra actualmente Magnifica S desde 329 € y Magnifica Evo desde 349,90 €, aportando contexto para sustitución.",
-      "Tradedoubler publica el programa DeLonghi ES (ID 305877) con comisión general de 6,00% para ventas, deep linking autorizado y cookie de 7 días; el programa permite contenido, comparativas de precios y enlaces de texto, y prohíbe paid search/retargeting."
+      "Tradedoubler publica el programa DeLonghi ES (ID 305877) con comisión general de 6,00% para ventas, deep linking autorizado y cookie de 7 días; el programa permite contenido, comparativas de precios y enlaces de texto, y prohíbe paid search/retargeting.",
+      "Tradedoubler publica DeLonghi ES (305877) con comisión general de 6,00%, deep linking autorizado, contenido/comparativas permitidos, paid search y retargeting prohibidos, y cookie de 7 días."
     ],
     "not_verified": [
       "Aprobación de NEXIA en el programa.",
@@ -373,43 +369,43 @@
     "result": "La hipótesis Repair/Replace queda fortalecida como ruta experimentable, pero no validada económicamente."
   },
   "monetization_unit_economics": {
-    "basis": "Public current De'Longhi Spain retail prices; conservative 6% commission scenario.",
+    "basis": "Scenario using public retail prices and 6% programme commission; exact commission base remains to be confirmed.",
     "products": [
       {
         "model": "Magnifica S ECAM22.110.SB",
         "retail_eur": 329,
-        "commission_at_6pct_displayed_price_eur": 19.74,
-        "commission_if_calculated_ex_vat_eur": 16.31
+        "commission_6pct_eur": 19.74,
+        "commission_6pct_ex_vat_eur": 16.31
       },
       {
         "model": "Magnifica Evo ECAM290.21.B",
         "retail_eur": 349.9,
-        "commission_at_6pct_displayed_price_eur": 20.99,
-        "commission_if_calculated_ex_vat_eur": 17.35
+        "commission_6pct_eur": 20.99,
+        "commission_6pct_ex_vat_eur": 17.35
       }
     ],
     "scenario_per_1000_qualified_users": [
       {
-        "conversion": "1%",
+        "conversion_pct": 1,
         "sales": 10,
         "gross_commission_range_eur": "163.10–209.94"
       },
       {
-        "conversion": "3%",
+        "conversion_pct": 3,
         "sales": 30,
         "gross_commission_range_eur": "489.30–629.82"
       },
       {
-        "conversion": "5%",
+        "conversion_pct": 5,
         "sales": 50,
         "gross_commission_range_eur": "815.50–1049.70"
       },
       {
-        "conversion": "10%",
+        "conversion_pct": 10,
         "sales": 100,
         "gross_commission_range_eur": "1631.00–2099.40"
       }
     ],
-    "interpretation": "Because no paid acquisition is being used, these figures are gross affiliate revenue before tax, refunds, exclusions and human/operational costs. They are scenario estimates, not validated NEXIA revenue."
+    "note": "Scenarios only; not revenue."
   }
 }
