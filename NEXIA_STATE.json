@@ -1,5 +1,5 @@
 {
-  "version": 36,
+  "version": 37,
   "updated_at": "2026-10-06",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -21,12 +21,12 @@
     "target_participants": 3
   },
   "current_mission": {
-    "id": "MISSION-002",
-    "name": "Falsación económica Repair/Replace",
+    "id": "MISSION-003",
+    "name": "Falsar el canal afiliado 6% sin gasto",
     "priority": "MAX",
     "cost_eur": 0,
     "human_action_required": false,
-    "reason": "Se ha encontrado un canal de afiliación DeLonghi ES públicamente listado con comisión general del 6%; aún falta validar elegibilidad, exclusiones y economía real."
+    "reason": "El canal DeLonghi ES está identificado; ahora hay que verificar públicamente exclusiones, base de comisión y umbral de conversión antes de pedir una acción humana."
   },
   "human_gate": {
     "status": "WAITING",
@@ -201,7 +201,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Falsar exclusiones y base de comisión con información pública; preparar un posible registro como decisión humana posterior. Mantener EXP-001B abierta.",
+  "next_useful_action": "Ejecutar la auditoría pública final del programa: exclusiones, base de comisión, EPC/AOV si existe, reglas de tráfico y umbral mínimo de conversión. No registrar ni contactar.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -372,7 +372,7 @@
       "Conversión real del flujo NEXIA Care.",
       "Costes fiscales/operativos posteriores."
     ],
-    "result": "La hipótesis Repair/Replace queda fortalecida como ruta experimentable, pero no validada económicamente."
+    "result": "CONCRETE CHANNEL FOUND — MISSION-003 OPEN"
   },
   "monetization_unit_economics": {
     "basis": "Scenario using public retail prices and 6% programme commission; exact commission base remains to be confirmed.",
