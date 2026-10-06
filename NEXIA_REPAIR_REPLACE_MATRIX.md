@@ -46,3 +46,23 @@ No introducir precios de piezas, servicios ni probabilidades como hechos si no h
 
 ## Limitaciones
 No demuestra conversión, comisión efectiva, coste de adquisición ni beneficio neto. EXP-001B sigue pendiente de usuarios reales.
+
+
+## Actualización cuantitativa — 2026-10-06
+
+### Hechos verificados públicamente
+- De'Longhi ES muestra Magnifica S ECAM22.110.B nueva a 329,90 € IVA incluido. citeturn0search9
+- De'Longhi ES muestra Magnifica S ECAM22.110.B/SB/W reacondicionada a 224,90 € IVA incluido; las fichas consultadas indican falta de existencias en esas variantes y 2 años de garantía para productos renovados. citeturn0search1turn0search2turn0search4
+- Para ECAM22.110.B se encuentra un infusor original compatible anunciado a 31,99 € y un caudalímetro compatible anunciado a 9,90 €; ambos precios son de terceros y no incluyen necesariamente el coste total de envío/instalación. citeturn1search7turn1search10
+- También aparece un recambio de infusor compatible a 28,64 € IVA incluido en otro proveedor. citeturn1search3
+
+### Economía derivada — ESTIMACIÓN / no umbral operativo
+- Diferencia nominal entre nueva (329,90 €) y reacondicionada (224,90 €): 105,00 €.
+- Un infusor anunciado a 31,99 € representa aproximadamente el 30,5 % de esa diferencia, antes de envío, mano de obra y riesgo de diagnóstico incorrecto.
+- Un caudalímetro anunciado a 9,90 € representa aproximadamente el 9,4 % de esa diferencia, antes de envío, mano de obra y riesgo.
+
+### Lectura operativa
+La oportunidad más prometedora para una primera monetización de Repair/Replace no es recomendar piezas indiscriminadamente, sino **diagnóstico → identificación de causa → pieza solo cuando la causa esté suficientemente confirmada → comparación contra reacondicionado**. Los precios de terceros demuestran que existen recambios de bajo coste, pero no prueban por sí solos que una avería concreta requiera esa pieza ni que el usuario pueda repararla con seguridad.
+
+### Próximo dato de mayor valor
+Obtener precios verificables de servicio técnico y mapear síntomas concretos a causas/recambios con suficiente confianza. Sin esos datos, no se establece todavía un umbral económico definitivo ni se declara economía validada.
