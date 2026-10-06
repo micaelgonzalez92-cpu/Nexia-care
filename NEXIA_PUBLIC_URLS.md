@@ -5,18 +5,18 @@ Updated: 2026-10-05
 ## HECHO VERIFICADO
 
 The repository contains clean public route directories:
-- `/NexaCare/` — public diagnostic interface.
-- `/NexaHQ/` — public command-centre interface.
+- `/NEXIA Care/` — public diagnostic interface.
+- `/NEXIA HQ/` — public command-centre interface.
 
 Repository: `micaelgonzalez92-cpu/Nexia-care`.
 
 Recent commits explicitly created and branded these routes:
-- `d40a5669` — clean NexaCare interface route.
-- `aa3b837c` — NexaCare public route.
-- `8e49911a` — clean NexaHQ command route.
-- `904f4177` — NexaHQ public route.
-- `f3fdf6ef` — brand NexaCare interface.
-- `8a38de01` — brand NexaHQ interface.
+- `d40a5669` — clean NEXIA Care interface route.
+- `aa3b837c` — NEXIA Care public route.
+- `8e49911a` — clean NEXIA HQ command route.
+- `904f4177` — NEXIA HQ public route.
+- `f3fdf6ef` — brand NEXIA Care interface.
+- `8a38de01` — brand NEXIA HQ interface.
 
 ## IMPORTANT DISTINCTION
 
@@ -24,8 +24,8 @@ The clean **path names** are implemented, but the GitHub Pages **hostname** stil
 
 Therefore the desired end state:
 
-- NexaCare → branded route
-- NexaHQ → branded route
+- NEXIA Care → branded route
+- NEXIA HQ → branded route
 - no personal identifier in the public hostname
 
 is **not yet fully achieved**.
@@ -43,15 +43,15 @@ Keep the clean routes as the canonical product paths. Investigate zero-cost host
 
 ## RUNTIME VERIFICATION — 2026-10-05
 
-Public runtime verification completed through a live browser run after the NexaCare MVP 0.4 code update.
+Public runtime verification completed through a live browser run after the NEXIA Care MVP 0.4 code update.
 
 Verified URLs:
 - https://micaelgonzalez92-cpu.github.io/Nexia-care/
-- https://micaelgonzalez92-cpu.github.io/Nexia-care/NexaCare/
+- https://micaelgonzalez92-cpu.github.io/Nexia-care/NEXIA Care/
 
-Both served **NexaCare · MVP 0.4**.
+Both served **NEXIA Care · MVP 0.4**.
 
-Functional verification on the /NexaCare/ route:
+Functional verification on the /NEXIA Care/ route:
 - Magnifica S · ECAM21/22.110 selectable.
 - Triángulo rojo / aviso de posos selectable.
 - Step 3/3 displayed the expected check: ¿Has retirado y vuelto a colocar correctamente el recipiente de posos y la bandeja de goteo?
