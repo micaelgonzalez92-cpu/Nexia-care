@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-06T18:05:00+02:00",
+  "updated_at": "2026-10-07T00:29:17+02:00",
   "status": "ACTIVE / VALIDACIÓN",
   "current_cycle": "NEXIA Core — validate zero-cost economics and preserve continuity",
-  "current_action": "Pivotar hacia Repair/Replace y mantener EXP-001B abierta hasta obtener evidencia real; no repetir la falsación pública de afiliación sin nueva evidencia.",
-  "last_completed_action": "Checkpoint CP-2026-10-06-010: STATE v40, BOOT, LIVE and MASTER_BACKUP reconciled; Repair/Replace matrix v4 verified; no business-side effects.",
-  "evidence": "STATE v40; state SHA 98447cd14ca9f04d3674ce40a643d20dc5a5a9c2; 0 € spend; no external commitment.",
+  "current_action": "Mantener EXP-001B abierta hasta obtener evidencia real; MISSION-003 ya tiene canal público concreto y no repetir su falsación sin evidencia nueva.",
+  "last_completed_action": "Checkpoint CP-2026-10-06-010: STATE v41 y artefactos de continuidad reconciliados; sin efectos de negocio.",
+  "evidence": "STATE v41; state SHA e29dffb10930adf26e747811b2047939237d0469; 0 € spend; no external commitment.",
   "capital_spent_eur": 0,
-  "human_gate": "🔴 K-001: reclutar 1 participante real para EXP-001B; cualquier contacto/registro externo sigue bajo control humano.",
+  "human_gate": "K-001: reclutar 1 participante real para EXP-001B; cualquier contacto/registro externo sigue bajo control humano.",
   "parallel_work": [
     "EXP-001B NEXIA Care",
-    "Repair/Replace monetization matrix",
+    "MISSION-003 monetización sin gasto",
     "HQ / resilience / continuity"
   ],
-  "next_action": "Completar el trabajo cuantitativo Repair/Replace con datos públicos verificables y mantener EXP-001B abierta; no gastar ni ejecutar contacto externo sin autorización.",
+  "next_action": "Ejecutar solo trabajo seguro, reversible y sin gasto; no repetir investigación pública de afiliación salvo evidencia nueva.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica."
 }
