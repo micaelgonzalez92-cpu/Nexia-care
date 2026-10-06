@@ -1,20 +1,18 @@
 {
-  "updated_at": "2026-10-06T23:41:00+02:00",
-  "status": "ACTIVE / VOICE + SECURITY HARDENING",
-  "current_cycle": "NEXIA Core — safe voice interface and security hardening",
-  "current_action": "Continue system-wide security/interface audit; verify external interfaces before exposing execution capability.",
-  "last_completed_action": "Voice command/conversational safety layer implemented and all recovery artifacts re-read.",
-  "evidence": "STATE v31; NEXIA_COMMANDS v2.1; NEXIA_VOICE_COMMANDS v1.0; BOOT/LIVE/BACKUP/EVENT_LOG re-read.",
+  "updated_at": "2026-10-06T02:37:00+02:00",
+  "status": "ACTIVE / ECONOMIC VALIDATION",
+  "current_cycle": "NEXIA Core — zero-cost Repair/Replace monetization falsification",
+  "current_action": "Build conservative public unit-economics scenarios from the verified De'Longhi affiliate route and current product/service prices.",
+  "last_completed_action": "Verified a concrete De'Longhi Spain affiliate programme plus paid care and replacement-price signals; no external commitment.",
+  "evidence": "STATE v34; MISSION-002 public evidence verified; financial impact €0; EXP-001B remains 0/3.",
   "capital_spent_eur": 0,
-  "human_gate": "🔴 K-001: autorizar/conectar canal externo legítimo de adquisición. Además, la prueba de tiempo humano de EXP-DOC-001 requiere un operador humano.",
+  "human_gate": "🔴 K-001: real-user recruitment and any external registration/approval/contact remain human-controlled.",
   "parallel_work": [
     "EXP-001B NEXIA Care",
-    "EXP-DOC-001 Exception Desk",
-    "European opportunity falsification",
-    "Economics / alternative monetization",
+    "MISSION-002 Repair/Replace economics",
     "HQ / resilience / continuity"
   ],
-  "next_action": "Verify voice registry and synchronize recovery artifacts; continue system-wide security/interface audit.",
+  "next_action": "Build conservative unit-economics scenarios; keep affiliate registration/contact behind the human gate.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
