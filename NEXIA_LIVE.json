@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-06T02:37:00+02:00",
+  "updated_at": "2026-10-06T02:41:00+02:00",
   "status": "ACTIVE / ECONOMIC VALIDATION",
-  "current_cycle": "NEXIA Core — zero-cost Repair/Replace monetization falsification",
-  "current_action": "Build conservative public unit-economics scenarios from the verified De'Longhi affiliate route and current product/service prices.",
-  "last_completed_action": "Verified a concrete De'Longhi Spain affiliate programme plus paid care and replacement-price signals; no external commitment.",
-  "evidence": "STATE v34; MISSION-002 public evidence verified; financial impact €0; EXP-001B remains 0/3.",
+  "current_cycle": "NEXIA Core — validate zero-cost affiliate economics",
+  "current_action": "Check public programme exclusions and commission basis; prepare approval-gated registration test.",
+  "last_completed_action": "Verified DeLonghi ES Tradedoubler programme at 6% general sale commission and calculated conservative gross scenarios.",
+  "evidence": "STATE v35; public DeLonghi ES affiliate listing verified; 0 € spend; no external commitment.",
   "capital_spent_eur": 0,
   "human_gate": "🔴 K-001: real-user recruitment and any external registration/approval/contact remain human-controlled.",
   "parallel_work": [
@@ -12,7 +12,7 @@
     "MISSION-002 Repair/Replace economics",
     "HQ / resilience / continuity"
   ],
-  "next_action": "Build conservative unit-economics scenarios; keep affiliate registration/contact behind the human gate.",
+  "next_action": "Falsify exclusions/base/conversion assumptions; registration remains Kael-controlled.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel se refresca cada 15 segundos desde NEXIA_LIVE.json."
 }
