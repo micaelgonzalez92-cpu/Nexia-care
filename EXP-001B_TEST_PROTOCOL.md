@@ -62,3 +62,27 @@ Un resultado aislado no valida el producto. Buscar al menos 3 pruebas y comparar
 
 ## Human Gate
 La investigación puede descubrir casos y preparar mensajes. El contacto externo debe realizarlo Kael mediante un canal autorizado.
+
+
+## Ficha mínima de captura — lista para una primera prueba real
+Coste: €0. No requiere integración ni cuenta externa.
+
+Registrar únicamente:
+- ID participante: P01/P02/P03 (sin nombre ni datos personales innecesarios)
+- Modelo declarado
+- Síntoma inicial en palabras del participante
+- Ruta elegida en NEXIA Care
+- Primera acción propuesta
+- ¿La ejecutó sin ayuda? Sí/No
+- Resultado observado: mejoró / igual / peor / no pudo comprobar
+- Tiempo aproximado hasta la primera acción
+- ¿Necesitó rescate? Sí/No
+- Utilidad 1–5
+- Confianza 1–5
+- Punto de fricción en una frase
+
+### Regla de validez
+La prueba cuenta como evidencia de usuario solo si el participante usa el flujo sobre un problema real y el resultado se registra inmediatamente después de la acción. No contar demos, pruebas del propio equipo ni escenarios inventados como participantes.
+
+### Criterio de cierre de la primera sesión
+Con 1 participante no declarar validación. Usar el resultado para decidir la siguiente prueba y conservar EXP-001B abierta hasta completar el objetivo de 3 participantes.
