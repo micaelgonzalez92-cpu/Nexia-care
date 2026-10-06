@@ -1,27 +1,24 @@
-# NEXIA Repair/Replace Matrix
+# NEXIA Repair/Replace Matrix — v2
 
 ## Estado
 - VETA / VALIDACIÓN
-- Coste de ejecución: 0 €
-- No sustituye evidencia de usuario real.
+- Coste: 0 €
+- Objetivo: decidir reparación vs servicio vs reacondicionado vs sustitución sin recomendar gasto prematuro.
 
-## Modelo de decisión
-1. Diagnóstico
-2. Reparación DIY / recambio cuando la causa es clara y el coste es bajo
-3. Servicio técnico cuando la reparación es compleja o incierta
-4. Reacondicionado cuando reparar deja de tener sentido económico
-5. Sustitución nueva cuando el coste/riesgo de reparar no compensa
+## Evidencia pública actual
+- De'Longhi ES lista Magnifica S ECAM22.110.SB a 329,00 € y ECAM22.110.B a 329,90 €, IVA incluido.
+- De'Longhi ES muestra una Magnifica S ECAM22.110.B reacondicionada a 224,90 €, con garantía completa del fabricante; la disponibilidad puede variar.
 
-## Economía a validar
-- Precio de referencia de máquina nueva: aproximadamente 310–330 € según variante/fuente pública reciente.
-- Reacondicionado oficial observado: aproximadamente 225 €, pero la disponibilidad es variable.
-- Recambios observados: desde pocos euros hasta decenas de euros según pieza.
+## Umbral económico preliminar
+Tomando 224,90 € como referencia de alternativa reacondicionada y 329,00–329,90 € como referencia nueva, reparar solo tiene sentido si el coste total esperado de reparación (pieza + envío + servicio + riesgo de reparación fallida + tiempo relevante) queda suficientemente por debajo de la alternativa elegida.
 
-## Regla
-No recomendar compra de piezas sin causa suficientemente diagnosticada. La monetización debe seguir la decisión del usuario, no preceder al diagnóstico.
+Esto es un marco, no una cifra de decisión final: falta estimar probabilidad de éxito por síntoma y monetización real.
 
-## Próxima validación
-Obtener evidencia de usuario real con EXP-001B y medir si el diagnóstico conduce a una acción útil sin ayuda significativa.
+## Regla de producto
+Diagnóstico → decisión → monetización. Nunca compra de pieza antes de tener una causa suficientemente identificada.
+
+## Próximo experimento cuantitativo
+Para cada síntoma de NEXIA Care, estimar tres rutas: DIY/recambio, servicio y replace. Medir qué ruta maximiza valor esperado para usuario y NEXIA sin introducir recomendaciones inseguras.
 
 ## Limitaciones
-Esta matriz es un marco de trabajo. No demuestra conversión, comisión efectiva ni beneficio neto.
+No demuestra conversión, comisión efectiva, coste de adquisición ni beneficio neto. EXP-001B sigue pendiente de usuarios reales.
