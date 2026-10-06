@@ -1,5 +1,5 @@
 {
-  "version": 34,
+  "version": 35,
   "updated_at": "2026-10-06",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -26,7 +26,7 @@
     "priority": "MAX",
     "cost_eur": 0,
     "human_action_required": false,
-    "reason": "La investigación pública puede ejecutarse sin gasto ni contacto externo; el siguiente gate humano solo aparece si se decide registrar/contactar/contratar un canal."
+    "reason": "Existe un canal de afiliación De'Longhi ES publicado en Tradedoubler con comisión general de 6%; aún hay que validar elegibilidad, exclusiones y economía real antes de cualquier registro o compromiso."
   },
   "human_gate": {
     "status": "WAITING",
@@ -201,7 +201,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Validar o falsar una ruta concreta de monetización Repair/Replace sin gasto; no ampliar HQ/Care salvo que aumente evidencia, conversión, margen, automatización o escalabilidad.",
+  "next_useful_action": "Falsar el canal con una prueba de elegibilidad y economía: revisar exclusiones del feed, modelar conversiones conservadoras y preparar el registro como TAREA DE KAEL; no registrarse ni comprometerse sin decisión humana.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -213,10 +213,10 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-06-006",
-    "previous_state_version": 33,
-    "current_state_version": 34,
-    "previous_state_blob_sha": "4806990e0f3c9c8b9ea977b25b5af30eb2ef55bc",
+    "checkpoint_id": "CP-2026-10-06-007",
+    "previous_state_version": 34,
+    "current_state_version": 35,
+    "previous_state_blob_sha": "4ca94ae8be911141cd4731f7aec2ebfc93c4e897",
     "status": "PENDING_VERIFICATION",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
@@ -228,7 +228,7 @@
       "NEXIA_EVENT_LOG.jsonl",
       "NEXIA_MASTER_BACKUP.md"
     ],
-    "note": "MISSION-002 executed through public research only. No spending, external contact, registration, purchase or irreversible action."
+    "note": "MISSION-002 strengthened by public Tradedoubler listing for DeLonghi ES: 6% general sale commission. No registration, contact, purchase or external commitment."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -353,22 +353,63 @@
   },
   "monetization_signal_audit": {
     "mission_id": "MISSION-002",
-    "status": "PUBLIC_SIGNAL_FOUND__ECONOMICS_NOT_VALIDATED",
+    "status": "CONCRETE_CHANNEL_FOUND__UNIT_ECONOMICS_PRELIMINARY",
     "cost_eur": 0,
     "evidence_date": "2026-10-06",
     "verified_signals": [
       "De'Longhi España mantiene un programa oficial de afiliación; la página indica registro/aprobación mediante redes como AWIN o Tradedoubler, enlaces rastreables, cookie de 30 días y comisión por ventas elegibles.",
       "De'Longhi España vende De'Longhi Care como servicio pagado de 29/49/59 € según extensión.",
       "De'Longhi España mantiene un localizador de centros de servicio autorizados y recomienda esos centros para reparación y recambios.",
-      "De'Longhi España muestra actualmente Magnifica S desde 329 € y Magnifica Evo desde 349,90 €, aportando contexto para sustitución."
+      "De'Longhi España muestra actualmente Magnifica S desde 329 € y Magnifica Evo desde 349,90 €, aportando contexto para sustitución.",
+      "Tradedoubler publica el programa DeLonghi ES (ID 305877) con comisión general de 6,00% para ventas, deep linking autorizado y cookie de 7 días; el programa permite contenido, comparativas de precios y enlaces de texto, y prohíbe paid search/retargeting."
     ],
     "not_verified": [
-      "Porcentaje de comisión aplicable a NEXIA.",
-      "Aprobación de NEXIA en la red de afiliación.",
-      "Comisión o lead fee por reparación/mantenimiento.",
-      "Tasa de conversión de usuarios NEXIA.",
-      "Coste de adquisición y beneficio neto."
+      "Aprobación de NEXIA en el programa.",
+      "Aplicabilidad del 6% a todos los modelos/precios sin exclusiones.",
+      "Base exacta de cálculo de la comisión en cada transacción.",
+      "Conversión real del flujo NEXIA Care.",
+      "Costes fiscales/operativos posteriores."
     ],
     "result": "La hipótesis Repair/Replace queda fortalecida como ruta experimentable, pero no validada económicamente."
+  },
+  "monetization_unit_economics": {
+    "basis": "Public current De'Longhi Spain retail prices; conservative 6% commission scenario.",
+    "products": [
+      {
+        "model": "Magnifica S ECAM22.110.SB",
+        "retail_eur": 329,
+        "commission_at_6pct_displayed_price_eur": 19.74,
+        "commission_if_calculated_ex_vat_eur": 16.31
+      },
+      {
+        "model": "Magnifica Evo ECAM290.21.B",
+        "retail_eur": 349.9,
+        "commission_at_6pct_displayed_price_eur": 20.99,
+        "commission_if_calculated_ex_vat_eur": 17.35
+      }
+    ],
+    "scenario_per_1000_qualified_users": [
+      {
+        "conversion": "1%",
+        "sales": 10,
+        "gross_commission_range_eur": "163.10–209.94"
+      },
+      {
+        "conversion": "3%",
+        "sales": 30,
+        "gross_commission_range_eur": "489.30–629.82"
+      },
+      {
+        "conversion": "5%",
+        "sales": 50,
+        "gross_commission_range_eur": "815.50–1049.70"
+      },
+      {
+        "conversion": "10%",
+        "sales": 100,
+        "gross_commission_range_eur": "1631.00–2099.40"
+      }
+    ],
+    "interpretation": "Because no paid acquisition is being used, these figures are gross affiliate revenue before tax, refunds, exclusions and human/operational costs. They are scenario estimates, not validated NEXIA revenue."
   }
 }
