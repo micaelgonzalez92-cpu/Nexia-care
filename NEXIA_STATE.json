@@ -1,5 +1,5 @@
 {
-  "version": 38,
+  "version": 39,
   "updated_at": "2026-10-06",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -201,7 +201,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Falsar exclusiones de producto y base exacta de comisión; después estimar el tráfico/conversión mínimo necesario y decidir si el canal merece EXPERIMENTO.",
+  "next_useful_action": "Resolver la discrepancia de cookie (30 días en la página oficial de afiliación de De'Longhi vs 7 días en Tradedoubler 305877), confirmar exclusiones/base de comisión y después calcular el umbral de tráfico/conversión.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -213,19 +213,18 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-06-008",
-    "previous_state_version": 37,
-    "current_state_version": 38,
-    "previous_state_blob_sha": "d20878ac5158183c69206d387ec5ce5484e5d70e",
-    "status": "VERIFIED_AFTER_WRITE",
+    "checkpoint_id": "CP-2026-10-06-009",
+    "previous_state_version": 38,
+    "current_state_version": 39,
+    "previous_state_blob_sha": "0b634895763cff49da4168cd0646950f3fb64e9a",
+    "status": "PENDING_VERIFICATION",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
     "verified_artifacts": [
-      "NEXIA_STATE.json",
-      "NEXIA_BOOT.json"
+      "NEXIA_STATE.json"
     ],
-    "note": "MISSION-003 public audit completed. 6% commission and core programme rules verified; cookie-window discrepancy identified (official DeLonghi 30 days vs Tradedoubler 7 days). No spending, contact, registration or commitment.",
-    "verified_at": "2026-10-06T23:50:00+02:00"
+    "note": "Public re-audit completed for MISSION-003. 6% commission, allowed/forbidden traffic rules and DeLonghi.com-only attribution verified. Cookie discrepancy remains unresolved. No spending, contact, registration or commitment.",
+    "verified_at": "2026-10-06T02:46:00+02:00"
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -358,7 +357,9 @@
       "La página oficial de afiliación de De'Longhi España indica cookie de 30 días y validación de comisiones tras el periodo de devoluciones.",
       "Tradedoubler publica el programa DeLonghi ES (ID 305877) con comisión general del 6,00%, deep linking autorizado, enlaces de texto y contenido permitidos.",
       "Tradedoubler publica paid search y retargeting como prohibidos y keyword policy como restricted.",
-      "Tradedoubler indica que solo comisiona ventas realizadas en el sitio web de De'Longhi; ventas en otros sitios no generan comisión."
+      "Tradedoubler indica que solo comisiona ventas realizadas en el sitio web de De'Longhi; ventas en otros sitios no generan comisión.",
+      "Tradedoubler confirma que solo se comisionan ventas realizadas en DeLonghi.com; ventas realizadas en otros sitios no generan comisión.",
+      "La página oficial de afiliación de De'Longhi confirma cookie de 30 días y que las comisiones se validan tras el periodo de devoluciones."
     ],
     "not_verified": [
       "Aprobación de NEXIA en AWIN/Tradedoubler.",
@@ -366,7 +367,7 @@
       "Base exacta sobre la que se calcula el 6% (IVA, descuentos, devoluciones u otros ajustes).",
       "Conversión real del flujo NEXIA Care.",
       "Costes fiscales/operativos posteriores.",
-      "Por qué la página oficial de De'Longhi indica cookie de 30 días mientras Tradedoubler publica 7 días para el programa 305877; no asumir equivalencia hasta resolverlo."
+      "Resolución de la discrepancia entre la cookie de 30 días indicada por De'Longhi y la cookie de 7 días publicada por Tradedoubler para el programa 305877."
     ],
     "result": "CONCRETE CHANNEL VERIFIED — ECONOMICS PRELIMINARY — EXPERIMENT NOT YET JUSTIFIED"
   },
