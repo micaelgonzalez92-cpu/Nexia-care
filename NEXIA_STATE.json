@@ -1,5 +1,5 @@
 {
-  "version": 40,
+  "version": 41,
   "updated_at": "2026-10-06",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -201,7 +201,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Cerrar MISSION-003 como canal plausible con economía incompleta; mantenerlo en espera sin gasto y pivotar el trabajo de valor hacia la matriz Repair/Replace y la validación EXP-001B. La resolución final de términos internos de afiliación queda pendiente solo de acceso/aprobación al programa.",
+  "next_useful_action": "Completar el trabajo cuantitativo Repair/Replace con datos públicos verificables y mantener EXP-001B abierta hasta obtener participantes reales; no gastar ni ejecutar contacto externo sin autorización.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -214,16 +214,21 @@
   },
   "persistence_checkpoint": {
     "checkpoint_id": "CP-2026-10-06-010",
-    "previous_state_version": 39,
-    "current_state_version": 40,
-    "status": "PENDING_VERIFICATION",
+    "previous_state_version": 40,
+    "current_state_version": 41,
+    "status": "VERIFIED_AFTER_WRITE",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
     "verified_artifacts": [
-      "NEXIA_STATE.json"
+      "NEXIA_STATE.json",
+      "NEXIA_BOOT.json",
+      "NEXIA_LIVE.json",
+      "NEXIA_MASTER_BACKUP.md",
+      "NEXIA_EVENT_LOG.jsonl",
+      "NEXIA_REPAIR_REPLACE_MATRIX.md"
     ],
-    "note": "Último intento público acotado completado. No se encontró evidencia pública nueva que resuelva base/exclusiones del programa DeLonghi ES; la discrepancia de cookie 30 días (oficial DeLonghi) vs 7 días (Tradedoubler ES 305877) permanece. No gasto, registro, contacto ni compromiso.",
-    "verified_at": "2026-10-06T13:27:00+02:00"
+    "note": "Checkpoint ejecutado tras reconciliar STATE v40 con BOOT/LIVE/BACKUP y verificar la matriz Repair/Replace v4. No hubo gasto, contacto externo, registro, compra ni compromiso irreversible.",
+    "verified_at": "2026-10-06T18:05:00+02:00"
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
