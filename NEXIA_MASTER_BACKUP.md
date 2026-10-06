@@ -366,3 +366,16 @@ These facts establish a concrete, potentially testable monetization channel. The
 MISSION-002 is **SIGNAL FOUND / ECONOMICS NOT VALIDATED**.  
 Next safe action: model conservative unit economics from public data. External registration, contact or commitment remains behind the Kael Human Gate.
 
+
+
+## 34. MISSION-002 — CONCRETE AFFILIATE ECONOMICS SIGNAL — 2026-10-06
+
+- Tradedoubler public directory lists **DeLonghi ES (305877)** with **6.00% general sale commission**.
+- Deep linking, content and price comparison are allowed; paid search and retargeting are forbidden; cookie period is 7 days.
+- Current retail references: Magnifica S ECAM22.110.SB = 329 €; Magnifica Evo ECAM290.21.B = 349.90 €.
+- Illustrative 6% gross commission per sale: 19.74 € / 20.99 €. Conservative ex-VAT 6% scenario: 16.31 € / 17.35 €.
+- At 1,000 qualified users, illustrative gross range is ~163–210 € at 1% conversion, ~489–630 € at 3%, ~816–1,050 € at 5%, and ~1,631–2,099 € at 10%.
+- These are estimates, not NEXIA revenue. Approval, actual commission base, product exclusions, conversion and net economics remain unvalidated.
+- **Canonical STATE:** v35.
+- **Financial impact:** 0 €.
+- **Human Gate:** unchanged; external registration/approval remains Kael-controlled.
