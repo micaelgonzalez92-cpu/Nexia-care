@@ -1,62 +1,54 @@
 # NEXIA — PUBLIC URL / IDENTITY MAP
 
-Updated: 2026-10-05
+Updated: 2026-10-06
 
-## HECHO VERIFICADO
+## HECHO VERIFICADO — REPOSITORIO
 
-The repository contains clean public route directories:
-- `/NEXIA Care/` — public diagnostic interface.
-- `/NEXIA HQ/` — public command-centre interface.
+The current repository tree contains these public-route identifiers:
+- `/NexaCare/` — compatibility/public route for the NEXIA Care interface.
+- `/NexaHQ/` — compatibility/public route for the NEXIA HQ interface.
+- `/care/` — compatibility route redirecting to the repository root.
+- `/hq/` — compatibility route redirecting to `/hq.html`.
+- `/hq.html` — NEXIA HQ command-centre interface.
 
-Repository: `micaelgonzalez92-cpu/Nexia-care`.
+Semantic product names are canonicalized separately:
+- NEXIA Care
+- NEXIA HQ
 
-Recent commits explicitly created and branded these routes:
-- `d40a5669` — clean NEXIA Care interface route.
-- `aa3b837c` — NEXIA Care public route.
-- `8e49911a` — clean NEXIA HQ command route.
-- `904f4177` — NEXIA HQ public route.
-- `f3fdf6ef` — brand NEXIA Care interface.
-- `8a38de01` — brand NEXIA HQ interface.
+The `NexaCare/` and `NexaHQ/` directory names are legacy/compatibility technical identifiers. They must not be interpreted as the semantic brand.
+
+## ROUTE EVIDENCE
+
+Direct repository inspection on 2026-10-06 verified:
+- `NexaCare/index.html` exists and visibly brands the interface as **NEXIA Care**.
+- `NexaHQ/index.html` exists and visibly brands the interface as **NEXIA HQ**; it redirects to `../hq.html`.
+- `hq/index.html` exists and visibly brands the interface as **NEXIA HQ**; it redirects to `../hq.html`.
+- `care/index.html` exists and visibly brands the interface as **NEXIA Care**; it redirects to `../`.
 
 ## IMPORTANT DISTINCTION
 
-The clean **path names** are implemented, but the GitHub Pages **hostname** still derives from the GitHub account/repository hosting identity.
+Do not describe `/NEXIA Care/` or `/NEXIA HQ/` as current route directories: those paths are not the current repository paths inspected in this audit.
 
-Therefore the desired end state:
+The GitHub Pages hostname remains derived from the GitHub account/repository hosting identity. Removing the personal identifier from the hostname would require a different hosting identity or custom domain. No domain has been supplied or purchased, and NEXIA must not spend money without Kael approval.
 
-- NEXIA Care → branded route
-- NEXIA HQ → branded route
-- no personal identifier in the public hostname
+## RUNTIME VERIFICATION
 
-is **not yet fully achieved**.
+A fresh runtime verification of the current `/NexaCare/`, `/NexaHQ/`, `/hq/` and `/hq.html` endpoints was **not completed by this audit**. The public URL web reader available in this session could not access those GitHub Pages URLs, so no new runtime claim is made here.
 
-Removing the personal identifier from the hostname requires a different hosting identity (for example a suitable organization-owned Pages identity) or a custom domain. No domain has been supplied or purchased, and NEXIA must not spend money without Kael approval.
+Previously recorded browser evidence remains historical evidence only:
+- NEXIA Care runtime/functionality was previously tested through a live browser run.
+- NEXIA HQ `/hq/` and `/hq.html` were previously tested through live browser QA.
+- The current `/NexaHQ/` route was created after the earlier HQ route QA, so its live runtime must not be inferred from repository presence alone.
 
-## FLOOT
+## HOSTNAME
 
-No repository evidence found connecting these route commits to Floot. Floot remains unrecovered and must not be treated as the source of truth.
+Current hosting identity remains:
+`micaelgonzalez92-cpu.github.io/Nexia-care/`
+
+This is a hosting identity issue, not a semantic NEXIA naming error.
 
 ## NEXT SAFE ACTION
 
-Keep the clean routes as the canonical product paths. Investigate zero-cost hosting/domain options and current GitHub Pages configuration. Do not purchase a domain or change external ownership without a Human Gate.
+Keep compatibility paths stable until a verified migration exists. If runtime verification becomes available, verify old/current compatibility routes independently before changing any public path.
 
-
-## RUNTIME VERIFICATION — 2026-10-05
-
-Public runtime verification completed through a live browser run after the NEXIA Care MVP 0.4 code update.
-
-Verified URLs:
-- https://micaelgonzalez92-cpu.github.io/Nexia-care/
-- https://micaelgonzalez92-cpu.github.io/Nexia-care/NEXIA Care/
-
-Both served **NEXIA Care · MVP 0.4**.
-
-Functional verification on the /NEXIA Care/ route:
-- Magnifica S · ECAM21/22.110 selectable.
-- Triángulo rojo / aviso de posos selectable.
-- Step 3/3 displayed the expected check: ¿Has retirado y vuelto a colocar correctamente el recipiente de posos y la bandeja de goteo?
-- No external form, purchase or data mutation occurred.
-
-Browser verification run: d19020b5-10a5-4d2e-ac27-d28e56d1e24c.
-
-The hostname remains the GitHub account/repository hostname; branded/custom hostname remains a separate Human Gate and was not changed.
+No domain purchase, hosting transfer or irreversible route migration is authorized by this document.
