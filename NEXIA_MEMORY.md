@@ -244,3 +244,10 @@ Continue zero-cost falsification of exclusions, commission basis and conversion 
 - At €15 realized sale price, maximum contribution before packaging, channel costs, returns and prep is €8.87/unit if all 10 are sellable; if only 8 are sellable, allocated acquisition becomes €7.6625 per sellable unit and the ceiling is €7.3375.
 - Therefore the existing €15 average realized-price threshold and €10 contribution target are not jointly compatible at the same €15 average. No canonical gate was changed; interpret €10 as stretch target or have Kael explicitly revise the gate before evaluating the pilot.
 - Analysis artifact: NEXIA_EXP_RESALE_001A_UNIT_ECONOMICS_FALSIFICATION_2026-10-09.md. Cost €0. Purchase still pending; no realized sales.
+
+
+## 2026-10-09 — Reinforced operational rules R1-R5
+- Created canonical `NEXIA_OPERATIONAL_RULES.md` with the five rules supplied by Kael: recovery before action; useful action over apparent activity; end-to-end evidence; mandatory economics/falsification; explicit limited autonomy.
+- Linked the rules in canonical `NEXIA_STATE.json` v48 and `NEXIA_BOOT.json`; BOOT's state version and blob SHA were re-read and matched exactly.
+- The rules formalize, rather than widen, current authority. No spend, external contact, purchase, or business threshold change occurred. Pilot purchase remains pending Kael's payment; spend/revenue/profit remain €0.
+- Verification scope: repository artifacts were re-read after writes. This does not imply any application deployment, background worker or external automation is running.
