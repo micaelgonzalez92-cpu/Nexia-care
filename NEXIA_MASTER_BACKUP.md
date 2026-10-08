@@ -40,3 +40,20 @@ Kael approved a pilot purchase of up to 55 € + transport for 10 branded T-shir
 Financial impact at checkpoint: 0 €. Revenue: 0 €. Profit: 0 €.
 
 Derived continuity artifacts were reconciled: BOOT v3 and LIVE updated after STATE v44. Older sections remain historical snapshots and must not override canonical STATE.
+
+## 39. CURRENT CHECKPOINT ADDENDUM — 2026-10-08 — RESALE-FIRST v45
+
+Canonical operational state: **NEXIA_STATE v45**
+State SHA: **66f653d4cd7d166ab660dac93cddca5d49fe57be**
+Phase: **VALIDACIÓN**
+Primary mission: **MISSION-RESALE-001**
+Experiment: **EXP-RESALE-001 / EXP-RESALE-001A approved pending Kael payment**
+
+Checkout total verified by Kael: **61,30 € delivered**. Payment has not been executed; actual spend remains **0 €**. No additional purchase is authorized.
+
+The sourcing Human Gate documentation was corrected and re-read successfully. Intake/QC, listing and pricing preparation remain ready at €0. No physical SRC-001-01..10 ledger records are to be fabricated before receipt.
+
+Financial impact at checkpoint: **0 €**. Revenue: **0 €**. Profit: **0 €**.
+
+BOOT v3 and LIVE report STATE v45. This addendum is the latest backup checkpoint; older sections remain historical snapshots and must not override canonical NEXIA_STATE.json.
+
