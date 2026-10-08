@@ -595,3 +595,12 @@ Official AEAT:
 
 Official Seguridad Social / Importass:
 - Autónomo registration requirements and timing.
+
+## 26. IAE classification check — 2026-10-08 — €0
+
+Fresh official BOE verification confirms that **IAE epígrafe 651.2** is the existing tariff heading for **“Comercio al por menor de toda clase de prendas para el vestido y tocado”**. The 2026 BOE order applying the IAE heading in the 2026 objective-estimation tables also identifies activity 651.2 with that description. citeturn0search0turn0search1
+
+Operational interpretation: 651.2 is now a **strongly supported candidate** for the planned retail clothing activity. It is still not recorded as the final registration decision because the exact activity configuration (online-only operation, second-hand sourcing, other categories/channels and census declaration) should be checked through the AEAT activity/census assistant before filing.
+
+This verification reduces uncertainty but does **not** trigger registration, RETA, VAT-regime selection or any expenditure.
+
