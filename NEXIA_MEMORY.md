@@ -251,3 +251,9 @@ Continue zero-cost falsification of exclusions, commission basis and conversion 
 - Linked the rules in canonical `NEXIA_STATE.json` v48 and `NEXIA_BOOT.json`; BOOT's state version and blob SHA were re-read and matched exactly.
 - The rules formalize, rather than widen, current authority. No spend, external contact, purchase, or business threshold change occurred. Pilot purchase remains pending Kael's payment; spend/revenue/profit remain €0.
 - Verification scope: repository artifacts were re-read after writes. This does not imply any application deployment, background worker or external automation is running.
+
+
+## 2026-10-09 — Progress ladder added to dashboard
+- Updated `NEXIA_PROGRESS_DASHBOARD.md` to version 1.1 with six evidence-gated stages: Activity, Evidence, Validation, Extraction, Repeatability and Scale, including what each stage proves and minimum evidence to claim it.
+- Canonical STATE v50 records the ladder and current position: Activity / research evidence; own demand validation, extraction, repeatability and scale are not achieved. Public research signals are not own sales.
+- BOOT is being aligned to the exact STATE v50 blob SHA. No spend, sale, external action, deployment or runtime automation is claimed.
