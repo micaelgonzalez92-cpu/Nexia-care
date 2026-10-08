@@ -73,12 +73,14 @@ The engine must test, rather than assume, at least:
 
 AEAT states this regime applies to qualifying retail merchants and, among other conditions, generally requires more than 80% of sales to final consumers when the prior-year test applies.
 
-If applicable:
+**Critical correction for this business (official AEAT 2026):** the 2026 AEAT manual lists **used goods among the exclusions** from the recargo of equivalence. Therefore the resale of used clothing must **not** be treated as subject to recargo by default. The engine must test the exact goods and transaction facts against the current exclusion rules before registration or accounting treatment.
+
+If applicable to a transaction/activity not excluded:
 - suppliers charge VAT plus the recargo;
 - the retailer does not file ordinary output-VAT settlements for those retail operations;
 - input VAT on the activity is not deducted.
 
-This must be verified against the exact activity, customer mix and census registration before use.
+For the core second-hand clothing model, **REBU vs. general VAT treatment is the priority VAT decision; recargo is not the default path for used goods.**
 
 ### REBU
 
