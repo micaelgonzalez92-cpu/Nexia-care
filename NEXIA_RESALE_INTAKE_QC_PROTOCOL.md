@@ -67,3 +67,20 @@ INTAKE → QC → PREP → LISTING → INTEREST → OFFER → SOLD → SHIPPED �
 
 ## Regla de evidencia
 Cada afirmación comercial debe etiquetarse como HECHO VERIFICADO, ESTIMACIÓN, HIPÓTESIS o RECOMENDACIÓN.
+
+## Reception session — SRC-001-01..10
+When the approved batch arrives, execute in this order before any listing:
+1. Photograph and label the complete batch without separating evidence from its SKU.
+2. Create/confirm SRC-001-01 through SRC-001-10 and record arrival date.
+3. Match each photo set using the Photo Ingestion protocol; flag ambiguity as HOLD.
+4. Complete identity, label, size, condition and defect QC for every unit.
+5. Record measurements and preparation requirement.
+6. Record actual transport/purchase allocation and recalculate cost per sellable unit if any unit is non-sellable.
+7. Decide READY / HOLD / NO-GO before pricing.
+8. Only READY units proceed to listing preparation.
+
+### Reception stop conditions
+- CONFLICT between visual evidence and declared data: HOLD until resolved.
+- Authenticity concern: HOLD; do not list as authentic until evidence supports the claim.
+- Material undisclosed defect: record it and reassess sellability before pricing.
+- Missing evidence needed for a commercial claim: mark UNKNOWN rather than infer.
