@@ -1,8 +1,8 @@
 # NEXIA — COMANDOS DE SISTEMA
 
 Status: ACTIVE / LIVE REGISTRY
-Version: 2.1
-Updated: 2026-10-06
+Version: 2.2
+Updated: 2026-10-09
 
 ## 1. COMMAND PRINCIPLE
 
@@ -15,14 +15,15 @@ Kael always retains command choice. If Kael explicitly chooses another valid com
 Natural language aliases are accepted; exact slash commands are the preferred compact interface. Voice/conversational mappings are canonicalized in `NEXIA_VOICE_COMMANDS.md`.
 
 ### Default command
-**/next** — select and execute the highest-value safe next action.
+**/next** — select and execute a bounded batch of the highest-value safe, authorized tasks; report once after the batch, not after every micro-step.
 
 ## 2. PRIMARY COMMANDS
 
 | Command | Purpose | Default authority |
 |---|---|---|
 | **/status** | Current canonical state, mission, experiment, gates, economics and blockers. | GREEN |
-| **/next** | Determine the optimal next action and execute it when authorized. | GREEN/YELLOW/RED by action |
+| **/next** | Execute a bounded batch of the highest-value safe, authorized tasks; report once. | GREEN/YELLOW/RED by action |
+| **/batch** | Explicit batch execution: group independent tasks, verify results and deliver one consolidated report. | GREEN/YELLOW/RED by action |
 | **/audit** | Audit state, consistency, evidence, duplication, capabilities, security and blockers. | GREEN |
 | **/evolve** | Find and remove safe system limitations; improve the whole machine. | GREEN/YELLOW/RED by change |
 | **/research [topic]** | Research and falsify a question/opportunity. | GREEN |
@@ -56,6 +57,8 @@ Natural language aliases are accepted; exact slash commands are the preferred co
 - **/hq** — command-center state and sources.
 - **/telemetry** — what is actually instrumented.
 - **/report** — concise operational report.
+- **/batch** — execute one bounded batch of safe, authorized tasks; group independent work, verify outputs, stop at Human Gates, and report once.
+- Batch-first default: do not ask Kael to issue /next between internal subtasks; continue within the active turn/session until a gate, blocker, tool/runtime limit or diminishing returns.
 
 ## 4. EXECUTION / BUILD
 
@@ -105,6 +108,8 @@ Target interfaces:
 External command interfaces must preserve the same Core, state, authority and security rules. No interface becomes a second source of truth.
 
 ## 8. MAINTENANCE
+
+Batch execution protocol: **NEXIA_BATCH_EXECUTION_AND_REPORTING.md**. This reduces prompt fragmentation but does not imply an unattended worker or post-turn execution.
 
 NEXIA must update this registry when:
 - a command becomes necessary repeatedly;
