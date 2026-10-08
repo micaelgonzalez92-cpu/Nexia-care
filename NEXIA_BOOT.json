@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "boot_version": 3,
-  "generated_at": "2026-10-08T19:10:24+02:00",
+  "generated_at": "2026-10-08T21:10:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -13,7 +13,7 @@
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
   "last_verified_state_version": 45,
-  "last_verified_state_blob_sha": "66f653d4cd7d166ab660dac93cddca5d49fe57be",
+  "last_verified_state_blob_sha": "3432633f92faa3cdbe39c2c97f74812e4df38a79",
   "phase": "VALIDACIÓN",
   "active_experiment": {
     "id": "EXP-RESALE-001",
