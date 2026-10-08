@@ -78,6 +78,26 @@ No declarar proveedor ganador por precio anunciado.
 
 Proveedor ganador = mejor combinación de margen/prenda + margen/hora + rotación potencial + reproducibilidad + riesgo de merma.
 
+## Verification refresh — 2026-10-08
+
+Fresh public check performed at €0 cost:
+
+| Candidate | Current public signal | What it proves | What it does NOT prove |
+|---|---|---|---|
+| Vintage4Originals | Branded T-shirts ~10 units at €55; Grade A; VAT included; current site states pieces are reviewed individually. citeturn0search9turn0search4 | Small-lot entry price and sourcing format remain available | Sell-through, realized resale price and actual sellable rate for our operation |
+| Vintage Wholesale Spain | 10x branded premium T-shirts €110.20 (€11.02/unit); Grade B sweatshirt/jumper 10-packs €55.10 (€5.51/unit). citeturn0search1 | Higher-cost branded alternative and Grade B price point | Final landed cost, sellable rate and realized resale |
+| SP Vintage Wholesale | Adidas Mix 7kg €188.95, Grade A, plus 10 extra garments; 2–10 day delivery stated. citeturn0search0turn0search3 | Specialist-brand box exists at materially higher entry cost | Exact final piece count/sellable cost and realized resale |
+| RopaExport | Used clothing from €1.90/kg; selected vintage from €6.40/kg; Alcoy logistics base. citeturn0search6 | Strong low-cost sourcing signal for later-stage volume | Minimum practical order, composition, unit yield and sellable rate |
+
+### Updated falsification matrix
+
+1. **V4O small branded lot:** already approved as EXP-RESALE-001A. This is the lowest-capital direct test and therefore remains the primary evidence path.
+2. **Vintage Wholesale Spain:** useful control candidate. Its branded T-shirt cost is exactly 2x the V4O product component (€11.02 vs €5.50/unit) before any final transport allocation. It only becomes superior if quality/sell-through or realized prices compensate for the higher acquisition cost.
+3. **SP Vintage Adidas box:** currently not justified for purchase. The €188.95 entry price is >3x the €61.30 delivered pilot total, while exact unit yield is not yet sufficiently constrained.
+4. **RopaExport:** promising for a future volume experiment, but the €/kg signal cannot be translated into unit economics until composition, order minimum and yield are verified.
+
+**Current conclusion:** V4O remains the highest-information / lowest-capital path. The pilot should run before committing capital to the higher-cost alternatives. No second purchase is justified yet.
+
 ## Human Gate
 
 No comprar. Si la investigación mantiene economía atractiva, preparar una compra piloto concreta y pedir aprobación expresa de Kael.
