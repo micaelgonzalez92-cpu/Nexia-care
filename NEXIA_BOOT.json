@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "boot_version": 11,
+  "boot_version": 12,
   "generated_at": "2026-10-09T00:00:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
@@ -12,8 +12,8 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
-  "last_verified_state_version": 52,
-  "last_verified_state_blob_sha": "7c708bf77b49ec5e4b422e23530e5fcacfa4785f",
+  "last_verified_state_version": 53,
+  "last_verified_state_blob_sha": "72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3",
   "phase": "VALIDACIÓN",
   "active_experiment": {
     "id": "EXP-RESALE-001",
@@ -26,7 +26,7 @@
     "status": "ACTIVE"
   },
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout verificado en €61.30 entregado; pago pendiente de Kael",
-  "last_confirmed_action": "2026-10-09: STATE v52 removes the unexplained fixed €7.25 reserve; reserved_eur remains €0; readback verified.",
+  "last_confirmed_action": "2026-10-09: Readback verified NEXIA_STATE v53 blob 72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3; BOOT points to the exact canonical STATE. Full persistence sync remains incomplete: LIVE, EVENT_LOG and MASTER_BACKUP are stale; STATE checkpoint status remains WRITE_PENDING_READBACK.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -40,5 +40,6 @@
   "state_blob_sha": "72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3",
   "note": "Boot index aligned to verified NEXIA_STATE.json v52 after Kael approved removal of unexplained fixed €7.25 reserve; no spending or purchase occurred.",
   "updated_at": "2026-10-09",
-  "sync_status": "ALIGNED_TO_CANONICAL_STATE"
+  "sync_status": "ALIGNED_TO_CANONICAL_STATE",
+  "next_action": "Do not retry blocked writes immediately. Diagnose available GitHub write capability and preserve the verified STATE/BOOT pair; then reconcile stale LIVE, EVENT_LOG and MASTER_BACKUP with controlled sequential writes and readback. Commercial Human Gate remains payment by Kael."
 }
