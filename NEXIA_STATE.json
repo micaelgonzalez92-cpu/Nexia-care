@@ -1,5 +1,5 @@
 {
-  "version": 50,
+  "version": 51,
   "updated_at": "2026-10-09",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -92,7 +92,7 @@
     "financial_rule": "Purchases, ads, subscriptions and material financial actions remain Kael-controlled."
   },
   "nexia_score": {
-    "purpose": "Medir progreso por resultados reales, no por documentos, mensajes o complejidad visual.",
+    "purpose": "Track evidenced business outcomes; technical artifacts, commits, messages, task counts and automation counts never increase the score by themselves.",
     "evidence_users": 0,
     "completed_experiments": 0,
     "validated_economics": 0,
@@ -100,7 +100,11 @@
     "repeatable_transactions": 0,
     "measurable_automations": 0,
     "human_time_reduced": 0,
-    "reproducible_improvements": 0
+    "reproducible_improvements": 0,
+    "primary_metric": "Sustainable net profit after tax over a defined, reconciled period",
+    "scoring_policy": "No points for files, commits, messages, completed technical tasks or automation count. Operational indicators are separate diagnostics. Economic improvement requires dated evidence and reconciled receipts/costs; unknown telemetry stays NOT_INSTRUMENTED.",
+    "unit_economics": "Per SKU and experiment: realized proceeds excluding VAT collected, less allocated landed cost per sellable unit, fees, packaging, returns/defects, shipping subsidies, ads, other variable costs and measured labor time × explicit hourly-rate assumption; reconcile overhead and tax separately.",
+    "automation_credit": "No credit for automation count; only measured successful runs, failure rate, net human time saved and demonstrated economic impact may affect relevant metrics."
   },
   "public_interfaces": {
     "nexacare_path": null,
@@ -212,7 +216,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Continue €0 preparation while the approved €61.30 lot remains unpaid; before evaluating results, resolve the documented inconsistency between the €15 realized-price threshold and €10 contribution target. No second purchase.",
+  "next_useful_action": "Prepare the zero-cost item intake and measurement sheet for EXP-RESALE-001A (SKU/item ID, condition, brand/size, evidence photos, sellable status, preparation minutes, listing date/price, realized price, fees, shipping, returns, allocated landed cost and labor cost). Keep the €61.30 purchase pending Kael payment; do not change pilot gates or buy inventory.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -224,13 +228,13 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-09-RESALE-005",
-    "previous_state_version": 46,
-    "current_state_version": 47,
-    "status": "VERIFIED_AFTER_WRITE",
+    "checkpoint_id": "CP-2026-10-09-SCORE-GOVERNANCE-001",
+    "previous_state_version": 50,
+    "current_state_version": 51,
+    "status": "WRITE_PENDING_READBACK",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
-    "note": "Zero-cost unit-economics falsification recorded. NEXIA_BOOT, NEXIA_LIVE, NEXIA_MEMORY, NEXIA_MASTER_BACKUP and NEXIA_EVENT_LOG updated sequentially; canonical gate unchanged; payment still pending."
+    "note": "Central scoring rule, unified action lifecycle, decision priority and unit-economics requirements recorded. No purchase, external contact, deployment or runtime automation claimed."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -509,7 +513,7 @@
   },
   "operational_rules": {
     "canonical_artifact": "NEXIA_OPERATIONAL_RULES.md",
-    "version": "1.0",
+    "version": "1.1",
     "status": "ACTIVE",
     "rules": [
       "R1_RECOVERY_BEFORE_ACTION",
@@ -527,16 +531,16 @@
       "integrations",
       "reporting"
     ],
-    "implementation_status": "DOCUMENTED_AND_LINKED_IN_CANONICAL_STATE",
+    "implementation_status": "DOCUMENTED_AND_LINKED_IN_CANONICAL_STATE; R6 economic scoring, unified action lifecycle and decision engine documented",
     "effective_date": "2026-10-09",
     "note": "Complements existing authority and synchronization protocols; does not change business thresholds, Human Gates or permissions."
   },
   "progress_dashboard": {
     "canonical_artifact": "NEXIA_PROGRESS_DASHBOARD.md",
-    "version": "1.1",
+    "version": "1.2",
     "status": "ACTIVE_EVIDENCE_GATED",
     "updated_at": "2026-10-09",
-    "design": "Separate verified business outcomes from operational throughput; missing telemetry is NOT_INSTRUMENTED, not zero.",
+    "design": "Primary score is demonstrated progress toward sustainable after-tax net profit; technical activity is diagnostic only; missing telemetry is NOT_INSTRUMENTED, not zero.",
     "indicators": [
       "users/participants",
       "experiments",
@@ -568,5 +572,32 @@
       "scale": "NOT_ACHIEVED"
     },
     "stage_gate_rule": "Claim only the highest stage supported by dated, observable evidence; a technical commit does not prove validation, extraction, repeatability or scale."
+  },
+  "action_lifecycle": {
+    "canonical_states": [
+      "REQUESTED",
+      "IN_PROGRESS",
+      "EXECUTED",
+      "VERIFIED",
+      "BLOCKED",
+      "FAILED",
+      "CANCELLED"
+    ],
+    "completion_rule": "Only VERIFIED is complete; EXECUTED means the action occurred but the postcondition is not yet proven.",
+    "verification": "Re-read or inspect the result, preserve dated evidence and state limitations; a commit proves persistence only.",
+    "duplicate_prevention": "Check current artifacts and event/action ledger before repeating a task; repeat only for new evidence, changed conditions or an explicit falsification question."
+  },
+  "decision_engine": {
+    "status": "ACTIVE_BY_POLICY",
+    "order": [
+      "authority_and_safety",
+      "current_bottleneck_and_unmet_evidence_gate",
+      "expected_economic_impact_or_uncertainty_reduced",
+      "cost_and_downside_risk",
+      "human_time",
+      "repeatability"
+    ],
+    "rule": "Prefer the safest zero-cost reversible action that reduces the most important business uncertainty or improves evidenced economics; avoid duplicate documentation when measurement/falsification is the bottleneck.",
+    "no_background_claim": "Policy does not imply an independent 24/7 worker; report only actions executed in available tools."
   }
 }
