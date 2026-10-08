@@ -1,5 +1,5 @@
 {
-  "version": 52,
+  "version": 53,
   "updated_at": "2026-10-09",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -217,7 +217,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Prepare the zero-cost item intake and measurement sheet for EXP-RESALE-001A (SKU/item ID, condition, brand/size, evidence photos, sellable status, preparation minutes, listing date/price, realized price, fees, shipping, returns, allocated landed cost and labor cost). Keep the €61.30 purchase pending Kael payment; do not change pilot gates or buy inventory.",
+  "next_useful_action": "The zero-cost intake and measurement sheet for EXP-RESALE-001A has been prepared and read back. Await Kael's payment for the already-approved €61.30 delivered lot; do not purchase or represent inventory as acquired before payment and receipt. After physical receipt, record item-level condition, photos, sellable status, prep time, listings, realized sales, fees, shipping, returns and labor.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -229,13 +229,13 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-09-CAPITAL-POLICY-001",
-    "previous_state_version": 51,
-    "current_state_version": 52,
-    "status": "VERIFIED",
+    "checkpoint_id": "CP-2026-10-09-PILOT-MEASUREMENT-SHEET-001",
+    "previous_state_version": 52,
+    "current_state_version": 53,
+    "status": "WRITE_PENDING_READBACK",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
-    "note": "Readback confirmed STATE v52 is persisted. Removed unexplained fixed €7.25 reserve; reserved_eur remains €0. No spend, purchase, external action, or business threshold change."
+    "note": "Prepared zero-cost measurement sheet for resale pilot. Purchase remains pending Kael payment; no inventory purchase, external contact, listing, sale or revenue is claimed."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
