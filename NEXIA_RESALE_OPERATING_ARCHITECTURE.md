@@ -1,6 +1,7 @@
 # NEXIA — RESALE OPERATING ARCHITECTURE
 
 Status: ACTIVE / PRIMARY-MISSION ADAPTATION
+Documentation sync: 2026-10-08 — pilot checkout amount reconciled with canonical STATE v45.
 Date: 2026-10-08
 Mission: MISSION-RESALE-001
 Experiment: EXP-RESALE-001 / pilot EXP-RESALE-001A
@@ -71,9 +72,9 @@ A supplier/category is promoted only when evidence supports it. Rebuy decisions 
 7. Scalability and automation potential.
 
 ## 4. Pilot protocol — EXP-RESALE-001A
-Approved scope: 10 branded T-shirts from Vintage4Originals.
-Product budget: 55 € maximum + transport.
-Purchase execution: pending Kael checkout; no payment integration exists.
+Approved scope: 10 branded T-shirts from Vintage4Originals; checkout total verified at 61,30 € delivered.
+Checkout total verified: 61,30 € delivered (product + shipping + taxes). Product component: 55 €; payment pending; no spend executed.
+Purchase execution: pending Kael payment; no payment integration exists.
 
 On receipt, record every unit before listing. The pilot is successful only if the predefined metrics are measured from real outcomes:
 - >=80% sellable;
