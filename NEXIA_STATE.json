@@ -1,5 +1,5 @@
 {
-  "version": 42,
+  "version": 43,
   "updated_at": "2026-10-08",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -14,25 +14,35 @@
   "active_experiment": {
     "id": "EXP-RESALE-001",
     "name": "Falsación de sourcing + unit economics de ropa de segunda mano",
-    "status": "ACTIVE_RESEARCH_NO_SPEND",
-    "cost_eur": 0,
+    "status": "APPROVED_PENDING_PURCHASE",
+    "cost_eur": 55,
     "primary_metric": "margen de contribución por prenda vendible y potencial de rotación reproducible",
     "participants": 0,
-    "target_participants": 20
+    "target_participants": 20,
+    "approval": {
+      "approved_by": "Kael",
+      "approved_at": "2026-10-08",
+      "scope": "EXP-RESALE-001A — 10 camisetas de marca",
+      "max_product_cost_eur": 55,
+      "transport": "allowed within approved pilot; exact amount to be checked before checkout",
+      "purchase_executed": false
+    }
   },
   "current_mission": {
     "id": "MISSION-RESALE-001",
     "name": "Validar y construir la operación de reventa profesional de ropa de segunda mano en España",
     "priority": "MAX",
     "cost_eur": 0,
-    "human_action_required": false,
+    "human_action_required": true,
     "status": "ACTIVE",
-    "reason": "Kael ha designado esta vía como ruta principal de Nexia por potencial de ejecución rápida, margen y escalabilidad. Las demás vías quedan pausadas, no eliminadas, conservando evidencia y decisiones."
+    "reason": "Kael ha aprobado EXP-RESALE-001A. La compra queda autorizada dentro del límite; el checkout/pago aún no se ha ejecutado porque no existe una integración de pagos conectada."
   },
   "human_gate": {
-    "status": "WAITING",
-    "task": "Tras la investigación de sourcing, aprobar o rechazar una compra experimental pequeña; no comprar antes.",
-    "cost_eur": 0
+    "status": "APPROVED",
+    "task": "Compra experimental de 1 lote de 10 camisetas de marca de Vintage4Originals.",
+    "cost_eur": 55,
+    "transport_allowed": true,
+    "purchase_execution_status": "PENDING_KAEL_CHECKOUT"
   },
   "product": {
     "name": "Reventa profesional de ropa de segunda mano",
@@ -202,7 +212,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Continuar EXP-RESALE-001: construir matriz de proveedores y comparables, priorizando sourcing en Valencia y España; no comprar hasta presentar economía y pedir aprobación.",
+  "next_useful_action": "Verificar precio/disponibilidad final, preparar checkout y dar a Kael instrucciones exactas para completar la compra; después registrar recepción y medir las 10 prendas.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -214,13 +224,13 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-08-RESALE-001",
-    "previous_state_version": 41,
-    "current_state_version": 42,
-    "status": "VERIFIED_AFTER_WRITE_PENDING_DERIVED_ARTIFACT_RECONCILIATION",
+    "checkpoint_id": "CP-2026-10-08-RESALE-002",
+    "previous_state_version": 42,
+    "current_state_version": 43,
+    "status": "VERIFIED_AFTER_WRITE",
     "financial_impact_eur": 0,
     "human_gate_unchanged": false,
-    "note": "Cambio estratégico solicitado por Kael: Resale pasa a misión principal; vías anteriores pausadas, no eliminadas. Sin gasto ni contacto externo."
+    "note": "Kael aprobó EXP-RESALE-001A; autorización registrada. No se ha ejecutado ningún pago."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -436,7 +446,7 @@
     "status": "COMPLETED_WITHOUT_SPEND",
     "artifact": "NEXIA_VINTED_RESELLING_RESEARCH.md",
     "commit": "642faa855f6209cd73a4edf9313b092f085123fb",
-    "next_action": "Comparar proveedores y unit economics antes de cualquier compra. Prioridad inicial: Valencia/España."
+    "next_action": "Ejecutar el piloto aprobado EXP-RESALE-001A sin superar 55 € de producto + transporte."
   },
   "paused_paths": {
     "status": "PAUSED_NOT_DELETED",
