@@ -79,3 +79,14 @@ Checkpoint reconciliation — 2026-10-09
 - Canonical state now v47; BOOT points to the exact STATE blob SHA produced by the v47 commit.
 - LIVE, MEMORY and EVENT_LOG were updated sequentially; the economics falsification remains a documented measurement issue, not a changed approval.
 - Financial impact €0; purchase pending; no revenue or profit claimed.
+
+
+## 40. CURRENT CHECKPOINT ADDENDUM — 2026-10-09 — REINFORCED OPERATIONAL RULES
+
+Canonical STATE: v48. STATE blob SHA: 121b7962f7040f1f14845e2aaeab1c5036199e84
+BOOT: v6; re-read and aligned to STATE v48 and the exact blob SHA above.
+Canonical rules artifact: `NEXIA_OPERATIONAL_RULES.md`, version 1.0, status ACTIVE.
+
+R1 recovery before action; R2 useful action over apparent activity; R3 end-to-end evidence; R4 mandatory economics and falsification; R5 explicit limited autonomy. The rules complement existing authority and sync protocols. They do not change business thresholds or approval gates.
+
+Repository changes were re-read after writing. Financial impact: €0. Spend/revenue/profit remain €0. EXP-RESALE-001A checkout €61.30 delivered; payment still pending Kael. No purchase or external action executed. This checkpoint verifies repository persistence only, not deployment or external automation.
