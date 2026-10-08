@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-08T21:10:00+02:00",
+  "updated_at": "2026-10-09T00:00:00+02:00",
   "status": "ACTIVE / VALIDACIÓN",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "Kael mantiene pendiente el pago del lote; NEXIA prepara intake/QC, economía, pricing y listing a coste 0.",
-  "last_completed_action": "Ledger operativo de intake/QC, SKU scoring, listing engine y pricing engine preparados y verificados en STATE v45.",
-  "evidence": "STATE v45; BOOT reconciled to current STATE blob; pilot measurement sheet; intake/QC protocol; 0 € spend; payment not executed.",
+  "current_action": "Kael mantiene pendiente el pago del lote aprobado; Nexia documentó una inconsistencia aritmética entre el umbral de venta media de €15 y el objetivo de contribución de €10. No se ha cambiado el gate.",
+  "last_completed_action": "Falsación económica del umbral de contribución registrada en STATE v46 y documento de análisis; coste €0.",
+  "evidence": "STATE v46; addendum de falsación económica; pago no ejecutado; gasto e ingresos reales siguen en €0.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout €61.30 entregado verificado; pago pendiente de Kael.",
   "parallel_work": [
@@ -13,7 +13,7 @@
     "Supplier/unit economics matrix",
     "Core continuity/resilience maintenance"
   ],
-  "next_action": "Tras confirmar el pago, recepción/QC de SRC-001-01..10. Mientras tanto, no hay gasto adicional justificado.",
+  "next_action": "Esperar a que Kael ejecute el pago aprobado; mientras tanto, preparación a coste 0. Resolver si €10 de contribución es stretch target o gate duro antes de evaluar resultados.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica."
 }
