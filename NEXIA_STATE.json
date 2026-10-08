@@ -1,5 +1,5 @@
 {
-  "version": 44,
+  "version": 45,
   "updated_at": "2026-10-08",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -24,7 +24,7 @@
       "approved_at": "2026-10-08",
       "scope": "EXP-RESALE-001A — 10 camisetas de marca",
       "max_product_cost_eur": 55,
-      "transport": "allowed within approved pilot; exact amount to be checked before checkout",
+      "transport": "allowed within approved pilot; verified checkout total €61.30 delivered",
       "purchase_executed": false
     }
   },
@@ -35,14 +35,14 @@
     "cost_eur": 0,
     "human_action_required": true,
     "status": "ACTIVE",
-    "reason": "Kael aprobó EXP-RESALE-001A. NEXIA continúa en paralelo con arquitectura, datos, sourcing y economía a coste 0; la compra sigue pendiente de checkout humano."
+    "reason": "Kael aprobó EXP-RESALE-001A. Checkout verificado en €61.30 entregado; pago aún no ejecutado. NEXIA continúa en paralelo con arquitectura, datos, sourcing y economía a coste 0."
   },
   "human_gate": {
     "status": "APPROVED",
     "task": "Compra experimental de 1 lote de 10 camisetas de marca de Vintage4Originals.",
-    "cost_eur": 55,
+    "cost_eur": 61.3,
     "transport_allowed": true,
-    "purchase_execution_status": "PENDING_KAEL_CHECKOUT"
+    "purchase_execution_status": "PENDING_KAEL_PAYMENT"
   },
   "product": {
     "name": "Reventa profesional de ropa de segunda mano",
@@ -126,7 +126,7 @@
   "guardrails": {
     "weekly_budget_eur": 100,
     "current_spend_eur": 0,
-    "reserved_eur": 7.25,
+    "reserved_eur": 0,
     "spending_requires_kael_approval": true
   },
   "bottleneck_escape_policy": {
@@ -212,7 +212,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Mientras Kael verifica/compra el lote, construir y validar la arquitectura operativa de resale: modelo de datos, intake/QC, unit economics, inventario, canales, pricing y métricas.",
+  "next_useful_action": "Mientras Kael mantiene pendiente el pago del lote, cerrar y validar el ledger operativo de intake/QC + unit economics para SRC-001-01..10 y preparar la primera sesión de recepción.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -224,13 +224,13 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-08-RESALE-003",
-    "previous_state_version": 43,
-    "current_state_version": 44,
-    "status": "VERIFIED_AFTER_WRITE",
+    "checkpoint_id": "CP-2026-10-08-RESALE-004",
+    "previous_state_version": 44,
+    "current_state_version": 45,
+    "status": "VERIFIED_AFTER_WRITE_PENDING",
     "financial_impact_eur": 0,
     "human_gate_unchanged": false,
-    "note": "Se inicia adaptación estructural de NEXIA a Resale como misión principal; arquitectura operativa creada sin gasto. Compra piloto sigue pendiente de checkout de Kael."
+    "note": "Corrección de continuidad: checkout total verificado por Kael en €61.30 entregado; pago aún pendiente. Reserva histórica de €7.25 corregida a €0 según instrucción de Kael. No se ha ejecutado gasto."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
