@@ -1,5 +1,5 @@
 {
-  "version": 49,
+  "version": 50,
   "updated_at": "2026-10-09",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -533,7 +533,7 @@
   },
   "progress_dashboard": {
     "canonical_artifact": "NEXIA_PROGRESS_DASHBOARD.md",
-    "version": "1.0",
+    "version": "1.1",
     "status": "ACTIVE_EVIDENCE_GATED",
     "updated_at": "2026-10-09",
     "design": "Separate verified business outcomes from operational throughput; missing telemetry is NOT_INSTRUMENTED, not zero.",
@@ -548,7 +548,25 @@
       "after_tax_profit",
       "repeatability"
     ],
-    "implementation_status": "DOCUMENTED; current values and limitations recorded; automated telemetry not connected",
-    "no_economic_claim_from_technical_activity": true
+    "implementation_status": "DOCUMENTED_AND_LINKED; current readings and stage gates recorded; automated telemetry not connected",
+    "no_economic_claim_from_technical_activity": true,
+    "stage_ladder": [
+      "ACTIVITY",
+      "EVIDENCE",
+      "VALIDATION",
+      "EXTRACTION",
+      "REPEATABILITY",
+      "SCALE"
+    ],
+    "current_stage": "ACTIVITY / RESEARCH EVIDENCE",
+    "stage_status": {
+      "activity": "RECORDED",
+      "evidence": "PARTIAL_PUBLIC_RESEARCH_EVIDENCE",
+      "validation": "NOT_ACHIEVED",
+      "extraction": "NOT_ACHIEVED",
+      "repeatability": "NOT_ACHIEVED",
+      "scale": "NOT_ACHIEVED"
+    },
+    "stage_gate_rule": "Claim only the highest stage supported by dated, observable evidence; a technical commit does not prove validation, extraction, repeatability or scale."
   }
 }
