@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "boot_version": 6,
-  "generated_at": "2026-10-09T12:00:00+02:00",
+  "boot_version": 7,
+  "generated_at": "2026-10-09T12:30:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -12,8 +12,8 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
-  "last_verified_state_version": 48,
-  "last_verified_state_blob_sha": "121b7962f7040f1f14845e2aaeab1c5036199e84",
+  "last_verified_state_version": 49,
+  "last_verified_state_blob_sha": "ba06085ffe29cc618f0c811e6d8fde7e9d1573ce",
   "phase": "VALIDACIÓN",
   "active_experiment": {
     "id": "EXP-RESALE-001",
@@ -26,7 +26,7 @@
     "status": "ACTIVE"
   },
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout verificado en €61.30 entregado; pago pendiente de Kael",
-  "last_confirmed_action": "2026-10-09: STATE v48 linked canonical R1-R5 operational rules; STATE re-read and verified; derived-artifact reconciliation in progress.",
+  "last_confirmed_action": "2026-10-09: STATE v49 links evidence-gated progress dashboard separating operational throughput from business outcomes; dashboard and STATE reread; derived reconciliation in progress.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -34,5 +34,6 @@
   "integrity_rule": "Boot is an index, not an independent source of truth. If it disagrees with NEXIA_STATE.json, STATE wins and BOOT is marked stale.",
   "recovery_rule": "If STATE is unavailable or invalid, recover from the latest verified repository commit and event log; never treat a stale backup as newer than a verified state.",
   "startup_rule": "On every new NEXIA session, use the GitHub connector to inspect this repository and load BOOT -> STATE -> MEMORY/RECENT EVENTS before asking Kael to restate project state.",
-  "operational_rules": "NEXIA_OPERATIONAL_RULES.md"
+  "operational_rules": "NEXIA_OPERATIONAL_RULES.md",
+  "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md"
 }
