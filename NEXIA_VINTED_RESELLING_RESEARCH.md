@@ -634,3 +634,42 @@ The private-seller page states up to 150 free listings/month, then 11.5% of tota
 - Second-hand resale: Vinted Pro is the strongest platform-cost hypothesis among these leads because its official page advertises free selling, but it requires a registered business and full unit economics remain unknown.
 - eBay: insufficient comparable data until official professional fees are checked.
 - None is validated for sales, demand, or net profit. Recommended next action is a free, apples-to-apples unit-economics sheet for (a) second-hand clothing on Vinted Pro and (b) original-design POD on Etsy, including VAT/tax basis, fulfilment, returns, labour, and minimum acceptable contribution. Cost remains €0; no external commitment made.
+
+
+## UPDATE — 2026-10-09 — PROFESSIONAL CHANNEL FEES: EBAY + WALLAPOP
+
+Official current public pages:
+- eBay professional fees: https://www.ebay.es/help/selling/fees-credits-invoices/servicios-de-pago-comisiones-y-tarifas-para-vendedores-profesionales?id=4809
+- Wallapop Pro multicategory: https://ayuda.wallapop.com/hc/es-es/articles/360002050398-Wallapop-Pro-Multicategor%C3%ADa
+- Wallapop shipping terms: https://ayuda.wallapop.com/hc/es-es/articles/360001796598-Condiciones-de-servicio-Wallapop-Env%C3%ADos
+- Etsy fee/tax summary: https://help.etsy.com/hc/en-us/articles/115014483627-What-are-the-Fees-and-Taxes-for-Selling-on-Etsy
+
+### eBay Spain professional seller fees (official page)
+- Most categories: 9% of total sale amount up to €990 per item, plus 2% on the portion above €990.
+- Order fee: €0.35 for orders of €10 or less; €0.45 for orders above €10.
+- Regulatory compliance fee: 0.35% of total sale amount.
+- Fixed-price listing fee without an eBay Store: €0.35 per listing.
+- Store subscriptions displayed: Basic €19.50/month (400 fixed-price listings included); Advanced €39.50/month; Premium €149.50/month. Not recommended before demand/volume supports the fixed cost.
+- Fees shown exclude VAT. International fee can apply depending on buyer destination; seller currency conversion fee currently shown as 3% if eBay converts funds for Spain-registered sellers, scheduled to rise to 3.25% from 2026-12-02.
+- Seller performance and “item not as described” rates can trigger additional percentage points; advertising and optional listing upgrades may add costs.
+- A single €20 order example (assuming the full sale total is €20, one listing at €0.35, 9% variable + 0.35% regulatory + €0.45 order fee) gives €1.80 + €0.07 + €0.45 + €0.35 = **€2.67 before VAT on fees**, shipping/product/returns/labour/tax. This is illustrative, not the final margin. International fees and performance surcharges excluded.
+- This makes eBay an inferior first validation channel for low-priced single garments unless its broader reach produces higher realized prices or better sell-through.
+
+### Wallapop Pro multicategory + shipping
+- Official help page states up to **200 products can be published for free by default**; above this, subscription plans apply. Exact plan pricing was not reliably exposed in the extracted public page and remains UNKNOWN.
+- Official Wallapop shipping terms state the buyer pays shipping and Wallapop Protection; shipping is free for the seller except if the seller chooses SEUR home pickup, which is deducted from sale proceeds. Seller must supply packaging.
+- Current shipping service scope includes Spain except Ceuta, Melilla and most Canary Islands cross-region cases described by the policy; international shipping is also possible to/from Italy and Portugal under restrictions. Do not assume global shipping.
+- This is a plausible free pilot channel for small second-hand catalogue, but professional eligibility/tax treatment and current terms must be checked before commercial use. “200 free listings” is not evidence that all sales, services, packaging, returns or business obligations cost zero.
+
+### Etsy fee accounting reminder
+- Etsy's official fee summary confirms listing fees, 6.5% transaction, country-specific payment processing, Spain regulatory fee, potential VAT on fees, optional/attributed advertising and a possible setup fee. Fees can be charged/converted in USD and VAT may apply to processing/seller services.
+- For comparisons, model the seller's VAT regime separately; do not treat buyer-collected tax as revenue or subtract VAT twice. A final Spain-specific margin model requires the intended legal/tax regime and product's VAT treatment, which remain UNKNOWN.
+
+### Current low-cost channel ranking (research only; not commercial validation)
+1. **Vinted Pro** — lowest apparent platform listing cost for second-hand garments, but registered-business and consumer-return obligations are material gates.
+2. **Wallapop** — up to 200 free product listings and buyer-paid shipping, useful for a limited catalogue; subscription pricing beyond that is UNKNOWN.
+3. **Etsy POD** — suitable only for qualifying original designs; meaningful transaction/payment/regulatory fees and possible VAT/setup costs.
+4. **eBay professional** — transparent but meaningful per-order + percentage + listing costs; potentially worthwhile only if international reach improves price/rotation enough.
+
+### Next action
+Prepare a one-currency comparison sheet using a sample €20 and €25 realized order, with shipping treated consistently and explicit UNKNOWN fields for VAT regime, labour time, return rate, sell-through and acquisition cost. Use a sensitivity range, not a single optimistic forecast. No accounts, listings, orders, subscriptions, purchases or external contacts. Cost €0; no sales or profit generated.
