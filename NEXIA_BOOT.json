@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "boot_version": 3,
-  "generated_at": "2026-10-08T13:46:00+02:00",
+  "generated_at": "2026-10-08T19:10:24+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -12,8 +12,8 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
-  "last_verified_state_version": 44,
-  "last_verified_state_blob_sha": "f5c5e91c7be013339fdafa58667980281b160086",
+  "last_verified_state_version": 45,
+  "last_verified_state_blob_sha": "66f653d4cd7d166ab660dac93cddca5d49fe57be",
   "phase": "VALIDACIÓN",
   "active_experiment": {
     "id": "EXP-RESALE-001",
@@ -25,8 +25,8 @@
     "name": "Validar y construir la operación de reventa profesional de ropa de segunda mano en España",
     "status": "ACTIVE"
   },
-  "human_gate": "EXP-RESALE-001A: compra aprobada; checkout pendiente de Kael",
-  "last_confirmed_action": "2026-10-08: Kael aprobó EXP-RESALE-001A; NEXIA adaptó arquitectura operativa a resale-first sin gasto.",
+  "human_gate": "EXP-RESALE-001A: compra aprobada; checkout verificado en €61.30 entregado; pago pendiente de Kael",
+  "last_confirmed_action": "2026-10-08: STATE v45 verificado; checkout €61.30 entregado verificado; pago no ejecutado; ledger intake/QC y pricing/listing preparados a coste 0.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
