@@ -88,6 +88,26 @@ IMPORTANT:
 - The pilot is not declared profitable until realized sales and variable costs are recorded.
 - Scaling requires reproducibility across repeated batches.
 
+
+## Pre-receipt unit-economics sensitivity — hypothesis only
+
+Using the verified delivered acquisition allocation of €6.13/unit, before packaging, channel costs, returns or preparation:
+
+| Realized sale price | Gross after allocated acquisition |
+|---:|---:|
+| €12 | €5.87 |
+| €15 | €8.87 |
+| €18 | €11.87 |
+| €20 | €13.87 |
+| €25 | €18.87 |
+
+These are scenario calculations, not realized results. They must not be treated as profit or validation. After receipt, replace the provisional €6.13 allocation when the actual sellable-unit count and any batch-cost allocation require it.
+
+### Pricing hypothesis for first listings
+- Initial asking price: set per SKU after QC, brand, condition, size and comparable evidence are known.
+- Minimum price: set only after contribution sensitivity is calculated.
+- Do not lower price merely to generate a sale if the resulting realized contribution would invalidate the experiment.
+
 ## Next operational event
 When Kael confirms payment/order execution:
 1. mark purchase executed;
