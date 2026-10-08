@@ -103,21 +103,21 @@
     "reproducible_improvements": 0
   },
   "public_interfaces": {
-    "nexacare_path": "/NexaCare/",
-    "nexahq_path": "/NexaHQ/",
-    "clean_route_status": "IMPLEMENTED_IN_REPOSITORY",
-    "personal_github_pages_hostname": "REMAINS_UNCHANGED_UNTIL_CUSTOM_DOMAIN_OR_HOSTING_IDENTITY_CHANGE",
-    "public_runtime_verification": "VERIFIED_BY_PUBLIC_RUNTIME_AND_FUNCTIONAL_TEST",
-    "nexiahq_path": "/NexaHQ/",
-    "nexahq_last_commit": "9b1cec575d4be902589ff104a8b5137da951c353"
+    "nexacare_path": null,
+    "nexahq_path": null,
+    "clean_route_status": "LEGACY_GITHUB_PAGES_SURFACES_REMOVED",
+    "personal_github_pages_hostname": "REMAINS_UNCHANGED",
+    "public_runtime_verification": "LEGACY_SURFACES_REMOVED_FROM_REPOSITORY",
+    "nexiahq_path": null,
+    "nexiahq_last_commit": null
   },
   "system": {
     "persistent_state": "PARTIAL_WITH_RECOVERY_LAYER",
-    "real_hq": "COMMAND_CENTER_READ_ONLY_WITH_AUTO_REFRESH",
+    "real_hq": "LEGACY_GITHUB_PAGES_HQ_REMOVED",
     "telemetry": "NOT_CONNECTED",
     "notifications": "NOT_CONNECTED",
     "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS_AND_SAFE_REPOSITORY_WORK",
-    "deployment": "GITHUB_PAGES_CONFIGURED; NEXACARE_AND_NEXIAHQ_ROUTES_PRESENT; NEXACARE_PUBLIC_RUNTIME_VERIFIED",
+    "deployment": "LEGACY_GITHUB_PAGES_PUBLIC_SURFACES_REMOVED; CURRENT_PUBLIC_HQ_NOT_HOSTED_ON_GITHUB_PAGES",
     "floot": "AVAILABLE_IN_CURRENT_CONTEXT",
     "continuity_layer": "ACTIVE",
     "continuity_source": "NEXIA_CONTINUITY.md",
@@ -227,10 +227,10 @@
     "checkpoint_id": "CP-2026-10-08-RESALE-004",
     "previous_state_version": 44,
     "current_state_version": 45,
-    "status": "VERIFIED_AFTER_WRITE_PENDING",
+    "status": "VERIFIED_AFTER_WRITE",
     "financial_impact_eur": 0,
     "human_gate_unchanged": false,
-    "note": "Corrección de continuidad: checkout total verificado por Kael en €61.30 entregado; pago aún pendiente. Reserva histórica de €7.25 corregida a €0 según instrucción de Kael. No se ha ejecutado gasto."
+    "note": "2026-10-08: Kael ordenó eliminar las superficies públicas GitHub Pages heredadas de Nexia Care/diagnóstico y NEXIA HQ. index.html y hq.html fueron eliminados de main. Se conserva Core, estado, investigación y documentación; no se conserva el hosting público legacy."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -457,8 +457,8 @@
       {
         "id": "EXP-001B",
         "name": "NEXIA Care / diagnóstico afiliado",
-        "status": "PAUSED",
-        "reason": "No se elimina; queda congelado para preservar trabajo y evidencia."
+        "status": "PAUSED_LEGACY_PUBLIC_SURFACE_REMOVED",
+        "reason": "La superficie pública GitHub Pages fue eliminada; se conserva la investigación y evidencia en Core, no la web."
       },
       {
         "id": "MISSION-003",
