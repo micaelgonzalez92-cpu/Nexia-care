@@ -273,3 +273,14 @@ Continue zero-cost falsification of exclusions, commission basis and conversion 
 - La reserva registrada sigue siendo 0 €; esto no significa que haya capital disponible ni modifica el capital registrado (0 €).
 - Se mantiene el límite máximo de 100 €/semana, la prioridad de experimentos a 0 € y la aprobación explícita previa a cualquier gasto.
 - Solo se pueden earmarcar fondos por obligaciones documentadas, costes comprometidos o un experimento concreto aprobado. No inventar reservas ni confundir presupuesto con dinero disponible.
+
+
+## Persistence reconciliation — 2026-10-09 (partial, verified readback)
+
+- Canonical state remains NEXIA_STATE v53, blob SHA `72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3`; financial values remain capital €0, revenue €0, profit €0.
+- NEXIA_BOOT v12 was read back and its `state_version` / `state_blob_sha` match STATE v53 exactly.
+- NEXIA_LIVE was refreshed from verified repository facts and read back; it explicitly says persistence sync is partial.
+- Append-only event `EVT-2026-10-09-PERSISTENCE-SYNC-002` was appended and read back.
+- NEXIA_MASTER_BACKUP now contains a checkpoint describing STATE v53, BOOT v12, LIVE, and EVENT_LOG blob hashes; update was read back.
+- Remaining caveat: STATE's `persistence_checkpoint.status` remains `WRITE_PENDING_READBACK`. Do not claim complete persistence health or silently change STATE version/status without a deliberate sequential checkpoint plan.
+- Commercial gate unchanged: approved €61.30 delivered resale pilot remains pending Kael payment; purchase and inventory receipt are not claimed. No external action or business spend occurred.
