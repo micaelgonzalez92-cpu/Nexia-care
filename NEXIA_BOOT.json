@@ -12,8 +12,8 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
-  "last_verified_state_version": 51,
-  "last_verified_state_blob_sha": "480f322883a09e022c906360e1fad240bf4a4f59",
+  "last_verified_state_version": 52,
+  "last_verified_state_blob_sha": "7c708bf77b49ec5e4b422e23530e5fcacfa4785f",
   "phase": "VALIDACIÓN",
   "active_experiment": {
     "id": "EXP-RESALE-001",
@@ -26,7 +26,7 @@
     "status": "ACTIVE"
   },
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout verificado en €61.30 entregado; pago pendiente de Kael",
-  "last_confirmed_action": "2026-10-09: STATE v51 records economic-outcome-first scoring, unified action lifecycle and decision engine; dashboard v1.2 and operational rules v1.1 updated.",
+  "last_confirmed_action": "2026-10-09: STATE v52 removes the unexplained fixed €7.25 reserve; reserved_eur remains €0; readback verified.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -37,6 +37,6 @@
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE; includes R6, lifecycle and decision engine",
   "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; sustainable after-tax net profit is primary score; technical activity does not add points",
   "state_version": 52,
-  "state_blob_sha": "b6dbc182c9365b36d2f5684d7720185120f4d8a0",
-  "note": "Boot index aligned to NEXIA_STATE.json v52 after Kael approved removal of unexplained fixed €7.25 reserve; no spending or purchase occurred."
+  "state_blob_sha": "7c708bf77b49ec5e4b422e23530e5fcacfa4785f",
+  "note": "Boot index aligned to verified NEXIA_STATE.json v52 after Kael approved removal of unexplained fixed €7.25 reserve; no spending or purchase occurred."
 }
