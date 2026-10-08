@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "boot_version": 4,
-  "generated_at": "2026-10-09T00:00:00+02:00",
+  "boot_version": 5,
+  "generated_at": "2026-10-09T00:05:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -12,8 +12,8 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
-  "last_verified_state_version": 46,
-  "last_verified_state_blob_sha": "5848f845bc9e1a842cc0ee5d86f4b0e165d79e2b",
+  "last_verified_state_version": 47,
+  "last_verified_state_blob_sha": "89fb04f099c3fcfd6721a63a8b04c15bec15443b",
   "phase": "VALIDACIÓN",
   "active_experiment": {
     "id": "EXP-RESALE-001",
@@ -26,7 +26,7 @@
     "status": "ACTIVE"
   },
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout verificado en €61.30 entregado; pago pendiente de Kael",
-  "last_confirmed_action": "2026-10-09: STATE v46 records a zero-cost falsification: at €15 realized price, €10 contribution is mathematically unattainable with €6.13 acquisition allocation before other costs; no gate changed and payment remains pending.",
+  "last_confirmed_action": "2026-10-09: STATE v47 and derived recovery artifacts synchronized after zero-cost pilot contribution-threshold falsification; no gate changed, purchase pending.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
