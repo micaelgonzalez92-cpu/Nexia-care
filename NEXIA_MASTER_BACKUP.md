@@ -44,7 +44,7 @@ Derived continuity artifacts were reconciled: BOOT v3 and LIVE updated after STA
 ## 39. CURRENT CHECKPOINT ADDENDUM — 2026-10-08 — RESALE-FIRST v45
 
 Canonical operational state: **NEXIA_STATE v45**
-State SHA: **66f653d4cd7d166ab660dac93cddca5d49fe57be**
+State SHA: **3432633f92faa3cdbe39c2c97f74812e4df38a79**
 Phase: **VALIDACIÓN**
 Primary mission: **MISSION-RESALE-001**
 Experiment: **EXP-RESALE-001 / EXP-RESALE-001A approved pending Kael payment**
@@ -57,3 +57,12 @@ Financial impact at checkpoint: **0 €**. Revenue: **0 €**. Profit: **0 €**
 
 BOOT v3 and LIVE report STATE v45. This addendum is the latest backup checkpoint; older sections remain historical snapshots and must not override canonical NEXIA_STATE.json.
 
+
+
+## 40. CONTINUITY ADDENDUM — 2026-10-09 — INTAKE ECONOMICS ALIGNMENT
+
+Canonical state remains **NEXIA_STATE v45**; no state-version change was made in this maintenance cycle. Verified canonical state SHA: `3432633f92faa3cdbe39c2c97f74812e4df38a79`.
+
+Zero-cost repository improvement: `NEXIA_RESALE_INTAKE_QC_PROTOCOL.md` was aligned with the pilot measurement sheet so the contribution formula explicitly subtracts attributable preparation cost as well as acquisition, packaging, variable channel costs and expected/realized incident/return costs. Commit: `9eb1cdcd589841506f8f83af088950b996f77652`; verified file SHA: `e4f3b723c8fe1fd4f9e3ec763d0f506683b4a225`.
+
+Human Gate unchanged: the approved 10-shirt lot checkout is €61.30 delivered; payment pending Kael; purchase not executed. Actual spend €0; revenue €0; profit €0. No physical inventory records are fabricated before receipt. Older state hashes in historical addenda are historical and do not override canonical STATE.
