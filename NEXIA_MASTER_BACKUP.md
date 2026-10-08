@@ -100,3 +100,16 @@ Dashboard: `NEXIA_PROGRESS_DASHBOARD.md` v1.1.
 Six-stage ladder: ACTIVITY → EVIDENCE → VALIDATION → EXTRACTION → REPEATABILITY → SCALE. Each stage now states what it proves and the minimum evidence required. Current resale position: activity/research evidence; own validation, extraction, repeatability and scale are not achieved. No pilot payment or sale has occurred; no revenue/profit is claimed.
 
 Dashboard, STATE, BOOT, LIVE and MEMORY were re-read after writes. This verifies repository persistence only, not runtime deployment or automation. Financial impact €0; pilot payment remains pending Kael.
+
+
+## 42. CHECKPOINT — 2026-10-09 — ECONOMIC-OUTCOME-FIRST SCORING
+
+Canonical STATE: v51. Blob SHA: 480f322883a09e022c906360e1fad240bf4a4f59. BOOT v9 points to the exact STATE blob.
+Operational rules: NEXIA_OPERATIONAL_RULES.md v1.1.
+Dashboard: NEXIA_PROGRESS_DASHBOARD.md v1.2.
+
+Central rule: file count, commits, messages, closed technical tasks and automation count do not add to Nexia's score by themselves. The primary score is demonstrated progress toward sustainable net profit after tax over a defined, reconciled period. Operational throughput is diagnostic only. Unit economics must include attributable labor/time and all relevant variable costs; missing telemetry is NOT INSTRUMENTED, not a fabricated zero.
+
+A unified action lifecycle distinguishes REQUESTED, IN_PROGRESS, EXECUTED and VERIFIED; BLOCKED, FAILED and CANCELLED remain explicit terminal states. Only VERIFIED is complete, with observable postcondition evidence. The decision engine prioritizes authority/safety, the current bottleneck, economic impact or uncertainty reduced, cost/risk, human time and repeatability, and avoids duplicate work without new evidence.
+
+Financial impact €0; no purchase, external contact, deployment or 24/7 worker claimed. Pilot checkout €61.30 remains unpaid by Kael; no own sale or extraction demonstrated.
