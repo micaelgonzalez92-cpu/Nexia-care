@@ -210,3 +210,86 @@ Each READY SKU must pass this sequence before publication:
 ### Current platform evidence
 
 Vinted currently states that sellers can add up to 20 informative photos; the first should show the complete item, photos should be the seller's own, labels/logos and defects should be visible, and natural light is recommended. Vinted also warns against adding unrelated brand names/hashtags in descriptions and against misleading brand selection. These are platform rules/recommendations and may change; recheck before the first live publication.
+
+
+## Pricing engine — pilot-ready, €0
+
+Purpose: turn comparable evidence and SKU-level economics into a controlled asking price, target realized price and hard minimum. This is a hypothesis engine until tested against completed sales.
+
+### Required fields per SKU
+
+- comparable_low / comparable_mid / comparable_high
+- comparable_source and evidence strength
+- SKU score
+- condition/QC result
+- initial_asking_price
+- target_realized_price
+- minimum_price
+- price_event_date
+- price_event_reason
+- next_review_date
+- realized_sale_price
+
+### Pricing hierarchy
+
+1. **Hard floor first:** calculate the minimum price from allocated acquisition cost + packaging + variable channel costs + expected/realized incident cost + attributable preparation cost + the minimum contribution required by the experiment.
+2. **Market evidence second:** use completed-sale evidence where available; active listings are only a positioning/comparison signal.
+3. **SKU differentiation third:** allow stronger price positioning for verified model/style/era signals, condition, size and distinctive design.
+4. **Negotiation buffer last:** if negotiation is expected, place the initial ask above the target realized price by a small provisional buffer. Treat the buffer as an experiment, not a market fact.
+5. **No price below floor:** a discount that breaks the contribution floor is rejected unless Kael explicitly changes the experiment.
+
+### Provisional price bands
+
+For each READY SKU define:
+
+- **ASK:** public starting price.
+- **TARGET:** preferred realized price.
+- **FLOOR:** lowest acceptable realized price under the current experiment assumptions.
+
+Until enough pilot data exists, use the following as a test protocol rather than a claimed optimum:
+
+ASK >= TARGET >= FLOOR
+
+A provisional negotiation buffer of **10–15% above TARGET** may be tested when comparable listings and the SKU score support it. Record the exact buffer used per SKU so the result can be measured.
+
+### Attention → pricing decision tree
+
+- **Low views + low engagement:** do not assume price is the problem. First check main photo, title, category, keywords, timing and channel.
+- **Good views + low favourites/messages:** likely positioning/presentation mismatch; test one listing improvement before a price cut.
+- **Good engagement + offers below ASK:** offers are price evidence. Compare offer cluster with TARGET/FLOOR; accept/counter only when economics remain valid.
+- **Good views + good engagement + no sale:** test a controlled price reduction or conversion improvement, not both simultaneously.
+- **No meaningful activity after the review window:** one controlled markdown step may be tested, while preserving FLOOR.
+- **Sale without negotiation:** record realized price and stop further price experimentation on that SKU.
+
+### Markdown protocol
+
+Use controlled events rather than continuous discounting:
+
+- Review after a provisional 7-day window.
+- If evidence points to price, test one reduction of approximately 5–10%.
+- Review again after another 7-day window.
+- A second reduction is allowed only if the SKU remains above FLOOR and the first intervention produced insufficient commercial improvement.
+- If the listing remains weak despite price changes, HOLD the markdown loop and investigate product/channel/presentation instead.
+
+The 7-day windows and 5–10% steps are experimental operating hypotheses, not market facts. They will be recalibrated from realized days-to-sale and contribution.
+
+### Price-event ledger
+
+For every change record:
+
+| Date | SKU | ASK before | ASK after | TARGET | FLOOR | Trigger | Views | Favourites | Offers | Sale € | Result |
+|---|---|---:|---:|---:|---:|---|---:|---:|---:|---:|---|
+| | | | | | | | | | | | |
+
+### Pricing validation
+
+The pricing engine is successful only if, across repeated batches, it improves the combination of:
+
+- realized contribution per item;
+- contribution per preparation/listing minute;
+- sell-through;
+- days to sale;
+- proportion of sales requiring discounts;
+- return/incident rate.
+
+Do not optimize for maximum asking price. Optimize for **risk-adjusted contribution and inventory velocity** while preserving the experiment's minimum economics.
