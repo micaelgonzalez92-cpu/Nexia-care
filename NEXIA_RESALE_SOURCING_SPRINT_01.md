@@ -100,11 +100,20 @@ Fresh public check performed at €0 cost:
 
 ## Human Gate
 
-No comprar. Si la investigación mantiene economía atractiva, preparar una compra piloto concreta y pedir aprobación expresa de Kael.
+**Estado actualizado — 2026-10-08**
+
+- El lote **EXP-RESALE-001A de 10 camisetas de marca de Vintage4Originals ya está aprobado por Kael**.
+- Checkout verificado por Kael: **61,30 € entregado**.
+- **Pago aún no ejecutado; gasto real = 0 €**.
+- No existe autorización para realizar **ninguna compra adicional** fuera de este lote.
+- La ejecución del pago queda bajo control de Kael.
+- Hasta que exista recepción física, Nexia no debe fabricar registros SRC-001-01..10 ni declarar inventario, sellable rate o economía realizada.
 
 ## Hallazgo de este ciclo
 
-La mejor vía de falsación sin gasto es ahora comparar 2 lotes pequeños de Valencia (Vintage4Originals y Vintage Wholesale Spain) contra 1 caja de marca de SP Vintage, usando una cesta objetivo de categorías con precios públicos Vinted. Antes de pedir dinero, debemos convertir estas señales en una propuesta de compra mínima con coste total, unidades esperadas y umbral de fracaso.
+La vía de falsación sin gasto ya no consiste en preparar una nueva propuesta de compra para el lote V4O: esa decisión ya está tomada. La evidencia pendiente es la **recepción y medición real del lote aprobado**.
+
+Mientras el pago/recepción no ocurra, Nexia puede continuar únicamente con trabajo seguro y sin gasto: preparación del intake/QC, estructura de medición, criterios de pricing y análisis comparativo. **No se justifica una segunda compra** hasta obtener evidencia del primer lote.
 
 
 ## Product-archetype demand refresh — 2026-10-08
