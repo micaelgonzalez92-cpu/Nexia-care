@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-08T19:10:24+02:00",
+  "updated_at": "2026-10-08T21:10:00+02:00",
   "status": "ACTIVE / VALIDACIÓN",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
   "current_action": "Kael mantiene pendiente el pago del lote; NEXIA prepara intake/QC, economía, pricing y listing a coste 0.",
   "last_completed_action": "Ledger operativo de intake/QC, SKU scoring, listing engine y pricing engine preparados y verificados en STATE v45.",
-  "evidence": "STATE v45; pilot measurement sheet; intake/QC protocol; 0 € spend; payment not executed.",
+  "evidence": "STATE v45; BOOT reconciled to current STATE blob; pilot measurement sheet; intake/QC protocol; 0 € spend; payment not executed.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout €61.30 entregado verificado; pago pendiente de Kael.",
   "parallel_work": [
