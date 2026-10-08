@@ -187,3 +187,26 @@ After sale, compare score against outcome. The score is considered useful only i
 ### Evidence rule
 
 Do not award a high score merely because a supplier or marketplace claims a high resale value. Comparable listings are evidence for a pricing hypothesis; realized completed sales are stronger evidence for demand and economics.
+
+
+## Listing engine — pilot-ready, €0
+
+Each READY SKU must pass this sequence before publication:
+
+1. **Identity:** brand, exact category, size and model/style evidence verified.
+2. **Condition:** state and every material defect recorded; defect photos mandatory where applicable.
+3. **Measurements:** record the measurements relevant to the garment type.
+4. **Photo set:** full garment first, then front/back, label/size, brand/logo, material/care, distinctive details and defects. Use only our own photos; do not use stock/Internet images or watermarked images.
+5. **Title:** concise and factual: brand + garment type + distinctive model/style signal + size when useful. Do not add unrelated brand names or keywords.
+6. **Description:** factual condition, measurements, material/care information when verified, distinctive details and defects. Unknown information stays UNKNOWN; do not invent vintage/year/model claims.
+7. **Pricing:** initial asking price based on SKU score, condition and comparable evidence; minimum price must protect the experiment's contribution floor.
+8. **Channel:** default pilot channel = Vinted Pro once the professional account and legal/census gate are resolved; do not publish prematurely.
+9. **Tracking:** publication timestamp, photo variant, title/search-term variant, asking price, minimum price and all subsequent views/favourites/messages/offers/sales must be recorded.
+
+### Listing quality gate
+
+`READY` only if identity + condition + photos + measurements + price hypothesis are complete. Any authenticity concern, contradictory evidence or missing material information moves the SKU to `HOLD`.
+
+### Current platform evidence
+
+Vinted currently states that sellers can add up to 20 informative photos; the first should show the complete item, photos should be the seller's own, labels/logos and defects should be visible, and natural light is recommended. Vinted also warns against adding unrelated brand names/hashtags in descriptions and against misleading brand selection. These are platform rules/recommendations and may change; recheck before the first live publication.
