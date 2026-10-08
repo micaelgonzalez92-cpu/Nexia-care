@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-08T13:46:00+02:00",
+  "updated_at": "2026-10-08T19:10:24+02:00",
   "status": "ACTIVE / VALIDACIÓN",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "Kael revisa el lote piloto; NEXIA construye en paralelo la arquitectura operativa resale-first a coste 0.",
-  "last_completed_action": "Arquitectura resale-first creada; STATE v44 y BOOT reconciliados.",
-  "evidence": "STATE v44; BOOT v3; architecture artifact NEXIA_RESALE_OPERATING_ARCHITECTURE.md; 0 € spend; no payment executed.",
+  "current_action": "Kael mantiene pendiente el pago del lote; NEXIA prepara intake/QC, economía, pricing y listing a coste 0.",
+  "last_completed_action": "Ledger operativo de intake/QC, SKU scoring, listing engine y pricing engine preparados y verificados en STATE v45.",
+  "evidence": "STATE v45; pilot measurement sheet; intake/QC protocol; 0 € spend; payment not executed.",
   "capital_spent_eur": 0,
-  "human_gate": "EXP-RESALE-001A: compra aprobada hasta 55 € + transporte; checkout pendiente de Kael.",
+  "human_gate": "EXP-RESALE-001A: compra aprobada; checkout €61.30 entregado verificado; pago pendiente de Kael.",
   "parallel_work": [
     "EXP-RESALE-001A pilot preparation",
     "Resale operating architecture",
     "Supplier/unit economics matrix",
     "Core continuity/resilience maintenance"
   ],
-  "next_action": "Completar modelo de datos, intake/QC, unit economics y reporting para aplicar al primer lote.",
+  "next_action": "Tras confirmar el pago, recepción/QC de SRC-001-01..10. Mientras tanto, no hay gasto adicional justificado.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica."
 }
