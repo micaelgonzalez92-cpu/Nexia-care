@@ -257,3 +257,12 @@ Continue zero-cost falsification of exclusions, commission basis and conversion 
 - Updated `NEXIA_PROGRESS_DASHBOARD.md` to version 1.1 with six evidence-gated stages: Activity, Evidence, Validation, Extraction, Repeatability and Scale, including what each stage proves and minimum evidence to claim it.
 - Canonical STATE v50 records the ladder and current position: Activity / research evidence; own demand validation, extraction, repeatability and scale are not achieved. Public research signals are not own sales.
 - BOOT is being aligned to the exact STATE v50 blob SHA. No spend, sale, external action, deployment or runtime automation is claimed.
+
+
+## 2026-10-09 — Economic outcome-first scoring and action lifecycle
+- Central scoring rule: files, commits, messages, technical task counts and automation count do not increase Nexia's score by themselves.
+- Primary progress metric is demonstrated sustainable net profit after tax over a defined, reconciled period; contribution, settled transactions, validated demand and repeatability are supporting evidence, not substitutes for reconciliation.
+- Per-SKU/experiment economics must include allocated landed cost, fees, shipping/packaging, returns/defects, advertising, other variable costs and measured labor time with an explicit hourly-rate assumption; reconcile overhead and taxes separately.
+- Canonical action lifecycle: REQUESTED -> IN_PROGRESS -> EXECUTED -> VERIFIED; BLOCKED, FAILED and CANCELLED are explicit terminal states. Only VERIFIED is complete.
+- Decision priority: authority/safety, bottleneck and evidence gate, economic impact or uncertainty reduced, cost/risk, human time, repeatability. Check existing artifacts/event ledger before repeating work.
+- Documentation-only changes do not change the business stage. No spend or external action; EXP-RESALE-001A checkout €61.30 remains unpaid; no sale/extraction demonstrated.
