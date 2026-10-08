@@ -71,3 +71,22 @@ Every metric record should include:
 **Next action:** no new purchase or external contact. Prepare the zero-cost intake/measurement sheet and a comparable-sourcing matrix while preserving the existing pilot approval. Once inventory is physically received, record item-level intake evidence and timestamps before listing.
 
 **Current economics:** checkout €61.30 delivered for 10 items; payment not executed; spend €0, revenue €0, profit €0 recorded. The €15 average realized-price target and €10 contribution target remain unresolved as documented; do not change the gate without Kael's explicit decision.
+
+
+## E. Progress ladder — what each stage actually proves
+
+| Stage | What to measure | What it demonstrates | Minimum evidence to claim the stage |
+|---|---|---|---|
+| **Activity** | Researches completed, actions executed, tasks closed | Work was performed | Action log and artifact/result; never equate activity with business success |
+| **Evidence** | Verifiable data, source quality, independent corroboration, timestamps | A claim is better supported | Observable source/proof, provenance and limitations; distinguish primary from secondary evidence |
+| **Validation** | Real demand, sellable rate, realized prices, full costs, contribution margin, returns and time | The hypothesis withstands tests at the stated scope | Actual pilot/cohort data and complete unit economics; counter-evidence and failure criteria addressed |
+| **Extraction** | Settled revenue, refunds, variable costs and realized contribution | Economic value was actually generated | Transaction/payment evidence plus reconciled costs; listings, gross asking prices or projections do not count |
+| **Repeatability** | Repeated extractions under the same documented method, success rate and variance | The method can work again | More than one independent successful cycle/cohort under recorded conditions; an isolated win is insufficient |
+| **Scale** | Sustainable after-tax net profit, throughput, capacity, working capital, quality and operational failure rate | Growth has a sound economic and operational basis | Multiple repeatable cycles, reconciled tax-adjusted economics, demand beyond the initial sample and demonstrated capacity without unacceptable quality/risk degradation |
+
+### Stage assignment and anti-inflation rules
+- Report the **highest stage supported by evidence**, and show each earlier stage separately; do not average stages into a vanity score.
+- A stage may be marked **IN PROGRESS** while evidence is collected, but not as achieved.
+- Keep evidence status separate from stage status: for example, a verified repository commit can prove activity/document persistence, not demand validation or extraction.
+- Current resale mission position: **ACTIVITY / RESEARCH EVIDENCE**. The pilot has not been paid for or received; there are no verified own sales, no extraction and no repeatability evidence. Scale is **NOT ACHIEVED**.
+- Stage changes require a dated evidence record and canonical-state update. If evidence is missing or contradictory, retain the lower stage and explain the blocker.
