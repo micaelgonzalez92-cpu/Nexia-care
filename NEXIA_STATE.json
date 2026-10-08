@@ -414,5 +414,36 @@
       }
     ],
     "note": "Scenarios only; not revenue."
+  },
+  "parallel_opportunities": [
+    {
+      "id": "OPP-RESALE-001",
+      "name": "Reventa profesional de ropa de segunda mano España — Vinted + multicanal",
+      "stage": "VETA",
+      "status": "RESEARCHED_NOT_VALIDATED",
+      "cost_eur": 0,
+      "human_gate_required_for_purchase": true,
+      "thesis": "Comprar ropa usada a coste efectivo bajo por prenda vendible, vender con ticket suficiente y escalar mediante inventario centralizado y automatización fuera de Vinted.",
+      "critical_constraint": "Vinted permite una cuenta estándar + una Pro, pero prohíbe cuentas duplicadas y herramientas externas como bots/scrapers salvo autorización.",
+      "research_artifact": "NEXIA_VINTED_RESELLING_RESEARCH.md",
+      "next_action": "Comparar 5 proveedores y 20 prendas/categorías por proveedor sin comprar; calcular coste efectivo por prenda vendible, precio de salida y margen.",
+      "evidence": "Demanda española fuerte; Vinted GMV 2025 10.8B€; ecosistema mayorista localizado; canales alternativos identificados.",
+      "unknowns": [
+        "sell-through real",
+        "tasa vendible por proveedor",
+        "minutos por prenda",
+        "devoluciones",
+        "margen neto fiscal",
+        "reproducibilidad del sourcing"
+      ]
+    }
+  ],
+  "last_research_action": {
+    "date": "2026-10-08",
+    "topic": "ropa segunda mano España / Vinted",
+    "status": "COMPLETED_WITHOUT_SPEND",
+    "artifact": "NEXIA_VINTED_RESELLING_RESEARCH.md",
+    "commit": "642faa855f6209cd73a4edf9313b092f085123fb",
+    "next_action": "Comparar proveedores y unit economics antes de cualquier compra."
   }
 }
