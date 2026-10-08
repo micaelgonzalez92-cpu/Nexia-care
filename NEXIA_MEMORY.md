@@ -60,7 +60,7 @@ Acumular evidencia y aprendizaje operativo para evitar repetir experimentos, sep
 - Extracciones: 0
 - Presupuesto máximo: 100 €/semana
 - Cualquier gasto requiere aprobación explícita de Kael.
-- Los primeros 7,25 € permanecen reservados hasta existir un experimento concreto que justifique utilizarlos.
+- No existe una reserva fija de 7,25 €. Priorizar validación a 0 €; límite de presupuesto: 100 €/semana; cualquier gasto requiere aprobación explícita de Kael. Solo reservar fondos por obligaciones, costes comprometidos o experimento aprobado y documentado.
 
 ## Status
 Fase: VALIDACIÓN
@@ -266,3 +266,10 @@ Continue zero-cost falsification of exclusions, commission basis and conversion 
 - Canonical action lifecycle: REQUESTED -> IN_PROGRESS -> EXECUTED -> VERIFIED; BLOCKED, FAILED and CANCELLED are explicit terminal states. Only VERIFIED is complete.
 - Decision priority: authority/safety, bottleneck and evidence gate, economic impact or uncertainty reduced, cost/risk, human time, repeatability. Check existing artifacts/event ledger before repeating work.
 - Documentation-only changes do not change the business stage. No spend or external action; EXP-RESALE-001A checkout €61.30 remains unpaid; no sale/extraction demonstrated.
+
+
+## Decisión de política de capital — 2026-10-09
+- Kael aprobó eliminar la reserva fija e inexplicada de 7,25 €.
+- La reserva registrada sigue siendo 0 €; esto no significa que haya capital disponible ni modifica el capital registrado (0 €).
+- Se mantiene el límite máximo de 100 €/semana, la prioridad de experimentos a 0 € y la aprobación explícita previa a cualquier gasto.
+- Solo se pueden earmarcar fondos por obligaciones documentadas, costes comprometidos o un experimento concreto aprobado. No inventar reservas ni confundir presupuesto con dinero disponible.
