@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "boot_version": 7,
-  "generated_at": "2026-10-09T12:30:00+02:00",
+  "boot_version": 8,
+  "generated_at": "2026-10-09T13:00:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -12,8 +12,8 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
-  "last_verified_state_version": 49,
-  "last_verified_state_blob_sha": "ba06085ffe29cc618f0c811e6d8fde7e9d1573ce",
+  "last_verified_state_version": 50,
+  "last_verified_state_blob_sha": "6bae4ad3962d90fa6061cb604d7a21dcf22ca418",
   "phase": "VALIDACIÓN",
   "active_experiment": {
     "id": "EXP-RESALE-001",
@@ -26,7 +26,7 @@
     "status": "ACTIVE"
   },
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout verificado en €61.30 entregado; pago pendiente de Kael",
-  "last_confirmed_action": "2026-10-09: STATE v49 links evidence-gated progress dashboard separating operational throughput from business outcomes; dashboard and STATE reread; derived reconciliation in progress.",
+  "last_confirmed_action": "2026-10-09: STATE v50 records evidence-gated progress ladder ACTIVITY → EVIDENCE → VALIDATION → EXTRACTION → REPEATABILITY → SCALE; dashboard updated and read back.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
