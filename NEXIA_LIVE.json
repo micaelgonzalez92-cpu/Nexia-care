@@ -2,9 +2,9 @@
   "updated_at": "2026-10-09T12:00:00+02:00",
   "status": "ACTIVE / VALIDACIÓN",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "Reconcile derived continuity artifacts after adding R1-R5. Pilot payment remains pending; no business gates changed.",
+  "current_action": "Reglas operativas reforzadas R1-R5 persistidas; reconciliación final completada y artefactos re-leídos. Pago del piloto sigue pendiente de Kael.",
   "last_completed_action": "Added canonical NEXIA_OPERATIONAL_RULES.md (R1-R5), linked from STATE v48, and verified STATE/BOOT alignment; €0, no business-side effects.",
-  "evidence": "STATE v48 reread; BOOT v6 reread and exact STATE blob SHA aligned; operational rules file created. Remaining derived artifacts being checkpointed.",
+  "evidence": "STATE v48 reread; BOOT v6 version and blob SHA exactly aligned; operational rules file, LIVE, MEMORY, MASTER_BACKUP and EVENT_LOG reread after writes; event EVT-2026-10-09-RULES-001 present. €0 impact; no external effects.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout €61.30 entregado verificado; pago pendiente de Kael.",
   "parallel_work": [
@@ -13,7 +13,7 @@
     "Supplier/unit economics matrix",
     "Core continuity/resilience maintenance"
   ],
-  "next_action": "Finish MEMORY, MASTER_BACKUP and EVENT_LOG checkpointing, then verify all changed artifacts.",
+  "next_action": "Cuello de botella comercial: pago del piloto ya aprobado pendiente de Kael. Mientras tanto, preparar matriz de proveedores/comparables y protocolo de intake a coste 0; no comprar ni cambiar umbrales.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — ACTIVE, R1-R5"
