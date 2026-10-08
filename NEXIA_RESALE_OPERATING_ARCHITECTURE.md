@@ -105,3 +105,164 @@ Before building a large dashboard or automation layer, prove the data model with
 
 ## 8. Success condition for scaling
 Do not scale inventory because the first batch sells. Scale only when sourcing quality, contribution, preparation time, sell-through and cash cycle are reproducible across repeated batches.
+
+
+## 9. Marketing & Demand Generation Engine
+
+Marketing is a first-class operating module, not an afterthought. Its purpose is to increase qualified demand, realized sale price, sell-through speed and repeatability while protecting contribution margin.
+
+### A. Marketing Intelligence
+Continuously monitor:
+- brand/category demand signals;
+- marketplace search and comparable listings;
+- price bands and observed sell-through proxies;
+- seasonality;
+- trends, aesthetics and micro-trends;
+- competitor positioning;
+- buyer objections and questions;
+- content formats that generate attention;
+- channel-specific rules and opportunities.
+
+Output: Demand Score + content hypothesis + pricing/positioning implications.
+
+### B. Offer & Positioning
+For each SKU/category define:
+- target buyer;
+- core value proposition;
+- condition/quality proof;
+- differentiation;
+- target price and minimum price;
+- urgency/scarcity only when truthful;
+- bundle/cross-sell opportunity;
+- channel-specific positioning.
+
+Never fabricate scarcity, provenance, authenticity, condition or performance claims.
+
+### C. Marketplace Conversion
+Optimize the complete conversion chain:
+IMPRESSIONS -> CLICKS/OPENS -> FAVOURITES/SAVES -> MESSAGES/OFFERS -> SALE -> COMPLETION.
+
+Variables to test:
+- primary photo;
+- photo order;
+- title/search terms;
+- description structure;
+- measurements;
+- price;
+- minimum price;
+- response speed;
+- offer strategy;
+- listing completeness;
+- timing of publication.
+
+The engine must distinguish attention from commercial evidence. Views/favourites are leading indicators, not revenue.
+
+### D. Organic Content
+Build a low-cost content system around reusable assets:
+- product-focused short-form content;
+- styling/outfit combinations;
+- before/after preparation;
+- brand/category education;
+- sourcing/process credibility;
+- capsule and bundle ideas;
+- seasonal edits;
+- customer proof when legitimately available.
+
+Priority is organic distribution before paid acquisition.
+
+### E. External Demand Channels
+Evaluate selectively:
+- Instagram;
+- TikTok;
+- Pinterest;
+- Google/SEO where economically justified;
+- community/local channels;
+- email/CRM once a compliant audience exists;
+- partnerships/collaborations with relevant creators or niche communities.
+
+No channel is adopted because it is fashionable. It must show incremental contribution or provide sufficiently strong validated learning.
+
+### F. Paid Acquisition
+Paid advertising is a RED/HUMAN-GATE activity until unit economics prove it can work.
+
+Before spending, define:
+- target CAC;
+- contribution before advertising;
+- maximum CAC compatible with positive contribution;
+- test budget;
+- attribution method;
+- success/failure threshold;
+- stop-loss.
+
+No paid campaign should be funded merely to create traffic.
+
+### G. Retention & Customer Value
+Once sales exist, measure:
+- repeat purchase rate;
+- customer acquisition source;
+- customer lifetime value where sample size permits;
+- repeatable product/category affinity;
+- referral potential;
+- customer service issues;
+- reasons for returns and lost sales.
+
+Retention actions must respect applicable privacy, consent and platform rules.
+
+### H. Marketing Measurement
+Minimum marketing ledger:
+campaign/content ID, channel, date, SKU/category, objective, cost, impressions/reach, clicks/opens, favourites, messages, offers, sales, realized revenue, attributable contribution, CAC where measurable, and learning.
+
+Core KPIs:
+1. incremental realized contribution;
+2. sell-through / days to sale;
+3. realized price vs target price;
+4. contribution per marketing hour;
+5. CAC when paid;
+6. repeat purchase rate when sample permits.
+
+### I. Marketing Experiment Protocol
+Every material test follows:
+HYPOTHESIS -> ASSET/ACTION -> COST -> METRIC -> SUCCESS -> FAILURE -> RISK -> LEARNING -> DECISION.
+
+Examples of €0 experiments:
+- two listing-photo sequences;
+- two title structures;
+- price-positioning tests;
+- category-specific content formats;
+- bundle presentation;
+- timing/day-of-week tests;
+- cross-listing positioning.
+
+Do not confuse correlation with causation. Preserve control variables where possible.
+
+### J. Marketing Automation Boundary
+GREEN / €0:
+- content calendars;
+- copy drafts;
+- keyword/positioning research;
+- experiment design;
+- KPI sheets;
+- performance summaries;
+- reusable templates;
+- customer-question libraries.
+
+YELLOW:
+- social account setup;
+- CRM/email tooling;
+- scheduled publishing;
+- creator partnerships;
+- bulk content operations.
+
+RED:
+- paid media spend;
+- contracts;
+- external credentials;
+- irreversible campaigns;
+- actions that violate marketplace/platform rules.
+
+### K. Marketing Department Operating Rhythm
+DAILY: monitor active listings, buyer signals, messages/offers and anomalies.
+WEEKLY: review demand, content, pricing, conversion and contribution.
+MONTHLY: identify winning categories/angles, kill weak channels/tests, update acquisition and content priorities.
+
+Marketing must report to the same economic layer as sourcing and sales. The objective is not maximum reach; it is maximum sustainable contribution per unit of capital and human time.
