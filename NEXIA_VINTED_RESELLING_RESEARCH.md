@@ -445,3 +445,54 @@ El gate original de contribución ≥10 €/unidad y precio medio ≥15 € sigu
 - Mantener el Human Gate de pago de €61,30 como pendiente; la aprobación anterior no prueba que se haya pagado.
 - Próxima investigación gratuita: identificar los artículos exactos del lote y comparar por modelo/diseño/estado, o usar el lote solo si Kael decide que el valor de aprendizaje justifica el coste pese a la incompatibilidad económica de los gates. No presentar el piloto como oportunidad económicamente validada.
 - Coste de esta investigación: 0 €. Efecto económico: no instrumentado; ninguna venta, compra ni beneficio generado.
+
+
+## STRATEGIC UPDATE — 2026-10-09 — INTERNATIONAL MARKETS + TEXTILE MODEL PORTFOLIO
+
+### Decision frame
+The opportunity universe is not restricted to Spain. Treat Spain as a possible launch/operating base, not the boundary of suppliers or customers. Research suppliers and customers in the EU/EEA, UK, US and other markets when shipping, customs, VAT, returns, consumer rules, platform access and support still allow positive contribution. Do not assume cross-border is automatically better; evaluate landed cost and customer-level contribution by destination.
+
+The textile research/operating stack should be reusable across models. Keep vintage resale as one candidate, not a predetermined winner. Do not change the approved €61.30 pilot gate or make any purchase based on this strategic expansion.
+
+### Candidate models to compare
+1. **Vintage/second-hand resale (curated one-off inventory).** Potential differentiation and control over photography/condition/rarity; each unit is unique, requiring intake, authenticity/condition checks, manual content and stock synchronization. Working capital and unsold stock are material risks.
+2. **New clothing dropshipping / branded outlet wholesale.** No need to hold each SKU if supplier fulfils orders, but catalogue prices, subscription/integration costs, stock synchronization, return/size-exchange handling, shipping and actual retail price determine viability. Supplier marketing claims about “high margins” are not evidence of our margin.
+3. **Print-on-demand (POD) clothing.** No bulk inventory; production follows an order and can ship from regional facilities. Requires a differentiated design/niche and reliable organic demand. Product + fulfilment + shipping + platform/payment fees + refunds + customer acquisition can leave low contribution; no sales channel or demand is yet validated.
+4. **Wholesale deadstock/outlet/overstock, then selective resale.** Potential branded product range, but minimum orders and capital lock-up can exceed the €100/week cap or conflict with €0 validation. Do not buy without item-level landed-cost and sell-through evidence.
+5. **Hybrid test:** validate demand using mockups/content and supplier/marketplace research; where allowed, use a no-cost waitlist or organic content before paid storefront/subscription. Do not accept orders or publish commercial offers until fulfilment, terms, legal obligations and approvals are clear.
+
+### Public supplier leads — RESEARCH ONLY, not validated
+- **Printful Europe** (https://www.printful.com/uk/print-on-demand-europe): supplier says no upfront costs or minimum order requirement for POD, with production/fulfilment facilities in Spain, Latvia and the UK and worldwide shipping subject to exclusions. This does not mean a store, payment processing, customer acquisition or legal compliance is free; verify actual SKU prices, shipping and destination times.
+- **B2B Griffati** (https://www.griffati.com/en/): public page advertises clothing dropshipping, no minimum per-piece order, tracked shipping and handling of returns/size changes; same page also states minimum €500 for wholesale purchases and presents varying minimums in different sections. Clarify the exact dropship plan, fees, VAT, stock feed, shipping and returns before any decision. Do not treat supplier claims of 75–100% margins as verified economics.
+- **Vintage Wholesale Europe** (https://vintagewholesaleeurope.com/): public page presents vintage/second-hand wholesale and a “€5 per piece or less” category. This is a lead only; lot composition, grade/yield, minimum order, shipping, import treatment and return policy are not verified.
+- **Shopify clothing supplier comparison** (https://www.shopify.com/uk/blog/dropshipping-clothing-suppliers): useful discovery list, not independent proof of profitability. It highlights stock quality, shipping, fees, returns, support and inventory sync as supplier selection criteria.
+
+### Cross-border compliance is part of unit economics
+- EU distance selling generally carries a 14-day consumer withdrawal right for online goods, with specific exceptions; defective-item return costs generally sit with the trader. Source: https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm
+- Cross-border EU B2C VAT can require OSS/IOSS analysis depending on transaction and fulfilment route. Source: https://vat-one-stop-shop.ec.europa.eu/index_en
+- If sourcing from outside the EU or selling beyond the EU, add customs/import VAT, duties, delivery-time variance, local consumer rules and returns cost by destination. Obtain country-specific professional guidance before launch; this research is not legal/tax advice.
+- For dropshipping, seller-facing promises remain our responsibility even when a supplier ships the parcel. Verify product safety/labeling, origin, authenticity/IP rights, delivery and refund workflows.
+
+### Fair comparison framework — same budget and evidence standard
+For each model, destination and SKU/offer, estimate then verify:
+1. Realized selling price net of VAT where applicable and discounts.
+2. Product/base fulfilment cost, inbound/outbound shipping, customs/duties, payment/platform fees.
+3. Returns, refunds, defects, chargebacks, customer support and human time at an explicit hourly rate.
+4. Organic acquisition assumptions separately from paid acquisition; UNKNOWN is not zero.
+5. Contribution per completed order, cash needed before payout, refund exposure, stock risk, delivery time and time-to-first-evidence.
+6. Reproducibility: repeatable supplier stock, stable costs, repeatable traffic and multiple settled transactions—not supplier claims, listings or mockup engagement alone.
+
+Hard filters before ranking:
+- €0 validation path preferred; never exceed the global €100/week ceiling and no spending without explicit approval for the exact action/scope/cost.
+- No paid store plan, supplier subscription, samples, ad spend, order or external contact without approval.
+- Do not sell counterfeit or unclear-authenticity branded goods; do not use copyrighted designs/brands without rights.
+- No model advances from RUMOR/SEÑAL to VETA/VALIDADA solely from supplier claims, listing prices or broad market size.
+
+### Preliminary ranking — hypothesis, not a decision
+- **First research priority:** zero-cost demand and unit-economics comparison of (A) curated vintage resale, (B) niche POD, and (C) clothing dropship with EU-based fulfilment.
+- **POD** may be easiest to test without inventory, but demand/traffic and contribution are unknown.
+- **Vintage** can use marketplace demand but inventory quality and one-off handling constrain automation; current pilot economics are weak at generic tee prices.
+- **General dropshipping** avoids inventory but is not inherently profitable and may require paid platform subscriptions/marketing; generic products are easy to compare and difficult to differentiate.
+- **Wholesale stock buying** ranks last for now due to capital and unsold-inventory exposure unless a no-cost item-level evidence path emerges.
+
+No candidate is selected as the winner. No money was spent; no supplier was contacted; no store was opened; no order was placed; no sales or profit were generated. Next action: build a zero-cost comparison sheet for the three leading candidates using concrete SKUs, destinations, costs and conservative realized-price assumptions, then falsify before any commercial commitment.
