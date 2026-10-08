@@ -9,6 +9,23 @@ Effective acquisition cost: €6.13/item
 Payment: PENDING KAEL
 Purchase executed: NO
 
+## Pilot success gate — canonical alignment
+
+The pilot must be judged from real completed outcomes, not asking prices or supplier claims. Canonical success signals are:
+- **>=80% sellable** (at least 8/10 publishable after QC);
+- **average realized sale price >= €15**;
+- **>= €10 contribution per sold unit** under the architecture's contribution formula;
+- preparation time recorded for every item;
+- returns/incidents recorded.
+
+Failure signals are:
+- <60% sellable;
+- average realized sale price <€12;
+- >20 minutes preparation per item without compensating economics;
+- repeated quality/compliance issues.
+
+Important: the €15 realized-price threshold and the €10 contribution threshold are separate tests. A €15 sale does not automatically mean €10 contribution because packaging, preparation, channel costs and incident/return cost may reduce contribution.
+
 ## Operational ledger — SRC-001-01..10
 
 Pre-purchase baseline:
