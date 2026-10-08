@@ -310,3 +310,40 @@ The pricing engine is successful only if, across repeated batches, it improves t
 - return/incident rate.
 
 Do not optimize for maximum asking price. Optimize for **risk-adjusted contribution and inventory velocity** while preserving the experiment's minimum economics.
+
+
+## Product-archetype tagging — pilot-ready, €0
+
+To make the pilot useful for the future Fashion Intelligence layer, every received SKU should be tagged after QC with:
+
+- **ERA_SIGNAL:** 60s / 70s / 80s / 90s / 2000s / Y2K / contemporary / UNKNOWN
+- **AESTHETIC:** sportswear / football / collegiate / rugby / workwear / utility / streetwear / graphic-vintage / heritage-preppy / outdoor / other / UNKNOWN
+- **GARMENT_ARCHETYPE:** basic tee / graphic tee / jersey / polo / rugby / sweatshirt / jacket / trackwear / other
+- **DIFFERENTIATOR:** logo / graphic / team / collaboration / model-detail / fabric / cut / rarity / none / UNKNOWN
+- **FASHION_CONFIDENCE:** VERIFIED / HYPOTHESIS / UNKNOWN
+
+These tags are descriptive evidence fields, not trend claims. They must never increase a SKU's score merely because an aesthetic is currently fashionable.
+
+### Fashion × economics rule
+
+For each SKU compare:
+
+1. fashion signal;
+2. market/comparable evidence;
+3. QC and authenticity;
+4. expected realized-price band;
+5. preparation time;
+6. contribution floor.
+
+A strong trend signal without viable economics remains HOLD/C. A commercially viable SKU with no trend signal can still be sold. Trend intelligence is an input to selection, not a substitute for realized-sales evidence.
+
+### First-batch learning objective
+
+After the 10 garments are received, compare archetype tags against:
+- realized sale price;
+- days to sale;
+- sell-through;
+- contribution;
+- contribution/minute.
+
+Only promote an archetype from **SIGNAL** to a sourcing preference after repeated evidence across batches.
