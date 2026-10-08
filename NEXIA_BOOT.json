@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "boot_version": 2,
-  "generated_at": "2026-10-07T00:12:21+02:00",
+  "boot_version": 3,
+  "generated_at": "2026-10-08T13:46:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -12,21 +12,21 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
-  "last_verified_state_version": 41,
-  "last_verified_state_blob_sha": "e29dffb10930adf26e747811b2047939237d0469",
+  "last_verified_state_version": 44,
+  "last_verified_state_blob_sha": "f5c5e91c7be013339fdafa58667980281b160086",
   "phase": "VALIDACIÓN",
   "active_experiment": {
-    "id": "EXP-001B",
-    "name": "Prueba de diagnóstico con usuario real",
-    "status": "BLOCKED_BY_HUMAN_REAL_WORLD_INPUT"
+    "id": "EXP-RESALE-001",
+    "name": "Falsación de sourcing + unit economics de ropa de segunda mano",
+    "status": "APPROVED_PENDING_PURCHASE"
   },
   "mission": {
-    "id": "MISSION-003",
-    "name": "Falsar el canal afiliado 6% sin gasto",
-    "status": "CHANNEL_VERIFIED__KEY_TERMS_CONFLICT_REQUIRES_RESOLUTION"
+    "id": "MISSION-RESALE-001",
+    "name": "Validar y construir la operación de reventa profesional de ropa de segunda mano en España",
+    "status": "ACTIVE"
   },
-  "human_gate": "K-001",
-  "last_confirmed_action": "NEXIA Control Tower 2026-10-07: detected and repaired BOOT drift against canonical STATE v41. No business-side effects.",
+  "human_gate": "EXP-RESALE-001A: compra aprobada; checkout pendiente de Kael",
+  "last_confirmed_action": "2026-10-08: Kael aprobó EXP-RESALE-001A; NEXIA adaptó arquitectura operativa a resale-first sin gasto.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
