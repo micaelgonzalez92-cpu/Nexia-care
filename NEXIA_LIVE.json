@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-09T00:00:00+02:00",
+  "updated_at": "2026-10-09T00:05:00+02:00",
   "status": "ACTIVE / VALIDACIÓN",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
   "current_action": "Kael mantiene pendiente el pago del lote aprobado; Nexia documentó una inconsistencia aritmética entre el umbral de venta media de €15 y el objetivo de contribución de €10. No se ha cambiado el gate.",
   "last_completed_action": "Falsación económica del umbral de contribución registrada en STATE v46 y documento de análisis; coste €0.",
-  "evidence": "STATE v46; addendum de falsación económica; pago no ejecutado; gasto e ingresos reales siguen en €0.",
+  "evidence": "STATE v47; BOOT aligned to canonical STATE blob SHA; unit-economics falsification addendum; memory/backup/event log checkpointed; payment not executed; spend/revenue/profit €0.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout €61.30 entregado verificado; pago pendiente de Kael.",
   "parallel_work": [
