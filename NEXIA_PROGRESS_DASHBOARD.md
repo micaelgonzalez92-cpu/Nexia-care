@@ -1,7 +1,7 @@
 # NEXIA — REAL PROGRESS DASHBOARD
 
 Status: ACTIVE / EVIDENCE-GATED
-Version: 1.0
+Version: 1.2
 Updated: 2026-10-09
 Canonical operational source: `NEXIA_STATE.json`
 Purpose: separate technical activity from verified business outcomes. This document is a reporting view, not an independent source of truth.
@@ -14,6 +14,7 @@ Purpose: separate technical activity from verified business outcomes. This docum
 - **NOT ACHIEVED**: a target has not been met by available evidence.
 - A repository commit proves persistence of that repository change only. It does not prove deployment, functioning automation, demand, a sale, cash receipt or profit.
 - Do not aggregate technical activity into an economic-progress score. Show the two dimensions separately.
+- **Central scoring rule:** file count, commits, messages, tasks closed and automation count add zero points by themselves. The primary score is demonstrated progress toward sustainable after-tax net profit. Operational metrics diagnose reliability and throughput only.
 
 ## A. Business outcomes — primary scorecard
 
@@ -90,3 +91,30 @@ Every metric record should include:
 - Keep evidence status separate from stage status: for example, a verified repository commit can prove activity/document persistence, not demand validation or extraction.
 - Current resale mission position: **ACTIVITY / RESEARCH EVIDENCE**. The pilot has not been paid for or received; there are no verified own sales, no extraction and no repeatability evidence. Scale is **NOT ACHIEVED**.
 - Stage changes require a dated evidence record and canonical-state update. If evidence is missing or contradictory, retain the lower stage and explain the blocker.
+
+
+## F. Scoring and decision policy
+
+### Primary score: sustainable economic progress
+Do not create a vanity composite from activity counts. The primary scoreboard reports, separately and with evidence:
+1. **Net profit after tax** over a stated period, reconciled against settled receipts and all attributable costs.
+2. **Realized contribution per SKU and experiment**, including product acquisition, inbound shipping, VAT/tax treatment, platform/payment fees, packaging, defects/returns, advertising and the cost of labor/time.
+3. **Settled transactions and repeatability**, with refunds/chargebacks and timing included.
+4. **Validated demand and unit economics**, with sample size, period, uncertainty and counter-evidence.
+5. **Distance to the €1,000/month after-tax net-profit objective**, only when the underlying accounting data supports the calculation.
+
+No files, commits, automations, messages or technical tasks contribute points directly. They can affect a business metric only when a measurable causal result is shown (for example, verified time saved net of maintenance, lower failure costs, or increased settled contribution). If the causal result is not measured, report it as an operational change only.
+
+### Common unit-economics formula
+For each SKU and experiment, use actual realized values rather than asking prices:
+- Net sales proceeds excluding VAT collected on behalf of tax authorities, after discounts and refunds.
+- Minus landed product cost allocated to sellable units.
+- Minus platform/payment fees, packaging, shipping subsidies, returns/defects, advertising and other variable costs.
+- Minus labor cost = measured minutes × an explicit hourly-cost assumption; label the hourly rate as an estimate until confirmed.
+- Result = **contribution after attributable labor and variable costs**. Report fixed overhead and tax provision separately, then reconcile to net profit after tax. Do not subtract VAT twice; document the tax treatment and uncertainty.
+- For an experiment, include setup/research labor and all cohort costs, not only the cost of the sold unit. Show both cash result and fully costed result if labor is not paid in cash.
+
+### Decision priority
+Choose the next action by: (a) authority/safety gate; (b) bottleneck and unmet evidence gate; (c) expected economic impact or uncertainty reduced; (d) cost and downside risk; (e) human time; (f) repeatability. Avoid duplicate research unless a new source, changed condition or explicit falsification question justifies it.
+
+Current score interpretation: **technical/documentary progress is not economic progress**. Current verified own revenue and profit remain €0 recorded; validation/extraction/repeatability/scale remain unachieved. This reflects current evidence, not a claim that every data stream is instrumented.
