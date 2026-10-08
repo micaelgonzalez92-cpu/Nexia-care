@@ -412,3 +412,36 @@ Canonical pilot checkout total: €61.30 delivered for 10 shirts, payment pendin
 - Do not recommend Premium Vintage Wholesale for a purchase now: minimum €100, sold-out listing, no-return terms, and its €4/unit price reaches €5 per sellable unit at 80% yield before other costs.
 - Best next zero-cost research task: inspect current public asking prices for specific brand/category/condition comparables and separate them from completed-sale evidence wherever obtainable; then estimate a conservative price band without claiming realized demand.
 - Financial impact: €0. Inventory, sales, settled receipts and profit remain unverified/zero recorded.
+
+
+## UPDATE — 2026-10-09 — FALSACIÓN CON MUESTRA DE ANUNCIOS MARCADOS COMO VENDIDOS
+
+### Evidencia pública observada
+Búsquedas públicas de Vinted España encontraron anuncios indexados con etiqueta «Vendido» y precio visible:
+- Camisetas Nike básicas: ejemplos a 3,00 €, 3,50 € y 4,00 €.
+- Una Nike nueva con etiqueta/estampada: 14,00 €.
+- Camisetas adidas: ejemplos a 4,00 €, 6,00 €, 9,00 € y 10,00 €.
+- Una camiseta vintage de videojuego Diablo/Y2K (Screen Stars): 25,00 €.
+- Una camiseta Volcom etiquetada como vintage: 2,50 €.
+Fuentes de ejemplo:
+- https://www.vinted.es/items/9683154210-camiseta-nike?referrer=catalog
+- https://www.vinted.es/items/9578992798-camiseta-nike
+- https://www.vinted.es/items/9638605537-camiseta-adidas?referrer=catalog
+- https://www.vinted.es/items/8844391595-camiseta-adidas
+- https://www.vinted.es/items/9392281775-camiseta-adidas-talla-m?referrer=catalog
+- https://www.vinted.es/items/9708211349-camiseta-vintage-y2k-diablo-game-blizzard-m?referrer=catalog
+- https://www.vinted.es/items/8660447404-camiseta-vintage-hombre-talla-s?referrer=catalog
+
+### Límites de la evidencia
+La búsqueda indexa anuncios con estado «Vendido» y precios asociados; eso es una señal mejor que anuncios activos, pero NO acredita por sí sola el importe finalmente liquidado, descuentos negociados, devoluciones ni tiempo hasta vender. Al abrir varias URLs, Vinted las mostró como «¡Eliminado!» y ocultó el precio en el contenido extraído. Muestra pequeña, sesgada por términos de búsqueda y mezcla artículos básicos con piezas especiales. No extrapolarla a todo el lote.
+
+### Implicación económica
+La hipótesis de un precio medio realizado de 15 € para un lote genérico de camisetas deportivas de marca queda debilitada por los ejemplos visibles de camisetas básicas (aprox. 3–10 €); podría alcanzarse en piezas concretas con diseño, rareza, estado y demanda superiores, pero no se ha demostrado para un lote mixto.
+Con coste de lote entregado de 61,30 € para 10 unidades, coste nominal = 6,13 €/unidad antes de preparación, embalaje, tiempo, defectos, devoluciones e impuestos. A 8 €/unidad el máximo antes de otros costes es 1,87 €/unidad si las 10 son vendibles; con 8 vendibles, asignando todo el coste del lote a las vendibles, el coste es 7,6625 €/unidad y el margen previo a otros costes sería solo 0,3375 €/unidad. A 10 €/unidad serían 3,87 €/unidad con 10 vendibles o 2,3375 €/unidad con 8 vendibles, antes de los demás costes.
+El gate original de contribución ≥10 €/unidad y precio medio ≥15 € sigue siendo matemáticamente incompatible con el coste del piloto a 15 € incluso antes de otros costes; no se cambia ningún gate sin autorización de Kael.
+
+### Decisión operativa
+- No comprar ni gastar más por esta evidencia.
+- Mantener el Human Gate de pago de €61,30 como pendiente; la aprobación anterior no prueba que se haya pagado.
+- Próxima investigación gratuita: identificar los artículos exactos del lote y comparar por modelo/diseño/estado, o usar el lote solo si Kael decide que el valor de aprendizaje justifica el coste pese a la incompatibilidad económica de los gates. No presentar el piloto como oportunidad económicamente validada.
+- Coste de esta investigación: 0 €. Efecto económico: no instrumentado; ninguna venta, compra ni beneficio generado.
