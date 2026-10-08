@@ -44,8 +44,8 @@ Nexia must not recommend incorporation solely for image or tax folklore.
 ## 3. PRE-START REGISTRATION GATE
 
 **Current classification research (not yet a filing decision):**
-- **CNAE-2025 candidate: 47.79 — Comercio al por menor de artículos de segunda mano.** INE expressly includes retail sale of second-hand clothing in this class and says activities are classified by the goods sold, not by whether sales occur in a shop or online. citeturn4view0
-- **IAE candidate: Grupo 656 — Comercio al por menor de bienes usados tales como muebles, prendas y enseres ordinarios de uso doméstico.** This is the IAE group specifically covering used goods including garments. citeturn5search14turn5search17
+- **CNAE-2025 candidate: 47.79 — Comercio al por menor de artículos de segunda mano.** INE expressly includes retail sale of second-hand clothing in this class and says activities are classified by the goods sold, not by whether sales occur in a shop or online.
+- **IAE candidate: Grupo 656 — Comercio al por menor de bienes usados tales como muebles, prendas y enseres ordinarios de uso doméstico.** This is the IAE group specifically covering used goods including garments.
 - These are **RECOMMENDATION / CANDIDATE**, not a final registration instruction. Before filing, verify the exact activity mix (used clothing only vs. new stock, accessories, other goods, own pre-existing stock) and the current AEAT census classification.
 
 Before habitual business activity:
