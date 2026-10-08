@@ -563,3 +563,16 @@ These remainders are NOT contribution or net profit; they are preliminary arithm
 POD now has a more concrete public cost basis than before and remains the best zero-inventory research candidate. It is not yet VALIDATED: channel fees, tax treatment, final variant price, real shipping quote, target niche and demand are unresolved. Next free step is to compare two possible sales channels' fees and inspect public demand signals for one narrow design niche before drafting any live listing. Do not publish, contact, subscribe, buy a sample or run ads without explicit approval.
 
 Cost of research: €0. No store/listing/order/customer contact or sales. STATE canonical checkpoint not changed.
+
+
+## UPDATE — 2026-10-09 — CHANNEL FEE GATE: ETSY
+
+Official Etsy fees policy retrieved: https://www.etsy.com/legal/fees/
+- Listing fee: $0.20 per listing, charged whether or not it sells; listings normally expire after four months.
+- Transaction fee: 6.5% of displayed item price plus delivery and gift wrapping; for sellers outside the US, this transaction fee applies to item price, postage and applicable seller taxes.
+- A one-time shop set-up fee may apply and is shown during onboarding. Payment processing fees and possible VAT on Etsy fees are additional and depend on seller/account country; exact Spain-specific processing fee has not yet been verified.
+- Offsite Ads may create additional 15% (or, for shops that meet the relevant sales threshold, 12%) attributed-order fees, subject to Etsy's rules and eligibility.
+
+Illustrative fee arithmetic only: on a $24.99 order with shipping included, 6.5% transaction fee is approximately $1.62; adding the $0.20 listing fee yields $1.82 before payment processing, fee VAT, product/shipping costs, refunds, tax obligations and any ads. Thus the previous $8.08 EU pre-cost remainder would be reduced to about $6.26 before those still-unknown costs if Etsy were the channel and no other delivery charge was collected. This is NOT net profit or verified contribution.
+
+Decision: Etsy is not free to validate at listing stage and may include setup and other fees; do not open a shop or publish without approval. Continue desk research first and verify Spain-specific payment-processing fees from the official country schedule. No shop opened, listing created or fee incurred.
