@@ -306,3 +306,28 @@ No copiar los casos por sus cifras. Copiar los mecanismos que se repiten:
 - reinversión solo después de demostrar contribución.
 
 Nueva hipótesis operativa: el objetivo de los primeros 10 artículos no es demostrar que se pueden vender 10 camisetas, sino descubrir qué combinación de marca + categoría + presentación + precio + canal produce la mayor contribución por hora de trabajo y por euro de capital.
+
+
+## BENCHMARK UPDATE — 2026-10-08
+
+### Sam Lucker — Vinted
+The Times (08-10-2026): former marketing executive who moved into full-time second-hand clothing resale. Reports £6,000–£10,000/month, 10–15 items/day, focusing on Ralph Lauren, Carhartt and Patagonia; uses Fleek for sourcing and has brought his mother into the operation. Self-reported case, not audited.
+Operational lesson: when charity-shop supply becomes limiting, specialist wholesale sourcing can become the bottleneck; family/assistant labour can unlock throughput, but only when contribution per item supports it.
+
+### Callum Massey — Depop
+Reported by SWNS/Dailymotion and The Tab: started with small product sales while at university, moved into vintage clothing, reached about £1,000/month profit before going full-time, and later reported £250,000 cumulative sales across his Depop shops. A 2022 figure reported £56,000 revenue and £30,000 profit. Self-reported/media case, not audited.
+Operational lesson: a small initial experiment can reveal a repeatable niche; cumulative volume matters more than one-off high-ticket sales.
+
+### Community evidence — Vinted
+A Reddit r/vinted post from April 2025 reported 5,000 sales in four weeks, around 10 hours/week and claimed 55–60% margins. This is anecdotal and unverified; it is useful only as a source of hypotheses about high-throughput listing/sourcing practices, not as financial evidence.
+
+### New falsification lesson
+The strongest recurring bottlenecks are not simply demand:
+- sourcing enough desirable stock;
+- sell-through;
+- preparation/listing throughput;
+- realised price;
+- labour time;
+- stock risk.
+
+Therefore Nexia should measure inventory velocity and contribution/hour alongside contribution/item from the first pilot.
