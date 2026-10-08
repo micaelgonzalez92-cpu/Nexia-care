@@ -331,3 +331,25 @@ The strongest recurring bottlenecks are not simply demand:
 - stock risk.
 
 Therefore Nexia should measure inventory velocity and contribution/hour alongside contribution/item from the first pilot.
+
+
+## BENCHMARK UPDATE 2 — 2026-10-08
+
+### Morgan Purnell — Vinted / Depop / eBay
+Business Insider (2026): started in mid-2024 with about £400, buying Ralph Lauren trousers in bulk and selling via Depop/Vinted. TikTok helped grow his customer base. His business reported £142,235 revenue in 2025, with Vinted the majority; later expanded to eBay, outsourced some tasks and used AI tools for operations. Self-reported/media-reported figures, not audited.
+Lesson: a narrow branded category can be the entry wedge; social content can become a demand engine; outsourcing should follow proven unit economics rather than precede them.
+
+### Hannah Valentine — vintage resale evolving beyond marketplaces
+Business Insider Germany (06-08-2026): financed three years of university through vintage resale and later made resale a full-time activity. Reported about €42,100 gross sales in 2026 at the time of publication, while spending about €1,050/month on new stock. She reported that about 98% of income had shifted to pop-up vintage markets rather than Depop because she found the time economics better there.
+Lesson: marketplaces are not necessarily the terminal channel. Once enough demand/audience exists, direct or event-based channels can improve economics; however, this is a later-stage hypothesis for Nexia.
+
+### Current benchmark conclusion
+Three recurring routes now appear:
+A) Marketplace-first: Vinted/Depop/eBay -> volume -> multichannel.
+B) Audience-first: marketplace + TikTok/Instagram -> owned demand -> higher repeatability.
+C) Community/direct-first: marketplace proof -> pop-ups/live/community -> reduce platform dependence.
+
+Nexia should start with A because it has the lowest-cost validation path, while building the data and content assets required to test B later. C remains a future option.
+
+### Decision rule
+Do not copy revenue claims from case studies. Extract mechanisms only when repeated across independent cases and then test them against Nexia's own contribution, sell-through, preparation time and cash cycle.
