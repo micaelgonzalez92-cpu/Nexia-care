@@ -247,3 +247,62 @@ Fuentes:
 - https://about.wallapop.com/condiciones-de-uso/
 - https://www.ebay.es/help/selling/fees-credits-invoices/selling-fees?id=4822
 - https://www.boe.es/buscar/act.php?id=BOE-A-2024-1771
+
+
+## CASOS REALES DE ÉXITO — BENCHMARK 2026-10-08
+
+Objetivo: extraer patrones operativos de negocios/personas reales de reventa de ropa usada. Estas cifras son declaraciones reportadas por terceros o por los propios operadores; no se tratan como resultados auditados ni como previsión para Nexia.
+
+### Caso A — Scott Atkins / Vinted
+Reuters, 16-02-2026: empezó en 2024 como actividad para ahorrar para un coche; en 2025 pasó a tiempo completo. Compra ropa vintage y de segunda mano a mayoristas británicos, fotografía y vende en Vinted. Reporta £10.000/mes de ingresos y £7.000/mes de beneficio. Atribuye el resultado a consistencia y a centrarse en nichos con demanda.
+Lección Nexia: nicho + sourcing mayorista selectivo + consistencia; pero debemos auditar nuestros costes reales antes de extrapolar el ratio de beneficio.
+
+### Caso B — Andrea Rivas / Armario Vintaia (España)
+La Voz de Galicia, 27-03-2026: comenzó vendiendo su propia ropa en Vinted/Wallapop durante dos años. Tras comprobar salida rápida de camisetas de marca, pasó a comprar mercancía a un mayorista de Valencia por kilos, se hizo autónoma y profesionalizó la actividad. Opera con Facebook, Instagram, TikTok y un grupo privado de WhatsApp; vende localmente y también envía a Francia y Bélgica. Declara trabajo intensivo de lavado, costura, planchado y fotografía.
+Lección Nexia: existe un caso español muy cercano a nuestro modelo; sourcing valenciano + preparación + multicanal + comunidad propia. El cuello de botella real puede ser preparación, no publicación.
+
+### Caso C — Chloe Thompson
+Founder Insights, 30-09-2026: comenzó con £10 de compras de charity shops y ropa propia. En cuatro meses dejó enfermería; reporta unas 500 publicaciones activas entre Vinted y eBay y unas 150 ventas mensuales.
+Lección Nexia: validar con capital pequeño, construir inventario progresivamente y diversificar plataformas cuando el volumen lo justifica.
+
+### Caso D — Isabella Vrana / Depop
+British Vogue: más de 14.000 artículos vendidos; empezó durante la universidad vendiendo vintage y terminó operando un estudio con empleados. Su especialización estuvo centrada en vintage de finales de los 90 y principios de los 2000.
+Lección Nexia: una especialización estética/nicho puede convertirse en ventaja competitiva y justificar una operación profesional.
+
+### Caso E — Bella McFadden / Depop
+Fast Company: vendió más de 40.000 artículos y alcanzó más de £1M en ventas acumuladas en Depop; combinó vintage, deadstock y producto propio, además de construir una audiencia importante en Instagram/YouTube y contratar equipo.
+Lección Nexia: el marketing propio puede convertirse en activo estratégico, pero el caso ya incluye una escala y mezcla de negocio muy superiores al piloto.
+
+### Caso F — Retrograde Vintage
+Caso publicado por Magic Eraser: operación multicanal con 400+ listings activos y 80-100 nuevos artículos/semana. Reporta +60% de ingresos mensuales, 4x de velocidad de publicación y reducción a la mitad de devoluciones tras mejorar la consistencia fotográfica.
+Lección Nexia: fotografía no es decoración; puede ser una variable económica de velocidad de listing, conversión y devoluciones. La fuente es comercial y sus resultados no deben tratarse como independientes.
+
+### Caso G — Courtney Lynch / LYNCH
+Tilt, 26-08-2024: pasó de tener dificultades económicas y una tienda vintage a superar 100 artículos vendidos en un día mediante venta live; el caso reporta £25.000/mes en ventas. Vinted/Depop aparecen como referencia de la limitación del listing tradicional, mientras su aceleración vino de live selling.
+Lección Nexia: cuando el inventario y la audiencia alcancen masa crítica, el live selling puede ser canal de aceleración; no es prioritario para el piloto.
+
+## PATRONES TRANSVERSALES
+
+1. El sourcing es el cuello de botella recurrente. No basta con saber vender.
+2. Los nichos con demanda incorporada (Carhartt, Levi's, Nike, Ralph Lauren, etc.) aparecen repetidamente.
+3. La preparación física puede consumir mucho tiempo: lavado, planchado, reparación, medidas y fotografía.
+4. La consistencia de publicación importa.
+5. Multicanal aparece cuando el inventario/volumen lo justifica, no necesariamente al principio.
+6. La audiencia propia (Instagram/TikTok/WhatsApp/email) reduce dependencia futura de marketplaces.
+7. Live selling aparece como acelerador posterior, no como requisito inicial.
+8. El riesgo principal al escalar es convertir ingresos brutos en una falsa sensación de rentabilidad: stock lento, preparación, devoluciones, comisiones y coste de adquisición deben medirse.
+
+## IMPLICACIÓN PARA NEXIA
+
+No copiar los casos por sus cifras. Copiar los mecanismos que se repiten:
+- nicho con demanda;
+- sourcing medido por prenda vendible;
+- preparación estandarizada;
+- fotografía consistente;
+- publicación continua;
+- datos de precio y velocidad;
+- multicanal progresivo;
+- audiencia propia;
+- reinversión solo después de demostrar contribución.
+
+Nueva hipótesis operativa: el objetivo de los primeros 10 artículos no es demostrar que se pueden vender 10 camisetas, sino descubrir qué combinación de marca + categoría + presentación + precio + canal produce la mayor contribución por hora de trabajo y por euro de capital.
