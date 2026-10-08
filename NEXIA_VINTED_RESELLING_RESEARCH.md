@@ -534,3 +534,32 @@ https://vintagewholesaleeurope.com/products/reseller-starterpack
 Best next action remains free research, not purchase or subscription. Retrieve a usable exact POD quote for one standard tee and shipping to two destinations (one EU, one non-EU), then construct contribution scenarios at conservative retail prices. Compare that with the Griffati example only as a supplier-provided illustration and with vintage only once delivered price/yield are known. Keep all UNKNOWN fields explicit; do not replace missing values with zero.
 
 No supplier contacted; no subscription, store, sample, purchase or customer offer initiated. Cost €0. No sales or contribution generated. STATE canonical checkpoint was not changed; only this research file was updated.
+
+
+## UPDATE — 2026-10-09 — POD UNIT COST CHECK (PUBLIC PRICE SNAPSHOT)
+
+Official pages retrieved:
+- Bella + Canvas 3001 on Printful: https://www.printful.com/custom/mens/t-shirts/unisex-staple-t-shirt-bella-canvas-3001
+  - Search-indexed product price: **$11.92 with one print included**. This is a displayed starting price; variants, placement, tax and fulfilment settings can change it.
+- Printful shipping rates: https://www.printful.com/shipping
+  - T-shirts: **Europe $4.99** first item; **USA $4.95** first item. Rates can change and checkout/platform setup should be rechecked before any commercial launch.
+- Printful Europe overview: https://www.printful.com/uk/print-on-demand-europe
+  - Claims no upfront inventory investment/minimum order and identifies fulfilment facilities in Spain, Latvia and UK. Store/platform and marketplace costs are still separate.
+
+### Illustrative contribution arithmetic — NOT a profit forecast
+Assume base item cost $11.92 and standard shipping rate as displayed:
+- EU shipment: $11.92 + $4.99 = **$16.91** supplier cost before any applicable tax/other costs.
+- US shipment: $11.92 + $4.95 = **$16.87** supplier cost before any applicable tax/other costs.
+
+If a hypothetical customer pays $24.99 for the shirt and pays shipping separately, the arithmetic remainder before marketplace/payment fees, taxes, discounts, refunds, support time and acquisition cost would be $24.99 - $11.92 = **$13.07**. Shipping would need to be collected in full and its tax/payment treatment accounted for separately.
+
+If $24.99 includes delivery, simple remainder before all those other costs would be:
+- EU: $24.99 - $16.91 = **$8.08**
+- US: $24.99 - $16.87 = **$8.12**
+
+These remainders are NOT contribution or net profit; they are preliminary arithmetic only, before applicable VAT/sales tax and channel fees. The hypothetical $24.99 selling price is not demand evidence. No actual quote was placed at checkout and no customer demand test was performed.
+
+### Updated decision
+POD now has a more concrete public cost basis than before and remains the best zero-inventory research candidate. It is not yet VALIDATED: channel fees, tax treatment, final variant price, real shipping quote, target niche and demand are unresolved. Next free step is to compare two possible sales channels' fees and inspect public demand signals for one narrow design niche before drafting any live listing. Do not publish, contact, subscribe, buy a sample or run ads without explicit approval.
+
+Cost of research: €0. No store/listing/order/customer contact or sales. STATE canonical checkpoint not changed.
