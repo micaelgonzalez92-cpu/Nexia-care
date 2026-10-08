@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-09T13:00:00+02:00",
+  "updated_at": "2026-10-09T14:00:00+02:00",
   "status": "ACTIVE / VALIDACIÓN",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "Cuadro de mando ampliado con seis etapas de progreso y requisitos de evidencia; STATE v50 actualizado; sincronización derivada en curso.",
-  "last_completed_action": "NEXIA_PROGRESS_DASHBOARD.md v1.1 y STATE v50 re-leídos; la escalera de etapas está documentada y los estados actuales no exageran resultados.",
-  "evidence": "Dashboard file reread; STATE v50 blob SHA 6bae4ad3962d90fa6061cb604d7a21dcf22ca418; BOOT alignment pending final readback. No sales or automation inferred from technical activity.",
+  "current_action": "Scoring rule tightened: sustainable after-tax net profit is primary; operational throughput is diagnostic only. Unified action states and decision priority documented.",
+  "last_completed_action": "Operational rules v1.1 and dashboard v1.2 written; STATE v51 and BOOT v9 updated.",
+  "evidence": "Rules blob 39714fa006ecd1069ab11bdf0142707c9c84bcd2 and dashboard blob 7c04888df70dad824a4e8633bc4ff8641d2cbba7 committed; STATE v51 blob 480f322883a09e022c906360e1fad240bf4a4f59; BOOT v9 points to exact STATE blob. Final readback verification pending.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout €61.30 entregado verificado; pago pendiente de Kael.",
   "parallel_work": [
@@ -13,9 +13,9 @@
     "Supplier/unit economics matrix",
     "Core continuity/resilience maintenance"
   ],
-  "next_action": "Preparar protocolo de intake y medición del piloto a coste 0. Pago del lote aprobado sigue pendiente de Kael; no hay extracción ni repetibilidad demostrada.",
+  "next_action": "Prepare the zero-cost item intake and measurement sheet for EXP-RESALE-001A (SKU/item ID, condition, brand/size, evidence photos, sellable status, preparation minutes, listing date/price, realized price, fees, shipping, returns, allocated landed cost and labor cost). Keep the €61.30 purchase pending Kael payment; do not change pilot gates or buy inventory.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
-  "operational_rules": "NEXIA_OPERATIONAL_RULES.md — ACTIVE, R1-R5",
-  "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.1; stages ACTIVITY/EVIDENCE/VALIDATION/EXTRACTION/REPEATABILITY/SCALE"
+  "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
+  "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; economic-outcome-first scoring"
 }
