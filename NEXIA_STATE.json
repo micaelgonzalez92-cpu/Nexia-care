@@ -1,5 +1,5 @@
 {
-  "version": 46,
+  "version": 47,
   "updated_at": "2026-10-09",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -225,12 +225,12 @@
   },
   "persistence_checkpoint": {
     "checkpoint_id": "CP-2026-10-09-RESALE-005",
-    "previous_state_version": 45,
-    "current_state_version": 46,
-    "status": "COMMITTED_DERIVED_ARTIFACTS_SYNC_PENDING",
+    "previous_state_version": 46,
+    "current_state_version": 47,
+    "status": "VERIFIED_AFTER_WRITE",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
-    "note": "Recorded zero-cost falsification of the pilot's contribution threshold. No purchase, external contact or canonical success-gate change."
+    "note": "Zero-cost unit-economics falsification recorded. NEXIA_BOOT, NEXIA_LIVE, NEXIA_MEMORY, NEXIA_MASTER_BACKUP and NEXIA_EVENT_LOG updated sequentially; canonical gate unchanged; payment still pending."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
