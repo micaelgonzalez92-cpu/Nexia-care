@@ -576,3 +576,22 @@ Official Etsy fees policy retrieved: https://www.etsy.com/legal/fees/
 Illustrative fee arithmetic only: on a $24.99 order with shipping included, 6.5% transaction fee is approximately $1.62; adding the $0.20 listing fee yields $1.82 before payment processing, fee VAT, product/shipping costs, refunds, tax obligations and any ads. Thus the previous $8.08 EU pre-cost remainder would be reduced to about $6.26 before those still-unknown costs if Etsy were the channel and no other delivery charge was collected. This is NOT net profit or verified contribution.
 
 Decision: Etsy is not free to validate at listing stage and may include setup and other fees; do not open a shop or publish without approval. Continue desk research first and verify Spain-specific payment-processing fees from the official country schedule. No shop opened, listing created or fee incurred.
+
+
+## UPDATE — 2026-10-09 — ETSY SPAIN PROCESSING FEE + REGULATORY FEE
+
+Official Etsy Help results:
+- Payment processing fee schedule: https://help.etsy.com/hc/en-us/articles/115015628847-What-are-Payment-Processing-Fees-for-Selling-on-Etsy
+  - Spain: **4% + €0.30 per order** (in addition to other Etsy fees).
+- Regulatory Operating Fee: https://help.etsy.com/hc/en-gb/articles/1500011073202-What-is-a-Regulatory-Operating-Fee
+  - Spain: **0.88%** of the relevant order amount under Etsy's policy.
+- General fees policy: https://www.etsy.com/legal/fees/
+  - 6.5% transaction fee and $0.20 listing fee; applicable tax/VAT on seller fees may also apply. A shop setup fee may be shown during onboarding. Offsite Ads may add 15% or 12% on attributed orders depending on eligibility/thresholds.
+
+### Implication for a Spain-based Etsy seller
+Etsy is not a free validation channel. The known percentage components include at least 6.5% transaction + 4% payment processing + 0.88% regulatory fee = **11.38%**, plus €0.30 per order and $0.20 listing fee, before any applicable VAT on Etsy fees, currency conversion, Offsite Ads, product/fulfilment, shipping and taxes on the business's own sale. Processing fee base and regulatory fee calculation follow Etsy policy; the exact final deduction varies by order/currency/tax treatment. Do not present this as the complete fee stack or a net margin.
+
+For the previous hypothetical $24.99 order, do not calculate a final net remainder by mixing USD supplier costs with EUR processing fixed fees without a dated FX assumption and exact tax basis. The earlier $8.08/$8.12 remainders remain pre-fee arithmetic only, not contribution. Final channel comparison must use one currency, clarify whether price includes VAT and delivery, and include fee VAT treatment.
+
+### Next action / gate
+Desk research has now identified the country-specific processing and regulatory rates. Next free action: identify a marketplace/channel with lower fixed and variable costs, and evaluate whether a niche POD listing would be eligible under marketplace rules (including Etsy's production-partner/disclosure rules and intellectual-property constraints). No account opening, listing, supplier contact, sample, subscription or advertising without explicit approval. Cost remains €0; no sale or profit.
