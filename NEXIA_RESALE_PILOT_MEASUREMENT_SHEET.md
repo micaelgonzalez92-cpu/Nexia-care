@@ -9,6 +9,35 @@ Effective acquisition cost: €6.13/item
 Payment: PENDING KAEL
 Purchase executed: NO
 
+## Operational ledger — SRC-001-01..10
+
+Pre-purchase baseline:
+- Batch checkout total: €61.30 delivered
+- Allocated acquisition cost baseline: €6.13/item if all 10 units are received
+- Actual sellable-unit cost must be recalculated after QC if fewer than 10 units are publishable.
+- Payment pending; no spend executed.
+
+| SKU | Brand | Size | Grade | Defects | Prep min | Acquisition € | Transport € | Prep € | Asking € | Min € | Channel | Status |
+|---|---|---|---|---|---:|---:|---:|---:|---:|---:|---|---|
+| SRC-001-01 | | | | | | 6.13* | | | | | | PENDING |
+| SRC-001-02 | | | | | | 6.13* | | | | | | PENDING |
+| SRC-001-03 | | | | | | 6.13* | | | | | | PENDING |
+| SRC-001-04 | | | | | | 6.13* | | | | | | PENDING |
+| SRC-001-05 | | | | | | 6.13* | | | | | | PENDING |
+| SRC-001-06 | | | | | | 6.13* | | | | | | PENDING |
+| SRC-001-07 | | | | | | 6.13* | | | | | | PENDING |
+| SRC-001-08 | | | | | | 6.13* | | | | | | PENDING |
+| SRC-001-09 | | | | | | 6.13* | | | | | | PENDING |
+| SRC-001-10 | | | | | | 6.13* | | | | | | PENDING |
+
+*Provisional allocation only. Final allocation is based on actual received units and explicit transport/preparation costs.
+
+### QC ledger
+For each SKU record: identity/label, front, back, collar, cuffs/sleeves, seams, armpits, print/embroidery, stains/holes/wear/odour, measurements, defect photos, authenticity status, and final sellable decision.
+
+### Outcome ledger
+For each SKU record: listing date, views, favourites, messages, offers, realized sale price, sale date, days to sale, packaging cost, variable channel cost, return/incident cost, realized contribution, completion status.
+
 ## Predefined measurement rules
 
 ### Intake
