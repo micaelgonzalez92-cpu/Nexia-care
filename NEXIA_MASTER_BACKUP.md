@@ -66,3 +66,10 @@ Canonical state remains **NEXIA_STATE v45**; no state-version change was made in
 Zero-cost repository improvement: `NEXIA_RESALE_INTAKE_QC_PROTOCOL.md` was aligned with the pilot measurement sheet so the contribution formula explicitly subtracts attributable preparation cost as well as acquisition, packaging, variable channel costs and expected/realized incident/return costs. Commit: `9eb1cdcd589841506f8f83af088950b996f77652`; verified file SHA: `e4f3b723c8fe1fd4f9e3ec763d0f506683b4a225`.
 
 Human Gate unchanged: the approved 10-shirt lot checkout is €61.30 delivered; payment pending Kael; purchase not executed. Actual spend €0; revenue €0; profit €0. No physical inventory records are fabricated before receipt. Older state hashes in historical addenda are historical and do not override canonical STATE.
+
+
+## Checkpoint 2026-10-09 — STATE v46
+- Canonical state: version 46, updated 2026-10-09. Boot index synced to the new state blob SHA.
+- Zero-cost addendum: NEXIA_EXP_RESALE_001A_UNIT_ECONOMICS_FALSIFICATION_2026-10-09.md.
+- Finding: with €61.30 delivered for 10 items (€6.13 provisional acquisition allocation), a €15 realized sale leaves at most €8.87 contribution before other variable costs if all 10 are sellable; at 8/10 sellable, at most €7.3375. Thus the €10 contribution criterion cannot be met at €15 average sale price before packaging, channel, returns and prep.
+- No canonical pilot gate changed; this is a measurement inconsistency to resolve before evaluation. No purchase executed; spend/revenue/profit remain €0.
