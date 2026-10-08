@@ -353,3 +353,62 @@ Nexia should start with A because it has the lowest-cost validation path, while 
 
 ### Decision rule
 Do not copy revenue claims from case studies. Extract mechanisms only when repeated across independent cases and then test them against Nexia's own contribution, sell-through, preparation time and cash cycle.
+
+
+## UPDATE — 2026-10-09 — SOURCING + CANAL + UNIT ECONOMICS FALSIFICATION
+
+Status: PUBLIC RESEARCH ONLY; NO PURCHASE, CONTACT, LISTING OR BUSINESS SPEND.
+
+### Supplier evidence (web pages inspected 2026-10-09)
+
+1. **Premium Vintage Wholesale — branded T-shirts**
+   - Public product page: https://www.premiumvintagewholesale.com/products/camisetas-de-marca
+   - Displayed pack pricing: 25 units €100 (€4/unit); 50 units €200 (€4/unit); 100 units €375 (€3.75/unit); 200 units €700 (€3.50/unit).
+   - Minimum order €100; page showed sold out when inspected.
+   - Supplier states 80–100% Grade A and separately mentions a 10–20% human-error margin; do not assume grade label equals sellable yield.
+   - Returns/refunds: page states no refunds or returns.
+   - Interpretation: at 80% sellable yield, €4 purchase cost alone becomes €5 per sellable unit, before inbound freight, prep, packaging, labor, defects, tax or other costs. Not a verified profitable source.
+
+2. **SP Vintage Wholesale — branded T-shirt mix**
+   - Public product page: https://spvintagewholesale.com/products/pre-order-mix-camisetas-de-marca-premium
+   - Product page describes packs starting at 10 branded T-shirts; exact current price was not reliably available in extracted content.
+   - Supplier says up to 10% Grade B may be included; issues must be raised within 48 hours; approved returns are described as store credit, with return shipping paid by customer.
+   - Interpretation: potentially suitable lot size for a later comparison, but price, delivered total, stock and claim terms need exact verification. NOT VALIDATED.
+
+3. **Tu Proveedor Vintage — 10-item starter pack**
+   - Public product page: https://www.tuproveedorvintage.com/products/lote-exclusivo-reventa-vinted
+   - Displayed price €99.97 for 10 items (~€9.997/item); page showed sold out when inspected.
+   - Product photos are representative, not the exact items to be received.
+   - Interpretation: not competitive for the current low-cost unit-economics hypothesis unless quality and realized prices differ materially from assumptions.
+
+4. **Europe Wholesales**
+   - Public catalogue: https://europewholesales.com/
+   - Previous inspected listing examples started around €150; no comparable small, specific 10-shirt lot was verified in this pass.
+   - Interpretation: keep as a future research lead only; cost per sellable unit remains UNKNOWN.
+
+### Channel evidence and compliance gate
+
+- Vinted Pro official guide: https://www.vinted.es/pro-guide
+  - Official guidance says professionals must register as Vinted Pro where applicable.
+  - The guide describes consumer-information duties, a 14-day online withdrawal right and legal conformity guarantees for Pro sales. This makes returns/compliance exposure part of unit economics; obtain appropriate Spain-specific professional guidance before commercial launch.
+- Vinted shipping help: https://www.vinted.es/help/753-como-funcionan-los-envios
+  - Official guidance says buyers pay platform shipping and sellers receive a prepaid shipping label, subject to the selected platform flow.
+- Wallapop public Nike-shirt category: https://es.wallapop.com/moda-y-complementos/camisetas-nike
+  - Page showed 19,694 listings and example asking prices including €25; Barcelona page showed 1,441 listings.
+  - These are asking/listing observations, NOT evidence of completed sales, realized prices or sell-through. Treat as weak competition/price context only.
+
+### Critical mathematical falsification — existing approved pilot
+
+Canonical pilot checkout total: €61.30 delivered for 10 shirts, payment pending; purchase not executed.
+- Nominal acquisition cost per purchased unit: €61.30 / 10 = €6.13.
+- At €15 realized sale price, the maximum contribution before all other variable costs is €8.87 if all units are sellable.
+- If 8 of 10 are sellable, allocated acquisition cost per sellable unit is €61.30 / 8 = €7.6625, leaving €7.3375 before all other variable costs at a €15 realized sale price.
+- Therefore the existing pilot gates “average realized sale price >= €15” and “contribution >= €10 per sold unit” cannot both be met at a €15 sale price with this lot cost. The €10 contribution gate would require a realized price of at least €16.13 even at 100% sellable yield, and at least €17.66 at 80% yield, before preparation, packaging, returns, labor, channel costs and applicable tax treatment.
+- Do NOT change the approved gates or experiment definition without Kael's explicit decision. This pilot can still produce useful quality/price/turnover evidence, but its success criteria need an authorized clarification before they are used to claim a pass.
+
+### Decision and next research step
+
+- No supplier is validated; no supplier contact or purchase is authorized by this research.
+- Do not recommend Premium Vintage Wholesale for a purchase now: minimum €100, sold-out listing, no-return terms, and its €4/unit price reaches €5 per sellable unit at 80% yield before other costs.
+- Best next zero-cost research task: inspect current public asking prices for specific brand/category/condition comparables and separate them from completed-sale evidence wherever obtainable; then estimate a conservative price band without claiming realized demand.
+- Financial impact: €0. Inventory, sales, settled receipts and profit remain unverified/zero recorded.
