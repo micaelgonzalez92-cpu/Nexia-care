@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-09T12:30:00+02:00",
+  "updated_at": "2026-10-09T13:00:00+02:00",
   "status": "ACTIVE / VALIDACIÓN",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "Cuadro de mando de progreso real documentado y enlazado en STATE v49; separa resultados económicos de actividad técnica y marca datos sin telemetría como NOT INSTRUMENTED.",
-  "last_completed_action": "NEXIA_PROGRESS_DASHBOARD.md creado; STATE v49 actualizado y re-leído; BOOT v7 alineado al SHA exacto del STATE.",
-  "evidence": "Dashboard file reread; STATE v49 blob SHA ba06085ffe29cc618f0c811e6d8fde7e9d1573ce; BOOT v7 reread and exact state SHA aligned. No deployment or runtime telemetry claimed.",
+  "current_action": "Cuadro de mando ampliado con seis etapas de progreso y requisitos de evidencia; STATE v50 actualizado; sincronización derivada en curso.",
+  "last_completed_action": "NEXIA_PROGRESS_DASHBOARD.md v1.1 y STATE v50 re-leídos; la escalera de etapas está documentada y los estados actuales no exageran resultados.",
+  "evidence": "Dashboard file reread; STATE v50 blob SHA 6bae4ad3962d90fa6061cb604d7a21dcf22ca418; BOOT alignment pending final readback. No sales or automation inferred from technical activity.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout €61.30 entregado verificado; pago pendiente de Kael.",
   "parallel_work": [
@@ -13,9 +13,9 @@
     "Supplier/unit economics matrix",
     "Core continuity/resilience maintenance"
   ],
-  "next_action": "Preparar a coste 0 el formulario de intake/medición del lote piloto y la matriz comparable de sourcing; no comprar ni contactar externamente. Pago del piloto sigue pendiente de Kael.",
+  "next_action": "Preparar protocolo de intake y medición del piloto a coste 0. Pago del lote aprobado sigue pendiente de Kael; no hay extracción ni repetibilidad demostrada.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — ACTIVE, R1-R5",
-  "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — ACTIVE_EVIDENCE_GATED"
+  "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.1; stages ACTIVITY/EVIDENCE/VALIDATION/EXTRACTION/REPEATABILITY/SCALE"
 }
