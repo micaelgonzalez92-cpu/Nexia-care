@@ -595,3 +595,42 @@ For the previous hypothetical $24.99 order, do not calculate a final net remaind
 
 ### Next action / gate
 Desk research has now identified the country-specific processing and regulatory rates. Next free action: identify a marketplace/channel with lower fixed and variable costs, and evaluate whether a niche POD listing would be eligible under marketplace rules (including Etsy's production-partner/disclosure rules and intellectual-property constraints). No account opening, listing, supplier contact, sample, subscription or advertising without explicit approval. Cost remains €0; no sale or profit.
+
+
+## UPDATE — 2026-10-09 — CHANNEL RULES: ETSY POD VS VINTED PRO VS EBAY
+
+### Etsy: POD allowed only when the seller's original design qualifies
+Official sources:
+- https://help.etsy.com/hc/en-us/articles/360000336547-Working-with-Production-Partners-on-Etsy
+- https://help.etsy.com/hc/en-us/articles/360024112614-What-Can-I-Sell-on-Etsy
+
+Verified policy points:
+- POD is permitted when the item uses the seller's own original design and a production partner physically produces/ships it.
+- The production partner must be disclosed on applicable listings, and shipping origin/details must accurately reflect fulfilment.
+- Reselling mass-produced ready-made goods is generally not allowed except limited Etsy categories/standards (e.g. qualifying vintage at least 20 years old, curated handpicked items, or qualifying supplies).
+- Generic blanks or designs that copy protected brands/characters do not meet the originality gate; intellectual-property risk remains material.
+- Etsy is plausible for original-design POD, but not a generic dropshipping channel for ready-made clothes. No design, listing, account or supplier relationship was created.
+
+### Vinted Pro: lower-fee resale hypothesis, not POD
+Official sources:
+- https://www.vinted.es/pro
+- https://www.vinted.es/pro-guide
+
+Verified public claims:
+- Vinted's Spanish Pro page advertises free selling and unlimited second-hand listings.
+- Vinted Pro is available in Spain, but the seller must have a registered business (sole trader/business, company or eligible non-profit) and provide business registration details.
+- Its guide says professional sellers must register as Pro and are responsible for applicable consumer, tax and social obligations; non-compliance can lead to access restrictions.
+- This may be a lower platform-fee option for genuine second-hand clothing resale, but it is not economically or legally “free”: sourcing, labour, shipping/other service charges where applicable, returns, tax and registration/accounting costs remain. Eligibility and current terms must be rechecked before use.
+- Do not open an account or start selling without Kael's explicit approval and review of Spanish business/tax obligations.
+
+### eBay Spain: private-seller rates are not a business model
+Official page reviewed:
+- https://www.ebay.es/help/selling/fees-credits-invoices/servicios-de-pago-comisiones-y-tarifas-para-vendedores-particulares?id=4822
+
+The private-seller page states up to 150 free listings/month, then 11.5% of total sale amount + €0.35 per order and 0.42% regulatory compliance fee, with international fees in some destinations. Crucially, eBay states professional sellers have different fees; these private rates are NOT a valid cost estimate for Nexia as a commercial seller. A separate professional-seller fee schedule must be verified before comparison. No eBay account or listing was created.
+
+### Interim channel decision
+- Original-design POD: Etsy remains eligible in principle but has meaningful fees and a strict originality/production-partner gate.
+- Second-hand resale: Vinted Pro is the strongest platform-cost hypothesis among these leads because its official page advertises free selling, but it requires a registered business and full unit economics remain unknown.
+- eBay: insufficient comparable data until official professional fees are checked.
+- None is validated for sales, demand, or net profit. Recommended next action is a free, apples-to-apples unit-economics sheet for (a) second-hand clothing on Vinted Pro and (b) original-design POD on Etsy, including VAT/tax basis, fulfilment, returns, labour, and minimum acceptable contribution. Cost remains €0; no external commitment made.
