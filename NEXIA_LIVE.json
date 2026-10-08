@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-09T12:00:00+02:00",
+  "updated_at": "2026-10-09T12:30:00+02:00",
   "status": "ACTIVE / VALIDACIÓN",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "Reglas operativas reforzadas R1-R5 persistidas; reconciliación final completada y artefactos re-leídos. Pago del piloto sigue pendiente de Kael.",
-  "last_completed_action": "Added canonical NEXIA_OPERATIONAL_RULES.md (R1-R5), linked from STATE v48, and verified STATE/BOOT alignment; €0, no business-side effects.",
-  "evidence": "STATE v48 reread; BOOT v6 version and blob SHA exactly aligned; operational rules file, LIVE, MEMORY, MASTER_BACKUP and EVENT_LOG reread after writes; event EVT-2026-10-09-RULES-001 present. €0 impact; no external effects.",
+  "current_action": "Cuadro de mando de progreso real documentado y enlazado en STATE v49; separa resultados económicos de actividad técnica y marca datos sin telemetría como NOT INSTRUMENTED.",
+  "last_completed_action": "NEXIA_PROGRESS_DASHBOARD.md creado; STATE v49 actualizado y re-leído; BOOT v7 alineado al SHA exacto del STATE.",
+  "evidence": "Dashboard file reread; STATE v49 blob SHA ba06085ffe29cc618f0c811e6d8fde7e9d1573ce; BOOT v7 reread and exact state SHA aligned. No deployment or runtime telemetry claimed.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout €61.30 entregado verificado; pago pendiente de Kael.",
   "parallel_work": [
@@ -13,8 +13,9 @@
     "Supplier/unit economics matrix",
     "Core continuity/resilience maintenance"
   ],
-  "next_action": "Cuello de botella comercial: pago del piloto ya aprobado pendiente de Kael. Mientras tanto, preparar matriz de proveedores/comparables y protocolo de intake a coste 0; no comprar ni cambiar umbrales.",
+  "next_action": "Preparar a coste 0 el formulario de intake/medición del lote piloto y la matriz comparable de sourcing; no comprar ni contactar externamente. Pago del piloto sigue pendiente de Kael.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
-  "operational_rules": "NEXIA_OPERATIONAL_RULES.md — ACTIVE, R1-R5"
+  "operational_rules": "NEXIA_OPERATIONAL_RULES.md — ACTIVE, R1-R5",
+  "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — ACTIVE_EVIDENCE_GATED"
 }
