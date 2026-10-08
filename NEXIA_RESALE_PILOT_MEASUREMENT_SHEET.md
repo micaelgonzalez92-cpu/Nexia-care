@@ -151,3 +151,39 @@ Attention metrics are leading indicators only. A marketing test is positive only
 
 ### Paid acquisition gate
 Paid ads remain RED/HUMAN-GATE. Before any spend, define maximum CAC from measured contribution, test budget, attribution method, success threshold and stop-loss. No ad spend is justified by traffic alone.
+
+
+## SKU selection score — pilot hypothesis, €0
+
+Purpose: convert the incoming 10 garments into a repeatable selection hypothesis that can later be tested against realized economics. This score does not replace QC, authenticity review, or pricing evidence.
+
+Score each dimension from 0 to 5:
+
+| Dimension | 0 | 3 | 5 |
+|---|---|---|---|
+| Demand fit | weak/unknown | recognized brand/category | strong brand/category + clear demand signal |
+| Price power | likely <€10 | likely €12–20 | plausible €20+ with comparable evidence |
+| Differentiation | commodity/basic | some distinctive detail | vintage/Y2K, strong graphic, team/collab, rare model or other clear differentiator |
+| Condition | material concern | good with minor wear | excellent / very clean |
+| Competition risk | very high | moderate | low/moderate for the exact model/style |
+| Preparation efficiency | >20 min expected | 10–20 min | <10 min expected |
+| Evidence quality | mostly unknown | several fields verified | brand/model/size/condition/comparables well evidenced |
+
+### Operational classification
+
+- **A — HIGH POTENTIAL:** 28–35 points and no NO-GO condition.
+- **B — COMMERCIAL:** 21–27 points and no NO-GO condition.
+- **C — COMMODITY:** 14–20 points, or strong competition/low price power.
+- **D — NO-GO:** <14 points, authenticity concern, material undisclosed defect, excessive preparation, or another blocking QC issue.
+
+The thresholds are hypotheses and may be recalibrated after the first batch.
+
+### Validation loop
+
+SKU score → asking-price hypothesis → listing → attention metrics → offer/sale → realized price → days to sale → preparation time → realized contribution
+
+After sale, compare score against outcome. The score is considered useful only if higher-scored SKUs show a reproducibly better combination of contribution, sell-through and contribution/minute across more than one batch.
+
+### Evidence rule
+
+Do not award a high score merely because a supplier or marketplace claims a high resale value. Comparable listings are evidence for a pricing hypothesis; realized completed sales are stronger evidence for demand and economics.
