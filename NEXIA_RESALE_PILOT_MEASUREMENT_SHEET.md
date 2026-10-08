@@ -117,3 +117,37 @@ When Kael confirms payment/order execution:
 5. record all costs and prep time;
 6. build listing/pricing hypotheses;
 7. measure realized outcomes.
+
+
+## Marketing measurement layer — pilot-ready, €0
+
+Marketing is measured against the same SKU-level economics as sourcing and sales. No paid acquisition is authorized by this document.
+
+For each pilot SKU, capture where available:
+- listing publication date/time;
+- channel;
+- primary photo variant;
+- title/search-term variant;
+- asking price;
+- minimum price;
+- views/impressions;
+- favourites/saves;
+- messages;
+- offers;
+- realized sale price;
+- days to sale;
+- preparation/content time attributable to listing;
+- realized contribution.
+
+### €0 experiments
+1. Photo order A/B where the channel permits natural comparison.
+2. Title/search-term structure comparison across comparable SKUs.
+3. Price-positioning test while preserving minimum contribution.
+4. Publication timing/day-of-week observation.
+5. Bundle/cross-sell presentation for compatible items.
+
+### Decision rule
+Attention metrics are leading indicators only. A marketing test is positive only when it improves a commercial outcome (sell-through, realized price, days to sale or contribution) without materially increasing human time or risk.
+
+### Paid acquisition gate
+Paid ads remain RED/HUMAN-GATE. Before any spend, define maximum CAC from measured contribution, test budget, attribution method, success threshold and stop-loss. No ad spend is justified by traffic alone.
