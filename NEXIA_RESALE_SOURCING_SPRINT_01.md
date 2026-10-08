@@ -139,3 +139,22 @@ Current Vinted surfaces reinforce the same mechanism: distinctive/Y2K/vintage an
 For the 10-piece pilot, do not optimize for brand count. Optimize for the number of **A/B archetypes that can plausibly support a realized ticket >= €15–20 while keeping preparation low**. A basic branded T-shirt is useful as a control; a distinctive logo/graphic, Y2K/90s, sports/team or heritage/polo piece is more informative for testing price power.
 
 This does not justify a second purchase. The existing V4O lot remains the approved evidence path; the next decision must come from the actual garments received and measured.
+
+## Supplier comparison refresh — 2026-10-08 — €0
+
+Fresh public checks were completed to reduce uncertainty before any future sourcing decision. No purchase is authorized by this section.
+
+| Supplier | Current public signal | Effective unit signal | Evidence gap | Decision |
+|---|---|---:|---|---|
+| Vintage4Originals | Branded T-shirts Grade A, ~10 pcs | 5.50 €/u before the pilot's verified delivered transport/tax total | Real sellable rate, realized price, prep time | **Approved pilot / primary evidence path** |
+| Atemporal Vintage | Branded T-shirts 10 pcs 48.95 €; 85%+ Grade A stated | 4.90 €/u advertised | Delivered cost, exact mix, sell-through, realized price | **Control candidate; no purchase** |
+| Vintage Wholesale Spain | Premium branded T-shirts 10 pcs 110.20 € + shipping | 11.02 €/u before shipping | Quality premium vs realized price and rotation | **Control; not justified now** |
+| RopaExport | Second-hand from 1.90 €/kg; selected vintage from 6.40 €/kg; 25–50 kg sacks | Cannot convert reliably to €/sellable unit yet | Composition, unit yield, minimum practical order, defects | **Future volume candidate; unresolved** |
+| NB Vintage Wholesale | Grade A B2B; brands include Nike, Carhartt, Levi's, Champion, Tommy, Adidas, Ralph Lauren; prices require B2B/catalog access | Not publicly determinable | Exact lot prices, composition, yield, delivered cost | **Monitor; no purchase** |
+
+### Interpretation
+
+The new evidence strengthens the sourcing ladder but does not falsify the existing pilot. Atemporal's public advertised price is lower than V4O's headline unit price, while RopaExport has a much lower €/kg entry point; neither resolves the critical variable of **cost per actually sellable, individually listable garment**. V4O remains the cleanest small-batch evidence path because the approved lot is already defined and its delivered checkout total of 61.30 € is verified.
+
+No second purchase should be made until the first batch produces real sellable-rate, prep-time, realized-price and contribution evidence.
+
