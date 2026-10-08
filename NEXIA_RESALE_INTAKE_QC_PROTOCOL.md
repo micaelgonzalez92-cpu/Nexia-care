@@ -46,7 +46,7 @@ Registrar cada prenda desde entrada hasta venta/retorno, separando inventario pr
 Para OWN: coste histórico = 0 salvo que Kael aporte un coste económico justificable. Medir por separado precio realizado, gastos variables, tiempo y contribución.
 Para SOURCED: coste por unidad = coste de lote asignado + transporte asignado + preparación imputable.
 
-Contribución = precio de venta realizado - coste unitario - embalaje - costes variables del canal - coste esperado de incidencias/devoluciones.
+Contribución = precio de venta realizado - coste unitario - embalaje - costes variables del canal - coste esperado/realizado de incidencias/devoluciones - coste de preparación imputable.
 
 Nunca contar precio anunciado como ingreso.
 
@@ -84,3 +84,7 @@ When the approved batch arrives, execute in this order before any listing:
 - Authenticity concern: HOLD; do not list as authentic until evidence supports the claim.
 - Material undisclosed defect: record it and reassess sellability before pricing.
 - Missing evidence needed for a commercial claim: mark UNKNOWN rather than infer.
+
+
+## Canonical alignment
+La fórmula de contribución de este protocolo está alineada con NEXIA_RESALE_PILOT_MEASUREMENT_SHEET.md: la preparación imputable forma parte de la contribución económica y debe medirse por SKU. No usar una fórmula simplificada que omita ese coste.
