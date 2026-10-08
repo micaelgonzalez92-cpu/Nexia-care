@@ -1,6 +1,6 @@
 {
-  "version": 41,
-  "updated_at": "2026-10-06",
+  "version": 42,
+  "updated_at": "2026-10-08",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
   "phase": "VALIDACIÓN",
@@ -12,32 +12,33 @@
   "extraction_count": 0,
   "reproducibility_count": 0,
   "active_experiment": {
-    "id": "EXP-001B",
-    "name": "Prueba de diagnóstico con usuario real",
-    "status": "BLOCKED_BY_HUMAN_REAL_WORLD_INPUT",
+    "id": "EXP-RESALE-001",
+    "name": "Falsación de sourcing + unit economics de ropa de segunda mano",
+    "status": "ACTIVE_RESEARCH_NO_SPEND",
     "cost_eur": 0,
-    "primary_metric": "% de usuarios que llegan a una acción útil sin ayuda significativa",
+    "primary_metric": "margen de contribución por prenda vendible y potencial de rotación reproducible",
     "participants": 0,
-    "target_participants": 3
+    "target_participants": 20
   },
   "current_mission": {
-    "id": "MISSION-003",
-    "name": "Falsar el canal afiliado 6% sin gasto",
+    "id": "MISSION-RESALE-001",
+    "name": "Validar y construir la operación de reventa profesional de ropa de segunda mano en España",
     "priority": "MAX",
     "cost_eur": 0,
     "human_action_required": false,
-    "reason": "Última falsación pública acotada completada: 6% y reglas de tráfico verificadas; la web oficial confirma cookie de 30 días, mientras Tradedoubler ES 305877 publica 7 días. No apareció evidencia pública que resuelva para ES la base exacta de comisión ni exclusiones de producto. Se cierra la investigación pública de este punto sin gasto ni registro."
+    "status": "ACTIVE",
+    "reason": "Kael ha designado esta vía como ruta principal de Nexia por potencial de ejecución rápida, margen y escalabilidad. Las demás vías quedan pausadas, no eliminadas, conservando evidencia y decisiones."
   },
   "human_gate": {
     "status": "WAITING",
-    "task": "Reclutar 1 participante real para probar NEXIA Care.",
+    "task": "Tras la investigación de sourcing, aprobar o rechazar una compra experimental pequeña; no comprar antes.",
     "cost_eur": 0
   },
   "product": {
-    "name": "NEXIA Care",
-    "model_focus": "De'Longhi Magnifica S / ECAM21-22.110",
+    "name": "Reventa profesional de ropa de segunda mano",
+    "model_focus": "Vinted Pro + multicanal",
     "stage": "VETA / VALIDACIÓN",
-    "evidence_level": "SEÑAL + MVP; evidencia de usuario real = 0"
+    "evidence_level": "SEÑAL FUERTE; demanda pública verificada; economía y sourcing aún no validados con inventario propio"
   },
   "participant_acquisition_engine": {
     "status": "ACTIVE_BY_POLICY",
@@ -66,8 +67,8 @@
     "last_action": "2026-10-06: /evolve converted the Emergency Brake from policy-only wording into a verified technical contract with explicit stop-only, out-of-band, fail-safe, preserve, re-arm and audit requirements. Independent control is still not connected.",
     "next_review": "En cada ciclo: comprobar integridad, capacidad disponible, cuello de botella, mejoras seguras y siguiente misión desbloqueable.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
-    "current_mode": "BLOCKED_MISSION_DOES_NOT_MEAN_IDLE",
-    "next_useful_action": "Pivotar desde la repetición de términos de afiliación hacia Repair/Replace: comparar monetizaciones accesibles, valor por conversión y umbral de tráfico/conversión; mantener EXP-001B abierta hasta obtener participantes reales."
+    "current_mode": "PRIMARY_MISSION_RESale",
+    "next_useful_action": "Investigar y comparar proveedores locales/UE y comparables de venta; construir matriz de coste efectivo por prenda vendible, margen, rotación potencial y riesgo sin gastar."
   },
   "external_ops": {
     "status": "DESIGNED_NOT_CONNECTED",
@@ -201,7 +202,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Mantener EXP-001B abierta y priorizar 1 participante real; el trabajo cuantitativo Repair/Replace ya está documentado, por lo que no repetir investigación salvo que aparezca evidencia nueva. No gastar ni ejecutar contacto externo sin autorización.",
+  "next_useful_action": "Continuar EXP-RESALE-001: construir matriz de proveedores y comparables, priorizando sourcing en Valencia y España; no comprar hasta presentar economía y pedir aprobación.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -213,22 +214,13 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-06-010",
-    "previous_state_version": 40,
-    "current_state_version": 41,
-    "status": "VERIFIED_AFTER_WRITE",
+    "checkpoint_id": "CP-2026-10-08-RESALE-001",
+    "previous_state_version": 41,
+    "current_state_version": 42,
+    "status": "VERIFIED_AFTER_WRITE_PENDING_DERIVED_ARTIFACT_RECONCILIATION",
     "financial_impact_eur": 0,
-    "human_gate_unchanged": true,
-    "verified_artifacts": [
-      "NEXIA_STATE.json",
-      "NEXIA_BOOT.json",
-      "NEXIA_LIVE.json",
-      "NEXIA_MASTER_BACKUP.md",
-      "NEXIA_EVENT_LOG.jsonl",
-      "NEXIA_REPAIR_REPLACE_MATRIX.md"
-    ],
-    "note": "Checkpoint ejecutado tras reconciliar STATE v40 con BOOT/LIVE/BACKUP y verificar la matriz Repair/Replace v4. No hubo gasto, contacto externo, registro, compra ni compromiso irreversible.",
-    "verified_at": "2026-10-06T18:05:00+02:00"
+    "human_gate_unchanged": false,
+    "note": "Cambio estratégico solicitado por Kael: Resale pasa a misión principal; vías anteriores pausadas, no eliminadas. Sin gasto ni contacto externo."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -444,6 +436,54 @@
     "status": "COMPLETED_WITHOUT_SPEND",
     "artifact": "NEXIA_VINTED_RESELLING_RESEARCH.md",
     "commit": "642faa855f6209cd73a4edf9313b092f085123fb",
-    "next_action": "Comparar proveedores y unit economics antes de cualquier compra."
+    "next_action": "Comparar proveedores y unit economics antes de cualquier compra. Prioridad inicial: Valencia/España."
+  },
+  "paused_paths": {
+    "status": "PAUSED_NOT_DELETED",
+    "paused_at": "2026-10-08",
+    "policy": "No investigar, gastar, automatizar ni ejecutar estas vías salvo evidencia nueva, petición explícita de Kael o bloqueo material de la misión principal.",
+    "preserve_artifacts": true,
+    "paths": [
+      {
+        "id": "EXP-001B",
+        "name": "NEXIA Care / diagnóstico afiliado",
+        "status": "PAUSED",
+        "reason": "No se elimina; queda congelado para preservar trabajo y evidencia."
+      },
+      {
+        "id": "MISSION-003",
+        "name": "Afiliación De'Longhi 6%",
+        "status": "PAUSED",
+        "reason": "Investigación pública cerrada; sin gasto ni registro."
+      },
+      {
+        "id": "OPP-REPAIR-REPLACE",
+        "name": "Repair/Replace monetization",
+        "status": "PAUSED",
+        "reason": "Documentado; no es prioridad mientras Resale sea misión principal."
+      },
+      {
+        "id": "NEXIA_SYSTEM_EVOLUTION",
+        "name": "Evolución de arquitectura no crítica",
+        "status": "BACKGROUND_MAINTENANCE_ONLY",
+        "reason": "Solo integridad, seguridad, persistencia y trabajo necesario para la misión principal."
+      }
+    ]
+  },
+  "primary_strategy": {
+    "id": "STRATEGY-RESALE-001",
+    "status": "ACTIVE",
+    "principle": "Una operación profesional centralizada, no una granja de cuentas.",
+    "channel_stack": [
+      "Vinted Pro",
+      "Wallapop Pro/negocio",
+      "eBay",
+      "Etsy vintage selectivo",
+      "Vestiaire para premium"
+    ],
+    "automation_boundary": "Automatizar sourcing analysis, inventory, SKU, OCR, pricing, margin, QA, listing preparation, accounting and reporting; no bots/scraping/direct automation on Vinted without authorization.",
+    "warehouse_policy": "No rentar almacén hasta demostrar rotación y necesidad operativa.",
+    "capital_policy": "€0 validation first; any purchase requires Kael approval.",
+    "target": ">=1000 EUR net monthly after tax, with reproducible sourcing and unit economics."
   }
 }
