@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "boot_version": 9,
-  "generated_at": "2026-10-09T14:00:00+02:00",
+  "boot_version": 10,
+  "generated_at": "2026-10-09T00:00:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -35,5 +35,8 @@
   "recovery_rule": "If STATE is unavailable or invalid, recover from the latest verified repository commit and event log; never treat a stale backup as newer than a verified state.",
   "startup_rule": "On every new NEXIA session, use the GitHub connector to inspect this repository and load BOOT -> STATE -> MEMORY/RECENT EVENTS before asking Kael to restate project state.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE; includes R6, lifecycle and decision engine",
-  "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; sustainable after-tax net profit is primary score; technical activity does not add points"
+  "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; sustainable after-tax net profit is primary score; technical activity does not add points",
+  "state_version": 52,
+  "state_blob_sha": "b6dbc182c9365b36d2f5684d7720185120f4d8a0",
+  "note": "Boot index aligned to NEXIA_STATE.json v52 after Kael approved removal of unexplained fixed €7.25 reserve; no spending or purchase occurred."
 }
