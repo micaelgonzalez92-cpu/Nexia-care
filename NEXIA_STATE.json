@@ -1,5 +1,5 @@
 {
-  "version": 47,
+  "version": 48,
   "updated_at": "2026-10-09",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -506,5 +506,29 @@
     "finding": "Pilot criteria >=€15 average realized sale price and >=€10 contribution per sold unit are not jointly compatible at €15 when acquisition allocation is €6.13/unit; contribution before other costs is at most €8.87/unit if all 10 sellable, or €7.3375/unit if 8 sellable.",
     "authority": "No canonical success threshold changed; preserve Kael's approval and resolve whether €10 contribution is a stretch target or hard gate before evaluating outcomes.",
     "next_action": "Continue €0 preparation; no second purchase. Once pilot proceeds, record actual sellable count, prep time, realized prices and all variable costs."
+  },
+  "operational_rules": {
+    "canonical_artifact": "NEXIA_OPERATIONAL_RULES.md",
+    "version": "1.0",
+    "status": "ACTIVE",
+    "rules": [
+      "R1_RECOVERY_BEFORE_ACTION",
+      "R2_USEFUL_ACTION_OVER_ACTIVITY",
+      "R3_END_TO_END_EVIDENCE",
+      "R4_ECONOMICS_AND_FALSIFICATION",
+      "R5_EXPLICIT_LIMITED_AUTONOMY"
+    ],
+    "applies_to": [
+      "NEXIA_CORE",
+      "NEXIA_HQ",
+      "NEXIA_CARE",
+      "research",
+      "experiments",
+      "integrations",
+      "reporting"
+    ],
+    "implementation_status": "DOCUMENTED_AND_LINKED_IN_CANONICAL_STATE",
+    "effective_date": "2026-10-09",
+    "note": "Complements existing authority and synchronization protocols; does not change business thresholds, Human Gates or permissions."
   }
 }
