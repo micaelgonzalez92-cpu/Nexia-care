@@ -90,3 +90,13 @@ Canonical rules artifact: `NEXIA_OPERATIONAL_RULES.md`, version 1.0, status ACTI
 R1 recovery before action; R2 useful action over apparent activity; R3 end-to-end evidence; R4 mandatory economics and falsification; R5 explicit limited autonomy. The rules complement existing authority and sync protocols. They do not change business thresholds or approval gates.
 
 Repository changes were re-read after writing. Financial impact: €0. Spend/revenue/profit remain €0. EXP-RESALE-001A checkout €61.30 delivered; payment still pending Kael. No purchase or external action executed. This checkpoint verifies repository persistence only, not deployment or external automation.
+
+
+## 41. CHECKPOINT — 2026-10-09 — REAL PROGRESS LADDER
+
+Canonical STATE: v50. Blob SHA: 6bae4ad3962d90fa6061cb604d7a21dcf22ca418. BOOT v8 aligned to this exact SHA.
+Dashboard: `NEXIA_PROGRESS_DASHBOARD.md` v1.1.
+
+Six-stage ladder: ACTIVITY → EVIDENCE → VALIDATION → EXTRACTION → REPEATABILITY → SCALE. Each stage now states what it proves and the minimum evidence required. Current resale position: activity/research evidence; own validation, extraction, repeatability and scale are not achieved. No pilot payment or sale has occurred; no revenue/profit is claimed.
+
+Dashboard, STATE, BOOT, LIVE and MEMORY were re-read after writes. This verifies repository persistence only, not runtime deployment or automation. Financial impact €0; pilot payment remains pending Kael.
