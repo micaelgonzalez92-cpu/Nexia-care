@@ -1,6 +1,6 @@
 {
-  "version": 45,
-  "updated_at": "2026-10-08",
+  "version": 46,
+  "updated_at": "2026-10-09",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
   "phase": "VALIDACIÓN",
@@ -212,7 +212,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Mientras Kael mantiene pendiente el pago del lote, cerrar y validar el ledger operativo de intake/QC + unit economics para SRC-001-01..10 y preparar la primera sesión de recepción.",
+  "next_useful_action": "Continue €0 preparation while the approved €61.30 lot remains unpaid; before evaluating results, resolve the documented inconsistency between the €15 realized-price threshold and €10 contribution target. No second purchase.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -224,13 +224,13 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-08-RESALE-004",
-    "previous_state_version": 44,
-    "current_state_version": 45,
-    "status": "VERIFIED_AFTER_WRITE",
+    "checkpoint_id": "CP-2026-10-09-RESALE-005",
+    "previous_state_version": 45,
+    "current_state_version": 46,
+    "status": "COMMITTED_DERIVED_ARTIFACTS_SYNC_PENDING",
     "financial_impact_eur": 0,
-    "human_gate_unchanged": false,
-    "note": "2026-10-08: Kael ordenó eliminar las superficies públicas GitHub Pages heredadas de Nexia Care/diagnóstico y NEXIA HQ. index.html y hq.html fueron eliminados de main. Se conserva Core, estado, investigación y documentación; no se conserva el hosting público legacy."
+    "human_gate_unchanged": true,
+    "note": "Recorded zero-cost falsification of the pilot's contribution threshold. No purchase, external contact or canonical success-gate change."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -497,5 +497,14 @@
     "target": ">=1000 EUR net monthly after tax, with reproducible sourcing and unit economics.",
     "architecture_artifact": "NEXIA_RESALE_OPERATING_ARCHITECTURE.md",
     "next_build": "Data model + intake/QC + unit economics ledger, validated first on pilot batch before scaling."
+  },
+  "unit_economics_audit": {
+    "date": "2026-10-09",
+    "artifact": "NEXIA_EXP_RESALE_001A_UNIT_ECONOMICS_FALSIFICATION_2026-10-09.md",
+    "status": "FINDING_RECORDED_PENDING_KAEL_INTERPRETATION",
+    "cost_eur": 0,
+    "finding": "Pilot criteria >=€15 average realized sale price and >=€10 contribution per sold unit are not jointly compatible at €15 when acquisition allocation is €6.13/unit; contribution before other costs is at most €8.87/unit if all 10 sellable, or €7.3375/unit if 8 sellable.",
+    "authority": "No canonical success threshold changed; preserve Kael's approval and resolve whether €10 contribution is a stretch target or hard gate before evaluating outcomes.",
+    "next_action": "Continue €0 preparation; no second purchase. Once pilot proceeds, record actual sellable count, prep time, realized prices and all variable costs."
   }
 }
