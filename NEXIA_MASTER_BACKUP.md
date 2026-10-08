@@ -73,3 +73,9 @@ Human Gate unchanged: the approved 10-shirt lot checkout is €61.30 delivered; 
 - Zero-cost addendum: NEXIA_EXP_RESALE_001A_UNIT_ECONOMICS_FALSIFICATION_2026-10-09.md.
 - Finding: with €61.30 delivered for 10 items (€6.13 provisional acquisition allocation), a €15 realized sale leaves at most €8.87 contribution before other variable costs if all 10 are sellable; at 8/10 sellable, at most €7.3375. Thus the €10 contribution criterion cannot be met at €15 average sale price before packaging, channel, returns and prep.
 - No canonical pilot gate changed; this is a measurement inconsistency to resolve before evaluation. No purchase executed; spend/revenue/profit remain €0.
+
+
+Checkpoint reconciliation — 2026-10-09
+- Canonical state now v47; BOOT points to the exact STATE blob SHA produced by the v47 commit.
+- LIVE, MEMORY and EVENT_LOG were updated sequentially; the economics falsification remains a documented measurement issue, not a changed approval.
+- Financial impact €0; purchase pending; no revenue or profit claimed.
