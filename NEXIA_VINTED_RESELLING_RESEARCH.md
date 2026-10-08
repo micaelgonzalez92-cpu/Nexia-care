@@ -673,3 +673,56 @@ Official current public pages:
 
 ### Next action
 Prepare a one-currency comparison sheet using a sample €20 and €25 realized order, with shipping treated consistently and explicit UNKNOWN fields for VAT regime, labour time, return rate, sell-through and acquisition cost. Use a sensitivity range, not a single optimistic forecast. No accounts, listings, orders, subscriptions, purchases or external contacts. Cost €0; no sales or profit generated.
+
+
+## UPDATE — 2026-10-09 — €20/€25 UNIT-ECONOMICS SENSITIVITY (ILLUSTRATIVE)
+
+Purpose: compare platform-level cost exposure before buying inventory. This is not a forecast, does not establish demand, and does not authorize any account or sale.
+
+### Official sources reviewed
+- eBay professional fees: https://www.ebay.es/help/selling/fees-credits-invoices/servicios-de-pago-comisiones-y-tarifas-para-vendedores-profesionales?id=4809
+- Wallapop shipping terms (updated 2026-10-06): https://ayuda.wallapop.com/hc/es-es/articles/360001796598-Condiciones-de-servicio-Wallapop-Env%C3%ADos
+- Vinted Pro eligibility/service: https://www.vinted.com/help/918-guide-pour-les-vendeurs-pro-sur-vinted
+- Vinted Spain professional guide: https://www.vinted.es/pro-guide
+
+### Model inputs and limits
+- Illustrative realized item price: €20 or €25. These are scenarios, not observed realized prices.
+- Acquisition-cost proxy from the unpurchased pilot: €61.30 delivered / 10 units = €6.13 per purchased unit.
+- Lower-yield sensitivity: if 8/10 units are sellable, allocated acquisition cost is €7.6625 per sellable unit.
+- Excludes preparation, packaging, returns/defects, seller-paid shipping, labour, overhead, income tax and any VAT effect; all remain UNKNOWN until measured.
+- Do not interpret a pre-labour contribution estimate as net profit or cash profit.
+
+### eBay professional seller: known fees
+Official page states most categories: 9% of total sale amount + 0.35% regulatory fee + €0.45 order fee for orders above €10 + €0.35 fixed-price listing fee without a Store. Published fees exclude VAT. International fees, performance surcharges, advertising and other options excluded.
+
+| Realized item price | 9% + 0.35% | Order fee | Listing fee | Known fees before VAT | Remainder after €6.13 acquisition cost | Remainder if 80% sellable yield (€7.6625 allocated cost) |
+|---:|---:|---:|---:|---:|---:|---:|
+| €20.00 | €1.87 | €0.45 | €0.35 | €2.67 | €11.20 | €9.67 |
+| €25.00 | €2.3375 | €0.45 | €0.35 | €3.1375 | €15.73 | €14.20 |
+
+The “remainder” is only a mathematical ceiling after known listed fees and acquisition cost; it is not contribution after all variable costs and is not net profit. At €20 and 80% sellable yield, the remainder is already below the pilot's €10 contribution gate before VAT on fees, labour, packaging, returns and other costs.
+
+### Wallapop: known seller-side shipping model
+Official shipping terms say buyer pays shipping and Wallapop Protection; shipping is free for the seller except optional SEUR home pickup deducted from proceeds. Packaging remains seller-paid. No general seller transaction fee has been added to this scenario because a complete current professional-account fee schedule has not been established here; this is NOT a claim that all seller costs are zero.
+
+| Realized item price | Remainder after acquisition cost at 100% yield | Remainder at 80% sellable yield |
+|---:|---:|---:|
+| €20.00 | €13.87 | €12.34 |
+| €25.00 | €18.87 | €17.34 |
+
+These are pre-platform-fee-UNKNOWN, packaging, labour, returns, tax and overhead ceilings. A seller choosing paid home pickup would need to subtract that cost.
+
+### Vinted Pro: eligibility and unresolved costs
+Vinted's public Pro information lists Spain among eligible countries and describes business-registration eligibility; buyer protection for Pro purchases applies as a buyer-side fee. This does not eliminate seller costs, professional registration/accounting, consumer withdrawal/conformity duties, returns, labour or sourcing risk. Current Spain-specific terms must be checked before account setup or commercial launch. The table below is a ceiling with no seller-side platform fee assumed; that assumption must be revalidated against current applicable terms.
+
+| Realized item price | Remainder after acquisition cost at 100% yield | Remainder at 80% sellable yield |
+|---:|---:|---:|
+| €20.00 | €13.87 | €12.34 |
+| €25.00 | €18.87 | €17.34 |
+
+### Decision
+- For low-cost validation, prioritize research and draft preparation for Vinted Pro and Wallapop, without opening accounts or publishing.
+- eBay Pro remains a secondary candidate unless higher realized price or sell-through compensates for its known per-order costs.
+- None of these channels has demonstrated realized price, sell-through, contribution after labour, or net profit for Nexia.
+- The €61.30 pilot remains unpurchased; no inventory, sale, or revenue is claimed. Do not change existing experiment gates without Kael's explicit decision.
+- Next evidence with highest value: verified condition/brand/size-specific sold-price evidence, then actual sellable yield and timed prep once inventory is lawfully acquired. Cost of this research update: €0.
