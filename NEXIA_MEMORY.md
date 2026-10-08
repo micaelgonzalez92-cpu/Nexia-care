@@ -237,3 +237,10 @@ No registration, contact, purchase or commitment was performed. Registration/app
 
 ### Next action
 Continue zero-cost falsification of exclusions, commission basis and conversion assumptions; prepare the smallest possible approval-gated test only after the public evidence is sufficient.
+
+
+## 2026-10-09 — EXP-RESALE-001A contribution-threshold falsification
+- Verified checkout baseline: €61.30 delivered / 10 items = €6.13 provisional acquisition allocation per item.
+- At €15 realized sale price, maximum contribution before packaging, channel costs, returns and prep is €8.87/unit if all 10 are sellable; if only 8 are sellable, allocated acquisition becomes €7.6625 per sellable unit and the ceiling is €7.3375.
+- Therefore the existing €15 average realized-price threshold and €10 contribution target are not jointly compatible at the same €15 average. No canonical gate was changed; interpret €10 as stretch target or have Kael explicitly revise the gate before evaluating the pilot.
+- Analysis artifact: NEXIA_EXP_RESALE_001A_UNIT_ECONOMICS_FALSIFICATION_2026-10-09.md. Cost €0. Purchase still pending; no realized sales.
