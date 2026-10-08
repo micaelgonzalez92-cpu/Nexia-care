@@ -1,7 +1,7 @@
 # NEXIA CORE — REGLAS OPERATIVAS REFORZADAS
 
 Status: CANONICAL / ACTIVE
-Version: 1.0
+Version: 1.1
 Effective date: 2026-10-09
 Authority: subordinate only to security, legal requirements and explicit Kael authority gates.
 Canonical operational state: `NEXIA_STATE.json`
@@ -73,3 +73,42 @@ After work, record: status → observable evidence → side effects/cost → ver
 5. Conversation history.
 
 If a conflict cannot be reconciled safely, stop the affected action, preserve evidence and report the conflict; do not silently rewrite an approval or business threshold.
+
+
+## R6. La puntuación depende de resultados económicos demostrados
+
+El número de archivos, commits, mensajes, tareas cerradas o automatizaciones diseñadas/conectadas no aumenta por sí solo la puntuación de Nexia. La métrica principal es el avance demostrado hacia beneficio neto sostenible después de impuestos. La actividad técnica sirve como diagnóstico de ejecución y resiliencia, no como sustituto de progreso comercial.
+
+Implementation:
+- Keep the business outcome score separate from the operational reliability panel; never add repository throughput to the business score.
+- Primary outcome measures, in order: reconciled after-tax net profit over a defined period; realized contribution after all attributable costs; repeatable settled transactions; validated demand and unit economics.
+- A value may improve the score only with dated, observable evidence and a defined denominator/period. Unknown or uninstrumented data remains UNKNOWN/NOT INSTRUMENTED, never an invented zero.
+- Do not reward automation count. Credit an automation only for measured successful executions, failure rate, net time saved and economic impact, and only in its relevant operational/economic metric.
+- If technical activity rises while revenue, contribution, repeatability and after-tax profit do not improve, report “technical activity increased; demonstrated economic progress unchanged.”
+
+## Unified action lifecycle and evidence contract
+
+Every actionable task uses one canonical lifecycle:
+**REQUESTED → IN_PROGRESS → EXECUTED → VERIFIED**.
+Alternative terminal states: **BLOCKED**, **FAILED**, **CANCELLED**.
+
+- **REQUESTED:** task and expected outcome recorded; not started.
+- **IN_PROGRESS:** execution has observably begun.
+- **EXECUTED:** action occurred; outcome may still be unverified.
+- **VERIFIED:** the declared postcondition was independently checked and evidence recorded.
+- **BLOCKED / FAILED / CANCELLED:** reason and available evidence recorded; do not present as complete.
+- A GitHub commit proves repository persistence only. It does not prove deployment, external execution, sales, payment receipt or profit.
+- Before changing status to VERIFIED, re-read the affected artifact or inspect the external result; preserve the evidence reference, timestamp, scope and verification limits.
+- Never infer a successful result from a tool request being sent or from a successful commit alone.
+
+## Decision engine — choose the next useful action
+
+For each cycle:
+1. Recover and reconcile STATE, BOOT, LIVE, latest event, backup and relevant experiment evidence.
+2. Identify the current bottleneck and the nearest unmet evidence gate.
+3. Generate only materially different candidate actions; check the action/event ledger and current artifacts to avoid repeating completed work without new evidence.
+4. Reject actions that exceed authority, spend limits, capability or permission.
+5. Prefer the candidate with the greatest expected reduction in the most important business uncertainty or greatest demonstrated economic effect per unit of cost, risk and human time.
+6. When economic impact is still unknown, prioritize falsification and evidence acquisition over extra architecture/documentation.
+7. Execute the safest zero-cost reversible action available; otherwise state the exact blocker and human task.
+8. Verify the postcondition, record learning, and update canonical state only when its operational meaning changes.
