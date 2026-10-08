@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-09T00:05:00+02:00",
+  "updated_at": "2026-10-09T12:00:00+02:00",
   "status": "ACTIVE / VALIDACIÓN",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "Kael mantiene pendiente el pago del lote aprobado; Nexia documentó una inconsistencia aritmética entre el umbral de venta media de €15 y el objetivo de contribución de €10. No se ha cambiado el gate.",
-  "last_completed_action": "Falsación económica del umbral de contribución registrada en STATE v46 y documento de análisis; coste €0.",
-  "evidence": "STATE v47; BOOT aligned to canonical STATE blob SHA; unit-economics falsification addendum; memory/backup/event log checkpointed; payment not executed; spend/revenue/profit €0.",
+  "current_action": "Reconcile derived continuity artifacts after adding R1-R5. Pilot payment remains pending; no business gates changed.",
+  "last_completed_action": "Added canonical NEXIA_OPERATIONAL_RULES.md (R1-R5), linked from STATE v48, and verified STATE/BOOT alignment; €0, no business-side effects.",
+  "evidence": "STATE v48 reread; BOOT v6 reread and exact STATE blob SHA aligned; operational rules file created. Remaining derived artifacts being checkpointed.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout €61.30 entregado verificado; pago pendiente de Kael.",
   "parallel_work": [
@@ -13,7 +13,8 @@
     "Supplier/unit economics matrix",
     "Core continuity/resilience maintenance"
   ],
-  "next_action": "Esperar a que Kael ejecute el pago aprobado; mientras tanto, preparación a coste 0. Resolver si €10 de contribución es stretch target o gate duro antes de evaluar resultados.",
+  "next_action": "Finish MEMORY, MASTER_BACKUP and EVENT_LOG checkpointing, then verify all changed artifacts.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
-  "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica."
+  "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
+  "operational_rules": "NEXIA_OPERATIONAL_RULES.md — ACTIVE, R1-R5"
 }
