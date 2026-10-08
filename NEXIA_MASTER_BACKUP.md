@@ -25,3 +25,18 @@ Capital spent: **0 €**. Revenue: **0 €**. Profit: **0 €**.
 Continuity verification target: STATE v41 → BOOT → LIVE → MASTER_BACKUP → EVENT_LOG. No business-side effects, external contact, registration, purchase or irreversible action occurred in this checkpoint.
 
 This addendum records the current verified state. Older sections remain historical snapshots and must not override NEXIA_STATE.json.
+
+
+## 38. CURRENT CHECKPOINT ADDENDUM — 2026-10-08 — RESALE-FIRST
+
+Canonical operational state: NEXIA_STATE v44
+State SHA: f5c5e91c7be013339fdafa58667980281b160086
+Phase: VALIDACIÓN
+Primary mission: MISSION-RESALE-001
+Experiment: EXP-RESALE-001 / EXP-RESALE-001A approved pending Kael checkout
+
+Kael approved a pilot purchase of up to 55 € + transport for 10 branded T-shirts from Vintage4Originals. No payment has been executed by NEXIA. The operating architecture was adapted to resale-first and persisted in NEXIA_RESALE_OPERATING_ARCHITECTURE.md.
+
+Financial impact at checkpoint: 0 €. Revenue: 0 €. Profit: 0 €.
+
+Derived continuity artifacts were reconciled: BOOT v3 and LIVE updated after STATE v44. Older sections remain historical snapshots and must not override canonical STATE.
