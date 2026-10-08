@@ -1,5 +1,5 @@
 {
-  "version": 48,
+  "version": 49,
   "updated_at": "2026-10-09",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -530,5 +530,25 @@
     "implementation_status": "DOCUMENTED_AND_LINKED_IN_CANONICAL_STATE",
     "effective_date": "2026-10-09",
     "note": "Complements existing authority and synchronization protocols; does not change business thresholds, Human Gates or permissions."
+  },
+  "progress_dashboard": {
+    "canonical_artifact": "NEXIA_PROGRESS_DASHBOARD.md",
+    "version": "1.0",
+    "status": "ACTIVE_EVIDENCE_GATED",
+    "updated_at": "2026-10-09",
+    "design": "Separate verified business outcomes from operational throughput; missing telemetry is NOT_INSTRUMENTED, not zero.",
+    "indicators": [
+      "users/participants",
+      "experiments",
+      "validated_unit_economics",
+      "transactions",
+      "automation_runtime",
+      "human_time_saved",
+      "revenue",
+      "after_tax_profit",
+      "repeatability"
+    ],
+    "implementation_status": "DOCUMENTED; current values and limitations recorded; automated telemetry not connected",
+    "no_economic_claim_from_technical_activity": true
   }
 }
