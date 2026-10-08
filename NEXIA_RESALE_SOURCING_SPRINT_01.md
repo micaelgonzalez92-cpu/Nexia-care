@@ -105,3 +105,28 @@ No comprar. Si la investigación mantiene economía atractiva, preparar una comp
 ## Hallazgo de este ciclo
 
 La mejor vía de falsación sin gasto es ahora comparar 2 lotes pequeños de Valencia (Vintage4Originals y Vintage Wholesale Spain) contra 1 caja de marca de SP Vintage, usando una cesta objetivo de categorías con precios públicos Vinted. Antes de pedir dinero, debemos convertir estas señales en una propuesta de compra mínima con coste total, unidades esperadas y umbral de fracaso.
+
+
+## Product-archetype demand refresh — 2026-10-08
+
+Fresh €0 research was used to refine the pilot's product-selection logic. These are market signals, not realized results for our operation.
+
+| Archetype | Current public signal | Operational reading | Pilot rule |
+|---|---|---|---|
+| Basic branded T-shirt | Common examples around €8–15 on current Vinted surfaces for Nike/adidas/Tommy/Lacoste | High competition; ticket may be too low for labor-heavy handling | C unless acquisition is very low and prep is minimal |
+| Large-logo / distinctive graphic | Current Nike/adidas examples around €10–25+; distinctive/vintage pieces can sit materially higher | Better differentiation than generic basics | A/B candidate when condition and authenticity are strong |
+| Y2K / 90s / vintage signal | Current Vinted examples include Nike Y2K around €16–35 and Lacoste vintage/Y2K around €10–26+ | Era/design can create price power beyond brand alone | A candidate if evidence supports era/style claim |
+| Sports/team/collaboration | Current Nike examples show ~€29 for a vintage FCB shirt; sportswear is a popular Vinted category | Potentially higher ticket, but model/authenticity matter | A candidate; verify exact model and labels |
+| Polo / rugby / heritage | Ralph Lauren/Polo Ralph Lauren and Lacoste show typical higher ranges; current examples include ~€29–35 for distinctive vintage/preppy pieces | Stronger ticket potential than basic tees | A/B candidate; avoid commodity basics |
+
+### Evidence cross-check
+
+Third-party VintAnalytics reports Spain-wide brand-level demand but not SKU-level causality. Its 30-day sold snapshot reports Nike 15,061 sales, adidas 8,864, Ralph Lauren 4,607, Lacoste 3,743, Tommy Hilfiger 3,398 and Carhartt 2,247, with reported sell-through ranging from 25% to 36% for those brands. A separate current listing/favourite snapshot shows typical asking-price ranges of roughly €12–50 for Nike, €12–40 adidas, €20–50 Ralph Lauren, €18–45 Lacoste, €12–30 Tommy Hilfiger and €20–50 Carhartt. These figures are directional and should not be treated as our realized sale prices. citeturn0search1turn0search0
+
+Current Vinted surfaces reinforce the same mechanism: distinctive/Y2K/vintage and sports pieces can be listed materially above common basics, while common branded T-shirts frequently cluster near €8–15. Examples currently visible include a Nike Y2K trackpant at €15.95, a Nike vintage/sports jacket at €24.90, a Nike Japan/FCB vintage T-shirt at €29, an adidas large-Trefoil T-shirt at €10, a Tommy Hilfiger Y2K shirt at €11.95 and Lacoste vintage/Y2K polos around €10–26. These are asking prices, not completed sales. citeturn0search6turn0search7turn0search11turn0search13turn0search2
+
+### Updated sourcing decision rule
+
+For the 10-piece pilot, do not optimize for brand count. Optimize for the number of **A/B archetypes that can plausibly support a realized ticket >= €15–20 while keeping preparation low**. A basic branded T-shirt is useful as a control; a distinctive logo/graphic, Y2K/90s, sports/team or heritage/polo piece is more informative for testing price power.
+
+This does not justify a second purchase. The existing V4O lot remains the approved evidence path; the next decision must come from the actual garments received and measured.
