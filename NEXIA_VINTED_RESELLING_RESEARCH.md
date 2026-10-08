@@ -496,3 +496,41 @@ Hard filters before ranking:
 - **Wholesale stock buying** ranks last for now due to capital and unsold-inventory exposure unless a no-cost item-level evidence path emerges.
 
 No candidate is selected as the winner. No money was spent; no supplier was contacted; no store was opened; no order was placed; no sales or profit were generated. Next action: build a zero-cost comparison sheet for the three leading candidates using concrete SKUs, destinations, costs and conservative realized-price assumptions, then falsify before any commercial commitment.
+
+
+## UPDATE — 2026-10-09 — CONCRETE OFFER COMPARISON / COST GATE
+
+### Public offer details retrieved
+**1) Clothing dropshipping — B2B Griffati (supplier's own page):**
+https://www.griffati.com/en/dropshipping.html
+- Advertises no minimum per-piece order, catalogues and tracked shipping.
+- Publicly displayed plan pricing includes:
+  - Basic catalog-file service: €90 + VAT annual membership AND €90 + VAT monthly dropship fee.
+  - WooCommerce/PrestaShop service: €250 + VAT annual membership AND €120 + VAT monthly dropship fee.
+  - Sync2Fashion Shopify plans shown at $90/month (Starter) and $190/month (Seller Plus); exact applicability/feature access must be confirmed.
+- Supplier's illustrative item example: Tommy Hilfiger ticket price €118.80, sale price €96.00, purchase price €54.90, claimed “profit” €41. This is a supplier illustration, not our verified net contribution; shipping treatment, applicable VAT, marketplace/payment fees, returns, discounts, support, customer acquisition and the monthly/annual plan costs remain to be deducted/clarified.
+- Implication: despite “no minimum order”, this is not a zero-cost validation path. Fixed fees and platform requirements make it a poor first experiment under the current zero-cost preference. Do not subscribe/contact/order without specific approval.
+
+**2) Print-on-demand — Printful Bella + Canvas 3001:**
+https://www.printful.com/custom/mens/t-shirts/unisex-staple-t-shirt-bella-canvas-3001
+- Official page confirms product and no minimum order, but the extraction did not expose a reliable current European base price. Unit fulfilment, print, shipping and destination cost therefore remain UNKNOWN/NOT INSTRUMENTED.
+- Printful's Europe overview: https://www.printful.com/uk/print-on-demand-europe says no upfront inventory investment/minimums, with fulfilment in Spain, Latvia and the UK. This does not remove store/platform/payment, design, tax, returns or customer-acquisition costs.
+- Implication: still a promising inventory-free model for research, but do not assign a margin until the exact product/print/location/ship-to quote is available.
+
+**3) Vintage wholesale — Vintage Wholesale Europe Reseller Starter-pack:**
+https://vintagewholesaleeurope.com/products/reseller-starterpack
+- Search index displayed €55 for the starter pack, but the live content extraction did not reliably confirm final current currency/price, unit count, grading, shipping or sellable yield. Treat €55 as an indicative lead, not a verified delivered cost.
+- Their 10 kg mixed second-hand product page is https://vintagewholesaleeurope.com/products/10kg-second-hand-mix; exact current landed price and item-level yield were not exposed.
+- Implication: inventory risk remains and this is not a validated purchase. Need full landed price, number of pieces/weight, grade, defect policy and realistic sellable yield before comparing it to the €61.30 pilot.
+
+### Decision matrix after concrete retrieval
+| Model | Inventory cash exposure | Fixed costs known from public evidence | Main unknown blocking economics | Current decision |
+|---|---|---|---|---|
+| Curated vintage resale | High relative to POD; unsold stock possible | Pilot checkout €61.30 pending payment; alternative starter pack indexed at €55, not fully verified | Sellable yield, delivered cost, realized price, time per listing and sell-through | Research only; pilot purchase remains a separate Human Gate |
+| Niche POD | No bulk inventory required | No minimum order; storefront/payment costs depend on channel | Exact fulfilment + print + shipping by destination; organic demand; refunds/fees | First priority for zero-cost unit-cost discovery, not yet validated |
+| General clothing dropship | No inventory held per SKU, but cashflow and refunds remain | Griffati public options include €90+VAT/year + €90+VAT/month for basic; €250+VAT/year + €120+VAT/month for WooCommerce/PrestaShop; $90+/month plans shown for Sync2Fashion | Exact plan, shipping, taxes, net contribution, customer acquisition and reliable traffic | Do not start with this paid service; fixed costs fail the €0-first gate |
+
+### Gate / next experiment
+Best next action remains free research, not purchase or subscription. Retrieve a usable exact POD quote for one standard tee and shipping to two destinations (one EU, one non-EU), then construct contribution scenarios at conservative retail prices. Compare that with the Griffati example only as a supplier-provided illustration and with vintage only once delivered price/yield are known. Keep all UNKNOWN fields explicit; do not replace missing values with zero.
+
+No supplier contacted; no subscription, store, sample, purchase or customer offer initiated. Cost €0. No sales or contribution generated. STATE canonical checkpoint was not changed; only this research file was updated.
