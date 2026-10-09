@@ -1,0 +1,29 @@
+name: Nexia persistence validation
+
+on:
+  pull_request:
+    paths:
+      - "NEXIA_STATE.json"
+      - "NEXIA_BOOT.json"
+      - "NEXIA_LIVE.json"
+      - "NEXIA_EVENT_LOG.jsonl"
+      - "NEXIA_MASTER_BACKUP.md"
+      - "tools/validate_nexia_persistence.py"
+      - ".github/workflows/nexia-persistence-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-persistence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out pull request revision
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Validate Nexia persistence artifacts
+        run: python tools/validate_nexia_persistence.py
