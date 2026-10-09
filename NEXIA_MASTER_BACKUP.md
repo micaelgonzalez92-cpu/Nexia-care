@@ -189,3 +189,19 @@ STATE v56 blob SHA: `90f56aaa841502c9111a71dfc77f3fc37c56e1c5`; BOOT v15 blob SH
 The existing canonical pilot sheet `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` was read back at blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`. No duplicate `NEXIA_PILOT_MEASUREMENT_SHEET.md` exists or was created. This addendum supersedes earlier hashes as the latest snapshot while preserving all historical addenda. Final post-write readback of this backup and all continuity artifacts remains the last audit step.
 
 Status at write: checkpoint `CP-2026-10-09-PILOT-MEASUREMENT-SHEET-001` marked `VERIFIED_AFTER_READBACK` in STATE v56. Repair branch only; no merge/deployment. Commercial payment gate unchanged; no purchase, receipt, listing, sale, revenue or profit claimed. Financial impact €0.
+
+
+## 52. FINAL READBACK CLOSURE — 2026-10-09
+
+Current readback snapshot on `repair/persistence-reconciliation-2026-10-09`:
+- STATE v56: `90f56aaa841502c9111a71dfc77f3fc37c56e1c5`
+- BOOT v15: `fdb90810f864d1bf99d8c511c677e38902f9e61f` (references STATE v56 SHA above)
+- LIVE: `c6b793a6cd4aec966e6e2bb2e6b52970114ce546`
+- MEMORY: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`
+- EVENT_LOG: `78b27dffe00bcf9f87751aa2655e646fa9abfa68`; latest event `EVT-2026-10-09-PERSISTENCE-READBACK-CLOSURE-001`
+- Persistence protocol: `a765bfc71f136aa62a9ea9e8e0dcbeded914f2f4`
+- Existing intake measurement sheet: `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`
+
+Final readback confirms these artifacts are readable; STATE/BOOT version-hash alignment, LIVE current references, JSON/JSONL parsing, backup snapshot references, and absence of `NEXIA_PILOT_MEASUREMENT_SHEET.md` were checked. This checkpoint supersedes prior snapshots for current artifact hashes; historical addenda remain intact.
+
+Draft PR #11 is open and unmerged. No deployment or commercial action. Kael's €61.30 payment gate remains pending; financial impact €0. Human review is the next gate.
