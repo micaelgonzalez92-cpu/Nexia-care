@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-09T16:45:00+02:00",
+  "updated_at": "2026-10-09T16:47:00+02:00",
   "status": "ACTIVE / VALIDACIÓN — PERSISTENCE SYNC PARTIAL",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "BOOT metadata and MEMORY active-experiment heading are corrected and read back; three append-only reconciliation events are recorded. MASTER_BACKUP contains the prior checkpoint; final refresh and readback remain.",
+  "current_action": "BOOT and MEMORY metadata reconciled; append-only events recorded; MASTER_BACKUP checkpoint 46 written and read back. Final cross-artifact audit is now the only remaining persistence task before deciding on a canonical checkpoint update.",
   "last_completed_action": "Corrected BOOT metadata twice to remove stale status wording; aligned MEMORY to active EXP-RESALE-001; appended and verified three reconciliation events.",
   "evidence": "STATE v53 blob 72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3; BOOT v12 blob 42222d1bd394880010eb810d03e2bcfaadd0e47e; MEMORY blob 23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc; EVENT_LOG blob c2c3566b82fc13babb429ad5eebbb51ff599ca29. STATE/BOOT version-hash match verified. Canonical persistence checkpoint remains WRITE_PENDING_READBACK; sync remains partial.",
   "capital_spent_eur": 0,
@@ -13,7 +13,7 @@
     "Supplier/unit economics matrix",
     "Core continuity/resilience maintenance"
   ],
-  "next_action": "Refresh MASTER_BACKUP with current BOOT, MEMORY, EVENT_LOG and LIVE readback evidence, then re-read all six continuity artifacts. Do not close STATE checkpoint without a deliberate canonical update.",
+  "next_action": "Re-read STATE, BOOT, LIVE, MEMORY, EVENT_LOG and MASTER_BACKUP once; verify STATE/BOOT hash match, current mission, latest event and recorded artifact hashes. Do not change STATE checkpoint status unless the evidence justifies a controlled canonical update.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
