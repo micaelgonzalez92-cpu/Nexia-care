@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-09T16:40:00+02:00",
+  "updated_at": "2026-10-09T16:45:00+02:00",
   "status": "ACTIVE / VALIDACIÓN — PERSISTENCE SYNC PARTIAL",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "BOOT and MEMORY metadata reconciled and read back; append-only events and MASTER_BACKUP checkpoint updated and read back. Final cross-artifact readback is underway.",
-  "last_completed_action": "Updated and verified BOOT, MEMORY, EVENT_LOG, LIVE and MASTER_BACKUP in controlled sequential writes; no canonical STATE change.",
-  "evidence": "Canonical STATE v53 blob 72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3; BOOT v12 blob e26648bedba5a250b68ef29cd415a653caccaff3; MEMORY blob 23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc; EVENT_LOG blob 226ed6efb46c81af9b66181906cde949fa146c5a. LIVE is being re-read after the latest update; MASTER_BACKUP checkpoint 44 has been read back. STATE checkpoint remains WRITE_PENDING_READBACK.",
+  "current_action": "BOOT metadata and MEMORY active-experiment heading are corrected and read back; three append-only reconciliation events are recorded. MASTER_BACKUP contains the prior checkpoint; final refresh and readback remain.",
+  "last_completed_action": "Corrected BOOT metadata twice to remove stale status wording; aligned MEMORY to active EXP-RESALE-001; appended and verified three reconciliation events.",
+  "evidence": "STATE v53 blob 72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3; BOOT v12 blob 42222d1bd394880010eb810d03e2bcfaadd0e47e; MEMORY blob 23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc; EVENT_LOG blob c2c3566b82fc13babb429ad5eebbb51ff599ca29. STATE/BOOT version-hash match verified. Canonical persistence checkpoint remains WRITE_PENDING_READBACK; sync remains partial.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: purchase of 10 branded T-shirts approved; verified delivered checkout €61.30; payment pending Kael. No purchase or inventory receipt is claimed.",
   "parallel_work": [
@@ -13,7 +13,7 @@
     "Supplier/unit economics matrix",
     "Core continuity/resilience maintenance"
   ],
-  "next_action": "Complete final readback of STATE, BOOT, LIVE, MEMORY, EVENT_LOG and MASTER_BACKUP. Keep STATE checkpoint open unless the readback supports a controlled canonical checkpoint update.",
+  "next_action": "Refresh MASTER_BACKUP with current BOOT, MEMORY, EVENT_LOG and LIVE readback evidence, then re-read all six continuity artifacts. Do not close STATE checkpoint without a deliberate canonical update.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
