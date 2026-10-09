@@ -18,19 +18,18 @@ Acumular evidencia y aprendizaje operativo para evitar repetir experimentos, sep
 - Reproducibility status
 
 ## Current experiment
-### EXP-001B — Prueba de diagnóstico con usuario real
-- Hypothesis: una persona sin conocimientos técnicos puede completar el diagnóstico de NEXIA Care y llegar a una acción útil de forma autónoma.
-- Action: prueba con una persona real y cafetera compatible, preferiblemente De'Longhi Magnifica; observar sin sobreayudar.
-- Cost: 0 €
-- Primary metric: porcentaje que llega a una recomendación útil.
-- Secondary metrics: tiempo, abandonos, puntos de duda, preguntas y valoración de utilidad.
-- Success: completa el flujo y entiende qué acción tomar sin asistencia significativa.
-- Failure: necesita ayuda, abandona o no entiende/confía en el resultado.
-- Result: pendiente de prueba real.
-- Learning: pendiente.
-- New question: ¿qué partes del flujo generan fricción o confianza?
-- Next action: conseguir primera prueba real.
-- Reproducibility: no evaluable hasta disponer de resultados repetidos.
+
+### EXP-RESALE-001 — Reventa profesional de ropa de segunda mano en España
+- Status: ACTIVE / VALIDACIÓN; pilot EXP-RESALE-001A approved but pending Kael payment.
+- Hypothesis: a small, measured batch of branded second-hand clothing can achieve acceptable sellable yield, realized prices, contribution after all attributable costs, and repeatable sourcing.
+- Current evidence: supplier checkout of €61.30 delivered for 10 shirts was verified; payment has not been made. No inventory, listings, sales, revenue, or profit are claimed.
+- Success gates currently recorded in STATE: at least 80% sellable; average realized sale price at least €15; contribution target €10/unit. The contribution target is not jointly compatible with €15 average realized price under the provisional acquisition allocation before other costs; do not change the canonical gate without Kael's decision.
+- Next action: continue zero-cost preparation and persistence reconciliation. After any authorized purchase, inspect and record actual sellable count, preparation time, realized prices, channel fees, packaging, shipping, returns/defects, attributable labor and tax treatment.
+- Reproducibility: NOT ACHIEVED; no pilot purchase or own sale has occurred.
+
+### Paused legacy experiment — EXP-001B (NEXIA Care)
+- Status: PAUSED_NOT_DELETED. Preserve prior diagnostic-test hypothesis and historical notes below, but it is not the active mission.
+- No real-user test result is claimed; this path remains paused unless new evidence or an explicit request changes priority.
 
 ## Ideas de mejora acumuladas
 1. Mission Generator: Radar → Señal → Investigación → Veta → Validación → Experimento → Resultado → Aprendizaje → Nueva misión.
