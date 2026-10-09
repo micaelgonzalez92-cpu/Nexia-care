@@ -137,13 +137,13 @@ def main() -> int:
         "EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md",
     )
     snapshot_labels = {
-        "NEXIA_STATE.json": r"STATE v[0-9]+:",
-        "NEXIA_BOOT.json": r"BOOT v[0-9]+:",
-        "NEXIA_LIVE.json": r"LIVE:",
-        "NEXIA_EVENT_LOG.jsonl": r"EVENT_LOG:",
-        "NEXIA_MEMORY.md": r"MEMORY:",
-        "NEXIA_PERSISTENCE_PROTOCOL.md": r"Persistence protocol:",
-        "EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md": r"Existing intake measurement sheet:",
+        "NEXIA_STATE.json": r"- STATE v[0-9]+:",
+        "NEXIA_BOOT.json": r"- BOOT v[0-9]+:",
+        "NEXIA_LIVE.json": r"- LIVE:",
+        "NEXIA_EVENT_LOG.jsonl": r"- EVENT_LOG:",
+        "NEXIA_MEMORY.md": r"- MEMORY:",
+        "NEXIA_PERSISTENCE_PROTOCOL.md": r"- Persistence protocol:",
+        "EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md": r"- Existing intake measurement sheet:",
     }
     for name in snapshot_paths:
         path = ROOT / name
