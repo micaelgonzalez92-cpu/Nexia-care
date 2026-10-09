@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "boot_version": 13,
-  "generated_at": "2026-10-09T17:00:00+02:00",
+  "boot_version": 14,
+  "generated_at": "2026-10-09T17:20:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -12,8 +12,8 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
-  "last_verified_state_version": 54,
-  "last_verified_state_blob_sha": "96dc5be043355cbb7d55e69d946b8e29ebd1183a",
+  "last_verified_state_version": 55,
+  "last_verified_state_blob_sha": "d20949343521d833d7995a57c40e61745003cd07",
   "phase": "VALIDACIÓN",
   "active_experiment": {
     "id": "EXP-RESALE-001",
@@ -26,7 +26,7 @@
     "status": "ACTIVE"
   },
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout verificado en €61.30 entregado; pago pendiente de Kael",
-  "last_confirmed_action": "2026-10-09: controlled repair branch created from inspected main HEAD 3e4300735e11673e7e7436a52e5f2adb6c773acc. STATE v54 written and read back; derived artifact reconciliation in progress. Existing EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md reused; no duplicate created. Purchase remains pending Kael payment.",
+  "last_confirmed_action": "2026-10-09: STATE v55 closes readback checkpoint v54; final v55 cross-artifact readback is required before overall verification. Existing pilot sheet reused; no duplicate created; commercial gate unchanged.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -36,10 +36,10 @@
   "startup_rule": "On every new NEXIA session, use the GitHub connector to inspect this repository and load BOOT -> STATE -> MEMORY/RECENT EVENTS before asking Kael to restate project state.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE; includes R6, lifecycle and decision engine",
   "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; sustainable after-tax net profit is primary score; technical activity does not add points",
-  "state_version": 54,
-  "state_blob_sha": "96dc5be043355cbb7d55e69d946b8e29ebd1183a",
+  "state_version": 55,
+  "state_blob_sha": "d20949343521d833d7995a57c40e61745003cd07",
   "note": "BOOT status reflects the latest observed partial reconciliation; MEMORY header no longer foregrounds paused EXP-001B. Canonical STATE v53 remains unchanged; no business spending or action occurred.",
   "updated_at": "2026-10-09",
-  "sync_status": "PARTIAL_RECONCILIATION",
+  "sync_status": "RECONCILED_PENDING_FINAL_READBACK",
   "next_action": "Perform one final readback of all continuity artifacts. Keep the canonical checkpoint open unless an explicit sequential STATE update is justified by the evidence."
 }
