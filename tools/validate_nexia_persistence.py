@@ -42,6 +42,9 @@ def main() -> int:
     state = json.loads(state_raw.decode("utf-8"))
     live = read_json("NEXIA_LIVE.json")
     backup = read_text("NEXIA_MASTER_BACKUP.md")
+    snapshot_marker = "## 52. FINAL READBACK CLOSURE — 2026-10-09"
+    latest_snapshot = backup.rsplit(snapshot_marker, 1)[-1] if snapshot_marker in backup else ""
+    check(bool(latest_snapshot), "MASTER_BACKUP has a latest readback snapshot section", failures)
     event_lines = [
         (i, line) for i, line in enumerate(
             read_text("NEXIA_EVENT_LOG.jsonl").splitlines(), start=1
