@@ -180,3 +180,12 @@ Repair branch `repair/persistence-reconciliation-2026-10-09`, based on main HEAD
 ## 50. FINAL LIVE HASH ALIGNMENT — 2026-10-09
 
 Corrective readback note: after checkpoint 49 was written, LIVE was refreshed and re-read. Current LIVE blob SHA is `5f470ea4d9ab7e080cdb1b8c1dd12e5f7253720c`; it records STATE v55 blob `d20949343521d833d7995a57c40e61745003cd07`, BOOT v14 blob `e0c8962191917cc421f087d19adb823b12fe7b50`, and EVENT_LOG blob `2ba5a66df5549101722e9bfd608735ad4ce1035a`. This note supersedes the LIVE blob SHA recorded in checkpoint 49; historical checkpoint content remains preserved. STATE remains v55 with its reconciliation checkpoint marked `VERIFIED_AFTER_READBACK`; the final audit classification depends on the subsequent readback of this updated backup and all required artifacts.
+
+
+## 51. STATE v56 FINAL ALIGNMENT — 2026-10-09
+
+STATE v56 blob SHA: `90f56aaa841502c9111a71dfc77f3fc37c56e1c5`; BOOT v15 blob SHA: `d472d69e64c130a3cfab3db35dca0c48ae80acbc`, with exact version/hash reference to STATE v56; LIVE blob SHA: `8c0bac91ad9a75e63be521599a5edc268bb40855`; MEMORY blob SHA: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`; EVENT_LOG blob SHA: `bd5d2501613d676c0912dbc645ab0aabd95c9887`, latest event `EVT-2026-10-09-PERSISTENCE-REPAIR-VERIFIED-001`.
+
+The existing canonical pilot sheet `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` was read back at blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`. No duplicate `NEXIA_PILOT_MEASUREMENT_SHEET.md` exists or was created. This addendum supersedes earlier hashes as the latest snapshot while preserving all historical addenda. Final post-write readback of this backup and all continuity artifacts remains the last audit step.
+
+Status at write: checkpoint `CP-2026-10-09-PILOT-MEASUREMENT-SHEET-001` marked `VERIFIED_AFTER_READBACK` in STATE v56. Repair branch only; no merge/deployment. Commercial payment gate unchanged; no purchase, receipt, listing, sale, revenue or profit claimed. Financial impact €0.
