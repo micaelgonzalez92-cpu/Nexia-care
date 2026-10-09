@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -135,15 +136,29 @@ def main() -> int:
         "NEXIA_PERSISTENCE_PROTOCOL.md",
         "EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md",
     )
+    snapshot_labels = {
+        "NEXIA_STATE.json": r"STATE v\\d+:",
+        "NEXIA_BOOT.json": r"BOOT v\\d+:",
+        "NEXIA_LIVE.json": r"LIVE:",
+        "NEXIA_EVENT_LOG.jsonl": r"EVENT_LOG:",
+        "NEXIA_MEMORY.md": r"MEMORY:",
+        "NEXIA_PERSISTENCE_PROTOCOL.md": r"Persistence protocol:",
+        "EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md": r"Existing intake measurement sheet:",
+    }
     for name in snapshot_paths:
         path = ROOT / name
         if not path.is_file():
             check(False, f"Required persistence artifact exists: {name}", failures)
             continue
         current_sha = git_blob_sha(path.read_bytes())
+        label = snapshot_labels[name]
+        referenced = re.search(
+            rf"(?m)^{label}.*`{re.escape(current_sha)}`",
+            latest_snapshot,
+        ) is not None
         check(
-            current_sha in latest_snapshot,
-            f"Latest MASTER_BACKUP snapshot references current {name} blob SHA",
+            referenced,
+            f"Latest MASTER_BACKUP snapshot maps current {name} blob SHA to its own entry",
             failures,
         )
 
