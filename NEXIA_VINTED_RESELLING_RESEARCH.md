@@ -726,3 +726,39 @@ Vinted's public Pro information lists Spain among eligible countries and describ
 - None of these channels has demonstrated realized price, sell-through, contribution after labour, or net profit for Nexia.
 - The €61.30 pilot remains unpurchased; no inventory, sale, or revenue is claimed. Do not change existing experiment gates without Kael's explicit decision.
 - Next evidence with highest value: verified condition/brand/size-specific sold-price evidence, then actual sellable yield and timed prep once inventory is lawfully acquired. Cost of this research update: €0.
+
+## Addendum — 2026-10-09: audit of the €10 contribution threshold and monthly target arithmetic
+
+### Status of the threshold
+The €10/unit contribution gate is a provisional decision threshold inherited from the initial experiment hypothesis. It was not derived from validated sales, measured labour, a reconciled tax model, or a statistically supported market benchmark. Do not describe it as an empirically optimal threshold. It remains unchanged as a pre-registered pilot gate unless Kael explicitly approves a prospective revision; its evidence status is HYPOTHESIS / NOT YET VALIDATED.
+
+### Definition required for future measurements
+For this experiment, define unit contribution as realized revenue excluding VAT collected, less allocated landed acquisition cost per sellable unit, seller-borne platform/payment fees, packaging, seller-borne shipping/subsidies, expected returns/defects and other unit-variable costs. Include measured preparation/listing/packing/customer-service labour at an explicit hourly-rate assumption when reporting economic contribution. Show cash contribution before imputed labour separately if useful, but never call either figure after-tax net profit.
+
+Fixed monthly overhead and taxes must then be reconciled separately. UNKNOWN tax regime, fee, shipping, return or labour inputs remain UNKNOWN / NOT INSTRUMENTED, not zero.
+
+### Corrected illustrative relationship between contribution and the €1,000 net monthly objective
+For planning only, use the simplified equation:
+
+required monthly units = (target after-tax net profit / (1 - assumed effective tax rate) + monthly fixed overhead) / contribution per unit before fixed overhead and tax.
+
+This simplification assumes the stated effective tax rate applies to the modeled pre-tax profit; actual Spanish tax treatment, deductible costs, VAT regime, social-security obligations and legal structure can materially change the result. It is not tax advice or a forecast.
+
+Illustration only: target €1,000/month after tax, assumed effective tax rate 25%, assumed fixed overhead €100/month. Required contribution before fixed overhead and tax is €1,433.33/month. Approximate units required:
+- €5/unit: 287 units/month
+- €10/unit: 144 units/month
+- €13/unit: 111 units/month
+- €17.50/unit: 82 units/month
+- €23.50/unit: 61 units/month
+
+These figures are rounded up to whole units. The 25% tax and €100 overhead are scenario assumptions, not verified Nexia costs or tax liabilities. Do not use this table as evidence that any unit contribution or sales volume is achievable.
+
+### Audit note on previous scenario arithmetic
+Any earlier estimate that combines €1,467 pre-tax profit, €100 fixed costs and a 25% effective tax assumption to claim €1,000 net must not be reused without clarifying whether fixed costs are deducted before or after tax. Under the simplified formula above, €1,000 net requires €1,333.33 pre-tax profit at 25% tax, plus €100 fixed overhead, i.e. €1,433.33 contribution before fixed costs and tax.
+
+### Decision and next gate
+- Keep the €10 pilot threshold unchanged only as a pre-registered test gate; do not claim it is optimal or validated.
+- Before interpreting pilot success, define the applicable VAT/tax treatment and capture actual realized sale proceeds, sellable yield, all variable costs and timed labour.
+- After a first evidence-backed batch, compare observed contribution/hour, sell-through and cash conversion against alternative gates prospectively. Any change to the existing experiment's success criteria must be documented before the next test batch, not retroactively.
+- Research cost for this addendum: €0. No purchase, supplier contact, listing, sale or revenue was performed by this update.
+
