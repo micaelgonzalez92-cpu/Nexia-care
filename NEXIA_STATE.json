@@ -1,5 +1,5 @@
 {
-  "version": 53,
+  "version": 54,
   "updated_at": "2026-10-09",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -230,12 +230,12 @@
   },
   "persistence_checkpoint": {
     "checkpoint_id": "CP-2026-10-09-PILOT-MEASUREMENT-SHEET-001",
-    "previous_state_version": 52,
-    "current_state_version": 53,
+    "previous_state_version": 53,
+    "current_state_version": 54,
     "status": "WRITE_PENDING_READBACK",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
-    "note": "Prepared zero-cost measurement sheet for resale pilot. Purchase remains pending Kael payment; no inventory purchase, external contact, listing, sale or revenue is claimed."
+    "note": "Controlled reconciliation repair on branch repair/persistence-reconciliation-2026-10-09. Existing canonical measurement sheet reused: EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md. First-stage state write awaits derived-artifact refresh and readback; commercial gate unchanged."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
