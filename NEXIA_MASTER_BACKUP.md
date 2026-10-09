@@ -166,3 +166,12 @@ STATE v54 blob SHA: `96dc5be043355cbb7d55e69d946b8e29ebd1183a`; BOOT v13 blob SH
 Canonical intake sheet exists and was read: `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` (blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`). No second sheet was created. STATE remains `WRITE_PENDING_READBACK` while the final controlled reconciliation is in progress. This addendum is a branch checkpoint, not a declaration of full persistence health.
 
 Commercial gate unchanged: the €61.30 delivered checkout remains unpaid by Kael; no purchase, inventory receipt, listing, sale, revenue, or profit is claimed. Financial impact: €0.
+
+
+## 49. FINAL RECONCILIATION CHECKPOINT — 2026-10-09 — REPAIR BRANCH
+
+Canonical STATE v55 blob SHA: `d20949343521d833d7995a57c40e61745003cd07`. STATE v55 closes the readback checkpoint for STATE v54; its `persistence_checkpoint.status` is `VERIFIED_AFTER_READBACK`. BOOT v14 blob SHA: `e0c8962191917cc421f087d19adb823b12fe7b50`, with `state_version=55` and `state_blob_sha=d20949343521d833d7995a57c40e61745003cd07`. LIVE blob SHA: `7379dc97216a7fb7e98a4a044ecbdffa06eaa57c`, reports cross-artifact readback pending until the final audit completes. MEMORY blob SHA: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`. EVENT_LOG blob SHA: `2ba5a66df5549101722e9bfd608735ad4ce1035a`; latest append-only event: `EVT-2026-10-09-PERSISTENCE-REPAIR-CHECKPOINT-001`.
+
+The existing measurement sheet `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` was read back at blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`; no duplicate `NEXIA_PILOT_MEASUREMENT_SHEET.md` was created. Protocol `NEXIA_PERSISTENCE_PROTOCOL.md` was read at blob SHA `a765bfc71f136aa62a9ea9e8e0dcbeded914f2f4`. This backup addendum is written after the preceding artifact readbacks; final verification must re-read this backup and every required artifact from the repair branch.
+
+Repair branch `repair/persistence-reconciliation-2026-10-09`, based on main HEAD `3e4300735e11673e7e7436a52e5f2adb6c773acc`. No merge, deployment, purchase, listing, external contact, or commercial action. Kael's payment gate for the €61.30 delivered pilot remains pending; financial impact €0.
