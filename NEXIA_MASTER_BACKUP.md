@@ -125,3 +125,14 @@ EVENT_LOG: append-only event `EVT-2026-10-09-PERSISTENCE-SYNC-002` appended and 
 This checkpoint records a **partial** reconciliation only. STATE v53 still has persistence checkpoint status `WRITE_PENDING_READBACK`; do not claim the entire persistence layer healthy or fully closed. The next operational check is readback of this backup update, then a final consistency comparison. Do not silently modify canonical STATE or rewrite historical event entries.
 
 Commercial Human Gate unchanged: EXP-RESALE-001A checkout of €61.30 delivered remains unpaid by Kael. No purchase, inventory receipt, listing, sale, revenue, or profit is claimed. Financial impact of persistence maintenance: €0. No runtime worker, 24/7 autonomy, deployment, or independent kill switch is claimed.
+
+## 44. CHECKPOINT — 2026-10-09 — CONTINUITY METADATA RECONCILIATION
+
+Canonical STATE remains **v53**, blob SHA `72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3`; no canonical STATE write was made in this batch.
+- BOOT v12 read back: blob SHA `e26648bedba5a250b68ef29cd415a653caccaff3`; state version/hash still match STATE v53. Descriptive sync status corrected to PARTIAL_RECONCILIATION.
+- MEMORY read back: blob SHA `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`; current-experiment heading now points to EXP-RESALE-001, with EXP-001B explicitly retained as paused legacy history.
+- EVENT_LOG read back: blob SHA `226ed6efb46c81af9b66181906cde949fa146c5a`; append-only events record BOOT and MEMORY metadata corrections.
+- LIVE read back: blob SHA `9514fc84a60416400454552728519f80b15e1e1b`; it explicitly reports partial reconciliation.
+- MASTER_BACKUP is being updated with this checkpoint; its resulting blob SHA must be verified by readback.
+
+**Status remains PARTIAL, not fully healthy.** STATE's persistence checkpoint still says `WRITE_PENDING_READBACK`; do not close it until the current artifacts are read back and consistency checked. Historical event entries were not rewritten. No business spending, purchase, external contact, listing, sale, revenue or profit occurred. The EXP-RESALE-001A €61.30 checkout remains unpaid by Kael.
