@@ -42,7 +42,7 @@ def main() -> int:
     state = json.loads(state_raw.decode("utf-8"))
     live = read_json("NEXIA_LIVE.json")
     backup = read_text("NEXIA_MASTER_BACKUP.md")
-    latest_section = backup.rsplit("\\n## ", 1)[-1]
+    latest_section = backup.rsplit("\n## ", 1)[-1]
     latest_snapshot = latest_section if "FINAL READBACK CLOSURE" in latest_section else ""
     check(bool(latest_snapshot), "Latest MASTER_BACKUP section is the final readback snapshot", failures)
     event_lines = [
@@ -142,8 +142,8 @@ def main() -> int:
             continue
         current_sha = git_blob_sha(path.read_bytes())
         check(
-            current_sha in backup,
-            f"MASTER_BACKUP references current {name} blob SHA",
+            current_sha in latest_snapshot,
+            f"Latest MASTER_BACKUP snapshot references current {name} blob SHA",
             failures,
         )
 
