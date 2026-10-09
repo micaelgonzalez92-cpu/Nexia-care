@@ -26,7 +26,7 @@
     "status": "ACTIVE"
   },
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout verificado en €61.30 entregado; pago pendiente de Kael",
-  "last_confirmed_action": "2026-10-09: Readback verified NEXIA_STATE v53 blob 72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3; BOOT points to exact canonical STATE. Current reads confirm LIVE, EVENT_LOG and MASTER_BACKUP contain the partial reconciliation checkpoint. Full persistence health remains unverified: STATE checkpoint is WRITE_PENDING_READBACK and MEMORY header still foregrounds paused EXP-001B.",
+  "last_confirmed_action": "2026-10-09: STATE v53/BOOT v12 version-hash match verified. BOOT metadata corrected and read back; MEMORY header aligned to active EXP-RESALE-001 and read back; append-only reconciliation events recorded. LIVE and MASTER_BACKUP were refreshed/read back. Full persistence health remains unverified because STATE checkpoint status is WRITE_PENDING_READBACK; final cross-artifact audit remains open.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -38,8 +38,8 @@
   "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; sustainable after-tax net profit is primary score; technical activity does not add points",
   "state_version": 53,
   "state_blob_sha": "72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3",
-  "note": "BOOT metadata corrected to current observed repository facts. STATE v53 remains canonical; no business action or spending occurred. Full persistence reconciliation is still open.",
+  "note": "BOOT status reflects the latest observed partial reconciliation; MEMORY header no longer foregrounds paused EXP-001B. Canonical STATE v53 remains unchanged; no business spending or action occurred.",
   "updated_at": "2026-10-09",
   "sync_status": "PARTIAL_RECONCILIATION",
-  "next_action": "Complete final cross-artifact consistency check. Do not mark STATE checkpoint verified until all required artifacts are reconciled sequentially and read back. Commercial Human Gate remains payment by Kael."
+  "next_action": "Perform one final readback of all continuity artifacts. Keep the canonical checkpoint open unless an explicit sequential STATE update is justified by the evidence."
 }
