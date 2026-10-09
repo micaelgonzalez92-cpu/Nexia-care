@@ -155,3 +155,14 @@ No canonical STATE update was made. No spend, purchase, inventory receipt, exter
 ## 47. LIVE NEXT-ACTION ALIGNMENT — 2026-10-09
 
 LIVE was updated and read back after checkpoint 46. Current verified LIVE blob SHA: `7c0b9566deca0217c18ef164cde83108d1043c5b`. Its next action is one final readback of all six continuity artifacts and a decision on whether a controlled canonical STATE checkpoint update is justified. Full persistence health is still not declared.
+
+
+## 48. CONTROLLED PERSISTENCE REPAIR — 2026-10-09
+
+Repair branch: `repair/persistence-reconciliation-2026-10-09`, based on inspected main HEAD `3e4300735e11673e7e7436a52e5f2adb6c773acc`. No merge or deployment performed.
+
+STATE v54 blob SHA: `96dc5be043355cbb7d55e69d946b8e29ebd1183a`; BOOT v13 blob SHA: `9ab92717edced9b4e08b27cfc00e2c8767be9187`; LIVE blob SHA: `5a4a29d19265df8dd386200466ff98b3e415677d`; EVENT_LOG append-only start event `EVT-2026-10-09-PERSISTENCE-REPAIR-START-001`, blob SHA: `6a7b3a73ddbfa1e4e77819bacfbc41c2a96caca2`.
+
+Canonical intake sheet exists and was read: `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` (blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`). No second sheet was created. STATE remains `WRITE_PENDING_READBACK` while the final controlled reconciliation is in progress. This addendum is a branch checkpoint, not a declaration of full persistence health.
+
+Commercial gate unchanged: the €61.30 delivered checkout remains unpaid by Kael; no purchase, inventory receipt, listing, sale, revenue, or profit is claimed. Financial impact: €0.
