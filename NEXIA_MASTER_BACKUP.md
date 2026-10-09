@@ -140,3 +140,14 @@ Canonical STATE remains **v53**, blob SHA `72072c1fa3beba3fa2ef31a6b6bdfeb327856
 ## 45. READBACK CORRECTION — 2026-10-09
 
 Follow-up after checkpoint 44: LIVE was refreshed and read back again. Current verified LIVE blob SHA: `d6ab7222d9fcdc7b8a1c1222bd9ad2a61e934d0b`. Its next action is final cross-artifact readback; STATE remains v53 with checkpoint `WRITE_PENDING_READBACK`. This note supersedes the temporary wording in checkpoint 44 that LIVE was still being refreshed. It does not declare full persistence health.
+
+## 46. CHECKPOINT — 2026-10-09 — FINAL METADATA READBACK BEFORE STATE GATE
+
+Canonical STATE remains **v53**, blob SHA `72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3`; its checkpoint status remains `WRITE_PENDING_READBACK`.
+- BOOT v12 current blob SHA: `42222d1bd394880010eb810d03e2bcfaadd0e47e`; state version/hash match STATE v53; status remains `PARTIAL_RECONCILIATION`.
+- MEMORY current blob SHA: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`; current experiment is EXP-RESALE-001; EXP-001B remains marked paused legacy.
+- EVENT_LOG current blob SHA: `c2c3566b82fc13babb429ad5eebbb51ff599ca29`; latest append-only event is `EVT-2026-10-09-BOOT-STATUS-FINALIZED-001`.
+- LIVE current blob SHA: `df9480b80cb1dc67a59296d6768bf38ca8fb9796`; read back with partial sync status.
+- This MASTER_BACKUP update must itself be read back; the final cross-artifact audit remains pending until that readback.
+
+No canonical STATE update was made. No spend, purchase, inventory receipt, external contact, listing, sale, revenue or profit occurred. EXP-RESALE-001A checkout €61.30 remains unpaid by Kael. This checkpoint is not a declaration of full persistence health.
