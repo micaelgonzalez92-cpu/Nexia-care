@@ -137,8 +137,8 @@ def main() -> int:
         "EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md",
     )
     snapshot_labels = {
-        "NEXIA_STATE.json": r"STATE v\\d+:",
-        "NEXIA_BOOT.json": r"BOOT v\\d+:",
+        "NEXIA_STATE.json": r"STATE v[0-9]+:",
+        "NEXIA_BOOT.json": r"BOOT v[0-9]+:",
         "NEXIA_LIVE.json": r"LIVE:",
         "NEXIA_EVENT_LOG.jsonl": r"EVENT_LOG:",
         "NEXIA_MEMORY.md": r"MEMORY:",
