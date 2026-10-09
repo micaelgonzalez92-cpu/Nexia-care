@@ -155,3 +155,53 @@ No canonical STATE update was made. No spend, purchase, inventory receipt, exter
 ## 47. LIVE NEXT-ACTION ALIGNMENT — 2026-10-09
 
 LIVE was updated and read back after checkpoint 46. Current verified LIVE blob SHA: `7c0b9566deca0217c18ef164cde83108d1043c5b`. Its next action is one final readback of all six continuity artifacts and a decision on whether a controlled canonical STATE checkpoint update is justified. Full persistence health is still not declared.
+
+
+## 48. CONTROLLED PERSISTENCE REPAIR — 2026-10-09
+
+Repair branch: `repair/persistence-reconciliation-2026-10-09`, based on inspected main HEAD `3e4300735e11673e7e7436a52e5f2adb6c773acc`. No merge or deployment performed.
+
+STATE v54 blob SHA: `96dc5be043355cbb7d55e69d946b8e29ebd1183a`; BOOT v13 blob SHA: `9ab92717edced9b4e08b27cfc00e2c8767be9187`; LIVE blob SHA: `5a4a29d19265df8dd386200466ff98b3e415677d`; EVENT_LOG append-only start event `EVT-2026-10-09-PERSISTENCE-REPAIR-START-001`, blob SHA: `6a7b3a73ddbfa1e4e77819bacfbc41c2a96caca2`.
+
+Canonical intake sheet exists and was read: `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` (blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`). No second sheet was created. STATE remains `WRITE_PENDING_READBACK` while the final controlled reconciliation is in progress. This addendum is a branch checkpoint, not a declaration of full persistence health.
+
+Commercial gate unchanged: the €61.30 delivered checkout remains unpaid by Kael; no purchase, inventory receipt, listing, sale, revenue, or profit is claimed. Financial impact: €0.
+
+
+## 49. FINAL RECONCILIATION CHECKPOINT — 2026-10-09 — REPAIR BRANCH
+
+Canonical STATE v55 blob SHA: `d20949343521d833d7995a57c40e61745003cd07`. STATE v55 closes the readback checkpoint for STATE v54; its `persistence_checkpoint.status` is `VERIFIED_AFTER_READBACK`. BOOT v14 blob SHA: `e0c8962191917cc421f087d19adb823b12fe7b50`, with `state_version=55` and `state_blob_sha=d20949343521d833d7995a57c40e61745003cd07`. LIVE blob SHA: `7379dc97216a7fb7e98a4a044ecbdffa06eaa57c`, reports cross-artifact readback pending until the final audit completes. MEMORY blob SHA: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`. EVENT_LOG blob SHA: `2ba5a66df5549101722e9bfd608735ad4ce1035a`; latest append-only event: `EVT-2026-10-09-PERSISTENCE-REPAIR-CHECKPOINT-001`.
+
+The existing measurement sheet `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` was read back at blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`; no duplicate `NEXIA_PILOT_MEASUREMENT_SHEET.md` was created. Protocol `NEXIA_PERSISTENCE_PROTOCOL.md` was read at blob SHA `a765bfc71f136aa62a9ea9e8e0dcbeded914f2f4`. This backup addendum is written after the preceding artifact readbacks; final verification must re-read this backup and every required artifact from the repair branch.
+
+Repair branch `repair/persistence-reconciliation-2026-10-09`, based on main HEAD `3e4300735e11673e7e7436a52e5f2adb6c773acc`. No merge, deployment, purchase, listing, external contact, or commercial action. Kael's payment gate for the €61.30 delivered pilot remains pending; financial impact €0.
+
+
+## 50. FINAL LIVE HASH ALIGNMENT — 2026-10-09
+
+Corrective readback note: after checkpoint 49 was written, LIVE was refreshed and re-read. Current LIVE blob SHA is `5f470ea4d9ab7e080cdb1b8c1dd12e5f7253720c`; it records STATE v55 blob `d20949343521d833d7995a57c40e61745003cd07`, BOOT v14 blob `e0c8962191917cc421f087d19adb823b12fe7b50`, and EVENT_LOG blob `2ba5a66df5549101722e9bfd608735ad4ce1035a`. This note supersedes the LIVE blob SHA recorded in checkpoint 49; historical checkpoint content remains preserved. STATE remains v55 with its reconciliation checkpoint marked `VERIFIED_AFTER_READBACK`; the final audit classification depends on the subsequent readback of this updated backup and all required artifacts.
+
+
+## 51. STATE v56 FINAL ALIGNMENT — 2026-10-09
+
+STATE v56 blob SHA: `90f56aaa841502c9111a71dfc77f3fc37c56e1c5`; BOOT v15 blob SHA: `d472d69e64c130a3cfab3db35dca0c48ae80acbc`, with exact version/hash reference to STATE v56; LIVE blob SHA: `8c0bac91ad9a75e63be521599a5edc268bb40855`; MEMORY blob SHA: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`; EVENT_LOG blob SHA: `bd5d2501613d676c0912dbc645ab0aabd95c9887`, latest event `EVT-2026-10-09-PERSISTENCE-REPAIR-VERIFIED-001`.
+
+The existing canonical pilot sheet `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` was read back at blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`. No duplicate `NEXIA_PILOT_MEASUREMENT_SHEET.md` exists or was created. This addendum supersedes earlier hashes as the latest snapshot while preserving all historical addenda. Final post-write readback of this backup and all continuity artifacts remains the last audit step.
+
+Status at write: checkpoint `CP-2026-10-09-PILOT-MEASUREMENT-SHEET-001` marked `VERIFIED_AFTER_READBACK` in STATE v56. Repair branch only; no merge/deployment. Commercial payment gate unchanged; no purchase, receipt, listing, sale, revenue or profit claimed. Financial impact €0.
+
+
+## 52. FINAL READBACK CLOSURE — 2026-10-09
+
+Current readback snapshot on `repair/persistence-reconciliation-2026-10-09`:
+- STATE v56: `90f56aaa841502c9111a71dfc77f3fc37c56e1c5`
+- BOOT v15: `fdb90810f864d1bf99d8c511c677e38902f9e61f` (references STATE v56 SHA above)
+- LIVE: `c6b793a6cd4aec966e6e2bb2e6b52970114ce546`
+- MEMORY: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`
+- EVENT_LOG: `78b27dffe00bcf9f87751aa2655e646fa9abfa68`; latest event `EVT-2026-10-09-PERSISTENCE-READBACK-CLOSURE-001`
+- Persistence protocol: `a765bfc71f136aa62a9ea9e8e0dcbeded914f2f4`
+- Existing intake measurement sheet: `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`
+
+Final readback confirms these artifacts are readable; STATE/BOOT version-hash alignment, LIVE current references, JSON/JSONL parsing, backup snapshot references, and absence of `NEXIA_PILOT_MEASUREMENT_SHEET.md` were checked. This checkpoint supersedes prior snapshots for current artifact hashes; historical addenda remain intact.
+
+Draft PR #11 is open and unmerged. No deployment or commercial action. Kael's €61.30 payment gate remains pending; financial impact €0. Human review is the next gate.
