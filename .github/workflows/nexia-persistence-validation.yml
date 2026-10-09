@@ -8,6 +8,9 @@ on:
       - "NEXIA_LIVE.json"
       - "NEXIA_EVENT_LOG.jsonl"
       - "NEXIA_MASTER_BACKUP.md"
+      - "NEXIA_MEMORY.md"
+      - "NEXIA_PERSISTENCE_PROTOCOL.md"
+      - "EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md"
       - "tools/validate_nexia_persistence.py"
       - ".github/workflows/nexia-persistence-validation.yml"
   workflow_dispatch:
