@@ -120,9 +120,34 @@ def main() -> int:
 
     live_text = json.dumps(live, ensure_ascii=False)
     check(state_sha in live_text, "LIVE references current STATE blob SHA", failures)
-    check(state_sha in backup, "MASTER_BACKUP references current STATE blob SHA", failures)
-    check(boot.get("state_blob_sha", "") in backup,
-          "MASTER_BACKUP references BOOT's STATE blob SHA", failures)
+
+    # Verify every artifact in the canonical backup snapshot against its live
+    # Git blob SHA, not merely that the backup contains some historical hash.
+    snapshot_paths = (
+        "NEXIA_STATE.json",
+        "NEXIA_BOOT.json",
+        "NEXIA_LIVE.json",
+        "NEXIA_EVENT_LOG.jsonl",
+        "NEXIA_MEMORY.md",
+        "NEXIA_PERSISTENCE_PROTOCOL.md",
+        "EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md",
+    )
+    for name in snapshot_paths:
+        path = ROOT / name
+        if not path.is_file():
+            check(False, f"Required persistence artifact exists: {name}", failures)
+            continue
+        current_sha = git_blob_sha(path.read_bytes())
+        check(
+            current_sha in backup,
+            f"MASTER_BACKUP references current {name} blob SHA",
+            failures,
+        )
+
+    if (ROOT / "NEXIA_PILOT_MEASUREMENT_SHEET.md").exists():
+        check(False, "No duplicate pilot measurement sheet exists", failures)
+    else:
+        check(True, "No duplicate pilot measurement sheet exists", failures)
 
     if failures:
         print(f"\nRESULT: FAIL ({len(failures)} failure(s))")
