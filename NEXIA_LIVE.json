@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-09T17:35:00+02:00",
-  "status": "ACTIVE / VALIDACIÓN — CONTROLLED RECONCILIATION",
+  "updated_at": "2026-10-09T17:55:00+02:00",
+  "status": "ACTIVE / VALIDACIÓN — RECONCILIATION VERIFIED ON REPAIR BRANCH",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "Canonical STATE v55 and BOOT v14 aligned; append-only repair event recorded; existing measurement sheet retained. Final repository readback is the remaining verification step.",
+  "current_action": "Canonical STATE v56 and BOOT v15 are aligned; final verification event appended. Post-write readback of LIVE and MASTER_BACKUP is required to complete this checkpoint.",
   "last_completed_action": "Corrected BOOT metadata twice to remove stale status wording; aligned MEMORY to active EXP-RESALE-001; appended and verified three reconciliation events.",
-  "evidence": "STATE v55 blob d20949343521d833d7995a57c40e61745003cd07; BOOT v14 blob e0c8962191917cc421f087d19adb823b12fe7b50; MEMORY blob 23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc; EVENT_LOG blob 2ba5a66df5549101722e9bfd608735ad4ce1035a; existing intake sheet blob 6333392bc3f0938a1dd2e5f04bd78bfd9ead362f. STATE/BOOT version-hash match confirmed. MASTER_BACKUP checkpoint 49 was written after the previous artifact reads; final readback is pending.",
+  "evidence": "STATE v56 blob 90f56aaa841502c9111a71dfc77f3fc37c56e1c5; BOOT v15 blob d472d69e64c130a3cfab3db35dca0c48ae80acbc; MEMORY blob 23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc; EVENT_LOG blob bd5d2501613d676c0912dbc645ab0aabd95c9887; existing intake sheet blob 6333392bc3f0938a1dd2e5f04bd78bfd9ead362f. STATE/BOOT exact version-hash match verified. No duplicate sheet or commercial side effect.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: purchase of 10 branded T-shirts approved; verified delivered checkout €61.30; payment pending Kael. No purchase or inventory receipt is claimed.",
   "parallel_work": [
@@ -13,7 +13,7 @@
     "Supplier/unit economics matrix",
     "Core continuity/resilience maintenance"
   ],
-  "next_action": "Re-read STATE, BOOT, LIVE, MEMORY, EVENT_LOG, MASTER_BACKUP, persistence protocol and existing intake sheet; confirm hashes, schema, cross-references and no duplicate sheet. No business-side effects.",
+  "next_action": "Re-read all continuity artifacts and confirm their current hashes and cross-references; then leave the branch for review without merging or deploying.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
