@@ -38,8 +38,8 @@
   "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; sustainable after-tax net profit is primary score; technical activity does not add points",
   "state_version": 56,
   "state_blob_sha": "90f56aaa841502c9111a71dfc77f3fc37c56e1c5",
-  "note": "BOOT status reflects the latest observed partial reconciliation; MEMORY header no longer foregrounds paused EXP-001B. Canonical STATE v53 remains unchanged; no business spending or action occurred.",
+  "note": "BOOT v15 points to canonical STATE v56 by exact blob SHA. Final artifact readback and hash/reference checks passed on the repair branch; PR #11 is draft and awaits human review. No commercial side effect.",
   "updated_at": "2026-10-09",
   "sync_status": "VERIFIED_AFTER_READBACK",
-  "next_action": "Perform one final readback of all continuity artifacts. Keep the canonical checkpoint open unless an explicit sequential STATE update is justified by the evidence."
+  "next_action": "Human review of draft PR #11: inspect diff and persistence schema; do not merge or deploy until approved. Persistence artifacts were re-read after writes and cross-reference checks passed on this repair branch."
 }
