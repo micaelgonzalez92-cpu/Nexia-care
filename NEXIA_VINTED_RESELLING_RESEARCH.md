@@ -762,3 +762,26 @@ Any earlier estimate that combines €1,467 pre-tax profit, €100 fixed costs a
 - After a first evidence-backed batch, compare observed contribution/hour, sell-through and cash conversion against alternative gates prospectively. Any change to the existing experiment's success criteria must be documented before the next test batch, not retroactively.
 - Research cost for this addendum: €0. No purchase, supplier contact, listing, sale or revenue was performed by this update.
 
+## Addendum — 2026-10-09: public Vinted category signal and data-quality caveat
+
+### Public free signal
+Resale IQ's public T-shirt category ranking for Vinted across Spain, France, Germany, Italy and Portugal (snapshot consulted 2026-10-09; the page's underlying table is labelled trailing 7 days) reports watched listing departures by brand: Fred Perry 185/week, Stone Island 81, Patagonia 77, Balenciaga 65, Supreme 43, Diesel 35, The North Face 26, Lacoste 20, Nike 20, Off-White 19, Reebok 17, Zara 17, Puma 17, adidas 16, Calvin Klein 14, Hugo Boss 13, Vans 12 and Carhartt 10. These are the tracked brands in the public sample, not the entire marketplace.
+
+Critical limitation: the page explicitly says the displayed average price is each brand's average across all its categories, not T-shirts only. A brand-level average cannot be used as the expected selling price of a T-shirt. It is a candidate-selection signal only.
+
+### Methodology caveat
+Resale IQ's published methodology states that it watches public listings disappear from search shelves and records the last asking price. A disappearance can indicate a sale, but can also be a delisting, account removal, offline sale at a different price, or relisting under a new item ID. It explicitly does not observe a receipt or confirmed transaction and says it has not measured the relisting error rate. Therefore:
+- Label these as OBSERVED LISTING DEPARTURES / LAST ASKING PRICE, not verified sales or realized prices.
+- Do not calculate expected revenue, contribution or net profit from these figures alone.
+- Treat sell-through and days-to-sell as proxies with methodology limits, not independently audited marketplace transaction data.
+
+Sources:
+- Resale IQ, public T-shirt category ranking: https://resaleiq.dev/category/t-shirts
+- Resale IQ, methodology: https://resaleiq.dev/methodology
+- VintAnalytics Spain listing-price page is based on active asking prices/favourites and explicitly says its typical prices are asking prices: https://vintanalytics.com/what-sells-on-vinted/spain/
+
+### Next zero-cost evidence gate
+Before adjusting the €10 contribution pilot gate, collect a manually checked sample of comparable specific T-shirts (brand, graphic/model, size, condition, age/style) with public departure/asking evidence where available, clearly marking unconfirmed departures as proxies. Then use the pilot's own realized prices and costs if inventory is later purchased and sold. No paid analytics subscription is justified at this stage; free public data is sufficient to narrow the next research question.
+
+Research cost: €0. No purchase, supplier contact, listing, sale or revenue occurred from this research.
+
