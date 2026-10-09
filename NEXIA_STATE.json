@@ -1,5 +1,5 @@
 {
-  "version": 55,
+  "version": 56,
   "updated_at": "2026-10-09",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
@@ -235,7 +235,7 @@
     "status": "VERIFIED_AFTER_READBACK",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
-    "note": "Checkpoint v54 verified on isolated repair branch: canonical STATE v54 was read back; BOOT v13, LIVE and append-only EVENT_LOG were written and read back; MASTER_BACKUP checkpoint 48 was written and read back. The existing EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md was re-read and reused; no duplicate sheet created. This v55 record closes reconciliation of the v54 checkpoint; final v55 cross-artifact readback remains required before reporting overall VERIFIED."
+    "note": "Checkpoint v54 was verified through sequential readback of STATE, BOOT, LIVE, append-only EVENT_LOG and MASTER_BACKUP. STATE v55 then recorded closure; its derived artifacts were refreshed, the existing EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md was re-read and reused, and final cross-artifact readback passed on the repair branch. No duplicate sheet created. This v56 record updates the audit note only; no commercial gate changed."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
