@@ -136,3 +136,7 @@ Canonical STATE remains **v53**, blob SHA `72072c1fa3beba3fa2ef31a6b6bdfeb327856
 - MASTER_BACKUP is being updated with this checkpoint; its resulting blob SHA must be verified by readback.
 
 **Status remains PARTIAL, not fully healthy.** STATE's persistence checkpoint still says `WRITE_PENDING_READBACK`; do not close it until the current artifacts are read back and consistency checked. Historical event entries were not rewritten. No business spending, purchase, external contact, listing, sale, revenue or profit occurred. The EXP-RESALE-001A €61.30 checkout remains unpaid by Kael.
+
+## 45. READBACK CORRECTION — 2026-10-09
+
+Follow-up after checkpoint 44: LIVE was refreshed and read back again. Current verified LIVE blob SHA: `d6ab7222d9fcdc7b8a1c1222bd9ad2a61e934d0b`. Its next action is final cross-artifact readback; STATE remains v53 with checkpoint `WRITE_PENDING_READBACK`. This note supersedes the temporary wording in checkpoint 44 that LIVE was still being refreshed. It does not declare full persistence health.
