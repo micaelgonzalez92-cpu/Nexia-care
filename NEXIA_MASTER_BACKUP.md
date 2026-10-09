@@ -175,3 +175,8 @@ Canonical STATE v55 blob SHA: `d20949343521d833d7995a57c40e61745003cd07`. STATE 
 The existing measurement sheet `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` was read back at blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`; no duplicate `NEXIA_PILOT_MEASUREMENT_SHEET.md` was created. Protocol `NEXIA_PERSISTENCE_PROTOCOL.md` was read at blob SHA `a765bfc71f136aa62a9ea9e8e0dcbeded914f2f4`. This backup addendum is written after the preceding artifact readbacks; final verification must re-read this backup and every required artifact from the repair branch.
 
 Repair branch `repair/persistence-reconciliation-2026-10-09`, based on main HEAD `3e4300735e11673e7e7436a52e5f2adb6c773acc`. No merge, deployment, purchase, listing, external contact, or commercial action. Kael's payment gate for the €61.30 delivered pilot remains pending; financial impact €0.
+
+
+## 50. FINAL LIVE HASH ALIGNMENT — 2026-10-09
+
+Corrective readback note: after checkpoint 49 was written, LIVE was refreshed and re-read. Current LIVE blob SHA is `5f470ea4d9ab7e080cdb1b8c1dd12e5f7253720c`; it records STATE v55 blob `d20949343521d833d7995a57c40e61745003cd07`, BOOT v14 blob `e0c8962191917cc421f087d19adb823b12fe7b50`, and EVENT_LOG blob `2ba5a66df5549101722e9bfd608735ad4ce1035a`. This note supersedes the LIVE blob SHA recorded in checkpoint 49; historical checkpoint content remains preserved. STATE remains v55 with its reconciliation checkpoint marked `VERIFIED_AFTER_READBACK`; the final audit classification depends on the subsequent readback of this updated backup and all required artifacts.
