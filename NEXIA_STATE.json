@@ -1,5 +1,5 @@
 {
-  "version": 57,
+  "version": 58,
   "updated_at": "2026-10-10",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables; ningún vehículo comercial queda preseleccionado.",
@@ -14,7 +14,7 @@
   "active_experiment": {
     "id": "EXP-OPPORTUNITY-001",
     "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
-    "status": "DESIGNED",
+    "status": "PROTOTYPE_BUILT_NOT_VALIDATED",
     "cost_eur": 0,
     "primary_metric": "Valor esperado de beneficio neto sostenible, ajustado por evidencia, tiempo hasta validación, coste de aprendizaje, repetibilidad y riesgo",
     "participants": 0,
@@ -215,7 +215,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Build a common evidence-backed comparison matrix for at least 3 low-cost business opportunities; actively falsify each primary thesis, estimate net unit economics, time-to-validation, repeatability, learning cost and risk; select at most one candidate for a separately gated experiment. Zero-cost research/preparation only; no purchases, external contacts, account connections, publication or commitments.",
+  "next_useful_action": "Measure the local synthetic-data intake demo using a worksheet for manual time, assisted time, classification errors, correction time and outcome metrics. Do not contact prospects or use real customer information.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
