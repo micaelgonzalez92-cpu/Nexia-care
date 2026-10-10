@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-09T16:47:00+02:00",
-  "status": "ACTIVE / VALIDACIÓN — PERSISTENCE SYNC PARTIAL",
+  "updated_at": "2026-10-10T00:00:00+02:00",
+  "status": "ACTIVE / VALIDACIÓN — PERSISTENCE RECONCILIATION IN PROGRESS",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "BOOT and MEMORY metadata reconciled; append-only events recorded; MASTER_BACKUP checkpoint 46 written and read back. Final cross-artifact audit is now the only remaining persistence task before deciding on a canonical checkpoint update.",
-  "last_completed_action": "Corrected BOOT metadata twice to remove stale status wording; aligned MEMORY to active EXP-RESALE-001; appended and verified three reconciliation events.",
-  "evidence": "STATE v53 blob 72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3; BOOT v12 blob 42222d1bd394880010eb810d03e2bcfaadd0e47e; MEMORY blob 23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc; EVENT_LOG blob c2c3566b82fc13babb429ad5eebbb51ff599ca29. STATE/BOOT version-hash match verified. Canonical persistence checkpoint remains WRITE_PENDING_READBACK; sync remains partial.",
+  "current_action": "STATE v54 and BOOT v13 have been written and read back with matching canonical version/hash. Remaining derived artifacts are being reconciled sequentially; full persistence health is not yet declared.",
+  "last_completed_action": "2026-10-10: STATE v54 checkpoint and BOOT v13 alignment were written and read back; STATE/BOOT version and hash match.",
+  "evidence": "STATE v54 blob bdd27d02f5f76a7fca354c6d8beefe602ab72258; BOOT v13 blob b187f13a9910cf96650a56f3e0233a167c38252e; MEMORY blob 23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc; EVENT_LOG blob c2c3566b82fc13babb429ad5eebbb51ff599ca29; MASTER_BACKUP blob e9537ac76b11a34483b60aff3616cd0cb3eb1a79. STATE/BOOT match verified. LIVE, EVENT_LOG and MASTER_BACKUP still require update/readback.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: purchase of 10 branded T-shirts approved; verified delivered checkout €61.30; payment pending Kael. No purchase or inventory receipt is claimed.",
   "parallel_work": [
