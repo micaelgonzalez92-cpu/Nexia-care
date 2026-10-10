@@ -1,5 +1,5 @@
 {
-  "version": 55,
+  "version": 56,
   "updated_at": "2026-10-10",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables; ningún vehículo comercial queda preseleccionado.",
@@ -215,7 +215,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "The zero-cost intake and measurement sheet for EXP-RESALE-001A has been prepared and read back. Await Kael's payment for the already-approved €61.30 delivered lot; do not purchase or represent inventory as acquired before payment and receipt. After physical receipt, record item-level condition, photos, sellable status, prep time, listings, realized sales, fees, shipping, returns and labor.",
+  "next_useful_action": "Build a common evidence-backed comparison matrix for at least 3 low-cost business opportunities; actively falsify each primary thesis, estimate net unit economics, time-to-validation, repeatability, learning cost and risk; select at most one candidate for a separately gated experiment. Zero-cost research/preparation only; no purchases, external contacts, account connections, publication or commitments.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -227,13 +227,13 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-10-PERSISTENCE-READBACK-001",
-    "previous_state_version": 53,
-    "current_state_version": 54,
-    "status": "READBACK_VERIFIED",
+    "checkpoint_id": "CP-2026-10-10-CANONICAL-RECONCILIATION-001",
+    "previous_state_version": 55,
+    "current_state_version": 56,
+    "status": "CANONICAL_STATE_WRITE_PENDING_READBACK",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
-    "note": "Verified repository readback of the prepared EXP-RESALE-001A measurement/intake sheet and cross-artifact audit. STATE/BOOT v53 hash match was verified before this checkpoint. This status verifies the canonical checkpoint write/readback only; derived-artifact reconciliation remains in progress until BOOT, LIVE, EVENT_LOG and MASTER_BACKUP are updated and read back. No purchase, contact, listing, sale or revenue is claimed."
+    "note": "Corrected stale next_useful_action and legacy primary_strategy status so they agree with current_mission MISSION-OPPORTUNITY-ENGINE-001. This checkpoint does not claim derived-artifact synchronization; BOOT, LIVE, EVENT_LOG and MASTER_BACKUP must be reconciled and independently read back."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -425,13 +425,13 @@
       "id": "OPP-RESALE-001",
       "name": "Reventa profesional de ropa de segunda mano España — Vinted + multicanal",
       "stage": "VETA",
-      "status": "RESEARCHED_NOT_VALIDATED",
+      "status": "PRESERVED_NON_PRIMARY_RESEARCHED_NOT_VALIDATED",
       "cost_eur": 0,
       "human_gate_required_for_purchase": true,
       "thesis": "Comprar ropa usada a coste efectivo bajo por prenda vendible, vender con ticket suficiente y escalar mediante inventario centralizado y automatización fuera de Vinted.",
       "critical_constraint": "Vinted permite una cuenta estándar + una Pro, pero prohíbe cuentas duplicadas y herramientas externas como bots/scrapers salvo autorización.",
       "research_artifact": "NEXIA_VINTED_RESELLING_RESEARCH.md",
-      "next_action": "Comparar 5 proveedores y 20 prendas/categorías por proveedor sin comprar; calcular coste efectivo por prenda vendible, precio de salida y margen.",
+      "next_action": "No purchase or resale-specific execution while paused; preserve prior evidence. Resume only after explicit mission reactivation or materially new evidence.",
       "evidence": "Demanda española fuerte; Vinted GMV 2025 10.8B€; ecosistema mayorista localizado; canales alternativos identificados.",
       "unknowns": [
         "sell-through real",
@@ -485,7 +485,7 @@
   },
   "primary_strategy": {
     "id": "STRATEGY-RESALE-001",
-    "status": "ACTIVE",
+    "status": "PAUSED_NOT_DELETED",
     "principle": "Una operación profesional centralizada, no una granja de cuentas.",
     "channel_stack": [
       "Vinted Pro",
@@ -499,7 +499,8 @@
     "capital_policy": "€0 validation first; any purchase requires Kael approval.",
     "target": ">=1000 EUR net monthly after tax, with reproducible sourcing and unit economics.",
     "architecture_artifact": "NEXIA_RESALE_OPERATING_ARCHITECTURE.md",
-    "next_build": "Data model + intake/QC + unit economics ledger, validated first on pilot batch before scaling."
+    "next_build": "PAUSED: preserve the resale architecture and pilot artifacts; do not continue resale-specific build work unless Kael explicitly reactivates it or new evidence materially changes mission priority.",
+    "pause_reason": "Canonical STATE v55 current_mission explicitly removed resale as the primary mission. This historical strategy is preserved but cannot override current_mission."
   },
   "unit_economics_audit": {
     "date": "2026-10-09",
