@@ -1,10 +1,10 @@
 {
   "updated_at": "2026-10-10T00:00:00+02:00",
-  "status": "ACTIVE / VALIDACIÓN — PERSISTENCE RECONCILIATION IN PROGRESS",
+  "status": "ACTIVE / VALIDACIÓN — ARTIFACTS RECONCILED; FINAL AUDIT READBACK",
   "current_cycle": "NEXIA Core — resale-first: validate sourcing, unit economics and repeatability",
-  "current_action": "STATE v54 and BOOT v13 have been written and read back with matching canonical version/hash. Remaining derived artifacts are being reconciled sequentially; full persistence health is not yet declared.",
-  "last_completed_action": "2026-10-10: STATE v54 checkpoint and BOOT v13 alignment were written and read back; STATE/BOOT version and hash match.",
-  "evidence": "STATE v54 blob bdd27d02f5f76a7fca354c6d8beefe602ab72258; BOOT v13 blob b187f13a9910cf96650a56f3e0233a167c38252e; MEMORY blob 23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc; EVENT_LOG blob c2c3566b82fc13babb429ad5eebbb51ff599ca29; MASTER_BACKUP blob e9537ac76b11a34483b60aff3616cd0cb3eb1a79. STATE/BOOT match verified. LIVE, EVENT_LOG and MASTER_BACKUP still require update/readback.",
+  "current_action": "STATE v54 and BOOT v13 canonical version/hash fields match; LIVE, MEMORY, EVENT_LOG and MASTER_BACKUP were updated/read back. Final audit event and last readback are the remaining closure checks. Economic Human Gate unchanged.",
+  "last_completed_action": "2026-10-10: verified STATE v54, aligned BOOT v13 duplicated fields, wrote/read back LIVE metadata, appended/read back EVENT_LOG event, and appended/read back MASTER_BACKUP checkpoints 48–49.",
+  "evidence": "STATE v54 bdd27d02f5f76a7fca354c6d8beefe602ab72258; BOOT v13 2a00dc5b38b6998eae523db1fce7a9b69ab7779c; MEMORY 23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc; EVENT_LOG before final audit append aa23f7cb63a0489ad137d8dbba01279392e6bc26; MASTER_BACKUP checkpoint 49 441bc725a15fa2a41177a7c6c87f9b7c333d14e8. STATE/BOOT match verified.",
   "capital_spent_eur": 0,
   "human_gate": "EXP-RESALE-001A: purchase of 10 branded T-shirts approved; verified delivered checkout €61.30; payment pending Kael. No purchase or inventory receipt is claimed.",
   "parallel_work": [
@@ -13,7 +13,7 @@
     "Supplier/unit economics matrix",
     "Core continuity/resilience maintenance"
   ],
-  "next_action": "Re-read STATE, BOOT, LIVE, MEMORY, EVENT_LOG and MASTER_BACKUP once; verify STATE/BOOT hash match, current mission, latest event and recorded artifact hashes. Do not change STATE checkpoint status unless the evidence justifies a controlled canonical update.",
+  "next_action": "Complete final readback of all artifacts and record audit closure. Then continue zero-cost supplier/comparable-price research; no spending or external contact.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
