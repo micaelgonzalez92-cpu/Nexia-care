@@ -1,18 +1,18 @@
 {
   "updated_at": "2026-10-10T20:00:00+02:00",
-  "status": "ACTIVE / RADAR — SYNC PENDING",
-  "current_cycle": "NEXIA Core — opportunity comparison and falsification",
-  "current_action": "Canonical STATE v57 and BOOT v15 read back. Current mission is MISSION-OPPORTUNITY-ENGINE-001. Full sync remains pending.",
-  "last_completed_action": "2026-10-10: STATE v57 and BOOT v15 reconciled and read back.",
-  "evidence": "STATE v57 fc3bd084d41e4d2d2a7fc6c726fa7942bee7105b; BOOT v15 6e8879c35725f087383375358e63fbdf4960a75f. STATE/BOOT match; LIVE, EVENT_LOG and MASTER_BACKUP final readback pending.",
+  "status": "ACTIVE / RADAR — OPPORTUNITY MATRIX RECORDED; PERSISTENCE AUDIT OPEN",
+  "current_cycle": "NEXIA Core — compare and falsify low-cost business opportunities",
+  "current_action": "Created and read back NEXIA_OPPORTUNITY_RADAR_2026-10-10.md and persisted its summary to MEMORY. Three candidates remain unvalidated; next safe step is a synthetic-data prototype and unit-economics worksheet.",
+  "last_completed_action": "2026-10-10: STATE v57 and BOOT v15 readback verified; LIVE aligned to opportunity mission; EVENT_LOG reconciliation event read back; MASTER_BACKUP checkpoint 51 read back; opportunity radar for three candidates created and MEMORY checkpoint recorded.",
+  "evidence": "STATE fc3bd084d41e4d2d2a7fc6c726fa7942bee7105b; BOOT 6e8879c35725f087383375358e63fbdf4960a75f; MEMORY 562659ca37c1d63b5775fbc2898f62bfa70e3400; RADAR 2c406dfbd07fc782b473478b8038e022c7a6e97f. State/boot match; persistence audit remains open pending final event/backup readback.",
   "capital_spent_eur": 0,
-  "human_gate": "No purchases, external contacts, account connections or publications without explicit approval.",
+  "human_gate": "No purchase, external contact, account connection, publication, paid listing or paid credits without explicit approval.",
   "parallel_work": [
-    "Compare at least 3 low-cost opportunities",
-    "Falsify candidate hypotheses using public evidence",
-    "Core persistence and recovery maintenance"
+    "Build synthetic-data prototype for one SME AI workflow",
+    "Quantify delivery time, measurable value and maintenance cost",
+    "Core persistence, recovery and integrity maintenance"
   ],
-  "next_action": "Build an evidence-backed comparison matrix for at least 3 low-cost business opportunities; falsify each thesis and estimate net economics, time-to-validation, repeatability, learning cost and risk. Select at most one candidate for a separately gated experiment.",
+  "next_action": "Build a synthetic-data prototype and unit-economics worksheet for one narrowly scoped SME AI workflow. Define a before/after metric and falsification criteria; do not contact prospects or handle real customer data.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
