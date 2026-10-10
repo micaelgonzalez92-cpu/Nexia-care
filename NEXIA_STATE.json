@@ -1,9 +1,9 @@
 {
-  "version": 54,
+  "version": 55,
   "updated_at": "2026-10-10",
   "project": "NEXIA CORE",
-  "mission_definition": "Construir un motor que descubra, valide, monetice, aprenda y repita; e-commerce es un vehículo, no el límite.",
-  "phase": "VALIDACIÓN",
+  "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables; ningún vehículo comercial queda preseleccionado.",
+  "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
   "capital_eur": 0,
   "inventory_eur": 0,
   "debt_eur": 0,
@@ -12,43 +12,41 @@
   "extraction_count": 0,
   "reproducibility_count": 0,
   "active_experiment": {
-    "id": "EXP-RESALE-001",
-    "name": "Falsación de sourcing + unit economics de ropa de segunda mano",
-    "status": "APPROVED_PENDING_PURCHASE",
-    "cost_eur": 55,
-    "primary_metric": "margen de contribución por prenda vendible y potencial de rotación reproducible",
+    "id": "EXP-OPPORTUNITY-001",
+    "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
+    "status": "DESIGNED",
+    "cost_eur": 0,
+    "primary_metric": "Valor esperado de beneficio neto sostenible, ajustado por evidencia, tiempo hasta validación, coste de aprendizaje, repetibilidad y riesgo",
     "participants": 0,
-    "target_participants": 20,
-    "approval": {
-      "approved_by": "Kael",
-      "approved_at": "2026-10-08",
-      "scope": "EXP-RESALE-001A — 10 camisetas de marca",
-      "max_product_cost_eur": 55,
-      "transport": "allowed within approved pilot; verified checkout total €61.30 delivered",
-      "purchase_executed": false
-    }
+    "target_participants": 3,
+    "success_criteria": [
+      "Evaluar al menos 3 oportunidades con una matriz común y evidencia trazable",
+      "Falsar activamente la hipótesis principal de cada oportunidad",
+      "Seleccionar como máximo 1 oportunidad para el siguiente experimento",
+      "Definir antes de experimentar coste máximo, métrica, umbral de éxito y fracaso"
+    ],
+    "constraints": "Solo investigación y preparación gratuitas; sin compras, cuentas, contactos externos, publicaciones ni compromisos sin autorización específica."
   },
   "current_mission": {
-    "id": "MISSION-RESALE-001",
-    "name": "Validar y construir la operación de reventa profesional de ropa de segunda mano en España",
+    "id": "MISSION-OPPORTUNITY-ENGINE-001",
+    "name": "Construir y validar un motor repetible que descubra, pruebe y monetice la oportunidad de negocio con mayor potencial de beneficio neto sostenible",
     "priority": "MAX",
     "cost_eur": 0,
-    "human_action_required": true,
+    "human_action_required": false,
     "status": "ACTIVE",
-    "reason": "Kael aprobó EXP-RESALE-001A. Checkout verificado en €61.30 entregado; pago aún no ejecutado. NEXIA continúa en paralelo con arquitectura, datos, sourcing y economía a coste 0."
+    "reason": "Kael ha retirado la reventa vintage como misión principal. No se preselecciona un vehículo comercial antes de comparar oportunidades con evidencia, economía unitaria, facilidad de validación, repetibilidad, riesgo y coste de aprendizaje."
   },
   "human_gate": {
-    "status": "APPROVED",
-    "task": "Compra experimental de 1 lote de 10 camisetas de marca de Vintage4Originals.",
+    "status": "NO_PURCHASE_AUTHORIZED_UNDER_CURRENT_MISSION",
+    "task": "La compra de 10 camisetas de Vintage4Originals queda suspendida mientras la reventa está en pausa; requiere nueva autorización explícita para reactivarse.",
     "cost_eur": 61.3,
-    "transport_allowed": true,
-    "purchase_execution_status": "PENDING_KAEL_PAYMENT"
+    "purchase_execution_status": "NOT_EXECUTED"
   },
   "product": {
-    "name": "Reventa profesional de ropa de segunda mano",
-    "model_focus": "Vinted Pro + multicanal",
-    "stage": "VETA / VALIDACIÓN",
-    "evidence_level": "SEÑAL FUERTE; demanda pública verificada; economía y sourcing aún no validados con inventario propio"
+    "name": "Oportunidad de negocio aún por seleccionar",
+    "model_focus": "Sin vehículo preseleccionado; priorizar bajo coste, validación rápida, margen neto, repetibilidad y bajo riesgo",
+    "stage": "RADAR",
+    "evidence_level": "UNKNOWN / NOT INSTRUMENTED hasta comparar oportunidades"
   },
   "participant_acquisition_engine": {
     "status": "ACTIVE_BY_POLICY",
@@ -74,11 +72,11 @@
       "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
       "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
     },
-    "last_action": "2026-10-06: /evolve converted the Emergency Brake from policy-only wording into a verified technical contract with explicit stop-only, out-of-band, fail-safe, preserve, re-arm and audit requirements. Independent control is still not connected.",
+    "last_action": "2026-10-10: Kael retiró la reventa vintage como misión principal; se reemplaza por selección y validación comparativa de oportunidades. Reventa queda en pausa, no eliminada.",
     "next_review": "En cada ciclo: comprobar integridad, capacidad disponible, cuello de botella, mejoras seguras y siguiente misión desbloqueable.",
     "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
-    "current_mode": "PRIMARY_MISSION_RESale",
-    "next_useful_action": "Investigar y comparar proveedores locales/UE y comparables de venta; construir matriz de coste efectivo por prenda vendible, margen, rotación potencial y riesgo sin gastar."
+    "current_mode": "PRIMARY_MISSION_OPPORTUNITY_ENGINE",
+    "next_useful_action": "Comparar oportunidades de negocio de bajo coste con una matriz común y falsar las hipótesis antes de elegir una sola para validación."
   },
   "external_ops": {
     "status": "DESIGNED_NOT_CONNECTED",
@@ -606,5 +604,13 @@
     "rule": "No fixed €7.25 reserve. Prefer €0 validation; weekly budget ceiling €100; all spending requires Kael's explicit approval.",
     "reserve_basis": "Only documented liabilities, committed costs, or a specifically approved experiment may justify earmarking funds.",
     "decision_record": "2026-10-09: Kael approved removal of the unexplained fixed reserve."
-  }
+  },
+  "experiment_history": [
+    {
+      "id": "EXP-RESALE-001",
+      "status": "PAUSED_NOT_DELETED",
+      "paused_at": "2026-10-10",
+      "reason": "Kael retiró la reventa vintage como misión principal. Se conserva la evidencia y el trabajo previo; no se autoriza compra ni se afirma que el experimento esté concluido."
+    }
+  ]
 }
