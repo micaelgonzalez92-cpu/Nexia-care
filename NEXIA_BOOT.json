@@ -42,7 +42,7 @@
     "reason": "Kael aprobó EXP-RESALE-001A. Checkout verificado en €61.30 entregado; pago aún no ejecutado. NEXIA continúa en paralelo con arquitectura, datos, sourcing y economía a coste 0."
   },
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout verificado en €61.30 entregado; pago pendiente de Kael",
-  "last_confirmed_action": "2026-10-09: STATE v53/BOOT v12 version-hash match verified. BOOT metadata corrected and read back; MEMORY header aligned to active EXP-RESALE-001 and read back; append-only reconciliation events recorded. LIVE and MASTER_BACKUP were refreshed/read back. Full persistence health remains unverified because STATE checkpoint status is WRITE_PENDING_READBACK; final cross-artifact audit remains open.",
+  "last_confirmed_action": "2026-10-10: STATE v54 checkpoint, BOOT v13, LIVE metadata, MASTER_BACKUP checkpoint 48 and EVENT_LOG reconciliation event were written and read back. STATE/BOOT hash match verified. Final cross-artifact audit is underway; full persistence health is not claimed until the stale duplicated BOOT fields are reconciled and final readback is complete.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -52,10 +52,10 @@
   "startup_rule": "On every new NEXIA session, use the GitHub connector to inspect this repository and load BOOT -> STATE -> MEMORY/RECENT EVENTS before asking Kael to restate project state.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE; includes R6, lifecycle and decision engine",
   "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; sustainable after-tax net profit is primary score; technical activity does not add points",
-  "state_version": 53,
-  "state_blob_sha": "72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3",
-  "note": "BOOT status reflects the latest observed partial reconciliation; MEMORY header no longer foregrounds paused EXP-001B. Canonical STATE v53 remains unchanged; no business spending or action occurred.",
-  "updated_at": "2026-10-09",
+  "state_version": 54,
+  "state_blob_sha": "bdd27d02f5f76a7fca354c6d8beefe602ab72258",
+  "note": "BOOT v13 aligns its canonical STATE version/hash fields to STATE v54. Derived-artifact reconciliation is in progress; do not infer full persistence health from this index alone.",
+  "updated_at": "2026-10-10",
   "sync_status": "RECONCILIATION_IN_PROGRESS",
   "next_action": "Reconcile derived persistence artifacts sequentially and verify readback; then continue zero-cost sourcing and resale unit-economics research. No spending or external contact."
 }
