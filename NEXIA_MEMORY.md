@@ -350,3 +350,17 @@ See NEXIA_OPPORTUNITY_RADAR_2026-10-10.md. Three options compared: SME AI workfl
 
 ## SME prototype checkpoint 2026-10-10
 Created and read back `prototypes/sme-intake-demo.html`, a static local demo with three synthetic enquiry types. It uses deterministic local rules, not an AI model, and has no external connections. No real data, contact, publication or spend. Next: measure manual versus assisted handling time, classification errors and correction time using synthetic cases; do not claim commercial validation.
+
+
+## Chat continuity addendum — 2026-10-11 — virtual fashion affiliate opportunity (NOT SELECTED)
+- Status: RESEARCHED / NOT VALIDATED / NOT THE PRIMARY MISSION.
+- This ChatGPT conversation explored a virtual AI fashion/footwear creator and multi-platform affiliate distribution as one possible candidate inside the opportunity radar. Kael asked that distribution not be limited to TikTok; channels considered include Instagram, Facebook, YouTube Shorts, TikTok, Pinterest, Snapchat, Threads, X and context-appropriate Reddit participation.
+- Affiliate candidates investigated in chat: Zapatos OBI (Awin profile previously indicated 10%, €60 average order value and 30-day cookie) and 4 ELEMENTOS (profile previously indicated 4% base commission on validated net sale excluding shipping/taxes and 30-day cookie). Reconfirm current terms directly in program profiles before relying on them. Acceptance of fully AI-generated virtual creators is UNKNOWN.
+- Awin may require a verification deposit; amount and applicable terms are UNKNOWN. No registration or payment until verified and explicitly authorized by Kael.
+- A commercial eligibility questionnaire was drafted but NOT SENT. No accounts were created, no social channels connected, no content published, no external contact made, and no affiliate links or sales recorded from this experiment. Spend for this chat work: €0.
+- Three content concepts were drafted only: (1) three outfits with black sneakers; (2) black versus white sneaker versatility; (3) three details that improve a simple outfit. No content assets were produced/published as part of this chat.
+- Compliance controls: disclose affiliate advertising clearly and visibly, label realistic synthetic media as required, do not fabricate personal product use, use original/licensed assets and adapt posts per platform. No automated publishing integration is connected or tested.
+- Any historical view/click/conversion figures discussed were hypothetical, not observed benchmarks. No evidence currently supports expected sales, commissions, or net profit for this candidate.
+- Nexia HQ auxiliary project Floot file created and read back: static/NEXIA_CHAT_PROGRESS_2026-10-11.md. Checkpoint created: 39ff1d33-1b42-4d8f-bcdd-cd6e95cb12d8. This is not a replacement for canonical state.
+- Canonical mission remains STATE v58: MISSION-OPPORTUNITY-ENGINE-001 / EXP-OPPORTUNITY-001, comparing at least three low-cost opportunities and selecting at most one only after evidence/falsification. The affiliate idea remains a candidate, not an approved active experiment. No mission switch is made by this addendum.
+- Next mission-aligned action remains: measure the local synthetic-data SME intake prototype using synthetic cases, recording manual time, assisted time, classification errors, correction time and outcomes. Do not use real customer data or contact prospects without authorization.
