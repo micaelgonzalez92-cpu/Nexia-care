@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXIA — Demo de clasificación de solicitudes</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172033;background:#f5f7fb}
+body{margin:0;padding:24px;max-width:960px;margin-inline:auto}
+header,section,article{background:#fff;border:1px solid #dce2eb;border-radius:14px;padding:18px;margin-bottom:16px}
+h1{font-size:1.5rem;margin:.1rem 0 .6rem}h2{font-size:1.1rem;margin:.1rem 0 .8rem}
+small,.muted{color:#5c6678}.notice{background:#fff6db;border-color:#e8d18a}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+button{padding:10px 14px;border:0;border-radius:8px;background:#243b65;color:white;font-weight:650;cursor:pointer}
+select{padding:9px;border:1px solid #c8d0dc;border-radius:8px;width:100%;margin:.4rem 0}
+.result{margin-top:12px;padding:12px;background:#eef4ff;border-radius:8px;white-space:pre-wrap}
+.kpis{display:flex;gap:10px;flex-wrap:wrap}.kpi{padding:10px 12px;background:#f0f3f8;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+<p class="muted">NEXIA CORE · prototipo local · datos sintéticos</p>
+<h1>Clasificación de solicitudes para un pequeño negocio</h1>
+<p>Demostración de un flujo sencillo: clasificar una consulta entrante, identificar la siguiente acción y preparar un borrador de respuesta.</p>
+</header>
+<section class="notice">
+<strong>Límites de la demo</strong>
+<p>Solo usa ejemplos inventados y reglas locales de demostración. No conecta con correo, CRM, clientes ni modelos de IA; no envía mensajes ni guarda datos. No debe usarse para decisiones reales sin pruebas.</p>
+</section>
+<section>
+<h2>Selecciona una solicitud ficticia</h2>
+<label for="request">Solicitud de ejemplo</label>
+<select id="request">
+<option value="urgent">“Mi equipo ha dejado de funcionar y tengo una cita en una hora. ¿Podéis ayudarme?”</option>
+<option value="quote">“Hola, ¿podéis enviarme presupuesto para una revisión la semana que viene?”</option>
+<option value="info">“¿Cuál es vuestro horario y dónde estáis?”</option>
+</select>
+<button id="run">Clasificar solicitud</button>
+<div id="result" class="result" aria-live="polite">Pulsa “Clasificar solicitud” para ver el resultado de la demo.</div>
+</section>
+<section>
+<h2>Métricas que habría que medir en una prueba real</h2>
+<div class="kpis">
+<div class="kpi"><strong>Tiempo manual</strong><br><span class="muted">medir antes de probar</span></div>
+<div class="kpi"><strong>Tiempo asistido</strong><br><span class="muted">medir durante el piloto</span></div>
+<div class="kpi"><strong>Errores de clasificación</strong><br><span class="muted">revisión humana obligatoria</span></div>
+<div class="kpi"><strong>Resultado comercial</strong><br><span class="muted">respuesta, cita o venta real</span></div>
+</div>
+</section>
+<section>
+<h2>Criterios de falsación</h2>
+<ul>
+<li>Descartar si la clasificación es incorrecta con frecuencia o requiere más correcciones que el proceso manual.</li>
+<li>Descartar si el ahorro de tiempo no puede medirse o no compensa la configuración y el mantenimiento.</li>
+<li>No introducir datos personales o de clientes en esta demo.</li>
+<li>Antes de cualquier piloto externo: definir alcance, acceso, privacidad, métrica, coste y aprobación.</li>
+</ul>
+</section>
+<script>
+const examples={
+ urgent:{category:"Prioridad alta — revisión humana inmediata",action:"Comprobar disponibilidad y confirmar si se puede atender antes de la cita.",reply:"Hola, gracias por avisarnos. Vamos a comprobar la disponibilidad y te confirmaremos cuanto antes si podemos ayudarte antes de tu cita. Esta respuesta es solo un borrador; no se ha enviado."},
+ quote:{category:"Presupuesto — seguimiento normal",action:"Solicitar modelo/equipo y disponibilidad preferida; preparar presupuesto tras revisión.",reply:"Hola, gracias por contactar. Para preparar un presupuesto orientativo, ¿puedes indicarnos el modelo y qué servicio necesitas? Revisaremos la información y te responderemos. Este mensaje no se ha enviado."},
+ info:{category:"Consulta informativa",action:"Facilitar horario y ubicación verificados por el negocio antes de responder.",reply:"Hola, gracias por escribirnos. Podemos facilitarte el horario y la ubicación cuando estén verificados por el negocio. Este borrador no contiene datos de ubicación inventados y no se ha enviado."}
+};
+document.getElementById("run").addEventListener("click",()=>{
+ const item=examples[document.getElementById("request").value];
+ document.getElementById("result").textContent="Categoría: "+item.category+"\nSiguiente acción: "+item.action+"\n\nBorrador: "+item.reply;
+});
+</script>
+</body>
+</html>
