@@ -283,3 +283,70 @@ Continue zero-cost falsification of exclusions, commission basis and conversion 
 - NEXIA_MASTER_BACKUP now contains a checkpoint describing STATE v53, BOOT v12, LIVE, and EVENT_LOG blob hashes; update was read back.
 - Remaining caveat: STATE's `persistence_checkpoint.status` remains `WRITE_PENDING_READBACK`. Do not claim complete persistence health or silently change STATE version/status without a deliberate sequential checkpoint plan.
 - Commercial gate unchanged: approved €61.30 delivered resale pilot remains pending Kael payment; purchase and inventory receipt are not claimed. No external action or business spend occurred.
+
+
+## Research checkpoint — sourcing and resale price signals — 2026-10-10
+
+Status: RESEARCHED / NOT VALIDATED; cost €0; no external contact or purchase.
+
+### Evidence and candidate suppliers
+- **Vintage4Originals (current pilot supplier):** its public wholesale page describes counted-piece and per-kilo lots and advertises a starter lot from €55; our separately verified checkout for EXP-RESALE-001A was €61.30 delivered for 10 shirts, i.e. €6.13 per item landed if all 10 are present and usable. Payment remains pending Kael; no stock acquired. Source: https://vintage4originals.com/pages/ropa-de-marca-para-revender and https://vintage4originals.com/pages/ropa-vintage-al-por-mayor-valencia
+- **SP Vintage Wholesale:** public page advertises a Branded Mix 7 kg lot at €167.95 and a starter box from €16/kg plus five free pieces. These are seller-listed prices/claims, not independently validated outcomes; format and grade differ from the 10-shirt pilot, so do not compare as if equivalent. Source: https://spvintagewholesale.com/
+- **Atemporal Vintage:** public site lists an initiation lot at €83.95 and a 12 kg professional lot at €169.95. Seller-listed prices; grade, exact usable count and shipping/IVA need item-level verification. Source: https://atemporalvintage.com/
+- **EuropeWholesales / other EU wholesalers:** a dated third-party supplier comparison reports some Grade B bales from about €8/kg with a 30 kg minimum. Treat as a lead only; minimum volume and mixed quality make it unsuitable for the current low-capital pilot until verified against primary product pages. Source: https://skullwholesale.com/es-es/blogs/infos/proveedores-ropa-vintage-espana
+
+### Price signals — not completed-sale evidence
+- Vinted public indexed examples show asking prices such as an adidas T-shirt at €8 and a Levi's T-shirt at €6; these are individual active/indexed listings, not proof of sale or achieved price. Sources: https://www.vinted.es/session-refresh?ref_url=%2Fitems%2F9529209755-jeu-wii-u and https://www.vinted.es/session-refresh?ref_url=%2Fitems%2F5440119834
+- Vintanalytics reports indicative Spanish asking-price bands: Levi's €14–30, Ralph Lauren €20–50, Tommy Hilfiger €12–30, Lacoste €18–45; these are third-party listing/interest indicators, not verified completed sales, net proceeds or sell-through. Source: https://vintanalytics.com/es/what-sells-on-vinted/spain/
+
+### Unit-economics falsification
+- At €61.30 / 10, landed cost is €6.13 per item only if all 10 arrive and are saleable.
+- Hypothetical sale at €8 leaves €1.87/item before any seller-borne packaging, transport, cleaning, returns, defects, discounts, labor, tax or other applicable costs. At €10, the pre-cost spread is €3.87/item. This is not profit and does not validate the model.
+- Therefore the pilot should measure sellable yield, actual achieved sale price, time-to-sale, total work minutes, any seller-borne variable costs, returns and net contribution per received item. Do not use asking prices, supplier margin claims or “100–250% returns” marketing as proof.
+
+### Decision
+Keep EXP-RESALE-001 as the primary experiment. No new supplier purchase or contact is authorized by this research. Next zero-cost step: build a comparable matrix by exact brand/category/condition and use conservative price bands; then reconcile real outcomes only after Kael pays and the pilot inventory is actually received.
+
+
+## Research checkpoint — AI content businesses and agent production network — 2026-10-10
+
+- Status: RESEARCHED / NOT VALIDATED. No account connected, campaign accepted, content published, agent installed, spend made, or revenue earned.
+- Opportunity A — AI-assisted YouTube channel: test an original, differentiated format (story-led mini-documentary, fictional series, or useful niche explainers). Potential revenue routes: YPP ads after eligibility, sponsorships, affiliate, own products. Risk: YouTube monetization rules reject mass-produced, repetitive, reused, or low-value templated content; realistic synthetic/altered content may require disclosure. Sources: https://support.google.com/youtube/answer/1311392 and https://support.google.com/youtube/answer/14328491.
+- Opportunity B — AI virtual character/social account: investigate original recurring character, consistent identity/voice/style, with revenue via paid creator campaigns, brand content, affiliate, and later sponsorships. Higgsfield Earn is a concrete lead: official page describes campaign-based rewards for approved AI videos and performance; program terms, Spain eligibility, available campaigns, approval and payout must be checked inside account before estimating economics. Sources: https://higgsfield.ai/earn and https://higgsfield.ai/creator-hub/help-center/business/how-do-i-join-a-partnership-or-creator-program.
+- Opportunity C — multi-agent production pipeline: separate research, script, asset generation, editing, QA/rights checks, analytics and recommendation roles. Automate drafting and measurement first; require human approval for external publishing, payments, account changes and commitments. Evaluate StarNet/current Nexia HQ/open-source alternative as execution tooling, not as source of truth.
+- Bot distinction: permissible internal automation/content-production agents are different from bots that manufacture views, likes, subscribers, comments or ad impressions. Do not implement artificial engagement, account farming, spam, or platform manipulation; YouTube explicitly prohibits fake engagement and spam. Source: https://support.google.com/youtube/answer/3399767.
+- Name “Six Gruk”: exact case/entity not reliably identified from public search in this pass. Mark UNKNOWN; do not attribute claims or build around it until Kael provides a link, account handle, or exact spelling.
+- Experiment proposal (not authorized for publication or spend): first evaluate Higgsfield Earn availability/terms at zero cost; separately design a 7-day content pilot with 1 character, 1 platform, 3-5 original drafts, no paid credits, no artificial engagement. Publish only after Kael approves account/platform and final assets. Predefine metrics: acceptance/payment per video where applicable, views and retention, saves/shares, profile clicks, leads/conversions, total production minutes, tool cost, realized revenue and contribution after labor. No views-only success criterion.
+- Gate: do not create many channels/characters or buy tools before the cheapest pilot demonstrates audience signal and a plausible contribution margin. Keep EXP-RESALE-001 as the current primary economic experiment; this is a parallel research lead, not a replacement.
+
+
+## Agent platform comparison checkpoint — 2026-10-10
+- Grok Bot: official docs describe persistent cloud computer, multi-agent coordination, routines and approval prompts. Bots share files, browser sessions and command-line credentials on one cloud computer; this is a material isolation risk. Paid plan required. Source: https://docs.x.ai/grok-bot/overview and https://docs.x.ai/grok-bot/faq.
+- StarNet: official docs describe a local-first desktop agent harness, explicit capability grants, workflows, routines, MCP and local spend records. Model inference may still cost money unless a local model is used. Source: https://www.starnetos.com/docs/ and https://www.starnetos.com/docs/connectors.
+- Nexia HQ: last known inspection found a published dashboard with static state and UI toast-only actions; canonical STATE integration and real job execution remain unverified.
+- Decision: do not purchase or connect either agent product yet. Next practical step is a zero-cost computer-based test plan comparing one harmless task, evidence/logging, approval gate, spend visibility, repeatability and whether it can read canonical state without writing to it. Any credential connection, publishing, purchase or external commitment requires explicit approval.
+- No new product was installed, connected, run or paid for in this checkpoint.
+
+
+## Content monetization research checkpoint — 2026-10-10
+- Higgsfield Earn official page says creators connect a social account, post AI videos, submit video links, and can earn rewards for approved videos plus view/performance milestones. It advertises a $1,000 first-day cap and $2,500 lifetime cap per video; these are advertised limits, not evidence that a new Spanish account qualifies or will earn those amounts. Dashboard requires login; current campaigns, eligibility, actual payout conditions and supported withdrawal methods remain unverified without account access. Source: https://higgsfield.ai/earn.
+- The official page says joining is free, but production may still require paid generation credits. Do not buy credits or connect social accounts until the actual campaign brief, costs, payout rules and account permissions have been reviewed and Kael explicitly approves.
+- YouTube policy: AI use is allowed when the content is original and valuable, but mass-produced, repetitive or generic template content may be ineligible for monetization. Realistic synthetic/altered content must be disclosed when required. Sources: https://support.google.com/youtube/answer/1311392 and https://support.google.com/youtube/answer/14328491.
+- Recommendation: Higgsfield Earn is the first zero-cost lead to inspect because it may offer campaign payments before building a large audience. The next gate is to verify the live campaign brief and payout conditions without connecting an account; if login is required, stop and request explicit approval before proceeding. No account was connected, no video was published, and no income is claimed.
+- Experiment design: create 3-5 original drafts only if they can be made at zero cost; track minutes per video, accepted submissions, actual payouts, views/retention, profile clicks, conversion, tool costs and contribution after labor. Do not use views alone as a success metric. Keep EXP-RESALE-001 as the current primary economic experiment.
+
+
+### EXP-RESALE-001 — Public asking-price comparables (2026-10-10)
+- Source pages reviewed: Vinted Adidas printed T-shirts, Levi's printed T-shirts, Polo Ralph Lauren plain T-shirts, and Tommy Hilfiger T-shirts; examples include Adidas roughly €1–€15 for common listings, Levi's roughly €3–€10 for many used examples, Polo Ralph Lauren roughly €5–€10 for several used examples (with some higher asks), and Tommy Hilfiger examples around €5–€7 as well as occasional higher asks. Sources: https://www.vinted.es/catalog/1807-t-shirt-me-stampa/brand/14-adidas ; https://www.vinted.es/catalog/1807-print-t-shirts/brand/10-levis ; https://www.vinted.es/catalog/1806-obicne-majice-kratkih-rukava/brand/4273-polo-ralph-lauren ; https://www.vinted.es/brand/94-tommy-hilfiger?catalog%5B%5D=2576.
+- Evidence quality: live/public asking prices, not verified completed sale prices; some listings are cross-border, mixed gender/size/condition, and promoted. They do not establish a realistic average realized price for the exact pilot inventory.
+- Falsification signal: the canonical €15 average realized-price gate is not supported by generic branded T-shirt asking-price examples; many common examples are below €10. A €15+ average may require standout vintage graphics, desirable models/sizes, excellent condition, and strong photos, none yet known for the unpaid pilot lot.
+- Economics implication: with €6.13 provisional landed cost per shirt if all 10 are sellable, asking €5–€10 would imply only €-1.13 to €3.87 spread before any fees, prep, packaging, returns, discounts, labor or taxes. These are simple price-minus-acquisition spreads, not profit estimates. At €15, spread is €8.87 before other costs; at 8 sellable items the allocated acquisition cost per sellable item rises to €7.6625 and spread at €15 is €7.3375 before other costs.
+- Decision: RESEARCHED / NOT VALIDATED. Do not alter canonical gates or buy additional inventory. On receipt of the approved pilot (still unpaid), identify each actual item and use same-brand/category/condition/size comparables; capture listing price and listing date, then later record realized transaction price and time-to-sale. The current evidence increases downside concern and reinforces the need to resolve the €10 contribution vs €15 average-sale threshold inconsistency before judging success.
+
+
+## Opportunity radar checkpoint 2026-10-10
+See NEXIA_OPPORTUNITY_RADAR_2026-10-10.md. Three options compared: SME AI workflow service, paid AI-content campaigns, and digital templates. All remain RESEARCHED / NOT VALIDATED. Next safe step: synthetic-data prototype and unit-economics worksheet only; no external contact, account connection, publishing, listing, purchase or paid credits. Resale remains paused and non-primary.
+
+
+## SME prototype checkpoint 2026-10-10
+Created and read back `prototypes/sme-intake-demo.html`, a static local demo with three synthetic enquiry types. It uses deterministic local rules, not an AI model, and has no external connections. No real data, contact, publication or spend. Next: measure manual versus assisted handling time, classification errors and correction time using synthetic cases; do not claim commercial validation.

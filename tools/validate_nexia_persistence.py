@@ -25,6 +25,9 @@ def read_json(name: str):
 
 
 def git_blob_sha(content: bytes) -> str:
+    # Git normalizes CRLF to LF for text files; keep the blob check portable
+    # when this validator runs from a Windows checkout with CRLF worktree files.
+    content = content.replace(b"\r\n", b"\n")
     payload = b"blob " + str(len(content)).encode("ascii") + b"\0" + content
     return hashlib.sha1(payload).hexdigest()
 

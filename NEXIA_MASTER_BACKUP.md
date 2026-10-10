@@ -157,51 +157,93 @@ No canonical STATE update was made. No spend, purchase, inventory receipt, exter
 LIVE was updated and read back after checkpoint 46. Current verified LIVE blob SHA: `7c0b9566deca0217c18ef164cde83108d1043c5b`. Its next action is one final readback of all six continuity artifacts and a decision on whether a controlled canonical STATE checkpoint update is justified. Full persistence health is still not declared.
 
 
-## 48. CONTROLLED PERSISTENCE REPAIR — 2026-10-09
+## 48. CONTROLLED PERSISTENCE RECONCILIATION — 2026-10-10
 
-Repair branch: `repair/persistence-reconciliation-2026-10-09`, based on inspected main HEAD `3e4300735e11673e7e7436a52e5f2adb6c773acc`. No merge or deployment performed.
+Canonical STATE: v54, blob SHA `bdd27d02f5f76a7fca354c6d8beefe602ab72258`; checkpoint `CP-2026-10-10-PERSISTENCE-READBACK-001`, status `READBACK_VERIFIED`.
+- BOOT: v13, blob SHA `b187f13a9910cf96650a56f3e0233a167c38252e`; its last verified STATE version/hash match STATE v54.
+- LIVE: blob SHA `5d59e52bf303d8c489be7b8f6bf8c82498737eff`; status `ACTIVE / VALIDACIÓN — PERSISTENCE RECONCILIATION IN PROGRESS`; read back and references STATE v54.
+- MEMORY: blob SHA `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`.
+- EVENT_LOG before this checkpoint: blob SHA `c2c3566b82fc13babb429ad5eebbb51ff599ca29`.
+- MASTER_BACKUP before this addendum: blob SHA `e9537ac76b11a34483b60aff3616cd0cb3eb1a79`.
+- Checkpoint 46's LIVE SHA `df9480b80cb1dc67a59296d6768bf38ca8fb9796` is stale and superseded by checkpoint 47 and the current LIVE readback above. Historical content is preserved, not silently rewritten.
 
-STATE v54 blob SHA: `96dc5be043355cbb7d55e69d946b8e29ebd1183a`; BOOT v13 blob SHA: `9ab92717edced9b4e08b27cfc00e2c8767be9187`; LIVE blob SHA: `5a4a29d19265df8dd386200466ff98b3e415677d`; EVENT_LOG append-only start event `EVT-2026-10-09-PERSISTENCE-REPAIR-START-001`, blob SHA: `6a7b3a73ddbfa1e4e77819bacfbc41c2a96caca2`.
-
-Canonical intake sheet exists and was read: `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` (blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`). No second sheet was created. STATE remains `WRITE_PENDING_READBACK` while the final controlled reconciliation is in progress. This addendum is a branch checkpoint, not a declaration of full persistence health.
-
-Commercial gate unchanged: the €61.30 delivered checkout remains unpaid by Kael; no purchase, inventory receipt, listing, sale, revenue, or profit is claimed. Financial impact: €0.
-
-
-## 49. FINAL RECONCILIATION CHECKPOINT — 2026-10-09 — REPAIR BRANCH
-
-Canonical STATE v55 blob SHA: `d20949343521d833d7995a57c40e61745003cd07`. STATE v55 closes the readback checkpoint for STATE v54; its `persistence_checkpoint.status` is `VERIFIED_AFTER_READBACK`. BOOT v14 blob SHA: `e0c8962191917cc421f087d19adb823b12fe7b50`, with `state_version=55` and `state_blob_sha=d20949343521d833d7995a57c40e61745003cd07`. LIVE blob SHA: `7379dc97216a7fb7e98a4a044ecbdffa06eaa57c`, reports cross-artifact readback pending until the final audit completes. MEMORY blob SHA: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`. EVENT_LOG blob SHA: `2ba5a66df5549101722e9bfd608735ad4ce1035a`; latest append-only event: `EVT-2026-10-09-PERSISTENCE-REPAIR-CHECKPOINT-001`.
-
-The existing measurement sheet `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` was read back at blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`; no duplicate `NEXIA_PILOT_MEASUREMENT_SHEET.md` was created. Protocol `NEXIA_PERSISTENCE_PROTOCOL.md` was read at blob SHA `a765bfc71f136aa62a9ea9e8e0dcbeded914f2f4`. This backup addendum is written after the preceding artifact readbacks; final verification must re-read this backup and every required artifact from the repair branch.
-
-Repair branch `repair/persistence-reconciliation-2026-10-09`, based on main HEAD `3e4300735e11673e7e7436a52e5f2adb6c773acc`. No merge, deployment, purchase, listing, external contact, or commercial action. Kael's payment gate for the €61.30 delivered pilot remains pending; financial impact €0.
+Scope: record metadata reconciliation only. Full persistence health remains unclaimed until the event-log append and this backup update are independently read back and the final hash map is checked. No spend, purchase, inventory receipt, external contact, listing, sale, revenue or profit is claimed. Human Gate for the €61.30 resale lot remains pending Kael payment.
 
 
-## 50. FINAL LIVE HASH ALIGNMENT — 2026-10-09
+## 49. FINAL HASH-MAP RECONCILIATION — 2026-10-10
 
-Corrective readback note: after checkpoint 49 was written, LIVE was refreshed and re-read. Current LIVE blob SHA is `5f470ea4d9ab7e080cdb1b8c1dd12e5f7253720c`; it records STATE v55 blob `d20949343521d833d7995a57c40e61745003cd07`, BOOT v14 blob `e0c8962191917cc421f087d19adb823b12fe7b50`, and EVENT_LOG blob `2ba5a66df5549101722e9bfd608735ad4ce1035a`. This note supersedes the LIVE blob SHA recorded in checkpoint 49; historical checkpoint content remains preserved. STATE remains v55 with its reconciliation checkpoint marked `VERIFIED_AFTER_READBACK`; the final audit classification depends on the subsequent readback of this updated backup and all required artifacts.
+Latest readback before this addendum:
+- Canonical STATE v54: `bdd27d02f5f76a7fca354c6d8beefe602ab72258`; checkpoint `READBACK_VERIFIED`.
+- BOOT v13: `2a00dc5b38b6998eae523db1fce7a9b69ab7779c`; duplicated STATE hash/version fields match STATE v54.
+- LIVE: `5d59e52bf303d8c489be7b8f6bf8c82498737eff`; status `ACTIVE / VALIDACIÓN — PERSISTENCE RECONCILIATION IN PROGRESS`.
+- MEMORY: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`.
+- EVENT_LOG before final audit event: `aa23f7cb63a0489ad137d8dbba01279392e6bc26`; latest event ID is `EVT-2026-10-10-PERSISTENCE-RECONCILIATION-001`.
+- MASTER_BACKUP before this addendum: `4546f4ebbbdd6c30b88189e691d7ad159270aadb`.
+
+Checkpoint 49 records the current artifact hashes as observed before this backup write. Final LIVE readback and append-only audit event follow sequentially; their later hashes/IDs are checked at session close. No purchase, spend, contact, listing, sale, revenue or profit is claimed; €61.30 checkout remains pending Kael payment.
 
 
-## 51. STATE v56 FINAL ALIGNMENT — 2026-10-09
+## 50. ECONOMIC RESEARCH PERSISTED — 2026-10-10
 
-STATE v56 blob SHA: `90f56aaa841502c9111a71dfc77f3fc37c56e1c5`; BOOT v15 blob SHA: `d472d69e64c130a3cfab3db35dca0c48ae80acbc`, with exact version/hash reference to STATE v56; LIVE blob SHA: `8c0bac91ad9a75e63be521599a5edc268bb40855`; MEMORY blob SHA: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`; EVENT_LOG blob SHA: `bd5d2501613d676c0912dbc645ab0aabd95c9887`, latest event `EVT-2026-10-09-PERSISTENCE-REPAIR-VERIFIED-001`.
+A zero-cost research note was appended to NEXIA_MEMORY.md and read back.
+- STATE v54: `bdd27d02f5f76a7fca354c6d8beefe602ab72258`.
+- BOOT v13: `2a00dc5b38b6998eae523db1fce7a9b69ab7779c`; canonical state version/hash match.
+- LIVE before this backup update: `5026ca7273cbf82b1b83176c0f080fccd1b27917`.
+- MEMORY with sourcing/price research checkpoint: `91c792d774892a7eb1b91f23c775759ae8f17bfd`.
+- EVENT_LOG before this research event: `9d20b8200876155fee90183774a6cc8978ad3241`.
+- MASTER_BACKUP before this addendum: `441bc725a15fa2a41177a7c6c87f9b7c333d14e8`.
 
-The existing canonical pilot sheet `EXP-RESALE-001A_INTAKE_MEASUREMENT_SHEET.md` was read back at blob SHA `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`. No duplicate `NEXIA_PILOT_MEASUREMENT_SHEET.md` exists or was created. This addendum supersedes earlier hashes as the latest snapshot while preserving all historical addenda. Final post-write readback of this backup and all continuity artifacts remains the last audit step.
+Research compares Vintage4Originals, SP Vintage Wholesale, Atemporal Vintage and a secondary-source lead for EuropeWholesales; separates asking-price signals from completed sales; records €6.13 landed unit cost assumption and hypothetical spreads of €1.87 at €8 / €3.87 at €10 before other costs. Findings are RESEARCHED / NOT VALIDATED. No purchase, contact or spend is authorized or claimed. The €61.30 checkout remains pending Kael payment.
 
-Status at write: checkpoint `CP-2026-10-09-PILOT-MEASUREMENT-SHEET-001` marked `VERIFIED_AFTER_READBACK` in STATE v56. Repair branch only; no merge/deployment. Commercial payment gate unchanged; no purchase, receipt, listing, sale, revenue or profit claimed. Financial impact €0.
+## 51. CANONICAL MISSION RECONCILIATION — 2026-10-10
+
+This checkpoint records the observed artifacts before writing this backup addendum. It is not a self-referential hash of the resulting MASTER_BACKUP blob.
+- Canonical STATE: v57, blob SHA `fc3bd084d41e4d2d2a7fc6c726fa7942bee7105b`; mission `MISSION-OPPORTUNITY-ENGINE-001`; next action is zero-cost comparison/falsification of at least three opportunities.
+- BOOT: v15, blob SHA `6e8879c35725f087383375358e63fbdf4960a75f`; state version/hash fields match canonical STATE v57.
+- LIVE: blob SHA `8974d3203096707155d5a1afbb40fcc120d46abc`; status `ACTIVE / RADAR — SYNC PENDING`; opportunity-comparison cycle read back.
+- MEMORY: blob SHA `8d7b273b7f1ee43536890fe18ba295db4c6aef03`; historical resale and NEXIA Care research preserved, not promoted to current mission.
+- EVENT_LOG before this backup update: blob SHA `8f8db59420129e00bf982b20f7880674baf22831`; latest appended event `EVT-2026-10-10-OPPORTUNITY-MISSION-RECONCILIATION-001`.
+- Previous MASTER_BACKUP blob SHA: `30951cb61faee8d4eddefff62d7297bb67c1f381`.
+
+Canonical STATE v57 corrected stale next-action and legacy resale-primary metadata; resale is preserved as paused/non-primary. No purchase, external contact, account connection, publication, revenue or profit is claimed. STATE/BOOT/LIVE/EVENT_LOG have been read back; this backup addendum must also be read back before the checkpoint is considered recorded. Full artifact hash closure remains subject to final audit; no claim of self-referential hash equality is made.
 
 
-## 52. FINAL READBACK CLOSURE — 2026-10-09
+## 52. OPPORTUNITY RADAR CHECKPOINT — 2026-10-10
 
-Current readback snapshot on `repair/persistence-reconciliation-2026-10-09`:
-- STATE v56: `90f56aaa841502c9111a71dfc77f3fc37c56e1c5`
-- BOOT v15: `fdb90810f864d1bf99d8c511c677e38902f9e61f` (references STATE v56 SHA above)
-- LIVE: `c6b793a6cd4aec966e6e2bb2e6b52970114ce546`
-- MEMORY: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`
-- EVENT_LOG: `78b27dffe00bcf9f87751aa2655e646fa9abfa68`; latest event `EVT-2026-10-09-PERSISTENCE-READBACK-CLOSURE-001`
+- STATE v57: `fc3bd084d41e4d2d2a7fc6c726fa7942bee7105b`
+- BOOT v15: `6e8879c35725f087383375358e63fbdf4960a75f` (state version/hash match)
+- LIVE: `87c892b571d7c4536b949fb6eaa063b65946810e`
+- MEMORY: `562659ca37c1d63b5775fbc2898f62bfa70e3400`
+- EVENT_LOG: `5070f55b4f6e6e9a5cfcc6c1f97cd18d314b85aa`
+- OPPORTUNITY_RADAR: `2c406dfbd07fc782b473478b8038e022c7a6e97f`
+- Previous MASTER_BACKUP: `a1e83aa38439fd930064a56ef9aa702e46d4a38b`
+
+Compared three candidates: SME AI workflow service, AI-content campaigns, and digital templates. All remain research-only/not validated. Next safe action: synthetic-data prototype and unit-economics worksheet for one SME workflow. No external contact, account connection, publishing, listing or spending. Resale remains paused/non-primary. This addendum needs readback; persistence audit remains open.
+
+
+## 53. SME PROTOTYPE CHECKPOINT — 2026-10-10
+
+STATE v58: `1aaa6cc50782a47072db1ed453d018d4163c6dd5`
+BOOT v16: `d21bc045bd582a7a7eeed42b61d3ce2f8d36ea47`
+LIVE: `fd99dfabb121417a1dfe434380169a22e5d8e979`
+MEMORY: `8eba1a058fec5e9c813f554c96420f0ff157d93e`
+EVENT_LOG: `424316b93d2e56e0e2eb027e9e2c76a751f6bb2e`
+OPPORTUNITY_RADAR: `2c406dfbd07fc782b473478b8038e022c7a6e97f`
+SME_DEMO: `1ee3ff93e7fb9760d36eafa248e974be1e5f56c1`
+Previous MASTER_BACKUP: `f940e6613c4235b1949c85b545da1019fe16b874`
+
+STATE and BOOT version/hash alignment was checked. The local demo uses synthetic examples and deterministic rules; it is not a live AI integration. Opportunity demand remains unvalidated. Next step: measure manual and assisted time plus classification/correction errors using synthetic cases. No spend or external action was performed. Read back this checkpoint before considering it recorded.
+
+
+## 54. FINAL READBACK CLOSURE — 2026-10-10
+
+Current merge-resolution snapshot:
+- STATE v58: `1aaa6cc50782a47072db1ed453d018d4163c6dd5`
+- BOOT v16: `d21bc045bd582a7a7eeed42b61d3ce2f8d36ea47` (references STATE v58 SHA above)
+- LIVE: `fd99dfabb121417a1dfe434380169a22e5d8e979`
+- EVENT_LOG: `424316b93d2e56e0e2eb027e9e2c76a751f6bb2e`
+- MEMORY: `8eba1a058fec5e9c813f554c96420f0ff157d93e`
 - Persistence protocol: `a765bfc71f136aa62a9ea9e8e0dcbeded914f2f4`
 - Existing intake measurement sheet: `6333392bc3f0938a1dd2e5f04bd78bfd9ead362f`
 
-Final readback confirms these artifacts are readable; STATE/BOOT version-hash alignment, LIVE current references, JSON/JSONL parsing, backup snapshot references, and absence of `NEXIA_PILOT_MEASUREMENT_SHEET.md` were checked. This checkpoint supersedes prior snapshots for current artifact hashes; historical addenda remain intact.
-
-Draft PR #11 is open and unmerged. No deployment or commercial action. Kael's €61.30 payment gate remains pending; financial impact €0. Human review is the next gate.
+The merge keeps the newer opportunity-engine mission and STATE v58 from `main`; PR history remains represented in its original commit ancestry. Derived references and JSON/JSONL parsing were checked. No purchase, external contact, publication, spend, or deployment was performed.
