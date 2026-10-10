@@ -1,5 +1,5 @@
 {
-  "version": 56,
+  "version": 57,
   "updated_at": "2026-10-10",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables; ningún vehículo comercial queda preseleccionado.",
@@ -228,12 +228,12 @@
   },
   "persistence_checkpoint": {
     "checkpoint_id": "CP-2026-10-10-CANONICAL-RECONCILIATION-001",
-    "previous_state_version": 55,
-    "current_state_version": 56,
-    "status": "CANONICAL_STATE_WRITE_PENDING_READBACK",
+    "previous_state_version": 56,
+    "current_state_version": 57,
+    "status": "CANONICAL_READBACK_VERIFIED_DERIVED_RECONCILIATION_IN_PROGRESS",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
-    "note": "Corrected stale next_useful_action and legacy primary_strategy status so they agree with current_mission MISSION-OPPORTUNITY-ENGINE-001. This checkpoint does not claim derived-artifact synchronization; BOOT, LIVE, EVENT_LOG and MASTER_BACKUP must be reconciled and independently read back."
+    "note": "STATE v56 was written and read back; this follow-up corrects checkpoint metadata. Current mission and next action are aligned. BOOT/LIVE/EVENT_LOG/MASTER_BACKUP reconciliation and final readback remain in progress; this is not a full-sync declaration."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
