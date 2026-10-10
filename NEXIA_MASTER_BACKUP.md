@@ -181,3 +181,16 @@ Latest readback before this addendum:
 - MASTER_BACKUP before this addendum: `4546f4ebbbdd6c30b88189e691d7ad159270aadb`.
 
 Checkpoint 49 records the current artifact hashes as observed before this backup write. Final LIVE readback and append-only audit event follow sequentially; their later hashes/IDs are checked at session close. No purchase, spend, contact, listing, sale, revenue or profit is claimed; €61.30 checkout remains pending Kael payment.
+
+
+## 50. ECONOMIC RESEARCH PERSISTED — 2026-10-10
+
+A zero-cost research note was appended to NEXIA_MEMORY.md and read back.
+- STATE v54: `bdd27d02f5f76a7fca354c6d8beefe602ab72258`.
+- BOOT v13: `2a00dc5b38b6998eae523db1fce7a9b69ab7779c`; canonical state version/hash match.
+- LIVE before this backup update: `5026ca7273cbf82b1b83176c0f080fccd1b27917`.
+- MEMORY with sourcing/price research checkpoint: `91c792d774892a7eb1b91f23c775759ae8f17bfd`.
+- EVENT_LOG before this research event: `9d20b8200876155fee90183774a6cc8978ad3241`.
+- MASTER_BACKUP before this addendum: `441bc725a15fa2a41177a7c6c87f9b7c333d14e8`.
+
+Research compares Vintage4Originals, SP Vintage Wholesale, Atemporal Vintage and a secondary-source lead for EuropeWholesales; separates asking-price signals from completed sales; records €6.13 landed unit cost assumption and hypothetical spreads of €1.87 at €8 / €3.87 at €10 before other costs. Findings are RESEARCHED / NOT VALIDATED. No purchase, contact or spend is authorized or claimed. The €61.30 checkout remains pending Kael payment.
