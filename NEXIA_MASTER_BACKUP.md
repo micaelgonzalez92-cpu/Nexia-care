@@ -155,3 +155,16 @@ No canonical STATE update was made. No spend, purchase, inventory receipt, exter
 ## 47. LIVE NEXT-ACTION ALIGNMENT — 2026-10-09
 
 LIVE was updated and read back after checkpoint 46. Current verified LIVE blob SHA: `7c0b9566deca0217c18ef164cde83108d1043c5b`. Its next action is one final readback of all six continuity artifacts and a decision on whether a controlled canonical STATE checkpoint update is justified. Full persistence health is still not declared.
+
+
+## 48. CONTROLLED PERSISTENCE RECONCILIATION — 2026-10-10
+
+Canonical STATE: v54, blob SHA `bdd27d02f5f76a7fca354c6d8beefe602ab72258`; checkpoint `CP-2026-10-10-PERSISTENCE-READBACK-001`, status `READBACK_VERIFIED`.
+- BOOT: v13, blob SHA `b187f13a9910cf96650a56f3e0233a167c38252e`; its last verified STATE version/hash match STATE v54.
+- LIVE: blob SHA `5d59e52bf303d8c489be7b8f6bf8c82498737eff`; status `ACTIVE / VALIDACIÓN — PERSISTENCE RECONCILIATION IN PROGRESS`; read back and references STATE v54.
+- MEMORY: blob SHA `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`.
+- EVENT_LOG before this checkpoint: blob SHA `c2c3566b82fc13babb429ad5eebbb51ff599ca29`.
+- MASTER_BACKUP before this addendum: blob SHA `e9537ac76b11a34483b60aff3616cd0cb3eb1a79`.
+- Checkpoint 46's LIVE SHA `df9480b80cb1dc67a59296d6768bf38ca8fb9796` is stale and superseded by checkpoint 47 and the current LIVE readback above. Historical content is preserved, not silently rewritten.
+
+Scope: record metadata reconciliation only. Full persistence health remains unclaimed until the event-log append and this backup update are independently read back and the final hash map is checked. No spend, purchase, inventory receipt, external contact, listing, sale, revenue or profit is claimed. Human Gate for the €61.30 resale lot remains pending Kael payment.
