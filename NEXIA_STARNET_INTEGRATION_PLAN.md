@@ -47,6 +47,8 @@ StarNet is an execution dependency, not the source of truth. ChatGPT remains an 
 
 ## 3. Integration boundary
 
+**Additional source finding:** the inspected StarNet revision includes an Agent Client Protocol (ACP) server at `sidecar/acp/serve.js`, which proxies to the running station over authenticated loopback HTTP, streams `/api/run` NDJSON events, and maps permission prompts to client approval/rejection. This makes ACP a serious first candidate for the adapter transport, alongside a narrowly scoped direct HTTP client. Compare both before implementation: ACP may preserve StarNet's consent round-trip better, while direct HTTP may simplify NEXIA-specific task envelopes. Do not scrape `window.__STARNET_API_TOKEN__` as a permanent credential strategy; the source explicitly notes that per-launch tokens can become stale when StarNet restarts. Test supported token injection/refresh behavior and fail closed on expiry.
+
 Create a NEXIA-owned adapter with a narrow, versioned interface. Prefer a same-machine integration using StarNet's documented sidecar API only after confirming the exact route/schema/auth behavior against the current source revision and release build.
 
 Adapter responsibilities:
