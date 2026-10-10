@@ -4,7 +4,7 @@
   "current_cycle": "NEXIA Core — opportunity comparison and prototype measurement",
   "current_action": "Static SME intake demo created and read back using synthetic examples. It uses local rules, is not a live AI integration, and has no external connections.",
   "last_completed_action": "2026-10-10: STATE v58 and BOOT v16 read back; opportunity radar and synthetic-data demo created.",
-  "evidence": "STATE v58 1aaa6cc50782a47072db1ed453d018d4163c6dd5; BOOT v16 d21bc045bd582a7a7eeed42b61d3ce2f8d36ea47; prototype read back.",
+  "evidence": "STATE 1aaa6cc50782a47072db1ed453d018d4163c6dd5; BOOT d21bc045bd582a7a7eeed42b61d3ce2f8d36ea47; MEMORY 8eba1a058fec5e9c813f554c96420f0ff157d93e; prototype 1ee3ff93e7fb9760d36eafa248e974be1e5f56c1. State/boot match; final event/backup checkpoint pending.",
   "capital_spent_eur": 0,
   "human_gate": "No purchase, external contact, account connection, publication, paid listing or paid credits without explicit approval.",
   "parallel_work": [
