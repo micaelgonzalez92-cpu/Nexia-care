@@ -283,3 +283,26 @@ Continue zero-cost falsification of exclusions, commission basis and conversion 
 - NEXIA_MASTER_BACKUP now contains a checkpoint describing STATE v53, BOOT v12, LIVE, and EVENT_LOG blob hashes; update was read back.
 - Remaining caveat: STATE's `persistence_checkpoint.status` remains `WRITE_PENDING_READBACK`. Do not claim complete persistence health or silently change STATE version/status without a deliberate sequential checkpoint plan.
 - Commercial gate unchanged: approved €61.30 delivered resale pilot remains pending Kael payment; purchase and inventory receipt are not claimed. No external action or business spend occurred.
+
+
+## Research checkpoint — sourcing and resale price signals — 2026-10-10
+
+Status: RESEARCHED / NOT VALIDATED; cost €0; no external contact or purchase.
+
+### Evidence and candidate suppliers
+- **Vintage4Originals (current pilot supplier):** its public wholesale page describes counted-piece and per-kilo lots and advertises a starter lot from €55; our separately verified checkout for EXP-RESALE-001A was €61.30 delivered for 10 shirts, i.e. €6.13 per item landed if all 10 are present and usable. Payment remains pending Kael; no stock acquired. Source: https://vintage4originals.com/pages/ropa-de-marca-para-revender and https://vintage4originals.com/pages/ropa-vintage-al-por-mayor-valencia
+- **SP Vintage Wholesale:** public page advertises a Branded Mix 7 kg lot at €167.95 and a starter box from €16/kg plus five free pieces. These are seller-listed prices/claims, not independently validated outcomes; format and grade differ from the 10-shirt pilot, so do not compare as if equivalent. Source: https://spvintagewholesale.com/
+- **Atemporal Vintage:** public site lists an initiation lot at €83.95 and a 12 kg professional lot at €169.95. Seller-listed prices; grade, exact usable count and shipping/IVA need item-level verification. Source: https://atemporalvintage.com/
+- **EuropeWholesales / other EU wholesalers:** a dated third-party supplier comparison reports some Grade B bales from about €8/kg with a 30 kg minimum. Treat as a lead only; minimum volume and mixed quality make it unsuitable for the current low-capital pilot until verified against primary product pages. Source: https://skullwholesale.com/es-es/blogs/infos/proveedores-ropa-vintage-espana
+
+### Price signals — not completed-sale evidence
+- Vinted public indexed examples show asking prices such as an adidas T-shirt at €8 and a Levi's T-shirt at €6; these are individual active/indexed listings, not proof of sale or achieved price. Sources: https://www.vinted.es/session-refresh?ref_url=%2Fitems%2F9529209755-jeu-wii-u and https://www.vinted.es/session-refresh?ref_url=%2Fitems%2F5440119834
+- Vintanalytics reports indicative Spanish asking-price bands: Levi's €14–30, Ralph Lauren €20–50, Tommy Hilfiger €12–30, Lacoste €18–45; these are third-party listing/interest indicators, not verified completed sales, net proceeds or sell-through. Source: https://vintanalytics.com/es/what-sells-on-vinted/spain/
+
+### Unit-economics falsification
+- At €61.30 / 10, landed cost is €6.13 per item only if all 10 arrive and are saleable.
+- Hypothetical sale at €8 leaves €1.87/item before any seller-borne packaging, transport, cleaning, returns, defects, discounts, labor, tax or other applicable costs. At €10, the pre-cost spread is €3.87/item. This is not profit and does not validate the model.
+- Therefore the pilot should measure sellable yield, actual achieved sale price, time-to-sale, total work minutes, any seller-borne variable costs, returns and net contribution per received item. Do not use asking prices, supplier margin claims or “100–250% returns” marketing as proof.
+
+### Decision
+Keep EXP-RESALE-001 as the primary experiment. No new supplier purchase or contact is authorized by this research. Next zero-cost step: build a comparable matrix by exact brand/category/condition and use conservative price bands; then reconcile real outcomes only after Kael pays and the pilot inventory is actually received.
