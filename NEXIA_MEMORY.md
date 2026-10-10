@@ -346,3 +346,7 @@ Keep EXP-RESALE-001 as the primary experiment. No new supplier purchase or conta
 
 ## Opportunity radar checkpoint 2026-10-10
 See NEXIA_OPPORTUNITY_RADAR_2026-10-10.md. Three options compared: SME AI workflow service, paid AI-content campaigns, and digital templates. All remain RESEARCHED / NOT VALIDATED. Next safe step: synthetic-data prototype and unit-economics worksheet only; no external contact, account connection, publishing, listing, purchase or paid credits. Resale remains paused and non-primary.
+
+
+## SME prototype checkpoint 2026-10-10
+Created and read back `prototypes/sme-intake-demo.html`, a static local demo with three synthetic enquiry types. It uses deterministic local rules, not an AI model, and has no external connections. No real data, contact, publication or spend. Next: measure manual versus assisted handling time, classification errors and correction time using synthetic cases; do not claim commercial validation.
