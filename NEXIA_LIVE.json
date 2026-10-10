@@ -1,10 +1,10 @@
 {
   "updated_at": "2026-10-10T20:00:00+02:00",
-  "status": "ACTIVE / RADAR — OPPORTUNITY MATRIX RECORDED; PERSISTENCE AUDIT OPEN",
-  "current_cycle": "NEXIA Core — compare and falsify low-cost business opportunities",
-  "current_action": "Created and read back NEXIA_OPPORTUNITY_RADAR_2026-10-10.md and persisted its summary to MEMORY. Three candidates remain unvalidated; next safe step is a synthetic-data prototype and unit-economics worksheet.",
-  "last_completed_action": "2026-10-10: STATE v57 and BOOT v15 readback verified; LIVE aligned to opportunity mission; EVENT_LOG reconciliation event read back; MASTER_BACKUP checkpoint 51 read back; opportunity radar for three candidates created and MEMORY checkpoint recorded.",
-  "evidence": "STATE fc3bd084d41e4d2d2a7fc6c726fa7942bee7105b; BOOT 6e8879c35725f087383375358e63fbdf4960a75f; MEMORY 562659ca37c1d63b5775fbc2898f62bfa70e3400; RADAR 2c406dfbd07fc782b473478b8038e022c7a6e97f. State/boot match; persistence audit remains open pending final event/backup readback.",
+  "status": "ACTIVE / RADAR — PROTOTYPE BUILT; VALIDATION PENDING",
+  "current_cycle": "NEXIA Core — opportunity comparison and prototype measurement",
+  "current_action": "Static SME intake demo created and read back using synthetic examples. It uses local rules, is not a live AI integration, and has no external connections.",
+  "last_completed_action": "2026-10-10: STATE v58 and BOOT v16 read back; opportunity radar and synthetic-data demo created.",
+  "evidence": "STATE v58 1aaa6cc50782a47072db1ed453d018d4163c6dd5; BOOT v16 d21bc045bd582a7a7eeed42b61d3ce2f8d36ea47; prototype read back.",
   "capital_spent_eur": 0,
   "human_gate": "No purchase, external contact, account connection, publication, paid listing or paid credits without explicit approval.",
   "parallel_work": [
@@ -12,7 +12,7 @@
     "Quantify delivery time, measurable value and maintenance cost",
     "Core persistence, recovery and integrity maintenance"
   ],
-  "next_action": "Build a synthetic-data prototype and unit-economics worksheet for one narrowly scoped SME AI workflow. Define a before/after metric and falsification criteria; do not contact prospects or handle real customer data.",
+  "next_action": "Measure the local synthetic-data intake demo using a worksheet for manual time, assisted time, classification errors, correction time and outcome metrics.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
