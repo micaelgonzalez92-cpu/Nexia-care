@@ -168,3 +168,16 @@ Canonical STATE: v54, blob SHA `bdd27d02f5f76a7fca354c6d8beefe602ab72258`; check
 - Checkpoint 46's LIVE SHA `df9480b80cb1dc67a59296d6768bf38ca8fb9796` is stale and superseded by checkpoint 47 and the current LIVE readback above. Historical content is preserved, not silently rewritten.
 
 Scope: record metadata reconciliation only. Full persistence health remains unclaimed until the event-log append and this backup update are independently read back and the final hash map is checked. No spend, purchase, inventory receipt, external contact, listing, sale, revenue or profit is claimed. Human Gate for the €61.30 resale lot remains pending Kael payment.
+
+
+## 49. FINAL HASH-MAP RECONCILIATION — 2026-10-10
+
+Latest readback before this addendum:
+- Canonical STATE v54: `bdd27d02f5f76a7fca354c6d8beefe602ab72258`; checkpoint `READBACK_VERIFIED`.
+- BOOT v13: `2a00dc5b38b6998eae523db1fce7a9b69ab7779c`; duplicated STATE hash/version fields match STATE v54.
+- LIVE: `5d59e52bf303d8c489be7b8f6bf8c82498737eff`; status `ACTIVE / VALIDACIÓN — PERSISTENCE RECONCILIATION IN PROGRESS`.
+- MEMORY: `23c6f15a18fc3d7f85e6932fd7c7e153d12e7edc`.
+- EVENT_LOG before final audit event: `aa23f7cb63a0489ad137d8dbba01279392e6bc26`; latest event ID is `EVT-2026-10-10-PERSISTENCE-RECONCILIATION-001`.
+- MASTER_BACKUP before this addendum: `4546f4ebbbdd6c30b88189e691d7ad159270aadb`.
+
+Checkpoint 49 records the current artifact hashes as observed before this backup write. Final LIVE readback and append-only audit event follow sequentially; their later hashes/IDs are checked at session close. No purchase, spend, contact, listing, sale, revenue or profit is claimed; €61.30 checkout remains pending Kael payment.
