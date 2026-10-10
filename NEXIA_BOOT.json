@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "boot_version": 12,
-  "generated_at": "2026-10-09T00:00:00+02:00",
+  "boot_version": 13,
+  "generated_at": "2026-10-10T00:00:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -12,18 +12,34 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
-  "last_verified_state_version": 53,
-  "last_verified_state_blob_sha": "72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3",
+  "last_verified_state_version": 54,
+  "last_verified_state_blob_sha": "bdd27d02f5f76a7fca354c6d8beefe602ab72258",
   "phase": "VALIDACIÓN",
   "active_experiment": {
     "id": "EXP-RESALE-001",
     "name": "Falsación de sourcing + unit economics de ropa de segunda mano",
-    "status": "APPROVED_PENDING_PURCHASE"
+    "status": "APPROVED_PENDING_PURCHASE",
+    "cost_eur": 55,
+    "primary_metric": "margen de contribución por prenda vendible y potencial de rotación reproducible",
+    "participants": 0,
+    "target_participants": 20,
+    "approval": {
+      "approved_by": "Kael",
+      "approved_at": "2026-10-08",
+      "scope": "EXP-RESALE-001A — 10 camisetas de marca",
+      "max_product_cost_eur": 55,
+      "transport": "allowed within approved pilot; verified checkout total €61.30 delivered",
+      "purchase_executed": false
+    }
   },
   "mission": {
     "id": "MISSION-RESALE-001",
     "name": "Validar y construir la operación de reventa profesional de ropa de segunda mano en España",
-    "status": "ACTIVE"
+    "priority": "MAX",
+    "cost_eur": 0,
+    "human_action_required": true,
+    "status": "ACTIVE",
+    "reason": "Kael aprobó EXP-RESALE-001A. Checkout verificado en €61.30 entregado; pago aún no ejecutado. NEXIA continúa en paralelo con arquitectura, datos, sourcing y economía a coste 0."
   },
   "human_gate": "EXP-RESALE-001A: compra aprobada; checkout verificado en €61.30 entregado; pago pendiente de Kael",
   "last_confirmed_action": "2026-10-09: STATE v53/BOOT v12 version-hash match verified. BOOT metadata corrected and read back; MEMORY header aligned to active EXP-RESALE-001 and read back; append-only reconciliation events recorded. LIVE and MASTER_BACKUP were refreshed/read back. Full persistence health remains unverified because STATE checkpoint status is WRITE_PENDING_READBACK; final cross-artifact audit remains open.",
@@ -40,6 +56,6 @@
   "state_blob_sha": "72072c1fa3beba3fa2ef31a6b6bdfeb3278565a3",
   "note": "BOOT status reflects the latest observed partial reconciliation; MEMORY header no longer foregrounds paused EXP-001B. Canonical STATE v53 remains unchanged; no business spending or action occurred.",
   "updated_at": "2026-10-09",
-  "sync_status": "PARTIAL_RECONCILIATION",
-  "next_action": "Perform one final readback of all continuity artifacts. Keep the canonical checkpoint open unless an explicit sequential STATE update is justified by the evidence."
+  "sync_status": "RECONCILIATION_IN_PROGRESS",
+  "next_action": "Reconcile derived persistence artifacts sequentially and verify readback; then continue zero-cost sourcing and resale unit-economics research. No spending or external contact."
 }
