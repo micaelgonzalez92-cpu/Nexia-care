@@ -194,3 +194,15 @@ A zero-cost research note was appended to NEXIA_MEMORY.md and read back.
 - MASTER_BACKUP before this addendum: `441bc725a15fa2a41177a7c6c87f9b7c333d14e8`.
 
 Research compares Vintage4Originals, SP Vintage Wholesale, Atemporal Vintage and a secondary-source lead for EuropeWholesales; separates asking-price signals from completed sales; records €6.13 landed unit cost assumption and hypothetical spreads of €1.87 at €8 / €3.87 at €10 before other costs. Findings are RESEARCHED / NOT VALIDATED. No purchase, contact or spend is authorized or claimed. The €61.30 checkout remains pending Kael payment.
+
+## 51. CANONICAL MISSION RECONCILIATION — 2026-10-10
+
+This checkpoint records the observed artifacts before writing this backup addendum. It is not a self-referential hash of the resulting MASTER_BACKUP blob.
+- Canonical STATE: v57, blob SHA `fc3bd084d41e4d2d2a7fc6c726fa7942bee7105b`; mission `MISSION-OPPORTUNITY-ENGINE-001`; next action is zero-cost comparison/falsification of at least three opportunities.
+- BOOT: v15, blob SHA `6e8879c35725f087383375358e63fbdf4960a75f`; state version/hash fields match canonical STATE v57.
+- LIVE: blob SHA `8974d3203096707155d5a1afbb40fcc120d46abc`; status `ACTIVE / RADAR — SYNC PENDING`; opportunity-comparison cycle read back.
+- MEMORY: blob SHA `8d7b273b7f1ee43536890fe18ba295db4c6aef03`; historical resale and NEXIA Care research preserved, not promoted to current mission.
+- EVENT_LOG before this backup update: blob SHA `8f8db59420129e00bf982b20f7880674baf22831`; latest appended event `EVT-2026-10-10-OPPORTUNITY-MISSION-RECONCILIATION-001`.
+- Previous MASTER_BACKUP blob SHA: `30951cb61faee8d4eddefff62d7297bb67c1f381`.
+
+Canonical STATE v57 corrected stale next-action and legacy resale-primary metadata; resale is preserved as paused/non-primary. No purchase, external contact, account connection, publication, revenue or profit is claimed. STATE/BOOT/LIVE/EVENT_LOG have been read back; this backup addendum must also be read back before the checkpoint is considered recorded. Full artifact hash closure remains subject to final audit; no claim of self-referential hash equality is made.
