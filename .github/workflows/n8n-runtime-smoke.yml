@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/n8n-runtime-smoke.yml'
       - 'prototypes/n8n-huescaventura-intake-demo.json'
+      - 'prototypes/n8n-huescaventura-runtime-fixture.json'
 
 permissions:
   contents: read
@@ -48,3 +49,16 @@ jobs:
           assert.equal(workflows[0].name, 'NEXIA EXP-AUTO-001 Huescaventura Intake Demo');
           console.log('PASS: exactly one expected workflow exported');
           NODE
+
+      - name: Execute EXP-AUTO-001 logic inside real n8n runtime
+        env:
+          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-exec-user
+          N8N_EXEC_OUTPUT: ${{ runner.temp }}/n8n-exec-output.json
+        run: |
+          mkdir -p "$N8N_USER_FOLDER"
+          npx --yes n8n@2.42.6 import:workflow --input=prototypes/n8n-huescaventura-runtime-fixture.json
+          npx --yes n8n@2.42.6 execute --id=nexia-exp-auto-001-runtime-fixture --rawOutput | tee "$N8N_EXEC_OUTPUT"
+          grep -Eq '"pass"[[:space:]]*:[[:space:]]*true' "$N8N_EXEC_OUTPUT"
+          grep -Eq '"cases"[[:space:]]*:[[:space:]]*6' "$N8N_EXEC_OUTPUT"
+          grep -Eq '"runtime"[[:space:]]*:[[:space:]]*"n8n-code-node"' "$N8N_EXEC_OUTPUT"
+          echo 'PASS: EXP-AUTO-001 logic executed inside n8n runtime with 6 asserted synthetic cases'
