@@ -1,5 +1,5 @@
 {
-  "version": 59,
+  "version": 60,
   "updated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables; ningún vehículo comercial queda preseleccionado.",
@@ -209,7 +209,7 @@
       "master_backup_must_declare_state_version": true
     },
     "last_resilience_action": "2026-10-11: recovered canonical repository artifacts via GitHub connector; confirmed STATE v58 and BOOT v16 hash alignment; identified stale/incomplete derived-artifact reconciliation and a Floot daily quota block. No spend or external action.",
-    "next_resilience_action": "Complete sequential STATE -> BOOT -> LIVE -> EVENT_LOG -> MEMORY -> MASTER_BACKUP readback. Then resume synthetic-only SME intake test via an unmetered local/browser path if available; do not claim runtime validation before execution."
+    "next_resilience_action": "Repository continuity checkpoint verified through GitHub. Continue reducing runtime dependencies separately: locate a genuinely free browser/local test path, then evaluate independent worker/control-plane options without spend or external commitments."
   },
   "automation_inventory": {
     "active": 3,
@@ -217,7 +217,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Reconcile derived persistence artifacts to STATE v59 and verify all hashes. Then continue the predeclared synthetic-only SME intake demo test using a genuinely free browser/local execution route; preserve the 20% median time-reduction gate and zero-critical-failure gate. Do not contact prospects or use real customer data.",
+  "next_useful_action": "With persistence recovery verified, continue the predeclared synthetic-only SME intake demo test using a genuinely free browser/local execution route. Preserve gates: zero critical failures and at least 20% median end-to-end time reduction including review/corrections. If execution is blocked, document the exact missing capability and continue free opportunity research. No customer data, contact, publication, account connection or spend without explicit approval.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -230,13 +230,13 @@
   },
   "persistence_checkpoint": {
     "checkpoint_id": "CP-2026-10-11-RESILIENCE-RECOVERY-001",
-    "previous_state_version": 58,
-    "current_state_version": 59,
-    "status": "STATE_WRITTEN_DERIVED_ARTIFACTS_PENDING_READBACK",
+    "previous_state_version": 59,
+    "current_state_version": 60,
+    "status": "RECOVERY_RECORDED; DERIVED_ARTIFACTS_READBACK_VERIFIED_FOR_V59; FINAL_SYNC_RECORDED_IN_EVENT_LOG",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
-    "previous_state_blob_sha": "1aaa6cc50782a47072db1ed453d018d4163c6dd5",
-    "note": "This checkpoint records a recovery audit in the current ChatGPT session. Canonical STATE was read before write. Derived BOOT/LIVE/EVENT_LOG/MEMORY/MASTER_BACKUP must be reconciled sequentially and read back before full sync may be claimed. Floot file operations were refused by daily quota at last check; GitHub connector remains usable. No spend, external contact, publication, account connection, customer data, revenue or profit."
+    "previous_state_blob_sha": "1f9fcdaa27412445c2aaedc48b7a26f8cd4d15d1",
+    "note": "STATE v59, BOOT v17, LIVE, MEMORY, EVENT_LOG and MASTER_BACKUP were fetched and read back; all consistency checks passed for the v59 checkpoint. This v60 update records that verified result and the remaining runtime limitations. Derived artifacts must now be advanced to point to v60 and read back once more. This does not imply independent 24/7 execution, connected telemetry/notifications, or commercial validation."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
