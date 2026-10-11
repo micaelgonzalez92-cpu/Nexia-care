@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "boot_version": 23,
+  "boot_version": 24,
   "generated_at": "2026-10-11T11:49:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
@@ -19,23 +19,20 @@
   "opportunity_selection_gate": "NEXIA_OPPORTUNITY_SELECTION_GATE_2026-10-11.md",
   "next_experiment_validation_pack": "NEXIA_EXP_AUTO_001_VALIDATION_PACK.md",
   "channel_legal_gate": "NEXIA_EXP_AUTO_001_CHANNEL_LEGAL_GATE.md",
+  "capability_demo_report": "NEXIA_EXP_AUTO_001_CAPABILITY_DEMO_2026-10-11.md",
+  "capability_demo_code": "prototypes/lead-intake-reliability-demo.js",
+  "capability_demo_tests": "prototypes/test-lead-intake-reliability-demo.js",
   "last_verified_state_version": 61,
   "last_verified_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
   "active_experiment": {
     "id": "EXP-OPPORTUNITY-001",
     "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
-    "status": "SELECTION_GATE_COMPLETED_NEXT_EXPERIMENT_DESIGNED_NOT_ACTIVATED_EXTERNALLY",
+    "status": "SELECTION_GATE_COMPLETED_NEXT_EXPERIMENT_DESIGNED_CAPABILITY_DEMO_TESTED_MARKETPLACE_CHANNEL_NOT_YET_QUALIFIED",
     "cost_eur": 0,
     "primary_metric": "Valor esperado de beneficio neto sostenible, ajustado por evidencia, tiempo hasta validación, coste de aprendizaje, repetibilidad y riesgo",
     "participants": 0,
     "target_participants": 3,
-    "success_criteria": [
-      "Evaluar al menos 3 oportunidades con una matriz común y evidencia trazable",
-      "Falsar activamente la hipótesis principal de cada oportunidad",
-      "Seleccionar como máximo 1 oportunidad para el siguiente experimento",
-      "Definir antes de experimentar coste máximo, métrica, umbral de éxito y fracaso"
-    ],
     "constraints": "Solo investigación y preparación gratuitas; sin compras, cuentas, contactos externos, publicaciones ni compromisos sin autorización específica."
   },
   "mission": {
@@ -45,38 +42,38 @@
     "cost_eur": 0,
     "human_action_required": false,
     "status": "ACTIVE",
-    "reason": "El radar comparativo ha seleccionado una sola candidata para el siguiente experimento, pero no existe validación comercial propia todavía."
+    "reason": "Lead-intake reliability automation remains the selected candidate for validation, but current buyer-initiated marketplace samples do not yet satisfy both truthful-experience and unit-economics gates."
   },
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "status": "DESIGNED_NOT_EXTERNALLY_ACTIVATED",
+    "status": "DESIGNED_CAPABILITY_DEMO_TESTED_NOT_EXTERNALLY_ACTIVATED",
     "offer_hypothesis_eur": 249,
     "scope": "One inbound lead source -> one Sheet/CRM destination -> validation/deduplication -> internal notification -> safe acknowledgement step -> failure visibility -> testing -> handover",
-    "selection_reason": "Recent public buyer briefs show repeated lead/CRM automation demand and materially higher budgets than generic Shopify listing work; the route remains unvalidated for Nexia and competition is strong.",
-    "human_gate": "External proposals/outreach, account connection, publication and spend require explicit Kael authorization."
+    "capability_demo": {
+      "runtime": "Node.js v22.16.0",
+      "first_run": "7/8 PASS; phone-country equivalence assumption failed safely during test",
+      "repair": "Phone local/international equivalence requires explicit defaultCountryCode; no implicit country guess",
+      "final_run": "9/9 PASS",
+      "external_integrations": "NONE",
+      "client_production_experience_claimed": false
+    }
   },
   "channel_policy": {
     "spain_unsolicited_commercial_email": "NO_GO",
-    "reason": "LSSI Article 21 prohibits unsolicited promotional email/equivalent communications unless requested/expressly authorized, subject to the statutory prior-contract exception.",
     "preferred_first_channel": "Buyer-initiated public briefs/RFPs or inbound/opt-in requests",
     "first_batch_max": 5,
-    "spend_authorized_eur": 0
+    "spend_authorized_eur": 0,
+    "current_marketplace_gate_result": "0 current sampled opportunities satisfy all price/scope/truthfulness gates"
   },
-  "human_gate": "No purchase, external contact, proposal submission, account connection, commercial publication, paid listing, paid credits or metered browser execution without explicit approval. Unsolicited Spanish cold commercial email is additionally NO-GO under the experiment's legal gate.",
-  "last_confirmed_action": "2026-10-11: EXP-OPPORTUNITY-001 selected lead-intake reliability automation for the next validation experiment; EXP-AUTO-001 was designed with precommitted economics. A legal/channel review then marked unsolicited Spanish commercial email NO-GO and prioritized buyer-initiated public briefs or inbound/opt-in channels. No outreach or sale occurred.",
-  "post_state_repairs": [
-    "Repaired SME demo/test architecture and legacy routes.",
-    "Added and unit-tested the read-only STATE/BOOT/LIVE integrity checker.",
-    "Completed the opportunity selection gate and prepared EXP-AUTO-001 validation material without external action.",
-    "Added NEXIA_EXP_AUTO_001_CHANNEL_LEGAL_GATE.md after verifying Spain LSSI Article 21 restrictions on unsolicited commercial email."
-  ],
+  "human_gate": "No purchase, external contact, proposal submission, account connection, commercial publication, paid listing, paid credits or metered browser execution without explicit approval. Unsolicited Spanish cold commercial email is NO-GO.",
+  "last_confirmed_action": "2026-10-11: built and locally executed a synthetic lead-intake reliability reference implementation. First suite returned 7/8 and exposed unsafe phone deduplication assumptions; repaired design then passed 9/9. GitHub readback verified persisted code/tests. Current buyer-initiated marketplace re-evaluation found zero sampled opportunities satisfying all economics, bounded-scope and truthful-experience gates. No proposal, client deployment or sale occurred.",
   "integrity_warnings": [
     "NEXIA_STATE.json v61 remains canonical until a later state update is safely written and read back.",
     "NEXIA_MEMORY.md begins with a stale notice naming STATE v58 and contains stale early mission/status text. STATE wins.",
-    "The repaired SME harness has static source/readback verification only; browser runtime execution is not yet verified.",
-    "EXP-AUTO-001 is a designed next experiment recorded after STATE v61; it is not yet the externally activated canonical experiment.",
-    "Public buyer budgets and platform payout claims are market signals, not Nexia willingness-to-pay, revenue or profit evidence."
+    "EXP-AUTO-001 is a designed next experiment recorded after STATE v61; it is not yet externally activated.",
+    "The 9/9 result is synthetic Node.js reference-logic testing, not n8n/Make/GoHighLevel production experience.",
+    "Public buyer budgets are market signals, not Nexia willingness-to-pay, revenue or profit evidence."
   ],
   "capital_spent_eur": 0,
   "revenue_eur": 0,
@@ -85,12 +82,9 @@
   "integrity_rule": "BOOT is an index, not an independent source of business truth. If it disagrees with NEXIA_STATE.json, STATE wins. Post-state checkpoints may be indexed explicitly without pretending STATE was advanced.",
   "recovery_rule": "If STATE is unavailable or invalid, recover from the latest verified repository commit and event log; never treat a stale backup or MEMORY heading as newer than a verified state.",
   "startup_rule": "On every new NEXIA session, inspect BOOT -> STATE -> LIVE -> MEMORY/RECENT EVENTS. Apply integrity warnings and post-state checkpoints before deciding the next safe action.",
-  "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE; includes R6, lifecycle and decision engine",
-  "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; sustainable after-tax net profit is primary score; technical activity does not add points",
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "note": "BOOT v23 points to canonical STATE v61 and indexes the completed selection, validation-pack and channel/legal checkpoints. No own sale has occurred.",
   "updated_at": "2026-10-11",
-  "sync_status": "STATE_V61_CANONICAL_EXP_AUTO_001_DESIGNED_CHANNEL_LEGAL_GATE_ACTIVE_HUMAN_GATE_PENDING",
-  "next_action": "Before any external validation, use buyer-initiated public briefs/RFPs or inbound/opt-in opportunities only. Kael must explicitly authorize a maximum first batch of 5 proposal submissions, the €249 pilot boundary and any required account connection or paid platform action."
+  "sync_status": "STATE_V61_CANONICAL_EXP_AUTO_001_CAPABILITY_DEMO_9_OF_9_MARKETPLACE_GATE_ZERO_QUALIFIED_EXTERNAL_VALIDATION_PENDING",
+  "next_action": "Continue zero-cost falsification by seeking buyer-initiated briefs with >=€249-equivalent economics, bounded inbound-lead scope and no unverifiable production-experience requirement; alternatively increase truthful platform-specific capability using a genuinely free local/open-source runtime before reassessing higher-value briefs."
 }
