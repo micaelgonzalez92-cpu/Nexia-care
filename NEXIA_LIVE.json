@@ -1,16 +1,16 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — /EVOLVE CLOSED; EVENT STORAGE V2 OPERATIONAL; MEMORY DERIVED STALE",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — /EVOLVE CLOSED; CI VERIFIED; EVENT STORAGE V2 OPERATIONAL; MEMORY DERIVED STALE",
   "state_version": 65,
   "state_blob_sha": "5e7b8789ab4f3deaf196bd4c9c446c028db45a4d",
-  "boot_version": 39,
-  "boot_blob_sha": "28a6f5f1556045e20526a7c4b6101f36ef312a7a",
+  "boot_version": 40,
+  "boot_blob_sha": "5fb6d6de23cbb7df9819ddcdce714bb8b7bb200a",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
-    "index_blob_sha": "34e18f6e351e8d75c240dbc6d8fccc508fb550d6",
-    "latest_verified_event_id": "EVT-2026-10-11-EVOLVE-002",
-    "latest_verified_event_blob_sha": "9cfbd2e57f6cf67a80ba72727fed0e56ca81a543",
+    "index_blob_sha": "6691b1e55efb8f20c42904668e75314136c7028e",
+    "latest_verified_event_id": "EVT-2026-10-11-CI-001",
+    "latest_verified_event_blob_sha": "8a6cc25993cd987e827e44aed8128c541e5be27b",
     "legacy_jsonl_mode": "READ_ONLY"
   },
   "active_experiment": {
@@ -43,6 +43,22 @@
     "workana_sensor": "ACTIVE_DAILY_LAST_VERIFIED_RUN_NO_APPROVAL",
     "workana_polling_policy": "DAILY_ONLY"
   },
+  "continuous_integration": {
+    "status": "VERIFIED",
+    "workflow": ".github/workflows/nexia-ci.yml",
+    "verified_run_id": 38149148915,
+    "verified_job_id": 114498718054,
+    "conclusion": "success",
+    "suites": [
+      "Lead intake logic",
+      "Local HTTP integration",
+      "Huescaventura domain logic",
+      "Node-RED structural validation",
+      "n8n skeleton validation",
+      "Integrity checker regression"
+    ],
+    "deployment": "NONE"
+  },
   "human_gate": "No immediate action required. One 300 EUR Huescaventura proposal remains authorized after profile approval is verified and only if zero-spend.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
@@ -54,5 +70,5 @@
     "MEMORY sync blocked by tool safety; canonical STATE overrides it",
     "No willingness-to-pay, contract or settled payment exists"
   ],
-  "next_action": "Continue safe parallel work and daily-only Workana monitoring. Do not bypass blocked MEMORY write. Verify the first completed worker run before calling it operationally proven."
+  "next_action": "Continue safe parallel work and daily-only Workana monitoring. Verify the first completed worker run before calling it operationally proven. Prefer a real free n8n runtime test over more synthetic layers when available."
 }
