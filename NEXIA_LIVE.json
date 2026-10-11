@@ -1,10 +1,10 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / RADAR — WORKANA PROFILE COMPLETE REPORTED; APPROVAL PENDING; HUESCAVENTURA AUTHORIZED NOT SUBMITTED",
-  "current_cycle": "NEXIA Core — EXP-AUTO-001 commercial validation; Workana profile created/completed and awaiting moderation evidence",
-  "current_action": "Kael reports the Workana freelancer profile is fully created. Official Workana guidance confirms proposal submission requires profile approval. Connected Gmail contains onboarding mail but no approval/rejection notification yet, so Huescaventura remains authorized at €300 but cannot be treated as submitted or currently submit-capable.",
-  "last_completed_action": "2026-10-11 13:51 CEST: persisted NEXIA_WORKANA_PROFILE_STATUS_2026-10-11.md; BOOT advanced to v29 while canonical STATE remains v61.",
-  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v29 SHA d275187ceb3650f0481f2aad42b96d89c684ed9b; Workana profile completion reported by Kael; Gmail searched for Workana moderation/approval messages and none was found at this checkpoint; official Workana help says approved profiles can submit proposals and standard moderation is usually 15-30 days.",
+  "status": "ACTIVE / RADAR — WORKANA APPROVAL PENDING; HUESCAVENTURA OPEN; CHANNEL BENCHMARK COMPLETE",
+  "current_cycle": "NEXIA Core — EXP-AUTO-001 commercial validation; waiting for Workana moderation while preserving zero-cost acquisition discipline",
+  "current_action": "Connected Gmail was rechecked and still shows no Workana approval/rejection notification. Huescaventura remains open/evaluating proposals. Alternative public channels were scanned; no superior buyer-initiated brief with better verified scope/price/competition/channel economics was found. Malt competitor rates were captured only as market pricing evidence.",
+  "last_completed_action": "2026-10-11 13:51 CEST: persisted NEXIA_EXP_AUTO_001_CHANNEL_BENCHMARK_2026-10-11_1351.md and advanced BOOT to v30 while canonical STATE remains v61.",
+  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v30 SHA a473024d493189d2949e04a210b9d2360f03adfe; connected Gmail no Workana approval/rejection email at checkpoint; Huescaventura public page open/evaluating proposals; Malt visible n8n/automation daily rates span roughly €140-€400+ depending on profile/experience.",
   "capital_spent_eur": 0,
   "human_gate": "No immediate action required from Kael unless Workana requests a legitimate free profile correction. Paid Priority Moderation, plans, credits and other spend remain unauthorized. Huescaventura proposal at €300 remains authorized once profile approval is verified.",
   "selected_next_candidate": {
@@ -19,7 +19,7 @@
   },
   "qualified_opportunity": {
     "name": "Huescaventura Workana lead-automation first phase",
-    "public_status_last_verified": "OPEN / EVALUATING_PROPOSALS",
+    "public_status_last_verified": "OPEN / EVALUATING PROPOSALS",
     "buyer_budget_eur": "200-300",
     "authorized_proposal_eur": 300,
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
@@ -41,6 +41,11 @@
     "submission_enabled": "NOT_VERIFIED",
     "priority_moderation": "NO_GO_WITHOUT_NEW_EXPLICIT_APPROVAL"
   },
+  "market_benchmark": {
+    "malt_visible_daily_rate_range_eur": "approximately 140-400+",
+    "huescaventura_price_assessment": "€300 fixed remains defensible; not willingness-to-pay proof",
+    "alternative_channel_result": "No superior public buyer-initiated brief found in this scan"
+  },
   "execution_channel": {
     "manual_workana_submission": "PENDING_PROFILE_APPROVAL",
     "workana_connector": "NOT_AVAILABLE",
@@ -50,23 +55,24 @@
   },
   "parallel_work": [
     "STATE v61 remains canonical.",
-    "BOOT v29 indexes Workana profile completion and pending moderation.",
+    "BOOT v30 indexes the channel benchmark and latest moderation check.",
     "No Workana approval/rejection email was found in connected Gmail at this checkpoint.",
-    "Huescaventura remains authorized at €300 but has not been submitted.",
-    "No client message, contract, sale, settled revenue or profit occurred.",
-    "Nexia can continue free buyer-initiated discovery while waiting for profile approval."
+    "Huescaventura remains open and authorized at €300 but not submitted.",
+    "No alternative channel currently provides stronger verified buyer-initiated evidence than Huescaventura.",
+    "No client message, contract, sale, settled revenue or profit occurred."
   ],
-  "next_action": "Wait for verifiable Workana approval evidence while continuing free opportunity discovery. On approval, recheck Huescaventura immediately and submit the already-authorized €300 proposal manually if still open and no spend is required.",
+  "next_action": "Continue selective zero-cost buyer-initiated discovery and check for Workana approval evidence. On approval, immediately recheck Huescaventura and submit the already-authorized €300 proposal manually if still open and no spend is required.",
   "rule": "Sin gasto, sin moderación prioritaria, sin planes de pago, sin ampliar alcance/precio y sin inventar aprobación o envío.",
   "revenue_eur": 0,
   "profit_eur": 0,
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "boot_version": 29,
-  "boot_blob_sha": "d275187ceb3650f0481f2aad42b96d89c684ed9b",
+  "boot_version": 30,
+  "boot_blob_sha": "a473024d493189d2949e04a210b9d2360f03adfe",
   "current_blockers": [
     "Workana profile approval has not yet been verified.",
     "Huescaventura may close before approval; recheck immediately when moderation resolves.",
+    "No superior public buyer-initiated alternative channel was found in this scan.",
     "No zero-cost authenticated Workana connector exists in this session.",
     "NEXIA_MEMORY.md still has stale STATE v58 canonical text.",
     "No real client deployment or own willingness-to-pay evidence exists yet."
