@@ -1,0 +1,91 @@
+{
+  "id": "nexia-exp-auto-001-datatable-dedup",
+  "name": "NEXIA EXP-AUTO-001 Data Table Dedup Proof",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "nexia-exp-auto-001-datatable-dedup",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [0, 0],
+      "id": "dt-webhook-trigger",
+      "name": "Webhook",
+      "webhookId": "nexia-exp-auto-001-datatable-dedup"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const raw = $json.body ?? $json;\nconst clean = v => String(v ?? '').trim().replace(/\\s+/g, ' ');\nconst eventId = clean(raw.event_id);\nconst email = clean(raw.email).toLowerCase();\nconst phoneRaw = clean(raw.phone);\nconst digits = phoneRaw.replace(/\\D/g, '');\nconst phone = phoneRaw ? (phoneRaw.startsWith('+') ? '+' + digits : digits) : '';\nif (!eventId) throw new Error('missing_event_id');\nif (!email && !phone) throw new Error('missing_identity');\nconst identityKey = email ? `email:${email}` : `phone:${phone}`;\nreturn [{json:{eventKey:`event:${eventId}`, identityKey, recordId:`lead:${eventId}`}}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [260, 0],
+      "id": "dt-normalize",
+      "name": "Normalize Keys"
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "rowNotExists",
+        "dataTableId": {"__rl": true, "value": "nexia_exp_auto_001_dedup_proof", "mode": "name"},
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {"keyName": "eventKey", "condition": "eq", "keyValue": "={{ $json.eventKey }}"}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [520, 0],
+      "id": "dt-event-not-exists",
+      "name": "Event Not Seen"
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "rowNotExists",
+        "dataTableId": {"__rl": true, "value": "nexia_exp_auto_001_dedup_proof", "mode": "name"},
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {"keyName": "identityKey", "condition": "eq", "keyValue": "={{ $json.identityKey }}"}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [780, 0],
+      "id": "dt-identity-not-exists",
+      "name": "Identity Not Seen"
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "insert",
+        "dataTableId": {"__rl": true, "value": "nexia_exp_auto_001_dedup_proof", "mode": "name"},
+        "columns": {"mappingMode": "autoMapInputData", "value": null},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [1040, 0],
+      "id": "dt-insert-new",
+      "name": "Insert New Identity"
+    }
+  ],
+  "connections": {
+    "Webhook": {"main": [[{"node": "Normalize Keys", "type": "main", "index": 0}]]},
+    "Normalize Keys": {"main": [[{"node": "Event Not Seen", "type": "main", "index": 0}]]},
+    "Event Not Seen": {"main": [[{"node": "Identity Not Seen", "type": "main", "index": 0}]]},
+    "Identity Not Seen": {"main": [[{"node": "Insert New Identity", "type": "main", "index": 0}]]}
+  },
+  "active": false,
+  "settings": {"executionOrder": "v1"},
+  "pinData": {},
+  "meta": {"nexiaEvidence": "native-data-table-dedup-idempotency-no-external-send"}
+}
