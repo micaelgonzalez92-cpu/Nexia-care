@@ -42,12 +42,13 @@
     "reason": "Kael ha retirado la reventa vintage como misión principal. No se preselecciona un vehículo comercial antes de comparar oportunidades con evidencia, economía unitaria, facilidad de validación, repetibilidad, riesgo y coste de aprendizaje."
   },
   "human_gate": "La compra de 10 camisetas de Vintage4Originals queda suspendida mientras la reventa está en pausa; requiere nueva autorización explícita para reactivarse.",
-  "last_confirmed_action": "2026-10-11: repository code audit repaired the SME demo/test architecture and neutralized broken legacy routes. These repository repairs occurred after canonical STATE v61 and do not create business validation.",
+  "last_confirmed_action": "2026-10-11: repository code audit repaired the SME demo/test architecture and neutralized broken legacy routes. Static GitHub readback completed. These repository repairs occurred after canonical STATE v61 and do not create business validation.",
   "post_state_repairs": [
     "Added prototypes/sme-intake-core.js as the shared deterministic classifier.",
     "Updated SME demo and harness so tests exercise the same input-based classifier instead of case IDs.",
     "Neutralized NexaHQ, hq, NexaCare and care legacy routes instead of redirecting to missing/retired targets.",
-    "Created NEXIA_CODE_AUDIT_2026-10-11.md with findings, limits and verification status."
+    "Created and finalized NEXIA_CODE_AUDIT_2026-10-11.md with findings, limits and verification status.",
+    "Completed GitHub readback of repaired executable/static files and continuity artifacts."
   ],
   "integrity_warnings": [
     "NEXIA_STATE.json v61 remains canonical until a later state update is safely written and read back.",
@@ -67,6 +68,6 @@
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "note": "BOOT v20 points to STATE v61 and explicitly records post-state code repairs. Technical repairs are not willingness-to-pay, revenue or profit evidence.",
   "updated_at": "2026-10-11",
-  "sync_status": "STATE_VERIFIED_POST_STATE_CODE_REPAIRS_PENDING_RECONCILIATION",
-  "next_action": "Finish readback of repaired files; execute the SME harness in a genuinely available zero-cost browser/runtime before claiming runtime PASS results; then reconcile derived state without overwriting canonical evidence."
+  "sync_status": "STATE_VERIFIED_POST_STATE_CODE_REPAIRS_READBACK_COMPLETE",
+  "next_action": "Execute the repaired SME harness in a genuinely available zero-cost browser/runtime before claiming runtime PASS results; then add an automated STATE/BOOT/LIVE integrity check and safely reconcile stale MEMORY metadata when full-file preservation is available."
 }
