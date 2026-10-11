@@ -3,12 +3,18 @@
   "name": "NEXIA EXP-AUTO-001 Data Table Dedup Audit",
   "nodes": [
     {
-      "parameters": {},
-      "type": "n8n-nodes-base.manualTrigger",
-      "typeVersion": 1,
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "nexia-exp-auto-001-datatable-audit",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
       "position": [0, 0],
       "id": "dt-audit-trigger",
-      "name": "Manual Trigger"
+      "name": "Audit Webhook",
+      "webhookId": "nexia-exp-auto-001-datatable-audit"
     },
     {
       "parameters": {
@@ -29,7 +35,7 @@
     {
       "parameters": {
         "mode": "runOnceForAllItems",
-        "jsCode": "const rows = $input.all().map(i => i.json);\nif (rows.length !== 2) throw new Error(`expected_2_rows_got_${rows.length}`);\nconst byEvent = Object.fromEntries(rows.map(r => [r.eventKey, r]));\nconst a = byEvent['event:p1'];\nconst b = byEvent['event:p3'];\nif (!a || !b) throw new Error('expected_event_p1_and_p3');\nif (a.identityKey !== 'email:persist@test.example') throw new Error(`bad_email_identity_${a.identityKey}`);\nif (a.recordId !== 'lead:p1') throw new Error(`bad_record_p1_${a.recordId}`);\nif (b.identityKey !== 'phone:+34600999111') throw new Error(`bad_phone_identity_${b.identityKey}`);\nif (b.recordId !== 'lead:p3') throw new Error(`bad_record_p3_${b.recordId}`);\nreturn [{json:{pass:true, rows:rows.length, events:rows.map(r=>r.eventKey).sort(), identities:rows.map(r=>r.identityKey).sort(), persistence:'n8n-data-table'}}];"
+        "jsCode": "const rows = $input.all().map(i => i.json);\nif (rows.length !== 2) throw new Error(`expected_2_rows_got_${rows.length}`);\nconst byEvent = Object.fromEntries(rows.map(r => [r.eventKey, r]));\nconst a = byEvent['event:p1'];\nconst b = byEvent['event:p3'];\nif (!a || !b) throw new Error('expected_event_p1_and_p3');\nif (a.identityKey !== 'email:persist@test.example') throw new Error(`bad_email_identity_${a.identityKey}`);\nif (a.recordId !== 'lead:p1') throw new Error(`bad_record_p1_${a.recordId}`);\nif (b.identityKey !== 'phone:+34600999111') throw new Error(`bad_phone_identity_${b.identityKey}`);\nif (b.recordId !== 'lead:p3') throw new Error(`bad_record_p3_${b.recordId}`);\nreturn [{json:{pass:true, rows:rows.length, events:rows.map(r=>r.eventKey).sort(), identities:rows.map(r=>r.identityKey).sort(), persistence:'n8n-data-table', autonomous_send:false}}];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -39,11 +45,11 @@
     }
   ],
   "connections": {
-    "Manual Trigger": {"main": [[{"node": "Get Dedup Rows", "type": "main", "index": 0}]]},
+    "Audit Webhook": {"main": [[{"node": "Get Dedup Rows", "type": "main", "index": 0}]]},
     "Get Dedup Rows": {"main": [[{"node": "Assert Dedup Rows", "type": "main", "index": 0}]]}
   },
   "active": false,
   "settings": {"executionOrder": "v1"},
   "pinData": {},
-  "meta": {"nexiaEvidence": "native-data-table-readback-assertion"}
+  "meta": {"nexiaEvidence": "native-data-table-readback-assertion-inside-full-server"}
 }
