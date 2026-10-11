@@ -1,100 +1,66 @@
 {
-  "schema_version": 1,
-  "boot_version": 33,
+  "schema_version": 2,
+  "boot_version": 34,
   "generated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
-  "persistence_connector": "GitHub",
   "canonical_state": "NEXIA_STATE.json",
+  "state_version": 62,
+  "state_blob_sha": "8a51ab4d9a4a25a7bc86c241ce9e18f32d5a78e4",
   "live_state": "NEXIA_LIVE.json",
   "learning_ledger": "NEXIA_MEMORY.md",
+  "commercial_pipeline": "NEXIA_COMMERCIAL_PIPELINE.json",
   "portable_backup": "NEXIA_MASTER_BACKUP.md",
   "event_log": "NEXIA_EVENT_LOG.jsonl",
-  "qualified_candidate_gate": "NEXIA_EXP_AUTO_001_HUESCAVENTURA_CANDIDATE_2026-10-11.md",
-  "workana_profile_checkpoint": "NEXIA_WORKANA_PROFILE_STATUS_2026-10-11.md",
-  "huescaventura_demo_report": "NEXIA_EXP_AUTO_001_HUESCAVENTURA_DEMO_2026-10-11.md",
-  "n8n_import_skeleton_report": "NEXIA_EXP_AUTO_001_N8N_IMPORT_SKELETON_2026-10-11.md",
-  "n8n_import_skeleton": "prototypes/n8n-huescaventura-intake-demo.json",
-  "n8n_import_skeleton_validator": "prototypes/validate_n8n_huescaventura_demo.js",
-  "last_verified_state_version": 61,
-  "last_verified_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
-  "active_experiment": {
-    "id": "EXP-OPPORTUNITY-001",
-    "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
-    "status": "HUESCAVENTURA_AUTHORIZED_PROFILE_APPROVAL_PENDING_N8N_IMPORT_SKELETON_VALIDATED",
-    "cost_eur": 0
-  },
+  "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
+  "continuity_protocol": "NEXIA_CONTINUITY.md",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
   "mission": {
     "id": "MISSION-OPPORTUNITY-ENGINE-001",
-    "name": "Construir y validar un motor repetible que descubra, pruebe y monetice la oportunidad de negocio con mayor potencial de beneficio neto sostenible",
-    "priority": "MAX",
     "status": "ACTIVE"
   },
-  "selected_next_candidate": {
+  "active_experiment": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "status": "HUESCAVENTURA_PROPOSAL_AUTHORIZED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
+    "stage": "VETA",
+    "status": "PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
     "authorized_price_eur": 300,
-    "max_delivery_hours": 4,
-    "capability_evidence": {
-      "generic_function_suite": "9/9 synthetic PASS",
-      "http_integration": "12/12 local HTTP integration PASS",
-      "node_red_flow_structure": "6/6 structural PASS",
-      "huescaventura_domain_demo": "13/13 synthetic PASS",
-      "n8n_import_skeleton_validation": "12/12 local structural+embedded-code PASS",
-      "n8n_runtime_import_execution": "NOT_EXECUTED",
-      "client_production_experience_claimed": false
-    }
+    "max_delivery_hours": 4
   },
-  "qualified_buyer_opportunity": {
-    "name": "Huescaventura — Automatización de respuestas y seguimiento de leads por WhatsApp/email con n8n, Airtable e IA",
+  "primary_opportunity": {
+    "id": "WORKANA-HUESCAVENTURA-001",
     "platform": "Workana",
-    "public_status_reverified": "OPEN / EVALUATING PROPOSALS",
-    "public_budget_eur": "200-300",
+    "public_status": "OPEN / EVALUATING PROPOSALS",
+    "public_status_verified_date": "2026-10-11",
+    "public_status_stale_after_hours": 24,
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
-    "authorized_gross_price_eur": 300,
-    "execution_blocker": "Workana profile approval not yet verified"
+    "workana_profile": "CREATED_COMPLETE_REPORTED_APPROVAL_NOT_VERIFIED"
   },
-  "workana_profile": {
-    "account_status": "CREATED",
-    "profile_completion": "REPORTED_COMPLETE_BY_KAEL",
-    "approval_status": "NOT_VERIFIED_LIKELY_PENDING",
-    "gmail_approval_email_found": false,
-    "priority_moderation": "NOT_AUTHORIZED / DO_NOT_BUY"
+  "commercial_pipeline_stage": "PROPOSAL_AUTHORIZED",
+  "capability_evidence": {
+    "generic_logic_suite": "9/9 PASS",
+    "local_http_integration": "12/12 PASS",
+    "huescaventura_domain_demo": "13/13 PASS",
+    "n8n_import_skeleton": "12/12 STRUCTURAL+CODE PASS",
+    "n8n_runtime": "NOT_EXECUTED"
   },
-  "n8n_import_skeleton": {
-    "status": "DESIGNED_AND_LOCALLY_VALIDATED_NOT_IMPORTED",
-    "workflow_chain": "POST Webhook -> Code -> Respond to Webhook",
-    "final_validator_result": "12/12 PASS",
-    "credentials_embedded": false,
-    "outbound_send_nodes": false,
-    "active_by_default": false,
-    "persistent_deduplication": "NOT_IMPLEMENTED_WITHOUT_CLIENT_STORE",
-    "client_work_claimed": false
+  "automation_architecture": {
+    "active": 3,
+    "paused": 6,
+    "roles": [
+      "NEXIA Control Tower — daily",
+      "Nexia Parallel Work — every 4 hours",
+      "Workana Response Watch — daily"
+    ],
+    "memory_review_merged_into_control_tower": true,
+    "old_multiview_radar_disabled": true,
+    "workana_checked_only_by_daily_sensor": true
   },
-  "channel_policy": {
-    "spain_unsolicited_commercial_email": "NO_GO",
-    "spend_authorized_eur": 0,
-    "workana_submission_authorized": true,
-    "workana_submission_executed": false,
-    "manual_zero_cost_submission": "AVAILABLE_ONLY_AFTER_WORKANA_PROFILE_APPROVAL"
-  },
-  "human_gate": "Huescaventura submission at €300 remains authorized. No paid moderation, plans, credits, account upgrades or spend are authorized.",
-  "last_confirmed_action": "2026-10-11: Gmail rechecked with no Workana approval/rejection email; Huescaventura remained open/evaluating proposals. A credential-free n8n import skeleton for the Huescaventura lead flow was created and locally validated with 12/12 structural and embedded-Code checks. It has NOT been imported or executed in a real n8n instance. No proposal, client contact or spend occurred.",
-  "integrity_warnings": [
-    "NEXIA_STATE.json v61 remains canonical.",
-    "Workana profile completion is user-reported; approval is not independently verified.",
-    "n8n import skeleton validation is not n8n runtime execution.",
-    "Persistent deduplication/idempotency still requires Airtable/Sheet/DB in the client environment.",
-    "Huescaventura submission is AUTHORIZED but NOT EXECUTED.",
-    "Do not claim client contact, proposal submission, acceptance, revenue or contract until verified."
-  ],
+  "human_gate": "No immediate Kael action. One Huescaventura proposal at 300 EUR is already authorized after Workana approval is verified; no paid moderation/plans/credits or other external contact is authorized.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "state_version": 61,
-  "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "sync_status": "STATE_V61_CANONICAL_WORKANA_APPROVAL_PENDING_HUESCAVENTURA_N8N_SKELETON_12_OF_12_PASS",
-  "next_action": "Continue checking for verifiable Workana approval. On approval, immediately recheck Huescaventura and submit the already-authorized €300 proposal if still open. If buyer engages, import/test the skeleton in their n8n before adding persistent storage or notifications."
+  "last_confirmed_action": "2026-10-11 /evolve: automation architecture consolidated from five active tasks to three; commercial pipeline ledger created; canonical STATE advanced from v61 to v62 with EXP-AUTO-001 as the active monetization experiment. No spend, proposal submission, buyer contact, sale or payment occurred.",
+  "sync_status": "STATE_V62_CANONICAL_DERIVED_SYNC_IN_PROGRESS",
+  "next_action": "Complete derived-artifact readback. Then continue safe parallel work while the dedicated daily Workana sensor waits for moderation. On approval, recheck Huescaventura and submit the already-authorized proposal if still open and zero-spend."
 }
