@@ -3,22 +3,31 @@
   "status": "ACTIVE / RADAR — MANUAL TEST PROTOCOL PREPARED; BROWSER EXECUTION AND DEMAND UNVALIDATED",
   "current_cycle": "NEXIA Core — opportunity radar and synthetic SME intake harness",
   "current_action": "Built a first comparable opportunity matrix from public evidence: (A) SaaS demo videos have published briefs from $10–$400 and premium specialist offers but strong proposal competition/portfolio barriers; (B) beauty UGC has a Spain-specific €50–€150 public brief with creator/profile constraints; (C) local restaurant UGC has commercial platform/guide presence but no verified Nexia buyer; (D) SME AI/workflow automation has macro adoption signals (Banco de España EBAE: nearly 20% of surveyed firms use AI, mostly experimentally; task automation remains limited) but no willingness-to-pay evidence for our prototype. All four remain unvalidated for Nexia. Additional falsification signal: an Upwork productized-service page for lead-intake/CRM-pipeline automation lists tiers at $95, $175 and $325, with the $95 tier covering a simple form-to-CRM connection and 2-day delivery. This is a seller's advertised offer and pricing anchor, not proof of completed purchases, buyer conversion, or Nexia's ability to deliver. Unit-economics sensitivity model added: at hypothetical €89 with 2h delivery + 1h acquisition and €5 tools, contribution is €39/order and simplified after-tax estimate €29.25; at €149 with 3h delivery + 1h acquisition, €84 contribution and €63 after-tax; at €249 with 5h delivery + 1h acquisition, €154 contribution and €115.50 after-tax. Assumptions: labor €15/hour, tax proxy 25% applied to positive contribution, price treated as net of VAT. Excludes fixed overhead, actual taxes, refunds, failed delivery, support beyond assumed hours, and variation in acquisition. To reach €1,000/month on these assumptions would require 35, 16 or 9 orders respectively. These are scenario calculations only, not forecasts.",
-  "last_completed_action": "2026-10-11: reloaded canonical STATE v58, BOOT v16, LIVE, MEMORY, MASTER_BACKUP, COMMANDS, persistence protocol, harness, demo and static audit. Capability check found no direct free browser execution route for this standalone HTML among exposed tools: Floot browser execution only operates inside a running Floot app preview; TinyFish browser automation is metered and was not used. Added NEXIA_SME_INTAKE_MANUAL_TEST_PROTOCOL_2026-10-11.md with reproducible local test steps, data capture, predefined gates and sensitivity analysis. At the hypothetical €149 offer, simplified after-tax contribution falls from €63/order at 4 total hours to €51.75 at 5h, €40.50 at 6h and €18 at 8h; orders needed for €1,000/month rise from 16 to 20, 25 and 56. These remain assumptions, not observed economics.",
-  "evidence": "Canonical STATE v58 SHA 1aaa6cc50782a47072db1ed453d018d4163c6dd5; BOOT v16 SHA d21bc045bd582a7a7eeed42b61d3ce2f8d36ea47; previous LIVE SHA 58cea1fb1b37eb5052ad975150a86aaf4012ddfb. Harness prototypes/sme-intake-test-harness.html SHA d57db26bd78fe1044904165ef893e5d17c2482bc; demo prototypes/sme-intake-demo.html SHA 1ee3ff93e7fb9760d36eafa248e974be1e5f56c1; static audit NEXIA_SME_DEMO_STATIC_AUDIT_2026-10-11.md SHA 464dffafb8e51458ae32c1ff7e5602434c037f04. New manual protocol NEXIA_SME_INTAKE_MANUAL_TEST_PROTOCOL_2026-10-11.md created in commit b24e17ca0b3347c4ccdf564cf3da32494a4d67d6. No browser execution, timings, customer test, demand, sales, revenue or profit validated. Tool capability check: Floot run_code_in_browser is tied to a running Floot app preview, not a standalone repository HTML; TinyFish browser automation is metered and was not invoked. Economic assumptions remain €15/hour labor, €5/order variable tools, 25% simplified tax proxy, price net of VAT; excludes overhead, refunds and actual tax.",
+  "last_completed_action": "2026-10-11: recovered canonical state through GitHub; wrote and read back STATE v59 and BOOT v17 with matching state SHA. Recorded the prior chat's hypothetical SME offer comparison as estimates only. Floot project-file calls are currently blocked by a daily action quota; no spend, publication, external contact, sales, revenue, or profit.",
+  "evidence": "STATE v59 blob SHA 1f9fcdaa27412445c2aaedc48b7a26f8cd4d15d1 read back; BOOT v17 blob SHA 8f94ee1621833844aac8f0ba5ce263e742df56d2 read back with matching STATE version/hash. Other derived artifacts remain pending.",
   "capital_spent_eur": 0,
   "human_gate": "No purchase, external contact, account connection, publication, paid listing or paid credits without explicit approval.",
   "parallel_work": [
-    "Compare five candidates with the same evidence and economic gates; no commercial winner selected",
-    "Use the €89/€149/€249 sensitivity model only as a planning estimate, not as validated market pricing",
-    "Next falsification gate: reduce and measure delivery + acquisition hours, include review/support, and verify zero critical failures on synthetic cases before any customer-facing test",
-    "Investigate a genuinely free route to run the static HTML in a browser; do not use metered automation or claim a browser test occurred",
-    "No purchases, external contact, publication, account connection or paid credits without explicit authorization"
+    "Canonical STATE v59 written and read back.",
+    "BOOT v17 updated and read back; STATE version/hash match verified.",
+    "Complete LIVE/EVENT_LOG/MEMORY/MASTER_BACKUP reconciliation in sequence with readback.",
+    "Continue synthetic-only SME intake validation only via a genuinely free and available runtime; do not claim browser execution before evidence.",
+    "No purchases, external contacts, publication, account connection or real customer data without explicit approval."
   ],
-  "next_action": "Run the manual protocol when a human can open the standalone HTML locally; record environment and measurements, preserving the predeclared gates. Meanwhile continue free analysis of service delivery scope and disconfirming evidence. Do not claim the harness passed until executed; do not seek customer data, publish or contact prospects without Kael's explicit authorization.",
+  "next_action": "Reconcile remaining derived artifacts and verify their readbacks. Then find/execute a zero-cost local/browser route for the synthetic-only SME intake test; retain predefined gates of zero critical failures and at least 20% median end-to-end time reduction. If blocked, document the exact missing capability and continue other safe research.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
   "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; economic-outcome-first scoring",
   "revenue_eur": 0,
-  "profit_eur": 0
+  "profit_eur": 0,
+  "state_version": 59,
+  "state_blob_sha": "1f9fcdaa27412445c2aaedc48b7a26f8cd4d15d1",
+  "boot_version": 17,
+  "boot_blob_sha": "8f94ee1621833844aac8f0ba5ce263e742df56d2",
+  "current_blockers": [
+    "Floot project file operations refused by daily quota at last check; do not upgrade or purchase credits without explicit approval.",
+    "No verified free browser execution route has yet been run for the standalone SME intake harness.",
+    "No external participant acquisition route is connected/authorized; no commercial demand or unit economics validated."
+  ]
 }
