@@ -1,0 +1,41 @@
+name: n8n Runtime Smoke
+
+on:
+  push:
+    paths:
+      - '.github/workflows/n8n-runtime-smoke.yml'
+      - 'prototypes/n8n-huescaventura-intake-demo.json'
+
+permissions:
+  contents: read
+
+jobs:
+  n8n-runtime-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Show n8n version
+        run: npx --yes n8n@latest --version
+
+      - name: Import workflow into ephemeral n8n database
+        env:
+          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-user
+        run: |
+          mkdir -p "$N8N_USER_FOLDER"
+          npx --yes n8n@latest import:workflow --input=prototypes/n8n-huescaventura-intake-demo.json
+
+      - name: Export imported workflow from n8n
+        env:
+          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-user
+        run: |
+          npx --yes n8n@latest export:workflow --all --output=${{ runner.temp }}/n8n-export.json
+          test -s ${{ runner.temp }}/n8n-export.json
+          grep -q 'NEXIA EXP-AUTO-001 Huescaventura Intake Demo' ${{ runner.temp }}/n8n-export.json
