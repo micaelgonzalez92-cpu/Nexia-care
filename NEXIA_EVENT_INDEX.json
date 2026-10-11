@@ -8,8 +8,8 @@
     "boundary_blob_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
   "event_directory": "events/",
-  "latest_event_id": "EVT-2026-10-12-ACQ-001",
-  "latest_event_path": "events/EVT-2026-10-12-ACQ-001.json",
+  "latest_event_id": "EVT-2026-10-12-MOD-001",
+  "latest_event_path": "events/EVT-2026-10-12-MOD-001.json",
   "events": [
     {
       "event_id": "EVT-2026-10-11-EVOLVE-001",
@@ -50,6 +50,14 @@
       "state_version": 67,
       "path": "events/EVT-2026-10-12-ACQ-001.json",
       "verified_blob_sha": "29ef6baca8e0697197d1ad40dfe206ac72862516"
+    },
+    {
+      "event_id": "EVT-2026-10-12-MOD-001",
+      "timestamp": "2026-10-12T01:55:00+02:00",
+      "type": "WORKANA_PRIORITY_MODERATION_DECISION_READY",
+      "state_version": 67,
+      "path": "events/EVT-2026-10-12-MOD-001.json",
+      "verified_blob_sha": "589e320716a7bb29b28a9ad09450b63c1b942a0e"
     }
   ],
   "rule": "Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated."
