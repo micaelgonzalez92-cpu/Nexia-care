@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-11",
+  "updated_at": "2026-10-12",
   "event_storage_mode": "IMMUTABLE_EVENT_FILES_V2",
   "legacy_jsonl": {
     "path": "NEXIA_EVENT_LOG.jsonl",
@@ -8,8 +8,8 @@
     "boundary_blob_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
   "event_directory": "events/",
-  "latest_event_id": "EVT-2026-10-11-CI-001",
-  "latest_event_path": "events/EVT-2026-10-11-CI-001.json",
+  "latest_event_id": "EVT-2026-10-12-N8N-001",
+  "latest_event_path": "events/EVT-2026-10-12-N8N-001.json",
   "events": [
     {
       "event_id": "EVT-2026-10-11-EVOLVE-001",
@@ -34,6 +34,14 @@
       "state_version": 65,
       "path": "events/EVT-2026-10-11-CI-001.json",
       "verified_blob_sha": "8a6cc25993cd987e827e44aed8128c541e5be27b"
+    },
+    {
+      "event_id": "EVT-2026-10-12-N8N-001",
+      "timestamp": "2026-10-11T22:35:06Z",
+      "type": "CAPABILITY_VERIFICATION",
+      "state_version": 66,
+      "path": "events/EVT-2026-10-12-N8N-001.json",
+      "verified_blob_sha": "69e4754ce3f7a1afbb83433ec08e21a1b6046219"
     }
   ],
   "rule": "Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated."
