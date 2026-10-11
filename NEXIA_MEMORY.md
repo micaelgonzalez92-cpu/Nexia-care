@@ -401,3 +401,12 @@ Created and read back `prototypes/sme-intake-demo.html`, a static local demo wit
 - Runtime limitations remain: Floot daily quota blocked at last check; telemetry and notifications not connected; independent 24/7 worker/stop control not deployed or verified; no browser execution or commercial validation of the SME intake prototype.
 - No spend, external contact, account connection, publication, real customer data, sales, revenue or profit. Financial impact €0.
 - Next: finish event log and portable backup updates for STATE v60 and perform a final fresh readback. Then continue free synthetic-only testing via a genuinely available local/browser path.
+
+
+## Zero-cost public opportunity research — 2026-10-11 (STATE v61)
+- Reviewed public sources for three candidate categories without contacting anyone or spending money.
+- SME workflow/AI automation: OECD's 2025 Spain survey describes lower advanced digital adoption among SMEs; Banco de España reported almost 20% of surveyed firms using AI, mostly experimentally, and limited task-automation use; INE reported 13.4% AI use among connected firms with fewer than 10 employees in Q1 2025. This is a macro opportunity signal, not proof of willingness to pay for Nexia.
+- Ecommerce listing/SEO: a Valencia-area provider advertises ecommerce SEO from €350/month excluding VAT. This is a seller's advertised price for broader scope, not proof of completed transactions or a comparable price for Nexia's 10-listing offer.
+- Short-form video: this batch did not retrieve enough comparable buyer-side evidence; keep it unranked.
+- Sources: https://www.oecd.org/en/publications/oecd-economic-surveys-spain-2025_abc5c435-en/full-report/fostering-productivity-growth-in-small-and-medium-sized-enterprises_039acae9.html ; https://www.bde.es/wbe/en/publicaciones/analisis-economico-investigacion/boletin-economico/2025t2-articulo-06-la-adopcion-de-la-inteligencia-artificial-en-las-empresas-espanolas-un-primer-analisis-basado-en-la-ebae.html ; https://www.ine.es/dyngs/Prensa/ETICCE20241T2025.htm ; https://webplusvalencia.es/tiendas-online/seo-ecommerce/.
+- Decision: no commercial opportunity selected; continue €0 synthetic-only demo validation if a genuinely free local/browser route is available. No browser test, buyer interview, sale, revenue or profit is claimed. Spend €0.
