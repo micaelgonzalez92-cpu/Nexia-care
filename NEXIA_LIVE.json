@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-10T20:00:00+02:00",
-  "status": "ACTIVE / RADAR — PROTOTYPE BUILT; VALIDATION PENDING",
+  "updated_at": "2026-10-11",
+  "status": "ACTIVE / RADAR — PROTOTYPE BUILT; VALIDATION PENDING; PERSISTENCE RECONCILED",
   "current_cycle": "NEXIA Core — opportunity comparison and prototype measurement",
   "current_action": "Static SME intake demo created and read back using synthetic examples. It uses local rules, is not a live AI integration, and has no external connections.",
-  "last_completed_action": "2026-10-10: STATE v58 and BOOT v16 read back; opportunity radar and synthetic-data demo created.",
-  "evidence": "STATE 1aaa6cc50782a47072db1ed453d018d4163c6dd5; BOOT d21bc045bd582a7a7eeed42b61d3ce2f8d36ea47; MEMORY 8eba1a058fec5e9c813f554c96420f0ff157d93e; prototype 1ee3ff93e7fb9760d36eafa248e974be1e5f56c1. State/boot match; final event/backup checkpoint pending.",
+  "last_completed_action": "2026-10-11: reconciled MEMORY current experiment status to canonical STATE v58; memory update read back.",
+  "evidence": "STATE 1aaa6cc50782a47072db1ed453d018d4163c6dd5; BOOT d21bc045bd582a7a7eeed42b61d3ce2f8d36ea47; MEMORY 19458630fe3160c586a4cf2e7e23c6104bf26435; prototype 1ee3ff93e7fb9760d36eafa248e974be1e5f56c1. STATE/BOOT version and hash match; MEMORY current experiment section reconciled to STATE v58. Event log and backup checkpoint are being updated/read back.",
   "capital_spent_eur": 0,
   "human_gate": "No purchase, external contact, account connection, publication, paid listing or paid credits without explicit approval.",
   "parallel_work": [
@@ -12,7 +12,7 @@
     "Quantify delivery time, measurable value and maintenance cost",
     "Core persistence, recovery and integrity maintenance"
   ],
-  "next_action": "Measure the local synthetic-data intake demo using a worksheet for manual time, assisted time, classification errors, correction time and outcome metrics.",
+  "next_action": "Complete the persistence checkpoint readback, then run the synthetic SME demo measurement plan without real customer data or external contact.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
