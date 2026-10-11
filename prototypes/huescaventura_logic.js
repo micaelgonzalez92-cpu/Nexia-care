@@ -24,6 +24,10 @@ function normalizeEmail(v){ return clean(v).toLowerCase(); }
 
 function classify(raw={}){
   const text = [raw.group_type, raw.message, raw.activities, raw.lodging].map(clean).join(' ').toLowerCase();
+  if ([raw.group_type, raw.message, raw.activities, raw.lodging].some(value => /\b(?:sin(?:\s+necesidad\s+de)?|no\s+(?:queremos|necesitamos))\s+(?:alojamiento|hotel|hostal|casa rural)(?:\s+|[,;:]\s*)\S/.test(clean(value).toLowerCase()))) return 'revision';
+  const withoutLodgingText = text.replace(/\b(?:sin(?:\s+necesidad\s+de)?|no\s+(?:queremos|necesitamos))\s+(?:alojamiento|hotel|hostal|casa rural)\b/g, ' ');
+  const withoutLodging = withoutLodgingText !== text;
+  if (withoutLodging && /\b(?:alojamiento|hotel|hostal|casa rural)\b/.test(withoutLodgingText)) return 'revision';
   const rules = [
     ['despedida', /despedid/],
     ['empresa', /empresa|team\s?building|corporativ/],
@@ -33,7 +37,7 @@ function classify(raw={}){
     ['solo_actividad', /solo actividad|actividad suelta|sin alojamiento/],
     ['amigos', /amigos?|grupo/],
   ];
-  for (const [cat, rx] of rules) if (rx.test(text)) return cat;
+  for (const [cat, rx] of rules) if (rx.test(text)) return cat === 'pack_alojamiento' && withoutLodging ? 'solo_actividad' : cat;
   return 'revision';
 }
 

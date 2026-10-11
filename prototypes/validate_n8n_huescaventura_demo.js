@@ -17,4 +17,41 @@ t('ambiguous input requires manual classification',()=>{const r=run({event_id:'x
 t('missing data uses Spanish labels',()=>{const r=run({event_id:'x3',name:'Eva',email:'e@x.com',people:'4',activities:'rafting',message:'familia con niños'})[0].json;assert.ok(r.missing_fields.includes('date'));assert.match(r.reply_draft,/fecha/)});
 t('invalid contact blocked',()=>{const r=run({event_id:'x4',name:'Eva',message:'familia'})[0].json;assert.equal(r.ok,false);assert.deepEqual(Array.from(r.errors),['missing_name_or_contact'])});
 t('explicit persistence limitation is exposed',()=>{const r=run({event_id:'x5',name:'Ana',email:'a@x.com',date:'2026-11-01',people:'8',activities:'rafting',message:'grupo de amigos'})[0].json;assert.match(r.persistence_note,/deduplication\/idempotency persistence/i)});
+const lodgingNegationCases = [
+  ['No queremos hotel, sin desayuno','revision'],
+  ['No queremos alojamiento: sin baño privado','revision'],
+  ['Solo actividad sin alojamiento.','solo_actividad'],
+  // A qualifier changes the scope of the negative; it does not establish no-lodging intent.
+  ['No queremos hotel sin desayuno','revision'],
+  ['No queremos alojamiento sin baño privado','revision'],
+  ['solo actividad sin alojamiento','solo_actividad'],
+  ['Sólo actividad SIN ALOJAMIENTO','solo_actividad'],
+  ['Actividad suelta, sin alojamiento','solo_actividad'],
+  ['Solo actividad; no queremos alojamiento','solo_actividad'],
+  ['Solo actividad; no necesitamos alojamiento','solo_actividad'],
+  ['Solo actividad, sin necesidad de alojamiento','solo_actividad'],
+  ['Solo actividad sin hotel','solo_actividad'],
+  ['Solo actividad sin hostal','solo_actividad'],
+  ['Solo actividad sin casa rural','solo_actividad'],
+  // Conflicting negative and positive lodging intent requires review; do not infer chronology.
+  ['sin alojamiento al principio, ahora queremos pack con alojamiento','revision'],
+  ['queremos pack con alojamiento','pack_alojamiento'],
+  // Preserve existing group categories; resolving group versus lodging dimensions is out of scope.
+  ['familia sin alojamiento','familia'],
+  ['empresa con pack de alojamiento','empresa'],
+  ['consulta especial','revision']
+];
+
+for(const [message,expected] of lodgingNegationCases){
+  t('lodging intent: '+message,()=>{
+    const r=run({event_id:'lodging-negation',name:'Ana',email:'ana@example.com',date:'2026-11-15',people:'8',activities:'rafting',message})[0].json;
+    assert.equal(r.category,expected);
+    assert.equal(r.classification_review_required,expected==='revision');
+    if(expected==='solo_actividad')assert.equal(r.missing_fields.includes('lodging'),false);
+    if(expected==='revision')assert.equal(r.next_step,'manual_classification_review');
+    assert.equal(r.followup.autonomous_send,false);
+    assert.match(r.reply_draft,/no se ha enviado/i);
+  });
+}
+
 let pass=0;for(const [n,f] of tests){try{f();console.log('PASS',n);pass++;}catch(e){console.error('FAIL',n,e.message)}}console.log(`${pass}/${tests.length} checks passed`);process.exitCode=pass===tests.length?0:1;

@@ -11,31 +11,40 @@ permissions:
 
 jobs:
   n8n-runtime-smoke:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4 resolved in run 38151252894
 
-      - name: Set up Node.js 24
-        uses: actions/setup-node@v4
+      - name: Set up Node.js 24.21.0
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4 resolved in run 38151252894
         with:
-          node-version: '24'
+          node-version: '24.21.0'
 
       - name: Show n8n version
-        run: npx --yes n8n@latest --version
+        run: npx --yes n8n@2.42.6 --version
 
       - name: Import workflow into ephemeral n8n database
         env:
           N8N_USER_FOLDER: ${{ runner.temp }}/n8n-user
         run: |
           mkdir -p "$N8N_USER_FOLDER"
-          npx --yes n8n@latest import:workflow --input=prototypes/n8n-huescaventura-intake-demo.json
+          npx --yes n8n@2.42.6 import:workflow --input=prototypes/n8n-huescaventura-intake-demo.json
 
       - name: Export imported workflow from n8n
         env:
           N8N_USER_FOLDER: ${{ runner.temp }}/n8n-user
+          N8N_EXPORT_FILE: ${{ runner.temp }}/n8n-export.json
         run: |
-          npx --yes n8n@latest export:workflow --all --output=${{ runner.temp }}/n8n-export.json
-          test -s ${{ runner.temp }}/n8n-export.json
-          grep -q 'NEXIA EXP-AUTO-001 Huescaventura Intake Demo' ${{ runner.temp }}/n8n-export.json
+          npx --yes n8n@2.42.6 export:workflow --all --output="$N8N_EXPORT_FILE"
+          node <<'NODE'
+          const assert = require('node:assert/strict');
+          const fs = require('node:fs');
+          const workflows = JSON.parse(fs.readFileSync(process.env.N8N_EXPORT_FILE, 'utf8'));
+          assert.ok(Array.isArray(workflows), 'Export must be a JSON array');
+          assert.equal(workflows.length, 1, 'Export must contain exactly one workflow');
+          assert.equal(workflows[0].id, 'nexia-exp-auto-001-huescaventura-demo');
+          assert.equal(workflows[0].name, 'NEXIA EXP-AUTO-001 Huescaventura Intake Demo');
+          console.log('PASS: exactly one expected workflow exported');
+          NODE

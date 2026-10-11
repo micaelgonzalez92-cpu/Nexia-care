@@ -18,5 +18,42 @@ test('same email updates existing',()=>{const s=createStore();processLead(lead()
 test('missing name/contact blocked',()=>{const s=createStore();const r=processLead(lead({name:'',email:'',phone:''}),s);assert.equal(r.status,'validation_failed');assert.equal(Object.keys(s.records).length,0);});
 test('summary exposes missing fields in Spanish',()=>{const s=createStore();const r=processLead(lead({date:'',people:''}),s);assert.ok(r.missing_fields.includes('date'));assert.ok(r.missing_fields.includes('people'));assert.match(r.summary,/fecha/);assert.match(r.reply_draft,/número de personas/);});
 
+const lodgingNegationCases = [
+  ['No queremos hotel, sin desayuno','revision'],
+  ['No queremos alojamiento: sin baño privado','revision'],
+  ['Solo actividad sin alojamiento.','solo_actividad'],
+  // A qualifier changes the scope of the negative; it does not establish no-lodging intent.
+  ['No queremos hotel sin desayuno','revision'],
+  ['No queremos alojamiento sin baño privado','revision'],
+  ['solo actividad sin alojamiento','solo_actividad'],
+  ['Sólo actividad SIN ALOJAMIENTO','solo_actividad'],
+  ['Actividad suelta, sin alojamiento','solo_actividad'],
+  ['Solo actividad; no queremos alojamiento','solo_actividad'],
+  ['Solo actividad; no necesitamos alojamiento','solo_actividad'],
+  ['Solo actividad, sin necesidad de alojamiento','solo_actividad'],
+  ['Solo actividad sin hotel','solo_actividad'],
+  ['Solo actividad sin hostal','solo_actividad'],
+  ['Solo actividad sin casa rural','solo_actividad'],
+  // Conflicting negative and positive lodging intent requires review; do not infer chronology.
+  ['sin alojamiento al principio, ahora queremos pack con alojamiento','revision'],
+  ['queremos pack con alojamiento','pack_alojamiento'],
+  // Preserve existing group categories; resolving group versus lodging dimensions is out of scope.
+  ['familia sin alojamiento','familia'],
+  ['empresa con pack de alojamiento','empresa'],
+  ['consulta especial','revision']
+];
+
+for(const [message,expected] of lodgingNegationCases){
+  test('lodging intent: '+message,()=>{
+    const r=processLead(lead({message,activities:'rafting'}),createStore());
+    assert.equal(r.category,expected);
+    assert.equal(r.classification_review_required,expected==='revision');
+    if(expected==='solo_actividad')assert.equal(r.missing_fields.includes('lodging'),false);
+    if(expected==='revision')assert.equal(r.next_step,'manual_classification_review');
+    assert.equal(r.followup.autonomous_send,false);
+    assert.match(r.reply_draft,/no se ha enviado/i);
+  });
+}
+
 let pass=0; for(const [n,f] of tests){try{f();console.log('PASS',n);pass++;}catch(e){console.error('FAIL',n,e.stack||e)}}
 console.log(`${pass}/${tests.length} tests passed`); process.exitCode=pass===tests.length?0:1;
