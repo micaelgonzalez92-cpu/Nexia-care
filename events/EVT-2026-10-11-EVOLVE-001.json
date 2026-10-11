@@ -1,0 +1,34 @@
+{
+  "event_id": "EVT-2026-10-11-EVOLVE-001",
+  "timestamp": "2026-10-11T16:20:00+02:00",
+  "type": "CORE_EVOLUTION_AND_EVENT_STORAGE_V2_ACTIVATION",
+  "action": "Reconcile canonical Core around EXP-AUTO-001, consolidate automations, create commercial pipeline, compact stale recovery artifacts, and replace unsafe JSONL append dependency with immutable event files.",
+  "state_version": 63,
+  "state_blob_sha": "3b42b908e0e9bf9fb8e047d5f3c0ac52ef0a796f",
+  "previous_state_version": 62,
+  "previous_state_blob_sha": "8a51ab4d9a4a25a7bc86c241ce9e18f32d5a78e4",
+  "evidence": {
+    "commercial_pipeline_blob_sha": "92e53d402bf53987275b6d56e17586847a8907e2",
+    "memory_blob_sha": "624597c7b27582c8a03ef6459b0ad4cbc3fa8a8b",
+    "legacy_event_log_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72",
+    "persistence_protocol_v2_blob_sha": "69f18157e693fb71739fa1230286acdf5134b370",
+    "automation_inventory": "3 active / 6 paused / 1 completed",
+    "disabled_redundant_automations": [
+      "NEXIA Memory Review",
+      "Radar multivía Nexia"
+    ]
+  },
+  "actor": "NEXIA",
+  "financial_impact_eur": 0,
+  "external_buyer_action": "NONE",
+  "human_gate": "No immediate action. One Huescaventura proposal at 300 EUR remains authorized only after Workana profile approval is verified; paid moderation/plans/credits and other external contacts remain unauthorized.",
+  "result": "STATE_V63_WRITTEN; EVENT_STORAGE_V2_ACTIVATED; IMMUTABLE_EVENT_CREATED; DERIVED_SYNC_PENDING",
+  "recovery_ref": "CP-2026-10-11-EVOLVE-001",
+  "truth_limitations": [
+    "No Workana proposal was submitted",
+    "No buyer response or willingness-to-pay evidence exists",
+    "No revenue or profit occurred",
+    "Nexia Parallel Work runtime remains unverified until its first completed run",
+    "n8n runtime and real Airtable integration remain unverified"
+  ]
+}
