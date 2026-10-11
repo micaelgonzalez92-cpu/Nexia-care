@@ -1,0 +1,37 @@
+{
+  "event_id": "EVT-2026-10-11-CI-001",
+  "timestamp": "2026-10-11T16:56:00+02:00",
+  "type": "TECHNICAL_CONTINUOUS_INTEGRATION_ACTIVATED_AND_VERIFIED",
+  "action": "Created .github/workflows/nexia-ci.yml with read-only permissions and verified its first push-triggered GitHub Actions run.",
+  "state_version": 65,
+  "state_change": false,
+  "evidence": {
+    "workflow_path": ".github/workflows/nexia-ci.yml",
+    "workflow_commit_sha": "6f1529675932bc973822bc524f7deaaa7de95f7e",
+    "workflow_run_id": 38149148915,
+    "workflow_run_conclusion": "success",
+    "job_id": 114498718054,
+    "job_name": "technical-integrity",
+    "verified_steps": [
+      "Lead intake logic suite",
+      "Local HTTP integration suite",
+      "Huescaventura domain suite",
+      "Validate Node-RED flow structure",
+      "Validate n8n import skeleton",
+      "Integrity checker regression tests"
+    ]
+  },
+  "capability": "GitHub Actions CI for technical regression checks on prototype/tool changes",
+  "permissions": "contents: read",
+  "deployment": "NONE",
+  "external_buyer_action": "NONE",
+  "financial_impact_eur": 0,
+  "authority_effect": "NONE",
+  "human_gate_effect": "NONE",
+  "result": "VERIFIED",
+  "recovery_reference": "Git history + workflow run 38149148915",
+  "truth_limitations": [
+    "CI success proves these repository test suites passed on GitHub Actions; it does not prove production deployment, buyer acceptance, n8n runtime compatibility on buyer infrastructure, revenue or profit.",
+    "Workflow is scoped to repository technical paths and does not deploy or contact external parties."
+  ]
+}
