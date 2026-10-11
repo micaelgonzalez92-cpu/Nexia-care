@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "boot_version": 21,
-  "generated_at": "2026-10-11T10:43:00+02:00",
+  "boot_version": 22,
+  "generated_at": "2026-10-11T11:49:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -16,13 +16,15 @@
   "integrity_check_report": "NEXIA_INTEGRITY_CHECK_2026-10-11.md",
   "integrity_checker": "tools/nexia_integrity_check.py",
   "integrity_checker_tests": "tools/test_nexia_integrity_check.py",
+  "opportunity_selection_gate": "NEXIA_OPPORTUNITY_SELECTION_GATE_2026-10-11.md",
+  "next_experiment_validation_pack": "NEXIA_EXP_AUTO_001_VALIDATION_PACK.md",
   "last_verified_state_version": 61,
   "last_verified_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
   "active_experiment": {
     "id": "EXP-OPPORTUNITY-001",
     "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
-    "status": "PROTOTYPE_BUILT_NOT_VALIDATED",
+    "status": "SELECTION_GATE_COMPLETED_NEXT_EXPERIMENT_DESIGNED_NOT_ACTIVATED_EXTERNALLY",
     "cost_eur": 0,
     "primary_metric": "Valor esperado de beneficio neto sostenible, ajustado por evidencia, tiempo hasta validación, coste de aprendizaje, repetibilidad y riesgo",
     "participants": 0,
@@ -42,39 +44,47 @@
     "cost_eur": 0,
     "human_action_required": false,
     "status": "ACTIVE",
-    "reason": "Kael ha retirado la reventa vintage como misión principal. No se preselecciona un vehículo comercial antes de comparar oportunidades con evidencia, economía unitaria, facilidad de validación, repetibilidad, riesgo y coste de aprendizaje."
+    "reason": "Kael retiró la reventa vintage como misión principal. El radar comparativo ha seleccionado una sola candidata para el siguiente experimento, pero no existe validación comercial propia todavía."
   },
-  "human_gate": "La compra de 10 camisetas de Vintage4Originals queda suspendida mientras la reventa está en pausa; requiere nueva autorización explícita para reactivarse.",
-  "last_confirmed_action": "2026-10-11: read-only STATE/BOOT/LIVE integrity checker added, unit-tested locally (4/4) and read back from GitHub. The repaired SME browser harness remains runtime-unverified because the available dynamic browser route is metered and no spend authorization exists.",
+  "selected_next_candidate": {
+    "id": "EXP-AUTO-001",
+    "name": "Lead Intake Reliability Sprint",
+    "status": "DESIGNED_NOT_EXTERNALLY_ACTIVATED",
+    "offer_hypothesis_eur": 249,
+    "scope": "One inbound lead source -> one Sheet/CRM destination -> validation/deduplication -> internal notification -> safe acknowledgement step -> failure visibility -> testing -> handover",
+    "selection_reason": "Recent public buyer briefs show repeated lead/CRM automation demand and materially higher budgets than generic Shopify listing work; the route remains unvalidated for Nexia and competition is strong.",
+    "human_gate": "External proposals/outreach, account connection, publication and spend require explicit Kael authorization."
+  },
+  "human_gate": "No purchase, external contact, proposal submission, account connection, commercial publication, paid listing, paid credits or metered browser execution without explicit approval.",
+  "last_confirmed_action": "2026-10-11: EXP-OPPORTUNITY-001 selection gate compared lead automation, catalog QA, Higgsfield Earn and digital templates. Lead-intake reliability automation was selected only for the next validation experiment. EXP-AUTO-001 was designed with precommitted economics and validation thresholds; no outreach or sale occurred.",
   "post_state_repairs": [
     "Added prototypes/sme-intake-core.js as the shared deterministic classifier.",
     "Updated SME demo and harness so tests exercise the same input-based classifier instead of case IDs.",
     "Neutralized NexaHQ, hq, NexaCare and care legacy routes instead of redirecting to missing/retired targets.",
-    "Created and finalized NEXIA_CODE_AUDIT_2026-10-11.md with findings, limits and verification status.",
     "Completed GitHub readback of repaired executable/static files and continuity artifacts.",
-    "Added tools/nexia_integrity_check.py and tools/test_nexia_integrity_check.py; corrected a Python 3.13 test-loader issue before persistence; corrected suite passed 4/4 locally.",
-    "Created NEXIA_INTEGRITY_CHECK_2026-10-11.md and read back the persisted checker and tests."
+    "Added and unit-tested the read-only STATE/BOOT/LIVE integrity checker.",
+    "Completed the opportunity selection gate and prepared EXP-AUTO-001 validation material without external action."
   ],
   "integrity_warnings": [
     "NEXIA_STATE.json v61 remains canonical until a later state update is safely written and read back.",
-    "NEXIA_MEMORY.md begins with a stale notice naming STATE v58 and contains stale early mission/status text. Do not treat those lines as current operational truth; STATE wins.",
+    "NEXIA_MEMORY.md begins with a stale notice naming STATE v58 and contains stale early mission/status text. STATE wins.",
     "The repaired SME harness has static source/readback verification only; browser runtime execution is not yet verified.",
-    "The available dynamic browser route in this session is metered; it was not used because no spend authorization exists.",
-    "The integrity checker has unit-test execution evidence and GitHub readback, but has not been run against a full local clone of the live repository in this session because the local container cannot resolve github.com."
+    "EXP-AUTO-001 is a designed next experiment recorded after STATE v61; it is not yet the externally activated canonical experiment.",
+    "Public buyer budgets and platform payout claims are market signals, not Nexia willingness-to-pay, revenue or profit evidence."
   ],
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
   "guardrail": "No spending, external contact, account connection, publication, irreversible action or material risk without Kael's explicit approval.",
-  "integrity_rule": "Boot is an index, not an independent source of truth. If it disagrees with NEXIA_STATE.json, STATE wins and BOOT is marked stale. Use tools/nexia_integrity_check.py when a local repository runtime is available.",
+  "integrity_rule": "BOOT is an index, not an independent source of business truth. If it disagrees with NEXIA_STATE.json, STATE wins. Post-state checkpoints may be indexed explicitly without pretending STATE was advanced.",
   "recovery_rule": "If STATE is unavailable or invalid, recover from the latest verified repository commit and event log; never treat a stale backup or MEMORY heading as newer than a verified state.",
-  "startup_rule": "On every new NEXIA session, use the GitHub connector to inspect this repository and load BOOT -> STATE -> LIVE -> MEMORY/RECENT EVENTS. Apply integrity_warnings before using derived artifacts and do not ask Kael to restate project state when repository recovery succeeds.",
+  "startup_rule": "On every new NEXIA session, inspect BOOT -> STATE -> LIVE -> MEMORY/RECENT EVENTS. Apply integrity warnings and post-state checkpoints before deciding the next safe action.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE; includes R6, lifecycle and decision engine",
   "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; sustainable after-tax net profit is primary score; technical activity does not add points",
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "note": "BOOT v21 points to STATE v61 and registers the integrity checker as AVAILABLE/TESTED_ON_SYNTHETIC_FIXTURES, not as an always-running automation. Technical repairs are not willingness-to-pay, revenue or profit evidence.",
+  "note": "BOOT v22 points to canonical STATE v61 and indexes the completed opportunity-selection checkpoint. Technical research and public market evidence do not constitute a sale.",
   "updated_at": "2026-10-11",
-  "sync_status": "STATE_VERIFIED_INTEGRITY_CHECKER_AVAILABLE_RUNTIME_BROWSER_BLOCKED_BY_UNAUTHORIZED_METERED_ROUTE",
-  "next_action": "Continue zero-cost opportunity validation and technical falsification. Execute the repaired SME harness only when a genuinely free runtime is available or Kael explicitly authorizes the metered browser cost; safely repair stale MEMORY metadata only with full-file preservation."
+  "sync_status": "STATE_V61_CANONICAL_SELECTION_GATE_INDEXED_EXP_AUTO_001_DESIGNED_HUMAN_GATE_PENDING",
+  "next_action": "Without external contact, continue prospect/channel qualification only. To begin EXP-AUTO-001 commercial validation, Kael must explicitly authorize a channel, a maximum first batch (recommended 5), the €249 pilot boundary, and any required account connection."
 }
