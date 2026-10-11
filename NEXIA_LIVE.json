@@ -1,46 +1,45 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / RADAR — EXP-AUTO-001 CAPABILITY DEMO 9/9; CURRENT MARKETPLACE SAMPLE 0 QUALIFIED",
-  "current_cycle": "NEXIA Core — lead-intake reliability candidate selected; truthful capability strengthened; external validation still gated",
-  "current_action": "A synthetic lead-intake reliability reference implementation was built and tested locally. First run 7/8 exposed an unsafe phone-deduplication assumption; after requiring explicit country context the suite passed 9/9. Current public marketplace re-evaluation found zero sampled opportunities satisfying all price, bounded-scope and truthful-experience gates.",
-  "last_completed_action": "2026-10-11: persisted and read back prototypes/lead-intake-reliability-demo.js, its test suite, and NEXIA_EXP_AUTO_001_CAPABILITY_DEMO_2026-10-11.md. BOOT advanced to v24 as an index; canonical STATE remains v61.",
-  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v24 SHA 1e1e6a2f9f0988b025d44336b8b3f9de7a8447e8; capability demo blob fb04d7cc57515d5c4e7ef961045e27bec9427923; test blob 582392fbf7dbed487d4723e67138239f6047e635; local Node.js final suite 9/9 PASS.",
+  "status": "ACTIVE / RADAR — EXP-AUTO-001 HTTP RUNTIME 12/12; NODE-RED FLOW PREPARED; EXTERNAL VALIDATION GATED",
+  "current_cycle": "NEXIA Core — selected lead-intake reliability candidate; local runtime evidence strengthened without external action",
+  "current_action": "Local Node.js HTTP runtime executed 12/12 integration tests. Importable Node-RED flow prepared and structural validator executed 6/6. Node-RED runtime remains unverified because local npm registry access timed out; no paid route used.",
+  "last_completed_action": "2026-10-11: persisted/read back HTTP runtime, HTTP tests, Node-RED flow, structural validator and checkpoint report; BOOT advanced to v25 as derived index while STATE remains v61.",
+  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; HTTP runtime blob 15e31204fbdd25af33923414cbca645c1248b405; HTTP tests blob a7a5edcc5587fb8c9206b253978aa3f4727ca720; Node-RED flow blob 481fdbcd5dc9f76b67b7f3f65b51865023069d94; validator blob 9e9143ee9261b11759c9ae4734d7b5a91a6a8141; report blob bf10b0941726e1aa5b2db59f98d368812fb943d8.",
   "capital_spent_eur": 0,
-  "human_gate": "No proposal submission, external contact, account connection, commercial publication, paid tool or spend without explicit approval. Unsolicited Spanish cold commercial email remains NO-GO.",
+  "human_gate": "No proposal submission, external contact, account connection, publication, paid runtime or spend without explicit approval. Spanish unsolicited commercial cold email remains NO-GO.",
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "status": "DESIGNED_CAPABILITY_DEMO_TESTED_NOT_EXTERNALLY_ACTIVATED",
+    "status": "DESIGNED_HTTP_RUNTIME_TESTED_NOT_EXTERNALLY_ACTIVATED",
     "offer_hypothesis_eur": 249,
     "max_delivery_hours": 4,
     "provisional_contribution_eur": 179,
-    "capability_demo_final_test": "9/9 synthetic Node.js tests PASS"
-  },
-  "channel_policy": {
-    "preferred_first_channel": "Buyer-initiated public briefs/RFPs or inbound/opt-in requests",
-    "current_marketplace_gate_result": "0 current sampled opportunities satisfy all gates",
-    "reason": "Higher-value briefs generally require prior similar production experience; lower-friction briefs commonly fail the price/contribution gate. Nexia will not overstate experience or accept uneconomic work merely to create activity."
+    "function_tests": "9/9 PASS",
+    "http_integration_tests": "12/12 PASS",
+    "node_red_structural_checks": "6/6 PASS",
+    "node_red_runtime": "NOT_VERIFIED"
   },
   "parallel_work": [
     "STATE v61 remains canonical.",
-    "BOOT v24 indexes the post-state capability-demo checkpoint.",
-    "Lead-intake reference logic demonstrates validation, idempotency, deduplication, non-destructive merge, failure visibility and no partial commit under an injected failure.",
-    "Phone normalization does not infer country equivalence unless explicitly configured.",
-    "The demo is not n8n/Make/GHL production experience and must not be represented as client work.",
-    "No own willingness-to-pay, transaction, settled revenue or profit exists yet."
+    "Local HTTP runtime now exercises actual request/response semantics and safe failure behavior.",
+    "Node-RED flow uses only core HTTP In / Function / HTTP Response nodes and no outbound send nodes.",
+    "Node-RED installation/runtime was not achieved because registry access timed out; no spend used.",
+    "Current sampled marketplace gate remains 0 fully qualified opportunities.",
+    "No own sale, settled revenue or profit exists yet."
   ],
-  "next_action": "Continue zero-cost discovery for buyer-initiated briefs with >=€249-equivalent economics and no unverifiable experience requirement. In parallel, investigate a genuinely free local/open-source workflow runtime to build platform-specific evidence before re-evaluating higher-value briefs.",
+  "next_action": "Keep scanning buyer-initiated opportunities with >=€249-equivalent economics and truthful capability fit. Replay the prepared flow inside Node-RED only when a free runtime is actually available; do not block commercial discovery on it.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "revenue_eur": 0,
   "profit_eur": 0,
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "boot_version": 24,
-  "boot_blob_sha": "1e1e6a2f9f0988b025d44336b8b3f9de7a8447e8",
+  "boot_version": 25,
+  "boot_blob_sha": "0944369b8f0990922d7cf369e50ec2cec60b9852",
   "current_blockers": [
-    "No current sampled buyer-initiated marketplace brief passes all economics/scope/truthfulness gates.",
+    "No current sampled buyer-initiated brief passes all economics/scope/truthfulness gates.",
+    "Node-RED runtime has not been executed in this environment.",
     "External proposal submission remains a Human Gate.",
-    "NEXIA_MEMORY.md still has a stale STATE v58 canonical notice; STATE v61 takes precedence until safe full-file reconciliation.",
+    "NEXIA_MEMORY.md still has stale STATE v58 canonical text.",
     "No real client deployment or platform-specific production evidence exists yet."
   ]
 }
