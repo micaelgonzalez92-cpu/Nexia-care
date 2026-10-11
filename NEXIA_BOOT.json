@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "boot_version": 31,
-  "generated_at": "2026-10-11T14:00:00+02:00",
+  "boot_version": 32,
+  "generated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -14,13 +14,16 @@
   "workana_profile_checkpoint": "NEXIA_WORKANA_PROFILE_STATUS_2026-10-11.md",
   "channel_benchmark": "NEXIA_EXP_AUTO_001_CHANNEL_BENCHMARK_2026-10-11_1351.md",
   "latest_radar_check": "NEXIA_EXP_AUTO_001_RADAR_CHECK_2026-10-11_1400.md",
+  "huescaventura_demo_report": "NEXIA_EXP_AUTO_001_HUESCAVENTURA_DEMO_2026-10-11.md",
+  "huescaventura_demo_code": "prototypes/huescaventura_logic.js",
+  "huescaventura_demo_tests": "prototypes/test_huescaventura_logic.js",
   "last_verified_state_version": 61,
   "last_verified_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
   "active_experiment": {
     "id": "EXP-OPPORTUNITY-001",
     "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
-    "status": "HUESCAVENTURA_AUTHORIZED_PROFILE_APPROVAL_PENDING_LATEST_RADAR_NO_BETTER_CANDIDATE",
+    "status": "HUESCAVENTURA_AUTHORIZED_PROFILE_APPROVAL_PENDING_DOMAIN_DEMO_13_OF_13_PASS",
     "cost_eur": 0
   },
   "mission": {
@@ -36,11 +39,12 @@
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "capability_evidence": {
-      "function_suite": "9/9 synthetic PASS",
+      "generic_function_suite": "9/9 synthetic PASS",
       "http_integration": "12/12 local HTTP integration PASS",
       "node_red_flow_structure": "6/6 structural PASS",
+      "huescaventura_domain_demo": "13/13 synthetic PASS",
       "node_red_runtime": "NOT_EXECUTED",
-      "client_production_experience_claimed": false
+      "n8n_client_production_experience_claimed": false
     }
   },
   "qualified_buyer_opportunity": {
@@ -57,13 +61,30 @@
     "profile_completion": "REPORTED_COMPLETE_BY_KAEL",
     "approval_status": "NOT_VERIFIED_LIKELY_PENDING",
     "gmail_approval_email_found": false,
-    "new_workana_onboarding_mail_found": true,
     "priority_moderation": "NOT_AUTHORIZED / DO_NOT_BUY"
+  },
+  "huescaventura_demo": {
+    "status": "EXECUTED_LOCALLY_SYNTHETIC_ONLY",
+    "final_test_result": "13/13 PASS",
+    "functions": [
+      "group classification",
+      "missing-field detection",
+      "internal summary",
+      "draft-only reply",
+      "manual classification review",
+      "conservative deduplication",
+      "idempotent events",
+      "human-controlled follow-up"
+    ],
+    "defects_found_and_repaired": [
+      "ambiguous revision cases now explicitly require manual classification",
+      "business-facing missing-field labels are now Spanish rather than internal keys"
+    ],
+    "external_integrations": "NONE",
+    "client_work_claimed": false
   },
   "latest_radar_result": {
     "better_candidate_found": false,
-    "clinic_n8n_whatsapp_project": "NO_GO_FIRST_EXPERIMENT_HIGHER_SCOPE_RISK_AND_EXPERIENCE_REQUIREMENT",
-    "meta_ads_gohighlevel_project": "NO_GO_DIFFERENT_SERVICE_CATEGORY_AND_ONGOING_OPERATIONS",
     "decision": "Huescaventura remains primary"
   },
   "channel_policy": {
@@ -74,10 +95,11 @@
     "manual_zero_cost_submission": "AVAILABLE_ONLY_AFTER_WORKANA_PROFILE_APPROVAL"
   },
   "human_gate": "Huescaventura submission at €300 remains authorized. No paid moderation, plans, credits, account upgrades or spend are authorized.",
-  "last_confirmed_action": "2026-10-11 14:00 CEST: Gmail rechecked; no Workana approval/rejection email found. Huescaventura public page remains open/evaluating proposals. Fresh Workana alternatives were reviewed and none improved on Huescaventura without requiring stronger prior experience, broader scope or higher risk. No proposal, contact or spend occurred.",
+  "last_confirmed_action": "2026-10-11: Gmail rechecked with no Workana approval/rejection email; Huescaventura remained open/evaluating proposals. A Huescaventura-specific synthetic lead workflow was built and executed locally. An intermediate fixture exposed two quality issues, both were repaired, and the final suite passed 13/13. No proposal, client contact, external integration or spend occurred.",
   "integrity_warnings": [
     "NEXIA_STATE.json v61 remains canonical.",
     "Workana profile completion is user-reported; approval is not independently verified.",
+    "Huescaventura domain demo is synthetic local evidence, not client work or n8n production deployment.",
     "Huescaventura submission is AUTHORIZED but NOT EXECUTED.",
     "Do not claim client contact, proposal submission, acceptance, revenue or contract until verified."
   ],
@@ -86,6 +108,6 @@
   "profit_eur": 0,
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "sync_status": "STATE_V61_CANONICAL_WORKANA_APPROVAL_PENDING_HUESCAVENTURA_OPEN_RADAR_NO_BETTER_CANDIDATE",
+  "sync_status": "STATE_V61_CANONICAL_WORKANA_APPROVAL_PENDING_HUESCAVENTURA_DOMAIN_DEMO_13_OF_13_PASS",
   "next_action": "Continue selective zero-cost discovery and check for Workana approval evidence. On approval, immediately recheck Huescaventura and submit the already-authorized €300 bounded proposal if still open and no spend is required."
 }
