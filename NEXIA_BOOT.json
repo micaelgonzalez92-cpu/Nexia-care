@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "boot_version": 38,
+  "boot_version": 39,
   "generated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -16,7 +16,10 @@
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
     "index": "NEXIA_EVENT_INDEX.json",
-    "latest_verified_event_id": "EVT-2026-10-11-EVOLVE-001",
+    "index_blob_sha": "34e18f6e351e8d75c240dbc6d8fccc508fb550d6",
+    "latest_verified_event_id": "EVT-2026-10-11-EVOLVE-002",
+    "latest_verified_event_path": "events/EVT-2026-10-11-EVOLVE-002.json",
+    "latest_verified_event_blob_sha": "9cfbd2e57f6cf67a80ba72727fed0e56ca81a543",
     "legacy_jsonl_mode": "READ_ONLY",
     "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
@@ -48,6 +51,6 @@
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "sync_status": "STATE_V65_CANONICAL_MEMORY_DERIVED_STALE_OTHER_SYNC_IN_PROGRESS",
-  "next_action": "Synchronize/read back LIVE and BACKUP to STATE v65; create immutable closure event; do not bypass blocked MEMORY write. Then continue safe parallel work and daily-only Workana monitoring."
+  "sync_status": "STATE_V65_CORE_EVOLUTION_CLOSED_EVENT_STORAGE_V2_OPERATIONAL_MEMORY_DERIVED_STALE",
+  "next_action": "Continue safe parallel work. Verify the first completed Parallel Work run. Workana moderation is checked once daily. Do not bypass the blocked MEMORY write; retry only if tool/security state changes."
 }
