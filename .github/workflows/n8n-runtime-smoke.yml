@@ -6,7 +6,9 @@ on:
       - '.github/workflows/n8n-runtime-smoke.yml'
       - 'prototypes/n8n-huescaventura-intake-demo.json'
       - 'prototypes/n8n-huescaventura-runtime-fixture.json'
-      - 'prototypes/n8n-persistent-dedup-proof.json'
+      - 'prototypes/n8n-datatable-dedup-setup.json'
+      - 'prototypes/n8n-datatable-dedup-webhook.json'
+      - 'prototypes/n8n-datatable-dedup-audit.json'
 
 permissions:
   contents: read
@@ -17,10 +19,10 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout repository
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4 resolved in run 38151252894
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
 
       - name: Set up Node.js 24.21.0
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4 resolved in run 38151252894
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '24.21.0'
 
@@ -64,44 +66,41 @@ jobs:
           grep -Eq '"runtime"[[:space:]]*:[[:space:]]*"n8n-code-node"' "$N8N_EXEC_OUTPUT"
           echo 'PASS: EXP-AUTO-001 logic executed inside n8n runtime with 6 asserted synthetic cases'
 
-      - name: Prove persistent idempotency and identity deduplication across n8n executions and restart
+      - name: Prove persistent deduplication with native n8n Data Tables
         env:
-          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-persist-user
+          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-datatable-user
           N8N_PORT: '5678'
           N8N_HOST: '127.0.0.1'
           N8N_PROTOCOL: 'http'
           N8N_SECURE_COOKIE: 'false'
           N8N_DIAGNOSTICS_ENABLED: 'false'
           N8N_PERSONALIZATION_ENABLED: 'false'
-          N8N_LOG: ${{ runner.temp }}/n8n-persist.log
+          N8N_LOG: ${{ runner.temp }}/n8n-datatable.log
           BASE_URL: http://127.0.0.1:5678
-          PROOF_WORKFLOW_ID: nexia-exp-auto-001-persistent-dedup
-          PROOF_WEBHOOK_PATH: nexia-exp-auto-001-persistent-dedup
+          DEDUP_WORKFLOW_ID: nexia-exp-auto-001-datatable-dedup
+          DEDUP_WEBHOOK_PATH: nexia-exp-auto-001-datatable-dedup
+          AUDIT_OUTPUT: ${{ runner.temp }}/n8n-datatable-audit.json
         run: |
           set -euo pipefail
           mkdir -p "$N8N_USER_FOLDER"
-          npx --yes n8n@2.42.6 import:workflow --input=prototypes/n8n-persistent-dedup-proof.json
-          npx --yes n8n@2.42.6 publish:workflow --id="$PROOF_WORKFLOW_ID"
 
+          npx --yes n8n@2.42.6 import:workflow --input=prototypes/n8n-datatable-dedup-setup.json
+          npx --yes n8n@2.42.6 import:workflow --input=prototypes/n8n-datatable-dedup-webhook.json
+          npx --yes n8n@2.42.6 import:workflow --input=prototypes/n8n-datatable-dedup-audit.json
+
+          npx --yes n8n@2.42.6 execute --id=nexia-exp-auto-001-datatable-setup --rawOutput > "$RUNNER_TEMP/n8n-datatable-setup-output.json"
+          grep -q 'nexia_exp_auto_001_dedup_proof' "$RUNNER_TEMP/n8n-datatable-setup-output.json"
+
+          npx --yes n8n@2.42.6 publish:workflow --id="$DEDUP_WORKFLOW_ID"
           DB="$N8N_USER_FOLDER/.n8n/database.sqlite"
 
-          assert_published() {
-            DB="$DB" PROOF_WORKFLOW_ID="$PROOF_WORKFLOW_ID" python3 <<'PY'
-          import os, sqlite3, sys
-          con = sqlite3.connect(os.environ['DB'])
-          row = con.execute('SELECT activeVersionId FROM workflow_entity WHERE id=?', (os.environ['PROOF_WORKFLOW_ID'],)).fetchone()
-          print('activeVersionId:', row[0] if row else None)
-          sys.exit(0 if row and row[0] else 1)
-          PY
-          }
-
           webhook_registered() {
-            DB="$DB" PROOF_WORKFLOW_ID="$PROOF_WORKFLOW_ID" PROOF_WEBHOOK_PATH="$PROOF_WEBHOOK_PATH" python3 <<'PY'
+            DB="$DB" DEDUP_WORKFLOW_ID="$DEDUP_WORKFLOW_ID" DEDUP_WEBHOOK_PATH="$DEDUP_WEBHOOK_PATH" python3 <<'PY'
           import os, sqlite3, sys
           con = sqlite3.connect(os.environ['DB'])
           row = con.execute(
               'SELECT workflowId, webhookPath, method FROM webhook_entity WHERE workflowId=? AND webhookPath=? AND method=?',
-              (os.environ['PROOF_WORKFLOW_ID'], os.environ['PROOF_WEBHOOK_PATH'], 'POST')
+              (os.environ['DEDUP_WORKFLOW_ID'], os.environ['DEDUP_WEBHOOK_PATH'], 'POST')
           ).fetchone()
           if row:
               print('registered webhook:', row)
@@ -110,38 +109,23 @@ jobs:
           PY
           }
 
-          dump_registration_state() {
-            DB="$DB" PROOF_WORKFLOW_ID="$PROOF_WORKFLOW_ID" python3 <<'PY'
-          import os, sqlite3
-          con = sqlite3.connect(os.environ['DB'])
-          print('workflow:', con.execute('SELECT id, activeVersionId, active FROM workflow_entity WHERE id=?', (os.environ['PROOF_WORKFLOW_ID'],)).fetchall())
-          print('webhooks:', con.execute('SELECT workflowId, webhookPath, method, node FROM webhook_entity WHERE workflowId=?', (os.environ['PROOF_WORKFLOW_ID'],)).fetchall())
-          PY
-          }
-
           start_n8n() {
             : > "$N8N_LOG"
             npx --yes n8n@2.42.6 start >> "$N8N_LOG" 2>&1 &
             N8N_PID=$!
             for i in $(seq 1 60); do
-              if curl -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then
-                break
-              fi
+              if curl -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then break; fi
               sleep 1
             done
             if ! curl -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then
-              echo 'n8n health check never became ready'
               cat "$N8N_LOG"
               return 1
             fi
             for i in $(seq 1 60); do
-              if webhook_registered; then
-                return 0
-              fi
+              if webhook_registered; then return 0; fi
               sleep 1
             done
-            echo 'Production webhook was not registered after n8n startup'
-            dump_registration_state || true
+            echo 'Webhook registration failed'
             cat "$N8N_LOG"
             return 1
           }
@@ -154,67 +138,41 @@ jobs:
           }
 
           post() {
-            curl -fsS -X POST "$BASE_URL/webhook/$PROOF_WEBHOOK_PATH" \
-              -H 'Content-Type: application/json' \
-              --data "$1"
+            local body="$1"
+            local code
+            code=$(curl -sS -o /dev/null -w '%{http_code}' -X POST "$BASE_URL/webhook/$DEDUP_WEBHOOK_PATH" \
+              -H 'Content-Type: application/json' --data "$body")
+            test "$code" = '200'
+          }
+
+          audit() {
+            npx --yes n8n@2.42.6 execute --id=nexia-exp-auto-001-datatable-audit --rawOutput | tee "$AUDIT_OUTPUT"
+            grep -Eq '"pass"[[:space:]]*:[[:space:]]*true' "$AUDIT_OUTPUT"
+            grep -Eq '"rows"[[:space:]]*:[[:space:]]*2' "$AUDIT_OUTPUT"
+            grep -Eq '"persistence"[[:space:]]*:[[:space:]]*"n8n-data-table"' "$AUDIT_OUTPUT"
           }
 
           trap 'stop_n8n || true' EXIT
-          assert_published
           start_n8n
 
-          post '{"event_id":"p1","email":"Persist@Test.Example"}' > "$RUNNER_TEMP/persist-a.json"
+          post '{"event_id":"p1","email":"Persist@Test.Example"}'
           sleep 1
-          post '{"event_id":"p1","email":"persist@test.example"}' > "$RUNNER_TEMP/persist-b.json"
+          post '{"event_id":"p1","email":"persist@test.example"}'
           sleep 1
-          post '{"event_id":"p2","email":"PERSIST@test.example"}' > "$RUNNER_TEMP/persist-c.json"
+          post '{"event_id":"p2","email":"PERSIST@test.example"}'
           sleep 1
-          post '{"event_id":"p3","phone":"+34 600 999 111"}' > "$RUNNER_TEMP/persist-d.json"
+          post '{"event_id":"p3","phone":"+34 600 999 111"}'
           sleep 1
-          post '{"event_id":"p4","phone":"+34 600 999 111"}' > "$RUNNER_TEMP/persist-e.json"
-
-          node <<'NODE'
-          const assert = require('node:assert/strict');
-          const fs = require('node:fs');
-          const read = name => JSON.parse(fs.readFileSync(`${process.env.RUNNER_TEMP}/${name}`, 'utf8'));
-          const a = read('persist-a.json');
-          const b = read('persist-b.json');
-          const c = read('persist-c.json');
-          const d = read('persist-d.json');
-          const e = read('persist-e.json');
-          assert.equal(a.status, 'created');
-          assert.equal(a.record_id, 'lead_0001');
-          assert.equal(b.status, 'idempotent_skip');
-          assert.equal(b.record_id, a.record_id);
-          assert.equal(c.status, 'duplicate_identity_skip');
-          assert.equal(c.record_id, a.record_id);
-          assert.equal(c.duplicate_key, 'email:persist@test.example');
-          assert.equal(d.status, 'created');
-          assert.equal(d.record_id, 'lead_0002');
-          assert.equal(e.status, 'duplicate_identity_skip');
-          assert.equal(e.record_id, d.record_id);
-          for (const row of [a,b,c,d,e]) assert.equal(row.autonomous_send, false);
-          assert.equal(new Set([a,b,c,d,e].map(x => x.execution_id)).size, 5, 'each request must be a separate n8n execution');
-          console.log('PASS: persistent dedup state observed across five separate webhook executions');
-          NODE
-
-          BEFORE_IDS=$(node -e "const fs=require('fs'); console.log(['a','b','c','d','e'].map(x=>JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/persist-'+x+'.json')).execution_id).join(','))")
+          post '{"event_id":"p4","phone":"+34 600 999 111"}'
+          sleep 2
 
           stop_n8n
-          sleep 2
+          audit
+
           start_n8n
-          post '{"event_id":"p5","email":"persist@test.example"}' > "$RUNNER_TEMP/persist-after-restart.json"
+          post '{"event_id":"p5","email":"persist@test.example"}'
+          sleep 2
+          stop_n8n
+          audit
 
-          BEFORE_IDS="$BEFORE_IDS" node <<'NODE'
-          const assert = require('node:assert/strict');
-          const fs = require('node:fs');
-          const row = JSON.parse(fs.readFileSync(`${process.env.RUNNER_TEMP}/persist-after-restart.json`, 'utf8'));
-          assert.equal(row.status, 'duplicate_identity_skip');
-          assert.equal(row.record_id, 'lead_0001');
-          assert.equal(row.duplicate_key, 'email:persist@test.example');
-          assert.equal(row.autonomous_send, false);
-          assert.ok(!process.env.BEFORE_IDS.split(',').includes(String(row.execution_id)), 'restart request must be a new execution');
-          console.log('PASS: deduplication state survived an n8n process restart');
-          NODE
-
-          echo 'PASS: PERSISTENT_DEDUP_IDEMPOTENCY verified across separate executions and process restart'
+          echo 'PASS: PERSISTENT_DEDUP_IDEMPOTENCY verified with native n8n Data Tables across separate webhook executions and process restart'
