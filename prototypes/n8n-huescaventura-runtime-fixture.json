@@ -1,0 +1,56 @@
+{
+  "id": "nexia-exp-auto-001-runtime-fixture",
+  "name": "NEXIA EXP-AUTO-001 Runtime Execution Fixture",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0,0],
+      "id": "3bd56b77-67d1-4f56-8d24-001000000001",
+      "name": "Manual Trigger"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return [\n  {json:{event_id:'c1',name:'Ana',email:'ANA@EXAMPLE.COM',date:'2026-11-01',people:'8',activities:'rafting',lodging:'',message:'grupo de amigos'}},\n  {json:{event_id:'c2',name:'Luis',email:'luis@example.com',date:'',people:'6',activities:'barranquismo',lodging:'',message:'grupo de amigos'}},\n  {json:{event_id:'c3',name:'Marta',phone:'+34 600 123 456',date:'2026-11-12',people:'4',activities:'rafting',lodging:'',message:'Solo actividad sin alojamiento.'}},\n  {json:{event_id:'c4',name:'Pablo',email:'pablo@example.com',date:'2026-11-15',people:'5',activities:'senderismo',lodging:'',message:'No queremos hotel sin desayuno'}},\n  {json:{event_id:'c5',name:'Eva',email:'eva@example.com',date:'2026-12-02',people:'20',activities:'team building',lodging:'',message:'Evento corporativo de empresa'}},\n  {json:{event_id:'',name:'SinId',email:'sinid@example.com',date:'2026-12-10',people:'2',activities:'rafting',lodging:'',message:'amigos'}}\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [240,0],
+      "id": "3bd56b77-67d1-4f56-8d24-001000000002",
+      "name": "Synthetic Leads"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const LABELS={date:'fecha',people:'número de personas',activities:'actividades',lodging:'alojamiento',name:'nombre',contact:'contacto'};\nconst REQUIRED={despedida:['name','contact','date','people','activities'],amigos:['name','contact','date','people','activities'],familia:['name','contact','date','people','activities'],empresa:['name','contact','date','people','activities'],escolar:['name','contact','date','people','activities'],solo_actividad:['name','contact','date','people','activities'],pack_alojamiento:['name','contact','date','people','activities','lodging'],revision:['name','contact']};\nconst clean=v=>String(v??'').trim().replace(/\\s+/g,' ');\nconst normEmail=v=>clean(v).toLowerCase();\nconst normPhone=v=>{const s=clean(v);if(!s)return '';return s.startsWith('+')?'+'+s.replace(/\\D/g,''):s.replace(/\\D/g,'');};\nconst classify=raw=>{const text=[raw.group_type,raw.message,raw.activities,raw.lodging].map(clean).join(' ').toLowerCase();if ([raw.group_type, raw.message, raw.activities, raw.lodging].some(value => /\\b(?:sin(?:\\s+necesidad\\s+de)?|no\\s+(?:queremos|necesitamos))\\s+(?:alojamiento|hotel|hostal|casa rural)(?:\\s+|[,;:]\\s*)\\S/.test(clean(value).toLowerCase()))) return 'revision';\nconst withoutLodgingText = text.replace(/\\b(?:sin(?:\\s+necesidad\\s+de)?|no\\s+(?:queremos|necesitamos))\\s+(?:alojamiento|hotel|hostal|casa rural)\\b/g, ' ');\nconst withoutLodging = withoutLodgingText !== text;\nif (withoutLodging && /\\b(?:alojamiento|hotel|hostal|casa rural)\\b/.test(withoutLodgingText)) return 'revision';\nconst rules=[['despedida',/despedid/],['empresa',/empresa|team\\s?building|corporativ/],['escolar',/escolar|colegio|instituto|alumn/],['familia',/familia|niñ|hijos?/],['pack_alojamiento',/alojamiento|hotel|hostal|casa rural|pack/],['solo_actividad',/solo actividad|actividad suelta|sin alojamiento/],['amigos',/amigos?|grupo/]];for(const [cat,rx] of rules)if(rx.test(text))return cat==='pack_alojamiento'&&withoutLodging?'solo_actividad':cat;return 'revision';};\nconst input=$input.all().map(i=>i.json.body??i.json);\nreturn input.map(raw=>{\n  const contact=clean(raw.email)||clean(raw.phone);\n  if(!clean(raw.event_id)) return {json:{ok:false,status:'validation_failed',errors:['missing_event_id'],autonomous_send:false}};\n  if(!clean(raw.name)||!contact) return {json:{ok:false,status:'validation_failed',errors:['missing_name_or_contact'],autonomous_send:false}};\n  const category=classify(raw);\n  const view={name:clean(raw.name),contact,date:clean(raw.date),people:clean(raw.people),activities:clean(raw.activities),lodging:clean(raw.lodging)};\n  const missing=(REQUIRED[category]||REQUIRED.revision).filter(k=>!view[k]);\n  const summary=[`Tipo: ${category}`,`Nombre: ${view.name||'N/D'}`,`Contacto: ${contact||'N/D'}`,`Fecha: ${view.date||'N/D'}`,`Personas: ${view.people||'N/D'}`,`Actividades: ${view.activities||'N/D'}`,`Alojamiento: ${view.lodging||'N/D'}`,`Faltan: ${missing.length?missing.map(x=>LABELS[x]||x).join(', '):'nada crítico'}`].join('\\n');\n  const prefix=clean(raw.name)||'Hola';\n  const reply=missing.length?`${prefix}, gracias por contactar con Huescaventura. Para orientarte mejor sobre ${category}, antes necesitamos confirmar: ${missing.map(x=>LABELS[x]||x).join(', ')}. Este mensaje es un borrador para revisión humana y no se ha enviado.`:`${prefix}, gracias por contactar con Huescaventura. Tenemos la información básica para revisar tu solicitud de ${category}. Prepararemos la opción más adecuada y confirmaremos disponibilidad y condiciones antes de responderte. Este mensaje es un borrador para revisión humana y no se ha enviado.`;\n  return {json:{ok:true,status:'prepared_for_human_review',event_id:clean(raw.event_id),identity:{email:normEmail(raw.email),phone:normPhone(raw.phone)},category,classification_review_required:category==='revision',missing_fields:missing,summary,reply_draft:reply,next_step:category==='revision'?'manual_classification_review':(missing.length?'request_missing_data':'human_review_quote_or_availability'),followup:{status:'pending_human_decision',autonomous_send:false},persistence_note:'Demo importable: deduplication/idempotency persistence must be bound to Airtable/Sheet/DB in client environment.'}};\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [500,0],
+      "id": "3bd56b77-67d1-4f56-8d24-001000000003",
+      "name": "Prepare Lead Review"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const rows=$input.all().map(i=>i.json);\nif(rows.length!==6) throw new Error(`expected 6 outputs, got ${rows.length}`);\nconst byId=Object.fromEntries(rows.filter(r=>r.event_id).map(r=>[r.event_id,r]));\nconst eq=(a,b,msg)=>{if(a!==b) throw new Error(`${msg}: expected ${JSON.stringify(b)}, got ${JSON.stringify(a)}`);};\nconst ok=(v,msg)=>{if(!v) throw new Error(msg);};\neq(byId.c1.category,'amigos','c1 category');\neq(byId.c1.identity.email,'ana@example.com','c1 normalized email');\neq(byId.c1.missing_fields.length,0,'c1 missing');\neq(byId.c1.next_step,'human_review_quote_or_availability','c1 next step');\neq(byId.c2.category,'amigos','c2 category');\nok(byId.c2.missing_fields.includes('date'),'c2 must require date');\neq(byId.c2.next_step,'request_missing_data','c2 next step');\neq(byId.c3.category,'solo_actividad','c3 category');\neq(byId.c3.identity.phone,'+34600123456','c3 normalized phone');\neq(byId.c4.category,'revision','c4 ambiguous lodging negation');\neq(byId.c4.classification_review_required,true,'c4 review flag');\neq(byId.c4.next_step,'manual_classification_review','c4 next step');\neq(byId.c5.category,'empresa','c5 category');\nconst invalid=rows.find(r=>r.status==='validation_failed' && Array.isArray(r.errors) && r.errors.includes('missing_event_id'));\nok(!!invalid,'missing event_id case must be blocked');\nfor(const r of rows.filter(r=>r.ok)){\n  eq(r.followup.autonomous_send,false,`${r.event_id} autonomous send`);\n  ok(r.reply_draft.includes('no se ha enviado'),`${r.event_id} reply must disclose draft-only state`);\n}\nreturn [{json:{pass:true,cases:6,runtime:'n8n-code-node',autonomous_send:false}}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [760,0],
+      "id": "3bd56b77-67d1-4f56-8d24-001000000004",
+      "name": "Assert Runtime Results"
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {"main":[[{"node":"Synthetic Leads","type":"main","index":0}]]},
+    "Synthetic Leads": {"main":[[{"node":"Prepare Lead Review","type":"main","index":0}]]},
+    "Prepare Lead Review": {"main":[[{"node":"Assert Runtime Results","type":"main","index":0}]]}
+  },
+  "active": false,
+  "settings": {"executionOrder":"v1"},
+  "pinData": {},
+  "meta": {"nexiaEvidence":"synthetic-n8n-runtime-execution-no-credentials-no-external-send"}
+}
