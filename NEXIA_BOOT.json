@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "boot_version": 24,
+  "boot_version": 25,
   "generated_at": "2026-10-11T11:49:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
@@ -12,28 +12,25 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
-  "code_audit": "NEXIA_CODE_AUDIT_2026-10-11.md",
-  "integrity_check_report": "NEXIA_INTEGRITY_CHECK_2026-10-11.md",
-  "integrity_checker": "tools/nexia_integrity_check.py",
-  "integrity_checker_tests": "tools/test_nexia_integrity_check.py",
   "opportunity_selection_gate": "NEXIA_OPPORTUNITY_SELECTION_GATE_2026-10-11.md",
   "next_experiment_validation_pack": "NEXIA_EXP_AUTO_001_VALIDATION_PACK.md",
   "channel_legal_gate": "NEXIA_EXP_AUTO_001_CHANNEL_LEGAL_GATE.md",
   "capability_demo_report": "NEXIA_EXP_AUTO_001_CAPABILITY_DEMO_2026-10-11.md",
-  "capability_demo_code": "prototypes/lead-intake-reliability-demo.js",
-  "capability_demo_tests": "prototypes/test-lead-intake-reliability-demo.js",
+  "http_runtime_report": "NEXIA_EXP_AUTO_001_HTTP_RUNTIME_2026-10-11.md",
+  "http_runtime": "prototypes/http_runtime.js",
+  "http_runtime_tests": "prototypes/test_http_runtime.js",
+  "node_red_flow": "prototypes/node-red-exp-auto-001-flow.json",
+  "node_red_flow_validator": "prototypes/validate_node_red_flow.js",
   "last_verified_state_version": 61,
   "last_verified_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
   "active_experiment": {
     "id": "EXP-OPPORTUNITY-001",
     "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
-    "status": "SELECTION_GATE_COMPLETED_NEXT_EXPERIMENT_DESIGNED_CAPABILITY_DEMO_TESTED_MARKETPLACE_CHANNEL_NOT_YET_QUALIFIED",
+    "status": "SELECTION_GATE_COMPLETED_NEXT_EXPERIMENT_DESIGNED_HTTP_RUNTIME_TESTED_NODE_RED_PREPARED_NOT_EXECUTED_EXTERNALLY",
     "cost_eur": 0,
-    "primary_metric": "Valor esperado de beneficio neto sostenible, ajustado por evidencia, tiempo hasta validación, coste de aprendizaje, repetibilidad y riesgo",
     "participants": 0,
-    "target_participants": 3,
-    "constraints": "Solo investigación y preparación gratuitas; sin compras, cuentas, contactos externos, publicaciones ni compromisos sin autorización específica."
+    "constraints": "Sin compras, contactos externos, publicaciones, conexiones de cuenta ni gasto sin autorización específica."
   },
   "mission": {
     "id": "MISSION-OPPORTUNITY-ENGINE-001",
@@ -41,23 +38,32 @@
     "priority": "MAX",
     "cost_eur": 0,
     "human_action_required": false,
-    "status": "ACTIVE",
-    "reason": "Lead-intake reliability automation remains the selected candidate for validation, but current buyer-initiated marketplace samples do not yet satisfy both truthful-experience and unit-economics gates."
+    "status": "ACTIVE"
   },
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "status": "DESIGNED_CAPABILITY_DEMO_TESTED_NOT_EXTERNALLY_ACTIVATED",
+    "status": "DESIGNED_HTTP_RUNTIME_TESTED_NOT_EXTERNALLY_ACTIVATED",
     "offer_hypothesis_eur": 249,
-    "scope": "One inbound lead source -> one Sheet/CRM destination -> validation/deduplication -> internal notification -> safe acknowledgement step -> failure visibility -> testing -> handover",
-    "capability_demo": {
-      "runtime": "Node.js v22.16.0",
-      "first_run": "7/8 PASS; phone-country equivalence assumption failed safely during test",
-      "repair": "Phone local/international equivalence requires explicit defaultCountryCode; no implicit country guess",
-      "final_run": "9/9 PASS",
-      "external_integrations": "NONE",
+    "max_delivery_hours": 4,
+    "provisional_contribution_eur": 179,
+    "capability_evidence": {
+      "function_suite": "9/9 synthetic PASS",
+      "http_integration": "12/12 local HTTP integration PASS",
+      "node_red_flow_structure": "6/6 structural PASS",
+      "node_red_runtime": "NOT_EXECUTED",
       "client_production_experience_claimed": false
     }
+  },
+  "runtime_checkpoint": {
+    "node_version": "22.16.0",
+    "npm_version": "10.9.2",
+    "node_red_license": "Apache-2.0 according to official Node-RED documentation",
+    "node_red_install_status": "NOT_INSTALLED",
+    "node_red_install_attempt": "npm registry lookup timed out in current container",
+    "docker_status": "NOT_AVAILABLE",
+    "http_runtime_status": "EXECUTED_12_OF_12_PASS",
+    "node_red_flow_status": "PREPARED_STATICALLY_VALIDATED_NOT_RUNTIME_EXECUTED"
   },
   "channel_policy": {
     "spain_unsolicited_commercial_email": "NO_GO",
@@ -66,25 +72,22 @@
     "spend_authorized_eur": 0,
     "current_marketplace_gate_result": "0 current sampled opportunities satisfy all price/scope/truthfulness gates"
   },
-  "human_gate": "No purchase, external contact, proposal submission, account connection, commercial publication, paid listing, paid credits or metered browser execution without explicit approval. Unsolicited Spanish cold commercial email is NO-GO.",
-  "last_confirmed_action": "2026-10-11: built and locally executed a synthetic lead-intake reliability reference implementation. First suite returned 7/8 and exposed unsafe phone deduplication assumptions; repaired design then passed 9/9. GitHub readback verified persisted code/tests. Current buyer-initiated marketplace re-evaluation found zero sampled opportunities satisfying all economics, bounded-scope and truthful-experience gates. No proposal, client deployment or sale occurred.",
+  "human_gate": "No proposal submission, external contact, account connection, commercial publication, paid tool or spend without explicit approval. Unsolicited Spanish commercial cold email remains NO-GO.",
+  "last_confirmed_action": "2026-10-11: local HTTP runtime executed 12/12 PASS; an importable core-node Node-RED flow was prepared and structurally validated 6/6. Node-RED itself was not installed/executed because npm registry access timed out. No client deployment, proposal or sale occurred.",
   "integrity_warnings": [
-    "NEXIA_STATE.json v61 remains canonical until a later state update is safely written and read back.",
-    "NEXIA_MEMORY.md begins with a stale notice naming STATE v58 and contains stale early mission/status text. STATE wins.",
-    "EXP-AUTO-001 is a designed next experiment recorded after STATE v61; it is not yet externally activated.",
-    "The 9/9 result is synthetic Node.js reference-logic testing, not n8n/Make/GoHighLevel production experience.",
-    "Public buyer budgets are market signals, not Nexia willingness-to-pay, revenue or profit evidence."
+    "NEXIA_STATE.json v61 remains canonical.",
+    "NEXIA_MEMORY.md still begins with stale STATE v58 canonical text; STATE v61 wins.",
+    "HTTP 12/12 evidence is local synthetic integration, not client production experience.",
+    "Node-RED 6/6 evidence is structural validation only; actual import/deploy/runtime is NOT VERIFIED.",
+    "Public buyer budgets are signals, not Nexia revenue or willingness-to-pay evidence."
   ],
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
   "guardrail": "No spending, external contact, account connection, publication, irreversible action or material risk without Kael's explicit approval.",
-  "integrity_rule": "BOOT is an index, not an independent source of business truth. If it disagrees with NEXIA_STATE.json, STATE wins. Post-state checkpoints may be indexed explicitly without pretending STATE was advanced.",
-  "recovery_rule": "If STATE is unavailable or invalid, recover from the latest verified repository commit and event log; never treat a stale backup or MEMORY heading as newer than a verified state.",
-  "startup_rule": "On every new NEXIA session, inspect BOOT -> STATE -> LIVE -> MEMORY/RECENT EVENTS. Apply integrity warnings and post-state checkpoints before deciding the next safe action.",
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "updated_at": "2026-10-11",
-  "sync_status": "STATE_V61_CANONICAL_EXP_AUTO_001_CAPABILITY_DEMO_9_OF_9_MARKETPLACE_GATE_ZERO_QUALIFIED_EXTERNAL_VALIDATION_PENDING",
-  "next_action": "Continue zero-cost falsification by seeking buyer-initiated briefs with >=€249-equivalent economics, bounded inbound-lead scope and no unverifiable production-experience requirement; alternatively increase truthful platform-specific capability using a genuinely free local/open-source runtime before reassessing higher-value briefs."
+  "sync_status": "STATE_V61_CANONICAL_EXP_AUTO_001_HTTP_RUNTIME_12_OF_12_NODE_RED_FLOW_PREPARED_RUNTIME_UNVERIFIED",
+  "next_action": "Continue zero-cost buyer-initiated opportunity discovery in parallel. If a genuinely free Node-RED runtime becomes available, import the prepared flow and replay the HTTP tests. Do not spend solely to obtain runtime evidence."
 }
