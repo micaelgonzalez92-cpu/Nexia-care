@@ -5,7 +5,7 @@
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
   "state_version": 67,
-  "state_blob_sha": "f323bdfeac9d74c2792b567b633bce62b02d1cb4",
+  "state_blob_sha": "599eb1b2fe5f3760f4e2bd72bdef8fce8f56a56b",
   "mission": {
     "id": "MISSION-OPPORTUNITY-ENGINE-001"
   },
@@ -77,6 +77,6 @@
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "sync_status": "STATE_V67_FIRST_BIND_ACQUISITION_AND_AUTOMATIONS_RECONCILED_MEMORY_DERIVED_STALE",
+  "sync_status": "STATE_V67_FINAL_SHA_BOUND_ACQUISITION_AND_AUTOMATIONS_RECONCILED_MEMORY_DERIVED_STALE",
   "next_action": "Keep Control Tower daily Workana moderation sensing and the 6-hour fresh-opportunity worker active. On verified profile approval, recheck Huescaventura and submit the authorized 300 EUR proposal if still open and zero-spend."
 }
