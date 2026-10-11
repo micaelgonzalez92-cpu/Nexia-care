@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "version": 64,
+  "version": 65,
   "updated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables hasta superar 1000 EUR/mes de beneficio neto sostenible después de impuestos.",
@@ -228,11 +228,13 @@
     "calendar_month_reconciled_profit": "NOT_INSTRUMENTED_UNTIL_TRANSACTIONS_EXIST"
   },
   "system": {
-    "persistent_state": "CORE_EVOLUTION_VERIFIED_EVENT_STORAGE_V2_OPERATIONAL",
+    "persistent_state": "CORE_EVOLUTION_VERIFIED_EVENT_STORAGE_V2_OPERATIONAL_WITH_MEMORY_DERIVED_STALE",
     "canonical_source": "NEXIA_STATE.json",
     "boot_index": "NEXIA_BOOT.json",
     "live_state": "NEXIA_LIVE.json",
     "memory": "NEXIA_MEMORY.md",
+    "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
+    "memory_blob_sha_last_verified": "443137fd25747baa2c25a403b4ca47a38b6dee7a",
     "backup": "NEXIA_MASTER_BACKUP.md",
     "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
     "persistence_protocol_version": "2.0",
@@ -240,8 +242,8 @@
       "mode": "IMMUTABLE_EVENT_FILES_V2",
       "directory": "events/",
       "index": "NEXIA_EVENT_INDEX.json",
-      "index_verified_blob_sha_pre_v64": "754775400702ab77db46fcaeea8db4505ef301c6",
-      "latest_verified_event_id_pre_v64": "EVT-2026-10-11-EVOLVE-001",
+      "index_verified_blob_sha_pre_v65": "754775400702ab77db46fcaeea8db4505ef301c6",
+      "latest_verified_event_id_pre_v65": "EVT-2026-10-11-EVOLVE-001",
       "latest_verified_event_blob_sha": "fb278799714287c03f749990211b5c8d33a60ce5",
       "legacy_jsonl": "NEXIA_EVENT_LOG.jsonl",
       "legacy_jsonl_mode": "READ_ONLY",
@@ -279,20 +281,21 @@
   "last_verified_evolution": {
     "report": "NEXIA_EVOLUTION_2026-10-11.md",
     "report_blob_sha": "87346601cbe5856e7ad4049217ae3b78c8feeb33",
-    "backup_blob_sha_pre_v64": "f30bd249302c8f47df8e8569dfa3336f2bfa6fde",
+    "backup_blob_sha_v63": "f30bd249302c8f47df8e8569dfa3336f2bfa6fde",
     "result": "STATE_BOOT_LIVE_MEMORY_PIPELINE_PROTOCOL_EVENT_INDEX_EVENT_FILE_BACKUP_READBACK_VERIFIED_FOR_V63"
   },
-  "next_useful_action": "Continue zero-cost parallel work while the dedicated Workana sensor checks moderation once daily. Verify the first completed Nexia Parallel Work run before calling that worker runtime-proven. When Workana approval is verified, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend. Prefer a real free n8n runtime test over additional synthetic layers when available.",
+  "next_useful_action": "Continue zero-cost parallel work while Workana moderation is checked once daily. Do not retry the blocked MEMORY write until tool/security state changes; STATE remains canonical and MEMORY v63 content remains operationally compatible. Verify the first completed Nexia Parallel Work run before calling the worker runtime-proven. On Workana approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend.",
   "persistence_checkpoint": {
     "checkpoint_id": "CP-2026-10-11-EVOLVE-001",
-    "previous_state_version": 63,
-    "previous_state_blob_sha": "3b42b908e0e9bf9fb8e047d5f3c0ac52ef0a796f",
-    "current_state_version": 64,
-    "checkpoint_status": "VERIFIED_AFTER_DERIVED_SYNC",
+    "previous_state_version": 64,
+    "previous_state_blob_sha": "dc0c6bad4b1f32040c31ffe6f8c400cd370419a9",
+    "current_state_version": 65,
+    "checkpoint_status": "PARTIAL_DERIVED_SYNC_MEMORY_WRITE_BLOCKED",
     "event_storage_status": "OPERATIONAL_V2",
     "legacy_event_log_status": "READ_ONLY_PRESERVED",
+    "memory_sync_status": "BLOCKED_BY_TOOL_SAFETY_DO_NOT_BYPASS",
     "financial_impact_eur": 0,
     "authority_change": "NONE",
-    "note": "v64 closes canonical checkpoint metadata after successful readback of the v63 evolution set. BOOT/LIVE/MEMORY/BACKUP are synchronized immediately after this write before completion is reported."
+    "note": "Canonical STATE records the MEMORY write block truthfully. BOOT/LIVE/BACKUP are synchronized to v65 before completion is reported; MEMORY remains v63-derived and does not override STATE."
   }
 }
