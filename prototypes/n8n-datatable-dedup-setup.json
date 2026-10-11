@@ -1,0 +1,43 @@
+{
+  "id": "nexia-exp-auto-001-datatable-setup",
+  "name": "NEXIA EXP-AUTO-001 Data Table Dedup Setup",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0],
+      "id": "dt-setup-trigger",
+      "name": "Manual Trigger"
+    },
+    {
+      "parameters": {
+        "resource": "table",
+        "operation": "create",
+        "tableName": "nexia_exp_auto_001_dedup_proof",
+        "columns": {
+          "column": [
+            {"name": "eventKey", "type": "string"},
+            {"name": "identityKey", "type": "string"},
+            {"name": "recordId", "type": "string"}
+          ]
+        },
+        "options": {"createIfNotExists": true}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [280, 0],
+      "id": "dt-create-table",
+      "name": "Create Dedup Table"
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [[{"node": "Create Dedup Table", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {"executionOrder": "v1"},
+  "pinData": {},
+  "meta": {"nexiaEvidence": "native-n8n-data-table-setup-zero-external-credentials"}
+}
