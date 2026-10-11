@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "boot_version": 36,
+  "boot_version": 37,
   "generated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "canonical_state": "NEXIA_STATE.json",
-  "state_version": 63,
-  "state_blob_sha": "3b42b908e0e9bf9fb8e047d5f3c0ac52ef0a796f",
+  "state_version": 64,
+  "state_blob_sha": "dc0c6bad4b1f32040c31ffe6f8c400cd370419a9",
   "live_state": "NEXIA_LIVE.json",
   "learning_ledger": "NEXIA_MEMORY.md",
   "commercial_pipeline": "NEXIA_COMMERCIAL_PIPELINE.json",
@@ -16,61 +16,41 @@
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
     "index": "NEXIA_EVENT_INDEX.json",
-    "latest_event_id": "EVT-2026-10-11-EVOLVE-001",
-    "latest_event_path": "events/EVT-2026-10-11-EVOLVE-001.json",
+    "latest_verified_event_id": "EVT-2026-10-11-EVOLVE-001",
     "legacy_jsonl": "NEXIA_EVENT_LOG.jsonl",
     "legacy_jsonl_mode": "READ_ONLY",
     "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
-  "evolution_checkpoint": "NEXIA_EVOLUTION_2026-10-11.md",
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
-  "mission": {
-    "id": "MISSION-OPPORTUNITY-ENGINE-001",
-    "status": "ACTIVE"
-  },
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "stage": "VETA",
     "status": "PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4
   },
+  "commercial_pipeline_stage": "PROPOSAL_AUTHORIZED",
   "primary_opportunity": {
     "id": "WORKANA-HUESCAVENTURA-001",
     "platform": "Workana",
+    "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
+    "workana_profile": "CREATED_COMPLETE_REPORTED_APPROVAL_NOT_VERIFIED",
     "public_status": "OPEN / EVALUATING PROPOSALS",
     "public_status_verified_date": "2026-10-11",
-    "public_status_stale_after_hours": 24,
-    "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
-    "workana_profile": "CREATED_COMPLETE_REPORTED_APPROVAL_NOT_VERIFIED"
-  },
-  "commercial_pipeline_stage": "PROPOSAL_AUTHORIZED",
-  "capability_evidence": {
-    "generic_logic_suite": "9/9 PASS",
-    "local_http_integration": "12/12 PASS",
-    "huescaventura_domain_demo": "13/13 PASS",
-    "n8n_import_skeleton": "12/12 STRUCTURAL+CODE PASS",
-    "n8n_runtime": "NOT_EXECUTED"
+    "public_status_stale_after_hours": 24
   },
   "automation_architecture": {
     "active": 3,
     "paused": 6,
     "completed": 1,
-    "roles": [
-      "NEXIA Control Tower — daily",
-      "Nexia Parallel Work — every 4 hours",
-      "Workana Response Watch — daily"
-    ],
-    "memory_review_merged_into_control_tower": true,
-    "old_multiview_radar_disabled": true,
-    "workana_checked_only_by_daily_sensor": true,
-    "parallel_worker_runtime": "CONFIGURED_NOT_YET_VERIFIED_BY_FIRST_COMPLETED_RUN"
+    "control_tower": "DAILY",
+    "parallel_worker": "EVERY_4_HOURS_CONFIGURED_NOT_YET_RUNTIME_VERIFIED",
+    "workana_sensor": "DAILY_ONLY"
   },
-  "human_gate": "No immediate Kael action. One Huescaventura proposal at 300 EUR is already authorized after Workana approval is verified; no paid moderation/plans/credits or other external contact is authorized.",
+  "human_gate": "No immediate action. The one Huescaventura proposal at 300 EUR remains authorized after profile approval is verified and only if zero-spend.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "sync_status": "STATE_V63_EVENT_STORAGE_V2_ACTIVE_DERIVED_SYNC_IN_PROGRESS",
-  "next_action": "Verify STATE/BOOT/LIVE/MEMORY/event index/event file/backup alignment; then record a closure event. Continue safe parallel work while Workana is checked only once daily."
+  "sync_status": "STATE_V64_CANONICAL_DERIVED_SYNC_IN_PROGRESS",
+  "next_action": "Synchronize/read back LIVE, MEMORY and BACKUP to v64, then create immutable closure event. Afterwards continue safe parallel work and daily-only Workana monitoring."
 }
