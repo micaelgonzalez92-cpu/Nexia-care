@@ -1,6 +1,6 @@
 {
-  "version": 58,
-  "updated_at": "2026-10-10",
+  "version": 59,
+  "updated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables; ningún vehículo comercial queda preseleccionado.",
   "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
@@ -120,7 +120,7 @@
     "notifications": "NOT_CONNECTED",
     "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS_AND_SAFE_REPOSITORY_WORK",
     "deployment": "LEGACY_GITHUB_PAGES_PUBLIC_SURFACES_REMOVED; CURRENT_PUBLIC_HQ_NOT_HOSTED_ON_GITHUB_PAGES",
-    "floot": "AVAILABLE_IN_CURRENT_CONTEXT",
+    "floot": "CONNECTED_BUT_DAILY_QUOTA_BLOCKED_AT_LAST_CHECK",
     "continuity_layer": "ACTIVE",
     "continuity_source": "NEXIA_CONTINUITY.md",
     "session_independence": "DESIGNED"
@@ -207,7 +207,9 @@
       "live_must_report_same_operational_phase": true,
       "event_log_append_only": true,
       "master_backup_must_declare_state_version": true
-    }
+    },
+    "last_resilience_action": "2026-10-11: recovered canonical repository artifacts via GitHub connector; confirmed STATE v58 and BOOT v16 hash alignment; identified stale/incomplete derived-artifact reconciliation and a Floot daily quota block. No spend or external action.",
+    "next_resilience_action": "Complete sequential STATE -> BOOT -> LIVE -> EVENT_LOG -> MEMORY -> MASTER_BACKUP readback. Then resume synthetic-only SME intake test via an unmetered local/browser path if available; do not claim runtime validation before execution."
   },
   "automation_inventory": {
     "active": 3,
@@ -215,7 +217,7 @@
     "completed": 1,
     "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
   },
-  "next_useful_action": "Measure the local synthetic-data intake demo using a worksheet for manual time, assisted time, classification errors, correction time and outcome metrics. Do not contact prospects or use real customer information.",
+  "next_useful_action": "Reconcile derived persistence artifacts to STATE v59 and verify all hashes. Then continue the predeclared synthetic-only SME intake demo test using a genuinely free browser/local execution route; preserve the 20% median time-reduction gate and zero-critical-failure gate. Do not contact prospects or use real customer data.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
     "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
@@ -227,13 +229,14 @@
     "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
   },
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-10-CANONICAL-RECONCILIATION-001",
-    "previous_state_version": 56,
-    "current_state_version": 57,
-    "status": "CANONICAL_READBACK_VERIFIED_DERIVED_RECONCILIATION_IN_PROGRESS",
+    "checkpoint_id": "CP-2026-10-11-RESILIENCE-RECOVERY-001",
+    "previous_state_version": 58,
+    "current_state_version": 59,
+    "status": "STATE_WRITTEN_DERIVED_ARTIFACTS_PENDING_READBACK",
     "financial_impact_eur": 0,
     "human_gate_unchanged": true,
-    "note": "STATE v56 was written and read back; this follow-up corrects checkpoint metadata. Current mission and next action are aligned. BOOT/LIVE/EVENT_LOG/MASTER_BACKUP reconciliation and final readback remain in progress; this is not a full-sync declaration."
+    "previous_state_blob_sha": "1aaa6cc50782a47072db1ed453d018d4163c6dd5",
+    "note": "This checkpoint records a recovery audit in the current ChatGPT session. Canonical STATE was read before write. Derived BOOT/LIVE/EVENT_LOG/MEMORY/MASTER_BACKUP must be reconciled sequentially and read back before full sync may be claimed. Floot file operations were refused by daily quota at last check; GitHub connector remains usable. No spend, external contact, publication, account connection, customer data, revenue or profit."
   },
   "system_review": {
     "review_id": "SYS-REVIEW-2026-10-06-001",
@@ -613,5 +616,17 @@
       "paused_at": "2026-10-10",
       "reason": "Kael retiró la reventa vintage como misión principal. Se conserva la evidencia y el trabajo previo; no se autoriza compra ni se afirma que el experimento esté concluido."
     }
-  ]
+  ],
+  "last_verified_chat_action": {
+    "date": "2026-10-11",
+    "status": "CHAT_WORK_RECORDED_AS_RESEARCH_ONLY",
+    "action": "Compared three hypothetical SME digital service offers (4 short videos €99, 10 product listings €79, bounded automation €149) using illustrative labor/fee/VAT/tax assumptions. This does not validate demand or net profit.",
+    "evidence_level": "ESTIMATE_NOT_MARKET_VALIDATION",
+    "financial_impact_eur": 0,
+    "limitations": [
+      "Acquisition costs and overhead unknown",
+      "Tax proxy not tax advice",
+      "No buyer interviews, paid pilots, sales, or profit observed"
+    ]
+  }
 }
