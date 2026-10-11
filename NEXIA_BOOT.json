@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "boot_version": 22,
+  "boot_version": 23,
   "generated_at": "2026-10-11T11:49:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
@@ -18,6 +18,7 @@
   "integrity_checker_tests": "tools/test_nexia_integrity_check.py",
   "opportunity_selection_gate": "NEXIA_OPPORTUNITY_SELECTION_GATE_2026-10-11.md",
   "next_experiment_validation_pack": "NEXIA_EXP_AUTO_001_VALIDATION_PACK.md",
+  "channel_legal_gate": "NEXIA_EXP_AUTO_001_CHANNEL_LEGAL_GATE.md",
   "last_verified_state_version": 61,
   "last_verified_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
@@ -44,7 +45,7 @@
     "cost_eur": 0,
     "human_action_required": false,
     "status": "ACTIVE",
-    "reason": "Kael retiró la reventa vintage como misión principal. El radar comparativo ha seleccionado una sola candidata para el siguiente experimento, pero no existe validación comercial propia todavía."
+    "reason": "El radar comparativo ha seleccionado una sola candidata para el siguiente experimento, pero no existe validación comercial propia todavía."
   },
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
@@ -55,15 +56,20 @@
     "selection_reason": "Recent public buyer briefs show repeated lead/CRM automation demand and materially higher budgets than generic Shopify listing work; the route remains unvalidated for Nexia and competition is strong.",
     "human_gate": "External proposals/outreach, account connection, publication and spend require explicit Kael authorization."
   },
-  "human_gate": "No purchase, external contact, proposal submission, account connection, commercial publication, paid listing, paid credits or metered browser execution without explicit approval.",
-  "last_confirmed_action": "2026-10-11: EXP-OPPORTUNITY-001 selection gate compared lead automation, catalog QA, Higgsfield Earn and digital templates. Lead-intake reliability automation was selected only for the next validation experiment. EXP-AUTO-001 was designed with precommitted economics and validation thresholds; no outreach or sale occurred.",
+  "channel_policy": {
+    "spain_unsolicited_commercial_email": "NO_GO",
+    "reason": "LSSI Article 21 prohibits unsolicited promotional email/equivalent communications unless requested/expressly authorized, subject to the statutory prior-contract exception.",
+    "preferred_first_channel": "Buyer-initiated public briefs/RFPs or inbound/opt-in requests",
+    "first_batch_max": 5,
+    "spend_authorized_eur": 0
+  },
+  "human_gate": "No purchase, external contact, proposal submission, account connection, commercial publication, paid listing, paid credits or metered browser execution without explicit approval. Unsolicited Spanish cold commercial email is additionally NO-GO under the experiment's legal gate.",
+  "last_confirmed_action": "2026-10-11: EXP-OPPORTUNITY-001 selected lead-intake reliability automation for the next validation experiment; EXP-AUTO-001 was designed with precommitted economics. A legal/channel review then marked unsolicited Spanish commercial email NO-GO and prioritized buyer-initiated public briefs or inbound/opt-in channels. No outreach or sale occurred.",
   "post_state_repairs": [
-    "Added prototypes/sme-intake-core.js as the shared deterministic classifier.",
-    "Updated SME demo and harness so tests exercise the same input-based classifier instead of case IDs.",
-    "Neutralized NexaHQ, hq, NexaCare and care legacy routes instead of redirecting to missing/retired targets.",
-    "Completed GitHub readback of repaired executable/static files and continuity artifacts.",
+    "Repaired SME demo/test architecture and legacy routes.",
     "Added and unit-tested the read-only STATE/BOOT/LIVE integrity checker.",
-    "Completed the opportunity selection gate and prepared EXP-AUTO-001 validation material without external action."
+    "Completed the opportunity selection gate and prepared EXP-AUTO-001 validation material without external action.",
+    "Added NEXIA_EXP_AUTO_001_CHANNEL_LEGAL_GATE.md after verifying Spain LSSI Article 21 restrictions on unsolicited commercial email."
   ],
   "integrity_warnings": [
     "NEXIA_STATE.json v61 remains canonical until a later state update is safely written and read back.",
@@ -83,8 +89,8 @@
   "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; sustainable after-tax net profit is primary score; technical activity does not add points",
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "note": "BOOT v22 points to canonical STATE v61 and indexes the completed opportunity-selection checkpoint. Technical research and public market evidence do not constitute a sale.",
+  "note": "BOOT v23 points to canonical STATE v61 and indexes the completed selection, validation-pack and channel/legal checkpoints. No own sale has occurred.",
   "updated_at": "2026-10-11",
-  "sync_status": "STATE_V61_CANONICAL_SELECTION_GATE_INDEXED_EXP_AUTO_001_DESIGNED_HUMAN_GATE_PENDING",
-  "next_action": "Without external contact, continue prospect/channel qualification only. To begin EXP-AUTO-001 commercial validation, Kael must explicitly authorize a channel, a maximum first batch (recommended 5), the €249 pilot boundary, and any required account connection."
+  "sync_status": "STATE_V61_CANONICAL_EXP_AUTO_001_DESIGNED_CHANNEL_LEGAL_GATE_ACTIVE_HUMAN_GATE_PENDING",
+  "next_action": "Before any external validation, use buyer-initiated public briefs/RFPs or inbound/opt-in opportunities only. Kael must explicitly authorize a maximum first batch of 5 proposal submissions, the €249 pilot boundary and any required account connection or paid platform action."
 }
