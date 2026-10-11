@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-11",
+  "event_storage_mode": "IMMUTABLE_EVENT_FILES_V2",
+  "legacy_jsonl": {
+    "path": "NEXIA_EVENT_LOG.jsonl",
+    "mode": "READ_ONLY",
+    "boundary_blob_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
+  },
+  "event_directory": "events/",
+  "latest_event_id": "EVT-2026-10-11-EVOLVE-001",
+  "latest_event_path": "events/EVT-2026-10-11-EVOLVE-001.json",
+  "events": [
+    {
+      "event_id": "EVT-2026-10-11-EVOLVE-001",
+      "timestamp": "2026-10-11T16:20:00+02:00",
+      "type": "CORE_EVOLUTION_AND_EVENT_STORAGE_V2_ACTIVATION",
+      "state_version": 63,
+      "path": "events/EVT-2026-10-11-EVOLVE-001.json"
+    }
+  ],
+  "rule": "Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated."
+}
