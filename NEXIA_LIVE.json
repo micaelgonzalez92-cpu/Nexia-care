@@ -1,45 +1,63 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / RADAR — EXP-AUTO-001 HTTP RUNTIME 12/12; NODE-RED FLOW PREPARED; EXTERNAL VALIDATION GATED",
-  "current_cycle": "NEXIA Core — selected lead-intake reliability candidate; local runtime evidence strengthened without external action",
-  "current_action": "Local Node.js HTTP runtime executed 12/12 integration tests. Importable Node-RED flow prepared and structural validator executed 6/6. Node-RED runtime remains unverified because local npm registry access timed out; no paid route used.",
-  "last_completed_action": "2026-10-11: persisted/read back HTTP runtime, HTTP tests, Node-RED flow, structural validator and checkpoint report; BOOT advanced to v25 as derived index while STATE remains v61.",
-  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; HTTP runtime blob 15e31204fbdd25af33923414cbca645c1248b405; HTTP tests blob a7a5edcc5587fb8c9206b253978aa3f4727ca720; Node-RED flow blob 481fdbcd5dc9f76b67b7f3f65b51865023069d94; validator blob 9e9143ee9261b11759c9ae4734d7b5a91a6a8141; report blob bf10b0941726e1aa5b2db59f98d368812fb943d8.",
+  "status": "ACTIVE / RADAR — ONE QUALIFIED BUYER-INITIATED CANDIDATE FOUND; PROPOSAL READY; HUMAN GATE PENDING",
+  "current_cycle": "NEXIA Core — EXP-AUTO-001 commercial validation preparation; Huescaventura Workana candidate qualified",
+  "current_action": "Public marketplace scan identified one buyer-initiated opportunity that matches the bounded semiautomatic lead-intake scope and stated budget range. Workana channel economics were recomputed using the current 20% initial freelancer commission. A truthful 10-question proposal draft and €300 bounded-scope plan are prepared; nothing has been submitted.",
+  "last_completed_action": "2026-10-11: created/read back NEXIA_EXP_AUTO_001_HUESCAVENTURA_CANDIDATE_2026-10-11.md and indexed it in BOOT v26. Canonical STATE remains v61.",
+  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v26 SHA 0cbd0195870cedb9cad4680ed79cb411d8c89e47; Huescaventura candidate gate blob e44ba9c55788d4c428616229eb7a898eae749d46. Public Workana brief states €200-300 budget, semiautomatic human-reviewed phase, existing n8n self-hosted and Airtable intake; page showed one proposal and verified payment history at research time.",
   "capital_spent_eur": 0,
-  "human_gate": "No proposal submission, external contact, account connection, publication, paid runtime or spend without explicit approval. Spanish unsolicited commercial cold email remains NO-GO.",
+  "human_gate": "Explicit Kael authorization is required before submitting the Huescaventura Workana proposal, changing the channel price boundary to €300, using/creating a Workana freelancer account if necessary, or communicating with the buyer. No paid plan or spend is authorized.",
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "status": "DESIGNED_HTTP_RUNTIME_TESTED_NOT_EXTERNALLY_ACTIVATED",
-    "offer_hypothesis_eur": 249,
-    "max_delivery_hours": 4,
-    "provisional_contribution_eur": 179,
+    "status": "ONE_QUALIFIED_BUYER_INITIATED_OPPORTUNITY_PROPOSAL_NOT_SUBMITTED",
     "function_tests": "9/9 PASS",
     "http_integration_tests": "12/12 PASS",
     "node_red_structural_checks": "6/6 PASS",
     "node_red_runtime": "NOT_VERIFIED"
   },
+  "qualified_opportunity": {
+    "name": "Huescaventura Workana lead-automation first phase",
+    "qualification": "10/10 before channel-cost adjustment",
+    "buyer_budget_eur": "200-300",
+    "recommended_proposal_eur": 300,
+    "proposal_status": "DRAFT_NOT_SUBMITTED",
+    "economics": {
+      "workana_initial_commission": "20%",
+      "gross_eur": 300,
+      "after_platform_commission_eur": 240,
+      "labor_assumption_eur": 60,
+      "extra_variable_tooling_target_eur": 0,
+      "provisional_contribution_eur": 180,
+      "delivery_time_gate_hours": 4
+    }
+  },
+  "channel_policy": {
+    "spain_unsolicited_commercial_email": "NO_GO",
+    "buyer_initiated_workana_project": "PERMITTED_TO_PREPARE; SUBMISSION_REQUIRES_KAEL_AUTHORIZATION",
+    "workana_proposal_submission_public_cost": "FREE",
+    "workana_initial_freelancer_commission": "20% if hired under current official schedule"
+  },
   "parallel_work": [
     "STATE v61 remains canonical.",
-    "Local HTTP runtime now exercises actual request/response semantics and safe failure behavior.",
-    "Node-RED flow uses only core HTTP In / Function / HTTP Response nodes and no outbound send nodes.",
-    "Node-RED installation/runtime was not achieved because registry access timed out; no spend used.",
-    "Current sampled marketplace gate remains 0 fully qualified opportunities.",
-    "No own sale, settled revenue or profit exists yet."
+    "BOOT v26 indexes the Huescaventura post-state candidate checkpoint.",
+    "A Workana-specific €249 price fails the original contribution gate after the platform fee; €300 is the minimum viable point inside the buyer's stated range under <=4h and near-zero extra tooling assumptions.",
+    "The proposal draft explicitly discloses no prior client n8n production deployment and uses only verified local capability evidence.",
+    "No proposal, client contact, account connection, sale, settled revenue or profit has occurred."
   ],
-  "next_action": "Keep scanning buyer-initiated opportunities with >=€249-equivalent economics and truthful capability fit. Replay the prepared flow inside Node-RED only when a free runtime is actually available; do not block commercial discovery on it.",
+  "next_action": "Await Kael's explicit decision on the Huescaventura proposal. If authorized, submit only at the approved price/scope and stop if Workana requires an unapproved account action, paid plan or other spend. Until then continue free buyer-initiated discovery.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "revenue_eur": 0,
   "profit_eur": 0,
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "boot_version": 25,
-  "boot_blob_sha": "0944369b8f0990922d7cf369e50ec2cec60b9852",
+  "boot_version": 26,
+  "boot_blob_sha": "0cbd0195870cedb9cad4680ed79cb411d8c89e47",
   "current_blockers": [
-    "No current sampled buyer-initiated brief passes all economics/scope/truthfulness gates.",
+    "Huescaventura proposal submission is a Human Gate.",
+    "Workana account/profile availability and approval status are UNKNOWN in this session.",
     "Node-RED runtime has not been executed in this environment.",
-    "External proposal submission remains a Human Gate.",
     "NEXIA_MEMORY.md still has stale STATE v58 canonical text.",
-    "No real client deployment or platform-specific production evidence exists yet."
+    "No real client deployment or own willingness-to-pay evidence exists yet."
   ]
 }
