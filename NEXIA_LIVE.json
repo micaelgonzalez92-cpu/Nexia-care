@@ -1,12 +1,12 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / RADAR — WORKANA APPROVAL PENDING; HUESCAVENTURA OPEN; CHANNEL BENCHMARK COMPLETE",
-  "current_cycle": "NEXIA Core — EXP-AUTO-001 commercial validation; waiting for Workana moderation while preserving zero-cost acquisition discipline",
-  "current_action": "Connected Gmail was rechecked and still shows no Workana approval/rejection notification. Huescaventura remains open/evaluating proposals. Alternative public channels were scanned; no superior buyer-initiated brief with better verified scope/price/competition/channel economics was found. Malt competitor rates were captured only as market pricing evidence.",
-  "last_completed_action": "2026-10-11 13:51 CEST: persisted NEXIA_EXP_AUTO_001_CHANNEL_BENCHMARK_2026-10-11_1351.md and advanced BOOT to v30 while canonical STATE remains v61.",
-  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v30 SHA a473024d493189d2949e04a210b9d2360f03adfe; connected Gmail no Workana approval/rejection email at checkpoint; Huescaventura public page open/evaluating proposals; Malt visible n8n/automation daily rates span roughly €140-€400+ depending on profile/experience.",
+  "status": "ACTIVE / RADAR — WORKANA APPROVAL PENDING; HUESCAVENTURA OPEN; FRESH RADAR FOUND NO BETTER CANDIDATE",
+  "current_cycle": "NEXIA Core — EXP-AUTO-001 commercial validation while waiting for Workana moderation",
+  "current_action": "Connected Gmail was rechecked and no Workana approval/rejection notification was found. Huescaventura remains open/evaluating proposals. Fresh Workana alternatives were reviewed; the strongest alternatives require broader experience, higher-risk WhatsApp/clinic scope, or a different service category such as Meta Ads/GoHighLevel. No proposal was sent.",
+  "last_completed_action": "2026-10-11 14:00 CEST: persisted NEXIA_EXP_AUTO_001_RADAR_CHECK_2026-10-11_1400.md and advanced BOOT to v31 while canonical STATE remains v61.",
+  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v31 SHA cc68aad2754fbdf1d36eb4e870208982fe39ad3a; Gmail no Workana approval/rejection email at checkpoint; Huescaventura public page open/evaluating proposals; no newly scanned candidate displaced it.",
   "capital_spent_eur": 0,
-  "human_gate": "No immediate action required from Kael unless Workana requests a legitimate free profile correction. Paid Priority Moderation, plans, credits and other spend remain unauthorized. Huescaventura proposal at €300 remains authorized once profile approval is verified.",
+  "human_gate": "No immediate action required from Kael unless Workana requests a legitimate free profile correction. Paid moderation, plans, credits and other spend remain unauthorized. Huescaventura proposal at €300 remains authorized once profile approval is verified.",
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
@@ -22,43 +22,26 @@
     "public_status_last_verified": "OPEN / EVALUATING PROPOSALS",
     "buyer_budget_eur": "200-300",
     "authorized_proposal_eur": 300,
-    "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
-    "economics": {
-      "workana_initial_commission": "20%",
-      "gross_eur": 300,
-      "after_platform_commission_eur": 240,
-      "labor_assumption_eur": 60,
-      "extra_variable_tooling_target_eur": 0,
-      "provisional_contribution_eur": 180,
-      "delivery_time_gate_hours": 4
-    }
+    "proposal_status": "AUTHORIZED_NOT_SUBMITTED"
   },
   "workana_profile": {
     "account": "CREATED",
     "profile_completion": "REPORTED_COMPLETE_BY_KAEL",
     "approval": "NOT_VERIFIED_LIKELY_PENDING",
     "gmail_approval_email_found": false,
-    "submission_enabled": "NOT_VERIFIED",
     "priority_moderation": "NO_GO_WITHOUT_NEW_EXPLICIT_APPROVAL"
   },
-  "market_benchmark": {
-    "malt_visible_daily_rate_range_eur": "approximately 140-400+",
-    "huescaventura_price_assessment": "€300 fixed remains defensible; not willingness-to-pay proof",
-    "alternative_channel_result": "No superior public buyer-initiated brief found in this scan"
-  },
-  "execution_channel": {
-    "manual_workana_submission": "PENDING_PROFILE_APPROVAL",
-    "workana_connector": "NOT_AVAILABLE",
-    "native_web_form_submission": "NOT_AVAILABLE",
-    "dynamic_browser": "AVAILABLE_BUT_METERED_AND_NOT_AUTHORIZED",
-    "submission_cost_authorized_eur": 0
+  "latest_radar": {
+    "better_candidate_found": false,
+    "clinic_n8n_whatsapp": "NO_GO_FIRST_EXPERIMENT",
+    "meta_ads_gohighlevel": "NO_GO_DIFFERENT_SERVICE_CATEGORY",
+    "decision": "Huescaventura remains primary"
   },
   "parallel_work": [
     "STATE v61 remains canonical.",
-    "BOOT v30 indexes the channel benchmark and latest moderation check.",
-    "No Workana approval/rejection email was found in connected Gmail at this checkpoint.",
+    "BOOT v31 indexes latest moderation/radar check.",
     "Huescaventura remains open and authorized at €300 but not submitted.",
-    "No alternative channel currently provides stronger verified buyer-initiated evidence than Huescaventura.",
+    "No new buyer-initiated candidate currently beats Huescaventura on scope/risk/truthfulness.",
     "No client message, contract, sale, settled revenue or profit occurred."
   ],
   "next_action": "Continue selective zero-cost buyer-initiated discovery and check for Workana approval evidence. On approval, immediately recheck Huescaventura and submit the already-authorized €300 proposal manually if still open and no spend is required.",
@@ -67,14 +50,13 @@
   "profit_eur": 0,
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "boot_version": 30,
-  "boot_blob_sha": "a473024d493189d2949e04a210b9d2360f03adfe",
+  "boot_version": 31,
+  "boot_blob_sha": "cc68aad2754fbdf1d36eb4e870208982fe39ad3a",
   "current_blockers": [
     "Workana profile approval has not yet been verified.",
     "Huescaventura may close before approval; recheck immediately when moderation resolves.",
-    "No superior public buyer-initiated alternative channel was found in this scan.",
+    "No superior low-risk buyer-initiated alternative found in latest scan.",
     "No zero-cost authenticated Workana connector exists in this session.",
-    "NEXIA_MEMORY.md still has stale STATE v58 canonical text.",
     "No real client deployment or own willingness-to-pay evidence exists yet."
   ]
 }
