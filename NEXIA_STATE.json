@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "version": 63,
+  "version": 64,
   "updated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables hasta superar 1000 EUR/mes de beneficio neto sostenible después de impuestos.",
@@ -34,7 +34,7 @@
     "labor_rate_assumption_eur_per_hour": 15,
     "success_criteria": [
       "At least 2 qualified responses/conversations from at most 20 matched buyer-initiated applications/contacts when separately authorized",
-      "At least 1 paid pilot at >=249 EUR economic equivalent; Huescaventura proposal authorized at 300 EUR",
+      "At least 1 paid pilot at >=249 EUR economic equivalent",
       "Measured delivery <=4 hours including review, correction and handover",
       "Zero critical data-loss, duplicate-send, unauthorized-send or credential failures",
       "Buyer accepts deliverable after at most one bounded correction"
@@ -50,14 +50,13 @@
   "parallel_radar": {
     "id": "EXP-OPPORTUNITY-001",
     "status": "BACKGROUND_RESEARCH_ONLY",
-    "purpose": "Keep up to two research/falsification paths alive without displacing the single active monetization experiment unless stronger evidence appears.",
+    "max_parallel_research_paths": 2,
     "selected_primary": "EXP-AUTO-001"
   },
   "selected_offer": {
     "name": "Lead Intake Reliability Sprint",
-    "scope": [
-      "one existing inbound lead source",
-      "one Airtable/Sheet/CRM destination",
+    "bounded_scope": true,
+    "core_functions": [
       "required-field validation",
       "conservative duplicate handling",
       "classification",
@@ -96,6 +95,7 @@
   },
   "commercial_pipeline": {
     "artifact": "NEXIA_COMMERCIAL_PIPELINE.json",
+    "artifact_blob_sha": "92e53d402bf53987275b6d56e17586847a8907e2",
     "current_stage": "PROPOSAL_AUTHORIZED",
     "next_event": "WORKANA_PROFILE_APPROVAL_VERIFIED",
     "proposal_sent": false,
@@ -124,12 +124,12 @@
     "n8n_runtime_import_execution": "NOT_EXECUTED",
     "airtable_real_integration": "NOT_EXECUTED",
     "client_production_experience": "NONE_VERIFIED",
-    "truth_rule": "Technical synthetic/local evidence must never be presented as prior client production work."
+    "truth_rule": "Synthetic/local technical evidence is not prior client production work."
   },
   "human_gate": {
     "status": "NO_IMMEDIATE_ACTION_REQUIRED",
     "workana_proposal_authorized": true,
-    "authorized_scope": "One Huescaventura proposal at 300 EUR with the prepared bounded scope and zero submission spend after profile approval is verified.",
+    "authorized_scope": "One Huescaventura proposal at 300 EUR with prepared bounded scope and zero submission spend after Workana approval is verified.",
     "proposal_executed": false,
     "paid_moderation_authorized": false,
     "paid_plans_or_credits_authorized": false,
@@ -152,8 +152,7 @@
     "tinyfish_dynamic_browser": "AVAILABLE_BUT_METERED_NOT_AUTHORIZED",
     "crm": "NOT_CONNECTED",
     "payments": "NOT_CONNECTED",
-    "analytics": "NOT_CONNECTED",
-    "security_rule": "Prefer OAuth/official connectors; never request raw passwords or secrets in chat."
+    "analytics": "NOT_CONNECTED"
   },
   "automation_inventory": {
     "active": 3,
@@ -170,7 +169,7 @@
       {
         "name": "Nexia Parallel Work",
         "cadence": "EVERY_4_HOURS",
-        "status": "ACTIVE_CONFIGURED_NOT_YET_RUN_AFTER_CREATION",
+        "status": "ACTIVE_CONFIGURED_NOT_YET_RUNTIME_VERIFIED",
         "role": "safe zero-cost highest-value worker",
         "workana_check": false
       },
@@ -180,28 +179,26 @@
         "status": "ACTIVE_EXECUTED_ONCE",
         "role": "Workana moderation sensor",
         "last_verified_result": "NO_APPROVAL_OR_REJECTION_FOUND",
-        "push_notification_delivery": "NOT_INSTRUMENTED"
+        "notification_delivery": "NOT_INSTRUMENTED"
       }
     ],
-    "consolidation_2026_10_11": [
-      "NEXIA Memory Review disabled; memory review merged into Control Tower",
-      "Radar multivía Nexia disabled; discovery folded into dynamic worker",
-      "Parallel worker no longer checks Workana/Gmail, respecting daily-only moderation check"
+    "disabled_redundant": [
+      "NEXIA Memory Review",
+      "Radar multivía Nexia"
     ]
   },
   "wip_policy": {
     "max_active_monetization_experiments": 1,
     "max_parallel_research_paths": 2,
     "current_active_monetization_experiments": 1,
-    "current_primary_experiment": "EXP-AUTO-001",
-    "rule": "New paths may remain in radar but do not consume deep build work until evidence beats the active monetization experiment."
+    "current_primary_experiment": "EXP-AUTO-001"
   },
   "evidence_freshness_policy": {
     "public_project_status_hours": 24,
     "marketplace_fee_or_policy_days": 7,
     "competitor_price_days": 7,
     "legal_or_regulatory_source_days": 30,
-    "material_action_rule": "Reverify even non-expired evidence immediately before a material external action when practical.",
+    "material_action_rule": "Reverify even non-expired evidence before material external action when practical.",
     "stale_state": "STALE_RECHECK_REQUIRED"
   },
   "nexia_score": {
@@ -231,7 +228,7 @@
     "calendar_month_reconciled_profit": "NOT_INSTRUMENTED_UNTIL_TRANSACTIONS_EXIST"
   },
   "system": {
-    "persistent_state": "ACTIVE_EVENT_STORAGE_V2_MIGRATION",
+    "persistent_state": "CORE_EVOLUTION_VERIFIED_EVENT_STORAGE_V2_OPERATIONAL",
     "canonical_source": "NEXIA_STATE.json",
     "boot_index": "NEXIA_BOOT.json",
     "live_state": "NEXIA_LIVE.json",
@@ -243,10 +240,12 @@
       "mode": "IMMUTABLE_EVENT_FILES_V2",
       "directory": "events/",
       "index": "NEXIA_EVENT_INDEX.json",
+      "index_verified_blob_sha_pre_v64": "754775400702ab77db46fcaeea8db4505ef301c6",
+      "latest_verified_event_id_pre_v64": "EVT-2026-10-11-EVOLVE-001",
+      "latest_verified_event_blob_sha": "fb278799714287c03f749990211b5c8d33a60ce5",
       "legacy_jsonl": "NEXIA_EVENT_LOG.jsonl",
       "legacy_jsonl_mode": "READ_ONLY",
-      "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72",
-      "next_event_path": "events/EVT-2026-10-11-EVOLVE-001.json"
+      "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
     },
     "continuity_layer": "ACTIVE",
     "public_hq": "NOT_DEPLOYED_CURRENTLY",
@@ -277,17 +276,23 @@
     "delonghi_affiliate": "PAUSED",
     "ai_influencer": "RADAR_ONLY_NO_PAID_GENERATION_OR_PUBLICATION_AUTHORIZED"
   },
-  "next_useful_action": "Finish Event Storage v2 by creating the immutable evolve event and event index, then synchronize BOOT/LIVE/MEMORY/BACKUP to STATE v63. After verification, continue zero-cost parallel work while Workana moderation is checked only by the dedicated daily sensor.",
+  "last_verified_evolution": {
+    "report": "NEXIA_EVOLUTION_2026-10-11.md",
+    "report_blob_sha": "87346601cbe5856e7ad4049217ae3b78c8feeb33",
+    "backup_blob_sha_pre_v64": "f30bd249302c8f47df8e8569dfa3336f2bfa6fde",
+    "result": "STATE_BOOT_LIVE_MEMORY_PIPELINE_PROTOCOL_EVENT_INDEX_EVENT_FILE_BACKUP_READBACK_VERIFIED_FOR_V63"
+  },
+  "next_useful_action": "Continue zero-cost parallel work while the dedicated Workana sensor checks moderation once daily. Verify the first completed Nexia Parallel Work run before calling that worker runtime-proven. When Workana approval is verified, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend. Prefer a real free n8n runtime test over additional synthetic layers when available.",
   "persistence_checkpoint": {
     "checkpoint_id": "CP-2026-10-11-EVOLVE-001",
-    "previous_state_version": 62,
-    "previous_state_blob_sha": "8a51ab4d9a4a25a7bc86c241ce9e18f32d5a78e4",
-    "current_state_version": 63,
-    "checkpoint_status": "EVENT_STORAGE_V2_ACTIVATED_PENDING_EVENT_FILE_AND_DERIVED_SYNC",
-    "backup_sync_status": "PENDING",
-    "latest_event_status": "PENDING_CREATE_IMMUTABLE_EVENT_FILE",
+    "previous_state_version": 63,
+    "previous_state_blob_sha": "3b42b908e0e9bf9fb8e047d5f3c0ac52ef0a796f",
+    "current_state_version": 64,
+    "checkpoint_status": "VERIFIED_AFTER_DERIVED_SYNC",
+    "event_storage_status": "OPERATIONAL_V2",
+    "legacy_event_log_status": "READ_ONLY_PRESERVED",
     "financial_impact_eur": 0,
     "authority_change": "NONE",
-    "note": "STATE v63 activates immutable per-event files because the connector has no safe native append for the legacy JSONL. Legacy JSONL remains read-only and preserved at its verified boundary SHA."
+    "note": "v64 closes canonical checkpoint metadata after successful readback of the v63 evolution set. BOOT/LIVE/MEMORY/BACKUP are synchronized immediately after this write before completion is reported."
   }
 }
