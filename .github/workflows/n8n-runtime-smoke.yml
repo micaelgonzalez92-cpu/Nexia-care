@@ -6,6 +6,7 @@ on:
       - '.github/workflows/n8n-runtime-smoke.yml'
       - 'prototypes/n8n-huescaventura-intake-demo.json'
       - 'prototypes/n8n-huescaventura-runtime-fixture.json'
+      - 'prototypes/n8n-persistent-dedup-proof.json'
 
 permissions:
   contents: read
@@ -62,3 +63,106 @@ jobs:
           grep -Eq '"cases"[[:space:]]*:[[:space:]]*6' "$N8N_EXEC_OUTPUT"
           grep -Eq '"runtime"[[:space:]]*:[[:space:]]*"n8n-code-node"' "$N8N_EXEC_OUTPUT"
           echo 'PASS: EXP-AUTO-001 logic executed inside n8n runtime with 6 asserted synthetic cases'
+
+      - name: Prove persistent idempotency and identity deduplication across n8n executions and restart
+        env:
+          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-persist-user
+          N8N_PORT: '5678'
+          N8N_HOST: '127.0.0.1'
+          N8N_PROTOCOL: 'http'
+          N8N_SECURE_COOKIE: 'false'
+          N8N_DIAGNOSTICS_ENABLED: 'false'
+          N8N_PERSONALIZATION_ENABLED: 'false'
+          N8N_LOG: ${{ runner.temp }}/n8n-persist.log
+          BASE_URL: http://127.0.0.1:5678
+        run: |
+          set -euo pipefail
+          mkdir -p "$N8N_USER_FOLDER"
+          npx --yes n8n@2.42.6 import:workflow --input=prototypes/n8n-persistent-dedup-proof.json
+          npx --yes n8n@2.42.6 publish:workflow --id=nexia-exp-auto-001-persistent-dedup
+
+          start_n8n() {
+            : > "$N8N_LOG"
+            npx --yes n8n@2.42.6 start >> "$N8N_LOG" 2>&1 &
+            N8N_PID=$!
+            for i in $(seq 1 60); do
+              if curl -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then
+                return 0
+              fi
+              sleep 1
+            done
+            cat "$N8N_LOG"
+            return 1
+          }
+
+          stop_n8n() {
+            if kill -0 "$N8N_PID" >/dev/null 2>&1; then
+              kill "$N8N_PID" || true
+              wait "$N8N_PID" || true
+            fi
+          }
+
+          post() {
+            curl -fsS -X POST "$BASE_URL/webhook/nexia-exp-auto-001-persistent-dedup" \
+              -H 'Content-Type: application/json' \
+              --data "$1"
+          }
+
+          trap 'stop_n8n || true' EXIT
+          start_n8n
+
+          post '{"event_id":"p1","email":"Persist@Test.Example"}' > "$RUNNER_TEMP/persist-a.json"
+          sleep 1
+          post '{"event_id":"p1","email":"persist@test.example"}' > "$RUNNER_TEMP/persist-b.json"
+          sleep 1
+          post '{"event_id":"p2","email":"PERSIST@test.example"}' > "$RUNNER_TEMP/persist-c.json"
+          sleep 1
+          post '{"event_id":"p3","phone":"+34 600 999 111"}' > "$RUNNER_TEMP/persist-d.json"
+          sleep 1
+          post '{"event_id":"p4","phone":"+34 600 999 111"}' > "$RUNNER_TEMP/persist-e.json"
+
+          node <<'NODE'
+          const assert = require('node:assert/strict');
+          const fs = require('node:fs');
+          const read = name => JSON.parse(fs.readFileSync(`${process.env.RUNNER_TEMP}/${name}`, 'utf8'));
+          const a = read('persist-a.json');
+          const b = read('persist-b.json');
+          const c = read('persist-c.json');
+          const d = read('persist-d.json');
+          const e = read('persist-e.json');
+          assert.equal(a.status, 'created');
+          assert.equal(a.record_id, 'lead_0001');
+          assert.equal(b.status, 'idempotent_skip');
+          assert.equal(b.record_id, a.record_id);
+          assert.equal(c.status, 'duplicate_identity_skip');
+          assert.equal(c.record_id, a.record_id);
+          assert.equal(c.duplicate_key, 'email:persist@test.example');
+          assert.equal(d.status, 'created');
+          assert.equal(d.record_id, 'lead_0002');
+          assert.equal(e.status, 'duplicate_identity_skip');
+          assert.equal(e.record_id, d.record_id);
+          for (const row of [a,b,c,d,e]) assert.equal(row.autonomous_send, false);
+          assert.equal(new Set([a,b,c,d,e].map(x => x.execution_id)).size, 5, 'each request must be a separate n8n execution');
+          console.log('PASS: persistent dedup state observed across five separate webhook executions');
+          NODE
+
+          BEFORE_IDS=$(node -e "const fs=require('fs'); console.log(['a','b','c','d','e'].map(x=>JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/persist-'+x+'.json')).execution_id).join(','))")
+
+          stop_n8n
+          sleep 2
+          start_n8n
+          post '{"event_id":"p5","email":"persist@test.example"}' > "$RUNNER_TEMP/persist-after-restart.json"
+
+          BEFORE_IDS="$BEFORE_IDS" node <<'NODE'
+          const assert = require('node:assert/strict');
+          const fs = require('node:fs');
+          const row = JSON.parse(fs.readFileSync(`${process.env.RUNNER_TEMP}/persist-after-restart.json`, 'utf8'));
+          assert.equal(row.status, 'duplicate_identity_skip');
+          assert.equal(row.record_id, 'lead_0001');
+          assert.equal(row.duplicate_key, 'email:persist@test.example');
+          assert.equal(row.autonomous_send, false);
+          assert.ok(!process.env.BEFORE_IDS.split(',').includes(String(row.execution_id)), 'restart request must be a new execution');
+          console.log('PASS: deduplication state survived an n8n process restart');
+          NODE
+
+          echo 'PASS: PERSISTENT_DEDUP_IDEMPOTENCY verified across separate executions and process restart'
