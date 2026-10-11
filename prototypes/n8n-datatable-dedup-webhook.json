@@ -68,7 +68,19 @@
         "resource": "row",
         "operation": "insert",
         "dataTableId": {"__rl": true, "value": "nexia_exp_auto_001_dedup_proof", "mode": "name"},
-        "columns": {"mappingMode": "autoMapInputData", "value": {}},
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "eventKey": "={{ $json.eventKey }}",
+            "identityKey": "={{ $json.identityKey }}",
+            "recordId": "={{ $json.recordId }}"
+          },
+          "schema": [
+            {"id": "eventKey", "displayName": "eventKey", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "identityKey", "displayName": "identityKey", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "recordId", "displayName": "recordId", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true}
+          ]
+        },
         "options": {}
       },
       "type": "n8n-nodes-base.dataTable",
