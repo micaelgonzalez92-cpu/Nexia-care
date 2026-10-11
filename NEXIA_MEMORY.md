@@ -374,3 +374,11 @@ Created and read back `prototypes/sme-intake-demo.html`, a static local demo wit
 - Nexia HQ auxiliary project Floot file created and read back: static/NEXIA_CHAT_PROGRESS_2026-10-11.md. Checkpoint created: 39ff1d33-1b42-4d8f-bcdd-cd6e95cb12d8. This is not a replacement for canonical state.
 - Canonical mission remains STATE v58: MISSION-OPPORTUNITY-ENGINE-001 / EXP-OPPORTUNITY-001, comparing at least three low-cost opportunities and selecting at most one only after evidence/falsification. The affiliate idea remains a candidate, not an approved active experiment. No mission switch is made by this addendum.
 - Next mission-aligned action remains: measure the local synthetic-data SME intake prototype using synthetic cases, recording manual time, assisted time, classification errors, correction time and outcomes. Do not use real customer data or contact prospects without authorization.
+
+
+## SME demo static audit — 2026-10-11
+- Created and read back `NEXIA_SME_DEMO_STATIC_AUDIT_2026-10-11.md` (blob SHA `464dffafb8e51458ae32c1ff7e5602434c037f04`).
+- Ran eight source-level assertions against `prototypes/sme-intake-demo.html`: 8/8 passed. This is a static source audit only; no browser execution, functional test, timing trial, user study, or commercial validation occurred.
+- Main gaps: only three fixed dropdown cases; no free-text input, timing telemetry, automated runtime assertions, or coverage for T04–T08 adversarial cases. Manual/assisted time, correction rates, quality, demand and economics remain UNKNOWN / NOT INSTRUMENTED.
+- Provisional gate documented before measurement: zero critical safety failures, no material quality degradation, and at least 20% median end-to-end time reduction including review/corrections. T04–T08 are designed only and cannot be counted as passed.
+- Next safe step: build a minimal synthetic-only test harness and run it in a browser. Cost €0; no external contact, publication, account connection, or customer data.
