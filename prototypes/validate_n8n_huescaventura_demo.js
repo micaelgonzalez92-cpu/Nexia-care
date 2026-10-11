@@ -1,0 +1,20 @@
+'use strict';
+const fs=require('fs'); const vm=require('vm'); const assert=require('node:assert/strict');
+const path=process.argv[2]||'prototypes/n8n-huescaventura-intake-demo.json';
+const w=JSON.parse(fs.readFileSync(path,'utf8')); const tests=[]; const t=(n,f)=>tests.push([n,f]);
+const names=w.nodes.map(n=>n.name), ids=w.nodes.map(n=>n.id);
+t('workflow inactive by default',()=>assert.equal(w.active,false));
+t('unique node names and ids',()=>{assert.equal(new Set(names).size,names.length);assert.equal(new Set(ids).size,ids.length)});
+t('expected three-node chain',()=>assert.deepEqual(w.nodes.map(n=>n.type),['n8n-nodes-base.webhook','n8n-nodes-base.code','n8n-nodes-base.respondToWebhook']));
+t('webhook is POST responseNode',()=>{const n=w.nodes[0];assert.equal(n.parameters.httpMethod,'POST');assert.equal(n.parameters.responseMode,'responseNode')});
+t('all connection targets exist',()=>{for(const [src,o] of Object.entries(w.connections)){assert.ok(names.includes(src));for(const branch of o.main||[])for(const edge of branch)assert.ok(names.includes(edge.node));}});
+t('no credentials embedded',()=>{for(const n of w.nodes)assert.equal(Object.hasOwn(n,'credentials'),false)});
+t('no outbound send/network action nodes',()=>{const banned=['httpRequest','sendEmail','gmail','telegram','whatsApp','twilio','slack','airtable'];for(const n of w.nodes)for(const b of banned)assert.equal(n.type.toLowerCase().includes(b.toLowerCase()),false,`${n.name} includes ${b}`)});
+const codeNode=w.nodes.find(n=>n.type==='n8n-nodes-base.code');
+function run(body){const sandbox={$input:{all:()=>[{json:{body}}]}}; vm.createContext(sandbox); return new vm.Script(`(()=>{${codeNode.parameters.jsCode}})()`).runInContext(sandbox);}
+t('valid despedida produces human-review draft only',()=>{const r=run({event_id:'x1',name:'Ana',email:'ANA@example.com',date:'2026-11-01',people:'8',activities:'rafting',message:'despedida de soltero'})[0].json;assert.equal(r.category,'despedida');assert.equal(r.followup.autonomous_send,false);assert.match(r.reply_draft,/no se ha enviado/i)});
+t('ambiguous input requires manual classification',()=>{const r=run({event_id:'x2',name:'Luis',phone:'+34600000111',message:'consulta especial'})[0].json;assert.equal(r.category,'revision');assert.equal(r.classification_review_required,true);assert.equal(r.next_step,'manual_classification_review')});
+t('missing data uses Spanish labels',()=>{const r=run({event_id:'x3',name:'Eva',email:'e@x.com',people:'4',activities:'rafting',message:'familia con niños'})[0].json;assert.ok(r.missing_fields.includes('date'));assert.match(r.reply_draft,/fecha/)});
+t('invalid contact blocked',()=>{const r=run({event_id:'x4',name:'Eva',message:'familia'})[0].json;assert.equal(r.ok,false);assert.deepEqual(Array.from(r.errors),['missing_name_or_contact'])});
+t('explicit persistence limitation is exposed',()=>{const r=run({event_id:'x5',name:'Ana',email:'a@x.com',date:'2026-11-01',people:'8',activities:'rafting',message:'grupo de amigos'})[0].json;assert.match(r.persistence_note,/deduplication\/idempotency persistence/i)});
+let pass=0;for(const [n,f] of tests){try{f();console.log('PASS',n);pass++;}catch(e){console.error('FAIL',n,e.message)}}console.log(`${pass}/${tests.length} checks passed`);process.exitCode=pass===tests.length?0:1;
