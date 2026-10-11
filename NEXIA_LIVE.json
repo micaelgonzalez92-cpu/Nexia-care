@@ -1,16 +1,16 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / RADAR — HUESCAVENTURA AUTHORIZED; NOT SUBMITTED; ZERO-COST EXECUTION CHANNEL BLOCKED",
-  "current_cycle": "NEXIA Core — EXP-AUTO-001 commercial validation; first proposal authorized but not executable from current zero-cost toolset",
-  "current_action": "Kael authorized one Huescaventura Workana proposal at €300 with the prepared bounded scope and no spend. The project was reverified open. No Workana connector is available, native web search cannot submit authenticated forms, and the available dynamic browser route is metered, so no proposal was sent.",
-  "last_completed_action": "2026-10-11 12:51 CEST: persisted final Huescaventura proposal text and submission blocker; BOOT advanced to v28 as derived index while canonical STATE remains v61.",
-  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v28 SHA ff31253979d29423a17d228dac2d3d4d224b9624; submission checkpoint persisted in NEXIA_EXP_AUTO_001_HUESCAVENTURA_SUBMISSION_BLOCKED_2026-10-11.md; public Workana project reverified OPEN / EVALUATING PROPOSALS immediately before attempted execution.",
+  "status": "ACTIVE / RADAR — WORKANA PROFILE COMPLETE REPORTED; APPROVAL PENDING; HUESCAVENTURA AUTHORIZED NOT SUBMITTED",
+  "current_cycle": "NEXIA Core — EXP-AUTO-001 commercial validation; Workana profile created/completed and awaiting moderation evidence",
+  "current_action": "Kael reports the Workana freelancer profile is fully created. Official Workana guidance confirms proposal submission requires profile approval. Connected Gmail contains onboarding mail but no approval/rejection notification yet, so Huescaventura remains authorized at €300 but cannot be treated as submitted or currently submit-capable.",
+  "last_completed_action": "2026-10-11 13:51 CEST: persisted NEXIA_WORKANA_PROFILE_STATUS_2026-10-11.md; BOOT advanced to v29 while canonical STATE remains v61.",
+  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v29 SHA d275187ceb3650f0481f2aad42b96d89c684ed9b; Workana profile completion reported by Kael; Gmail searched for Workana moderation/approval messages and none was found at this checkpoint; official Workana help says approved profiles can submit proposals and standard moderation is usually 15-30 days.",
   "capital_spent_eur": 0,
-  "human_gate": "Commercial authorization has been granted for this one €300 proposal. The remaining action is operational: manual Workana submission from an already available account if zero spend must be preserved. New account creation, paid plans, credits and metered browser use remain unauthorized.",
+  "human_gate": "No immediate action required from Kael unless Workana requests a legitimate free profile correction. Paid Priority Moderation, plans, credits and other spend remain unauthorized. Huescaventura proposal at €300 remains authorized once profile approval is verified.",
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "status": "HUESCAVENTURA_PROPOSAL_AUTHORIZED_NOT_SUBMITTED",
+    "status": "HUESCAVENTURA_PROPOSAL_AUTHORIZED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
     "authorized_price_eur": 300,
     "function_tests": "9/9 PASS",
     "http_integration_tests": "12/12 PASS",
@@ -19,7 +19,7 @@
   },
   "qualified_opportunity": {
     "name": "Huescaventura Workana lead-automation first phase",
-    "public_status": "OPEN / EVALUATING PROPOSALS",
+    "public_status_last_verified": "OPEN / EVALUATING_PROPOSALS",
     "buyer_budget_eur": "200-300",
     "authorized_proposal_eur": 300,
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
@@ -33,31 +33,41 @@
       "delivery_time_gate_hours": 4
     }
   },
+  "workana_profile": {
+    "account": "CREATED",
+    "profile_completion": "REPORTED_COMPLETE_BY_KAEL",
+    "approval": "NOT_VERIFIED_LIKELY_PENDING",
+    "gmail_approval_email_found": false,
+    "submission_enabled": "NOT_VERIFIED",
+    "priority_moderation": "NO_GO_WITHOUT_NEW_EXPLICIT_APPROVAL"
+  },
   "execution_channel": {
+    "manual_workana_submission": "PENDING_PROFILE_APPROVAL",
     "workana_connector": "NOT_AVAILABLE",
     "native_web_form_submission": "NOT_AVAILABLE",
     "dynamic_browser": "AVAILABLE_BUT_METERED_AND_NOT_AUTHORIZED",
-    "submission_cost_authorized_eur": 0,
-    "result": "BLOCKED_WITHOUT_SPEND"
+    "submission_cost_authorized_eur": 0
   },
   "parallel_work": [
     "STATE v61 remains canonical.",
-    "BOOT v28 indexes authorization and the zero-cost execution blocker.",
-    "Final proposal text is ready for manual Workana submission.",
-    "No proposal, client message, contract, sale, settled revenue or profit occurred.",
-    "Nexia may continue free buyer-initiated discovery while awaiting manual submission evidence."
+    "BOOT v29 indexes Workana profile completion and pending moderation.",
+    "No Workana approval/rejection email was found in connected Gmail at this checkpoint.",
+    "Huescaventura remains authorized at €300 but has not been submitted.",
+    "No client message, contract, sale, settled revenue or profit occurred.",
+    "Nexia can continue free buyer-initiated discovery while waiting for profile approval."
   ],
-  "next_action": "Kael can submit the prepared €300 proposal manually from Workana using an already available account. After confirmation, Nexia should record the proposal as SENT and begin response monitoring only through authorized/connected channels.",
-  "rule": "Sin gasto, sin cuentas nuevas, sin planes de pago, sin ampliar alcance/precio y sin inventar ejecución.",
+  "next_action": "Wait for verifiable Workana approval evidence while continuing free opportunity discovery. On approval, recheck Huescaventura immediately and submit the already-authorized €300 proposal manually if still open and no spend is required.",
+  "rule": "Sin gasto, sin moderación prioritaria, sin planes de pago, sin ampliar alcance/precio y sin inventar aprobación o envío.",
   "revenue_eur": 0,
   "profit_eur": 0,
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "boot_version": 28,
-  "boot_blob_sha": "ff31253979d29423a17d228dac2d3d4d224b9624",
+  "boot_version": 29,
+  "boot_blob_sha": "d275187ceb3650f0481f2aad42b96d89c684ed9b",
   "current_blockers": [
-    "No zero-cost authenticated Workana submission channel is available from this session.",
-    "Workana account/profile availability and approval status remain UNKNOWN to Nexia.",
+    "Workana profile approval has not yet been verified.",
+    "Huescaventura may close before approval; recheck immediately when moderation resolves.",
+    "No zero-cost authenticated Workana connector exists in this session.",
     "NEXIA_MEMORY.md still has stale STATE v58 canonical text.",
     "No real client deployment or own willingness-to-pay evidence exists yet."
   ]
