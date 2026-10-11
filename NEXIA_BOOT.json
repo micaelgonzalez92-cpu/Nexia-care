@@ -1,17 +1,27 @@
 {
   "schema_version": 2,
-  "boot_version": 35,
+  "boot_version": 36,
   "generated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "canonical_state": "NEXIA_STATE.json",
-  "state_version": 62,
-  "state_blob_sha": "8a51ab4d9a4a25a7bc86c241ce9e18f32d5a78e4",
+  "state_version": 63,
+  "state_blob_sha": "3b42b908e0e9bf9fb8e047d5f3c0ac52ef0a796f",
   "live_state": "NEXIA_LIVE.json",
   "learning_ledger": "NEXIA_MEMORY.md",
   "commercial_pipeline": "NEXIA_COMMERCIAL_PIPELINE.json",
   "portable_backup": "NEXIA_MASTER_BACKUP.md",
-  "event_log": "NEXIA_EVENT_LOG.jsonl",
+  "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
+  "persistence_protocol_version": "2.0",
+  "event_storage": {
+    "mode": "IMMUTABLE_EVENT_FILES_V2",
+    "index": "NEXIA_EVENT_INDEX.json",
+    "latest_event_id": "EVT-2026-10-11-EVOLVE-001",
+    "latest_event_path": "events/EVT-2026-10-11-EVOLVE-001.json",
+    "legacy_jsonl": "NEXIA_EVENT_LOG.jsonl",
+    "legacy_jsonl_mode": "READ_ONLY",
+    "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
+  },
   "evolution_checkpoint": "NEXIA_EVOLUTION_2026-10-11.md",
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
   "mission": {
@@ -57,20 +67,10 @@
     "workana_checked_only_by_daily_sensor": true,
     "parallel_worker_runtime": "CONFIGURED_NOT_YET_VERIFIED_BY_FIRST_COMPLETED_RUN"
   },
-  "artifact_readback": {
-    "state_v62": "VERIFIED",
-    "boot_v34_preclosure": "VERIFIED",
-    "live_state_v62": "VERIFIED",
-    "memory_state_v62_notice": "VERIFIED",
-    "commercial_pipeline": "VERIFIED",
-    "master_backup_v62_snapshot": "VERIFIED",
-    "event_log_append": "BLOCKED_NO_NATIVE_APPEND_PRIMITIVE_DO_NOT_REWRITE_HISTORY"
-  },
   "human_gate": "No immediate Kael action. One Huescaventura proposal at 300 EUR is already authorized after Workana approval is verified; no paid moderation/plans/credits or other external contact is authorized.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "last_confirmed_action": "2026-10-11 /evolve: STATE v62, LIVE, MEMORY, commercial pipeline and backup were read back successfully; automations were consolidated to three active functions. EVENT_LOG was intentionally not rewritten because no native append primitive is exposed by the current connector.",
-  "sync_status": "STATE_V62_DERIVED_READBACK_VERIFIED_EVENT_LOG_APPEND_BLOCKED",
-  "next_action": "Continue safe parallel work. Observe the first completed Nexia Parallel Work run before calling that worker runtime-verified. Workana moderation is checked once daily; on approval recheck Huescaventura and submit the already-authorized proposal if still open and zero-spend."
+  "sync_status": "STATE_V63_EVENT_STORAGE_V2_ACTIVE_DERIVED_SYNC_IN_PROGRESS",
+  "next_action": "Verify STATE/BOOT/LIVE/MEMORY/event index/event file/backup alignment; then record a closure event. Continue safe parallel work while Workana is checked only once daily."
 }
