@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "version": 66,
+  "version": 67,
   "updated_at": "2026-10-12",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables hasta superar 1000 EUR/mes de beneficio neto sostenible después de impuestos.",
@@ -86,6 +86,7 @@
     "public_status_verified_date": "2026-10-12",
     "public_status_stale_after_hours": 24,
     "public_budget_eur": "200-300",
+    "visible_proposals_last_verified": 1,
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
     "authorized_gross_price_eur": 300,
     "workana_profile": "CREATED_COMPLETE_REPORTED_APPROVAL_NOT_VERIFIED",
@@ -104,6 +105,18 @@
     "paid_pilots": 0,
     "settled_payments": 0,
     "repeatable_transactions": 0
+  },
+  "acquisition_state": {
+    "latest_scan": "NEXIA_EXP_AUTO_001_ACQUISITION_SCAN_2026-10-12_01.md",
+    "latest_scan_blob_sha": "648a256797b4729e618b03c5b3e8908b1859d778",
+    "commercial_reserve": "NEXIA_EXP_AUTO_001_COMMERCIAL_RESERVE_2026-10-12.md",
+    "commercial_evidence_pack": "NEXIA_EXP_AUTO_001_COMMERCIAL_EVIDENCE_PACK_2026-10-12.md",
+    "channel_matrix": "NEXIA_EXP_AUTO_001_ACQUISITION_CHANNEL_MATRIX_2026-10-12.md",
+    "primary_channel": "WORKANA",
+    "best_current_opportunity": "WORKANA-HUESCAVENTURA-001",
+    "fresh_non_workana_go_candidates": 0,
+    "freshness_rule": "CURRENT requires direct accessible project evidence or evidence <=24h not contradicted by a direct check",
+    "result": "HUESCAVENTURA_REMAINS_DOMINANT_NO_ALTERNATIVE_PROMOTED"
   },
   "economics": {
     "gross_offer_eur": 300,
@@ -182,10 +195,10 @@
     "analytics": "NOT_CONNECTED"
   },
   "automation_inventory": {
-    "active": 3,
-    "paused": 6,
+    "active": 2,
+    "paused": 7,
     "completed": 1,
-    "architecture": "CONTROL_TOWER + DYNAMIC_WORKER + DEDICATED_SENSOR",
+    "architecture": "CONTROL_TOWER_WITH_WORKANA_SENSOR + DYNAMIC_WORKER",
     "active_automations": [
       {
         "name": "NEXIA Control Tower",
@@ -193,7 +206,7 @@
         "status": "ACTIVE_EXECUTED_PREVIOUSLY",
         "last_run_time": "2026-10-11T09:37:51.005561Z",
         "notifications": "ENABLED",
-        "role": "state/memory/integrity/prioritization"
+        "role": "state/memory/integrity/prioritization + daily Workana moderation sensing"
       },
       {
         "name": "EXP-AUTO-001 Parallel Work",
@@ -201,24 +214,20 @@
         "status": "ACTIVE_EXECUTED_AT_LEAST_ONCE_SCHEDULER_VERIFIED_RESULT_NOT_INSTRUMENTED",
         "last_run_time": "2026-10-11T19:52:12.224695Z",
         "notifications": "DISABLED",
-        "role": "safe zero-cost highest-value worker",
+        "role": "safe zero-cost highest-value acquisition/evidence worker",
         "workana_check": false
-      },
-      {
-        "name": "Workana Response Watch",
-        "cadence": "DAILY",
-        "status": "ACTIVE_EXECUTED_AT_LEAST_ONCE",
-        "last_run_time": "2026-10-11T13:47:36.097554Z",
-        "role": "Workana moderation sensor",
-        "last_verified_result": "NO_APPROVAL_OR_REJECTION_FOUND",
-        "notifications": "DISABLED",
-        "notification_delivery": "NOT_VERIFIED"
       }
     ],
-    "disabled_redundant": [
+    "paused_redundant_or_inactive": [
+      "Workana Response Watch",
       "NEXIA Memory Review",
-      "Radar multivía Nexia"
-    ]
+      "Radar multivía Nexia",
+      "NEXIA Brainstorm",
+      "Radar y revisión de oportunidades",
+      "NEXIA Agentes y Automatización",
+      "Revisión de oportunidades"
+    ],
+    "workana_sensor_consolidation": "VERIFIED_WORKANA_RESPONSE_WATCH_PAUSED_CONTROL_TOWER_NOTIFICATIONS_ENABLED"
   },
   "wip_policy": {
     "max_active_monetization_experiments": 1,
@@ -276,10 +285,10 @@
       "directory": "events/",
       "index": "NEXIA_EVENT_INDEX.json",
       "index_verified_blob_sha_pre_v65": "754775400702ab77db46fcaeea8db4505ef301c6",
-      "index_verified_blob_sha_current": "17225ef45ea93b1bce112e10ab8d364fe3dda4b0",
+      "index_verified_blob_sha_current": "aa0ef1ff5cdf2819d8875e0e3a807b42af8f4d42",
       "latest_verified_event_id_pre_v65": "EVT-2026-10-11-EVOLVE-001",
-      "latest_verified_event_id": "EVT-2026-10-12-N8N-001",
-      "latest_verified_event_blob_sha": "69e4754ce3f7a1afbb83433ec08e21a1b6046219",
+      "latest_verified_event_id": "EVT-2026-10-12-ACQ-001",
+      "latest_verified_event_blob_sha": "29ef6baca8e0697197d1ad40dfe206ac72862516",
       "legacy_jsonl": "NEXIA_EVENT_LOG.jsonl",
       "legacy_jsonl_mode": "READ_ONLY",
       "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
@@ -287,7 +296,7 @@
     "continuity_layer": "ACTIVE",
     "public_hq": "NOT_DEPLOYED_CURRENTLY",
     "telemetry": "PARTIAL_AUTOMATION_STATE_ONLY",
-    "notifications": "PARTIAL_NOT_FULLY_INSTRUMENTED",
+    "notifications": "CONTROL_TOWER_ENABLED_OTHER_TASKS_PARTIAL",
     "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS_AND_SAFE_REPOSITORY_WORK",
     "independent_24_7_worker": "NOT_DEPLOYED"
   },
@@ -311,27 +320,27 @@
     "resale": "PAUSED_NOT_DELETED",
     "nexia_care_legacy": "PAUSED",
     "delonghi_affiliate": "PAUSED",
-    "ai_influencer": "RADAR_ONLY_NO_PAID_GENERATION_OR_PUBLICATION_AUTHORIZED"
+    "ai_influencer": "PAUSED_NOT_DELETED"
   },
   "last_verified_evolution": {
-    "report": "NEXIA_EXP_AUTO_001_N8N_PERSISTENT_DEDUP_2026-10-12.md",
-    "report_blob_sha": "70ef60e51f5b8f7fda946216f39d2db42ecf2ced",
-    "previous_evolution_report": "NEXIA_EVOLUTION_2026-10-11.md",
-    "previous_evolution_report_blob_sha": "87346601cbe5856e7ad4049217ae3b78c8feeb33",
-    "result": "N8N_RUNTIME_AND_NATIVE_DATA_TABLE_PERSISTENCE_VERIFIED_COMMERCIAL_STAGE_UNCHANGED"
+    "report": "NEXIA_EXP_AUTO_001_ACQUISITION_SCAN_2026-10-12_01.md",
+    "report_blob_sha": "648a256797b4729e618b03c5b3e8908b1859d778",
+    "previous_evolution_report": "NEXIA_EXP_AUTO_001_N8N_PERSISTENT_DEDUP_2026-10-12.md",
+    "previous_evolution_report_blob_sha": "70ef60e51f5b8f7fda946216f39d2db42ecf2ced",
+    "result": "ACQUISITION_REVERIFIED_AUTOMATION_ARCHITECTURE_RECONCILED_COMMERCIAL_STAGE_UNCHANGED"
   },
-  "next_useful_action": "Do not add more synthetic engineering layers merely to increase activity. Keep the daily Workana moderation sensor and zero-cost buyer-initiated opportunity qualification active. On verified Workana profile approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend. Real Airtable/Sheets/CRM integration remains a separate delivery gate and should be executed only when it directly reduces pilot risk or matches buyer infrastructure without new spend or unauthorized account creation.",
+  "next_useful_action": "Prioritize the economic event over more synthetic engineering. Keep Control Tower daily moderation sensing and the 6-hour fresh-opportunity worker active. On verified Workana profile approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend. Do not request another marketplace account or capital exposure until a fresh specific opportunity justifies it.",
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-12-N8N-001",
-    "previous_state_version": 65,
-    "previous_state_blob_sha": "5e7b8789ab4f3deaf196bd4c9c446c028db45a4d",
-    "current_state_version": 66,
-    "checkpoint_status": "CLOSED_STATE_BOOT_LIVE_BACKUP_SYNCED",
+    "checkpoint_id": "CP-2026-10-12-ACQ-001",
+    "previous_state_version": 66,
+    "previous_state_blob_sha": "69dd2b8a1d6b60d5712e5b691908d7dbabc8ee5e",
+    "current_state_version": 67,
+    "checkpoint_status": "STATE_WRITTEN_AWAITING_BOOT_LIVE_BACKUP_FINAL_BIND",
     "event_storage_status": "OPERATIONAL_V2",
-    "latest_event_id": "EVT-2026-10-12-N8N-001",
+    "latest_event_id": "EVT-2026-10-12-ACQ-001",
     "memory_sync_status": "BLOCKED_BY_TOOL_SAFETY_DO_NOT_BYPASS",
     "financial_impact_eur": 0,
     "authority_change": "NONE",
-    "note": "Technical capability advanced: real n8n runtime and persistent native Data Table deduplication are verified. Commercial stage, permissions, revenue and production-integration truth remain unchanged. BOOT/LIVE/BACKUP were synchronized to v66 before closure; MEMORY remains derived/stale by design because its write is blocked."
+    "note": "Commercial stage is unchanged. Huescaventura remains primary and Workana profile approval remains unverified. Live automation inventory was reconciled from stale 3-active architecture to verified 2 active / 7 paused / 1 completed after Workana sensor consolidation into Control Tower."
   }
 }
