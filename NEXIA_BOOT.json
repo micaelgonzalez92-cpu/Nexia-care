@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
-  "boot_version": 37,
+  "boot_version": 38,
   "generated_at": "2026-10-11",
   "project": "NEXIA CORE",
-  "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "canonical_state": "NEXIA_STATE.json",
-  "state_version": 64,
-  "state_blob_sha": "dc0c6bad4b1f32040c31ffe6f8c400cd370419a9",
+  "state_version": 65,
+  "state_blob_sha": "5e7b8789ab4f3deaf196bd4c9c446c028db45a4d",
   "live_state": "NEXIA_LIVE.json",
   "learning_ledger": "NEXIA_MEMORY.md",
+  "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
   "commercial_pipeline": "NEXIA_COMMERCIAL_PIPELINE.json",
   "portable_backup": "NEXIA_MASTER_BACKUP.md",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
@@ -17,14 +17,12 @@
     "mode": "IMMUTABLE_EVENT_FILES_V2",
     "index": "NEXIA_EVENT_INDEX.json",
     "latest_verified_event_id": "EVT-2026-10-11-EVOLVE-001",
-    "legacy_jsonl": "NEXIA_EVENT_LOG.jsonl",
     "legacy_jsonl_mode": "READ_ONLY",
     "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
   "active_experiment": {
     "id": "EXP-AUTO-001",
-    "name": "Lead Intake Reliability Sprint",
     "status": "PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4
@@ -32,7 +30,6 @@
   "commercial_pipeline_stage": "PROPOSAL_AUTHORIZED",
   "primary_opportunity": {
     "id": "WORKANA-HUESCAVENTURA-001",
-    "platform": "Workana",
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
     "workana_profile": "CREATED_COMPLETE_REPORTED_APPROVAL_NOT_VERIFIED",
     "public_status": "OPEN / EVALUATING PROPOSALS",
@@ -47,10 +44,10 @@
     "parallel_worker": "EVERY_4_HOURS_CONFIGURED_NOT_YET_RUNTIME_VERIFIED",
     "workana_sensor": "DAILY_ONLY"
   },
-  "human_gate": "No immediate action. The one Huescaventura proposal at 300 EUR remains authorized after profile approval is verified and only if zero-spend.",
+  "human_gate": "No immediate action. One Huescaventura proposal at 300 EUR remains authorized after profile approval is verified and only if zero-spend.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "sync_status": "STATE_V64_CANONICAL_DERIVED_SYNC_IN_PROGRESS",
-  "next_action": "Synchronize/read back LIVE, MEMORY and BACKUP to v64, then create immutable closure event. Afterwards continue safe parallel work and daily-only Workana monitoring."
+  "sync_status": "STATE_V65_CANONICAL_MEMORY_DERIVED_STALE_OTHER_SYNC_IN_PROGRESS",
+  "next_action": "Synchronize/read back LIVE and BACKUP to STATE v65; create immutable closure event; do not bypass blocked MEMORY write. Then continue safe parallel work and daily-only Workana monitoring."
 }
