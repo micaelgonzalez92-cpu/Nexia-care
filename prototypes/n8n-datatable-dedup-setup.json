@@ -3,12 +3,18 @@
   "name": "NEXIA EXP-AUTO-001 Data Table Dedup Setup",
   "nodes": [
     {
-      "parameters": {},
-      "type": "n8n-nodes-base.manualTrigger",
-      "typeVersion": 1,
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "nexia-exp-auto-001-datatable-bootstrap",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
       "position": [0, 0],
       "id": "dt-setup-trigger",
-      "name": "Manual Trigger"
+      "name": "Bootstrap Webhook",
+      "webhookId": "nexia-exp-auto-001-datatable-bootstrap"
     },
     {
       "parameters": {
@@ -32,12 +38,12 @@
     }
   ],
   "connections": {
-    "Manual Trigger": {
+    "Bootstrap Webhook": {
       "main": [[{"node": "Create Dedup Table", "type": "main", "index": 0}]]
     }
   },
   "active": false,
   "settings": {"executionOrder": "v1"},
   "pinData": {},
-  "meta": {"nexiaEvidence": "native-n8n-data-table-setup-zero-external-credentials"}
+  "meta": {"nexiaEvidence": "native-n8n-data-table-bootstrap-inside-full-server-zero-external-credentials"}
 }
