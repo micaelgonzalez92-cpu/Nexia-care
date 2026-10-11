@@ -1,16 +1,16 @@
 {
   "updated_at": "2026-10-12",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — N8N RUNTIME + PERSISTENT DEDUP VERIFIED; EVENT STORAGE V2 OPERATIONAL; MEMORY DERIVED STALE",
-  "state_version": 66,
-  "state_blob_sha": "69dd2b8a1d6b60d5712e5b691908d7dbabc8ee5e",
-  "boot_version": 41,
-  "boot_blob_sha": "0361a5853db559d83675c62d72c1d11a1fd4b283",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — ACQUISITION REVERIFIED; AUTOMATIONS RECONCILED; N8N RUNTIME + PERSISTENT DEDUP VERIFIED; EVENT STORAGE V2 OPERATIONAL; MEMORY DERIVED STALE",
+  "state_version": 67,
+  "state_blob_sha": "f323bdfeac9d74c2792b567b633bce62b02d1cb4",
+  "boot_version": 42,
+  "boot_blob_sha": "6bc65434d46088c14e5907230772db6d6e73219a",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
-    "index_blob_sha": "17225ef45ea93b1bce112e10ab8d364fe3dda4b0",
-    "latest_verified_event_id": "EVT-2026-10-12-N8N-001",
-    "latest_verified_event_blob_sha": "69e4754ce3f7a1afbb83433ec08e21a1b6046219",
+    "index_blob_sha": "aa0ef1ff5cdf2819d8875e0e3a807b42af8f4d42",
+    "latest_verified_event_id": "EVT-2026-10-12-ACQ-001",
+    "latest_verified_event_blob_sha": "29ef6baca8e0697197d1ad40dfe206ac72862516",
     "legacy_jsonl_mode": "READ_ONLY"
   },
   "active_experiment": {
@@ -35,7 +35,14 @@
     "gmail_decision_email_check": "2026-10-12_NO_APPROVAL_OR_REJECTION_FOUND",
     "public_status_last_verified": "OPEN / EVALUATING PROPOSALS",
     "public_status_verified_date": "2026-10-12",
-    "public_status_stale_after_hours": 24
+    "public_status_stale_after_hours": 24,
+    "visible_proposals_last_verified": 1
+  },
+  "acquisition_state": {
+    "latest_scan": "NEXIA_EXP_AUTO_001_ACQUISITION_SCAN_2026-10-12_01.md",
+    "result": "HUESCAVENTURA_REMAINS_DOMINANT_NO_ALTERNATIVE_PROMOTED",
+    "fresh_non_workana_go_candidates": 0,
+    "freshness_rule": "CURRENT requires direct accessible project evidence or evidence <=24h not contradicted by a direct check"
   },
   "capability_state": {
     "n8n_runtime": "VERIFIED_PASS",
@@ -52,15 +59,14 @@
     "production_deployment": "NOT_EXECUTED"
   },
   "automation_state": {
-    "active_count": 3,
-    "paused_count": 6,
+    "active_count": 2,
+    "paused_count": 7,
     "completed_count": 1,
-    "control_tower": "ACTIVE_DAILY_EXECUTED",
+    "control_tower": "ACTIVE_DAILY_EXECUTED_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_SENSOR",
     "parallel_worker": "ACTIVE_EVERY_6_HOURS_EXECUTED_AT_LEAST_ONCE_RESULT_NOT_INSTRUMENTED",
     "parallel_worker_last_run_time": "2026-10-11T19:52:12.224695Z",
-    "workana_sensor": "ACTIVE_DAILY_EXECUTED_NO_APPROVAL",
-    "workana_sensor_notifications": "DISABLED_NOT_VERIFIED",
-    "workana_polling_policy": "DAILY_ONLY"
+    "workana_response_watch": "PAUSED_REDUNDANT",
+    "workana_polling_policy": "DAILY_INSIDE_CONTROL_TOWER"
   },
   "continuous_integration": {
     "status": "VERIFIED",
@@ -77,11 +83,11 @@
   "profit_eur": 0,
   "current_blockers": [
     "Workana profile approval not yet verified",
+    "No fresh non-Workana candidate currently beats Huescaventura on scope/economics/competition",
     "Real client Airtable/Sheets/CRM destination integration not executed",
     "Parallel Work scheduler execution verified but returned work/result not instrumented",
-    "Workana watcher notification delivery disabled/not verified",
     "MEMORY sync blocked by tool safety; canonical STATE overrides it",
     "No willingness-to-pay, contract or settled payment exists"
   ],
-  "next_action": "Prioritize the commercial event over further synthetic engineering: maintain zero-cost Workana approval monitoring and buyer-initiated qualification. On verified profile approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend."
+  "next_action": "Prioritize the commercial event: maintain daily Workana approval sensing inside Control Tower and fresh buyer-initiated qualification every 6 hours. On verified profile approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend."
 }
