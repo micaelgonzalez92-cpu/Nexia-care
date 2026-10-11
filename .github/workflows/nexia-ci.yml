@@ -6,12 +6,24 @@ on:
     paths:
       - 'prototypes/**'
       - 'tools/**'
+      - 'NEXIA_STATE.json'
+      - 'NEXIA_BOOT.json'
+      - 'NEXIA_LIVE.json'
+      - 'NEXIA_EVENT_INDEX.json'
+      - 'NEXIA_MASTER_BACKUP.md'
+      - 'events/**'
       - '.github/workflows/nexia-ci.yml'
   pull_request:
     branches: [main]
     paths:
       - 'prototypes/**'
       - 'tools/**'
+      - 'NEXIA_STATE.json'
+      - 'NEXIA_BOOT.json'
+      - 'NEXIA_LIVE.json'
+      - 'NEXIA_EVENT_INDEX.json'
+      - 'NEXIA_MASTER_BACKUP.md'
+      - 'events/**'
       - '.github/workflows/nexia-ci.yml'
   workflow_dispatch:
 
@@ -52,3 +64,19 @@ jobs:
 
       - name: Integrity checker regression tests
         run: python3 tools/test_nexia_integrity_check.py
+
+      - name: Canonical STATE BOOT LIVE integrity check
+        shell: bash
+        run: |
+          set +e
+          python3 tools/nexia_integrity_check.py --json
+          code=$?
+          set -e
+          if [ "$code" -eq 1 ]; then
+            echo 'Canonical integrity check found one or more errors.'
+            exit 1
+          fi
+          if [ "$code" -eq 2 ]; then
+            echo 'Canonical integrity check contains warnings only; warnings remain visible and do not fail CI.'
+          fi
+          exit 0
