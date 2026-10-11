@@ -287,3 +287,14 @@ STATE and BOOT version/hash alignment was checked. The local demo uses synthetic
 - Overall runtime status remains PARTIAL: no connected telemetry/notifications, no verified independent 24/7 worker or out-of-band stop, and no browser execution or commercial validation of the SME prototype. Repository synchronization must not be confused with autonomous runtime execution.
 - Business status unchanged: current mission `MISSION-OPPORTUNITY-ENGINE-001`; active experiment `EXP-OPPORTUNITY-001`; resale paused/non-primary; capital spent €0; revenue €0; profit €0; no external actions authorized.
 - Next: final fresh readback of STATE/BOOT/LIVE/MEMORY/EVENT_LOG/BACKUP, then continue synthetic-only SME intake testing using a genuinely free local/browser route. No customer data or external contact without explicit approval.
+
+
+## 40. PUBLIC OPPORTUNITY RESEARCH CHECKPOINT — 2026-10-11 — STATE v61
+- Canonical STATE v61 blob SHA: `c41ad8f136c00e1b5c3680b75df3b56220ae21ed`.
+- BOOT v19 blob SHA: `a39010b68c389c842e2a54d3f6daf91fc5d360ff`; STATE version/hash fields align.
+- LIVE refreshed for STATE v61; blob SHA: `b1a87f65fc971343538177224399bcec13e8996e`.
+- MEMORY research addendum read back; blob SHA: `9f82d9e04a05e77e9281538cf369052bd4aa6798`.
+- EVENT_LOG appended with `EVT-2026-10-11-OPPORTUNITY-PUBLIC-RESEARCH-001`; blob SHA: `84db0ce6ccd1878be9ff48a770bb8b6f1e433d72`.
+- Evidence: public OECD, Banco de España, INE adoption context plus one local ecommerce SEO advertised price. These are market signals only; no willingness-to-pay proof, browser execution, buyer contact, sales, revenue or profit.
+- Financial impact €0. No permissions changed; no spending, external contact, account connection, publication or real customer data.
+- Runtime independence, telemetry/notifications, and the SME demo browser test remain unverified/unconnected. Continue only via a genuinely free local/browser path; do not claim validation.
