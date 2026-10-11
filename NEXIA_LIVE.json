@@ -1,12 +1,18 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — CORE EVOLUTION VERIFIED WITH MEMORY DERIVED STALE",
-  "current_cycle": "NEXIA Core — one active monetization experiment plus bounded background radar",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — /EVOLVE CLOSED; EVENT STORAGE V2 OPERATIONAL; MEMORY DERIVED STALE",
   "state_version": 65,
   "state_blob_sha": "5e7b8789ab4f3deaf196bd4c9c446c028db45a4d",
-  "boot_version": 38,
-  "boot_blob_sha": "c5d2e791dc9c39b3c6bdc035027d9e200f2e36f8",
+  "boot_version": 39,
+  "boot_blob_sha": "28a6f5f1556045e20526a7c4b6101f36ef312a7a",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
+  "event_storage": {
+    "mode": "IMMUTABLE_EVENT_FILES_V2",
+    "index_blob_sha": "34e18f6e351e8d75c240dbc6d8fccc508fb550d6",
+    "latest_verified_event_id": "EVT-2026-10-11-EVOLVE-002",
+    "latest_verified_event_blob_sha": "9cfbd2e57f6cf67a80ba72727fed0e56ca81a543",
+    "legacy_jsonl_mode": "READ_ONLY"
+  },
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "status": "PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
@@ -14,7 +20,6 @@
     "max_delivery_hours": 4
   },
   "commercial_pipeline": {
-    "artifact": "NEXIA_COMMERCIAL_PIPELINE.json",
     "stage": "PROPOSAL_AUTHORIZED",
     "proposal_sent": false,
     "buyer_response": false,
@@ -28,12 +33,6 @@
     "public_status_last_verified": "OPEN / EVALUATING PROPOSALS",
     "public_status_verified_date": "2026-10-11",
     "public_status_stale_after_hours": 24
-  },
-  "event_storage": {
-    "mode": "IMMUTABLE_EVENT_FILES_V2",
-    "index": "NEXIA_EVENT_INDEX.json",
-    "latest_verified_event_id": "EVT-2026-10-11-EVOLVE-001",
-    "legacy_jsonl_mode": "READ_ONLY"
   },
   "automation_state": {
     "active_count": 3,
@@ -50,10 +49,10 @@
   "profit_eur": 0,
   "current_blockers": [
     "Workana profile approval not yet verified",
-    "Nexia Parallel Work first completed run not yet runtime-verified",
+    "Parallel Work first completed run not yet runtime-verified",
     "n8n runtime and real Airtable integration remain unverified",
-    "MEMORY header sync to v65 blocked by tool safety; canonical STATE overrides it",
+    "MEMORY sync blocked by tool safety; canonical STATE overrides it",
     "No willingness-to-pay, contract or settled payment exists"
   ],
-  "next_action": "Continue safe parallel work. Do not bypass blocked MEMORY write. Workana is checked once daily. On verified approval, recheck Huescaventura and submit the already-authorized proposal if still open and zero-spend."
+  "next_action": "Continue safe parallel work and daily-only Workana monitoring. Do not bypass blocked MEMORY write. Verify the first completed worker run before calling it operationally proven."
 }
