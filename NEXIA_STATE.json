@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "version": 65,
-  "updated_at": "2026-10-11",
+  "version": 66,
+  "updated_at": "2026-10-12",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables hasta superar 1000 EUR/mes de beneficio neto sostenible después de impuestos.",
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
@@ -83,12 +83,13 @@
     "platform": "Workana",
     "buyer_initiated": true,
     "public_status": "OPEN / EVALUATING PROPOSALS",
-    "public_status_verified_date": "2026-10-11",
+    "public_status_verified_date": "2026-10-12",
     "public_status_stale_after_hours": 24,
     "public_budget_eur": "200-300",
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
     "authorized_gross_price_eur": 300,
     "workana_profile": "CREATED_COMPLETE_REPORTED_APPROVAL_NOT_VERIFIED",
+    "workana_profile_email_check": "2026-10-12_NO_APPROVAL_OR_REJECTION_EMAIL_FOUND",
     "execution_blocker": "Workana profile approval not yet verified",
     "own_willingness_to_pay_evidence": false,
     "external_contact_occurred": false
@@ -121,10 +122,36 @@
     "node_red_flow_structure": "6/6 STRUCTURAL PASS",
     "huescaventura_domain_demo": "13/13 SYNTHETIC PASS",
     "n8n_import_skeleton": "12/12 LOCAL STRUCTURAL_AND_EMBEDDED_CODE PASS",
-    "n8n_runtime_import_execution": "NOT_EXECUTED",
+    "n8n_runtime_import_execution": "VERIFIED_PASS",
+    "n8n_runtime_execution": {
+      "status": "VERIFIED_PASS",
+      "version": "2.42.6",
+      "github_actions_run": 38178359319,
+      "asserted_synthetic_cases": 6,
+      "runtime": "n8n-code-node",
+      "autonomous_send": false
+    },
+    "n8n_persistent_dedup_idempotency": {
+      "status": "VERIFIED_PASS_NATIVE_DATA_TABLE",
+      "version": "2.42.6",
+      "github_actions_run": 38180738447,
+      "commit": "0051aa4c44f7de9f4f24de16de51759be64e1f25",
+      "execution_model": "FULL_N8N_SERVER_RUNTIME",
+      "storage": "NATIVE_N8N_DATA_TABLE",
+      "five_requests_unique_rows": 2,
+      "after_process_restart_and_sixth_duplicate_unique_rows": 2,
+      "autonomous_send": false,
+      "evidence_report": "NEXIA_EXP_AUTO_001_N8N_PERSISTENT_DEDUP_2026-10-12.md",
+      "evidence_report_blob_sha": "70ef60e51f5b8f7fda946216f39d2db42ecf2ced",
+      "static_data_persistence_attempt": "FAILED_NOT_USED",
+      "isolated_cli_datatable_attempt": "MODULE_HELPERS_UNAVAILABLE_NOT_USED_FOR_PASS"
+    },
     "airtable_real_integration": "NOT_EXECUTED",
+    "google_sheets_real_integration": "NOT_EXECUTED",
+    "client_crm_real_integration": "NOT_EXECUTED",
+    "client_production_deployment": "NOT_EXECUTED",
     "client_production_experience": "NONE_VERIFIED",
-    "truth_rule": "Synthetic/local technical evidence is not prior client production work."
+    "truth_rule": "Synthetic/local/CI technical evidence is not prior client production work and does not prove demand, payment or profit."
   },
   "human_gate": {
     "status": "NO_IMMEDIATE_ACTION_REQUIRED",
@@ -164,22 +191,28 @@
         "name": "NEXIA Control Tower",
         "cadence": "DAILY",
         "status": "ACTIVE_EXECUTED_PREVIOUSLY",
+        "last_run_time": "2026-10-11T09:37:51.005561Z",
+        "notifications": "ENABLED",
         "role": "state/memory/integrity/prioritization"
       },
       {
-        "name": "Nexia Parallel Work",
-        "cadence": "EVERY_4_HOURS",
-        "status": "ACTIVE_CONFIGURED_NOT_YET_RUNTIME_VERIFIED",
+        "name": "EXP-AUTO-001 Parallel Work",
+        "cadence": "EVERY_6_HOURS",
+        "status": "ACTIVE_EXECUTED_AT_LEAST_ONCE_SCHEDULER_VERIFIED_RESULT_NOT_INSTRUMENTED",
+        "last_run_time": "2026-10-11T19:52:12.224695Z",
+        "notifications": "DISABLED",
         "role": "safe zero-cost highest-value worker",
         "workana_check": false
       },
       {
         "name": "Workana Response Watch",
         "cadence": "DAILY",
-        "status": "ACTIVE_EXECUTED_ONCE",
+        "status": "ACTIVE_EXECUTED_AT_LEAST_ONCE",
+        "last_run_time": "2026-10-11T13:47:36.097554Z",
         "role": "Workana moderation sensor",
         "last_verified_result": "NO_APPROVAL_OR_REJECTION_FOUND",
-        "notification_delivery": "NOT_INSTRUMENTED"
+        "notifications": "DISABLED",
+        "notification_delivery": "NOT_VERIFIED"
       }
     ],
     "disabled_redundant": [
@@ -243,8 +276,10 @@
       "directory": "events/",
       "index": "NEXIA_EVENT_INDEX.json",
       "index_verified_blob_sha_pre_v65": "754775400702ab77db46fcaeea8db4505ef301c6",
+      "index_verified_blob_sha_current": "17225ef45ea93b1bce112e10ab8d364fe3dda4b0",
       "latest_verified_event_id_pre_v65": "EVT-2026-10-11-EVOLVE-001",
-      "latest_verified_event_blob_sha": "fb278799714287c03f749990211b5c8d33a60ce5",
+      "latest_verified_event_id": "EVT-2026-10-12-N8N-001",
+      "latest_verified_event_blob_sha": "69e4754ce3f7a1afbb83433ec08e21a1b6046219",
       "legacy_jsonl": "NEXIA_EVENT_LOG.jsonl",
       "legacy_jsonl_mode": "READ_ONLY",
       "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
@@ -279,23 +314,24 @@
     "ai_influencer": "RADAR_ONLY_NO_PAID_GENERATION_OR_PUBLICATION_AUTHORIZED"
   },
   "last_verified_evolution": {
-    "report": "NEXIA_EVOLUTION_2026-10-11.md",
-    "report_blob_sha": "87346601cbe5856e7ad4049217ae3b78c8feeb33",
-    "backup_blob_sha_v63": "f30bd249302c8f47df8e8569dfa3336f2bfa6fde",
-    "result": "STATE_BOOT_LIVE_MEMORY_PIPELINE_PROTOCOL_EVENT_INDEX_EVENT_FILE_BACKUP_READBACK_VERIFIED_FOR_V63"
+    "report": "NEXIA_EXP_AUTO_001_N8N_PERSISTENT_DEDUP_2026-10-12.md",
+    "report_blob_sha": "70ef60e51f5b8f7fda946216f39d2db42ecf2ced",
+    "previous_evolution_report": "NEXIA_EVOLUTION_2026-10-11.md",
+    "previous_evolution_report_blob_sha": "87346601cbe5856e7ad4049217ae3b78c8feeb33",
+    "result": "N8N_RUNTIME_AND_NATIVE_DATA_TABLE_PERSISTENCE_VERIFIED_COMMERCIAL_STAGE_UNCHANGED"
   },
-  "next_useful_action": "Continue zero-cost parallel work while Workana moderation is checked once daily. Do not retry the blocked MEMORY write until tool/security state changes; STATE remains canonical and MEMORY v63 content remains operationally compatible. Verify the first completed Nexia Parallel Work run before calling the worker runtime-proven. On Workana approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend.",
+  "next_useful_action": "Do not add more synthetic engineering layers merely to increase activity. Keep the daily Workana moderation sensor and zero-cost buyer-initiated opportunity qualification active. On verified Workana profile approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend. Real Airtable/Sheets/CRM integration remains a separate delivery gate and should be executed only when it directly reduces pilot risk or matches buyer infrastructure without new spend or unauthorized account creation.",
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-11-EVOLVE-001",
-    "previous_state_version": 64,
-    "previous_state_blob_sha": "dc0c6bad4b1f32040c31ffe6f8c400cd370419a9",
-    "current_state_version": 65,
-    "checkpoint_status": "PARTIAL_DERIVED_SYNC_MEMORY_WRITE_BLOCKED",
+    "checkpoint_id": "CP-2026-10-12-N8N-001",
+    "previous_state_version": 65,
+    "previous_state_blob_sha": "5e7b8789ab4f3deaf196bd4c9c446c028db45a4d",
+    "current_state_version": 66,
+    "checkpoint_status": "STATE_UPDATED_CAPABILITY_VERIFIED_DERIVED_SYNC_PENDING",
     "event_storage_status": "OPERATIONAL_V2",
-    "legacy_event_log_status": "READ_ONLY_PRESERVED",
+    "latest_event_id": "EVT-2026-10-12-N8N-001",
     "memory_sync_status": "BLOCKED_BY_TOOL_SAFETY_DO_NOT_BYPASS",
     "financial_impact_eur": 0,
     "authority_change": "NONE",
-    "note": "Canonical STATE records the MEMORY write block truthfully. BOOT/LIVE/BACKUP are synchronized to v65 before completion is reported; MEMORY remains v63-derived and does not override STATE."
+    "note": "Technical capability advanced: real n8n runtime and persistent native Data Table deduplication are verified. Commercial stage, permissions, revenue and production-integration truth remain unchanged. BOOT/LIVE/BACKUP must be synchronized to v66 before this checkpoint is called fully closed."
   }
 }
