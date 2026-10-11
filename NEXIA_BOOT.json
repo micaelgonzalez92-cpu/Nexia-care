@@ -1,11 +1,11 @@
 {
   "schema_version": 2,
-  "boot_version": 40,
-  "generated_at": "2026-10-11",
+  "boot_version": 41,
+  "generated_at": "2026-10-12",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
-  "state_version": 65,
-  "state_blob_sha": "5e7b8789ab4f3deaf196bd4c9c446c028db45a4d",
+  "state_version": 66,
+  "state_blob_sha": "e526ce9bbe2d1a546f4ba954aa4b37787263df43",
   "live_state": "NEXIA_LIVE.json",
   "learning_ledger": "NEXIA_MEMORY.md",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
@@ -16,10 +16,10 @@
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
     "index": "NEXIA_EVENT_INDEX.json",
-    "index_blob_sha": "6691b1e55efb8f20c42904668e75314136c7028e",
-    "latest_verified_event_id": "EVT-2026-10-11-CI-001",
-    "latest_verified_event_path": "events/EVT-2026-10-11-CI-001.json",
-    "latest_verified_event_blob_sha": "8a6cc25993cd987e827e44aed8128c541e5be27b",
+    "index_blob_sha": "17225ef45ea93b1bce112e10ab8d364fe3dda4b0",
+    "latest_verified_event_id": "EVT-2026-10-12-N8N-001",
+    "latest_verified_event_path": "events/EVT-2026-10-12-N8N-001.json",
+    "latest_verified_event_blob_sha": "69e4754ce3f7a1afbb83433ec08e21a1b6046219",
     "legacy_jsonl_mode": "READ_ONLY",
     "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
@@ -36,22 +36,34 @@
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
     "workana_profile": "CREATED_COMPLETE_REPORTED_APPROVAL_NOT_VERIFIED",
     "public_status": "OPEN / EVALUATING PROPOSALS",
-    "public_status_verified_date": "2026-10-11",
+    "public_status_verified_date": "2026-10-12",
     "public_status_stale_after_hours": 24
+  },
+  "capability_checkpoint": {
+    "n8n_runtime": "VERIFIED_PASS",
+    "n8n_persistent_dedup_idempotency": "VERIFIED_PASS_NATIVE_DATA_TABLE",
+    "n8n_version": "2.42.6",
+    "runtime_run_id": 38178359319,
+    "persistent_dedup_run_id": 38180738447,
+    "real_client_destination_integration": "NOT_EXECUTED",
+    "production_deployment": "NOT_EXECUTED"
   },
   "automation_architecture": {
     "active": 3,
     "paused": 6,
     "completed": 1,
-    "control_tower": "DAILY",
-    "parallel_worker": "EVERY_4_HOURS_CONFIGURED_NOT_YET_RUNTIME_VERIFIED",
-    "workana_sensor": "DAILY_ONLY"
+    "control_tower": "DAILY_ACTIVE_EXECUTED",
+    "parallel_worker": "EVERY_6_HOURS_ACTIVE_EXECUTED_AT_LEAST_ONCE_RESULT_NOT_INSTRUMENTED",
+    "workana_sensor": "DAILY_ACTIVE_EXECUTED_NO_APPROVAL_NOTIFICATIONS_DISABLED"
   },
   "continuous_integration": {
     "status": "VERIFIED",
     "workflow": ".github/workflows/nexia-ci.yml",
     "first_verified_run_id": 38149148915,
     "first_verified_run_conclusion": "success",
+    "n8n_runtime_workflow": ".github/workflows/n8n-runtime-smoke.yml",
+    "latest_n8n_verified_run_id": 38180738447,
+    "latest_n8n_verified_conclusion": "success",
     "permissions": "contents: read",
     "deployment": "NONE"
   },
@@ -59,6 +71,6 @@
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "sync_status": "STATE_V65_CORE_EVOLUTION_CLOSED_CI_VERIFIED_EVENT_STORAGE_V2_OPERATIONAL_MEMORY_DERIVED_STALE",
-  "next_action": "Continue safe parallel work. Verify the first completed Parallel Work run. Workana moderation is checked once daily. Do not bypass the blocked MEMORY write; retry only if tool/security state changes."
+  "sync_status": "STATE_V66_N8N_RUNTIME_AND_PERSISTENCE_VERIFIED_EVENT_STORAGE_V2_OPERATIONAL_MEMORY_DERIVED_STALE",
+  "next_action": "Keep Workana moderation monitoring and buyer-initiated qualification active at zero cost. On verified profile approval, recheck Huescaventura and submit the authorized 300 EUR proposal if still open and zero-spend. Avoid additional synthetic engineering unless it directly reduces pilot risk."
 }
