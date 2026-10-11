@@ -233,3 +233,15 @@ SME_DEMO: `1ee3ff93e7fb9760d36eafa248e974be1e5f56c1`
 Previous MASTER_BACKUP: `f940e6613c4235b1949c85b545da1019fe16b874`
 
 STATE and BOOT version/hash alignment was checked. The local demo uses synthetic examples and deterministic rules; it is not a live AI integration. Opportunity demand remains unvalidated. Next step: measure manual and assisted time plus classification/correction errors using synthetic cases. No spend or external action was performed. Read back this checkpoint before considering it recorded.
+
+## 54. PERSISTENCE RECONCILIATION CHECKPOINT — 2026-10-11
+
+- Canonical STATE: v58, blob SHA `1aaa6cc50782a47072db1ed453d018d4163c6dd5`.
+- BOOT: v16, blob SHA `d21bc045bd582a7a7eeed42b61d3ce2f8d36ea47`; its state version and state blob SHA match canonical STATE exactly.
+- LIVE: blob SHA `2e89353c9d9a751cecf23fe81815f1c5073dd824`; current status and evidence fields read back after synchronization.
+- MEMORY: blob SHA `19458630fe3160c586a4cf2e7e23c6104bf26435`; current experiment now explicitly points to MISSION-OPPORTUNITY-ENGINE-001 / EXP-OPPORTUNITY-001. EXP-RESALE-001 is preserved as historical/paused/non-primary, not deleted.
+- EVENT_LOG: blob SHA `b12b4a5ec90d6241fcb1420dd64225442ccc7e4d`; append-only event `EVT-2026-10-11-PERSISTENCE-RECONCILIATION-001` read back.
+- Previous MASTER_BACKUP blob SHA: `16f0ec5c6ada1bb96b42c7202030ee88e20c45e4`.
+- Financial impact: €0. No purchases, external contact, account connections, publication or commitments. No sales, revenue or profit are claimed.
+- Verification scope: STATE/BOOT version+hash alignment, MEMORY update readback, LIVE update readback, event append readback, and this backup checkpoint readback. This is not a claim that a background worker, runtime deployment or business validation exists. The MASTER_BACKUP hash is not self-referential.
+- Next safe action: execute a reproducible synthetic-only measurement of the SME intake demo, recording manual time, assisted time, classification errors, correction time and outcome metrics. No real customer data or prospect contact.
