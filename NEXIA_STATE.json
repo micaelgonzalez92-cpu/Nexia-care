@@ -1,5 +1,5 @@
 {
-  "version": 60,
+  "version": 61,
   "updated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables; ningún vehículo comercial queda preseleccionado.",
@@ -619,14 +619,47 @@
   ],
   "last_verified_chat_action": {
     "date": "2026-10-11",
-    "status": "CHAT_WORK_RECORDED_AS_RESEARCH_ONLY",
-    "action": "Compared three hypothetical SME digital service offers (4 short videos €99, 10 product listings €79, bounded automation €149) using illustrative labor/fee/VAT/tax assumptions. This does not validate demand or net profit.",
-    "evidence_level": "ESTIMATE_NOT_MARKET_VALIDATION",
+    "status": "PUBLIC_RESEARCH_RECORDED_NOT_COMMERCIAL_VALIDATION",
+    "action": "Compared public SME AI-adoption evidence, one local ecommerce SEO price anchor, and the evidence gap for short-form video; no commercial opportunity selected.",
+    "evidence_level": "PARTIAL_PUBLIC_RESEARCH_EVIDENCE",
     "financial_impact_eur": 0,
     "limitations": [
-      "Acquisition costs and overhead unknown",
-      "Tax proxy not tax advice",
-      "No buyer interviews, paid pilots, sales, or profit observed"
+      "No willingness-to-pay evidence specific to Nexia",
+      "No browser execution, timing trial, buyer interview, sale, revenue or profit",
+      "Published provider price is not proof of transactions"
     ]
+  },
+  "latest_research_checkpoint": {
+    "date": "2026-10-11",
+    "type": "PUBLIC_EVIDENCE_REVIEW_ZERO_COST",
+    "cost_eur": 0,
+    "findings": [
+      {
+        "opportunity": "SME workflow / intake automation",
+        "evidence_level": "PUBLIC_DEMAND_SIGNAL_NOT_BUYER_VALIDATION",
+        "evidence": "OECD 2025 says SMEs in Spain lag in advanced digital adoption; Banco de España survey reported nearly 20% of surveyed firms used AI, mostly experimental, and task automation use was limited. INE data for Q1 2025 says 13.4% of connected firms with fewer than 10 employees used AI. Sources: https://www.oecd.org/en/publications/oecd-economic-surveys-spain-2025_abc5c435-en/full-report/fostering-productivity-growth-in-small-and-medium-sized-enterprises_039acae9.html ; https://www.bde.es/wbe/en/publicaciones/analisis-economico-investigacion/boletin-economico/2025t2-articulo-06-la-adopcion-de-la-inteligencia-artificial-en-las-empresas-espanolas-un-primer-analisis-basado-en-la-ebae.html ; https://www.ine.es/dyngs/Prensa/ETICCE20241T2025.htm",
+        "falsification": "Macro adoption gap does not prove small firms will pay this provider or that our demo saves time; require timed synthetic test and eventually authorized buyer evidence."
+      },
+      {
+        "opportunity": "E-commerce product listing optimization",
+        "evidence_level": "COMPETITIVE_PRICE_SIGNAL_ONLY",
+        "evidence": "A Valencia-area provider advertises ecommerce SEO from €350/month excluding VAT. This supports an existing paid service category, not demand for a €79/10-listing offer or Nexia's delivery quality. Source: https://webplusvalencia.es/tiendas-online/seo-ecommerce/",
+        "falsification": "Current provider offers broader monthly SEO, not comparable scope; no buyer conversion or margin evidence."
+      },
+      {
+        "opportunity": "Short-form video service",
+        "evidence_level": "NOT_ESTABLISHED_BY_THIS_RESEARCH_BATCH",
+        "evidence": "Search batch did not retrieve sufficiently strong comparable buyer-side evidence; keep unranked rather than infer demand.",
+        "falsification": "Need dated buyer briefs or transactions and measured fulfillment time before ranking."
+      }
+    ],
+    "decision": "No commercial opportunity selected. Continue zero-cost technical falsification of the synthetic SME intake demo; use this research only as weak market context.",
+    "limitations": [
+      "Public macro data is not willingness-to-pay evidence",
+      "No browser execution or time trial performed",
+      "No participant contact, sales, revenue or profit",
+      "No business spend"
+    ],
+    "next_action": "Find a genuinely free local execution path; if unavailable, continue a public-evidence comparison with comparable scopes and distinguish buyer briefs from seller listings."
   }
 }
