@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "boot_version": 25,
+  "boot_version": 26,
   "generated_at": "2026-10-11T11:49:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
@@ -21,13 +21,14 @@
   "http_runtime_tests": "prototypes/test_http_runtime.js",
   "node_red_flow": "prototypes/node-red-exp-auto-001-flow.json",
   "node_red_flow_validator": "prototypes/validate_node_red_flow.js",
+  "qualified_candidate_gate": "NEXIA_EXP_AUTO_001_HUESCAVENTURA_CANDIDATE_2026-10-11.md",
   "last_verified_state_version": 61,
   "last_verified_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
   "active_experiment": {
     "id": "EXP-OPPORTUNITY-001",
     "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
-    "status": "SELECTION_GATE_COMPLETED_NEXT_EXPERIMENT_DESIGNED_HTTP_RUNTIME_TESTED_NODE_RED_PREPARED_NOT_EXECUTED_EXTERNALLY",
+    "status": "SELECTION_GATE_COMPLETED_NEXT_EXPERIMENT_DESIGNED_ONE_BUYER_INITIATED_CANDIDATE_QUALIFIED_HUMAN_GATE_PENDING",
     "cost_eur": 0,
     "participants": 0,
     "constraints": "Sin compras, contactos externos, publicaciones, conexiones de cuenta ni gasto sin autorización específica."
@@ -43,10 +44,10 @@
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "status": "DESIGNED_HTTP_RUNTIME_TESTED_NOT_EXTERNALLY_ACTIVATED",
-    "offer_hypothesis_eur": 249,
+    "status": "DESIGNED_HTTP_RUNTIME_TESTED_ONE_QUALIFIED_BUYER_INITIATED_OPPORTUNITY_NOT_SUBMITTED",
+    "base_offer_hypothesis_eur": 249,
     "max_delivery_hours": 4,
-    "provisional_contribution_eur": 179,
+    "original_provisional_contribution_eur": 179,
     "capability_evidence": {
       "function_suite": "9/9 synthetic PASS",
       "http_integration": "12/12 local HTTP integration PASS",
@@ -55,10 +56,23 @@
       "client_production_experience_claimed": false
     }
   },
+  "qualified_buyer_opportunity": {
+    "name": "Huescaventura — Automatización de respuestas y seguimiento de leads por WhatsApp/email con n8n, Airtable e IA",
+    "platform": "Workana",
+    "buyer_initiated": true,
+    "public_status_observed": "OPEN_EVALUATING_PROPOSALS",
+    "public_budget_eur": "200-300",
+    "public_activity_observed": "1 proposal / 1 interested freelancer at research time",
+    "client_payment_signal": "verified payment; 1 paid project shown",
+    "pre_channel_qualification_score": "10/10",
+    "proposal_status": "DRAFT_NOT_SUBMITTED",
+    "recommended_gross_price_eur": 300,
+    "price_reason": "Workana initial freelancer commission is 20%; €249 fails the original contribution gate on this channel while €300 preserves approximately €180 contribution only if extra variable tooling cost is ~€0 and measured delivery stays <=4h.",
+    "human_gate": "Explicit Kael authorization required for this Workana proposal, €300 price boundary, account use/creation if needed, and subsequent buyer communication."
+  },
   "runtime_checkpoint": {
     "node_version": "22.16.0",
     "npm_version": "10.9.2",
-    "node_red_license": "Apache-2.0 according to official Node-RED documentation",
     "node_red_install_status": "NOT_INSTALLED",
     "node_red_install_attempt": "npm registry lookup timed out in current container",
     "docker_status": "NOT_AVAILABLE",
@@ -70,16 +84,19 @@
     "preferred_first_channel": "Buyer-initiated public briefs/RFPs or inbound/opt-in requests",
     "first_batch_max": 5,
     "spend_authorized_eur": 0,
-    "current_marketplace_gate_result": "0 current sampled opportunities satisfy all price/scope/truthfulness gates"
+    "workana_submission_cost_public_info": "FREE_TO_SUBMIT_PROPOSALS; COMMISSION_APPLIES_IF_HIRED",
+    "workana_initial_freelancer_commission": "20% according to current official Workana help",
+    "current_marketplace_gate_result": "1 qualified buyer-initiated opportunity identified; proposal not submitted"
   },
   "human_gate": "No proposal submission, external contact, account connection, commercial publication, paid tool or spend without explicit approval. Unsolicited Spanish commercial cold email remains NO-GO.",
-  "last_confirmed_action": "2026-10-11: local HTTP runtime executed 12/12 PASS; an importable core-node Node-RED flow was prepared and structurally validated 6/6. Node-RED itself was not installed/executed because npm registry access timed out. No client deployment, proposal or sale occurred.",
+  "last_confirmed_action": "2026-10-11: buyer-initiated scan identified one strong-fit Workana opportunity from Huescaventura. Public brief asks for a bounded semiautomatic lead workflow and states €200-300. Workana fee research shows 20% initial freelancer commission, so channel economics were recomputed without changing the original threshold: €249 fails; €300 is provisionally viable only with <=4h measured delivery and approximately zero extra variable tooling cost. A truthful 10-question proposal draft was prepared and persisted. No proposal or contact occurred.",
   "integrity_warnings": [
     "NEXIA_STATE.json v61 remains canonical.",
     "NEXIA_MEMORY.md still begins with stale STATE v58 canonical text; STATE v61 wins.",
     "HTTP 12/12 evidence is local synthetic integration, not client production experience.",
     "Node-RED 6/6 evidence is structural validation only; actual import/deploy/runtime is NOT VERIFIED.",
-    "Public buyer budgets are signals, not Nexia revenue or willingness-to-pay evidence."
+    "Huescaventura public page state and activity are observed market data, not acceptance or willingness-to-pay evidence for Nexia.",
+    "The €300 Workana price is a channel-specific recommendation requiring explicit Kael approval because it changes the original €249 price boundary."
   ],
   "capital_spent_eur": 0,
   "revenue_eur": 0,
@@ -88,6 +105,6 @@
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "updated_at": "2026-10-11",
-  "sync_status": "STATE_V61_CANONICAL_EXP_AUTO_001_HTTP_RUNTIME_12_OF_12_NODE_RED_FLOW_PREPARED_RUNTIME_UNVERIFIED",
-  "next_action": "Continue zero-cost buyer-initiated opportunity discovery in parallel. If a genuinely free Node-RED runtime becomes available, import the prepared flow and replay the HTTP tests. Do not spend solely to obtain runtime evidence."
+  "sync_status": "STATE_V61_CANONICAL_EXP_AUTO_001_ONE_QUALIFIED_WORKANA_CANDIDATE_DRAFT_READY_HUMAN_GATE_PENDING",
+  "next_action": "Await explicit Kael authorization before submitting the Huescaventura Workana proposal at €300. Until authorization, continue zero-cost discovery for additional buyer-initiated candidates and do not create/connect a Workana account or contact the buyer."
 }
