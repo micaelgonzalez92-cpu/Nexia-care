@@ -68,6 +68,7 @@ jobs:
 
       - name: Prove persistent deduplication with native n8n Data Tables
         env:
+          N8N_ENABLED_MODULES: 'data-table'
           N8N_USER_FOLDER: ${{ runner.temp }}/n8n-datatable-user
           N8N_PORT: '5678'
           N8N_HOST: '127.0.0.1'
