@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "version": 62,
+  "version": 63,
   "updated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables hasta superar 1000 EUR/mes de beneficio neto sostenible después de impuestos.",
@@ -231,13 +231,23 @@
     "calendar_month_reconciled_profit": "NOT_INSTRUMENTED_UNTIL_TRANSACTIONS_EXIST"
   },
   "system": {
-    "persistent_state": "ACTIVE_CANONICAL_RECONCILIATION_V62",
+    "persistent_state": "ACTIVE_EVENT_STORAGE_V2_MIGRATION",
     "canonical_source": "NEXIA_STATE.json",
     "boot_index": "NEXIA_BOOT.json",
     "live_state": "NEXIA_LIVE.json",
     "memory": "NEXIA_MEMORY.md",
     "backup": "NEXIA_MASTER_BACKUP.md",
-    "event_log": "NEXIA_EVENT_LOG.jsonl",
+    "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
+    "persistence_protocol_version": "2.0",
+    "event_storage": {
+      "mode": "IMMUTABLE_EVENT_FILES_V2",
+      "directory": "events/",
+      "index": "NEXIA_EVENT_INDEX.json",
+      "legacy_jsonl": "NEXIA_EVENT_LOG.jsonl",
+      "legacy_jsonl_mode": "READ_ONLY",
+      "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72",
+      "next_event_path": "events/EVT-2026-10-11-EVOLVE-001.json"
+    },
     "continuity_layer": "ACTIVE",
     "public_hq": "NOT_DEPLOYED_CURRENTLY",
     "telemetry": "PARTIAL_AUTOMATION_STATE_ONLY",
@@ -249,6 +259,7 @@
     "canonical_artifact": "NEXIA_OPERATIONAL_RULES.md",
     "command_registry": "NEXIA_COMMANDS.md",
     "command_registry_version": "2.2",
+    "persistence_protocol_version": "2.0",
     "principles": [
       "recovery before action",
       "useful action over activity",
@@ -256,7 +267,8 @@
       "economics and falsification",
       "explicit limited autonomy",
       "one monetization WIP plus at most two research paths",
-      "external evidence freshness and stale-state handling"
+      "external evidence freshness and stale-state handling",
+      "immutable event files instead of unsafe full-ledger rewrites"
     ]
   },
   "paused_paths": {
@@ -265,17 +277,17 @@
     "delonghi_affiliate": "PAUSED",
     "ai_influencer": "RADAR_ONLY_NO_PAID_GENERATION_OR_PUBLICATION_AUTHORIZED"
   },
-  "next_useful_action": "While Workana approval is pending, the dynamic worker should execute zero-cost parallel batches that improve buyer-initiated discovery, EXP-AUTO-001 delivery evidence, commercial preparation or state integrity. Workana moderation is checked only by the dedicated daily sensor. On verified approval, immediately recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend.",
+  "next_useful_action": "Finish Event Storage v2 by creating the immutable evolve event and event index, then synchronize BOOT/LIVE/MEMORY/BACKUP to STATE v63. After verification, continue zero-cost parallel work while Workana moderation is checked only by the dedicated daily sensor.",
   "persistence_checkpoint": {
     "checkpoint_id": "CP-2026-10-11-EVOLVE-001",
-    "previous_state_version": 61,
-    "previous_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-    "current_state_version": 62,
-    "checkpoint_status": "STATE_RECONCILED_PENDING_DERIVED_SYNC",
+    "previous_state_version": 62,
+    "previous_state_blob_sha": "8a51ab4d9a4a25a7bc86c241ce9e18f32d5a78e4",
+    "current_state_version": 63,
+    "checkpoint_status": "EVENT_STORAGE_V2_ACTIVATED_PENDING_EVENT_FILE_AND_DERIVED_SYNC",
     "backup_sync_status": "PENDING",
-    "event_log_status": "PENDING_SAFE_APPEND",
+    "latest_event_status": "PENDING_CREATE_IMMUTABLE_EVENT_FILE",
     "financial_impact_eur": 0,
     "authority_change": "NONE",
-    "note": "This v62 compacts stale historical operational fields into a current-state schema. Git history preserves prior STATE versions and historical artifacts. Derived artifacts must be synchronized and read back before claiming full persistence health."
+    "note": "STATE v63 activates immutable per-event files because the connector has no safe native append for the legacy JSONL. Legacy JSONL remains read-only and preserved at its verified boundary SHA."
   }
 }
