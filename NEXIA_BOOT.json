@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "boot_version": 27,
+  "boot_version": 28,
   "generated_at": "2026-10-11T12:51:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
@@ -19,32 +19,32 @@
   "http_runtime_report": "NEXIA_EXP_AUTO_001_HTTP_RUNTIME_2026-10-11.md",
   "qualified_candidate_gate": "NEXIA_EXP_AUTO_001_HUESCAVENTURA_CANDIDATE_2026-10-11.md",
   "buyer_scan": "NEXIA_EXP_AUTO_001_BUYER_SCAN_2026-10-11_1251.md",
+  "submission_checkpoint": "NEXIA_EXP_AUTO_001_HUESCAVENTURA_SUBMISSION_BLOCKED_2026-10-11.md",
   "last_verified_state_version": 61,
   "last_verified_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
   "active_experiment": {
     "id": "EXP-OPPORTUNITY-001",
     "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
-    "status": "ONE_QUALIFIED_BUYER_INITIATED_CANDIDATE_REVERIFIED_OPEN_HUMAN_GATE_PENDING",
+    "status": "HUESCAVENTURA_SUBMISSION_AUTHORIZED_BUT_ZERO_COST_EXECUTION_CHANNEL_BLOCKED",
     "cost_eur": 0,
     "participants": 0,
-    "constraints": "Sin compras, contactos externos, publicaciones, conexiones de cuenta ni gasto sin autorización específica."
+    "constraints": "Sin compras, planes de pago, herramientas metered ni gasto."
   },
   "mission": {
     "id": "MISSION-OPPORTUNITY-ENGINE-001",
     "name": "Construir y validar un motor repetible que descubra, pruebe y monetice la oportunidad de negocio con mayor potencial de beneficio neto sostenible",
     "priority": "MAX",
     "cost_eur": 0,
-    "human_action_required": false,
+    "human_action_required": true,
     "status": "ACTIVE"
   },
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "status": "ONE_QUALIFIED_BUYER_INITIATED_OPPORTUNITY_PROPOSAL_NOT_SUBMITTED",
-    "base_offer_hypothesis_eur": 249,
+    "status": "HUESCAVENTURA_PROPOSAL_AUTHORIZED_NOT_SUBMITTED",
+    "authorized_price_eur": 300,
     "max_delivery_hours": 4,
-    "original_provisional_contribution_eur": 179,
     "capability_evidence": {
       "function_suite": "9/9 synthetic PASS",
       "http_integration": "12/12 local HTTP integration PASS",
@@ -59,53 +59,36 @@
     "buyer_initiated": true,
     "public_status_reverified": "OPEN / EVALUATING_PROPOSALS",
     "public_budget_eur": "200-300",
-    "public_activity_reverified": "1 proposal / 1 interested freelancer shown",
-    "client_payment_signal": "2 projects published; 1 paid; payment verified",
-    "proposal_status": "DRAFT_NOT_SUBMITTED",
-    "recommended_gross_price_eur": 300,
-    "human_gate": "Explicit Kael authorization required for proposal submission, €300 price boundary, Workana account use/creation if needed, and subsequent buyer communication."
+    "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
+    "authorized_gross_price_eur": 300,
+    "authorization_scope": "One proposal only; prepared bounded scope; no spend or paid plans.",
+    "execution_blocker": "No Workana connector exists in current plugin catalog; native web search cannot authenticate/submit; available dynamic browser automation is metered and excluded by the user's zero-spend authorization."
   },
-  "backup_candidates": [
-    {
-      "platform": "Upwork",
-      "name": "Build AI Lead Management & Follow-Up Automation",
-      "budget_usd": 250,
-      "status": "BACKUP_ONLY",
-      "reason": "Scope fit is high and no explicit portfolio requirement found, but 50+ proposals and 6 interviews materially reduce entry probability; channel proposal-credit economics are unreconciled."
-    },
-    {
-      "platform": "Upwork",
-      "name": "n8n AI Lead Qualification & CRM Automation specialist",
-      "budget_usd": 400,
-      "status": "MARKET_SIGNAL_BACKUP",
-      "reason": "Strong scope fit but 50+ proposals, one hire already shown and broader AI/CRM scope increase acquisition and delivery risk."
-    }
-  ],
   "channel_policy": {
     "spain_unsolicited_commercial_email": "NO_GO",
     "preferred_first_channel": "Buyer-initiated public briefs/RFPs or inbound/opt-in requests",
-    "first_batch_max": 5,
     "spend_authorized_eur": 0,
     "workana_initial_freelancer_commission": "20% according to current official Workana help",
-    "current_marketplace_gate_result": "Huescaventura remains primary qualified candidate; no second scanned candidate currently displaces it"
+    "workana_submission_authorized": true,
+    "workana_submission_executed": false,
+    "zero_cost_execution_channel_available": false
   },
-  "human_gate": "No proposal submission, external contact, account connection, commercial publication, paid tool or spend without explicit approval. Unsolicited Spanish commercial cold email remains NO-GO.",
-  "last_confirmed_action": "2026-10-11 12:51 CEST: Huescaventura public Workana page was rechecked and still showed open/evaluating proposals, €200-300 indicative budget, 1 proposal and payment-verified buyer history. Additional Upwork/Freelancer scanning did not identify a better second candidate. No proposal or contact occurred.",
+  "human_gate": "Authorization to submit Huescaventura at €300 has been granted. Remaining human action is operational only: manual Workana submission from an already available account if Kael wants to preserve zero spend. Account creation, paid plans, credits and metered browser use remain unauthorized.",
+  "last_confirmed_action": "2026-10-11 12:51 CEST: Kael explicitly authorized one Huescaventura Workana proposal at €300 with the prepared bounded scope and zero spend. The project was reverified open. No Workana connector exists; native web tools cannot submit authenticated forms; the only dynamic browser route is metered and therefore outside authorization. Final proposal text was persisted for manual zero-cost submission. No proposal was actually sent.",
   "integrity_warnings": [
     "NEXIA_STATE.json v61 remains canonical.",
     "NEXIA_MEMORY.md still begins with stale STATE v58 canonical text; STATE v61 wins.",
-    "HTTP 12/12 evidence is local synthetic integration, not client production experience.",
-    "Node-RED structural evidence is not Node-RED runtime execution.",
-    "Public marketplace status can change; recheck immediately before any authorized submission.",
-    "Public buyer budgets and activity are signals, not Nexia revenue or willingness-to-pay evidence."
+    "Huescaventura submission is AUTHORIZED but NOT EXECUTED.",
+    "Do not claim client contact, proposal submission, acceptance, revenue or contract until verified.",
+    "Public marketplace status can change; recheck before manual submission if materially delayed."
   ],
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "guardrail": "No spending, external contact, account connection, publication, irreversible action or material risk without Kael's explicit approval.",
+  "guardrail": "No spending, new account creation, paid plan, credits, metered browser execution or scope/price change without explicit Kael approval.",
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "updated_at": "2026-10-11",
-  "sync_status": "STATE_V61_CANONICAL_HUESCAVENTURA_REVERIFIED_OPEN_BACKUP_SCAN_COMPLETE_HUMAN_GATE_PENDING",
-  "next_action": "Do not submit under generic /next. Continue free preparation/research only. If Kael explicitly authorizes Huescaventura, recheck live project state immediately before submission and proceed only within the approved €300 bounded scope; stop if account creation, paid credits, plan purchase or other spend is required."
+  "sync_status": "STATE_V61_CANONICAL_HUESCAVENTURA_AUTHORIZED_NOT_SUBMITTED_ZERO_COST_EXECUTION_BLOCKED",
+  "next_action": "Kael may manually submit the persisted €300 proposal from Workana using an already available account. Nexia should continue zero-cost research/preparation in parallel and must not claim submission until Kael confirms or a connected execution tool verifies it."
 }
