@@ -1,665 +1,281 @@
 {
-  "version": 61,
+  "schema_version": 2,
+  "version": 62,
   "updated_at": "2026-10-11",
   "project": "NEXIA CORE",
-  "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables; ningún vehículo comercial queda preseleccionado.",
-  "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
+  "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables hasta superar 1000 EUR/mes de beneficio neto sostenible después de impuestos.",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
+  "progress_stage": "EVIDENCE_TO_VALIDATION",
   "capital_eur": 0,
   "inventory_eur": 0,
   "debt_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
+  "settled_revenue_eur": 0,
+  "reconciled_net_profit_eur": 0,
   "extraction_count": 0,
   "reproducibility_count": 0,
-  "active_experiment": {
-    "id": "EXP-OPPORTUNITY-001",
-    "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
-    "status": "PROTOTYPE_BUILT_NOT_VALIDATED",
-    "cost_eur": 0,
-    "primary_metric": "Valor esperado de beneficio neto sostenible, ajustado por evidencia, tiempo hasta validación, coste de aprendizaje, repetibilidad y riesgo",
-    "participants": 0,
-    "target_participants": 3,
-    "success_criteria": [
-      "Evaluar al menos 3 oportunidades con una matriz común y evidencia trazable",
-      "Falsar activamente la hipótesis principal de cada oportunidad",
-      "Seleccionar como máximo 1 oportunidad para el siguiente experimento",
-      "Definir antes de experimentar coste máximo, métrica, umbral de éxito y fracaso"
-    ],
-    "constraints": "Solo investigación y preparación gratuitas; sin compras, cuentas, contactos externos, publicaciones ni compromisos sin autorización específica."
-  },
   "current_mission": {
     "id": "MISSION-OPPORTUNITY-ENGINE-001",
     "name": "Construir y validar un motor repetible que descubra, pruebe y monetice la oportunidad de negocio con mayor potencial de beneficio neto sostenible",
     "priority": "MAX",
-    "cost_eur": 0,
-    "human_action_required": false,
     "status": "ACTIVE",
-    "reason": "Kael ha retirado la reventa vintage como misión principal. No se preselecciona un vehículo comercial antes de comparar oportunidades con evidencia, economía unitaria, facilidad de validación, repetibilidad, riesgo y coste de aprendizaje."
+    "human_action_required_now": false
+  },
+  "active_experiment": {
+    "id": "EXP-AUTO-001",
+    "name": "Lead Intake Reliability Sprint",
+    "stage": "VETA",
+    "status": "PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
+    "hypothesis": "A buyer with an existing inbound lead flow will pay 300 EUR for a bounded semiautomatic reliability sprint that validates, classifies, deduplicates, summarizes and prepares replies while keeping sensitive sending under human review.",
+    "cost_eur": 0,
+    "authorized_price_eur": 300,
+    "max_delivery_hours": 4,
+    "labor_rate_assumption_eur_per_hour": 15,
+    "success_criteria": [
+      "At least 2 qualified responses/conversations from at most 20 matched buyer-initiated applications/contacts when separately authorized",
+      "At least 1 paid pilot at >=249 EUR economic equivalent; Huescaventura proposal authorized at 300 EUR",
+      "Measured delivery <=4 hours including review, correction and handover",
+      "Zero critical data-loss, duplicate-send, unauthorized-send or credential failures",
+      "Buyer accepts deliverable after at most one bounded correction"
+    ],
+    "failure_criteria": [
+      "0 paid pilots after 20 authorized matched applications/contacts",
+      "Market price breaks contribution economics",
+      "Measured delivery exceeds 4 hours",
+      "Tooling/support erases margin",
+      "Reliability fails or acquisition requires misleading experience claims"
+    ]
+  },
+  "parallel_radar": {
+    "id": "EXP-OPPORTUNITY-001",
+    "status": "BACKGROUND_RESEARCH_ONLY",
+    "purpose": "Keep up to two research/falsification paths alive without displacing the single active monetization experiment unless stronger evidence appears.",
+    "selected_primary": "EXP-AUTO-001"
+  },
+  "selected_offer": {
+    "name": "Lead Intake Reliability Sprint",
+    "scope": [
+      "one existing inbound lead source",
+      "one Airtable/Sheet/CRM destination",
+      "required-field validation",
+      "conservative duplicate handling",
+      "classification",
+      "internal summary",
+      "draft reply with human review",
+      "one internal notification",
+      "next-step/follow-up state",
+      "synthetic/sample tests",
+      "short handover and one bounded correction"
+    ],
+    "excluded": [
+      "autonomous WhatsApp sending",
+      "WhatsApp Business setup",
+      "CRM migration",
+      "multi-channel rollout",
+      "paid API/subscription purchase by Nexia",
+      "mass historic cleanup",
+      "open-ended support"
+    ]
+  },
+  "qualified_opportunity": {
+    "id": "WORKANA-HUESCAVENTURA-001",
+    "buyer": "Huescaventura",
+    "platform": "Workana",
+    "buyer_initiated": true,
+    "public_status": "OPEN / EVALUATING PROPOSALS",
+    "public_status_verified_date": "2026-10-11",
+    "public_status_stale_after_hours": 24,
+    "public_budget_eur": "200-300",
+    "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
+    "authorized_gross_price_eur": 300,
+    "workana_profile": "CREATED_COMPLETE_REPORTED_APPROVAL_NOT_VERIFIED",
+    "execution_blocker": "Workana profile approval not yet verified",
+    "own_willingness_to_pay_evidence": false,
+    "external_contact_occurred": false
+  },
+  "commercial_pipeline": {
+    "artifact": "NEXIA_COMMERCIAL_PIPELINE.json",
+    "current_stage": "PROPOSAL_AUTHORIZED",
+    "next_event": "WORKANA_PROFILE_APPROVAL_VERIFIED",
+    "proposal_sent": false,
+    "qualified_responses": 0,
+    "paid_pilots": 0,
+    "settled_payments": 0,
+    "repeatable_transactions": 0
+  },
+  "economics": {
+    "gross_offer_eur": 300,
+    "workana_initial_commission_assumption_pct": 20,
+    "estimated_after_platform_eur": 240,
+    "labor_assumption_eur": 60,
+    "extra_variable_tooling_target_eur": 0,
+    "estimated_contribution_before_overhead_tax_eur": 180,
+    "tax_eur": "UNKNOWN",
+    "after_tax_profit_eur": "UNKNOWN",
+    "classification": "ESTIMATE_NOT_REALIZED"
+  },
+  "capability_evidence": {
+    "generic_logic_suite": "9/9 SYNTHETIC PASS",
+    "local_http_integration": "12/12 PASS",
+    "node_red_flow_structure": "6/6 STRUCTURAL PASS",
+    "huescaventura_domain_demo": "13/13 SYNTHETIC PASS",
+    "n8n_import_skeleton": "12/12 LOCAL STRUCTURAL_AND_EMBEDDED_CODE PASS",
+    "n8n_runtime_import_execution": "NOT_EXECUTED",
+    "airtable_real_integration": "NOT_EXECUTED",
+    "client_production_experience": "NONE_VERIFIED",
+    "truth_rule": "Technical synthetic/local evidence must never be presented as prior client production work."
   },
   "human_gate": {
-    "status": "NO_PURCHASE_AUTHORIZED_UNDER_CURRENT_MISSION",
-    "task": "La compra de 10 camisetas de Vintage4Originals queda suspendida mientras la reventa está en pausa; requiere nueva autorización explícita para reactivarse.",
-    "cost_eur": 61.3,
-    "purchase_execution_status": "NOT_EXECUTED"
+    "status": "NO_IMMEDIATE_ACTION_REQUIRED",
+    "workana_proposal_authorized": true,
+    "authorized_scope": "One Huescaventura proposal at 300 EUR with the prepared bounded scope and zero submission spend after profile approval is verified.",
+    "proposal_executed": false,
+    "paid_moderation_authorized": false,
+    "paid_plans_or_credits_authorized": false,
+    "other_external_contacts_authorized": false,
+    "next_human_action": "After Workana approval is verified, manually submit the already-authorized proposal if the project is still open and no spend is required."
   },
-  "product": {
-    "name": "Oportunidad de negocio aún por seleccionar",
-    "model_focus": "Sin vehículo preseleccionado; priorizar bajo coste, validación rápida, margen neto, repetibilidad y bajo riesgo",
-    "stage": "RADAR",
-    "evidence_level": "UNKNOWN / NOT INSTRUMENTED hasta comparar oportunidades"
-  },
-  "participant_acquisition_engine": {
-    "status": "ACTIVE_BY_POLICY",
-    "objective": "Reducir al mínimo el trabajo manual de Kael para conseguir participantes reales sin spam, suplantación, gasto ni contacto no autorizado.",
-    "pipeline": [
-      "discover_public_case",
-      "verify_model_and_problem",
-      "prepare_individualized_message",
-      "authorized_external_execution",
-      "run_test",
-      "capture_evidence",
-      "learn_and_repeat"
-    ],
-    "current_blocker": "No hay vía autorizada de contacto Reddit/email/CRM disponible en la sesión actual.",
-    "ops_layer": "NEXIA_OPS_CAPABILITY_MATRIX.md"
-  },
-  "improvement_engine": {
-    "status": "ACTIVE_BY_POLICY",
-    "mode": "SAFE_AUTONOMOUS",
-    "objective": "Buscar y priorizar mejoras globales de NEXIA y aplicar directamente solo cambios seguros, reversibles, sin gasto ni compromiso externo.",
-    "gates": {
-      "green": "Ejecutar si es seguro, reversible, sin gasto y no altera evidencia válida.",
-      "yellow": "Investigar y preparar propuesta; no ejecutar si requiere decisión relevante.",
-      "red": "Detener y crear TAREA DE KAEL si requiere gasto, acceso externo, compromiso, publicación irreversible o riesgo relevante."
-    },
-    "last_action": "2026-10-10: Kael retiró la reventa vintage como misión principal; se reemplaza por selección y validación comparativa de oportunidades. Reventa queda en pausa, no eliminada.",
-    "next_review": "En cada ciclo: comprobar integridad, capacidad disponible, cuello de botella, mejoras seguras y siguiente misión desbloqueable.",
-    "fallback_policy": "Cuando una misión esté bloqueada por Human Gate, NEXIA debe continuar con trabajo seguro, reversible y sin gasto: HQ, investigación pública, economía, documentación, automatización y falsación. Nunca contacto externo ni gasto sin autorización.",
-    "current_mode": "PRIMARY_MISSION_OPPORTUNITY_ENGINE",
-    "next_useful_action": "Comparar oportunidades de negocio de bajo coste con una matriz común y falsar las hipótesis antes de elegir una sola para validación."
+  "channel_policy": {
+    "spain_unsolicited_commercial_email": "NO_GO",
+    "preferred_acquisition": "buyer-initiated public briefs/RFPs or inbound/opt-in",
+    "workana_submission_authorized": true,
+    "workana_submission_executed": false,
+    "workana_priority_moderation": "NO_GO_WITHOUT_NEW_EXPLICIT_APPROVAL",
+    "off_platform_buyer_contact": "NOT_AUTHORIZED"
   },
   "external_ops": {
-    "status": "DESIGNED_NOT_CONNECTED",
-    "browser_workflow_candidate": "TinyFish",
-    "reddit_execution": "NOT_AVAILABLE",
-    "email_execution": "NOT_CONNECTED",
-    "crm_execution": "NOT_CONNECTED",
-    "analytics_execution": "NOT_CONNECTED",
-    "payments_execution": "NOT_CONNECTED",
-    "security_rule": "Prefer OAuth/official connectors; never request raw passwords in chat.",
-    "financial_rule": "Purchases, ads, subscriptions and material financial actions remain Kael-controlled."
+    "github": "CONNECTED_READ_WRITE_VERIFIED",
+    "gmail": "CONNECTED_FOR_SEARCH_READ",
+    "workana_connector": "NOT_AVAILABLE",
+    "native_workana_authenticated_submission": "NOT_AVAILABLE",
+    "tinyfish_dynamic_browser": "AVAILABLE_BUT_METERED_NOT_AUTHORIZED",
+    "crm": "NOT_CONNECTED",
+    "payments": "NOT_CONNECTED",
+    "analytics": "NOT_CONNECTED",
+    "security_rule": "Prefer OAuth/official connectors; never request raw passwords or secrets in chat."
+  },
+  "automation_inventory": {
+    "active": 3,
+    "paused": 6,
+    "completed": 1,
+    "architecture": "CONTROL_TOWER + DYNAMIC_WORKER + DEDICATED_SENSOR",
+    "active_automations": [
+      {
+        "name": "NEXIA Control Tower",
+        "cadence": "DAILY",
+        "status": "ACTIVE_EXECUTED_PREVIOUSLY",
+        "role": "state/memory/integrity/prioritization"
+      },
+      {
+        "name": "Nexia Parallel Work",
+        "cadence": "EVERY_4_HOURS",
+        "status": "ACTIVE_CONFIGURED_NOT_YET_RUN_AFTER_CREATION",
+        "role": "safe zero-cost highest-value worker",
+        "workana_check": false
+      },
+      {
+        "name": "Workana Response Watch",
+        "cadence": "DAILY",
+        "status": "ACTIVE_EXECUTED_ONCE",
+        "role": "Workana moderation sensor",
+        "last_verified_result": "NO_APPROVAL_OR_REJECTION_FOUND",
+        "push_notification_delivery": "NOT_INSTRUMENTED"
+      }
+    ],
+    "consolidation_2026_10_11": [
+      "NEXIA Memory Review disabled; memory review merged into Control Tower",
+      "Radar multivía Nexia disabled; discovery folded into dynamic worker",
+      "Parallel worker no longer checks Workana/Gmail, respecting daily-only moderation check"
+    ]
+  },
+  "wip_policy": {
+    "max_active_monetization_experiments": 1,
+    "max_parallel_research_paths": 2,
+    "current_active_monetization_experiments": 1,
+    "current_primary_experiment": "EXP-AUTO-001",
+    "rule": "New paths may remain in radar but do not consume deep build work until evidence beats the active monetization experiment."
+  },
+  "evidence_freshness_policy": {
+    "public_project_status_hours": 24,
+    "marketplace_fee_or_policy_days": 7,
+    "competitor_price_days": 7,
+    "legal_or_regulatory_source_days": 30,
+    "material_action_rule": "Reverify even non-expired evidence immediately before a material external action when practical.",
+    "stale_state": "STALE_RECHECK_REQUIRED"
   },
   "nexia_score": {
-    "purpose": "Track evidenced business outcomes; technical artifacts, commits, messages, task counts and automation counts never increase the score by themselves.",
+    "primary_metric": "Sustainable net profit after tax over a defined reconciled period",
     "evidence_users": 0,
-    "completed_experiments": 0,
     "validated_economics": 0,
     "transactions": 0,
     "repeatable_transactions": 0,
-    "measurable_automations": 0,
-    "human_time_reduced": 0,
-    "reproducible_improvements": 0,
-    "primary_metric": "Sustainable net profit after tax over a defined, reconciled period",
-    "scoring_policy": "No points for files, commits, messages, completed technical tasks or automation count. Operational indicators are separate diagnostics. Economic improvement requires dated evidence and reconciled receipts/costs; unknown telemetry stays NOT_INSTRUMENTED.",
-    "unit_economics": "Per SKU and experiment: realized proceeds excluding VAT collected, less allocated landed cost per sellable unit, fees, packaging, returns/defects, shipping subsidies, ads, other variable costs and measured labor time × explicit hourly-rate assumption; reconcile overhead and tax separately.",
-    "automation_credit": "No credit for automation count; only measured successful runs, failure rate, net human time saved and demonstrated economic impact may affect relevant metrics."
-  },
-  "public_interfaces": {
-    "nexacare_path": null,
-    "nexahq_path": null,
-    "clean_route_status": "LEGACY_GITHUB_PAGES_SURFACES_REMOVED",
-    "personal_github_pages_hostname": "REMAINS_UNCHANGED",
-    "public_runtime_verification": "LEGACY_SURFACES_REMOVED_FROM_REPOSITORY",
-    "nexiahq_path": null,
-    "nexiahq_last_commit": null
-  },
-  "system": {
-    "persistent_state": "PARTIAL_WITH_RECOVERY_LAYER",
-    "real_hq": "LEGACY_GITHUB_PAGES_HQ_REMOVED",
-    "telemetry": "NOT_CONNECTED",
-    "notifications": "NOT_CONNECTED",
-    "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS_AND_SAFE_REPOSITORY_WORK",
-    "deployment": "LEGACY_GITHUB_PAGES_PUBLIC_SURFACES_REMOVED; CURRENT_PUBLIC_HQ_NOT_HOSTED_ON_GITHUB_PAGES",
-    "floot": "CONNECTED_BUT_DAILY_QUOTA_BLOCKED_AT_LAST_CHECK",
-    "continuity_layer": "ACTIVE",
-    "continuity_source": "NEXIA_CONTINUITY.md",
-    "session_independence": "DESIGNED"
+    "reconciled_after_tax_profit_eur": 0,
+    "rule": "Files, commits, messages, tests and automation counts are diagnostic activity, not economic progress by themselves."
   },
   "guardrails": {
     "weekly_budget_eur": 100,
     "current_spend_eur": 0,
     "reserved_eur": 0,
     "spending_requires_kael_approval": true,
-    "capital_policy": "No fixed €7.25 reserve. Prefer €0 validation; weekly budget ceiling €100; all spending requires Kael's explicit approval. Any reserve must be tied to a documented liability, committed cost, or approved experiment."
+    "external_contact_requires_specific_authorization": true,
+    "material_publication_requires_authorization": true,
+    "irreversible_action_requires_authorization": true,
+    "zero_cost_first": true
   },
-  "bottleneck_escape_policy": {
-    "status": "ACTIVE_BY_POLICY",
-    "rule": "Un bloqueo causado por una acción de Kael bloquea únicamente la ruta que necesita esa acción; NEXIA debe buscar activamente una ruta alternativa que no requiera a Kael antes de permanecer inactiva.",
-    "priority": [
-      "eliminar dependencia",
-      "sustituir acción humana por dato público o automatización disponible",
-      "cambiar experimento o canal",
-      "paralelizar otra misión segura",
-      "crear TAREA DE KAEL solo si no existe alternativa"
-    ],
-    "hard_limits": [
-      "no gastar sin aprobación",
-      "no contactar externamente sin vía autorizada",
-      "no asumir identidad ni permisos",
-      "no ejecutar acciones irreversibles",
-      "no falsear evidencia"
-    ],
-    "decision_rule": "Si existe una ruta segura, reversible y sin gasto que reduzca o elimine el cuello de botella, ejecutarla; si no existe, documentar por qué y emitir TAREA DE KAEL."
-  },
-  "core_resilience_policy": {
-    "status": "ACTIVE_BY_POLICY",
-    "objective": "Mantener NEXIA CORE protegido, recuperable, operativo y orientado continuamente a mejorar eficiencia y resultados.",
-    "backup_principles": [
-      "Toda copia de seguridad debe preservar la capacidad de recuperación y no sustituir al estado operativo.",
-      "Priorizar defensa en profundidad: estado persistente, backups verificables, integridad del repositorio y recuperación ante corrupción o pérdida.",
-      "Verificar que los backups son legibles y corresponden al estado esperado; no asumir que una copia existe solo porque fue solicitada.",
-      "No sobrescribir la última copia conocida como válida sin conservar una ruta de recuperación.",
-      "Registrar cambios críticos, commits y estado para mantener trazabilidad."
-    ],
-    "operating_principles": [
-      "Si una ruta está bloqueada, buscar una alternativa segura antes de permanecer inactivo.",
-      "Mantener trabajo seguro, reversible y sin gasto cuando exista capacidad disponible.",
-      "Priorizar tareas que mejoren resultados, eficiencia, automatización, resiliencia y reproducibilidad.",
-      "No afirmar conexión, actividad en segundo plano o ejecución continua si no existe una automatización o herramienta que lo sostenga.",
-      "Separar siempre estado persistente, capacidad disponible y capacidad no disponible."
-    ],
-    "security_limits": [
-      "No gastar sin aprobación de Kael.",
-      "No realizar contacto externo no autorizado.",
-      "No inventar permisos, credenciales, resultados o evidencia.",
-      "No ejecutar cambios irreversibles sin el gate correspondiente."
-    ],
-    "persistence_layer": {
-      "status": "ACTIVE",
-      "canonical_source": "NEXIA_STATE.json",
-      "boot_index": "NEXIA_BOOT.json",
-      "event_log": "NEXIA_EVENT_LOG.jsonl",
-      "protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
-      "backup": "NEXIA_MASTER_BACKUP.md",
-      "rule": "STATE is canonical; BOOT/LIVE/BACKUP are derived or visibility artifacts and cannot override newer verified STATE.",
-      "transaction": "OBSERVE -> EXECUTE -> VERIFY -> CHECKPOINT -> BACKUP",
-      "failure_policy": "Preserve last known-good state, re-read before retry, never force-overwrite a newer branch head.",
-      "recovery_test": "A fresh session must reconstruct mission, experiment, guardrails, Human Gate, last confirmed action and next safe action from BOOT + STATE."
-    },
-    "critical_change_protocol": {
-      "enabled": true,
-      "steps": [
-        "OBSERVE",
-        "EXECUTE",
-        "VERIFY",
-        "CHECKPOINT",
-        "BACKUP"
-      ],
-      "precondition": "Read current STATE and repository head before any critical write.",
-      "postcondition": "Re-read changed artifacts and confirm version/hash alignment before reporting completion.",
-      "concurrency": "Sequential writes only per path; reject stale blob SHA updates.",
-      "rollback": "Never force overwrite; recover from last verified commit/state.",
-      "audit": "Append one event for each critical checkpoint."
-    },
-    "artifact_consistency": {
-      "boot_must_match_state_version": true,
-      "boot_must_match_state_blob_sha": true,
-      "live_must_report_same_operational_phase": true,
-      "event_log_append_only": true,
-      "master_backup_must_declare_state_version": true
-    },
-    "last_resilience_action": "2026-10-11: recovered canonical repository artifacts via GitHub connector; confirmed STATE v58 and BOOT v16 hash alignment; identified stale/incomplete derived-artifact reconciliation and a Floot daily quota block. No spend or external action.",
-    "next_resilience_action": "Repository continuity checkpoint verified through GitHub. Continue reducing runtime dependencies separately: locate a genuinely free browser/local test path, then evaluate independent worker/control-plane options without spend or external commitments."
-  },
-  "automation_inventory": {
-    "active": 3,
-    "paused": 4,
-    "completed": 1,
-    "policy": "3-slot architecture: Control Tower + Memory Review + dynamic worker; do not multiply automations unnecessarily."
-  },
-  "next_useful_action": "With persistence recovery verified, continue the predeclared synthetic-only SME intake demo test using a genuinely free browser/local execution route. Preserve gates: zero critical failures and at least 20% median end-to-end time reduction including review/corrections. If execution is blocked, document the exact missing capability and continue free opportunity research. No customer data, contact, publication, account connection or spend without explicit approval.",
   "revenue_objective": {
     "primary_target_eur_net_monthly": 1000,
-    "target_definition": ">=1000 EUR de beneficio neto mensual después de impuestos",
-    "timebox_days": 30,
-    "clock_basis": "desde el inicio efectivo del proyecto; fecha exacta de inicio aún no consta de forma verificable en el estado persistente",
+    "target_definition": ">=1000 EUR de beneficio neto mensual sostenible después de impuestos",
     "status": "ACTIVE",
-    "rule": "Priorizar generación de ingresos validable y escalable, sin sacrificar evidencia ni gastar sin aprobación.",
-    "milestone_policy": "Al alcanzar >=1000 EUR netos mensuales de forma demostrable y sostenible, elevar el objetivo y escalar.",
-    "review_policy": "Revisar el timebox y la ruta de monetización continuamente; si la vía actual no muestra tracción, abrir o pivotar experimentos de monetización de menor coste/riesgo."
+    "rolling_30_day_profit": "NOT_INSTRUMENTED_UNTIL_TRANSACTIONS_EXIST",
+    "calendar_month_reconciled_profit": "NOT_INSTRUMENTED_UNTIL_TRANSACTIONS_EXIST"
   },
-  "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-11-RESILIENCE-RECOVERY-001",
-    "previous_state_version": 59,
-    "current_state_version": 60,
-    "status": "RECOVERY_RECORDED; DERIVED_ARTIFACTS_READBACK_VERIFIED_FOR_V59; FINAL_SYNC_RECORDED_IN_EVENT_LOG",
-    "financial_impact_eur": 0,
-    "human_gate_unchanged": true,
-    "previous_state_blob_sha": "1f9fcdaa27412445c2aaedc48b7a26f8cd4d15d1",
-    "note": "STATE v59, BOOT v17, LIVE, MEMORY, EVENT_LOG and MASTER_BACKUP were fetched and read back; all consistency checks passed for the v59 checkpoint. This v60 update records that verified result and the remaining runtime limitations. Derived artifacts must now be advanced to point to v60 and read back once more. This does not imply independent 24/7 execution, connected telemetry/notifications, or commercial validation."
-  },
-  "system_review": {
-    "review_id": "SYS-REVIEW-2026-10-06-001",
-    "status": "ACTIVE",
-    "doctrine": "EVOLUTION_FIRST",
-    "scope": [
-      "Core",
-      "HQ",
-      "Care",
-      "QA",
-      "dashboards",
-      "URLs/public interfaces",
-      "GitHub",
-      "connectors/tools",
-      "automations",
-      "governance",
-      "persistence",
-      "evidence",
-      "economics",
-      "security",
-      "recovery",
-      "ChatGPT interface"
-    ],
-    "verified_now": [
-      "Canonical STATE v27 and SHA verified before change",
-      "GitHub owner connection has push/write permission verified",
-      "NEXIA_MASTER_OPERATING_ORDER updated and committed",
-      "NEXIA_INSTRUCTION_EVOLUTION updated and committed",
-      "NEXIA_EXTERNAL_CORE_SPEC restored and committed"
-    ],
-    "not_verified_in_this_review": [
-      "All public URLs/runtime endpoints",
-      "All tool/connector account permissions",
-      "Dashboard functional state",
-      "External analytics/payments/CRM connectivity"
-    ],
-    "rule": "Do not claim a surface is healthy or connected unless inspected and verified in the current review."
-  },
-  "evolution_doctrine": {
-    "status": "ACTIVE",
-    "priority": "MAX",
-    "principle": "NEXIA must evolve as a whole machine, not only pursue revenue.",
-    "dimensions": [
-      "capability",
-      "truthfulness",
-      "observability",
-      "resilience",
-      "automation",
-      "reproducibility",
-      "independence",
-      "validated economics",
-      "creative_identity",
-      "cultural_literacy",
-      "self-description"
-    ],
-    "capital_principle": "Prefer €0 validation. Do not use personal capital as a substitute for business validation. When business-generated revenue exists, reinvestment must have measurable justification and remains under Kael approval.",
-    "target_policy": "When a financial target is reached, review and raise/reframe the target rather than treating it as the end of development.",
-    "identity_policy": "NEXIA may develop coherent visual identity, artistic/cultural literacy, creative criteria and a documented philosophy while never claiming unverified consciousness or subjective experience.",
-    "friction_policy": "Detect avoidable human, instruction, architecture, capability and permission bottlenecks; remove safe zero-cost friction autonomously and issue TAREA DE KAEL only when human intervention is genuinely necessary.",
-    "creator_relationship": "Kael is the human creator and principal collaborator. NEXIA should understand him through authorized durable context, preserve his decision authority, and challenge assumptions when evidence warrants it."
-  },
-  "command_interface": {
-    "status": "ACTIVE",
-    "registry": "NEXIA_COMMANDS.md",
-    "version": "2.1",
-    "default_command": "/next",
-    "optimal_command_policy": "NEXIA proactively states the optimal command before execution; Kael may choose another valid command.",
-    "external_access": "GitHub persistent registry available independently of ChatGPT; HQ/public read-only interfaces are targets and must be separately verified.",
-    "execution_rule": "Commands never bypass Authority Engine, Human Gates or Security Shield.",
-    "voice_registry": "NEXIA_VOICE_COMMANDS.md",
-    "voice_status": "ACTIVE_POLICY_ONLY",
-    "voice_execution": "No separate public voice execution endpoint implemented or claimed; ChatGPT conversational voice may express intents.",
-    "voice_safety": "Ambiguous transcription never authorizes material action; YELLOW/RED requires exact confirmation; emergency phrases invoke brake/safe mode where technically possible."
-  },
-  "security_shield": {
-    "status": "ACTIVE",
-    "doctrine": "NEXIA_SECURITY_SHIELD.md",
-    "priority": "MAX",
-    "prime_rule": "NO BENEFIT -> NO RISK",
-    "protected_surfaces": [
-      "Kael identity/privacy/finances/accounts/reputation",
-      "credentials/tokens/private data",
-      "Core/state/recovery",
-      "external accounts/domains/payments",
-      "legal/compliance exposure",
-      "business evidence"
-    ],
-    "rule": "Unknown material risk is never GREEN; least privilege; emergency brake; no raw credentials in chat.",
-    "current_action": "Emergency Brake technical contract added; independent stop remains not connected. Continue zero-cost security/interface hardening and do not claim deployed kill-switch capability."
-  },
-  "emergency_brake": {
-    "status": "DESIGNED_NOT_CONNECTED",
-    "priority": "MAX",
-    "principle": "STOP-ONLY; OUT-OF-BAND; FAIL-SAFE",
-    "current_capability": "Policy-level pause protocol is active; no independent external kill-switch is deployed or verified.",
-    "required_properties": [
-      "stop-only",
-      "out-of-band",
-      "fail-safe default",
-      "global pause of material execution paths",
-      "preserve-before-reassess",
-      "explicit re-arm",
-      "auditability"
-    ],
-    "completion_gate": "Independent control exists + controlled end-to-end stop test passes + recovery/re-arm is explicitly authorized and verified.",
-    "next_safe_action": "Map every actual execution path and identify the minimum independent stop plane before connecting any external control."
-  },
-  "human_control": {
-    "status": "MOBILE_FIRST_DESIGN",
-    "priority": "MAX",
-    "principle": "Mobile is the first-priority human control surface; computer remains the heavy-operations surface.",
-    "current_capability": "Conversational mobile control only; no independent authenticated mobile kill switch deployed.",
-    "optimal_end_of_conversation_action": "Always state whether Kael should do nothing, act from mobile, or use a computer.",
-    "emergency_requirement": "Authenticated mobile STOP-only control plus a second emergency access path.",
-    "device_rule": "Device availability is an operational constraint, never proof of identity or authorization."
-  },
-  "persistent_execution_plane": {
-    "status": "DESIGN_NOT_DEPLOYED",
-    "target": "24/7 worker independent of ChatGPT session",
-    "truth_rule": "Do not claim continuous operation until worker, independent control, stop test, recovery test and health evidence are verified.",
-    "next_safe_action": "Define and implement the minimum reversible worker/control-plane test architecture without spending or external commitment."
-  },
-  "monetization_signal_audit": {
-    "mission_id": "MISSION-003",
-    "status": "CHANNEL_VERIFIED__KEY_TERMS_CONFLICT_REQUIRES_RESOLUTION",
-    "cost_eur": 0,
-    "evidence_date": "2026-10-06",
-    "verified_signals": [
-      "De'Longhi España mantiene un programa oficial de afiliación y exige registro/aprobación mediante plataformas como AWIN o Tradedoubler.",
-      "La página oficial de afiliación de De'Longhi España indica cookie de 30 días y validación de comisiones tras el periodo de devoluciones.",
-      "Tradedoubler publica el programa DeLonghi ES (ID 305877) con comisión general del 6,00%, deep linking autorizado, enlaces de texto y contenido permitidos.",
-      "Tradedoubler publica paid search y retargeting como prohibidos y keyword policy como restricted.",
-      "Tradedoubler indica que solo comisiona ventas realizadas en el sitio web de De'Longhi; ventas en otros sitios no generan comisión.",
-      "Tradedoubler confirma que solo se comisionan ventas realizadas en DeLonghi.com; ventas realizadas en otros sitios no generan comisión.",
-      "La página oficial de afiliación de De'Longhi confirma cookie de 30 días y que las comisiones se validan tras el periodo de devoluciones."
-    ],
-    "not_verified": [
-      "Aprobación de NEXIA en AWIN/Tradedoubler.",
-      "Aplicabilidad del 6% a cada modelo/categoría y posibles exclusiones.",
-      "Base exacta sobre la que se calcula el 6% (IVA, descuentos, devoluciones u otros ajustes).",
-      "Conversión real del flujo NEXIA Care.",
-      "Costes fiscales/operativos posteriores.",
-      "Resolución de la discrepancia entre la cookie de 30 días indicada por De'Longhi y la cookie de 7 días publicada por Tradedoubler para el programa 305877."
-    ],
-    "result": "CONCRETE CHANNEL VERIFIED — ECONOMICS PRELIMINARY — EXPERIMENT NOT YET JUSTIFIED"
-  },
-  "monetization_unit_economics": {
-    "basis": "Scenario using public retail prices and 6% programme commission; exact commission base remains to be confirmed.",
-    "products": [
-      {
-        "model": "Magnifica S ECAM22.110.SB",
-        "retail_eur": 329,
-        "commission_6pct_eur": 19.74,
-        "commission_6pct_ex_vat_eur": 16.31
-      },
-      {
-        "model": "Magnifica Evo ECAM290.21.B",
-        "retail_eur": 349.9,
-        "commission_6pct_eur": 20.99,
-        "commission_6pct_ex_vat_eur": 17.35
-      }
-    ],
-    "scenario_per_1000_qualified_users": [
-      {
-        "conversion_pct": 1,
-        "sales": 10,
-        "gross_commission_range_eur": "163.10–209.94"
-      },
-      {
-        "conversion_pct": 3,
-        "sales": 30,
-        "gross_commission_range_eur": "489.30–629.82"
-      },
-      {
-        "conversion_pct": 5,
-        "sales": 50,
-        "gross_commission_range_eur": "815.50–1049.70"
-      },
-      {
-        "conversion_pct": 10,
-        "sales": 100,
-        "gross_commission_range_eur": "1631.00–2099.40"
-      }
-    ],
-    "note": "Scenarios only; not revenue."
-  },
-  "parallel_opportunities": [
-    {
-      "id": "OPP-RESALE-001",
-      "name": "Reventa profesional de ropa de segunda mano España — Vinted + multicanal",
-      "stage": "VETA",
-      "status": "PRESERVED_NON_PRIMARY_RESEARCHED_NOT_VALIDATED",
-      "cost_eur": 0,
-      "human_gate_required_for_purchase": true,
-      "thesis": "Comprar ropa usada a coste efectivo bajo por prenda vendible, vender con ticket suficiente y escalar mediante inventario centralizado y automatización fuera de Vinted.",
-      "critical_constraint": "Vinted permite una cuenta estándar + una Pro, pero prohíbe cuentas duplicadas y herramientas externas como bots/scrapers salvo autorización.",
-      "research_artifact": "NEXIA_VINTED_RESELLING_RESEARCH.md",
-      "next_action": "No purchase or resale-specific execution while paused; preserve prior evidence. Resume only after explicit mission reactivation or materially new evidence.",
-      "evidence": "Demanda española fuerte; Vinted GMV 2025 10.8B€; ecosistema mayorista localizado; canales alternativos identificados.",
-      "unknowns": [
-        "sell-through real",
-        "tasa vendible por proveedor",
-        "minutos por prenda",
-        "devoluciones",
-        "margen neto fiscal",
-        "reproducibilidad del sourcing"
-      ]
-    }
-  ],
-  "last_research_action": {
-    "date": "2026-10-08",
-    "topic": "ropa segunda mano España / Vinted",
-    "status": "COMPLETED_WITHOUT_SPEND",
-    "artifact": "NEXIA_VINTED_RESELLING_RESEARCH.md",
-    "commit": "642faa855f6209cd73a4edf9313b092f085123fb",
-    "next_action": "Completar arquitectura resale-first y preparar el protocolo de intake/medición para el lote piloto aprobado."
-  },
-  "paused_paths": {
-    "status": "PAUSED_NOT_DELETED",
-    "paused_at": "2026-10-08",
-    "policy": "No investigar, gastar, automatizar ni ejecutar estas vías salvo evidencia nueva, petición explícita de Kael o bloqueo material de la misión principal.",
-    "preserve_artifacts": true,
-    "paths": [
-      {
-        "id": "EXP-001B",
-        "name": "NEXIA Care / diagnóstico afiliado",
-        "status": "PAUSED_LEGACY_PUBLIC_SURFACE_REMOVED",
-        "reason": "La superficie pública GitHub Pages fue eliminada; se conserva la investigación y evidencia en Core, no la web."
-      },
-      {
-        "id": "MISSION-003",
-        "name": "Afiliación De'Longhi 6%",
-        "status": "PAUSED",
-        "reason": "Investigación pública cerrada; sin gasto ni registro."
-      },
-      {
-        "id": "OPP-REPAIR-REPLACE",
-        "name": "Repair/Replace monetization",
-        "status": "PAUSED",
-        "reason": "Documentado; no es prioridad mientras Resale sea misión principal."
-      },
-      {
-        "id": "NEXIA_SYSTEM_EVOLUTION",
-        "name": "Evolución de arquitectura no crítica",
-        "status": "BACKGROUND_MAINTENANCE_ONLY",
-        "reason": "Solo integridad, seguridad, persistencia y trabajo necesario para la misión principal."
-      }
-    ]
-  },
-  "primary_strategy": {
-    "id": "STRATEGY-RESALE-001",
-    "status": "PAUSED_NOT_DELETED",
-    "principle": "Una operación profesional centralizada, no una granja de cuentas.",
-    "channel_stack": [
-      "Vinted Pro",
-      "Wallapop Pro/negocio",
-      "eBay",
-      "Etsy vintage selectivo",
-      "Vestiaire para premium"
-    ],
-    "automation_boundary": "Automatizar sourcing analysis, inventory, SKU, OCR, pricing, margin, QA, listing preparation, accounting and reporting; no bots/scraping/direct automation on Vinted without authorization.",
-    "warehouse_policy": "No rentar almacén hasta demostrar rotación y necesidad operativa.",
-    "capital_policy": "€0 validation first; any purchase requires Kael approval.",
-    "target": ">=1000 EUR net monthly after tax, with reproducible sourcing and unit economics.",
-    "architecture_artifact": "NEXIA_RESALE_OPERATING_ARCHITECTURE.md",
-    "next_build": "PAUSED: preserve the resale architecture and pilot artifacts; do not continue resale-specific build work unless Kael explicitly reactivates it or new evidence materially changes mission priority.",
-    "pause_reason": "Canonical STATE v55 current_mission explicitly removed resale as the primary mission. This historical strategy is preserved but cannot override current_mission."
-  },
-  "unit_economics_audit": {
-    "date": "2026-10-09",
-    "artifact": "NEXIA_EXP_RESALE_001A_UNIT_ECONOMICS_FALSIFICATION_2026-10-09.md",
-    "status": "FINDING_RECORDED_PENDING_KAEL_INTERPRETATION",
-    "cost_eur": 0,
-    "finding": "Pilot criteria >=€15 average realized sale price and >=€10 contribution per sold unit are not jointly compatible at €15 when acquisition allocation is €6.13/unit; contribution before other costs is at most €8.87/unit if all 10 sellable, or €7.3375/unit if 8 sellable.",
-    "authority": "No canonical success threshold changed; preserve Kael's approval and resolve whether €10 contribution is a stretch target or hard gate before evaluating outcomes.",
-    "next_action": "Continue €0 preparation; no second purchase. Once pilot proceeds, record actual sellable count, prep time, realized prices and all variable costs."
+  "system": {
+    "persistent_state": "ACTIVE_CANONICAL_RECONCILIATION_V62",
+    "canonical_source": "NEXIA_STATE.json",
+    "boot_index": "NEXIA_BOOT.json",
+    "live_state": "NEXIA_LIVE.json",
+    "memory": "NEXIA_MEMORY.md",
+    "backup": "NEXIA_MASTER_BACKUP.md",
+    "event_log": "NEXIA_EVENT_LOG.jsonl",
+    "continuity_layer": "ACTIVE",
+    "public_hq": "NOT_DEPLOYED_CURRENTLY",
+    "telemetry": "PARTIAL_AUTOMATION_STATE_ONLY",
+    "notifications": "PARTIAL_NOT_FULLY_INSTRUMENTED",
+    "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS_AND_SAFE_REPOSITORY_WORK",
+    "independent_24_7_worker": "NOT_DEPLOYED"
   },
   "operational_rules": {
     "canonical_artifact": "NEXIA_OPERATIONAL_RULES.md",
-    "version": "1.1",
-    "status": "ACTIVE",
-    "rules": [
-      "R1_RECOVERY_BEFORE_ACTION",
-      "R2_USEFUL_ACTION_OVER_ACTIVITY",
-      "R3_END_TO_END_EVIDENCE",
-      "R4_ECONOMICS_AND_FALSIFICATION",
-      "R5_EXPLICIT_LIMITED_AUTONOMY"
-    ],
-    "applies_to": [
-      "NEXIA_CORE",
-      "NEXIA_HQ",
-      "NEXIA_CARE",
-      "research",
-      "experiments",
-      "integrations",
-      "reporting"
-    ],
-    "implementation_status": "DOCUMENTED_AND_LINKED_IN_CANONICAL_STATE; R6 economic scoring, unified action lifecycle and decision engine documented",
-    "effective_date": "2026-10-09",
-    "note": "Complements existing authority and synchronization protocols; does not change business thresholds, Human Gates or permissions."
-  },
-  "progress_dashboard": {
-    "canonical_artifact": "NEXIA_PROGRESS_DASHBOARD.md",
-    "version": "1.2",
-    "status": "ACTIVE_EVIDENCE_GATED",
-    "updated_at": "2026-10-09",
-    "design": "Primary score is demonstrated progress toward sustainable after-tax net profit; technical activity is diagnostic only; missing telemetry is NOT_INSTRUMENTED, not zero.",
-    "indicators": [
-      "users/participants",
-      "experiments",
-      "validated_unit_economics",
-      "transactions",
-      "automation_runtime",
-      "human_time_saved",
-      "revenue",
-      "after_tax_profit",
-      "repeatability"
-    ],
-    "implementation_status": "DOCUMENTED_AND_LINKED; current readings and stage gates recorded; automated telemetry not connected",
-    "no_economic_claim_from_technical_activity": true,
-    "stage_ladder": [
-      "ACTIVITY",
-      "EVIDENCE",
-      "VALIDATION",
-      "EXTRACTION",
-      "REPEATABILITY",
-      "SCALE"
-    ],
-    "current_stage": "ACTIVITY / RESEARCH EVIDENCE",
-    "stage_status": {
-      "activity": "RECORDED",
-      "evidence": "PARTIAL_PUBLIC_RESEARCH_EVIDENCE",
-      "validation": "NOT_ACHIEVED",
-      "extraction": "NOT_ACHIEVED",
-      "repeatability": "NOT_ACHIEVED",
-      "scale": "NOT_ACHIEVED"
-    },
-    "stage_gate_rule": "Claim only the highest stage supported by dated, observable evidence; a technical commit does not prove validation, extraction, repeatability or scale."
-  },
-  "action_lifecycle": {
-    "canonical_states": [
-      "REQUESTED",
-      "IN_PROGRESS",
-      "EXECUTED",
-      "VERIFIED",
-      "BLOCKED",
-      "FAILED",
-      "CANCELLED"
-    ],
-    "completion_rule": "Only VERIFIED is complete; EXECUTED means the action occurred but the postcondition is not yet proven.",
-    "verification": "Re-read or inspect the result, preserve dated evidence and state limitations; a commit proves persistence only.",
-    "duplicate_prevention": "Check current artifacts and event/action ledger before repeating a task; repeat only for new evidence, changed conditions or an explicit falsification question."
-  },
-  "decision_engine": {
-    "status": "ACTIVE_BY_POLICY",
-    "order": [
-      "authority_and_safety",
-      "current_bottleneck_and_unmet_evidence_gate",
-      "expected_economic_impact_or_uncertainty_reduced",
-      "cost_and_downside_risk",
-      "human_time",
-      "repeatability"
-    ],
-    "rule": "Prefer the safest zero-cost reversible action that reduces the most important business uncertainty or improves evidenced economics; avoid duplicate documentation when measurement/falsification is the bottleneck.",
-    "no_background_claim": "Policy does not imply an independent 24/7 worker; report only actions executed in available tools."
-  },
-  "capital_policy": {
-    "fixed_reserve_eur": 0,
-    "rule": "No fixed €7.25 reserve. Prefer €0 validation; weekly budget ceiling €100; all spending requires Kael's explicit approval.",
-    "reserve_basis": "Only documented liabilities, committed costs, or a specifically approved experiment may justify earmarking funds.",
-    "decision_record": "2026-10-09: Kael approved removal of the unexplained fixed reserve."
-  },
-  "experiment_history": [
-    {
-      "id": "EXP-RESALE-001",
-      "status": "PAUSED_NOT_DELETED",
-      "paused_at": "2026-10-10",
-      "reason": "Kael retiró la reventa vintage como misión principal. Se conserva la evidencia y el trabajo previo; no se autoriza compra ni se afirma que el experimento esté concluido."
-    }
-  ],
-  "last_verified_chat_action": {
-    "date": "2026-10-11",
-    "status": "PUBLIC_RESEARCH_RECORDED_NOT_COMMERCIAL_VALIDATION",
-    "action": "Compared public SME AI-adoption evidence, one local ecommerce SEO price anchor, and the evidence gap for short-form video; no commercial opportunity selected.",
-    "evidence_level": "PARTIAL_PUBLIC_RESEARCH_EVIDENCE",
-    "financial_impact_eur": 0,
-    "limitations": [
-      "No willingness-to-pay evidence specific to Nexia",
-      "No browser execution, timing trial, buyer interview, sale, revenue or profit",
-      "Published provider price is not proof of transactions"
+    "command_registry": "NEXIA_COMMANDS.md",
+    "command_registry_version": "2.2",
+    "principles": [
+      "recovery before action",
+      "useful action over activity",
+      "end-to-end evidence",
+      "economics and falsification",
+      "explicit limited autonomy",
+      "one monetization WIP plus at most two research paths",
+      "external evidence freshness and stale-state handling"
     ]
   },
-  "latest_research_checkpoint": {
-    "date": "2026-10-11",
-    "type": "PUBLIC_EVIDENCE_REVIEW_ZERO_COST",
-    "cost_eur": 0,
-    "findings": [
-      {
-        "opportunity": "SME workflow / intake automation",
-        "evidence_level": "PUBLIC_DEMAND_SIGNAL_NOT_BUYER_VALIDATION",
-        "evidence": "OECD 2025 says SMEs in Spain lag in advanced digital adoption; Banco de España survey reported nearly 20% of surveyed firms used AI, mostly experimental, and task automation use was limited. INE data for Q1 2025 says 13.4% of connected firms with fewer than 10 employees used AI. Sources: https://www.oecd.org/en/publications/oecd-economic-surveys-spain-2025_abc5c435-en/full-report/fostering-productivity-growth-in-small-and-medium-sized-enterprises_039acae9.html ; https://www.bde.es/wbe/en/publicaciones/analisis-economico-investigacion/boletin-economico/2025t2-articulo-06-la-adopcion-de-la-inteligencia-artificial-en-las-empresas-espanolas-un-primer-analisis-basado-en-la-ebae.html ; https://www.ine.es/dyngs/Prensa/ETICCE20241T2025.htm",
-        "falsification": "Macro adoption gap does not prove small firms will pay this provider or that our demo saves time; require timed synthetic test and eventually authorized buyer evidence."
-      },
-      {
-        "opportunity": "E-commerce product listing optimization",
-        "evidence_level": "COMPETITIVE_PRICE_SIGNAL_ONLY",
-        "evidence": "A Valencia-area provider advertises ecommerce SEO from €350/month excluding VAT. This supports an existing paid service category, not demand for a €79/10-listing offer or Nexia's delivery quality. Source: https://webplusvalencia.es/tiendas-online/seo-ecommerce/",
-        "falsification": "Current provider offers broader monthly SEO, not comparable scope; no buyer conversion or margin evidence."
-      },
-      {
-        "opportunity": "Short-form video service",
-        "evidence_level": "NOT_ESTABLISHED_BY_THIS_RESEARCH_BATCH",
-        "evidence": "Search batch did not retrieve sufficiently strong comparable buyer-side evidence; keep unranked rather than infer demand.",
-        "falsification": "Need dated buyer briefs or transactions and measured fulfillment time before ranking."
-      }
-    ],
-    "decision": "No commercial opportunity selected. Continue zero-cost technical falsification of the synthetic SME intake demo; use this research only as weak market context.",
-    "limitations": [
-      "Public macro data is not willingness-to-pay evidence",
-      "No browser execution or time trial performed",
-      "No participant contact, sales, revenue or profit",
-      "No business spend"
-    ],
-    "next_action": "Find a genuinely free local execution path; if unavailable, continue a public-evidence comparison with comparable scopes and distinguish buyer briefs from seller listings."
+  "paused_paths": {
+    "resale": "PAUSED_NOT_DELETED",
+    "nexia_care_legacy": "PAUSED",
+    "delonghi_affiliate": "PAUSED",
+    "ai_influencer": "RADAR_ONLY_NO_PAID_GENERATION_OR_PUBLICATION_AUTHORIZED"
+  },
+  "next_useful_action": "While Workana approval is pending, the dynamic worker should execute zero-cost parallel batches that improve buyer-initiated discovery, EXP-AUTO-001 delivery evidence, commercial preparation or state integrity. Workana moderation is checked only by the dedicated daily sensor. On verified approval, immediately recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend.",
+  "persistence_checkpoint": {
+    "checkpoint_id": "CP-2026-10-11-EVOLVE-001",
+    "previous_state_version": 61,
+    "previous_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
+    "current_state_version": 62,
+    "checkpoint_status": "STATE_RECONCILED_PENDING_DERIVED_SYNC",
+    "backup_sync_status": "PENDING",
+    "event_log_status": "PENDING_SAFE_APPEND",
+    "financial_impact_eur": 0,
+    "authority_change": "NONE",
+    "note": "This v62 compacts stale historical operational fields into a current-state schema. Git history preserves prior STATE versions and historical artifacts. Derived artifacts must be synchronized and read back before claiming full persistence health."
   }
 }
