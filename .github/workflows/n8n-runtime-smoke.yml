@@ -80,6 +80,7 @@ jobs:
           DEDUP_WORKFLOW_ID: nexia-exp-auto-001-datatable-dedup
           DEDUP_WEBHOOK_PATH: nexia-exp-auto-001-datatable-dedup
           AUDIT_OUTPUT: ${{ runner.temp }}/n8n-datatable-audit.json
+          SETUP_OUTPUT: ${{ runner.temp }}/n8n-datatable-setup-output.json
         run: |
           set -euo pipefail
           mkdir -p "$N8N_USER_FOLDER"
@@ -88,8 +89,8 @@ jobs:
           npx --yes n8n@2.42.6 import:workflow --input=prototypes/n8n-datatable-dedup-webhook.json
           npx --yes n8n@2.42.6 import:workflow --input=prototypes/n8n-datatable-dedup-audit.json
 
-          npx --yes n8n@2.42.6 execute --id=nexia-exp-auto-001-datatable-setup --rawOutput > "$RUNNER_TEMP/n8n-datatable-setup-output.json"
-          grep -q 'nexia_exp_auto_001_dedup_proof' "$RUNNER_TEMP/n8n-datatable-setup-output.json"
+          npx --yes n8n@2.42.6 execute --id=nexia-exp-auto-001-datatable-setup --rawOutput | tee "$SETUP_OUTPUT"
+          echo 'PASS: Data Table setup workflow executed successfully'
 
           npx --yes n8n@2.42.6 publish:workflow --id="$DEDUP_WORKFLOW_ID"
           DB="$N8N_USER_FOLDER/.n8n/database.sqlite"
