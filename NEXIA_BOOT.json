@@ -6,6 +6,9 @@
   "canonical_state": "NEXIA_STATE.json",
   "state_version": 66,
   "state_blob_sha": "69dd2b8a1d6b60d5712e5b691908d7dbabc8ee5e",
+  "mission": {
+    "id": "MISSION-OPPORTUNITY-ENGINE-001"
+  },
   "live_state": "NEXIA_LIVE.json",
   "learning_ledger": "NEXIA_MEMORY.md",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
