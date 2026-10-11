@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "boot_version": 39,
+  "boot_version": 40,
   "generated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -16,10 +16,10 @@
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
     "index": "NEXIA_EVENT_INDEX.json",
-    "index_blob_sha": "34e18f6e351e8d75c240dbc6d8fccc508fb550d6",
-    "latest_verified_event_id": "EVT-2026-10-11-EVOLVE-002",
-    "latest_verified_event_path": "events/EVT-2026-10-11-EVOLVE-002.json",
-    "latest_verified_event_blob_sha": "9cfbd2e57f6cf67a80ba72727fed0e56ca81a543",
+    "index_blob_sha": "6691b1e55efb8f20c42904668e75314136c7028e",
+    "latest_verified_event_id": "EVT-2026-10-11-CI-001",
+    "latest_verified_event_path": "events/EVT-2026-10-11-CI-001.json",
+    "latest_verified_event_blob_sha": "8a6cc25993cd987e827e44aed8128c541e5be27b",
     "legacy_jsonl_mode": "READ_ONLY",
     "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
@@ -47,10 +47,18 @@
     "parallel_worker": "EVERY_4_HOURS_CONFIGURED_NOT_YET_RUNTIME_VERIFIED",
     "workana_sensor": "DAILY_ONLY"
   },
+  "continuous_integration": {
+    "status": "VERIFIED",
+    "workflow": ".github/workflows/nexia-ci.yml",
+    "first_verified_run_id": 38149148915,
+    "first_verified_run_conclusion": "success",
+    "permissions": "contents: read",
+    "deployment": "NONE"
+  },
   "human_gate": "No immediate action. One Huescaventura proposal at 300 EUR remains authorized after profile approval is verified and only if zero-spend.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "sync_status": "STATE_V65_CORE_EVOLUTION_CLOSED_EVENT_STORAGE_V2_OPERATIONAL_MEMORY_DERIVED_STALE",
+  "sync_status": "STATE_V65_CORE_EVOLUTION_CLOSED_CI_VERIFIED_EVENT_STORAGE_V2_OPERATIONAL_MEMORY_DERIVED_STALE",
   "next_action": "Continue safe parallel work. Verify the first completed Parallel Work run. Workana moderation is checked once daily. Do not bypass the blocked MEMORY write; retry only if tool/security state changes."
 }
