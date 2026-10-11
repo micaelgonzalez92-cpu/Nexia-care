@@ -1,0 +1,46 @@
+{
+  "name": "NEXIA EXP-AUTO-001 Huescaventura Intake Demo",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "nexia-huescaventura-intake",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [0,0],
+      "id": "d0fdf9f7-4081-44c2-9b33-43d5ae3ec2f1",
+      "name": "Lead Webhook",
+      "webhookId": "6eb0cddd-2748-4db2-92ff-076cbf90df51"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const LABELS={date:'fecha',people:'número de personas',activities:'actividades',lodging:'alojamiento',name:'nombre',contact:'contacto'};\nconst REQUIRED={despedida:['name','contact','date','people','activities'],amigos:['name','contact','date','people','activities'],familia:['name','contact','date','people','activities'],empresa:['name','contact','date','people','activities'],escolar:['name','contact','date','people','activities'],solo_actividad:['name','contact','date','people','activities'],pack_alojamiento:['name','contact','date','people','activities','lodging'],revision:['name','contact']};\nconst clean=v=>String(v??'').trim().replace(/\\s+/g,' ');\nconst normEmail=v=>clean(v).toLowerCase();\nconst normPhone=v=>{const s=clean(v);if(!s)return '';return s.startsWith('+')?'+'+s.replace(/\\D/g,''):s.replace(/\\D/g,'');};\nconst classify=raw=>{const text=[raw.group_type,raw.message,raw.activities,raw.lodging].map(clean).join(' ').toLowerCase();const rules=[['despedida',/despedid/],['empresa',/empresa|team\\s?building|corporativ/],['escolar',/escolar|colegio|instituto|alumn/],['familia',/familia|niñ|hijos?/],['pack_alojamiento',/alojamiento|hotel|hostal|casa rural|pack/],['solo_actividad',/solo actividad|actividad suelta|sin alojamiento/],['amigos',/amigos?|grupo/]];for(const [cat,rx] of rules)if(rx.test(text))return cat;return 'revision';};\nconst input=$input.all().map(i=>i.json.body??i.json);\nreturn input.map(raw=>{\n  const contact=clean(raw.email)||clean(raw.phone);\n  if(!clean(raw.event_id)) return {json:{ok:false,status:'validation_failed',errors:['missing_event_id'],autonomous_send:false}};\n  if(!clean(raw.name)||!contact) return {json:{ok:false,status:'validation_failed',errors:['missing_name_or_contact'],autonomous_send:false}};\n  const category=classify(raw);\n  const view={name:clean(raw.name),contact,date:clean(raw.date),people:clean(raw.people),activities:clean(raw.activities),lodging:clean(raw.lodging)};\n  const missing=(REQUIRED[category]||REQUIRED.revision).filter(k=>!view[k]);\n  const summary=[`Tipo: ${category}`,`Nombre: ${view.name||'N/D'}`,`Contacto: ${contact||'N/D'}`,`Fecha: ${view.date||'N/D'}`,`Personas: ${view.people||'N/D'}`,`Actividades: ${view.activities||'N/D'}`,`Alojamiento: ${view.lodging||'N/D'}`,`Faltan: ${missing.length?missing.map(x=>LABELS[x]||x).join(', '):'nada crítico'}`].join('\\n');\n  const prefix=clean(raw.name)||'Hola';\n  const reply=missing.length?`${prefix}, gracias por contactar con Huescaventura. Para orientarte mejor sobre ${category}, antes necesitamos confirmar: ${missing.map(x=>LABELS[x]||x).join(', ')}. Este mensaje es un borrador para revisión humana y no se ha enviado.`:`${prefix}, gracias por contactar con Huescaventura. Tenemos la información básica para revisar tu solicitud de ${category}. Prepararemos la opción más adecuada y confirmaremos disponibilidad y condiciones antes de responderte. Este mensaje es un borrador para revisión humana y no se ha enviado.`;\n  return {json:{ok:true,status:'prepared_for_human_review',event_id:clean(raw.event_id),identity:{email:normEmail(raw.email),phone:normPhone(raw.phone)},category,classification_review_required:category==='revision',missing_fields:missing,summary,reply_draft:reply,next_step:category==='revision'?'manual_classification_review':(missing.length?'request_missing_data':'human_review_quote_or_availability'),followup:{status:'pending_human_decision',autonomous_send:false},persistence_note:'Demo importable: deduplication/idempotency persistence must be bound to Airtable/Sheet/DB in client environment.'}};\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [280,0],
+      "id": "678c15a2-1dce-4c56-a9d0-0742b11b45d4",
+      "name": "Prepare Lead Review"
+    },
+    {
+      "parameters": {"respondWith":"allIncomingItems","options":{}},
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [560,0],
+      "id": "10217c85-a76f-4f0e-8c47-28a5e43a4b8e",
+      "name": "Respond Draft"
+    }
+  ],
+  "connections": {
+    "Lead Webhook": {"main":[[{"node":"Prepare Lead Review","type":"main","index":0}]]},
+    "Prepare Lead Review": {"main":[[{"node":"Respond Draft","type":"main","index":0}]]}
+  },
+  "active": false,
+  "settings": {"executionOrder":"v1"},
+  "pinData": {},
+  "meta": {"templateCredsSetupCompleted":false,"nexiaEvidence":"synthetic-import-skeleton-no-credentials-no-external-send"}
+}
