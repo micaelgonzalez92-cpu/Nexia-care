@@ -1,0 +1,40 @@
+{
+  "id": "nexia-exp-auto-001-persistent-dedup",
+  "name": "NEXIA EXP-AUTO-001 Persistent Dedup Proof",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "nexia-exp-auto-001-persistent-dedup",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [0, 0],
+      "id": "c7152e0b-10b6-4c4a-9238-001000000001",
+      "name": "Webhook",
+      "webhookId": "nexia-exp-auto-001-persistent-dedup"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const state = $getWorkflowStaticData('global');\nstate.processedEvents = state.processedEvents || {};\nstate.identities = state.identities || {};\n\nconst raw = $json.body ?? $json;\nconst clean = v => String(v ?? '').trim().replace(/\\s+/g, ' ');\nconst normEmail = v => clean(v).toLowerCase();\nconst normPhone = v => {\n  const s = clean(v);\n  if (!s) return '';\n  const digits = s.replace(/\\D/g, '');\n  return s.startsWith('+') ? '+' + digits : digits;\n};\n\nconst eventId = clean(raw.event_id);\nconst email = normEmail(raw.email);\nconst phone = normPhone(raw.phone);\n\nif (!eventId) {\n  return [{json:{\n    ok:false,\n    status:'validation_failed',\n    reason:'missing_event_id',\n    autonomous_send:false,\n    execution_id:$execution.id\n  }}];\n}\nif (!email && !phone) {\n  return [{json:{\n    ok:false,\n    status:'validation_failed',\n    reason:'missing_identity',\n    event_id:eventId,\n    autonomous_send:false,\n    execution_id:$execution.id\n  }}];\n}\n\nif (state.processedEvents[eventId]) {\n  return [{json:{\n    ok:true,\n    status:'idempotent_skip',\n    event_id:eventId,\n    seen_event:true,\n    duplicate_identity:false,\n    record_id:state.processedEvents[eventId].record_id,\n    autonomous_send:false,\n    execution_id:$execution.id\n  }}];\n}\n\nconst identities = [];\nif (email) identities.push(`email:${email}`);\nif (phone) identities.push(`phone:${phone}`);\n\nconst duplicateKey = identities.find(k => state.identities[k]);\nif (duplicateKey) {\n  const recordId = state.identities[duplicateKey].record_id;\n  state.processedEvents[eventId] = {record_id:recordId, status:'duplicate_identity'};\n  return [{json:{\n    ok:true,\n    status:'duplicate_identity_skip',\n    event_id:eventId,\n    seen_event:false,\n    duplicate_identity:true,\n    duplicate_key:duplicateKey,\n    record_id:recordId,\n    autonomous_send:false,\n    execution_id:$execution.id\n  }}];\n}\n\nstate.sequence = (state.sequence || 0) + 1;\nconst recordId = `lead_${String(state.sequence).padStart(4,'0')}`;\nstate.processedEvents[eventId] = {record_id:recordId, status:'created'};\nfor (const identity of identities) {\n  state.identities[identity] = {record_id:recordId, first_event_id:eventId};\n}\n\nreturn [{json:{\n  ok:true,\n  status:'created',\n  event_id:eventId,\n  seen_event:false,\n  duplicate_identity:false,\n  record_id:recordId,\n  identities,\n  autonomous_send:false,\n  execution_id:$execution.id\n}}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [280, 0],
+      "id": "c7152e0b-10b6-4c4a-9238-001000000002",
+      "name": "Persistent Dedup"
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{"node": "Persistent Dedup", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {"executionOrder": "v1"},
+  "pinData": {},
+  "meta": {"nexiaEvidence": "production-webhook-static-data-persistence-test-no-credentials-no-external-send"}
+}
