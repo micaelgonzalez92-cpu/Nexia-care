@@ -1,0 +1,54 @@
+name: Nexia CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'prototypes/**'
+      - 'tools/**'
+      - '.github/workflows/nexia-ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'prototypes/**'
+      - 'tools/**'
+      - '.github/workflows/nexia-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nexia-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  technical-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Lead intake logic suite
+        run: node prototypes/test-lead-intake-reliability-demo.js
+
+      - name: Local HTTP integration suite
+        run: node prototypes/test_http_runtime.js
+
+      - name: Huescaventura domain suite
+        run: node prototypes/test_huescaventura_logic.js
+
+      - name: Validate Node-RED flow structure
+        run: node prototypes/validate_node_red_flow.js prototypes/node-red-exp-auto-001-flow.json
+
+      - name: Validate n8n import skeleton
+        run: node prototypes/validate_n8n_huescaventura_demo.js prototypes/n8n-huescaventura-intake-demo.json
+
+      - name: Integrity checker regression tests
+        run: python3 tools/test_nexia_integrity_check.py
