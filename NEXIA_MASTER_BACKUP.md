@@ -7,9 +7,9 @@ Checkpoint: `CP-2026-10-12-ACQ-001`
 Historical snapshots remain recoverable from Git history and never override canonical STATE.
 
 ## Canonical recovery map
-- STATE v67: `f323bdfeac9d74c2792b567b633bce62b02d1cb4`
-- BOOT v42: `6bc65434d46088c14e5907230772db6d6e73219a`
-- LIVE: `bda211086ca8f16f37402db103ab93200f60ed5e`
+- STATE v67: `599eb1b2fe5f3760f4e2bd72bdef8fce8f56a56b`
+- BOOT v42: `d085b9e780dc9239d5ea421dff2254470f41e9a3`
+- LIVE: `d662c1afe0c5856a592d24b3cbe3b2548af1faf9`
 - MEMORY last verified: `443137fd25747baa2c25a403b4ca47a38b6dee7a` — derived ledger remains on v63 header because update was blocked by tool safety; STATE v67 overrides it.
 - Commercial pipeline: `92e53d402bf53987275b6d56e17586847a8907e2`
 - Persistence protocol v2: `69f18157e693fb71739fa1230286acdf5134b370`
