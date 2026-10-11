@@ -1,10 +1,10 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / RADAR — WORKANA APPROVAL PENDING; HUESCAVENTURA OPEN; FRESH RADAR FOUND NO BETTER CANDIDATE",
+  "status": "ACTIVE / RADAR — WORKANA APPROVAL PENDING; HUESCAVENTURA OPEN; DOMAIN DEMO 13/13 PASS",
   "current_cycle": "NEXIA Core — EXP-AUTO-001 commercial validation while waiting for Workana moderation",
-  "current_action": "Connected Gmail was rechecked and no Workana approval/rejection notification was found. Huescaventura remains open/evaluating proposals. Fresh Workana alternatives were reviewed; the strongest alternatives require broader experience, higher-risk WhatsApp/clinic scope, or a different service category such as Meta Ads/GoHighLevel. No proposal was sent.",
-  "last_completed_action": "2026-10-11 14:00 CEST: persisted NEXIA_EXP_AUTO_001_RADAR_CHECK_2026-10-11_1400.md and advanced BOOT to v31 while canonical STATE remains v61.",
-  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v31 SHA cc68aad2754fbdf1d36eb4e870208982fe39ad3a; Gmail no Workana approval/rejection email at checkpoint; Huescaventura public page open/evaluating proposals; no newly scanned candidate displaced it.",
+  "current_action": "Connected Gmail still shows no Workana approval/rejection notification. Huescaventura remains open/evaluating proposals. Instead of repeating low-yield market scans, a Huescaventura-specific synthetic lead workflow was built, tested, repaired after an intermediate fixture exposed two quality issues, and finished at 13/13 PASS. No proposal was sent.",
+  "last_completed_action": "2026-10-11: persisted/read back prototypes/huescaventura_logic.js, its test suite, and NEXIA_EXP_AUTO_001_HUESCAVENTURA_DEMO_2026-10-11.md; BOOT advanced to v32 while canonical STATE remains v61.",
+  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v32 SHA c801491303b9c41f8a020dbc441b0d7ea05d37f1; Huescaventura demo code blob 7af5949a91d324d9160f7f3390ee421f30081b49; test blob 483ff21038faf6d4c7613b38cc9a7363decc1383; demo report blob d01a45b03608c127855ca59680b46038401a1e3e; local final suite 13/13 PASS.",
   "capital_spent_eur": 0,
   "human_gate": "No immediate action required from Kael unless Workana requests a legitimate free profile correction. Paid moderation, plans, credits and other spend remain unauthorized. Huescaventura proposal at €300 remains authorized once profile approval is verified.",
   "selected_next_candidate": {
@@ -12,10 +12,12 @@
     "name": "Lead Intake Reliability Sprint",
     "status": "HUESCAVENTURA_PROPOSAL_AUTHORIZED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
     "authorized_price_eur": 300,
-    "function_tests": "9/9 PASS",
+    "generic_function_tests": "9/9 PASS",
     "http_integration_tests": "12/12 PASS",
     "node_red_structural_checks": "6/6 PASS",
-    "node_red_runtime": "NOT_VERIFIED"
+    "huescaventura_domain_tests": "13/13 PASS",
+    "node_red_runtime": "NOT_VERIFIED",
+    "n8n_client_production_experience": "NONE_VERIFIED"
   },
   "qualified_opportunity": {
     "name": "Huescaventura Workana lead-automation first phase",
@@ -31,32 +33,41 @@
     "gmail_approval_email_found": false,
     "priority_moderation": "NO_GO_WITHOUT_NEW_EXPLICIT_APPROVAL"
   },
-  "latest_radar": {
-    "better_candidate_found": false,
-    "clinic_n8n_whatsapp": "NO_GO_FIRST_EXPERIMENT",
-    "meta_ads_gohighlevel": "NO_GO_DIFFERENT_SERVICE_CATEGORY",
-    "decision": "Huescaventura remains primary"
+  "huescaventura_domain_demo": {
+    "status": "SYNTHETIC_LOCAL_ONLY",
+    "result": "13/13 PASS",
+    "covers": [
+      "group classification",
+      "missing-field detection",
+      "summary",
+      "draft reply",
+      "manual classification review",
+      "deduplication",
+      "idempotency",
+      "human-controlled follow-up"
+    ],
+    "known_limit": "Not n8n/Airtable production execution and not client work"
   },
   "parallel_work": [
     "STATE v61 remains canonical.",
-    "BOOT v31 indexes latest moderation/radar check.",
+    "BOOT v32 indexes the Huescaventura domain-specific technical checkpoint.",
     "Huescaventura remains open and authorized at €300 but not submitted.",
-    "No new buyer-initiated candidate currently beats Huescaventura on scope/risk/truthfulness.",
+    "No Workana approval/rejection email was found in connected Gmail at this checkpoint.",
     "No client message, contract, sale, settled revenue or profit occurred."
   ],
-  "next_action": "Continue selective zero-cost buyer-initiated discovery and check for Workana approval evidence. On approval, immediately recheck Huescaventura and submit the already-authorized €300 proposal manually if still open and no spend is required.",
+  "next_action": "Continue selective zero-cost buyer-initiated discovery and check for Workana approval evidence. On approval, immediately recheck Huescaventura and manually submit the already-authorized €300 proposal if still open and no spend is required.",
   "rule": "Sin gasto, sin moderación prioritaria, sin planes de pago, sin ampliar alcance/precio y sin inventar aprobación o envío.",
   "revenue_eur": 0,
   "profit_eur": 0,
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "boot_version": 31,
-  "boot_blob_sha": "cc68aad2754fbdf1d36eb4e870208982fe39ad3a",
+  "boot_version": 32,
+  "boot_blob_sha": "c801491303b9c41f8a020dbc441b0d7ea05d37f1",
   "current_blockers": [
     "Workana profile approval has not yet been verified.",
     "Huescaventura may close before approval; recheck immediately when moderation resolves.",
-    "No superior low-risk buyer-initiated alternative found in latest scan.",
     "No zero-cost authenticated Workana connector exists in this session.",
+    "Actual n8n/Airtable production behavior on client infrastructure remains unverified.",
     "No real client deployment or own willingness-to-pay evidence exists yet."
   ]
 }
