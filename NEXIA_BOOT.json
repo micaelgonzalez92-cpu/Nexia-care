@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "boot_version": 32,
+  "boot_version": 33,
   "generated_at": "2026-10-11",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
@@ -12,18 +12,17 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "qualified_candidate_gate": "NEXIA_EXP_AUTO_001_HUESCAVENTURA_CANDIDATE_2026-10-11.md",
   "workana_profile_checkpoint": "NEXIA_WORKANA_PROFILE_STATUS_2026-10-11.md",
-  "channel_benchmark": "NEXIA_EXP_AUTO_001_CHANNEL_BENCHMARK_2026-10-11_1351.md",
-  "latest_radar_check": "NEXIA_EXP_AUTO_001_RADAR_CHECK_2026-10-11_1400.md",
   "huescaventura_demo_report": "NEXIA_EXP_AUTO_001_HUESCAVENTURA_DEMO_2026-10-11.md",
-  "huescaventura_demo_code": "prototypes/huescaventura_logic.js",
-  "huescaventura_demo_tests": "prototypes/test_huescaventura_logic.js",
+  "n8n_import_skeleton_report": "NEXIA_EXP_AUTO_001_N8N_IMPORT_SKELETON_2026-10-11.md",
+  "n8n_import_skeleton": "prototypes/n8n-huescaventura-intake-demo.json",
+  "n8n_import_skeleton_validator": "prototypes/validate_n8n_huescaventura_demo.js",
   "last_verified_state_version": 61,
   "last_verified_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
   "active_experiment": {
     "id": "EXP-OPPORTUNITY-001",
     "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
-    "status": "HUESCAVENTURA_AUTHORIZED_PROFILE_APPROVAL_PENDING_DOMAIN_DEMO_13_OF_13_PASS",
+    "status": "HUESCAVENTURA_AUTHORIZED_PROFILE_APPROVAL_PENDING_N8N_IMPORT_SKELETON_VALIDATED",
     "cost_eur": 0
   },
   "mission": {
@@ -43,8 +42,9 @@
       "http_integration": "12/12 local HTTP integration PASS",
       "node_red_flow_structure": "6/6 structural PASS",
       "huescaventura_domain_demo": "13/13 synthetic PASS",
-      "node_red_runtime": "NOT_EXECUTED",
-      "n8n_client_production_experience_claimed": false
+      "n8n_import_skeleton_validation": "12/12 local structural+embedded-code PASS",
+      "n8n_runtime_import_execution": "NOT_EXECUTED",
+      "client_production_experience_claimed": false
     }
   },
   "qualified_buyer_opportunity": {
@@ -63,29 +63,15 @@
     "gmail_approval_email_found": false,
     "priority_moderation": "NOT_AUTHORIZED / DO_NOT_BUY"
   },
-  "huescaventura_demo": {
-    "status": "EXECUTED_LOCALLY_SYNTHETIC_ONLY",
-    "final_test_result": "13/13 PASS",
-    "functions": [
-      "group classification",
-      "missing-field detection",
-      "internal summary",
-      "draft-only reply",
-      "manual classification review",
-      "conservative deduplication",
-      "idempotent events",
-      "human-controlled follow-up"
-    ],
-    "defects_found_and_repaired": [
-      "ambiguous revision cases now explicitly require manual classification",
-      "business-facing missing-field labels are now Spanish rather than internal keys"
-    ],
-    "external_integrations": "NONE",
+  "n8n_import_skeleton": {
+    "status": "DESIGNED_AND_LOCALLY_VALIDATED_NOT_IMPORTED",
+    "workflow_chain": "POST Webhook -> Code -> Respond to Webhook",
+    "final_validator_result": "12/12 PASS",
+    "credentials_embedded": false,
+    "outbound_send_nodes": false,
+    "active_by_default": false,
+    "persistent_deduplication": "NOT_IMPLEMENTED_WITHOUT_CLIENT_STORE",
     "client_work_claimed": false
-  },
-  "latest_radar_result": {
-    "better_candidate_found": false,
-    "decision": "Huescaventura remains primary"
   },
   "channel_policy": {
     "spain_unsolicited_commercial_email": "NO_GO",
@@ -95,11 +81,12 @@
     "manual_zero_cost_submission": "AVAILABLE_ONLY_AFTER_WORKANA_PROFILE_APPROVAL"
   },
   "human_gate": "Huescaventura submission at €300 remains authorized. No paid moderation, plans, credits, account upgrades or spend are authorized.",
-  "last_confirmed_action": "2026-10-11: Gmail rechecked with no Workana approval/rejection email; Huescaventura remained open/evaluating proposals. A Huescaventura-specific synthetic lead workflow was built and executed locally. An intermediate fixture exposed two quality issues, both were repaired, and the final suite passed 13/13. No proposal, client contact, external integration or spend occurred.",
+  "last_confirmed_action": "2026-10-11: Gmail rechecked with no Workana approval/rejection email; Huescaventura remained open/evaluating proposals. A credential-free n8n import skeleton for the Huescaventura lead flow was created and locally validated with 12/12 structural and embedded-Code checks. It has NOT been imported or executed in a real n8n instance. No proposal, client contact or spend occurred.",
   "integrity_warnings": [
     "NEXIA_STATE.json v61 remains canonical.",
     "Workana profile completion is user-reported; approval is not independently verified.",
-    "Huescaventura domain demo is synthetic local evidence, not client work or n8n production deployment.",
+    "n8n import skeleton validation is not n8n runtime execution.",
+    "Persistent deduplication/idempotency still requires Airtable/Sheet/DB in the client environment.",
     "Huescaventura submission is AUTHORIZED but NOT EXECUTED.",
     "Do not claim client contact, proposal submission, acceptance, revenue or contract until verified."
   ],
@@ -108,6 +95,6 @@
   "profit_eur": 0,
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "sync_status": "STATE_V61_CANONICAL_WORKANA_APPROVAL_PENDING_HUESCAVENTURA_DOMAIN_DEMO_13_OF_13_PASS",
-  "next_action": "Continue selective zero-cost discovery and check for Workana approval evidence. On approval, immediately recheck Huescaventura and submit the already-authorized €300 bounded proposal if still open and no spend is required."
+  "sync_status": "STATE_V61_CANONICAL_WORKANA_APPROVAL_PENDING_HUESCAVENTURA_N8N_SKELETON_12_OF_12_PASS",
+  "next_action": "Continue checking for verifiable Workana approval. On approval, immediately recheck Huescaventura and submit the already-authorized €300 proposal if still open. If buyer engages, import/test the skeleton in their n8n before adding persistent storage or notifications."
 }
