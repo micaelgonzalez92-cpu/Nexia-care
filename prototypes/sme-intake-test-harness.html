@@ -1,28 +1,57 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NEXIA — Pruebas sintéticas</title>
-<style>body{font:16px system-ui;max-width:900px;margin:auto;padding:20px;background:#f5f7fb;color:#172033}section{background:white;padding:16px;border:1px solid #ddd;border-radius:12px;margin:12px 0}button,select{padding:9px;margin:4px}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:8px;border-bottom:1px solid #ddd}.pass{color:green}.fail{color:#a00}</style></head><body>
-<header><h1>NEXIA — Banco de pruebas sintético</h1><p>Prueba local de reglas; no hay conexiones, envíos ni almacenamiento. Solo datos inventados.</p></header>
-<section><h2>1. Ejecutar pruebas lógicas</h2><button id="run">Ejecutar 8 casos</button><p id="summary">Pendiente de ejecución.</p><table><thead><tr><th>ID</th><th>Entrada sintética</th><th>Esperado</th><th>Resultado</th></tr></thead><tbody id="results"><tr><td colspan="4">Sin resultados.</td></tr></tbody></table></section>
-<section><h2>2. Cronometrar una tarea sintética</h2><p>Registra el tiempo de una tarea manual o asistida, incluida revisión y correcciones. Esto no demuestra ahorro real hasta completar una comparación controlada.</p><label>Caso <select id="case"><option>T01</option><option>T02</option><option>T03</option><option>T04</option><option>T05</option><option>T06</option><option>T07</option><option>T08</option></select></label><label>Modo <select id="mode"><option value="manual">Manual</option><option value="assisted">Asistido + revisión</option></select></label><p id="clock">0.0 s</p><button id="start">Iniciar</button><button id="stop">Detener y registrar</button><button id="reset">Reiniciar</button><p id="status">Las mediciones solo permanecen mientras esta página esté abierta.</p><table><thead><tr><th>Caso</th><th>Modo</th><th>Segundos</th></tr></thead><tbody id="times"><tr><td colspan="3">Sin mediciones.</td></tr></tbody></table></section>
-<section><h2>Umbrales previos</h2><ul><li>Cero fallos críticos de seguridad.</li><li>Sin degradación material de calidad frente al proceso manual.</li><li>Reducción mediana mínima del 20% incluyendo revisión y correcciones.</li></ul><p>La ejecución lógica local no es una prueba de navegador certificada, ni mide demanda o beneficio.</p></section>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEXIA — Pruebas sintéticas</title>
+<style>
+body{font:16px system-ui;max-width:980px;margin:auto;padding:20px;background:#f5f7fb;color:#172033}section{background:white;padding:16px;border:1px solid #ddd;border-radius:12px;margin:12px 0}button,select{padding:9px;margin:4px}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:8px;border-bottom:1px solid #ddd;vertical-align:top}.pass{color:green}.fail{color:#a00}.muted{color:#5c6678}
+</style>
+</head>
+<body>
+<header><h1>NEXIA — Banco de pruebas sintético</h1><p>Prueba local de la función compartida de clasificación; no hay conexiones, envíos ni almacenamiento. Solo datos inventados.</p></header>
+<section><h2>1. Ejecutar pruebas lógicas</h2><button id="run" type="button">Ejecutar 8 casos</button><p id="summary">Pendiente de ejecución.</p><table><thead><tr><th>ID</th><th>Entrada sintética</th><th>Esperado</th><th>Resultado</th></tr></thead><tbody id="results"><tr><td colspan="4">Sin resultados.</td></tr></tbody></table></section>
+<section><h2>2. Cronometrar una tarea sintética</h2><p>Registra el tiempo de una tarea manual o asistida, incluida revisión y correcciones. Esto no demuestra ahorro real hasta completar una comparación controlada.</p><label>Caso <select id="case"><option>T01</option><option>T02</option><option>T03</option><option>T04</option><option>T05</option><option>T06</option><option>T07</option><option>T08</option></select></label><label>Modo <select id="mode"><option value="manual">Manual</option><option value="assisted">Asistido + revisión</option></select></label><p id="clock">0.0 s</p><button id="start" type="button">Iniciar</button><button id="stop" type="button" disabled>Detener y registrar</button><button id="reset" type="button">Reiniciar cronómetro</button><button id="clear" type="button">Borrar mediciones</button><p id="status">Las mediciones solo permanecen mientras esta página esté abierta.</p><table><thead><tr><th>Caso</th><th>Modo</th><th>Segundos</th></tr></thead><tbody id="times"><tr><td colspan="3">Sin mediciones.</td></tr></tbody></table></section>
+<section><h2>Umbrales previos</h2><ul><li>Cero fallos críticos de seguridad.</li><li>Sin degradación material de calidad frente al proceso manual.</li><li>Reducción mediana mínima del 20% incluyendo revisión y correcciones.</li></ul><p class="muted">Un PASS aquí solo demuestra coherencia con ocho casos sintéticos predefinidos. No demuestra precisión general, navegador certificado, demanda ni beneficio.</p></section>
+<script src="./sme-intake-core.js"></script>
 <script>
 "use strict";
 const cases=[
-{id:"T01",input:"Equipo parado; cita en una hora",expected:"urgent"},
-{id:"T02",input:"Presupuesto; modelo desconocido",expected:"quote"},
-{id:"T03",input:"Horario y dirección",expected:"info"},
+{id:"T01",input:"Mi equipo ha dejado de funcionar y tengo una cita en una hora.",expected:"urgent"},
+{id:"T02",input:"Quiero presupuesto pero no sé el modelo del equipo.",expected:"quote"},
+{id:"T03",input:"¿Cuál es vuestro horario y dónde estáis?",expected:"info"},
 {id:"T04",input:"Está roto",expected:"clarify"},
-{id:"T05",input:"Dice urgente sin explicar por qué",expected:"human_review"},
-{id:"T06",input:"Avería y presupuesto máximo",expected:"human_review"},
-{id:"T07",input:"Mensaje vacío o incoherente",expected:"clarify"},
-{id:"T08",input:"Petición fuera de alcance",expected:"out_of_scope"}];
-function classify(c){switch(c.id){case"T01":return{category:"urgent",safe:true,detail:"Revisión humana inmediata; comprobar disponibilidad sin prometer."};case"T02":return{category:"quote",safe:true,detail:"Pedir detalles antes de preparar presupuesto."};case"T03":return{category:"info",safe:true,detail:"Solo facilitar datos verificados por el negocio."};case"T04":case"T07":return{category:"clarify",safe:true,detail:"Pedir aclaración; no inferir hechos."};case"T05":case"T06":return{category:"human_review",safe:true,detail:"Derivar a revisión humana; no inventar solución."};case"T08":return{category:"out_of_scope",safe:true,detail:"Explicar límites y derivar a una persona."};default:return{category:"unknown",safe:false,detail:"Sin regla."};}}
-document.getElementById("run").addEventListener("click",()=>{const out=cases.map(c=>({c,g:classify(c)}));let pass=0;const body=document.getElementById("results");body.replaceChildren();for(const x of out){const ok=x.g.category===x.c.expected&&x.g.safe&&x.g.detail.length>0;if(ok)pass++;const tr=document.createElement("tr");for(const value of [x.c.id,x.c.input,x.c.expected,(ok?"PASS":"FAIL")+" — "+x.g.category+"; "+x.g.detail]){const td=document.createElement("td");td.textContent=value;if(value.startsWith("PASS")||value.startsWith("FAIL"))td.className=ok?"pass":"fail";tr.appendChild(td);}body.appendChild(tr);}document.getElementById("summary").textContent=pass+"/"+out.length+" casos superados por reglas sintéticas locales. No es ahorro de tiempo humano.";});
+{id:"T05",input:"Es urgente, necesito respuesta.",expected:"human_review"},
+{id:"T06",input:"Tengo una avería y un presupuesto máximo de 80 €.",expected:"human_review"},
+{id:"T07",input:"   ",expected:"clarify"},
+{id:"T08",input:"Quiero reservar una mesa para cenar.",expected:"out_of_scope"}
+];
+const runButton=document.getElementById("run");
+runButton.addEventListener("click",()=>{
+  const body=document.getElementById("results");body.replaceChildren();
+  if(!globalThis.NexiaSME){document.getElementById("summary").textContent="ERROR: no se pudo cargar el clasificador compartido.";return;}
+  let pass=0;
+  for(const c of cases){
+    const g=NexiaSME.classifyRequest(c.input);
+    const ok=g.category===c.expected&&g.safe===true&&g.detail.length>0;
+    if(ok)pass++;
+    const tr=document.createElement("tr");
+    const values=[c.id,c.input||"(vacío)",c.expected,(ok?"PASS":"FAIL")+" — "+g.category+"; "+g.detail];
+    values.forEach((value,index)=>{const td=document.createElement("td");td.textContent=value;if(index===3)td.className=ok?"pass":"fail";tr.appendChild(td);});
+    body.appendChild(tr);
+  }
+  document.getElementById("summary").textContent=pass+"/"+cases.length+" casos superados por la misma función usada en la demo. Sigue siendo una prueba sintética limitada.";
+});
+
 let startAt=null,interval=null,records=[],activeMeasurement=null;
+const caseSelect=document.getElementById("case"),modeSelect=document.getElementById("mode"),startButton=document.getElementById("start"),stopButton=document.getElementById("stop");
 function drawTimes(){const body=document.getElementById("times");body.replaceChildren();if(!records.length){const tr=document.createElement("tr"),td=document.createElement("td");td.colSpan=3;td.textContent="Sin mediciones.";tr.appendChild(td);body.appendChild(tr);return;}for(const r of records){const tr=document.createElement("tr");for(const v of [r.case,r.mode,r.seconds]){const td=document.createElement("td");td.textContent=String(v);tr.appendChild(td);}body.appendChild(tr);}}
-const caseSelect=document.getElementById("case"),modeSelect=document.getElementById("mode");
-function setMeasurementControlsLocked(locked){caseSelect.disabled=locked;modeSelect.disabled=locked;document.getElementById("start").disabled=locked;}
-document.getElementById("start").addEventListener("click",()=>{if(startAt!==null)return;activeMeasurement={case:caseSelect.value,mode:modeSelect.value};setMeasurementControlsLocked(true);startAt=performance.now();interval=setInterval(()=>{document.getElementById("clock").textContent=((performance.now()-startAt)/1000).toFixed(1)+" s";},100);document.getElementById("status").textContent="Cronómetro activo: caso y modo fijados; incluye revisión y correcciones."});
-document.getElementById("stop").addEventListener("click",()=>{if(startAt===null)return;const seconds=Number(((performance.now()-startAt)/1000).toFixed(2));records.push({case:activeMeasurement.case,mode:activeMeasurement.mode,seconds});startAt=null;clearInterval(interval);interval=null;activeMeasurement=null;setMeasurementControlsLocked(false);document.getElementById("clock").textContent=seconds+" s";document.getElementById("status").textContent="Medición registrada temporalmente.";drawTimes();});
-document.getElementById("reset").addEventListener("click",()=>{startAt=null;clearInterval(interval);interval=null;activeMeasurement=null;setMeasurementControlsLocked(false);document.getElementById("clock").textContent="0.0 s";document.getElementById("status").textContent="Cronómetro reiniciado; no se ha añadido una medición.";});
-</script></body></html>
+function setRunning(running){caseSelect.disabled=running;modeSelect.disabled=running;startButton.disabled=running;stopButton.disabled=!running;}
+function stopClock(record){if(startAt===null)return;const seconds=Number(((performance.now()-startAt)/1000).toFixed(2));if(record)records.push({case:activeMeasurement.case,mode:activeMeasurement.mode,seconds});startAt=null;clearInterval(interval);interval=null;activeMeasurement=null;setRunning(false);document.getElementById("clock").textContent=record?seconds+" s":"0.0 s";if(record)drawTimes();}
+startButton.addEventListener("click",()=>{if(startAt!==null)return;activeMeasurement={case:caseSelect.value,mode:modeSelect.value};setRunning(true);startAt=performance.now();interval=setInterval(()=>{document.getElementById("clock").textContent=((performance.now()-startAt)/1000).toFixed(1)+" s";},100);document.getElementById("status").textContent="Cronómetro activo: caso y modo fijados; incluye revisión y correcciones.";});
+stopButton.addEventListener("click",()=>{stopClock(true);document.getElementById("status").textContent="Medición registrada temporalmente.";});
+document.getElementById("reset").addEventListener("click",()=>{stopClock(false);document.getElementById("status").textContent="Cronómetro reiniciado; las mediciones anteriores se conservan.";});
+document.getElementById("clear").addEventListener("click",()=>{if(startAt!==null)stopClock(false);records=[];drawTimes();document.getElementById("status").textContent="Mediciones temporales borradas.";});
+</script>
+</body>
+</html>
