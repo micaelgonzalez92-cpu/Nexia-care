@@ -11,9 +11,9 @@ Maintain a small reserve of buyer-initiated opportunities that are economically 
 
 ### P0 — WORKANA-HUESCAVENTURA-001 — PRIMARY
 Platform: Workana
-Status checked: OPEN / EVALUATING PROPOSALS
+Status checked: OPEN / EVALUATING PROPOSALS on 2026-10-12.
 URL: https://www.workana.com/es/job/automatizar-recepcion-y-clasificacion-de-leads-desde-formulario-con-airtable-y-n8n
-Buyer evidence: payment verified; 1 paid project; 1 visible proposal at latest check.
+Buyer evidence: payment verified; 1 paid project; 1 visible proposal at latest fresh check.
 Budget evidence: approximately EUR 200-300 fixed price.
 Authorized price: EUR 300.
 Fit: EXCELLENT.
@@ -43,89 +43,110 @@ Commercial gate:
 - DO NOT submit until Workana profile approval is verified and project is rechecked as open;
 - no paid moderation / proposal credits.
 
-### P1 — WORKANA-PROCESS-SCALE-001 — RESERVE
+### P1 — WORKANA-N8N-WORKFLOW-OPT-001 — CONDITIONAL SAME-CHANNEL RESERVE
 Platform: Workana
-Status checked: OPEN / EVALUATING PROPOSALS
-URL: https://www.workana.com/es/job/profesional-en-automatizacion-y-optimizacion-de-procesos-para-escalabilidad-empresarial
-Buyer evidence: payment verified; 1 paid project; 0 visible proposals at latest check.
-Budget: UNKNOWN.
-Fit: MEDIUM-HIGH if narrowed to one bounded pilot.
+URL: https://www.workana.com/es/job/experto-en-automatizacion-n8n-para-diseno-y-optimizacion-de-workflows
+Freshness: public result crawled within roughly one day at latest check; page showed OPEN / EVALUATING PROPOSALS.
+Buyer evidence: payment verified; 1 project published; 0 paid projects; 0 visible proposals at latest fresh check.
+Budget: UNKNOWN / NOT PUBLICLY VERIFIED.
+Fit: MEDIUM-HIGH.
 
 Relevant scope:
-- identify manual process bottlenecks;
-- connect forms, CRM, sheets, email/WhatsApp;
-- n8n / Make / Zapier / APIs / Webhooks;
-- alerts, reminders, reports;
-- documentation and handover.
+- design/build/document n8n workflows;
+- Google Sheets, Gmail, CRM, WhatsApp, APIs and webhooks;
+- stable/scalable workflows;
+- project-based collaboration with possible continuity.
 
-Reason to keep:
-- verified-paying buyer;
-- zero visible competition at check time;
-- accepts n8n as a core tool;
-- a bounded first-process sprint can reuse EXP-AUTO-001 reliability assets.
+Why promoted:
+- zero visible competition at latest check;
+- payment method verified;
+- same Workana profile gate as P0, so no second marketplace account is needed;
+- requirement is demonstrable n8n competence, which can be supported truthfully by the existing executed technical evidence pack without claiming paying-client production work.
 
-Risks / falsifiers:
-- project is broad and large;
-- budget is not public;
-- buyer may expect cross-functional experience beyond the selected sprint;
-- new proposal/contact is NOT authorized by existing Huescaventura-specific Human Gate.
+Why it is NOT GO:
+- public budget is unknown, so >=EUR 200 economics are not yet demonstrated;
+- scope is described broadly and must be narrowed before pricing;
+- existing Huescaventura authorization does not authorize contact/proposal to this buyer.
 
-Recommended positioning if separately authorized:
-Offer one process diagnostic + bounded automation pilot, with explicit exclusions and a fixed acceptance test. Do not promise full-enterprise transformation in one scope.
+Gate before any proposal:
+- Workana profile approval verified;
+- project freshly rechecked open;
+- price/economic exposure known or a bounded paid milestone can be stated inside platform rules;
+- separate Kael authorization for this buyer.
 
-### P2 — UPWORK-LEAD-MGMT-250-001 — CROSS-CHANNEL RESERVE
+### P2 — FREELANCER-N8N-FORM-39898142 — CONDITIONAL CROSS-CHANNEL RESERVE
+Platform: Freelancer.com
+Project: `n8n Automation & Form Interface`
+Project ID: 39898142
+URL: https://www.freelancer.com/projects/angular-js/automation-form-interface
+Freshness: direct project page accessible and crawled within roughly one day at latest check.
+Public status: OPEN FOR BIDDING.
+Gross budget: USD 250-750 fixed price.
+Buyer evidence: payment method verified; profile rating 5.0; 1 recorded review/job signal on public page.
+Competition: current bid count NOT RELIABLY EXPOSED in the public page checked.
+Fit: HIGH TECHNICAL / BORDERLINE DELIVERY-TIME.
+
+Scope:
+- existing n8n draft and written specification already supplied by buyer;
+- tighten workflow logic, retries and failure notifications;
+- build a simple responsive form with basic validation;
+- wire form to n8n via webhook/REST;
+- test valid and intentionally malformed submissions;
+- setup/import documentation;
+- no dashboard/reporting required.
+
+Capability match:
+- n8n runtime, error-path testing and persistent idempotency already verified internally;
+- simple form/webhook integration is compatible with existing prototype experience;
+- paying-client production experience remains NONE_VERIFIED and must not be claimed.
+
+Economic access facts:
+- Freelancer fixed-price freelancer fee: 10% of winning bid or USD 5 minimum;
+- some Freelancer bids require at least USD 20 available wallet balance before bidding;
+- therefore this channel is CAPITAL_GATED, not zero-cost;
+- account creation/funding/bid are NOT authorized.
+
+Illustrative economics only, not an authorized bid:
+- at USD 350 gross, 10% platform fee leaves USD 315 before labor/overhead/tax;
+- ECB 2026-10-09 reference implies roughly EUR 312.6 gross and EUR 281 after 10% platform fee;
+- minus current EUR 60 labor assumption gives roughly EUR 221 contribution before overhead/tax IF delivery actually fits 4 hours;
+- delivery <=4h is currently HIPÓTESIS because the brief adds a frontend form to workflow refinement.
+
+Why it is NOT GO yet:
+- Freelancer account/profile state is NOT CONNECTED/VERIFIED;
+- possible USD 20 wallet requirement is material capital exposure;
+- <=4h delivery has not been demonstrated for this expanded form+n8n scope;
+- proposal asks about shipped production n8n work; Nexia may only present its technical proof honestly, not claim prior paid production delivery.
+
+Human Gate if this remains open and becomes preferable:
+- exact action: authorize creation/use of Freelancer account, verification steps, and up to USD 20 wallet balance exposure solely to enable a standard bid if required;
+- separate bid/proposal text and price must be approved before submission;
+- success criterion: submit one truthful, economically viable bid without paid upgrades and obtain buyer response/shortlist signal;
+- stop if extra paid verification, membership, featured bid or broader capital exposure is required.
+
+### P3 — UPWORK-LEAD-MGMT-250-001 — LOW-PRIORITY CROSS-CHANNEL RESERVE
 Platform: Upwork
-Status checked: OPEN / worldwide
-URL: https://www.upwork.com/freelance-jobs/apply/Build-Lead-Management-Follow-Automation_~022104169227507743389/
-Gross fixed price: USD 250.
-Client location shown: Germany.
-Competition at check: 50+ proposals.
+Gross fixed price observed previously: USD 250.
+Competition at prior check: 50+ proposals.
 Fit: EXCELLENT TECHNICAL / WEAK ACQUISITION ODDS.
-
-Scope match:
-- webhook/form intake;
-- validation and normalization;
-- Google Sheets or Airtable persistence;
-- OpenAI/Claude classification/summary;
-- status/priority;
-- automated follow-up;
-- error handling/logging;
-- documentation.
-
-Economics:
-- gross USD 250;
-- exact Upwork freelancer fee is contract-specific and only shown before proposal/offer; current official fee range is 0%-15%;
-- still potentially compatible with the current <=4h pilot economics if scope remains genuinely small, but fee, FX, Connects and actual delivery time must be checked before any application.
+Current status: STALE_RECHECK_REQUIRED before any action.
 
 Risks / blockers:
-- 50+ proposals;
 - Upwork account/profile state is NOT CONNECTED/VERIFIED in NEXIA;
-- applying may require Connects or other account-specific exposure;
-- no authorization exists to create/connect an Upwork account or submit a proposal.
-
-Use case:
-Cross-channel backup if Workana moderation becomes a persistent bottleneck. Do not spend or create an account without Kael approval.
-
-## Conditional reserve — not currently prioritized
-
-### WORKANA-N8N-WHATSAPP-EMAIL-001
-URL: https://www.workana.com/job/desarrollo-de-automatizaciones-con-n8n-integracion-de-whatsapp-email-y-apis
-Buyer evidence: payment verified; 3 paid projects; 0 visible proposals.
-Reason not promoted to P1/P2: explicit requirement for proven n8n/API experience plus broad WhatsApp/email integrations that exceed the currently verified client-stack evidence. Could be approached only with transparent wording: technical proof exists; prior client production experience does not.
+- applying generally consumes Connects;
+- no authorization exists to create/connect an Upwork account or submit a proposal;
+- high competition materially weakens expected value.
 
 ## Negative evidence / deliberate discards
 
 ### Upwork low-ticket exact-fit jobs
-Observed examples:
-- USD 15 fixed: AI lead qualification + CRM follow-up;
-- USD 10 fixed: lead qualification workflow;
-- USD 20 fixed: lead routing / CRM workflow;
-- USD 5 fixed: lead routing / AI workflows.
+Observed examples at USD 5-20 fixed remain `ECONOMIC_NO_GO`. Technical fit does not compensate for gross price below the assumed human labor cost of a proper bounded pilot.
 
-Decision: NO_GO under current economics. Technical fit does not compensate for gross price below the assumed human labor cost of a proper bounded pilot. These jobs are useful market signals, not viable extraction targets.
+### Broad multi-system builds
+Voice agents, full CRM migrations, WhatsApp autonomous sending, dashboards, reputation systems, multi-channel orchestration, POS/payments or enterprise integrations are NO_GO_SCOPE for the current <=4h sprint unless the buyer explicitly offers a separable paid first milestone.
 
-### High-competition broad builds
-Projects with 20-50 or 50+ proposals, production-agent requirements, multi-channel autonomous sending, complex CRM stacks or explicit production portfolio requirements remain radar-only unless ticket/fit materially compensates for acquisition odds.
+### Stale indexed marketplace results
+A search-result snippet is not enough to classify a project CURRENT. Direct page access or evidence <=24h not contradicted by a direct check is required. Freelancer Project 40722058 remains CLOSED_OR_REMOVED after its direct URL returned 404.
 
 ## Proposal evidence rule
 Allowed truthful claim:
@@ -137,10 +158,11 @@ Disallowed claim:
 Client production experience remains NONE_VERIFIED.
 
 ## Acquisition gates
-1. Huescaventura: existing EUR 300 proposal authorization applies only after Workana profile approval is verified, project rechecked open and zero submission spend confirmed.
+1. Huescaventura: existing EUR 300 proposal authorization applies only after Workana profile approval is verified, project freshly rechecked open and zero submission spend confirmed.
 2. Any other Workana buyer: requires new specific authorization before proposal/contact.
-3. Upwork: account creation/connection, Connects/spend and proposal submission require Kael authorization.
-4. No off-platform contact.
+3. Freelancer.com: account creation/use, any identity/payment verification, wallet funding and bid submission require explicit Kael authorization; do not exceed USD 20 balance exposure without a new approval.
+4. Upwork: account creation/connection, Connects/spend and proposal submission require Kael authorization.
+5. No off-platform contact.
 
 ## Next economic action
-Do not add more technical layers by default. Maintain freshness of these candidates, continue zero-cost buyer-initiated discovery only when it can replace or improve this reserve, and convert the first verified marketplace gate into a real proposal/paid-pilot event.
+Do not add more synthetic technical layers by default. Keep P0 fresh, use P1 as same-channel redundancy once Workana approval clears, and revalidate P2 only while its direct project page remains open. The next valuable evidence is a real authorized proposal, buyer response, paid pilot, measured delivery time, acceptance, settled payment and reconciled profit.
