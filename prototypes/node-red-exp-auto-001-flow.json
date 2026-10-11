@@ -1,0 +1,45 @@
+[
+  {
+    "id": "nexia-auto-tab",
+    "type": "tab",
+    "label": "NEXIA EXP-AUTO-001",
+    "disabled": false,
+    "info": "Synthetic/local capability flow. No outbound send nodes."
+  },
+  {
+    "id": "in-lead",
+    "type": "http in",
+    "z": "nexia-auto-tab",
+    "name": "POST lead",
+    "url": "/nexia/lead",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 130,
+    "y": 100,
+    "wires": [["fn-lead"]]
+  },
+  {
+    "id": "fn-lead",
+    "type": "function",
+    "z": "nexia-auto-tab",
+    "name": "Validate + idempotent upsert",
+    "func": "const raw = msg.payload || {};\nconst clean = v => String(v ?? '').trim().replace(/\\s+/g,' ');\nconst normEmail = v => clean(v).toLowerCase();\nconst normPhone = (v, cc='') => {\n  const rawPhone=clean(v); if(!rawPhone) return '';\n  const digits=rawPhone.replace(/\\D/g,'');\n  if(rawPhone.startsWith('+')) return '+'+digits;\n  const country=String(cc||'').replace(/\\D/g,'');\n  return country ? '+'+country+digits : digits;\n};\nconst cc = msg.req && msg.req.headers ? (msg.req.headers['x-nexia-country-code'] || '') : '';\nconst lead={event_id:clean(raw.event_id),source:clean(raw.source).toLowerCase(),name:clean(raw.name),email:normEmail(raw.email),phone:normPhone(raw.phone,cc),service:clean(raw.service),message:clean(raw.message)};\nconst errors=[];\nif(!lead.event_id) errors.push('missing_event_id');\nif(!lead.source) errors.push('missing_source');\nif(!lead.name) errors.push('missing_name');\nif(!lead.email && !lead.phone) errors.push('missing_contact_method');\nif(lead.email && !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(lead.email)) errors.push('invalid_email');\nif(lead.phone && lead.phone.replace(/\\D/g,'').length<7) errors.push('invalid_phone');\nlet store=flow.get('nexiaStore') || {records:{},identityIndex:{},processedEvents:{},audit:[]};\nconst respond=(code,payload)=>{msg.statusCode=code;msg.headers={'content-type':'application/json'};msg.payload=payload;return msg;};\nif(errors.length) return respond(422,{status:'validation_failed',category:'human_review',committed:false,errors,failure_alert:{event_id:lead.event_id||null,stage:'validation',reason:errors.join(','),action:'manual_review_required'}});\nif(store.processedEvents[lead.event_id]) return respond(200,{status:'idempotent_skip',category:'duplicate_event',committed:false,event_id:lead.event_id});\nconst identities=[]; if(lead.email) identities.push('email:'+lead.email); if(lead.phone) identities.push('phone:'+lead.phone);\nlet recordId=null; for(const id of identities){if(store.identityIndex[id]){recordId=store.identityIndex[id];break;}}\nlet operation='created', preserved=[], filled=[];\nif(recordId){operation='updated_existing'; const ex=store.records[recordId]; for(const f of ['name','email','phone','service','message','source']){const incoming=lead[f];if(!incoming)continue;if(!ex[f]){ex[f]=incoming;filled.push(f);}else if(ex[f]!==incoming){preserved.push(f);}}}\nelse {recordId='lead_'+String(Object.keys(store.records).length+1).padStart(4,'0');store.records[recordId]={id:recordId,...lead};}\nfor(const id of identities) store.identityIndex[id]=recordId;\nstore.processedEvents[lead.event_id]=true;\nstore.audit.push({event_id:lead.event_id,record_id:recordId,operation});\nflow.set('nexiaStore',store);\nreturn respond(200,{status:'processed',category:operation,committed:true,record_id:recordId,merge:{preserved,filled},internal_notification:{type:'new_or_updated_lead',record_id:recordId,source:lead.source,service:lead.service||'not_provided'},acknowledgement_draft:`Gracias, ${lead.name}. Hemos recibido tu solicitud${lead.service ? ' sobre '+lead.service : ''}. Este mensaje es un borrador y no se ha enviado.`});",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 390,
+    "y": 100,
+    "wires": [["out-lead"]]
+  },
+  {"id":"out-lead","type":"http response","z":"nexia-auto-tab","name":"Lead response","statusCode":"","headers":{},"x":650,"y":100,"wires":[]},
+  {"id":"in-state","type":"http in","z":"nexia-auto-tab","name":"GET state","url":"/nexia/state","method":"get","upload":false,"swaggerDoc":"","x":130,"y":180,"wires":[["fn-state"]]},
+  {"id":"fn-state","type":"function","z":"nexia-auto-tab","name":"Read local state","func":"const store=flow.get('nexiaStore') || {records:{},identityIndex:{},processedEvents:{},audit:[]};\nmsg.headers={'content-type':'application/json'};\nmsg.payload={record_count:Object.keys(store.records).length,processed_event_count:Object.keys(store.processedEvents).length,audit_count:store.audit.length,records:store.records,audit:store.audit};\nreturn msg;","outputs":1,"timeout":0,"noerr":0,"initialize":"","finalize":"","libs":[],"x":390,"y":180,"wires":[["out-state"]]},
+  {"id":"out-state","type":"http response","z":"nexia-auto-tab","name":"State response","statusCode":"","headers":{},"x":650,"y":180,"wires":[]},
+  {"id":"in-reset","type":"http in","z":"nexia-auto-tab","name":"POST reset","url":"/nexia/reset","method":"post","upload":false,"swaggerDoc":"","x":130,"y":260,"wires":[["fn-reset"]]},
+  {"id":"fn-reset","type":"function","z":"nexia-auto-tab","name":"Reset local state","func":"flow.set('nexiaStore',{records:{},identityIndex:{},processedEvents:{},audit:[]});\nmsg.headers={'content-type':'application/json'};msg.payload={status:'reset'};return msg;","outputs":1,"timeout":0,"noerr":0,"initialize":"","finalize":"","libs":[],"x":390,"y":260,"wires":[["out-reset"]]},
+  {"id":"out-reset","type":"http response","z":"nexia-auto-tab","name":"Reset response","statusCode":"","headers":{},"x":650,"y":260,"wires":[]}
+]
