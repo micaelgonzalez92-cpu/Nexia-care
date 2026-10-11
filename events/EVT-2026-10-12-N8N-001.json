@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-N8N-001",
+  "timestamp": "2026-10-11T22:35:06Z",
+  "type": "CAPABILITY_VERIFICATION",
+  "scope": "EXP-AUTO-001",
+  "actor": "NEXIA",
+  "summary": "Verified EXP-AUTO-001 logic execution and persistent deduplication/idempotency in n8n 2.42.6 using native Data Tables across separate webhook executions and an n8n process restart.",
+  "claims": [
+    {
+      "status": "VERIFIED",
+      "key": "n8n_runtime_execution",
+      "value": "PASS"
+    },
+    {
+      "status": "VERIFIED",
+      "key": "n8n_native_datatable_persistent_dedup",
+      "value": "PASS"
+    },
+    {
+      "status": "VERIFIED",
+      "key": "github_actions_run",
+      "value": 38180738447
+    },
+    {
+      "status": "VERIFIED",
+      "key": "github_actions_conclusion",
+      "value": "success"
+    },
+    {
+      "status": "VERIFIED",
+      "key": "unique_rows_after_five_requests",
+      "value": 2
+    },
+    {
+      "status": "VERIFIED",
+      "key": "unique_rows_after_restart_and_sixth_duplicate_request",
+      "value": 2
+    },
+    {
+      "status": "VERIFIED",
+      "key": "autonomous_send",
+      "value": false
+    },
+    {
+      "status": "VERIFIED",
+      "key": "cost_eur",
+      "value": 0
+    },
+    {
+      "status": "VERIFIED",
+      "key": "external_contact",
+      "value": "NONE"
+    },
+    {
+      "status": "VERIFIED",
+      "key": "revenue_eur",
+      "value": 0
+    },
+    {
+      "status": "UNKNOWN",
+      "key": "client_production_integration",
+      "value": "NOT_EXECUTED"
+    }
+  ],
+  "negative_evidence": [
+    {
+      "approach": "$getWorkflowStaticData('global')",
+      "result": "FAILED_PERSISTENCE_PROOF_NOT_USED"
+    },
+    {
+      "approach": "Data Table nodes via isolated n8n execute CLI",
+      "result": "MODULE_HELPERS_UNAVAILABLE_IN_THAT_RUNTIME_NOT_USED_FOR_PASS"
+    }
+  ],
+  "evidence": [
+    "GitHub Actions run 38180738447",
+    "commit 0051aa4c44f7de9f4f24de16de51759be64e1f25",
+    "NEXIA_EXP_AUTO_001_N8N_PERSISTENT_DEDUP_2026-10-12.md",
+    "prototypes/n8n-datatable-dedup-setup.json",
+    "prototypes/n8n-datatable-dedup-webhook.json",
+    "prototypes/n8n-datatable-dedup-audit.json"
+  ],
+  "result": "CAPABILITY_GATE_PASSED_PERSISTENCE_CLIENT_INTEGRATION_STILL_NOT_EXECUTED"
+}
