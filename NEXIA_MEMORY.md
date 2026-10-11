@@ -382,3 +382,13 @@ Created and read back `prototypes/sme-intake-demo.html`, a static local demo wit
 - Main gaps: only three fixed dropdown cases; no free-text input, timing telemetry, automated runtime assertions, or coverage for T04–T08 adversarial cases. Manual/assisted time, correction rates, quality, demand and economics remain UNKNOWN / NOT INSTRUMENTED.
 - Provisional gate documented before measurement: zero critical safety failures, no material quality degradation, and at least 20% median end-to-end time reduction including review/corrections. T04–T08 are designed only and cannot be counted as passed.
 - Next safe step: build a minimal synthetic-only test harness and run it in a browser. Cost €0; no external contact, publication, account connection, or customer data.
+
+
+## Chat continuity + resilience checkpoint — 2026-10-11 (STATE v59)
+- Canonical mission remains `MISSION-OPPORTUNITY-ENGINE-001`; active experiment remains `EXP-OPPORTUNITY-001`. Vintage resale remains paused/non-primary. No mission switch.
+- Recovered canonical artifacts from `micaelgonzalez92-cpu/Nexia-care` through the GitHub connector. STATE v58 and BOOT v16 were read; STATE v58 SHA was `1aaa6cc50782a47072db1ed453d018d4163c6dd5` and BOOT v16 pointed to the same version/hash.
+- Wrote STATE v59 (SHA `1f9fcdaa27412445c2aaedc48b7a26f8cd4d15d1`) and read it back. Updated BOOT v17 (SHA `8f94ee1621833844aac8f0ba5ce263e742df56d2`) and verified its state version/hash match STATE v59. Updated LIVE and read it back (SHA `851b8f82d0dcce103d702611d2f511d2d594b038`), referencing STATE v59 and BOOT v17.
+- Floot project-file operation was freshly refused by its daily build-action quota. This blocks Floot file read/write, not GitHub connector work. No purchase, upgrade, or quota bypass attempted. Retry only after reset; do not treat old refusal as permanent.
+- The chat's comparison of 3 hypothetical SME offers (4 short videos €99, 10 optimized product listings €79, bounded automation €149) is an ESTIMATE only. No buyer interview, paid pilot, transaction, revenue or profit is evidenced. The listing offer's apparent time efficiency is a hypothesis, not a selected commercial mission.
+- No business spend, external contact, publication, account connection, real customer data, or other material business action occurred. Financial impact €0.
+- Persistence status remains PARTIAL until EVENT_LOG and MASTER_BACKUP are updated/read back. No full-sync claim. Next: finish derived-artifact reconciliation, then run the synthetic-only SME intake test only if a genuinely free execution route is available; preserve predeclared gates of zero critical failures and >=20% median end-to-end time reduction. No external customer validation without Kael's explicit authorization.
