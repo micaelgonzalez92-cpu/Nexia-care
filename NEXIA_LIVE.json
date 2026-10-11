@@ -2,9 +2,9 @@
   "updated_at": "2026-10-12",
   "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — N8N RUNTIME + PERSISTENT DEDUP VERIFIED; EVENT STORAGE V2 OPERATIONAL; MEMORY DERIVED STALE",
   "state_version": 66,
-  "state_blob_sha": "e526ce9bbe2d1a546f4ba954aa4b37787263df43",
+  "state_blob_sha": "69dd2b8a1d6b60d5712e5b691908d7dbabc8ee5e",
   "boot_version": 41,
-  "boot_blob_sha": "b4ba5313a8082ac21e2d4e8c1728df26043aed9c",
+  "boot_blob_sha": "f7aeafb5351de722638a02ea2f26839b6513f336",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
