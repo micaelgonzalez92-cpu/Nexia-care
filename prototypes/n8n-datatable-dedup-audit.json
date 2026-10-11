@@ -15,8 +15,8 @@
         "resource": "row",
         "operation": "get",
         "dataTableId": {"__rl": true, "value": "nexia_exp_auto_001_dedup_proof", "mode": "name"},
-        "matchType": "anyCondition",
-        "filters": {"conditions": []},
+        "matchType": "allConditions",
+        "filters": {"conditions": [{"keyName": "eventKey", "condition": "isNotEmpty"}]},
         "returnAll": true,
         "orderBy": false
       },
