@@ -1,16 +1,16 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / RADAR — ONE QUALIFIED BUYER-INITIATED CANDIDATE FOUND; PROPOSAL READY; HUMAN GATE PENDING",
-  "current_cycle": "NEXIA Core — EXP-AUTO-001 commercial validation preparation; Huescaventura Workana candidate qualified",
-  "current_action": "Public marketplace scan identified one buyer-initiated opportunity that matches the bounded semiautomatic lead-intake scope and stated budget range. Workana channel economics were recomputed using the current 20% initial freelancer commission. A truthful 10-question proposal draft and €300 bounded-scope plan are prepared; nothing has been submitted.",
-  "last_completed_action": "2026-10-11: created/read back NEXIA_EXP_AUTO_001_HUESCAVENTURA_CANDIDATE_2026-10-11.md and indexed it in BOOT v26. Canonical STATE remains v61.",
-  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v26 SHA 0cbd0195870cedb9cad4680ed79cb411d8c89e47; Huescaventura candidate gate blob e44ba9c55788d4c428616229eb7a898eae749d46. Public Workana brief states €200-300 budget, semiautomatic human-reviewed phase, existing n8n self-hosted and Airtable intake; page showed one proposal and verified payment history at research time.",
+  "status": "ACTIVE / RADAR — HUESCAVENTURA REVERIFIED OPEN; BACKUP SCAN COMPLETE; HUMAN GATE PENDING",
+  "current_cycle": "NEXIA Core — EXP-AUTO-001 commercial validation preparation; primary candidate live and backups ranked",
+  "current_action": "Huescaventura Workana project was rechecked and remains open/evaluating proposals with the same €200-300 range and one proposal shown. Additional Upwork/Freelancer scans found no better second candidate; the closest backups have heavy competition or channel/economics uncertainty. No proposal was submitted.",
+  "last_completed_action": "2026-10-11 12:51 CEST: created/read back NEXIA_EXP_AUTO_001_BUYER_SCAN_2026-10-11_1251.md and advanced BOOT to v27 as derived index; canonical STATE remains v61.",
+  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v27 SHA 01797ec5f8349b65ecb2d252ca1a571feebe6134; buyer-scan checkpoint records Huescaventura status and backup ranking.",
   "capital_spent_eur": 0,
-  "human_gate": "Explicit Kael authorization is required before submitting the Huescaventura Workana proposal, changing the channel price boundary to €300, using/creating a Workana freelancer account if necessary, or communicating with the buyer. No paid plan or spend is authorized.",
+  "human_gate": "Explicit Kael authorization is still required before submitting Huescaventura or any other proposal, changing approved commercial boundaries, creating/using a marketplace account if not already authorized, or spending money. Generic /next does not cross this gate.",
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "status": "ONE_QUALIFIED_BUYER_INITIATED_OPPORTUNITY_PROPOSAL_NOT_SUBMITTED",
+    "status": "ONE_QUALIFIED_BUYER_INITIATED_OPPORTUNITY_REVERIFIED_OPEN_PROPOSAL_NOT_SUBMITTED",
     "function_tests": "9/9 PASS",
     "http_integration_tests": "12/12 PASS",
     "node_red_structural_checks": "6/6 PASS",
@@ -18,8 +18,9 @@
   },
   "qualified_opportunity": {
     "name": "Huescaventura Workana lead-automation first phase",
-    "qualification": "10/10 before channel-cost adjustment",
+    "public_status": "OPEN / EVALUATING_PROPOSALS",
     "buyer_budget_eur": "200-300",
+    "public_activity": "1 proposal / 1 interested freelancer shown",
     "recommended_proposal_eur": 300,
     "proposal_status": "DRAFT_NOT_SUBMITTED",
     "economics": {
@@ -32,30 +33,30 @@
       "delivery_time_gate_hours": 4
     }
   },
-  "channel_policy": {
-    "spain_unsolicited_commercial_email": "NO_GO",
-    "buyer_initiated_workana_project": "PERMITTED_TO_PREPARE; SUBMISSION_REQUIRES_KAEL_AUTHORIZATION",
-    "workana_proposal_submission_public_cost": "FREE",
-    "workana_initial_freelancer_commission": "20% if hired under current official schedule"
-  },
+  "backup_candidates": [
+    "Upwork $250 Build AI Lead Management & Follow-Up Automation — scope fit good, but 50+ proposals and 6 interviews; channel economics unreconciled.",
+    "Upwork $400 n8n AI Lead Qualification & CRM Automation — 50+ proposals, one hire and broader scope; market signal/back-up only.",
+    "Freelancer examples scanned — closed, high bid counts or explicit proven-experience requirements; none currently displaces Huescaventura."
+  ],
   "parallel_work": [
     "STATE v61 remains canonical.",
-    "BOOT v26 indexes the Huescaventura post-state candidate checkpoint.",
-    "A Workana-specific €249 price fails the original contribution gate after the platform fee; €300 is the minimum viable point inside the buyer's stated range under <=4h and near-zero extra tooling assumptions.",
-    "The proposal draft explicitly discloses no prior client n8n production deployment and uses only verified local capability evidence.",
-    "No proposal, client contact, account connection, sale, settled revenue or profit has occurred."
+    "BOOT v27 indexes Huescaventura revalidation and the backup scan.",
+    "Huescaventura remains the strongest currently known buyer-initiated candidate.",
+    "No proposal, client contact, marketplace account action, sale, settled revenue or profit occurred.",
+    "Recheck public project state immediately before any future authorized submission because marketplace status is time-sensitive."
   ],
-  "next_action": "Await Kael's explicit decision on the Huescaventura proposal. If authorized, submit only at the approved price/scope and stop if Workana requires an unapproved account action, paid plan or other spend. Until then continue free buyer-initiated discovery.",
+  "next_action": "Continue only safe preparation/research under generic /next. If Kael explicitly authorizes Huescaventura, recheck the live Workana project immediately before submission and proceed only within the approved €300 bounded scope; stop if account creation, paid credits, subscription or any unapproved spend is required.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "revenue_eur": 0,
   "profit_eur": 0,
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "boot_version": 26,
-  "boot_blob_sha": "0cbd0195870cedb9cad4680ed79cb411d8c89e47",
+  "boot_version": 27,
+  "boot_blob_sha": "01797ec5f8349b65ecb2d252ca1a571feebe6134",
   "current_blockers": [
-    "Huescaventura proposal submission is a Human Gate.",
+    "Huescaventura proposal submission remains a Human Gate.",
     "Workana account/profile availability and approval status are UNKNOWN in this session.",
+    "No second scanned buyer-initiated candidate currently beats Huescaventura on price/scope/truthfulness/competition.",
     "Node-RED runtime has not been executed in this environment.",
     "NEXIA_MEMORY.md still has stale STATE v58 canonical text.",
     "No real client deployment or own willingness-to-pay evidence exists yet."
