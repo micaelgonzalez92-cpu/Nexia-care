@@ -1,18 +1,18 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / RADAR — STATIC AUDIT 8/8; BROWSER TEST PENDING; DEMAND UNVALIDATED",
-  "current_cycle": "NEXIA Core — synthetic SME demo test harness",
-  "current_action": "Static source audit of the SME intake demo completed: 8/8 source assertions passed; no browser run, timing trial, or commercial validation occurred.",
-  "last_completed_action": "2026-10-11: created and read back NEXIA_SME_DEMO_STATIC_AUDIT_2026-10-11.md; recorded source-level checks and test gaps.",
-  "evidence": "STATE 1aaa6cc50782a47072db1ed453d018d4163c6dd5; BOOT d21bc045bd582a7a7eeed42b61d3ce2f8d36ea47; prototype 1ee3ff93e7fb9760d36eafa248e974be1e5f56c1; audit 464dffafb8e51458ae32c1ff7e5602434c037f04; MEMORY update commit 6e122d44aa59a3c12e495b9b82d08cea5965f8ae (resulting blob SHA 88da64917a4ecd504d7e77cbaf49db4223986251). Eight source assertions passed. Browser behavior and economic outcomes remain unverified.",
+  "status": "ACTIVE / RADAR — HARNESS STATIC AUDIT 12/12; BROWSER TEST PENDING; DEMAND UNVALIDATED",
+  "current_cycle": "NEXIA Core — opportunity radar and synthetic SME intake harness",
+  "current_action": "Reconciled operational visibility against canonical STATE v58 and the latest source-level harness audit (12/12 static assertions reported in current session). Browser execution, human timing trial, user demand and commercial economics remain unverified.",
+  "last_completed_action": "2026-10-11: read back STATE v58, BOOT v16, LIVE, MEMORY, EVENT_LOG, persistence protocol, SME static audit and both prototype HTML files. Confirmed LIVE next_action was stale: harness already exists.",
+  "evidence": "Canonical STATE v58 SHA 1aaa6cc50782a47072db1ed453d018d4163c6dd5; BOOT v16 SHA d21bc045bd582a7a7eeed42b61d3ce2f8d36ea47 aligns to STATE. Harness prototypes/sme-intake-test-harness.html SHA d57db26bd78fe1044904165ef893e5d17c2482bc. SME demo prototypes/sme-intake-demo.html SHA 1ee3ff93e7fb9760d36eafa248e974be1e5f56c1. Static audit file SHA 464dffafb8e51458ae32c1ff7e5602434c037f04 records 8/8 assertions for demo; later source audit in current session reported 12/12 assertions across both HTML files. Neither was executed in a browser; no timing trial, customer test, sale or profit validated.",
   "capital_spent_eur": 0,
   "human_gate": "No purchase, external contact, account connection, publication, paid listing or paid credits without explicit approval.",
   "parallel_work": [
-    "Build synthetic-data prototype for one SME AI workflow",
-    "Quantify delivery time, measurable value and maintenance cost",
-    "Core persistence, recovery and integrity maintenance"
+    "Compare and actively falsify three low-cost business opportunities using public evidence and explicit uncertainty labels",
+    "Find a free, privacy-safe route to execute the synthetic harness in a browser; do not use metered credits",
+    "Maintain persistence integrity; STATE v58 remains canonical and revenue/profit remain unvalidated"
   ],
-  "next_action": "Build a minimal synthetic-only test harness with expected-output checks and a visible timing protocol; execute in a real browser before claiming functional test results.",
+  "next_action": "Continue zero-cost public-source falsification and comparison of at least three opportunities using a common matrix; do not select a commercial mission until evidence is adequate. Separately, arrange a real-browser run of the local synthetic harness when a free safe execution environment is available. Do not use metered browser credits, contact prospects, connect accounts, publish or spend without Kael's explicit approval.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "Este panel es un artefacto derivado; NEXIA_STATE.json es la fuente canónica.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
