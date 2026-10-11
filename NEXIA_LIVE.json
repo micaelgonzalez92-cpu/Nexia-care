@@ -1,55 +1,46 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / RADAR — EXP-AUTO-001 DESIGNED; BUYER-INITIATED CHANNEL REQUIRED; EXTERNAL VALIDATION GATED",
-  "current_cycle": "NEXIA Core — lead-intake reliability automation selected for next validation; channel/legal gate active",
-  "current_action": "Opportunity selection and validation preparation are complete. Spain LSSI Article 21 review makes unsolicited Spanish commercial email NO-GO. The preferred first validation route is buyer-initiated public briefs/RFPs or inbound/opt-in requests. No proposal or outreach has been submitted.",
-  "last_completed_action": "2026-10-11: added NEXIA_EXP_AUTO_001_CHANNEL_LEGAL_GATE.md after official-law review; BOOT advanced to v23 as an index while canonical STATE remains v61.",
-  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v23 SHA e091ed94312e4e007060362fd46182be68ca6a03; selection-gate SHA 0809188903d9e1ee721ffc4ad8b8ad14f41d9c10; validation-pack SHA 97185a0f22b66d6234995002193cedf7d18ada09; Spain channel/legal gate persisted after BOE Article 21 review.",
+  "status": "ACTIVE / RADAR — EXP-AUTO-001 CAPABILITY DEMO 9/9; CURRENT MARKETPLACE SAMPLE 0 QUALIFIED",
+  "current_cycle": "NEXIA Core — lead-intake reliability candidate selected; truthful capability strengthened; external validation still gated",
+  "current_action": "A synthetic lead-intake reliability reference implementation was built and tested locally. First run 7/8 exposed an unsafe phone-deduplication assumption; after requiring explicit country context the suite passed 9/9. Current public marketplace re-evaluation found zero sampled opportunities satisfying all price, bounded-scope and truthful-experience gates.",
+  "last_completed_action": "2026-10-11: persisted and read back prototypes/lead-intake-reliability-demo.js, its test suite, and NEXIA_EXP_AUTO_001_CAPABILITY_DEMO_2026-10-11.md. BOOT advanced to v24 as an index; canonical STATE remains v61.",
+  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v24 SHA 1e1e6a2f9f0988b025d44336b8b3f9de7a8447e8; capability demo blob fb04d7cc57515d5c4e7ef961045e27bec9427923; test blob 582392fbf7dbed487d4723e67138239f6047e635; local Node.js final suite 9/9 PASS.",
   "capital_spent_eur": 0,
-  "human_gate": "To activate EXP-AUTO-001 commercially Kael must explicitly authorize a maximum first batch of 5 buyer-initiated proposal submissions, the €249 pilot boundary and any required account connection or paid platform action. Unsolicited Spanish cold commercial email is NO-GO.",
-  "parallel_work": [
-    "STATE v61 remains canonical and has not been silently advanced.",
-    "BOOT v23 indexes selection, validation-pack and channel/legal checkpoints.",
-    "EXP-AUTO-001 Lead Intake Reliability Sprint is designed but not externally activated.",
-    "Generic Shopify catalog listing remains deprioritized due visible low-price pressure despite buyer activity.",
-    "Higgsfield Earn remains a secondary monetization route with platform/social-publication dependencies.",
-    "Etsy templates remain secondary due visible saturation and non-zero marketplace fees.",
-    "Hunter/Gmail, if connected later, must not be used to evade unsolicited-commercial-email restrictions; email use is limited to lawful/authorized contexts.",
-    "No buyer willingness-to-pay evidence exists for Nexia itself yet."
-  ],
+  "human_gate": "No proposal submission, external contact, account connection, commercial publication, paid tool or spend without explicit approval. Unsolicited Spanish cold commercial email remains NO-GO.",
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "status": "DESIGNED_NOT_EXTERNALLY_ACTIVATED",
+    "status": "DESIGNED_CAPABILITY_DEMO_TESTED_NOT_EXTERNALLY_ACTIVATED",
     "offer_hypothesis_eur": 249,
     "max_delivery_hours": 4,
-    "internal_labor_rate_eur_h": 15,
-    "max_variable_cost_eur": 10,
     "provisional_contribution_eur": 179,
-    "commercial_success_gate": ">=2 qualified responses and >=1 paid pilot >=€249 within <=20 matched external attempts, plus delivery <=4 h and zero critical reliability/authorization failures"
+    "capability_demo_final_test": "9/9 synthetic Node.js tests PASS"
   },
   "channel_policy": {
-    "spain_unsolicited_commercial_email": "NO_GO",
     "preferred_first_channel": "Buyer-initiated public briefs/RFPs or inbound/opt-in requests",
-    "first_batch_max": 5,
-    "spend_authorized_eur": 0
+    "current_marketplace_gate_result": "0 current sampled opportunities satisfy all gates",
+    "reason": "Higher-value briefs generally require prior similar production experience; lower-friction briefs commonly fail the price/contribution gate. Nexia will not overstate experience or accept uneconomic work merely to create activity."
   },
-  "next_action": "Await explicit authorization before proposal submission. If authorized, use at most 5 buyer-initiated opportunities and preserve the €249/economics/truthfulness gates; verify platform fees or paid proposal requirements before any submission involving spend.",
+  "parallel_work": [
+    "STATE v61 remains canonical.",
+    "BOOT v24 indexes the post-state capability-demo checkpoint.",
+    "Lead-intake reference logic demonstrates validation, idempotency, deduplication, non-destructive merge, failure visibility and no partial commit under an injected failure.",
+    "Phone normalization does not infer country equivalence unless explicitly configured.",
+    "The demo is not n8n/Make/GHL production experience and must not be represented as client work.",
+    "No own willingness-to-pay, transaction, settled revenue or profit exists yet."
+  ],
+  "next_action": "Continue zero-cost discovery for buyer-initiated briefs with >=€249-equivalent economics and no unverifiable experience requirement. In parallel, investigate a genuinely free local/open-source workflow runtime to build platform-specific evidence before re-evaluating higher-value briefs.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
-  "visibility": "This is a derived visibility artifact. NEXIA_STATE.json v61 remains the canonical business state; BOOT/LIVE index post-state checkpoints without overriding it.",
-  "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
-  "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; economic-outcome-first scoring",
   "revenue_eur": 0,
   "profit_eur": 0,
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "boot_version": 23,
-  "boot_blob_sha": "e091ed94312e4e007060362fd46182be68ca6a03",
+  "boot_version": 24,
+  "boot_blob_sha": "1e1e6a2f9f0988b025d44336b8b3f9de7a8447e8",
   "current_blockers": [
-    "EXP-AUTO-001 external commercial validation requires explicit proposal-submission authorization.",
-    "No direct Upwork connector is available in the current plugin catalog search; browser automation available in-session is metered and no spend is authorized.",
-    "NEXIA_MEMORY.md still has a stale STATE v58 canonical notice; STATE v61 must take precedence until safe full-file reconciliation.",
-    "SME browser harness remains runtime-unverified because the available dynamic-browser route is metered and no spend is authorized.",
-    "No own sale, settled revenue, repeat purchase or after-tax profit has been demonstrated."
+    "No current sampled buyer-initiated marketplace brief passes all economics/scope/truthfulness gates.",
+    "External proposal submission remains a Human Gate.",
+    "NEXIA_MEMORY.md still has a stale STATE v58 canonical notice; STATE v61 takes precedence until safe full-file reconciliation.",
+    "No real client deployment or platform-specific production evidence exists yet."
   ]
 }
