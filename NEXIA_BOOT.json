@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "boot_version": 28,
-  "generated_at": "2026-10-11T12:51:00+02:00",
+  "boot_version": 29,
+  "generated_at": "2026-10-11T13:51:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
   "persistence_connector": "GitHub",
@@ -20,29 +20,30 @@
   "qualified_candidate_gate": "NEXIA_EXP_AUTO_001_HUESCAVENTURA_CANDIDATE_2026-10-11.md",
   "buyer_scan": "NEXIA_EXP_AUTO_001_BUYER_SCAN_2026-10-11_1251.md",
   "submission_checkpoint": "NEXIA_EXP_AUTO_001_HUESCAVENTURA_SUBMISSION_BLOCKED_2026-10-11.md",
+  "workana_profile_checkpoint": "NEXIA_WORKANA_PROFILE_STATUS_2026-10-11.md",
   "last_verified_state_version": 61,
   "last_verified_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
   "active_experiment": {
     "id": "EXP-OPPORTUNITY-001",
     "name": "Radar comparativo y falsación de oportunidades de negocio de bajo coste",
-    "status": "HUESCAVENTURA_SUBMISSION_AUTHORIZED_BUT_ZERO_COST_EXECUTION_CHANNEL_BLOCKED",
+    "status": "HUESCAVENTURA_AUTHORIZED_WORKANA_PROFILE_CREATED_MODERATION_NOT_VERIFIED",
     "cost_eur": 0,
     "participants": 0,
-    "constraints": "Sin compras, planes de pago, herramientas metered ni gasto."
+    "constraints": "Sin compras, moderación prioritaria, planes de pago, créditos, herramientas metered ni gasto."
   },
   "mission": {
     "id": "MISSION-OPPORTUNITY-ENGINE-001",
     "name": "Construir y validar un motor repetible que descubra, pruebe y monetice la oportunidad de negocio con mayor potencial de beneficio neto sostenible",
     "priority": "MAX",
     "cost_eur": 0,
-    "human_action_required": true,
+    "human_action_required": false,
     "status": "ACTIVE"
   },
   "selected_next_candidate": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
-    "status": "HUESCAVENTURA_PROPOSAL_AUTHORIZED_NOT_SUBMITTED",
+    "status": "HUESCAVENTURA_PROPOSAL_AUTHORIZED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "capability_evidence": {
@@ -62,7 +63,17 @@
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
     "authorized_gross_price_eur": 300,
     "authorization_scope": "One proposal only; prepared bounded scope; no spend or paid plans.",
-    "execution_blocker": "No Workana connector exists in current plugin catalog; native web search cannot authenticate/submit; available dynamic browser automation is metered and excluded by the user's zero-spend authorization."
+    "execution_blocker": "Workana profile approval is not yet verified; Workana requires moderated/approved profiles before proposal submission."
+  },
+  "workana_profile": {
+    "account_status": "CREATED",
+    "profile_completion": "REPORTED_COMPLETE_BY_KAEL",
+    "approval_status": "NOT_VERIFIED_LIKELY_PENDING",
+    "independent_dashboard_verification": false,
+    "gmail_approval_email_found": false,
+    "standard_moderation_public_time": "15-30 days according to current Workana help",
+    "priority_moderation": "NOT_AUTHORIZED / DO_NOT_BUY",
+    "proposal_submission_capability": "BLOCKED_UNTIL_APPROVAL_VERIFIED"
   },
   "channel_policy": {
     "spain_unsolicited_commercial_email": "NO_GO",
@@ -71,24 +82,26 @@
     "workana_initial_freelancer_commission": "20% according to current official Workana help",
     "workana_submission_authorized": true,
     "workana_submission_executed": false,
-    "zero_cost_execution_channel_available": false
+    "manual_zero_cost_submission": "AVAILABLE_ONLY_AFTER_WORKANA_PROFILE_APPROVAL"
   },
-  "human_gate": "Authorization to submit Huescaventura at €300 has been granted. Remaining human action is operational only: manual Workana submission from an already available account if Kael wants to preserve zero spend. Account creation, paid plans, credits and metered browser use remain unauthorized.",
-  "last_confirmed_action": "2026-10-11 12:51 CEST: Kael explicitly authorized one Huescaventura Workana proposal at €300 with the prepared bounded scope and zero spend. The project was reverified open. No Workana connector exists; native web tools cannot submit authenticated forms; the only dynamic browser route is metered and therefore outside authorization. Final proposal text was persisted for manual zero-cost submission. No proposal was actually sent.",
+  "human_gate": "Huescaventura submission at €300 is authorized. Workana profile has been created/completed by Kael but approval is not yet verified. No paid moderation, plans, credits, account upgrades or spend are authorized.",
+  "last_confirmed_action": "2026-10-11 13:51 CEST: Kael reported the Workana profile created and complete. Official Workana help was rechecked: new profiles must pass moderation before sending proposals and standard review usually takes 15-30 days. Gmail search found current Workana onboarding mail but no approval/rejection email. Huescaventura remains authorized but NOT SUBMITTED.",
   "integrity_warnings": [
     "NEXIA_STATE.json v61 remains canonical.",
     "NEXIA_MEMORY.md still begins with stale STATE v58 canonical text; STATE v61 wins.",
+    "Workana profile completion is user-reported; authenticated dashboard state was not independently inspected.",
+    "No Workana approval email has been found in connected Gmail as of this checkpoint.",
     "Huescaventura submission is AUTHORIZED but NOT EXECUTED.",
     "Do not claim client contact, proposal submission, acceptance, revenue or contract until verified.",
-    "Public marketplace status can change; recheck before manual submission if materially delayed."
+    "Public marketplace status can change; recheck immediately after profile approval and before submission."
   ],
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "guardrail": "No spending, new account creation, paid plan, credits, metered browser execution or scope/price change without explicit Kael approval.",
+  "guardrail": "No spending, priority moderation, paid plan, credits, metered browser execution or scope/price change without explicit Kael approval.",
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "updated_at": "2026-10-11",
-  "sync_status": "STATE_V61_CANONICAL_HUESCAVENTURA_AUTHORIZED_NOT_SUBMITTED_ZERO_COST_EXECUTION_BLOCKED",
-  "next_action": "Kael may manually submit the persisted €300 proposal from Workana using an already available account. Nexia should continue zero-cost research/preparation in parallel and must not claim submission until Kael confirms or a connected execution tool verifies it."
+  "sync_status": "STATE_V61_CANONICAL_WORKANA_PROFILE_COMPLETE_REPORTED_APPROVAL_PENDING_HUESCAVENTURA_AUTHORIZED_NOT_SUBMITTED",
+  "next_action": "Monitor for Workana approval evidence. When approval is verified, immediately recheck Huescaventura; if still open, manually submit the already-authorized €300 bounded proposal at zero spend. Continue other free buyer-initiated discovery in parallel."
 }
