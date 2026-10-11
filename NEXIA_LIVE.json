@@ -1,12 +1,18 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — CORE EVOLVED; WORKANA APPROVAL PENDING; PARALLEL WORK ACTIVE",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — EVENT STORAGE V2 ACTIVE; WORKANA APPROVAL PENDING; PARALLEL WORK ACTIVE",
   "current_cycle": "NEXIA Core — one monetization experiment active plus bounded background radar",
   "current_action": "Workana moderation is checked once daily by the dedicated sensor. Nexia Parallel Work remains scheduled every 4 hours for safe zero-cost tasks and does not poll Workana/Gmail. Control Tower owns daily state/memory/integrity reconciliation.",
-  "state_version": 62,
-  "state_blob_sha": "8a51ab4d9a4a25a7bc86c241ce9e18f32d5a78e4",
-  "boot_version": 35,
-  "boot_blob_sha": "1bfe89a15afb00c2f4bfd185402db2975eeafca8",
+  "state_version": 63,
+  "state_blob_sha": "3b42b908e0e9bf9fb8e047d5f3c0ac52ef0a796f",
+  "boot_version": 36,
+  "boot_blob_sha": "07528e512e0c36fe6b0c92d6ddd691bf8bf9513a",
+  "event_storage": {
+    "mode": "IMMUTABLE_EVENT_FILES_V2",
+    "index": "NEXIA_EVENT_INDEX.json",
+    "latest_event_id": "EVT-2026-10-11-EVOLVE-001",
+    "legacy_jsonl_mode": "READ_ONLY"
+  },
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
@@ -49,15 +55,6 @@
     "workana_polling_policy": "DAILY_ONLY",
     "notifications": "PARTIAL_NOT_FULLY_INSTRUMENTED"
   },
-  "persistence": {
-    "state_readback": "VERIFIED",
-    "boot_readback": "VERIFIED",
-    "live_readback_pre_final": "VERIFIED",
-    "memory_readback": "VERIFIED",
-    "commercial_pipeline_readback": "VERIFIED",
-    "master_backup_readback_pre_final": "VERIFIED",
-    "event_log_append": "BLOCKED_NO_NATIVE_APPEND_PRIMITIVE"
-  },
   "human_gate": "No immediate action required from Kael. The one 300 EUR Huescaventura proposal remains authorized after profile approval is verified. Paid moderation/plans/credits and other external contacts remain unauthorized.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
@@ -67,9 +64,8 @@
     "Huescaventura public status becomes STALE_RECHECK_REQUIRED after 24 hours without recheck",
     "Nexia Parallel Work has not yet completed its first runtime-verified run after creation",
     "n8n runtime import and real Airtable behavior remain unverified",
-    "EVENT_LOG append is blocked by lack of a native append primitive; historical ledger was not rewritten",
     "No willingness-to-pay, contract, settled payment or real client deployment exists yet"
   ],
-  "next_action": "Continue safe parallel work. Observe and verify the first worker run. Daily Workana sensor checks moderation. On verified approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend.",
+  "next_action": "Finish readback of Event Storage v2 and current derived artifacts, record closure event, then continue safe parallel work. Daily Workana sensor checks moderation; on approval recheck Huescaventura and submit the authorized proposal if still open and zero-spend.",
   "rule": "One active monetization experiment; at most two research paths; no spend/contact/publication beyond exact authorization; stale external evidence must be reverified."
 }
