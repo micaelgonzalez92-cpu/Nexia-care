@@ -1,3 +1,5 @@
+> **Canonical priority notice — 2026-10-11:** This memory is a learning ledger, not the source of operational truth. NEXIA_STATE.json v58 is canonical. Current mission: MISSION-OPPORTUNITY-ENGINE-001; active experiment: EXP-OPPORTUNITY-001. Resale is historical/paused/non-primary. Later notes must not silently reactivate it.
+
 # NEXIA MEMORY — Banco de Aprendizaje
 
 ## Purpose
@@ -17,15 +19,23 @@ Acumular evidencia y aprendizaje operativo para evitar repetir experimentos, sep
 - Next action
 - Reproducibility status
 
-## Current experiment
+## Current canonical experiment — checked against NEXIA_STATE.json v58
+
+### MISSION-OPPORTUNITY-ENGINE-001 / EXP-OPPORTUNITY-001
+- Status: ACTIVE / RADAR; prototype built, not commercially validated.
+- Objective: compare at least three low-cost opportunities, actively falsify each, and select at most one for the next experiment only after evidence review.
+- Current next action: measure the local synthetic-data SME intake demo using a worksheet for manual time, assisted time, classification errors, correction time and outcome metrics. Use synthetic data only; no prospect contact or external action.
+- Human gate: no purchases, account connections, external contacts, publication or commitments without Kael's explicit approval.
+- Commercial evidence: no own sales, settled revenue or validated net profit. Capital spent €0.
+
+## Historical experiment — paused/non-primary
 
 ### EXP-RESALE-001 — Reventa profesional de ropa de segunda mano en España
-- Status: ACTIVE / VALIDACIÓN; pilot EXP-RESALE-001A approved but pending Kael payment.
-- Hypothesis: a small, measured batch of branded second-hand clothing can achieve acceptable sellable yield, realized prices, contribution after all attributable costs, and repeatable sourcing.
-- Current evidence: supplier checkout of €61.30 delivered for 10 shirts was verified; payment has not been made. No inventory, listings, sales, revenue, or profit are claimed.
-- Success gates currently recorded in STATE: at least 80% sellable; average realized sale price at least €15; contribution target €10/unit. The contribution target is not jointly compatible with €15 average realized price under the provisional acquisition allocation before other costs; do not change the canonical gate without Kael's decision.
-- Next action: continue zero-cost preparation and persistence reconciliation. After any authorized purchase, inspect and record actual sellable count, preparation time, realized prices, channel fees, packaging, shipping, returns/defects, attributable labor and tax treatment.
-- Reproducibility: NOT ACHIEVED; no pilot purchase or own sale has occurred.
+- Historical status at the time of the original note: ACTIVE / VALIDACIÓN; pilot EXP-RESALE-001A had been approved pending Kael payment. This is historical context only and does not override canonical STATE v58.
+- Hypothesis: a small, measured batch of branded second-hand clothing could achieve acceptable sellable yield, realized prices, contribution after all attributable costs, and repeatable sourcing.
+- Historical evidence: supplier checkout of €61.30 delivered for 10 shirts was verified; payment was not made. No inventory, listings, sales, revenue, or profit were claimed.
+- Historical gates: at least 80% sellable; average realized sale price at least €15; contribution target €10/unit. The contribution target is not jointly compatible with €15 average realized price under the provisional acquisition allocation before other costs.
+- Reproducibility: NOT ACHIEVED; no pilot purchase or own sale occurred.
 
 ### Paused legacy experiment — EXP-001B (NEXIA Care)
 - Status: PAUSED_NOT_DELETED. Preserve prior diagnostic-test hypothesis and historical notes below, but it is not the active mission.
