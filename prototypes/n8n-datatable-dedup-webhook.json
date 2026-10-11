@@ -68,7 +68,7 @@
         "resource": "row",
         "operation": "insert",
         "dataTableId": {"__rl": true, "value": "nexia_exp_auto_001_dedup_proof", "mode": "name"},
-        "columns": {"mappingMode": "autoMapInputData", "value": null},
+        "columns": {"mappingMode": "autoMapInputData", "value": {}},
         "options": {}
       },
       "type": "n8n-nodes-base.dataTable",
