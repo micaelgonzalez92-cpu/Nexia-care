@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "boot_version": 18,
+  "boot_version": 19,
   "generated_at": "2026-10-11T00:00:00+02:00",
   "project": "NEXIA CORE",
   "persistence_repository": "micaelgonzalez92-cpu/Nexia-care",
@@ -12,8 +12,8 @@
   "event_log": "NEXIA_EVENT_LOG.jsonl",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "continuity_protocol": "NEXIA_CONTINUITY.md",
-  "last_verified_state_version": 60,
-  "last_verified_state_blob_sha": "e1d8a929cf7515eab8e2b1ec4a192acb93357967",
+  "last_verified_state_version": 61,
+  "last_verified_state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
   "phase": "RADAR / SELECCIÓN DE OPORTUNIDADES",
   "active_experiment": {
     "id": "EXP-OPPORTUNITY-001",
@@ -41,7 +41,7 @@
     "reason": "Kael ha retirado la reventa vintage como misión principal. No se preselecciona un vehículo comercial antes de comparar oportunidades con evidencia, economía unitaria, facilidad de validación, repetibilidad, riesgo y coste de aprendizaje."
   },
   "human_gate": "La compra de 10 camisetas de Vintage4Originals queda suspendida mientras la reventa está en pausa; requiere nueva autorización explícita para reactivarse.",
-  "last_confirmed_action": "2026-10-11: STATE v60 read back; prior STATE v59 derived-artifact consistency checks all passed.",
+  "last_confirmed_action": "2026-10-11: STATE v61 recorded zero-cost public research; no business validation claimed.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -51,10 +51,10 @@
   "startup_rule": "On every new NEXIA session, use the GitHub connector to inspect this repository and load BOOT -> STATE -> MEMORY/RECENT EVENTS before asking Kael to restate project state.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE; includes R6, lifecycle and decision engine",
   "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md — v1.2; sustainable after-tax net profit is primary score; technical activity does not add points",
-  "state_version": 60,
-  "state_blob_sha": "e1d8a929cf7515eab8e2b1ec4a192acb93357967",
-  "note": "BOOT v18 points to verified STATE v60. LIVE, MEMORY, EVENT_LOG and MASTER_BACKUP are being refreshed sequentially; final readback required. Runtime independence/telemetry remain partial.",
+  "state_version": 61,
+  "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
+  "note": "BOOT v19 points to STATE v61. Public market signals are not willingness-to-pay evidence; runtime independence and telemetry remain partial.",
   "updated_at": "2026-10-11",
-  "sync_status": "FINAL_RECONCILIATION_IN_PROGRESS",
-  "next_action": "With persistence recovery verified, continue the predeclared synthetic-only SME intake demo test using a genuinely free browser/local execution route. Preserve gates: zero critical failures and at least 20% median end-to-end time reduction including review/corrections. If execution is blocked, document the exact missing capability and continue free opportunity research. No customer data, contact, publication, account connection or spend without explicit approval."
+  "sync_status": "SYNCHRONIZED_AFTER_RESEARCH_CHECKPOINT",
+  "next_action": "Find a genuinely free local execution path; if unavailable, continue a public-evidence comparison with comparable scopes and distinguish buyer briefs from seller listings."
 }
