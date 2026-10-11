@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-11",
+  "purpose": "Track only verifiable commercial progression from qualified opportunity to settled profit. Unknown values remain UNKNOWN/NOT_INSTRUMENTED.",
+  "stages": [
+    "QUALIFIED_OPPORTUNITY",
+    "PROPOSAL_AUTHORIZED",
+    "PROPOSAL_SENT",
+    "QUALIFIED_RESPONSE",
+    "NEGOTIATION",
+    "PAID_PILOT",
+    "DELIVERED",
+    "ACCEPTED",
+    "SETTLED_PAYMENT",
+    "NET_PROFIT_RECONCILED",
+    "REPEATABLE"
+  ],
+  "active_records": [
+    {
+      "id": "PIPE-WORKANA-HUESCAVENTURA-001",
+      "experiment_id": "EXP-AUTO-001",
+      "buyer": "Huescaventura",
+      "platform": "Workana",
+      "buyer_initiated": true,
+      "current_stage": "PROPOSAL_AUTHORIZED",
+      "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
+      "workana_profile_status": "CREATED_COMPLETE_REPORTED_APPROVAL_NOT_VERIFIED",
+      "public_project_status": "OPEN_EVALUATING_PROPOSALS",
+      "public_status_verified_date": "2026-10-11",
+      "public_status_stale_after_hours": 24,
+      "authorized_price_eur": 300,
+      "submission_spend_eur": 0,
+      "platform_commission_assumption_pct": 20,
+      "estimated_after_platform_eur": 240,
+      "labor_assumption_hours": 4,
+      "labor_rate_assumption_eur_per_hour": 15,
+      "labor_assumption_eur": 60,
+      "extra_variable_tooling_target_eur": 0,
+      "estimated_contribution_before_overhead_tax_eur": 180,
+      "tax_eur": "UNKNOWN",
+      "net_profit_eur": "UNKNOWN",
+      "proposal_sent": false,
+      "buyer_response": "NONE",
+      "contract": "NONE",
+      "settled_payment_eur": 0,
+      "own_willingness_to_pay_evidence": false,
+      "next_event": "WORKANA_PROFILE_APPROVAL_VERIFIED",
+      "after_next_event": "RECHECK_PROJECT_THEN_SUBMIT_ALREADY_AUTHORIZED_300_EUR_PROPOSAL_IF_STILL_OPEN_AND_ZERO_SPEND",
+      "guardrails": [
+        "No paid moderation",
+        "No paid plan or proposal credits",
+        "No off-platform buyer contact",
+        "No autonomous WhatsApp/email sending",
+        "No claim of n8n client production experience"
+      ]
+    }
+  ],
+  "portfolio_metrics": {
+    "qualified_opportunities": 1,
+    "proposals_authorized": 1,
+    "proposals_sent": 0,
+    "qualified_responses": 0,
+    "paid_pilots": 0,
+    "settled_payments": 0,
+    "reconciled_net_profit_eur": 0,
+    "repeatable_transactions": 0
+  }
+}
