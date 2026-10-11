@@ -1,0 +1,33 @@
+{
+  "event_id": "EVT-2026-10-12-MOD-001",
+  "timestamp": "2026-10-12T01:55:00+02:00",
+  "type": "WORKANA_PRIORITY_MODERATION_DECISION_READY",
+  "state_version_at_decision": 67,
+  "experiment_id": "EXP-AUTO-001",
+  "facts": {
+    "authenticated_dashboard_state": "PROFILE_UNDER_ANALYSIS_PENDING_MODERATION",
+    "priority_moderation_price_usd": 9.90,
+    "approx_price_eur_at_check": 8.84,
+    "priority_review_window": "UP_TO_24_HOURS",
+    "approval_guaranteed": false,
+    "dashboard_reports_refund_if_not_approved": true,
+    "huescaventura_status": "OPEN_EVALUATING_PROPOSALS_REVERIFIED_2026-10-12",
+    "huescaventura_budget_eur": "200-300",
+    "huescaventura_estimated_contribution_before_overhead_tax_eur": 180,
+    "spend_executed_eur": 0,
+    "purchase_executed": false
+  },
+  "decision": {
+    "recommendation": "RECOMMEND_BUY_IF_KAEL_EXPLICITLY_AUTHORIZES",
+    "maximum_platform_charge_usd": 9.90,
+    "additional_plans_or_credits_authorized": false,
+    "reason": "Fee is below the pre-registered EUR10 validation-spend band; authenticated state is pending; P0 remains open; acceleration removes the main commercial access bottleneck up to 15-30 days sooner; non-approval refund is reported in the authenticated dashboard.",
+    "authority_status": "AWAITING_EXPLICIT_KAEL_SPEND_AUTHORIZATION"
+  },
+  "success_criterion": "Moderation result within 24 hours; if approved, immediately reverify Huescaventura and submit the already-authorized EUR300 proposal only if still open and proposal submission requires no additional spend.",
+  "risk": "If approved but no economically viable proposal converts, the USD9.90 moderation charge is sunk; approval does not guarantee work or revenue.",
+  "commercial_stage_change": "NONE",
+  "revenue_change_eur": 0,
+  "profit_change_eur": 0,
+  "next_action": "Kael explicitly authorizes and executes only the USD9.90 Priority Moderation purchase, or declines it. /next alone does not authorize spend."
+}
