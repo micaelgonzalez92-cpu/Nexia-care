@@ -1,14 +1,14 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — CORE EVOLUTION CLOSED; EVENT STORAGE V2 OPERATIONAL",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — CORE EVOLUTION VERIFIED WITH MEMORY DERIVED STALE",
   "current_cycle": "NEXIA Core — one active monetization experiment plus bounded background radar",
-  "state_version": 64,
-  "state_blob_sha": "dc0c6bad4b1f32040c31ffe6f8c400cd370419a9",
-  "boot_version": 37,
-  "boot_blob_sha": "c1fd5c2ec14e2d011612d6810fcd35a2aed73cb0",
+  "state_version": 65,
+  "state_blob_sha": "5e7b8789ab4f3deaf196bd4c9c446c028db45a4d",
+  "boot_version": 38,
+  "boot_blob_sha": "c5d2e791dc9c39b3c6bdc035027d9e200f2e36f8",
+  "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
   "active_experiment": {
     "id": "EXP-AUTO-001",
-    "name": "Lead Intake Reliability Sprint",
     "status": "PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4
@@ -44,15 +44,7 @@
     "workana_sensor": "ACTIVE_DAILY_LAST_VERIFIED_RUN_NO_APPROVAL",
     "workana_polling_policy": "DAILY_ONLY"
   },
-  "capability_evidence": {
-    "generic_logic": "9/9 PASS",
-    "http_integration": "12/12 PASS",
-    "huescaventura_domain": "13/13 PASS",
-    "n8n_import_skeleton": "12/12 STRUCTURAL+CODE PASS",
-    "n8n_runtime": "NOT_EXECUTED",
-    "real_airtable": "NOT_EXECUTED"
-  },
-  "human_gate": "No immediate action required from Kael. The one 300 EUR Huescaventura proposal remains authorized after Workana approval is verified and only if zero-spend.",
+  "human_gate": "No immediate action required. One 300 EUR Huescaventura proposal remains authorized after profile approval is verified and only if zero-spend.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -60,7 +52,8 @@
     "Workana profile approval not yet verified",
     "Nexia Parallel Work first completed run not yet runtime-verified",
     "n8n runtime and real Airtable integration remain unverified",
+    "MEMORY header sync to v65 blocked by tool safety; canonical STATE overrides it",
     "No willingness-to-pay, contract or settled payment exists"
   ],
-  "next_action": "Continue safe parallel work. Workana is checked once daily. On verified approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend."
+  "next_action": "Continue safe parallel work. Do not bypass blocked MEMORY write. Workana is checked once daily. On verified approval, recheck Huescaventura and submit the already-authorized proposal if still open and zero-spend."
 }
