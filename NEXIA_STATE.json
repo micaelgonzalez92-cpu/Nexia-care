@@ -335,12 +335,15 @@
     "previous_state_version": 66,
     "previous_state_blob_sha": "69dd2b8a1d6b60d5712e5b691908d7dbabc8ee5e",
     "current_state_version": 67,
-    "checkpoint_status": "STATE_WRITTEN_AWAITING_BOOT_LIVE_BACKUP_FINAL_BIND",
+    "checkpoint_status": "CLOSED_STATE_BOOT_LIVE_BACKUP_SYNCED",
     "event_storage_status": "OPERATIONAL_V2",
     "latest_event_id": "EVT-2026-10-12-ACQ-001",
     "memory_sync_status": "BLOCKED_BY_TOOL_SAFETY_DO_NOT_BYPASS",
     "financial_impact_eur": 0,
     "authority_change": "NONE",
-    "note": "Commercial stage is unchanged. Huescaventura remains primary and Workana profile approval remains unverified. Live automation inventory was reconciled from stale 3-active architecture to verified 2 active / 7 paused / 1 completed after Workana sensor consolidation into Control Tower."
+    "first_bind_boot_blob_sha": "6bc65434d46088c14e5907230772db6d6e73219a",
+    "first_bind_live_blob_sha": "bda211086ca8f16f37402db103ab93200f60ed5e",
+    "first_bind_backup_blob_sha": "ace39c8919a2ed50bc22abff8d6869fdf70d30e5",
+    "note": "Commercial stage is unchanged. Huescaventura remains primary and Workana profile approval remains unverified. Live automation inventory was reconciled from stale 3-active architecture to verified 2 active / 7 paused / 1 completed after Workana sensor consolidation into Control Tower. BOOT/LIVE/BACKUP are rebound after this final STATE write."
   }
 }
