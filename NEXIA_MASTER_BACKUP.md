@@ -1,98 +1,94 @@
 # NEXIA MASTER BACKUP — CURRENT RECOVERY SNAPSHOT
 
 Updated: 2026-10-11
-Status: **READBACK VERIFIED FOR STATE v62; EVENT_LOG APPEND BLOCKED**
+Status: STATE v63 / EVENT STORAGE v2 READBACK VERIFIED
 Checkpoint: `CP-2026-10-11-EVOLVE-001`
 
-Historical backup content remains recoverable from Git history. Previous backup blobs and historical state snapshots must never override current canonical STATE.
+Historical backup content remains recoverable from Git history and never overrides canonical STATE.
 
-## Canonical source
-- `NEXIA_STATE.json` — **v62**
-- STATE blob SHA: `8a51ab4d9a4a25a7bc86c241ce9e18f32d5a78e4`
-- Mission: `MISSION-OPPORTUNITY-ENGINE-001`
-- Active monetization experiment: `EXP-AUTO-001 — Lead Intake Reliability Sprint`
-- Phase: `VETA / PRE-VALIDACION COMERCIAL`
+## Canonical state
+- `NEXIA_STATE.json`: v63
+- STATE blob: `3b42b908e0e9bf9fb8e047d5f3c0ac52ef0a796f`
+- BOOT v36 blob: `07528e512e0c36fe6b0c92d6ddd691bf8bf9513a`
+- LIVE blob: `f04aa5e21b5c92c2c931aad75b9e2d06ff1ecce6`
+- MEMORY blob: `443137fd25747baa2c25a403b4ca47a38b6dee7a`
+- commercial pipeline blob: `92e53d402bf53987275b6d56e17586847a8907e2`
+- persistence protocol v2 blob: `69f18157e693fb71739fa1230286acdf5134b370`
 
-## Current commercial state
-Primary opportunity: **Huescaventura / Workana**.
+Mission: `MISSION-OPPORTUNITY-ENGINE-001`.
+Active monetization experiment: `EXP-AUTO-001 — Lead Intake Reliability Sprint`.
+Phase: `VETA / PRE-VALIDACION COMERCIAL`.
+
+## Commercial truth
+Primary opportunity: Huescaventura / Workana.
 - Buyer-initiated: yes.
-- Last public status: OPEN / EVALUATING PROPOSALS.
-- Public status verified: 2026-10-11; becomes `STALE_RECHECK_REQUIRED` after 24 h without recheck.
+- Last verified public status: OPEN / EVALUATING PROPOSALS.
+- Public status verified 2026-10-11; stale after 24 hours without recheck.
 - Buyer budget: €200–€300.
-- Authorized proposal: €300.
-- Proposal status: **AUTHORIZED_NOT_SUBMITTED**.
-- Workana profile: created/completed according to Kael; approval not independently verified.
-- No buyer contact, contract, sale, settled payment, revenue or profit has occurred.
+- Proposal authorized: €300.
+- Proposal status: `AUTHORIZED_NOT_SUBMITTED`.
+- Workana profile approval: NOT VERIFIED.
+- Buyer response: none.
+- Contract: none.
+- Settled payment: €0.
+- Revenue: €0.
+- Reconciled net profit: €0.
 
-Commercial ledger: `NEXIA_COMMERCIAL_PIPELINE.json`, blob `92e53d402bf53987275b6d56e17586847a8907e2`.
-Current stage: `PROPOSAL_AUTHORIZED`.
-
-## Economics
-Estimate only, not realized:
-- gross offer: €300;
-- assumed initial Workana commission: 20%;
-- estimated after platform: €240;
-- labor assumption: 4 h × €15 = €60;
-- target extra variable tooling: €0;
-- estimated contribution before overhead/tax: €180.
-
-Tax and after-tax profit remain UNKNOWN. Revenue €0; settled revenue €0; reconciled net profit €0.
+## Economics — estimate only
+- gross offer €300;
+- assumed initial Workana commission 20%;
+- estimated after platform €240;
+- labor assumption €60 (4h × €15);
+- target additional variable tooling €0;
+- estimated contribution before overhead/tax €180;
+- tax and after-tax profit UNKNOWN.
 
 ## Technical evidence
-- generic lead-intake logic: 9/9 synthetic PASS;
-- local HTTP integration: 12/12 PASS;
-- Node-RED structural checks: 6/6 PASS;
-- Huescaventura domain demo: 13/13 synthetic PASS;
-- n8n import skeleton: 12/12 local structural+embedded-code PASS;
-- n8n runtime import: NOT EXECUTED;
-- real Airtable integration: NOT EXECUTED;
-- verified client production experience: NONE.
+- generic lead-intake logic 9/9 synthetic PASS;
+- local HTTP integration 12/12 PASS;
+- Node-RED structural checks 6/6 PASS;
+- Huescaventura domain demo 13/13 synthetic PASS;
+- n8n import skeleton 12/12 local structural+embedded-code PASS;
+- n8n runtime NOT EXECUTED;
+- real Airtable integration NOT EXECUTED;
+- verified client production experience NONE.
 
-## Automation architecture after /evolve
-Three active functions:
-1. `NEXIA Control Tower` — daily; state/memory/integrity/prioritization.
-2. `Nexia Parallel Work` — every 4 hours; safe €0 worker; no Workana/Gmail polling.
-3. `Workana Response Watch` — daily moderation sensor.
+## Automation architecture
+Verified inventory after `/evolve`: 3 active / 6 paused / 1 completed.
+Active functions:
+1. NEXIA Control Tower — daily; includes memory/integrity/prioritization.
+2. Nexia Parallel Work — every 4 hours; safe €0 worker; does not poll Workana/Gmail.
+3. Workana Response Watch — daily moderation sensor.
 
-Disabled as redundant:
-- `NEXIA Memory Review`;
-- `Radar multivía Nexia`.
+Disabled as redundant: NEXIA Memory Review and Radar multivía Nexia.
+Parallel Work remains configured but runtime-unverified until its first completed run.
 
-Verified inventory: active 3; paused 6; completed 1.
-Parallel worker remains **CONFIGURED_NOT_YET_RUNTIME_VERIFIED** until a completed run is observed.
+## Event Storage v2
+Persistence protocol v2.0 is ACTIVE.
+- New events: immutable `events/*.json`.
+- Derived index: `NEXIA_EVENT_INDEX.json`, verified blob `754775400702ab77db46fcaeea8db4505ef301c6`.
+- Latest event at this snapshot: `EVT-2026-10-11-EVOLVE-001`, verified blob `fb278799714287c03f749990211b5c8d33a60ce5`.
+- Legacy `NEXIA_EVENT_LOG.jsonl` is READ-ONLY at verified boundary blob `84db0ce6ccd1878be9ff48a770bb8b6f1e433d72`.
+- Immutable event files are never edited; corrections/new transitions create new event files.
+
+## WIP and evidence freshness
+- max one active monetization experiment;
+- max two background research/falsification paths;
+- public project status freshness: 24h;
+- marketplace fee/policy: 7d;
+- competitor price: 7d;
+- legal/regulatory source: 30d;
+- reverify before material action when practical.
+
+Expired external facts are `STALE_RECHECK_REQUIRED`.
 
 ## Human authority
 No immediate action required from Kael.
-Already authorized: one Huescaventura proposal at €300 with prepared bounded scope after Workana profile approval is verified, provided submission requires €0 spend.
+Already authorized: one Huescaventura proposal at €300 after Workana approval is verified, only if submission remains zero-spend.
+Not authorized: paid moderation, paid plans/credits, additional buyer contacts, purchases/ads/subscriptions, irreversible publication, scope/price expansion.
 
-Not authorized: paid moderation, paid plans/credits, additional buyer contacts, purchases/ads/subscriptions, irreversible publication, or scope/price expansion.
-
-## WIP and freshness
-- one active monetization experiment maximum;
-- two background research/falsification paths maximum;
-- public project status freshness: 24 h;
-- marketplace fee/policy: 7 d;
-- competitor price: 7 d;
-- legal/regulatory source: 30 d;
-- reverify before material action when practical.
-
-Expired external evidence is `STALE_RECHECK_REQUIRED`.
-
-## Verified persistence map
-- STATE v62: `8a51ab4d9a4a25a7bc86c241ce9e18f32d5a78e4` — READBACK VERIFIED.
-- BOOT v35: `1bfe89a15afb00c2f4bfd185402db2975eeafca8` — derived from STATE v62.
-- LIVE: `e05c7e76879a06e4de7a646e056d802cd2991aea` — references STATE v62 and BOOT v35.
-- MEMORY: `624597c7b27582c8a03ef6459b0ad4cbc3fa8a8b` — current ledger references STATE v62; legacy detailed memory retained in Git history.
-- COMMERCIAL PIPELINE: `92e53d402bf53987275b6d56e17586847a8907e2` — READBACK VERIFIED.
-- EVENT_LOG current historical blob: `84db0ce6ccd1878be9ff48a770bb8b6f1e433d72`.
-
-## Event-log limitation
-`NEXIA_EVENT_LOG.jsonl` is append-only by contract. The current GitHub connector exposes full-file replacement, not a native append primitive. Nexia intentionally did **not** rewrite the entire historical ledger merely to add this checkpoint. Therefore `CP-2026-10-11-EVOLVE-001` event append is `BLOCKED_NO_NATIVE_APPEND_PRIMITIVE` rather than falsely claimed complete.
-
-This limitation does not change the canonical operational truth in STATE v62. It remains an integrity debt to solve with a safe append mechanism or a future versioned event-storage design.
-
-## Evolution record
-`NEXIA_EVOLUTION_2026-10-11.md` records the /evolve changes, truth boundaries and next priorities.
+## Current integrity assessment
+STATE/BOOT/LIVE/MEMORY/pipeline/protocol/event index/event file have all been read back successfully for the v63 evolution cycle. This backup update itself must be read back before the canonical checkpoint can be marked closed.
 
 ## Next safe action
-Continue parallel €0 work and verify the first completed run of `Nexia Parallel Work`. The dedicated Workana sensor checks moderation once daily. On verified Workana approval, recheck Huescaventura immediately and submit the already-authorized €300 proposal if still open and zero-spend.
+Read back this backup and the evolution report, then advance canonical checkpoint metadata from migration-in-progress to verified/operational without changing business authorization or economics. Continue safe parallel work; Workana remains daily-only.
