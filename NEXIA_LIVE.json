@@ -1,12 +1,12 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — WORKANA APPROVAL PENDING; PARALLEL WORK ACTIVE",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — CORE EVOLVED; WORKANA APPROVAL PENDING; PARALLEL WORK ACTIVE",
   "current_cycle": "NEXIA Core — one monetization experiment active plus bounded background radar",
-  "current_action": "Workana moderation is checked once daily by the dedicated sensor. In parallel, Nexia executes zero-cost safe batches every 4 hours focused on buyer-initiated discovery, EXP-AUTO-001 delivery evidence, commercial preparation and integrity. No Workana/Gmail polling occurs inside the worker.",
+  "current_action": "Workana moderation is checked once daily by the dedicated sensor. Nexia Parallel Work remains scheduled every 4 hours for safe zero-cost tasks and does not poll Workana/Gmail. Control Tower owns daily state/memory/integrity reconciliation.",
   "state_version": 62,
   "state_blob_sha": "8a51ab4d9a4a25a7bc86c241ce9e18f32d5a78e4",
-  "boot_version": 34,
-  "boot_blob_sha": "a3c12ad65b9f421f5feaee28c81b38aff3caca0a",
+  "boot_version": 35,
+  "boot_blob_sha": "1bfe89a15afb00c2f4bfd185402db2975eeafca8",
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
@@ -26,6 +26,7 @@
     "name": "Huescaventura Workana lead-automation first phase",
     "public_status_last_verified": "OPEN / EVALUATING PROPOSALS",
     "public_status_verified_date": "2026-10-11",
+    "public_status_stale_after_hours": 24,
     "authorized_proposal_eur": 300,
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
     "workana_profile_approval": "NOT_VERIFIED_LIKELY_PENDING"
@@ -41,10 +42,21 @@
   "automation_state": {
     "active_count": 3,
     "paused_count": 6,
+    "completed_count": 1,
     "control_tower": "ACTIVE / DAILY / MEMORY REVIEW INTEGRATED",
-    "parallel_worker": "ACTIVE / EVERY 4 HOURS / CONFIGURED_NOT_YET_RUN AFTER CREATION",
-    "workana_sensor": "ACTIVE / DAILY / LAST RUN NO APPROVAL FOUND",
+    "parallel_worker": "ACTIVE / EVERY 4 HOURS / CONFIGURED_NOT_YET_RUNTIME_VERIFIED",
+    "workana_sensor": "ACTIVE / DAILY / LAST VERIFIED RUN NO APPROVAL FOUND",
+    "workana_polling_policy": "DAILY_ONLY",
     "notifications": "PARTIAL_NOT_FULLY_INSTRUMENTED"
+  },
+  "persistence": {
+    "state_readback": "VERIFIED",
+    "boot_readback": "VERIFIED",
+    "live_readback_pre_final": "VERIFIED",
+    "memory_readback": "VERIFIED",
+    "commercial_pipeline_readback": "VERIFIED",
+    "master_backup_readback_pre_final": "VERIFIED",
+    "event_log_append": "BLOCKED_NO_NATIVE_APPEND_PRIMITIVE"
   },
   "human_gate": "No immediate action required from Kael. The one 300 EUR Huescaventura proposal remains authorized after profile approval is verified. Paid moderation/plans/credits and other external contacts remain unauthorized.",
   "capital_spent_eur": 0,
@@ -53,9 +65,11 @@
   "current_blockers": [
     "Workana profile approval not yet verified",
     "Huescaventura public status becomes STALE_RECHECK_REQUIRED after 24 hours without recheck",
+    "Nexia Parallel Work has not yet completed its first runtime-verified run after creation",
     "n8n runtime import and real Airtable behavior remain unverified",
+    "EVENT_LOG append is blocked by lack of a native append primitive; historical ledger was not rewritten",
     "No willingness-to-pay, contract, settled payment or real client deployment exists yet"
   ],
-  "next_action": "Keep safe parallel work running. Daily Workana sensor checks moderation. On verified approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend.",
+  "next_action": "Continue safe parallel work. Observe and verify the first worker run. Daily Workana sensor checks moderation. On verified approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend.",
   "rule": "One active monetization experiment; at most two research paths; no spend/contact/publication beyond exact authorization; stale external evidence must be reverified."
 }
