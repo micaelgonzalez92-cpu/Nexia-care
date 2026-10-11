@@ -1,19 +1,20 @@
 {
   "updated_at": "2026-10-11",
-  "status": "ACTIVE / RADAR — NEXT COMMERCIAL CANDIDATE SELECTED; EXP-AUTO-001 DESIGNED; EXTERNAL VALIDATION GATED",
-  "current_cycle": "NEXIA Core — opportunity selection completed; lead-intake reliability automation prepared for commercial validation",
-  "current_action": "Public evidence comparison completed across lead automation, catalog QA, Higgsfield Earn and digital templates. Lead-intake reliability automation is the sole selected candidate for the next validation experiment. A €249 pilot hypothesis, unit-economics gate, NO-GO rules and truthful positioning pack are prepared. No outreach or proposal was submitted.",
-  "last_completed_action": "2026-10-11: created and read back NEXIA_OPPORTUNITY_SELECTION_GATE_2026-10-11.md and NEXIA_EXP_AUTO_001_VALIDATION_PACK.md; BOOT advanced to v22 as an index only, while canonical STATE remains v61.",
-  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v22 SHA 79273d521e252d3e880ee6cb0c27a14aa86287f2; selection-gate SHA 0809188903d9e1ee721ffc4ad8b8ad14f41d9c10; validation-pack SHA 97185a0f22b66d6234995002193cedf7d18ada09. Public buyer briefs show lead-automation budgets ranging from low commodity tasks to $100/$150/$200/$500/$800 examples; these are market signals, not Nexia sales.",
+  "status": "ACTIVE / RADAR — EXP-AUTO-001 DESIGNED; BUYER-INITIATED CHANNEL REQUIRED; EXTERNAL VALIDATION GATED",
+  "current_cycle": "NEXIA Core — lead-intake reliability automation selected for next validation; channel/legal gate active",
+  "current_action": "Opportunity selection and validation preparation are complete. Spain LSSI Article 21 review makes unsolicited Spanish commercial email NO-GO. The preferred first validation route is buyer-initiated public briefs/RFPs or inbound/opt-in requests. No proposal or outreach has been submitted.",
+  "last_completed_action": "2026-10-11: added NEXIA_EXP_AUTO_001_CHANNEL_LEGAL_GATE.md after official-law review; BOOT advanced to v23 as an index while canonical STATE remains v61.",
+  "evidence": "STATE v61 SHA c41ad8f136c00e1b5c3680b75df3b56220ae21ed; BOOT v23 SHA e091ed94312e4e007060362fd46182be68ca6a03; selection-gate SHA 0809188903d9e1ee721ffc4ad8b8ad14f41d9c10; validation-pack SHA 97185a0f22b66d6234995002193cedf7d18ada09; Spain channel/legal gate persisted after BOE Article 21 review.",
   "capital_spent_eur": 0,
-  "human_gate": "To activate EXP-AUTO-001 commercially Kael must explicitly authorize the external channel, first-batch maximum (recommended 5), €249 pilot price boundary and any required account connection. Generic /next does not authorize contact or publication.",
+  "human_gate": "To activate EXP-AUTO-001 commercially Kael must explicitly authorize a maximum first batch of 5 buyer-initiated proposal submissions, the €249 pilot boundary and any required account connection or paid platform action. Unsolicited Spanish cold commercial email is NO-GO.",
   "parallel_work": [
     "STATE v61 remains canonical and has not been silently advanced.",
-    "BOOT v22 indexes the post-state opportunity-selection checkpoint.",
-    "EXP-OPPORTUNITY-001 has completed its selection gate at the derived-artifact level; the candidate is EXP-AUTO-001 but external activation is pending Human Gate.",
-    "Generic Shopify catalog listing is deprioritized because recent visible budgets often cluster at $5–$50 despite real buyer activity.",
-    "Higgsfield Earn remains a secondary monetization route with official paid-campaign evidence but requires social-account connection/publication and has platform/content-resource dependency.",
-    "Digital-template marketplaces remain secondary because visible competition is high and Etsy imposes listing, transaction, payment-processing and Spain regulatory fees.",
+    "BOOT v23 indexes selection, validation-pack and channel/legal checkpoints.",
+    "EXP-AUTO-001 Lead Intake Reliability Sprint is designed but not externally activated.",
+    "Generic Shopify catalog listing remains deprioritized due visible low-price pressure despite buyer activity.",
+    "Higgsfield Earn remains a secondary monetization route with platform/social-publication dependencies.",
+    "Etsy templates remain secondary due visible saturation and non-zero marketplace fees.",
+    "Hunter/Gmail, if connected later, must not be used to evade unsolicited-commercial-email restrictions; email use is limited to lawful/authorized contexts.",
     "No buyer willingness-to-pay evidence exists for Nexia itself yet."
   ],
   "selected_next_candidate": {
@@ -27,7 +28,13 @@
     "provisional_contribution_eur": 179,
     "commercial_success_gate": ">=2 qualified responses and >=1 paid pilot >=€249 within <=20 matched external attempts, plus delivery <=4 h and zero critical reliability/authorization failures"
   },
-  "next_action": "Continue only zero-cost prospect/channel qualification until explicit authorization. If Kael authorizes commercial validation, start with at most 5 tightly qualified contacts/applications, not 20, and preserve the €249/economics/reliability gates.",
+  "channel_policy": {
+    "spain_unsolicited_commercial_email": "NO_GO",
+    "preferred_first_channel": "Buyer-initiated public briefs/RFPs or inbound/opt-in requests",
+    "first_batch_max": 5,
+    "spend_authorized_eur": 0
+  },
+  "next_action": "Await explicit authorization before proposal submission. If authorized, use at most 5 buyer-initiated opportunities and preserve the €249/economics/truthfulness gates; verify platform fees or paid proposal requirements before any submission involving spend.",
   "rule": "Sin gasto, sin contacto externo, sin compromisos irreversibles y sin inventar resultados.",
   "visibility": "This is a derived visibility artifact. NEXIA_STATE.json v61 remains the canonical business state; BOOT/LIVE index post-state checkpoints without overriding it.",
   "operational_rules": "NEXIA_OPERATIONAL_RULES.md — v1.1 ACTIVE",
@@ -36,13 +43,13 @@
   "profit_eur": 0,
   "state_version": 61,
   "state_blob_sha": "c41ad8f136c00e1b5c3680b75df3b56220ae21ed",
-  "boot_version": 22,
-  "boot_blob_sha": "79273d521e252d3e880ee6cb0c27a14aa86287f2",
+  "boot_version": 23,
+  "boot_blob_sha": "e091ed94312e4e007060362fd46182be68ca6a03",
   "current_blockers": [
-    "EXP-AUTO-001 external commercial validation requires explicit channel/contact authorization.",
+    "EXP-AUTO-001 external commercial validation requires explicit proposal-submission authorization.",
+    "No direct Upwork connector is available in the current plugin catalog search; browser automation available in-session is metered and no spend is authorized.",
     "NEXIA_MEMORY.md still has a stale STATE v58 canonical notice; STATE v61 must take precedence until safe full-file reconciliation.",
     "SME browser harness remains runtime-unverified because the available dynamic-browser route is metered and no spend is authorized.",
-    "Telemetry/notifications and independent worker/stop control remain not connected/verified.",
     "No own sale, settled revenue, repeat purchase or after-tax profit has been demonstrated."
   ]
 }
