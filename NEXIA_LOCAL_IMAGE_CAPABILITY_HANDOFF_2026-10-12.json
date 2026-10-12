@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-12",
+  "canonical_state": {
+    "version": 70,
+    "changed": false
+  },
+  "capability": "LOCAL_IMAGE_GENERATION",
+  "status": "PROBED_AND_VERIFIED_SINGLE_RUN",
+  "engine": "ComfyUI portable isolated install",
+  "model": "FLUX.2 Klein 4B FP8 distilled",
+  "benchmark": {
+    "resolution": "1024x1024",
+    "steps": 4,
+    "seed": 42,
+    "first_run_seconds_including_weight_load": 38.19,
+    "approx_peak_vram_gib": 11.17,
+    "approx_peak_process_ram_gib": 5.79,
+    "installed_size_gib": 16.79,
+    "cash_spend_eur": 0,
+    "result": "PASS"
+  },
+  "limits": [
+    "One successful run only",
+    "Repeatability not verified",
+    "Batch stability not verified",
+    "Portfolio-grade quality not verified",
+    "Commercial quality not verified",
+    "Electricity cost not measured"
+  ],
+  "next_action": "Use the proven local image capability to design a bounded AI-UGC portfolio experiment before expanding to Openfield, video models or browser agents.",
+  "authority": "No further install, download, generation batch, publication, buyer contact or spend is authorized by this handoff.",
+  "economics": {
+    "spend_eur": 0,
+    "revenue_eur": 0,
+    "profit_eur": 0
+  },
+  "truth_limit": "Technical runtime success is not demand, sale, payment, profit, endurance or commercial-quality proof."
+}
