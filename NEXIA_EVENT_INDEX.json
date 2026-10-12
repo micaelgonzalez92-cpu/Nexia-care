@@ -8,8 +8,8 @@
     "boundary_blob_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
   "event_directory": "events/",
-  "latest_event_id": "EVT-2026-10-12-ZQ-001",
-  "latest_event_path": "events/EVT-2026-10-12-ZQ-001.json",
+  "latest_event_id": "EVT-2026-10-12-LOCALCODER-001",
+  "latest_event_path": "events/EVT-2026-10-12-LOCALCODER-001.json",
   "events": [
     {"event_id":"EVT-2026-10-11-EVOLVE-001","timestamp":"2026-10-11T16:20:00+02:00","type":"CORE_EVOLUTION_AND_EVENT_STORAGE_V2_ACTIVATION","state_version":63,"path":"events/EVT-2026-10-11-EVOLVE-001.json","verified_blob_sha":"fb278799714287c03f749990211b5c8d33a60ce5"},
     {"event_id":"EVT-2026-10-11-EVOLVE-002","timestamp":"2026-10-11T16:45:00+02:00","type":"CORE_EVOLUTION_CHECKPOINT_CLOSURE_WITH_MEMORY_SYNC_BLOCKER","state_version":65,"path":"events/EVT-2026-10-11-EVOLVE-002.json","verified_blob_sha":"9cfbd2e57f6cf67a80ba72727fed0e56ca81a543"},
@@ -29,9 +29,10 @@
     {"event_id":"EVT-2026-10-12-LOCALBENCH-001","timestamp":"2026-10-12T19:26:00Z","type":"EXPLICIT_BOUNDED_LOCAL_BENCHMARK_AUTHORIZATION","state_version":70,"path":"events/EVT-2026-10-12-LOCALBENCH-001.json","verified_blob_sha":"bc0a4d6630f13afabe2baa2926a02d02fee1b188"},
     {"event_id":"EVT-2026-10-12-LOCALBENCH-002","timestamp":"2026-10-12T19:43:00Z","type":"BOUNDED_LOCAL_BENCHMARK_SESSION_CLOSED","state_version":70,"path":"events/EVT-2026-10-12-LOCALBENCH-002.json","verified_blob_sha":"a55c0870e9563caa50948ed79af98a0c92b91a8c"},
     {"event_id":"EVT-2026-10-12-LOCALBENCH-003","timestamp":"2026-10-12T21:49:00+02:00","type":"LOCAL_IMAGE_GENERATION_RUNTIME_PASS","state_version":70,"path":"events/EVT-2026-10-12-LOCALBENCH-003.json","verified_blob_sha":"edb4370469dc4efebe59de6fe51e8bf08a5f6a91"},
-    {"event_id":"EVT-2026-10-12-ZQ-001","timestamp":"2026-10-12T22:31:00+02:00","type":"ZERO_QUOTA_EXECUTION_ROUTER_VERIFIED","state_version":70,"path":"events/EVT-2026-10-12-ZQ-001.json","verified_blob_sha":"347f396873fb0ead9d64fd812dadaca8724bd3df"}
+    {"event_id":"EVT-2026-10-12-ZQ-001","timestamp":"2026-10-12T22:31:00+02:00","type":"ZERO_QUOTA_EXECUTION_ROUTER_VERIFIED","state_version":70,"path":"events/EVT-2026-10-12-ZQ-001.json","verified_blob_sha":"347f396873fb0ead9d64fd812dadaca8724bd3df"},
+    {"event_id":"EVT-2026-10-12-LOCALCODER-001","timestamp":"2026-10-12T22:50:00+02:00","type":"LOCAL_AI_CODER_BENCHMARK_AUTHORIZED","state_version":70,"path":"events/EVT-2026-10-12-LOCALCODER-001.json","verified_blob_sha":"0498fbcae370183cddd2ff51747ed6c8844bfae1"}
   ],
   "rule": "Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated.",
-  "latest_session_handoff": "NEXIA_ZERO_QUOTA_HANDOFF_2026-10-12.json",
-  "latest_session_handoff_blob_sha": "9e405394a5d4c40555991956bf7379628c507540"
+  "latest_session_handoff": "NEXIA_LOCAL_CODER_AUTH_HANDOFF_2026-10-12.json",
+  "latest_session_handoff_blob_sha": "95d2a6a46d97cc7744c0eb105d97afad19280410"
 }
