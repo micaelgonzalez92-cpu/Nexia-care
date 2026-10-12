@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-UGCPORT-004",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "UGC_PHASE_B_DESIGN_AND_VIDEO_BENCHMARK_PREREGISTRATION",
+  "state_version": 70,
+  "experiment": "UGC-PORTFOLIO-001",
+  "vein": "VETA-AI-UGC-001",
+  "phase_a": "PASS_NOT_REPEATED",
+  "phase_b": {
+    "selected_brief": "CLEARNEST",
+    "selection_reason": "Highest validated pair average and lowest first-video dependency because no talking-head lip-sync is required.",
+    "storyboard_artifact": "experiments/UGC-PORTFOLIO-001_PHASE_B_DESIGN.md",
+    "storyboard_status": "DESIGNED_NOT_EXECUTED",
+    "target_duration_seconds": 24,
+    "hook_variants": 3
+  },
+  "video_benchmark": {
+    "id": "UGC-VIDEO-001",
+    "artifact": "experiments/UGC-VIDEO-001.md",
+    "status": "PREREGISTERED_NOT_AUTHORIZED_NOT_EXECUTED",
+    "candidate": "LTX-Video 2B v0.9.5 in existing stock ComfyUI",
+    "input": "accepted CLEARNEST A2 keyframe",
+    "target": "512x768, 97 frames, 24 fps, <=3 attempts",
+    "cash_budget_eur": 0,
+    "estimated_download_if_required_gb": 15,
+    "download_estimate_basis": "current official ComfyUI template metadata for checkpoint plus T5XXL text encoder; local presence not verified",
+    "new_model_download_authorized": false
+  },
+  "research": {
+    "ltx_v095_commercial_use": "SUPPORTED_BY_OPEN_RAIL_M_SUBJECT_TO_USE_RESTRICTIONS",
+    "ltx_v09_old_checkpoint": "NO_GO_FOR_COMMERCIAL_PORTFOLIO_ROUTE_ACADEMIC_RESEARCH_ONLY",
+    "local_runtime_compatibility": "NOT_VERIFIED"
+  },
+  "financial_impact_eur": 0,
+  "external_action": false,
+  "human_gate": "Separate Kael authorization required before downloading LTX-Video/T5 files or executing UGC-VIDEO-001.",
+  "truth_limit": "Phase B is designed and the video benchmark is preregistered only. No video model was downloaded, no local video was generated, no publication/contact occurred and no economic result changed."
+}
