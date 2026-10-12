@@ -50,11 +50,13 @@
     {
       "id": "ZQ-006",
       "name": "LOCAL-AI-CODER-001 benchmark with Ollama + Qwen2.5-Coder 7B Instruct Q4_K_M",
-      "status": "WAITING_KAEL_INSTALL_AUTHORIZATION",
+      "status": "AUTHORIZED_READY_LOCAL_EXECUTION",
       "executor": "LOCAL_AI_PROBE",
       "zero_quota": true,
-      "authority": "RED_INSTALL_GATE",
+      "authority": "AUTHORIZED_ONE_OFF_LOCAL_INSTALL_BENCHMARK",
+      "authorization_event": "events/EVT-2026-10-12-LOCALCODER-001.json",
       "contract": "experiments/LOCAL-AI-CODER-001.md",
+      "runner": "tools/run_local_ai_coder_001.ps1",
       "max_cash_spend_eur": 0,
       "promotion_if_pass": "LOCAL_AI_VERIFIED_FOR_BOUNDED_CODE_ASSIST"
     }
