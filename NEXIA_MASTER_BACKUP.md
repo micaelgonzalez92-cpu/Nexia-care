@@ -7,9 +7,9 @@ Checkpoint: `CP-2026-10-12-DIV-001`
 Historical snapshots remain recoverable from Git history and never override canonical STATE.
 
 ## Canonical recovery map
-- STATE v68: `19073661e978f4e3a9d658875d96d1da5df319ee`
-- BOOT v43: `65ea32541156f43454c154a74f7757ae7997232b`
-- LIVE: `92d2530294b36005cd62243641a0349c41ae3916`
+- STATE v68: `7f4b9908fe556e79a0e34cb87b174937457792d7`
+- BOOT v43: `d20ee877c26ac7fbe4aa709c24ad2b8aa77b8183`
+- LIVE: `ee2bdd1ccd7303a1a6e600beb3ec56bc444fbd84`
 - MEMORY last verified: `443137fd25747baa2c25a403b4ca47a38b6dee7a` — derived ledger remains stale at v63; STATE v68 overrides it.
 - Commercial pipeline: `92e53d402bf53987275b6d56e17586847a8907e2`
 - Event index: `c5f8394dc32d8203591afd3435eaaf154874f77e`
