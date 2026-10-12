@@ -73,6 +73,9 @@ jobs:
       - name: Zero-quota execution router tests
         run: python3 tools/test_nexia_execution_router.py
 
+      - name: Local coder benchmark harness syntax
+        run: python3 -m py_compile tools/nexia_local_ai_coder_001_benchmark.py
+
       - name: Canonical STATE BOOT LIVE integrity check
         shell: bash
         run: |
