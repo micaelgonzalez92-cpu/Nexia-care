@@ -1,0 +1,42 @@
+{
+  "event_id": "EVT-2026-10-12-AUTOPROD-001",
+  "timestamp": "2026-10-12T11:54:22+02:00",
+  "type": "PARALLEL_VEIN_INTERNAL_PRODUCT_RUNTIME_VERIFIED",
+  "state_version": 69,
+  "vein_id": "VETA-AUTO-PRODUCT-001",
+  "product": "Lead Intake Reliability Kit for n8n",
+  "classification_change": "VETA_CANDIDATE_TO_PREPARED_INTERNAL_SKU",
+  "facts": {
+    "runtime": "n8n 2.42.6 full server",
+    "github_actions_run": 38232599031,
+    "github_actions_job": 114755439885,
+    "tested_commit": "092458a0489a28530a3c7e6e6905c770145054b3",
+    "run_conclusion": "success",
+    "workflows_import_export": "PASS_4_OF_4_INACTIVE_BY_DEFAULT",
+    "production_webhooks_registered": 4,
+    "valid_input_runtime": "PASS",
+    "invalid_input_rejection_runtime": "PASS",
+    "duplicate_identity_persisted_rows_after_two_events": 1,
+    "persisted_rows_after_n8n_restart_and_new_unique_identity": 2,
+    "storage": "NATIVE_N8N_DATA_TABLE",
+    "autonomous_send": false,
+    "external_users": 0,
+    "paid_sales": 0,
+    "settled_revenue_eur": 0,
+    "realized_profit_eur": 0,
+    "publication_executed": false,
+    "account_creation_executed": false,
+    "spend_eur": 0
+  },
+  "evidence": {
+    "market_report": "NEXIA_VETA_AUTO_PRODUCT_MARKET_FALSIFICATION_2026-10-12.md",
+    "market_report_blob_sha_after_promotion": "5c6dca1c112ff49c121c524fa142da34870ef8bf",
+    "validation_experiment": "NEXIA_VETA_AUTO_PRODUCT_VALIDATION_EXPERIMENT_2026-10-12.md",
+    "product_directory": "products/lead-intake-reliability-kit/",
+    "runtime_workflow": ".github/workflows/n8n-product-runtime-smoke.yml"
+  },
+  "truth_boundary": "This verifies an internal self-serve SKU candidate in isolated CI. It does not prove buyer demand, willingness to pay, external-user installation success, sales, support burden, revenue or profit.",
+  "next_gate": "External distribution validation requires Kael authorization for account creation/submission/publication. No such action is authorized by this event.",
+  "authority_change": "NONE",
+  "commercial_stage_change": "NONE_FOR_EXP_AUTO_001"
+}
