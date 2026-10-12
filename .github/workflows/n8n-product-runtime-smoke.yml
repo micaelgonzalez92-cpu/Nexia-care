@@ -93,6 +93,10 @@ jobs:
           npx --yes n8n@2.42.6 publish:workflow --id="$AUDIT_WORKFLOW_ID"
 
           DB="$N8N_USER_FOLDER/.n8n/database.sqlite"
+          N8N_BIN=$(npx --yes --package=n8n@2.42.6 -c 'command -v n8n')
+          N8N_BIN=$(readlink -f "$N8N_BIN")
+          test -f "$N8N_BIN"
+          echo "Using direct n8n entry point: $N8N_BIN"
 
           webhook_registered() {
             local workflow_id="$1"
@@ -119,19 +123,30 @@ jobs:
           }
 
           start_n8n() {
-            : > "$N8N_LOG"
-            npx --yes n8n@2.42.6 start >> "$N8N_LOG" 2>&1 &
+            echo 'Starting a new n8n server process' >> "$N8N_LOG"
+            node "$N8N_BIN" start >> "$N8N_LOG" 2>&1 &
             N8N_PID=$!
+            echo "Started direct n8n process PID=$N8N_PID"
             for i in $(seq 1 60); do
-              if curl -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then break; fi
+              if ! kill -0 "$N8N_PID" >/dev/null 2>&1; then
+                echo 'New n8n process exited before becoming healthy'
+                cat "$N8N_LOG"
+                return 1
+              fi
+              if curl --max-time 2 -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then break; fi
               sleep 1
             done
-            if ! curl -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then
+            if ! curl --max-time 2 -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then
               echo 'n8n health check failed'
               cat "$N8N_LOG"
               return 1
             fi
             for i in $(seq 1 60); do
+              if ! kill -0 "$N8N_PID" >/dev/null 2>&1; then
+                echo 'New n8n process exited before webhook readiness'
+                cat "$N8N_LOG"
+                return 1
+              fi
               if all_webhooks_registered; then
                 webhook_registered "$INTAKE_WORKFLOW_ID" "$INTAKE_WEBHOOK_PATH"
                 webhook_registered "$SETUP_WORKFLOW_ID" "$SETUP_WEBHOOK_PATH"
@@ -147,10 +162,35 @@ jobs:
           }
 
           stop_n8n() {
-            if [ -n "${N8N_PID:-}" ] && kill -0 "$N8N_PID" >/dev/null 2>&1; then
-              kill "$N8N_PID" || true
-              wait "$N8N_PID" || true
+            if [ -z "${N8N_PID:-}" ]; then return 0; fi
+            if kill -0 "$N8N_PID" >/dev/null 2>&1; then
+              kill "$N8N_PID"
+              for i in $(seq 1 30); do
+                if ! kill -0 "$N8N_PID" >/dev/null 2>&1; then break; fi
+                sleep 1
+              done
+              if kill -0 "$N8N_PID" >/dev/null 2>&1; then
+                echo "n8n process PID=$N8N_PID did not stop"
+                cat "$N8N_LOG"
+                kill -KILL "$N8N_PID" || true
+                wait "$N8N_PID" || true
+                return 1
+              fi
             fi
+            wait "$N8N_PID" || true
+            if curl --max-time 2 -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then
+              echo 'An n8n server is still responding after stop'
+              cat "$N8N_LOG"
+              return 1
+            fi
+            N8N_PORT="$N8N_PORT" python3 <<'PY'
+          import os, socket
+          with socket.socket() as connection:
+              connection.settimeout(2)
+              assert connection.connect_ex(('127.0.0.1', int(os.environ['N8N_PORT']))) != 0, 'n8n TCP port is still open after stop'
+          PY
+            echo "PASS: direct n8n process PID=$N8N_PID exited; health endpoint and TCP port are down"
+            N8N_PID=''
           }
 
           audit_rows() {
@@ -208,13 +248,18 @@ jobs:
           audit_rows 1
           echo 'PASS: same normalized identity with different event ID did not create a second row'
 
+          PREVIOUS_N8N_PID="$N8N_PID"
           stop_n8n
-          sleep 2
           start_n8n
+          test "$N8N_PID" != "$PREVIOUS_N8N_PID"
+          echo "PASS: n8n restarted with a new direct process PID=$N8N_PID (previous PID=$PREVIOUS_N8N_PID)"
+          audit_rows 1
+          echo 'PASS: original Data Table row survived a verified server restart before any new write'
 
           curl -fsS -X POST "$BASE_URL/webhook/$DEDUP_WEBHOOK_PATH" \
             -H 'Content-Type: application/json' \
             --data '{"event_id":"sample-003","name":"Phone Only","phone":"+34 611 222 333"}' >/dev/null
           sleep 2
           audit_rows 2
+          stop_n8n
           echo 'PASS: product Data Table state persisted across n8n process restart'
