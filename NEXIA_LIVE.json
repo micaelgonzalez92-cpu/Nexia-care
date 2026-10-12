@@ -103,11 +103,44 @@
     "settled_revenue_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "human_gate": "No immediate Kael action. Do not pay Workana priority moderation. Do not submit n8n template #2 or publish a paid product without new explicit authorization. If Workana approval is verified, recheck Huescaventura and use the already-authorized EUR300 proposal only if still open and submission remains EUR0. If n8n template #1 is approved, prepare template #2 internally but do not submit it without authorization.",
+  "session_handoff": {
+    "last_completed_verified_action": "Capability evolution audit completed: authority matrix hardened, GitHub permission reduced to Use my default, AGENTS.md and two Codex skills created, execution-surface protocol created, Dependabot configured, Google Drive connected, weekly NEXIA Capability Evolution automation activated, objectives reviewed, and project-instruction patch prepared.",
+    "last_user_facing_handoff": "Kael was instructed to append NEXIA_PROJECT_INSTRUCTIONS_PATCH_2026-10-12.md to ChatGPT Project settings and then reply 'hecho'. The previous chat ended at NECESITAR ORDENADOR before that completion was verified.",
+    "human_action_required_now": true,
+    "pending_human_action": "Append the prepared project-instruction patch to Nexia Core Project settings without deleting existing instructions.",
+    "surface": "ChatGPT -> Nexia Core Project -> Project settings",
+    "device": "COMPUTER",
+    "why_kael": "Project instructions are controlled from the ChatGPT project UI and were not verified as edited by Nexia.",
+    "steps": [
+      "Open Nexia Core in ChatGPT.",
+      "Open the project menu (•••).",
+      "Open Project settings.",
+      "Open the project instructions.",
+      "Append the exact text from NEXIA_PROJECT_INSTRUCTIONS_PATCH_2026-10-12.md; do not replace existing instructions.",
+      "Save.",
+      "Return to Nexia and report 'hecho'."
+    ],
+    "cost_exposure": "EUR0; reversible; no authority expansion.",
+    "success_check": "A fresh Nexia chat correctly routes code to Codex, human authentication/final side effects to Browser/Work as appropriate, provides SURFACE/DEVICE/WHY KAEL/ACTION/STEPS/COST-EXPOSURE/SUCCESS CHECK/RETURN TO NEXIA, and keeps GitHub as canonical state rather than Word/Drive.",
+    "return_to_nexia": "hecho",
+    "resume_required_reads": [
+      "NEXIA_PROJECT_INSTRUCTIONS_PATCH_2026-10-12.md",
+      "NEXIA_CAPABILITY_EVOLUTION_AUDIT_2026-10-12.md",
+      "NEXIA_EXECUTION_SURFACE_PROTOCOL.md",
+      "NEXIA_OBJECTIVES_REVIEW_2026-10-12.md",
+      "NEXIA_AUTHORITY_MATRIX.md",
+      "events/EVT-2026-10-12-CAP-001.json",
+      "events/EVT-2026-10-12-PERM-001.json"
+    ],
+    "resume_from": "Verify whether Kael has appended the prepared project-instruction patch. If not, this Human Gate is the exact resume point. Do not replace it with NO_IMMEDIATE_ACTION_REQUIRED. Continue EXP-AUTO-001 and parallel zero-cost sensing around it; VELA-01 stays paused.",
+    "truth_limit": "Prepared patch is not applied until Kael confirms and behavior is subsequently checked; installed/registered plugin status is not equivalent to operational verified capability."
+  },
+  "human_gate": "ACTION REQUIRED: append NEXIA_PROJECT_INSTRUCTIONS_PATCH_2026-10-12.md in ChatGPT Project settings. Separate business gates remain unchanged: do not pay Workana priority moderation; do not submit n8n template #2 or publish a paid product without new explicit authorization.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
   "current_blockers": [
+    "Project-instruction patch prepared but application not verified; exact prior-chat handoff must be completed or explicitly declined.",
     "Workana profile approval pending standard moderation",
     "n8n Creator template #1 submitted and pending review; approval not verified",
     "AUTO-PRODUCT willingness-to-pay remains unvalidated; pending free-template review is distribution evidence only",
@@ -116,5 +149,5 @@
     "Canonical STATE v70 has not yet absorbed verified events N8NCREATOR-001, PERM-001 and CAP-001",
     "No willingness-to-pay, settled sale or realized profit exists"
   ],
-  "next_action": "Keep VELA-01 paused. Continue EXP-AUTO-001 as sole monetization WIP. Huescaventura remains P0 after fresh public recheck; no superior replacement promoted. Wait for standard Workana moderation and n8n Creator review while zero-cost acquisition sensing continues. Do not add internal engineering to the verified SKU. Next persistence action is an atomic STATE checkpoint that absorbs post-v70 verified event deltas without changing commercial truth."
+  "next_action": "Resume exactly at the pending Project settings instruction-patch Human Gate. In parallel, safe zero-cost EXP-AUTO-001 acquisition sensing and existing automations may continue. VELA-01 remains paused. After patch application is verified, perform the fresh-chat routing test and then atomic checkpoint reconciliation."
 }
