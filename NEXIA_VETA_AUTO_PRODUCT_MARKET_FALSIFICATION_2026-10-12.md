@@ -65,29 +65,34 @@ Explicit exclusions:
 - no claim of prior paid-client production usage;
 - no guarantee of revenue or conversion lift.
 
-## Verified product runtime — 2026-10-12
-Dedicated workflow: `.github/workflows/n8n-product-runtime-smoke.yml`.
+## Verified product runtime — re-verified 2026-10-12
 
-Verified GitHub Actions run: `38232599031`.
-Verified job: `114755439885`.
-Commit tested: `092458a0489a28530a3c7e6e6905c770145054b3`.
+Dedicated workflow: `.github/workflows/n8n-product-runtime-smoke.yml`.
+Final verified GitHub Actions run: [38235228044](https://github.com/micaelgonzalez92-cpu/Nexia-care/actions/runs/38235228044).
+Job: `114764135662`.
+Tested commit: `ca54ddbc626520a13450aecda6c550d165a42300`.
 Runtime: n8n `2.42.6`, full server process.
 Conclusion: **SUCCESS**.
 
-Verified outcomes from the completed runtime log:
-- all 4 product workflows imported and exported successfully and remained inactive by default;
-- all 4 production webhooks were registered before calls were made;
-- valid lead executed through a real n8n webhook and normalized successfully;
-- invalid lead was rejected through a real n8n webhook;
-- duplicate event with a different event ID but the same normalized email identity did not create a second persisted row;
-- audit after the duplicate attempt contained exactly 1 persisted row;
-- n8n was stopped and restarted using the same user folder;
-- a new unique phone identity was accepted after restart;
-- post-restart audit contained exactly 2 persisted rows;
-- persistence backend: native n8n Data Table;
-- `autonomous_send=false` throughout the asserted outputs.
+Earlier run38232599031 and later green run38233861773 did not sufficiently prove process restart: killing the npx launcher left server processes alive. Their restart claim is superseded; immutable history is retained. A corrected lifecycle exposed a genuine post-restart404 in run38234612479; waiting for /healthz/readiness resolved the startup race.
 
-This proves internal product runtime behavior in an isolated CI environment. It does NOT prove external-user installation, product demand, willingness to pay, sales, refunds, support burden, production compatibility across all n8n versions or client environments.
+Verified final outcomes:
+- all four workflows imported/exported, inactive by default;
+- four production webhook registrations and successful actual runtime calls;
+- valid input normalized; invalid input functionally rejected;
+- two event IDs with the same normalized email left exactly one Data Table row;
+- direct server PID3443 exited, /healthz went down and TCP5678 closed;
+- a new direct PID3540 reached readiness;
+- the new process returned the original row before any new write;
+- one new phone identity raised the persisted total to exactly two rows;
+- final process exited and the port closed;
+- autonomous_send=false in asserted outputs;
+- zero audit404 retries and zero orphan n8n start processes in final cleanup.
+
+Reproducible evidence, failed attempts, source explanation and limitations:
+[NEXIA_VETA_AUTO_PRODUCT_RUNTIME_REVERIFICATION_2026-10-12.md](NEXIA_VETA_AUTO_PRODUCT_RUNTIME_REVERIFICATION_2026-10-12.md).
+
+This is isolated internal CI proof. External-user installation, concurrent dedup, production compatibility, demand, willingness-to-pay, support burden and economic results remain unverified.
 
 ## Pricing hypothesis
 Launch hypothesis: **USD 49 one-time**.
@@ -143,9 +148,12 @@ Passed because:
 - no external customer send is enabled;
 - setup docs, samples and QA checklist exist.
 
-### VALIDATION_READY — NOT YET AUTHORIZED EXTERNALLY
-Technical and experiment-design prerequisites are prepared. Remaining material gate:
-- Kael authorization for creator/store account and first publication/submission experiment.
+### VALIDATION_READY — PAID EXECUTION NOT READY / EXTERNAL ACTION NOT AUTHORIZED
+The technical prerequisite has passed and the first free Creator package is prepared. Paid-experiment measurement/economic definitions remain incomplete as qualified below.
+Remaining gates:
+- preregister measurement windows/definitions, support labor rate and applicable tax-reserve method before paid execution;
+- obtain an explicit WIP/priority decision before activating a second paid monetization experiment;
+- obtain Kael authorization for the specific creator/store account and first submission/publication action, including public exposure. A free channel test is not paid validation.
 
 ### VALIDATED
 Requires real settled sales, not downloads or page views. Initial gate:
@@ -162,4 +170,8 @@ Requires a measured path to >EUR1,000/month after tax, including traffic/acquisi
 
 Next material test is distribution/willingness-to-pay, not more synthetic engineering. No publication/account creation has been executed.
 
-This is not commercial validation. External users, sales, settled revenue, WTP and realized profit remain zero.
+This is not commercial validation. Registered external users, sales, settled revenue and realized profit remain zero. NEXIA willingness-to-pay evidence is absent; market demand for this SKU remains UNKNOWN.
+
+## Commercial execution-readiness qualification — 2026-10-12
+
+The technical SKU gate passes. Commercial measurement design still needs the observation/refund windows, qualified-visit definition, support labor rate and applicable tax-reserve method described in the validation experiment. The pre-tax contribution gate and the additional tax-reserve statement must not be silently conflated. Existing paid validation thresholds remain unchanged. Creator free-template acceptance is channel evidence, not willingness-to-pay. Paid validation also requires an explicit decision respecting the one-active-monetization-experiment limit.

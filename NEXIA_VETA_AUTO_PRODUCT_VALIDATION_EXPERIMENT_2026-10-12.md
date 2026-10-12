@@ -95,10 +95,32 @@ Success for that gate:
 - learning captured before submitting the next template.
 
 ## Current truth
-- Technical internal SKU: IN BUILD / runtime gate not yet closed at time of writing.
+- Technical internal SKU: PREPARED_INTERNAL_SKU after full corrected runtime PASS, run38235228044, commitca54ddbc626520a13450aecda6c550d165a42300. Evidence: NEXIA_VETA_AUTO_PRODUCT_RUNTIME_REVERIFICATION_2026-10-12.md. The original build-time status is historical.
 - External users: 0.
 - Published pages: 0.
 - Paid orders: 0.
 - Settled sales: 0.
 - Revenue: 0.
 - Realized profit: 0.
+
+## Execution-readiness review — 2026-10-12
+
+HECHO VERIFICADO: the first Creator package already exists at `products/lead-intake-reliability-kit/creator-submission-01.md` and remains PREPARED_NOT_SUBMITTED. Account creation, submission/publication, storefronts, payments, buyer contacts and spending remain NOT AUTHORIZED for this task.
+
+HECHO VERIFICADO: STATE retains one active monetization experiment, EXP-AUTO-001. VETA-AUTO-PRODUCT-001 remains parallel research. A free Creator acceptance/rejection test can evaluate this channel; it does not prove willingness to pay. Starting a paid product experiment requires an explicit priority/WIP decision as well as its separate Human Gate.
+
+The first paid-cohort offer (USD49), minimum settled sale value (USD39 equivalent), sales/refund/support gates and traffic falsifiers above are unchanged.
+
+Before any paid experiment, preregister the currently missing measurement details:
+- observation period, qualified-visit definition and exclusion of own/bot/test visits;
+- refund observation window and denominator, support-time attribution and maintenance allocation;
+- support labor rate and FX source/date (the service sprint's EUR15/hour assumption is not automatically this SKU's rate);
+- actual fee/refund/tool/support records and applicable tax treatment/reserve;
+- real measurement mechanism: payments and analytics remain NOT CONNECTED, so unobserved traffic, conversion, support and tax values remain UNKNOWN/NOT INSTRUMENTED.
+
+Economic distinction: contribution before tax and reconciled after-tax net profit must be recorded separately. The market report additionally requires a positive contribution after its tax reserve; this stricter statement remains unresolved until tax treatment/reserve is defined. Do not silently treat a pre-tax positive figure as satisfying that condition.
+
+RECOMENDACION: after the technical gate, the next defined external learning is acceptance or actionable rejection of only the prepared first FREE template, subject to Kael's explicit authorization and a fresh check of the Creator guidelines. Current official guidance is one template under review at a time and three approved templates before verified status and the paid-template option:
+https://support.n8n.io/article/becoming-an-n8n-template-creator-and-getting-help
+
+The gate must cover the public profile/template exposure if approval makes it public. Scope: first prepared FREE template only; EUR0; no paid SKU, other submissions, buyer contacts, storefront or spending. Success: acceptance or actionable rejection documented without misleading production/client claims. Withdrawal may be possible, but public copies can persist. No external action is executed by this review.

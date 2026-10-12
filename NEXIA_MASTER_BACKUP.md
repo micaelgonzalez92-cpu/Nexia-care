@@ -1,19 +1,19 @@
 # NEXIA MASTER BACKUP — CURRENT RECOVERY SNAPSHOT
 
 Updated: 2026-10-12
-Status: **STATE v69 CANONICAL / AUTO-PRODUCT PREPARED INTERNAL SKU / CREATOR SUBMISSION #1 PREPARED / STANDARD WORKANA MODERATION / AI-UGC WATCH / EVENT STORAGE v2 OPERATIONAL / MEMORY DERIVED STALE**
-Checkpoint: `CP-2026-10-12-AUTOPROD-001`
+Status: **STATE v70 CANONICAL / AUTO-PRODUCT PREPARED INTERNAL SKU / CREATOR SUBMISSION #1 PREPARED / STANDARD WORKANA MODERATION / AI-UGC WATCH / EVENT STORAGE v2 OPERATIONAL / MEMORY DERIVED STALE**
+Checkpoint: `CP-2026-10-12-AUTOPROD-002`
 
 Historical snapshots remain recoverable from Git history and never override canonical STATE.
 
 ## Canonical recovery map
-- STATE v69: `a4e0a54e9867364d055e02d03166e43ea3f911c5`
-- BOOT v44: `7fdfbac0e84ee2ef82bdc1b6f95f2e272b5deb45`
-- LIVE: `77140159292ff7c74e1922a855fe235f499850c4`
-- MEMORY last verified: `443137fd25747baa2c25a403b4ca47a38b6dee7a` — derived ledger remains stale at v63; STATE v69 overrides it.
+- STATE v70: `e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a`
+- BOOT v45: `c4c465412b5e53387e8fbe4ecb6e1b54ee7b740c`
+- LIVE: `8a04e38f5ff027c3d9b4589f7be634d9706c012a`
+- MEMORY last verified: `443137fd25747baa2c25a403b4ca47a38b6dee7a` — derived ledger remains stale at v63; STATE v70 overrides it.
 - Commercial pipeline: `92e53d402bf53987275b6d56e17586847a8907e2`
-- Event index: `3c543226d2d5a2480604b3529ec2b1f1731749ef`
-- Latest verified event: `events/EVT-2026-10-12-AUTOPROD-001.json`, blob `fdeb0b61aecefb0ff0d0ab4bcad91ffe849161a0`
+- Event index: `ec2420cc3ffdd26c2536ffa0f4eb31f00c824796`
+- Latest verified event: `events/EVT-2026-10-12-AUTOPROD-002.json`, blob `5663a6d54f593b6bab97090c44b91b2b8d4ea496`
 - Persistence protocol v2: `69f18157e693fb71739fa1230286acdf5134b370`
 - Legacy JSONL boundary: `84db0ce6ccd1878be9ff48a770bb8b6f1e433d72`, READ-ONLY.
 
@@ -50,9 +50,9 @@ Price hypothesis for first paid cohort: USD49 one-time.
 Dedicated runtime proof:
 - workflow `.github/workflows/n8n-product-runtime-smoke.yml`;
 - n8n version 2.42.6;
-- GitHub Actions run `38232599031`;
-- job `114755439885`;
-- tested commit `092458a0489a28530a3c7e6e6905c770145054b3`;
+- GitHub Actions run `38235228044`;
+- job `114764135662`;
+- tested commit `ca54ddbc626520a13450aecda6c550d165a42300`;
 - result `success`.
 
 Verified runtime results:
@@ -69,6 +69,23 @@ Truth boundary: internal runtime PASS is not external-user installation, buyer d
 
 No n8n Creator account exists. No store exists. No product/template has been published. External users = 0. Paid sales = 0. Revenue = EUR0. Realized profit = EUR0.
 
+## Runtime proof correction and new evidence
+
+Corrective event: `events/EVT-2026-10-12-AUTOPROD-002.json`.
+Evidence report: `NEXIA_VETA_AUTO_PRODUCT_RUNTIME_REVERIFICATION_2026-10-12.md`, blob `bd7d26a21f448fe28f705034eeeb511a8dfadc6d`.
+
+The previous green restart evidence was insufficient because the launcher was stopped without proving n8n termination; run38233861773 cleanup found two n8n start processes alive. That claim is superseded without changing the old immutable event. Corrected run38234612479 exposed a real restart404. Waiting for /healthz/readiness resolved the server-route startup race.
+
+Final run38235228044 proves:
+- PID3443 exited, health endpoint went down and TCP5678 closed;
+- new PID3540 reached readiness;
+- original Data Table row was present before any new write;
+- a new phone identity then produced exactly two rows;
+- final PID exited and port closed;
+- zero audit404 retries and zero orphan n8n start processes in final cleanup.
+
+Canonical version increments once for this material proof correction. Product files, commercial stage, authority and economic metrics are unchanged. External-user installation, concurrent dedup and crash/power-loss recovery remain unverified.
+
 ## Creator submission package
 First free-template submission package is prepared internally:
 - artifact: `products/lead-intake-reliability-kit/creator-submission-01.md`;
@@ -82,7 +99,7 @@ Current n8n Creator guidance says new creators submit one template at a time, re
 The Creator account has NOT been created and the template has NOT been submitted or published. That remains a Human Gate.
 
 ## Product validation gate
-The first paid-cohort hypothesis is locked at USD49. Commercial validation requires real settled sales, not downloads/page views. Initial gate:
+The first paid-cohort hypothesis is locked at USD49. The validation experiment now records the missing measurement windows/definitions, support labor rate, tax-reserve ambiguity and separate paid-experiment WIP decision; existing thresholds are unchanged. Commercial validation requires real settled sales, not downloads/page views. Initial gate:
 - >=5 settled paid sales at >=USD39 equivalent;
 - refund rate <=10%;
 - median support <=20 minutes/sale;

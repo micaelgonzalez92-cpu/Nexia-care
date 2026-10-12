@@ -1,46 +1,85 @@
 {
   "updated_at": "2026-10-12",
   "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + AUTO-PRODUCT PREPARED INTERNAL SKU + CREATOR SUBMISSION #1 PREPARED + AI-UGC WATCH",
-  "state_version": 69,
-  "state_blob_sha": "a4e0a54e9867364d055e02d03166e43ea3f911c5",
-  "boot_version": 44,
-  "boot_blob_sha": "7fdfbac0e84ee2ef82bdc1b6f95f2e272b5deb45",
+  "state_version": 70,
+  "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
+  "boot_version": 45,
+  "boot_blob_sha": "c4c465412b5e53387e8fbe4ecb6e1b54ee7b740c",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
-  "event_storage": {"mode":"IMMUTABLE_EVENT_FILES_V2","index_blob_sha":"3c543226d2d5a2480604b3529ec2b1f1731749ef","latest_verified_event_id":"EVT-2026-10-12-AUTOPROD-001","latest_verified_event_blob_sha":"fdeb0b61aecefb0ff0d0ab4bcad91ffe849161a0","legacy_jsonl_mode":"READ_ONLY"},
-  "active_experiment": {"id":"EXP-AUTO-001","status":"PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL","stage":"VETA / PRE-VALIDACION COMERCIAL","authorized_price_eur":300,"max_delivery_hours":4},
-  "workana_state": {"moderation":"PROFILE_UNDER_ANALYSIS_PENDING_MODERATION","priority_moderation":"DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND","proposal_status":"AUTHORIZED_NOT_SUBMITTED","primary_opportunity":"WORKANA-HUESCAVENTURA-001"},
+  "event_storage": {
+    "mode": "IMMUTABLE_EVENT_FILES_V2",
+    "index_blob_sha": "ec2420cc3ffdd26c2536ffa0f4eb31f00c824796",
+    "latest_verified_event_id": "EVT-2026-10-12-AUTOPROD-002",
+    "latest_verified_event_blob_sha": "5663a6d54f593b6bab97090c44b91b2b8d4ea496",
+    "legacy_jsonl_mode": "READ_ONLY"
+  },
+  "active_experiment": {
+    "id": "EXP-AUTO-001",
+    "status": "PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
+    "stage": "VETA / PRE-VALIDACION COMERCIAL",
+    "authorized_price_eur": 300,
+    "max_delivery_hours": 4
+  },
+  "workana_state": {
+    "moderation": "PROFILE_UNDER_ANALYSIS_PENDING_MODERATION",
+    "priority_moderation": "DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND",
+    "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
+    "primary_opportunity": "WORKANA-HUESCAVENTURA-001"
+  },
   "parallel_business_state": {
-    "status":"ACTIVE_PARALLEL_FALSIFICATION",
-    "veins":[
+    "status": "ACTIVE_PARALLEL_FALSIFICATION",
+    "veins": [
       {
-        "id":"VETA-AUTO-PRODUCT-001",
-        "stage":"PREPARED_INTERNAL_SKU",
-        "focus":"self-serve n8n Lead Intake Reliability digital product",
-        "runtime":"VERIFIED_PASS_FULL_N8N_SERVER",
-        "runtime_run":38232599031,
-        "external_users":0,
-        "paid_sales":0,
-        "publication":"NOT_EXECUTED_NOT_AUTHORIZED",
+        "id": "VETA-AUTO-PRODUCT-001",
+        "stage": "PREPARED_INTERNAL_SKU",
+        "focus": "self-serve n8n Lead Intake Reliability digital product",
+        "runtime": "VERIFIED_PASS_FULL_N8N_SERVER",
+        "runtime_run": 38235228044,
+        "external_users": 0,
+        "paid_sales": 0,
+        "publication": "NOT_EXECUTED_NOT_AUTHORIZED",
         "creator_submission_01": {
-          "status":"PREPARED_NOT_SUBMITTED",
-          "artifact":"products/lead-intake-reliability-kit/creator-submission-01.md",
-          "title":"Reliable Lead Intake: Normalize, Validate & Prepare Human Review via Webhook",
-          "price":"FREE",
-          "creator_account":"NOT_CREATED_NOT_AUTHORIZED"
-        }
+          "status": "PREPARED_NOT_SUBMITTED",
+          "artifact": "products/lead-intake-reliability-kit/creator-submission-01.md",
+          "title": "Reliable Lead Intake: Normalize, Validate & Prepare Human Review via Webhook",
+          "price": "FREE",
+          "creator_account": "NOT_CREATED_NOT_AUTHORIZED"
+        },
+        "runtime_job": 114764135662,
+        "tested_commit": "ca54ddbc626520a13450aecda6c550d165a42300",
+        "restart_proof": "VERIFIED_DIRECT_PID_STOP_PORT_CLOSED_NEW_PID_READY_ORIGINAL_ROW_BEFORE_NEW_WRITE",
+        "rows_immediately_after_restart_before_new_write": 1,
+        "rows_after_new_unique_identity": 2,
+        "audit_404_retries": 0,
+        "orphan_n8n_start_processes_in_final_cleanup": 0,
+        "evidence_report": "NEXIA_VETA_AUTO_PRODUCT_RUNTIME_REVERIFICATION_2026-10-12.md"
       },
       {
-        "id":"VETA-AI-UGC-001",
-        "stage":"WATCH_PORTFOLIO_GAP",
-        "focus":"AI UGC/performance creative service for e-commerce",
-        "spend":"EUR0",
-        "published_portfolio":0
+        "id": "VETA-AI-UGC-001",
+        "stage": "WATCH_PORTFOLIO_GAP",
+        "focus": "AI UGC/performance creative service for e-commerce",
+        "spend": "EUR0",
+        "published_portfolio": 0
       }
     ],
-    "generic_etsy_templates":"NO_GO_GENERIC"
+    "generic_etsy_templates": "NO_GO_GENERIC"
   },
-  "automation_state": {"active_count":3,"paused_count":6,"completed_count":1,"control_tower":"ACTIVE_DAILY_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_SENSOR","parallel_worker":"ACTIVE_EVERY_6_HOURS","parallel_business_radar":"ACTIVE_DAILY_AROUND_15","workana_response_watch":"PAUSED_REDUNDANT"},
-  "commercial_pipeline": {"proposal_sent":false,"buyer_response":false,"paid_pilot":false,"settled_revenue_eur":0,"reconciled_net_profit_eur":0},
+  "automation_state": {
+    "active_count": 3,
+    "paused_count": 6,
+    "completed_count": 1,
+    "control_tower": "ACTIVE_DAILY_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_SENSOR",
+    "parallel_worker": "ACTIVE_EVERY_6_HOURS",
+    "parallel_business_radar": "ACTIVE_DAILY_AROUND_15",
+    "workana_response_watch": "PAUSED_REDUNDANT"
+  },
+  "commercial_pipeline": {
+    "proposal_sent": false,
+    "buyer_response": false,
+    "paid_pilot": false,
+    "settled_revenue_eur": 0,
+    "reconciled_net_profit_eur": 0
+  },
   "human_gate": "AUTO-PRODUCT next material action requires explicit Kael authorization: create/use an n8n Creator account and submit the first FREE template only, EUR0 spend, no paid product publication. Workana remains standard-wait with no immediate action.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
@@ -52,5 +91,5 @@
     "AI UGC has portfolio/tool-cost/time uncertainty and remains WATCH",
     "No willingness-to-pay, settled sale or realized profit exists"
   ],
-  "next_action": "Await Kael decision on the zero-spend n8n Creator Human Gate. If authorized, create/use the Creator account and submit only the prepared first FREE template; do not publish a paid product yet. Continue Workana wait and AI-UGC watch."
+  "next_action": "Technical SKU gate is verified; do not add more internal engineering. Review the prepared first FREE n8n Creator template Human Gate covering public exposure at EUR0 before account/submission/publication. Before any paid-product experiment, preregister missing measurement/economic details and obtain a separate WIP/priority decision. EXP-AUTO-001 remains the sole active monetization experiment; no external action is authorized by this checkpoint."
 }

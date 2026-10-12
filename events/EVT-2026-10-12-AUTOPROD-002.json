@@ -1,0 +1,93 @@
+{
+  "event_id": "EVT-2026-10-12-AUTOPROD-002",
+  "timestamp": "2026-10-12T10:21:23Z",
+  "type": "CORRECTIVE_RUNTIME_RESTART_PROOF_AND_REVERIFICATION",
+  "action": "Replace insufficient launcher-based restart evidence with a verified direct-process stop/restart and readiness test; retain internal SKU stage only after the complete gate passes.",
+  "state_version": 70,
+  "previous_state_version": 69,
+  "previous_state_blob_sha": "a4e0a54e9867364d055e02d03166e43ea3f911c5",
+  "corrects_event_id": "EVT-2026-10-12-AUTOPROD-001",
+  "corrects_claim": "Persistence across a verified n8n process restart",
+  "prior_event_unchanged": true,
+  "actor": {
+    "execution_layer": "Codex Work",
+    "capabilities": [
+      "GitHub repository write",
+      "GitHub Actions run/job/log read",
+      "local static QA"
+    ]
+  },
+  "vein_id": "VETA-AUTO-PRODUCT-001",
+  "facts": {
+    "runtime": "n8n 2.42.6 full server",
+    "github_actions_run": 38235228044,
+    "github_actions_job": 114764135662,
+    "tested_commit": "ca54ddbc626520a13450aecda6c550d165a42300",
+    "run_conclusion": "success",
+    "previous_latest_green_run": 38233861773,
+    "previous_green_restart_proof": "INSUFFICIENT_NPX_LAUNCHER_STOP_ONLY_TWO_ORPHAN_N8N_PROCESSES",
+    "corrected_lifecycle_failed_run": 38234612479,
+    "corrected_lifecycle_failure": "HTTP404_ON_AUDIT_AFTER_REAL_RESTART_BEFORE_SERVER_ROUTES_READY",
+    "fix_commits": [
+      "294bde523415c35acefca864568fba4eb62044eb",
+      "ca54ddbc626520a13450aecda6c550d165a42300"
+    ],
+    "workflows_import_export": "PASS_4_OF_4_INACTIVE_BY_DEFAULT",
+    "production_webhooks_registered": 4,
+    "valid_input_runtime": "PASS",
+    "invalid_input_rejection_runtime": "PASS_FUNCTIONAL_VALIDATION_FAILED",
+    "duplicate_identity_rows_after_two_event_ids": 1,
+    "previous_direct_process_pid": 3443,
+    "new_direct_process_pid": 3540,
+    "previous_process_exited": true,
+    "health_endpoint_and_tcp_port_down_between_processes": true,
+    "new_process_readiness_pass": true,
+    "persisted_rows_immediately_after_restart_before_new_write": 1,
+    "rows_after_new_unique_identity": 2,
+    "final_process_stopped": true,
+    "audit_404_retries": 0,
+    "orphan_n8n_start_processes_in_final_cleanup": 0,
+    "storage": "NATIVE_N8N_DATA_TABLE",
+    "autonomous_send": false,
+    "local_product_static_qa": "PASS",
+    "external_users": 0,
+    "paid_sales": 0,
+    "settled_revenue_eur": 0,
+    "realized_profit_eur": 0,
+    "account_creation_executed": false,
+    "commercial_publication_executed": false,
+    "buyer_contact_executed": false,
+    "external_n8n_production_activated": false
+  },
+  "evidence": {
+    "runtime_report": "NEXIA_VETA_AUTO_PRODUCT_RUNTIME_REVERIFICATION_2026-10-12.md",
+    "runtime_report_blob_sha": "bd7d26a21f448fe28f705034eeeb511a8dfadc6d",
+    "workflow": ".github/workflows/n8n-product-runtime-smoke.yml",
+    "workflow_blob_sha": "1c2a7494006860b52aa2706ecc6403e1e2a864f5",
+    "commercial_experiment": "NEXIA_VETA_AUTO_PRODUCT_VALIDATION_EXPERIMENT_2026-10-12.md"
+  },
+  "financial_impact": {
+    "new_cash_spend_eur": 0,
+    "new_sales": 0,
+    "new_revenue_eur": 0,
+    "new_realized_profit_eur": 0
+  },
+  "human_gate": {
+    "authority_change": "NONE",
+    "creator_account_submission_publication": "NOT_AUTHORIZED",
+    "paid_validation": "NOT_AUTHORIZED_REQUIRES_SEPARATE_WIP_AND_MEASUREMENT_DECISION"
+  },
+  "result": "FULL_RUNTIME_GATE_VERIFIED_PREPARED_INTERNAL_SKU_RETAINED_COMMERCIAL_VALIDATION_NOT_ESTABLISHED",
+  "recovery_reference": {
+    "previous_checkpoint": "CP-2026-10-12-AUTOPROD-001",
+    "new_checkpoint": "CP-2026-10-12-AUTOPROD-002",
+    "previous_state_ref": "af5beb29d4ad79f14e5e038848e38732ff99fc30"
+  },
+  "truth_limitations": [
+    "Isolated synthetic sequential CI evidence only",
+    "No external-user installation, load/concurrency or crash/power-loss test",
+    "No new demand, willingness-to-pay, settled sale or economic outcome",
+    "MEMORY remains derived/stale at v63 under its existing write restriction",
+    "Existing repository Pages builds do not represent a new commercial product launch"
+  ]
+}
