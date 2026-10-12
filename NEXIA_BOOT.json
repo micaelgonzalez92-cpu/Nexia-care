@@ -1,82 +1,63 @@
 {
   "schema_version": 2,
-  "boot_version": 42,
+  "boot_version": 43,
   "generated_at": "2026-10-12",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
-  "state_version": 67,
-  "state_blob_sha": "599eb1b2fe5f3760f4e2bd72bdef8fce8f56a56b",
-  "mission": {
-    "id": "MISSION-OPPORTUNITY-ENGINE-001"
-  },
+  "state_version": 68,
+  "state_blob_sha": "19073661e978f4e3a9d658875d96d1da5df319ee",
+  "mission": {"id": "MISSION-OPPORTUNITY-ENGINE-001"},
   "live_state": "NEXIA_LIVE.json",
   "learning_ledger": "NEXIA_MEMORY.md",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
   "commercial_pipeline": "NEXIA_COMMERCIAL_PIPELINE.json",
-  "acquisition_scan": "NEXIA_EXP_AUTO_001_ACQUISITION_SCAN_2026-10-12_01.md",
-  "acquisition_scan_blob_sha": "648a256797b4729e618b03c5b3e8908b1859d778",
+  "parallel_veins": "NEXIA_PARALLEL_VEINS_2026-10-12.md",
   "portable_backup": "NEXIA_MASTER_BACKUP.md",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
   "persistence_protocol_version": "2.0",
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
     "index": "NEXIA_EVENT_INDEX.json",
-    "index_blob_sha": "aa0ef1ff5cdf2819d8875e0e3a807b42af8f4d42",
-    "latest_verified_event_id": "EVT-2026-10-12-ACQ-001",
-    "latest_verified_event_path": "events/EVT-2026-10-12-ACQ-001.json",
-    "latest_verified_event_blob_sha": "29ef6baca8e0697197d1ad40dfe206ac72862516",
+    "index_blob_sha": "c5f8394dc32d8203591afd3435eaaf154874f77e",
+    "latest_verified_event_id": "EVT-2026-10-12-DIV-001",
+    "latest_verified_event_path": "events/EVT-2026-10-12-DIV-001.json",
+    "latest_verified_event_blob_sha": "4718c497b0084ec4d753644338a4385037f9389f",
     "legacy_jsonl_mode": "READ_ONLY",
     "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
-  "active_experiment": {
-    "id": "EXP-AUTO-001",
-    "status": "PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
-    "authorized_price_eur": 300,
-    "max_delivery_hours": 4
+  "active_experiment": {"id":"EXP-AUTO-001","status":"PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL","authorized_price_eur":300,"max_delivery_hours":4},
+  "workana": {
+    "moderation_status": "PROFILE_UNDER_ANALYSIS_PENDING_MODERATION",
+    "priority_moderation_decision": "DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND",
+    "primary_opportunity": "WORKANA-HUESCAVENTURA-001",
+    "proposal_status": "AUTHORIZED_NOT_SUBMITTED"
   },
-  "commercial_pipeline_stage": "PROPOSAL_AUTHORIZED",
-  "primary_opportunity": {
-    "id": "WORKANA-HUESCAVENTURA-001",
-    "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
-    "workana_profile": "CREATED_COMPLETE_REPORTED_APPROVAL_NOT_VERIFIED",
-    "public_status": "OPEN / EVALUATING PROPOSALS",
-    "public_status_verified_date": "2026-10-12",
-    "public_status_stale_after_hours": 24,
-    "visible_proposals_last_verified": 1
-  },
-  "capability_checkpoint": {
-    "n8n_runtime": "VERIFIED_PASS",
-    "n8n_persistent_dedup_idempotency": "VERIFIED_PASS_NATIVE_DATA_TABLE",
-    "n8n_version": "2.42.6",
-    "runtime_run_id": 38178359319,
-    "persistent_dedup_run_id": 38180738447,
-    "real_client_destination_integration": "NOT_EXECUTED",
-    "production_deployment": "NOT_EXECUTED"
+  "parallel_research": {
+    "status": "ACTIVE_PARALLEL_FALSIFICATION",
+    "max_paths": 2,
+    "veins": ["VETA-AI-UGC-001","VETA-AUTO-PRODUCT-001"],
+    "generic_etsy_templates": "NO_GO_GENERIC"
   },
   "automation_architecture": {
-    "active": 2,
-    "paused": 7,
+    "active": 3,
+    "paused": 6,
     "completed": 1,
-    "control_tower": "DAILY_ACTIVE_EXECUTED_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_SENSOR",
-    "parallel_worker": "EVERY_6_HOURS_ACTIVE_EXECUTED_AT_LEAST_ONCE_RESULT_NOT_INSTRUMENTED",
+    "control_tower": "DAILY_ACTIVE_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_SENSOR",
+    "exp_auto_worker": "EVERY_6_HOURS_ACTIVE",
+    "parallel_business_radar": "DAILY_ACTIVE_AROUND_15",
     "workana_response_watch": "PAUSED_REDUNDANT"
   },
   "continuous_integration": {
     "status": "VERIFIED",
     "workflow": ".github/workflows/nexia-ci.yml",
-    "first_verified_run_id": 38149148915,
-    "first_verified_run_conclusion": "success",
     "n8n_runtime_workflow": ".github/workflows/n8n-runtime-smoke.yml",
-    "latest_n8n_verified_run_id": 38180738447,
-    "latest_n8n_verified_conclusion": "success",
-    "permissions": "contents: read",
     "deployment": "NONE"
   },
-  "human_gate": "No immediate action. One Huescaventura proposal at 300 EUR remains authorized after profile approval is verified and only if zero-spend.",
+  "human_gate": "No immediate action. Wait standard Workana moderation. Parallel research is authorized only at zero cost with no accounts, publication or external contact.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "sync_status": "STATE_V67_FINAL_SHA_BOUND_ACQUISITION_AND_AUTOMATIONS_RECONCILED_MEMORY_DERIVED_STALE",
-  "next_action": "Keep Control Tower daily Workana moderation sensing and the 6-hour fresh-opportunity worker active. On verified profile approval, recheck Huescaventura and submit the authorized 300 EUR proposal if still open and zero-spend."
+  "sync_status": "STATE_V68_PARALLEL_DIVERSIFICATION_FIRST_BIND_MEMORY_DERIVED_STALE",
+  "next_action": "Wait standard Workana moderation while falsifying VETA-AI-UGC-001 and VETA-AUTO-PRODUCT-001. Promote, pause or kill by evidence gates."
 }
