@@ -1,16 +1,16 @@
 {
   "updated_at": "2026-10-12",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION — ACQUISITION REVERIFIED; AUTOMATIONS RECONCILED; N8N RUNTIME + PERSISTENT DEDUP VERIFIED; EVENT STORAGE V2 OPERATIONAL; MEMORY DERIVED STALE",
-  "state_version": 67,
-  "state_blob_sha": "599eb1b2fe5f3760f4e2bd72bdef8fce8f56a56b",
-  "boot_version": 42,
-  "boot_blob_sha": "d085b9e780dc9239d5ea421dff2254470f41e9a3",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + TWO PARALLEL BUSINESS FALSIFICATION VEINS",
+  "state_version": 68,
+  "state_blob_sha": "19073661e978f4e3a9d658875d96d1da5df319ee",
+  "boot_version": 43,
+  "boot_blob_sha": "65ea32541156f43454c154a74f7757ae7997232b",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
-    "index_blob_sha": "aa0ef1ff5cdf2819d8875e0e3a807b42af8f4d42",
-    "latest_verified_event_id": "EVT-2026-10-12-ACQ-001",
-    "latest_verified_event_blob_sha": "29ef6baca8e0697197d1ad40dfe206ac72862516",
+    "index_blob_sha": "c5f8394dc32d8203591afd3435eaaf154874f77e",
+    "latest_verified_event_id": "EVT-2026-10-12-DIV-001",
+    "latest_verified_event_blob_sha": "4718c497b0084ec4d753644338a4385037f9389f",
     "legacy_jsonl_mode": "READ_ONLY"
   },
   "active_experiment": {
@@ -20,74 +20,46 @@
     "authorized_price_eur": 300,
     "max_delivery_hours": 4
   },
+  "workana_state": {
+    "moderation": "PROFILE_UNDER_ANALYSIS_PENDING_MODERATION",
+    "priority_moderation": "DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND",
+    "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
+    "primary_opportunity": "WORKANA-HUESCAVENTURA-001"
+  },
+  "parallel_business_state": {
+    "status": "ACTIVE_PARALLEL_FALSIFICATION",
+    "artifact": "NEXIA_PARALLEL_VEINS_2026-10-12.md",
+    "veins": [
+      {"id":"VETA-AI-UGC-001","stage":"SEÑAL_TO_VETA_CANDIDATE","focus":"AI UGC/performance creative service for e-commerce"},
+      {"id":"VETA-AUTO-PRODUCT-001","stage":"VETA_CANDIDATE","focus":"self-serve n8n Lead Intake Reliability digital product"}
+    ],
+    "generic_etsy_templates": "NO_GO_GENERIC"
+  },
+  "automation_state": {
+    "active_count": 3,
+    "paused_count": 6,
+    "completed_count": 1,
+    "control_tower": "ACTIVE_DAILY_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_SENSOR",
+    "exp_auto_worker": "ACTIVE_EVERY_6_HOURS",
+    "parallel_business_radar": "ACTIVE_DAILY_AROUND_15",
+    "workana_response_watch": "PAUSED_REDUNDANT"
+  },
   "commercial_pipeline": {
-    "stage": "PROPOSAL_AUTHORIZED",
     "proposal_sent": false,
     "buyer_response": false,
     "paid_pilot": false,
     "settled_revenue_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "qualified_opportunity": {
-    "name": "Huescaventura Workana lead-automation first phase",
-    "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
-    "workana_profile_approval": "NOT_VERIFIED",
-    "gmail_decision_email_check": "2026-10-12_NO_APPROVAL_OR_REJECTION_FOUND",
-    "public_status_last_verified": "OPEN / EVALUATING PROPOSALS",
-    "public_status_verified_date": "2026-10-12",
-    "public_status_stale_after_hours": 24,
-    "visible_proposals_last_verified": 1
-  },
-  "acquisition_state": {
-    "latest_scan": "NEXIA_EXP_AUTO_001_ACQUISITION_SCAN_2026-10-12_01.md",
-    "result": "HUESCAVENTURA_REMAINS_DOMINANT_NO_ALTERNATIVE_PROMOTED",
-    "fresh_non_workana_go_candidates": 0,
-    "freshness_rule": "CURRENT requires direct accessible project evidence or evidence <=24h not contradicted by a direct check"
-  },
-  "capability_state": {
-    "n8n_runtime": "VERIFIED_PASS",
-    "n8n_runtime_run_id": 38178359319,
-    "n8n_persistent_dedup_idempotency": "VERIFIED_PASS_NATIVE_DATA_TABLE",
-    "n8n_persistent_dedup_run_id": 38180738447,
-    "n8n_version": "2.42.6",
-    "persistent_unique_rows_after_five_requests": 2,
-    "persistent_unique_rows_after_restart_and_sixth_duplicate": 2,
-    "autonomous_send": false,
-    "real_airtable_integration": "NOT_EXECUTED",
-    "real_google_sheets_integration": "NOT_EXECUTED",
-    "real_client_crm_integration": "NOT_EXECUTED",
-    "production_deployment": "NOT_EXECUTED"
-  },
-  "automation_state": {
-    "active_count": 2,
-    "paused_count": 7,
-    "completed_count": 1,
-    "control_tower": "ACTIVE_DAILY_EXECUTED_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_SENSOR",
-    "parallel_worker": "ACTIVE_EVERY_6_HOURS_EXECUTED_AT_LEAST_ONCE_RESULT_NOT_INSTRUMENTED",
-    "parallel_worker_last_run_time": "2026-10-11T19:52:12.224695Z",
-    "workana_response_watch": "PAUSED_REDUNDANT",
-    "workana_polling_policy": "DAILY_INSIDE_CONTROL_TOWER"
-  },
-  "continuous_integration": {
-    "status": "VERIFIED",
-    "base_workflow": ".github/workflows/nexia-ci.yml",
-    "base_verified_run_id": 38149148915,
-    "n8n_workflow": ".github/workflows/n8n-runtime-smoke.yml",
-    "n8n_verified_run_id": 38180738447,
-    "n8n_conclusion": "success",
-    "deployment": "NONE"
-  },
-  "human_gate": "No immediate action required. One 300 EUR Huescaventura proposal remains authorized after profile approval is verified and only if zero-spend.",
+  "human_gate": "No immediate action required. Standard Workana moderation will be allowed to run. Parallel research only, with no spend/accounts/publication/contact authorized.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
   "current_blockers": [
-    "Workana profile approval not yet verified",
-    "No fresh non-Workana candidate currently beats Huescaventura on scope/economics/competition",
-    "Real client Airtable/Sheets/CRM destination integration not executed",
-    "Parallel Work scheduler execution verified but returned work/result not instrumented",
-    "MEMORY sync blocked by tool safety; canonical STATE overrides it",
+    "Workana profile approval pending standard moderation",
+    "AI UGC capability has portfolio/tool-cost uncertainty",
+    "Automation digital product has zero own-sales evidence and distribution is unvalidated",
     "No willingness-to-pay, contract or settled payment exists"
   ],
-  "next_action": "Prioritize the commercial event: maintain daily Workana approval sensing inside Control Tower and fresh buyer-initiated qualification every 6 hours. On verified profile approval, recheck Huescaventura and submit the already-authorized 300 EUR proposal if still open and zero-spend."
+  "next_action": "Continue zero-cost falsification of VETA-AI-UGC-001 and VETA-AUTO-PRODUCT-001 while waiting for standard Workana moderation."
 }
