@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-UGCPORT-001",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "UGC_PORTFOLIO_PHASE_A_FIRST_PASS_QA",
+  "state_version": 70,
+  "experiment": "UGC-PORTFOLIO-001",
+  "vein": "VETA-AI-UGC-001",
+  "evidence_source": "Six user-shared local ComfyUI outputs visually reviewed in ChatGPT; images were not uploaded to the public repository.",
+  "mapping": {
+    "NEXIA_BENCHMARK_00002_.png": "A1",
+    "NEXIA_BENCHMARK_00003_.png": "A2",
+    "NEXIA_BENCHMARK_00004_.png": "B1",
+    "NEXIA_BENCHMARK_00005_.png": "B2",
+    "NEXIA_BENCHMARK_00006_.png": "C1",
+    "NEXIA_BENCHMARK_00007_.png": "C2"
+  },
+  "qa": [
+    {"id":"A1","score":85,"hard_fail":false,"decision":"ACCEPT","notes":"Strong realistic clutter/problem frame and vertical utility; minor visible package-label artifacts reduce prompt/safety score."},
+    {"id":"A2","score":90,"hard_fail":false,"decision":"ACCEPT","notes":"Strong solution/demo frame, plausible hand and organizer, good commercial utility and pairing with A1."},
+    {"id":"B1","score":73,"hard_fail":false,"decision":"REJECT","notes":"Main object is rectangular stackable storage rather than a clearly circular rotating organizer; insufficient product fidelity and weak pair consistency with B2."},
+    {"id":"B2","score":84,"hard_fail":false,"decision":"ACCEPT","notes":"Plausible circular organizer interaction and strong ad framing; minor pseudo-label artifacts remain."},
+    {"id":"C1","score":88,"hard_fail":false,"decision":"ACCEPT","notes":"Believable restaurant-owner UGC frame with natural phone pose and useful vertical composition."},
+    {"id":"C2","score":75,"hard_fail":true,"decision":"REJECT","notes":"Device screens contain UI-like pseudo-text despite the explicit neutral/blank-screen requirement; pair consistency with C1 is also weak."}
+  ],
+  "first_pass": {
+    "accepted": 4,
+    "targets": 6,
+    "complete_pairs": ["A"],
+    "attempts_used_total": 6,
+    "median_attempts_per_currently_accepted_frame": 1,
+    "human_steering_minutes": "NOT_INSTRUMENTED"
+  },
+  "gate_status": "NOT_YET_PASS",
+  "reason": "The >=4/6 count is met, but the fixed gate also requires at least two complete brief pairs. Only brief A is complete after the first pass. Human steering <=60m also remains uninstrumented.",
+  "next_safe_action": "Run one targeted retry for B1 and one targeted retry for C2, preserving fixed QA thresholds and counting both against the 18-attempt budget. A successful retry of either B1 or C2 would create a second complete pair because B2 and C1 are already accepted.",
+  "financial_impact_eur": 0,
+  "economic_stage_change": "NONE",
+  "truth_limit": "This is visual portfolio-production evidence only. It does not prove buyer demand, sale, payment, profit or production video capability."
+}
