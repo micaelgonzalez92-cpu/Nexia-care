@@ -1,0 +1,8 @@
+{
+  "event_id": "sample-invalid-001",
+  "name": "",
+  "email": "",
+  "phone": "",
+  "source": "website-form",
+  "message": "Missing identity and contact on purpose."
+}
