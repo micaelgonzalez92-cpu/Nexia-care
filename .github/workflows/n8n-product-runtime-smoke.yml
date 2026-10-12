@@ -71,6 +71,14 @@ jobs:
           N8N_LOG: ${{ runner.temp }}/n8n-product.log
           BASE_URL: http://127.0.0.1:5678
           AUDIT_OUTPUT: ${{ runner.temp }}/product-audit.json
+          INTAKE_WORKFLOW_ID: nexia-lead-intake-human-review-v01
+          INTAKE_WEBHOOK_PATH: lead-intake-reliability
+          SETUP_WORKFLOW_ID: nexia-lead-intake-dedup-bootstrap-v01
+          SETUP_WEBHOOK_PATH: lead-intake-dedup-bootstrap
+          DEDUP_WORKFLOW_ID: nexia-lead-intake-dedup-guard-v01
+          DEDUP_WEBHOOK_PATH: lead-intake-dedup-guard
+          AUDIT_WORKFLOW_ID: nexia-lead-intake-dedup-audit-v01
+          AUDIT_WEBHOOK_PATH: lead-intake-dedup-audit
         run: |
           set -euo pipefail
           mkdir -p "$N8N_USER_FOLDER"
@@ -79,20 +87,61 @@ jobs:
           npx --yes n8n@2.42.6 import:workflow --input=products/lead-intake-reliability-kit/workflows/persistent-dedup-guard.json
           npx --yes n8n@2.42.6 import:workflow --input=products/lead-intake-reliability-kit/workflows/dedup-audit.json
 
-          npx --yes n8n@2.42.6 publish:workflow --id=nexia-lead-intake-human-review-v01
-          npx --yes n8n@2.42.6 publish:workflow --id=nexia-lead-intake-dedup-bootstrap-v01
-          npx --yes n8n@2.42.6 publish:workflow --id=nexia-lead-intake-dedup-guard-v01
-          npx --yes n8n@2.42.6 publish:workflow --id=nexia-lead-intake-dedup-audit-v01
+          npx --yes n8n@2.42.6 publish:workflow --id="$INTAKE_WORKFLOW_ID"
+          npx --yes n8n@2.42.6 publish:workflow --id="$SETUP_WORKFLOW_ID"
+          npx --yes n8n@2.42.6 publish:workflow --id="$DEDUP_WORKFLOW_ID"
+          npx --yes n8n@2.42.6 publish:workflow --id="$AUDIT_WORKFLOW_ID"
+
+          DB="$N8N_USER_FOLDER/.n8n/database.sqlite"
+
+          webhook_registered() {
+            local workflow_id="$1"
+            local webhook_path="$2"
+            DB="$DB" WORKFLOW_ID="$workflow_id" WEBHOOK_PATH="$webhook_path" python3 <<'PY'
+          import os, sqlite3, sys
+          con = sqlite3.connect(os.environ['DB'])
+          row = con.execute(
+              'SELECT workflowId, webhookPath, method FROM webhook_entity WHERE workflowId=? AND webhookPath=? AND method=?',
+              (os.environ['WORKFLOW_ID'], os.environ['WEBHOOK_PATH'], 'POST')
+          ).fetchone()
+          if row:
+              print('registered webhook:', row)
+              sys.exit(0)
+          sys.exit(1)
+          PY
+          }
+
+          all_webhooks_registered() {
+            webhook_registered "$INTAKE_WORKFLOW_ID" "$INTAKE_WEBHOOK_PATH" >/dev/null && \
+            webhook_registered "$SETUP_WORKFLOW_ID" "$SETUP_WEBHOOK_PATH" >/dev/null && \
+            webhook_registered "$DEDUP_WORKFLOW_ID" "$DEDUP_WEBHOOK_PATH" >/dev/null && \
+            webhook_registered "$AUDIT_WORKFLOW_ID" "$AUDIT_WEBHOOK_PATH" >/dev/null
+          }
 
           start_n8n() {
             : > "$N8N_LOG"
             npx --yes n8n@2.42.6 start >> "$N8N_LOG" 2>&1 &
             N8N_PID=$!
             for i in $(seq 1 60); do
-              if curl -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then return 0; fi
+              if curl -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then break; fi
               sleep 1
             done
-            echo 'n8n health check failed'
+            if ! curl -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then
+              echo 'n8n health check failed'
+              cat "$N8N_LOG"
+              return 1
+            fi
+            for i in $(seq 1 60); do
+              if all_webhooks_registered; then
+                webhook_registered "$INTAKE_WORKFLOW_ID" "$INTAKE_WEBHOOK_PATH"
+                webhook_registered "$SETUP_WORKFLOW_ID" "$SETUP_WEBHOOK_PATH"
+                webhook_registered "$DEDUP_WORKFLOW_ID" "$DEDUP_WEBHOOK_PATH"
+                webhook_registered "$AUDIT_WORKFLOW_ID" "$AUDIT_WEBHOOK_PATH"
+                return 0
+              fi
+              sleep 1
+            done
+            echo 'Expected product webhooks were not registered'
             cat "$N8N_LOG"
             return 1
           }
@@ -106,7 +155,7 @@ jobs:
 
           audit_rows() {
             local expected="$1"
-            curl -fsS -X POST "$BASE_URL/webhook/lead-intake-dedup-audit" \
+            curl -fsS -X POST "$BASE_URL/webhook/$AUDIT_WEBHOOK_PATH" \
               -H 'Content-Type: application/json' --data '{}' | tee "$AUDIT_OUTPUT"
             EXPECTED="$expected" AUDIT_OUTPUT="$AUDIT_OUTPUT" \
               node products/lead-intake-reliability-kit/assert_audit.js
@@ -115,7 +164,7 @@ jobs:
           trap 'stop_n8n || true' EXIT
           start_n8n
 
-          VALID=$(curl -fsS -X POST "$BASE_URL/webhook/lead-intake-reliability" \
+          VALID=$(curl -fsS -X POST "$BASE_URL/webhook/$INTAKE_WEBHOOK_PATH" \
             -H 'Content-Type: application/json' \
             --data @products/lead-intake-reliability-kit/samples/valid-lead.json)
           VALID="$VALID" node <<'NODE'
@@ -130,7 +179,7 @@ jobs:
           console.log('PASS: valid lead executed through real n8n webhook');
           NODE
 
-          INVALID=$(curl -fsS -X POST "$BASE_URL/webhook/lead-intake-reliability" \
+          INVALID=$(curl -fsS -X POST "$BASE_URL/webhook/$INTAKE_WEBHOOK_PATH" \
             -H 'Content-Type: application/json' \
             --data @products/lead-intake-reliability-kit/samples/invalid-lead.json)
           INVALID="$INVALID" node <<'NODE'
@@ -145,14 +194,14 @@ jobs:
           console.log('PASS: invalid lead rejected through real n8n webhook');
           NODE
 
-          curl -fsS -X POST "$BASE_URL/webhook/lead-intake-dedup-bootstrap" \
+          curl -fsS -X POST "$BASE_URL/webhook/$SETUP_WEBHOOK_PATH" \
             -H 'Content-Type: application/json' --data '{}' >/dev/null
 
-          curl -fsS -X POST "$BASE_URL/webhook/lead-intake-dedup-guard" \
+          curl -fsS -X POST "$BASE_URL/webhook/$DEDUP_WEBHOOK_PATH" \
             -H 'Content-Type: application/json' \
             --data @products/lead-intake-reliability-kit/samples/valid-lead.json >/dev/null
           sleep 1
-          curl -fsS -X POST "$BASE_URL/webhook/lead-intake-dedup-guard" \
+          curl -fsS -X POST "$BASE_URL/webhook/$DEDUP_WEBHOOK_PATH" \
             -H 'Content-Type: application/json' \
             --data @products/lead-intake-reliability-kit/samples/duplicate-lead.json >/dev/null
           sleep 2
@@ -163,7 +212,7 @@ jobs:
           sleep 2
           start_n8n
 
-          curl -fsS -X POST "$BASE_URL/webhook/lead-intake-dedup-guard" \
+          curl -fsS -X POST "$BASE_URL/webhook/$DEDUP_WEBHOOK_PATH" \
             -H 'Content-Type: application/json' \
             --data '{"event_id":"sample-003","name":"Phone Only","phone":"+34 611 222 333"}' >/dev/null
           sleep 2
