@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-LOCALBENCH-003",
+  "timestamp": "2026-10-12T21:49:00+02:00",
+  "type": "LOCAL_IMAGE_GENERATION_RUNTIME_PASS",
+  "state_version": 70,
+  "source": "Kael relayed the final report from the authorized private Work benchmark",
+  "result": "PASS_SINGLE_IMAGE_RUNTIME",
+  "evidence": {
+    "engine": "ComfyUI portable isolated install",
+    "model": "FLUX.2 Klein 4B FP8 distilled",
+    "resolution": "1024x1024",
+    "steps": 4,
+    "seed": 42,
+    "first_run_seconds_including_weight_load": 38.19,
+    "approx_peak_vram_gib": 11.17,
+    "approx_peak_process_ram_gib": 5.79,
+    "installed_size_gib": 16.79,
+    "cash_spend_eur": 0,
+    "memory_error": false,
+    "basic_prompt_compliance": true
+  },
+  "promotion": {
+    "local_image_generation": "PROBED_AND_VERIFIED_SINGLE_RUN",
+    "repeatability": "NOT_VERIFIED",
+    "batch_stability": "NOT_VERIFIED",
+    "portfolio_grade_quality": "NOT_VERIFIED",
+    "commercial_quality": "NOT_VERIFIED"
+  },
+  "truth_limit": "One successful generation proves bounded local runtime only; it is not demand, sale, payment, profit, endurance, batch stability or commercial-quality proof.",
+  "authority_effect": "NONE_NEW; original one-off benchmark authorization is closed",
+  "financial_impact_eur": 0
+}
