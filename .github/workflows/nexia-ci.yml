@@ -76,6 +76,17 @@ jobs:
       - name: Local coder benchmark harness syntax
         run: python3 -m py_compile tools/nexia_local_ai_coder_001_benchmark.py
 
+      - name: Local coder PowerShell runner syntax
+        shell: pwsh
+        run: |
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path 'tools/run_local_ai_coder_001.ps1'), [ref]$tokens, [ref]$errors) | Out-Null
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Error $_.Message }
+            exit 1
+          }
+
       - name: Canonical STATE BOOT LIVE integrity check
         shell: bash
         run: |
