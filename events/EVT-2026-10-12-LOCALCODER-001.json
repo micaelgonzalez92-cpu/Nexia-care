@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-LOCALCODER-001",
+  "timestamp": "2026-10-12T22:50:00+02:00",
+  "type": "LOCAL_AI_CODER_BENCHMARK_AUTHORIZED",
+  "state_version": 70,
+  "action": "Kael explicitly authorized LOCAL-AI-CODER-001 only.",
+  "authorization": {
+    "install": "Ollama only",
+    "model": "qwen2.5-coder:7b-instruct",
+    "cash_spend_max_eur": 0,
+    "additional_models": false,
+    "paid_or_cloud_api_fallback": false,
+    "browser_agents": false,
+    "external_publication": false,
+    "external_contact": false,
+    "system_changes_outside_ollama": false
+  },
+  "benchmark_contract": "experiments/LOCAL-AI-CODER-001.md",
+  "result": "AUTHORIZED_NOT_YET_EXECUTED",
+  "financial_impact_eur": 0,
+  "authority_effect": "One-off bounded local install/download/benchmark authority only; no standing authority created.",
+  "truth_limit": "Authorization is not installation, model download, runtime success, coding quality, quota savings or economic validation."
+}
