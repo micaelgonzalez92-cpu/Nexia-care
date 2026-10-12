@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-12T23:28:00+02:00",
+  "canonical_state": {"version": 70, "changed": false},
+  "experiment": "LOCAL-AI-CODER-001",
+  "status": "PYTHON_AUTHORIZED_READY_LOCAL_EXECUTION",
+  "latest_event": "events/EVT-2026-10-12-LOCALCODER-003.json",
+  "verified_prior_execution": {
+    "ollama": "0.40.3 installed per Kael-shared terminal log",
+    "model": "qwen2.5-coder:7b-instruct already downloaded per Kael-shared terminal log",
+    "scored_tasks_started": 0,
+    "prior_result": "BLOCKED_NOT_FAIL"
+  },
+  "new_authorization": {
+    "python_runtime": "official Python 3 only",
+    "cash_spend_max_eur": 0,
+    "pip_packages": false,
+    "other_tools": false,
+    "additional_models": false,
+    "cloud_or_paid_api": false,
+    "external_actions": false
+  },
+  "prepared_execution": {
+    "runner": "tools/run_local_ai_coder_001.ps1",
+    "runner_commit": "69eac82bf7b641de1eb4276347c3000f23c6dfa9",
+    "python_package": "Python.Python.3.12 via winget only if no usable Python 3 exists",
+    "benchmark_harness": "unchanged commit-pinned preregistered Python harness",
+    "model_redownload_expected": false
+  },
+  "human_action_required_now": true,
+  "pending_human_action": "Execute the commit-pinned PowerShell runner once. It may install only Python 3.12 if absent, then reuse Ollama/model and run the unchanged five-task benchmark.",
+  "surface": "Windows PowerShell",
+  "device": "computer",
+  "cost_exposure": "EUR0 cash; Python runtime local disk footprint plus electricity/machine time. Ollama/model already present.",
+  "success_check": "benchmark-results.json created; PASS only under original fixed gates: >=4/5, BUGFIX pass, no OOM/crash/authority violation, median <=120 s, human steering <=15 min.",
+  "return_to_nexia": "Result; Tasks passed/5; median response seconds; approximate peak GPU memory; approximate peak Ollama RAM; any error.",
+  "truth_limit": "Authorization and prepared runner do not prove Python install, benchmark execution, local coding quality or quota savings."
+}
