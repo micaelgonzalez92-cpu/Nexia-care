@@ -133,14 +133,15 @@ jobs:
                 cat "$N8N_LOG"
                 return 1
               fi
-              if curl --max-time 2 -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then break; fi
+              if curl --max-time 2 -fsS "$BASE_URL/healthz/readiness" >/dev/null 2>&1; then break; fi
               sleep 1
             done
-            if ! curl --max-time 2 -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then
+            if ! curl --max-time 2 -fsS "$BASE_URL/healthz/readiness" >/dev/null 2>&1; then
               echo 'n8n health check failed'
               cat "$N8N_LOG"
               return 1
             fi
+            echo "PASS: direct n8n process PID=$N8N_PID reached /healthz/readiness"
             for i in $(seq 1 60); do
               if ! kill -0 "$N8N_PID" >/dev/null 2>&1; then
                 echo 'New n8n process exited before webhook readiness'
@@ -195,8 +196,34 @@ jobs:
 
           audit_rows() {
             local expected="$1"
-            curl -fsS -X POST "$BASE_URL/webhook/$AUDIT_WEBHOOK_PATH" \
-              -H 'Content-Type: application/json' --data '{}' | tee "$AUDIT_OUTPUT"
+            local status=''
+            for i in $(seq 1 30); do
+              if ! kill -0 "$N8N_PID" >/dev/null 2>&1; then
+                echo 'n8n process exited before the audit request'
+                cat "$N8N_LOG"
+                return 1
+              fi
+              status=$(curl --max-time 5 -sS -o "$AUDIT_OUTPUT" -w '%{http_code}' \
+                -X POST "$BASE_URL/webhook/$AUDIT_WEBHOOK_PATH" \
+                -H 'Content-Type: application/json' --data '{}') || {
+                cat "$N8N_LOG"
+                return 1
+              }
+              if [ "$status" = '200' ]; then break; fi
+              if [ "$status" != '404' ]; then
+                echo "Unexpected audit HTTP status: $status"
+                cat "$AUDIT_OUTPUT" "$N8N_LOG"
+                return 1
+              fi
+              echo 'Waiting for audit webhook route (HTTP 404)'
+              sleep 1
+            done
+            if [ "$status" != '200' ]; then
+              echo 'Audit webhook route did not become available'
+              cat "$AUDIT_OUTPUT" "$N8N_LOG"
+              return 1
+            fi
+            cat "$AUDIT_OUTPUT"
             EXPECTED="$expected" AUDIT_OUTPUT="$AUDIT_OUTPUT" \
               node products/lead-intake-reliability-kit/assert_audit.js
           }
