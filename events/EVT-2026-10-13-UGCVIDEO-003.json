@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-UGCVIDEO-003",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "UGC_VIDEO_001_LOCAL_LAUNCHER_PYTHON_DETECTION_FIX",
+  "state_version": 70,
+  "experiment": "UGC-VIDEO-001",
+  "vein": "VETA-AI-UGC-001",
+  "trigger_evidence": "Kael executed the authorized commit-pinned PowerShell launcher. It stopped before model download/generation with: Python 3 real runtime not found. This launcher will not install any additional software.",
+  "execution_effect": {
+    "model_download_started": false,
+    "video_attempts_consumed": 0,
+    "cash_spend_eur": 0,
+    "benchmark_gate_changed": false
+  },
+  "diagnosis": {
+    "classification": "LAUNCHER_RUNTIME_DISCOVERY_DEFECT",
+    "evidence": "The UGC launcher only probed py -3 and python from command resolution, while the previously verified local-AI launcher contains broader Python discovery that also scans standard per-user/program installation paths and rejects WindowsApps aliases.",
+    "scope": "PowerShell launcher detection only; Python benchmark runner and preregistered UGC-VIDEO-001 thresholds unchanged."
+  },
+  "fix": {
+    "file": "tools/run_ugc_video_001.ps1",
+    "commit": "da76a5fec2d359830f14ba1d26e4de95c0bcf556",
+    "change": "Added robust Python 3 discovery through py, python3, python and standard LOCALAPPDATA/Program Files Python installation paths; no installer or new dependency added.",
+    "ci_run": 38322988432,
+    "ci_result": "SUCCESS"
+  },
+  "status": "FIXED_IN_REPOSITORY_CI_VERIFIED_PENDING_LOCAL_RETRY",
+  "next_safe_action": "Re-run the updated commit-pinned launcher once. If Python is discovered, continue within the already authorized benchmark. If another blocker appears, stop and return the exact final/error block; do not install software or widen model scope.",
+  "truth_limit": "CI proves script syntax/contracts only. The corrected launcher has not yet been re-run on Kael's Windows PC, no LTX model download or video attempt is verified, and local video capability remains unverified."
+}
