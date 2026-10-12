@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-13",
+  "canonical_state": {"version": 70, "changed": false},
+  "vein": "VETA-AI-UGC-001",
+  "status": "PHASE_B_DESIGNED_VIDEO_BENCHMARK_PREREGISTERED_WAITING_AUTHORIZATION",
+  "phase_a": "PASS_DO_NOT_REPEAT",
+  "phase_b": {
+    "selected_brief": "CLEARNEST",
+    "storyboard": "experiments/UGC-PORTFOLIO-001_PHASE_B_DESIGN.md",
+    "target_duration_seconds": 24,
+    "hook_variants": 3,
+    "execution": "NOT_EXECUTED"
+  },
+  "video_benchmark": {
+    "id": "UGC-VIDEO-001",
+    "artifact": "experiments/UGC-VIDEO-001.md",
+    "status": "PREREGISTERED_NOT_AUTHORIZED_NOT_EXECUTED",
+    "candidate": "LTX-Video 2B v0.9.5",
+    "existing_surface": "ComfyUI local",
+    "max_attempts": 3,
+    "cash_budget_eur": 0,
+    "estimated_new_download_gb_if_absent": 15
+  },
+  "human_action_required_now": true,
+  "pending_human_action": "Kael must explicitly authorize the bounded UGC-VIDEO-001 download/execution scope before Nexia provides or executes installation/download steps.",
+  "surface": "ChatGPT Nexia Core",
+  "device": "mobile or computer for authorization; computer required for later local execution",
+  "why_kael": "New model downloads and local execution are Human Gate actions; /next does not expand authority.",
+  "cost_exposure": "EUR0 cash; approximately 15 GB download/disk exposure if both allowed files are absent, plus local GPU/electricity/machine time. Reversible by deleting downloaded model files.",
+  "success_check": "Authorization, if granted, must be limited to LTX-Video 2B v0.9.5 plus t5xxl_fp16 if absent, existing ComfyUI, <=3 preregistered local attempts, no cloud/API/publication/contact and EUR0 cash.",
+  "return_to_nexia": "Return explicit authorization or decline. No local action should be taken before that authorization.",
+  "resume_required_reads": [
+    "NEXIA_STATE.json",
+    "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX.json",
+    "events/EVT-2026-10-13-UGCPORT-003.json",
+    "events/EVT-2026-10-13-UGCPORT-004.json",
+    "experiments/UGC-PORTFOLIO-001_PHASE_B_DESIGN.md",
+    "experiments/UGC-VIDEO-001.md",
+    "NEXIA_UGC_PHASE_B_DESIGN_HANDOFF_2026-10-13.json"
+  ],
+  "resume_from": "Do not repeat Phase A or redesign the Phase B storyboard. Await explicit authorization for UGC-VIDEO-001. If authorized, use only the preregistered candidate/scope and do not widen to another model on failure.",
+  "truth_limit": "Phase B design and benchmark preregistration are preparation only. No video generation capability has been verified and no economic result changed."
+}
