@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-UGCPORT-003",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "UGC_PORTFOLIO_PHASE_A_FINAL_PASS",
+  "state_version": 70,
+  "experiment": "UGC-PORTFOLIO-001",
+  "vein": "VETA-AI-UGC-001",
+  "evidence_source": "UGCPORT-001 first-pass QA + UGCPORT-002 targeted retry QA + Kael-reported approximate human steering/review time of 20 minutes.",
+  "final_result": {
+    "result": "PASS",
+    "accepted_frames": 6,
+    "target_frames": 6,
+    "complete_pairs": ["A", "B", "C"],
+    "attempts_used_total": 8,
+    "attempt_budget_total": 18,
+    "median_attempts_per_accepted_frame": 1,
+    "human_steering_review_minutes_approx": 20,
+    "human_time_gate_minutes_max": 60,
+    "cash_spend_eur": 0,
+    "all_accepted_frames_meet_qa_threshold": true,
+    "final_accepted_set_has_hard_fail": false
+  },
+  "gate_check": {
+    "accepted_at_least_4_of_6": true,
+    "at_least_2_complete_pairs": true,
+    "accepted_frames_at_least_75": true,
+    "median_attempts_at_most_3": true,
+    "human_steering_at_most_60_minutes": true,
+    "result": "PASS"
+  },
+  "stage_effect": "PHASE_A_VALIDATED_LOCAL_KEYFRAME_WORKFLOW",
+  "phase_b_status": "ELIGIBLE_FOR_DESIGN_NOT_EXECUTED",
+  "phase_b_rule": "Select strongest brief and prepare one 20-30s SPEC ad storyboard with three hooks, voice/script, captions, CTA and motion/lipsync/video plan. Any new installation/generation/publication/contact remains separately gated.",
+  "financial_impact_eur": 0,
+  "economic_stage_change": "NONE",
+  "truth_limit": "This PASS validates bounded local production of portfolio keyframes under the preregistered QA/time/iteration gates. It does not validate buyer demand, video production, publication, sale, settled payment or profit."
+}
