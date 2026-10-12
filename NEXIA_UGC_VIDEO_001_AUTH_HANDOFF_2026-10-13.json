@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-13",
+  "canonical_state": {"version": 70, "changed": false},
+  "experiment": "UGC-VIDEO-001",
+  "status": "AUTHORIZED_RUNNER_PREPARED_WAITING_LOCAL_EXECUTION",
+  "authorization_event": "events/EVT-2026-10-13-UGCVIDEO-001.json",
+  "latest_event": "events/EVT-2026-10-13-UGCVIDEO-002.json",
+  "runner": {
+    "powershell": "tools/run_ugc_video_001.ps1",
+    "powershell_commit": "5afb8154dc543570495c74217cf315c535a93e5f",
+    "python": "tools/run_ugc_video_001.py",
+    "python_commit": "e9b4a9f4a54fc25e995da65622da7e5200016972",
+    "ci_run": 38321314551,
+    "ci_result": "SUCCESS",
+    "secret_scan_run": 38321314464,
+    "secret_scan_result": "SUCCESS"
+  },
+  "exact_human_action": {
+    "surface": "Windows PowerShell",
+    "device": "computer",
+    "why_kael": "Current ChatGPT session has no direct execution channel into Kael's local Windows process space. The one-command runner minimizes manual work while preserving Kael control.",
+    "command": "$u='https://raw.githubusercontent.com/micaelgonzalez92-cpu/Nexia-care/5afb8154dc543570495c74217cf315c535a93e5f/tools/run_ugc_video_001.ps1'; $p=\"$env:TEMP\\run_ugc_video_001.ps1\"; Invoke-WebRequest -Uri $u -OutFile $p -UseBasicParsing; powershell.exe -NoProfile -ExecutionPolicy Bypass -File $p",
+    "steps": [
+      "Open Windows PowerShell.",
+      "Paste the exact command and press Enter once.",
+      "Do not manually install tools, custom nodes or another model if the runner stops on a blocker.",
+      "When complete, return the final technical-result block and upload generated MP4 output(s) if any."
+    ],
+    "cost_exposure": "EUR0 cash; authorized model download/disk exposure up to approximately 15 GB if files are absent, plus local electricity and machine time.",
+    "success_check": "Runner reaches COMPLETED_OUTPUTS_READY_FOR_VISUAL_QA with at least one generated output. Formal UGC-VIDEO-001 PASS still requires Nexia visual QA against the preregistered >=75/100/no-hard-fail gate.",
+    "return_to_nexia": "Paste the terminal block beginning === NEXIA UGC-VIDEO-001 TECHNICAL RESULT === and upload generated MP4 output(s). If blocked, paste only the ERROR/final result block."
+  },
+  "authority": {
+    "max_attempts": 3,
+    "cash_budget_eur": 0,
+    "allowed_models": ["ltx-video-2b-v0.9.5.safetensors", "t5xxl_fp16.safetensors if absent"],
+    "cloud_api": false,
+    "second_model": false,
+    "publication": false,
+    "external_contact": false,
+    "new_application": false,
+    "custom_nodes": false
+  },
+  "human_action_required_now": true,
+  "resume_required_reads": [
+    "NEXIA_STATE.json",
+    "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX.json",
+    "events/EVT-2026-10-13-UGCVIDEO-001.json",
+    "events/EVT-2026-10-13-UGCVIDEO-002.json",
+    "experiments/UGC-VIDEO-001.md",
+    "tools/run_ugc_video_001.py",
+    "tools/run_ugc_video_001.ps1",
+    "NEXIA_UGC_VIDEO_001_AUTH_HANDOFF_2026-10-13.json"
+  ],
+  "resume_from": "Authorization and runner preparation are complete. Do not repeat authorization or manual ComfyUI setup. Await one-command local execution output; if outputs exist, perform fixed visual QA. If blocked, diagnose only inside existing authorized scope.",
+  "truth_limit": "The runner is prepared and CI-verified but has not run on Kael's PC. Local model presence/download, ComfyUI API execution, video output quality, demand, sale, payment and profit remain unverified."
+}
