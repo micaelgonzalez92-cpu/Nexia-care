@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-ZQ-001",
+  "timestamp": "2026-10-12T22:31:00+02:00",
+  "type": "ZERO_QUOTA_EXECUTION_ROUTER_VERIFIED",
+  "state_version": 70,
+  "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
+  "action": "Implement and verify deterministic executor routing that prefers Chat/GitHub Actions/local execution before scarce Work/Codex while preserving Human Gates.",
+  "evidence": {
+    "router": "tools/nexia_execution_router.py",
+    "tests": "tools/test_nexia_execution_router.py",
+    "capability_snapshot": "NEXIA_EXECUTION_CAPABILITIES.json",
+    "queue": "NEXIA_EXECUTION_QUEUE.json",
+    "design": "NEXIA_ZERO_QUOTA_EXECUTION_V0_1.md",
+    "github_actions_run": 38304533964,
+    "github_actions_conclusion": "success",
+    "router_test_step": "success",
+    "synthetic_router_tests": "12/12 PASS"
+  },
+  "capability_effect": {
+    "github_actions_deterministic_offload": "VERIFIED",
+    "local_gpu_image": "VERIFIED_SINGLE_RUN",
+    "local_ai": "NOT_VERIFIED",
+    "local_browser": "NOT_VERIFIED",
+    "agentic_offload_rate": "NOT_INSTRUMENTED"
+  },
+  "authority_effect": "NONE; executor routing never grants publication/contact/spend/account/production/install authority",
+  "financial_impact_eur": 0,
+  "economic_stage_change": "NONE",
+  "result": "VERIFIED_ROUTER_AND_CI_INTEGRATION",
+  "truth_limit": "This verifies routing logic and CI execution only. It does not prove a measured quota-reduction percentage, local coding AI, local browser automation, autonomous execution, demand, sale or profit."
+}
