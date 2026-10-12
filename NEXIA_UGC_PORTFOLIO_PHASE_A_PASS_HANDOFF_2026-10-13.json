@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-13",
+  "canonical_state": {"version": 70, "changed": false},
+  "experiment": "UGC-PORTFOLIO-001",
+  "status": "PHASE_A_PASS",
+  "latest_event": "events/EVT-2026-10-13-UGCPORT-003.json",
+  "result": {
+    "accepted_frames": 6,
+    "target_frames": 6,
+    "complete_pairs": ["A", "B", "C"],
+    "attempts_used_total": 8,
+    "attempt_budget_total": 18,
+    "median_attempts_per_accepted_frame": 1,
+    "human_steering_review_minutes_approx": 20,
+    "cash_spend_eur": 0
+  },
+  "human_action_required_now": false,
+  "pending_human_action": null,
+  "next_action": "Prepare Phase B internally: choose the strongest brief and design one 20-30s SPEC ad storyboard with three hooks, script/voice, captions, CTA and an explicit motion/lipsync/video plan. Do not install/generate/publish/contact externally without the applicable authority gate.",
+  "resume_required_reads": [
+    "NEXIA_STATE.json",
+    "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX.json",
+    "events/EVT-2026-10-13-UGCPORT-001.json",
+    "events/EVT-2026-10-13-UGCPORT-002.json",
+    "events/EVT-2026-10-13-UGCPORT-003.json",
+    "experiments/UGC-PORTFOLIO-001.md",
+    "experiments/UGC-PORTFOLIO-001_PROMPT_PACK.md"
+  ],
+  "resume_from": "Phase A is complete and must not be repeated. Continue from Phase B design only, while keeping EXP-AUTO-001 as primary monetization priority pending Workana moderation.",
+  "truth_limit": "Phase A PASS validates bounded local keyframe production only. It does not prove buyer demand, video capability, publication, sale, payment or profit."
+}
