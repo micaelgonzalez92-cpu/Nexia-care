@@ -1,17 +1,17 @@
 {
   "updated_at": "2026-10-12",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + AUTO-PRODUCT TEMPLATE #1 PENDING REVIEW + AI-UGC PORTFOLIO PREPARED + LOCAL IMAGE VERIFIED + ZERO-QUOTA ROUTER VERIFIED + LOCAL-AI-CODER VERIFIED BOUNDED CODE ASSIST",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + HUESCAVENTURA OPEN PROFILE MODERATION PENDING + AUTO-PRODUCT TEMPLATE #1 REJECTED TOO BASIC + TEMPLATE #2 CANDIDATE PREPARED + AI-UGC PORTFOLIO PREPARED + LOCAL IMAGE VERIFIED + ZERO-QUOTA ROUTER VERIFIED + LOCAL-AI-CODER VERIFIED BOUNDED CODE ASSIST",
   "state_version": 70,
   "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
   "boot_version": 45,
   "boot_blob_sha": "c4c465412b5e53387e8fbe4ecb6e1b54ee7b740c",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
-  "state_reconciliation": "STATE_V70_VALID; VERIFIED_POST_STATE_EVENT_DELTA_THROUGH_LOCALCODER_004_REMAINS_UNABSORBED_BY_STATE; NEXT_ATOMIC_STATE_CHECKPOINT_REQUIRED",
+  "state_reconciliation": "STATE_V70_VALID; VERIFIED_POST_STATE_EVENT_DELTA_THROUGH_N8NCREATOR_002_REMAINS_UNABSORBED_BY_STATE; NEXT_ATOMIC_STATE_CHECKPOINT_REQUIRED",
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
-    "index_blob_sha": "8d41e207d4a02bf019f0abf8a2b2b46e4aa282a9",
-    "latest_verified_event_id": "EVT-2026-10-12-LOCALCODER-004",
-    "latest_verified_event_blob_sha": "191bda1d9521fe861f5537778c6d0248e0fda64b",
+    "index_blob_sha": "cb750bfd2e03453a8f1a23dd6743cc527faa1a32",
+    "latest_verified_event_id": "EVT-2026-10-12-N8NCREATOR-002",
+    "latest_verified_event_blob_sha": "7ce1bc819758e9493c3a87a8789dc93829dd7253",
     "legacy_jsonl_mode": "READ_ONLY"
   },
   "active_experiment": {
@@ -29,31 +29,38 @@
     "public_opportunity_status": "OPEN_EVALUATING_PROPOSALS_REVERIFIED_2026-10-12",
     "visible_proposals_last_canonical_check": 1,
     "budget_eur": "200-300",
-    "gmail_check_2026_10_12": "PRIORITY_MODERATION_SALES_EMAIL_FOUND; NO_PROFILE_APPROVAL_REJECTION_OR_ACTION_REQUIRED_EMAIL_VERIFIED"
+    "gmail_check_2026_10_12": "NO_PROFILE_APPROVAL_OR_REJECTION_EMAIL_VERIFIED; LATEST WORKANA EMAIL IS PRIORITY_MODERATION_SALES_PROMPT"
   },
   "parallel_business_state": {
     "status": "ACTIVE_PARALLEL_FALSIFICATION",
     "veins": [
       {
         "id": "VETA-AUTO-PRODUCT-001",
-        "stage": "DISTRIBUTION_TEST_PENDING_REVIEW",
+        "stage": "DISTRIBUTION_SIGNAL_NEGATIVE_TEMPLATE_01_REJECTED_REPLACEMENT_PREPARED",
         "focus": "self-serve n8n Lead Intake Reliability digital product",
         "runtime": "VERIFIED_PASS_FULL_N8N_SERVER",
         "runtime_run": 38235228044,
         "external_users": 0,
         "paid_sales": 0,
-        "publication": "SUBMITTED_PENDING_N8N_REVIEW",
+        "publication": "TEMPLATE_01_REJECTED_NOT_PUBLISHED",
         "creator_submission_01": {
-          "status": "SUBMITTED_PENDING_REVIEW",
+          "status": "REJECTED_NOT_PUBLISHED_TOO_BASIC",
           "creator_portal_workflow_id": 20799,
           "artifact": "products/lead-intake-reliability-kit/creator-submission-01.md",
           "title": "Normalize inbound lead intake for human review via webhook",
           "price": "FREE",
           "creator_account": "ACTIVE",
-          "approval": "NOT_YET_VERIFIED",
+          "approval": false,
           "approved_count": 0,
           "cost_eur": 0,
-          "gmail_check_2026_10_12": "ACCOUNT_CONFIRMATION_EMAIL_ONLY; NO_LATER_APPROVAL_CHANGE_REQUEST_OR_REJECTION_EMAIL_VERIFIED"
+          "gmail_check_2026_10_12": "N8N REVIEW EMAIL VERIFIED; REJECTED AS TOO BASIC"
+        },
+        "creator_submission_02": {
+          "status": "PREPARED_NOT_SUBMITTED",
+          "artifact": "products/lead-intake-reliability-kit/creator-submission-02.md",
+          "title": "Prevent Duplicate Lead Processing Across Runs with n8n Data Tables",
+          "publication_authorized": false,
+          "cost_eur": 0
         },
         "runtime_job": 114764135662,
         "tested_commit": "ca54ddbc626520a13450aecda6c550d165a42300",
@@ -131,44 +138,45 @@
     "reconciled_net_profit_eur": 0
   },
   "session_handoff": {
-    "last_completed_verified_action": "Kael returned the completed LOCAL-AI-CODER-001 terminal summary: 5/5 tasks, median 2.48s, approximate peak whole-GPU memory 5736 MiB and approximate peak Ollama process RAM 135 MiB. Repository inspection found the raw FAIL was caused by an adjudicator defect: all(gate.values()) treated human_steering_minutes_recorded=0 as false even though the preregistered gate is <=15 minutes. No threshold, prompt or task was changed. Corrective event LOCALCODER-004 adjudicates the run PASS under the original contract and promotes LOCAL_AI only to VERIFIED_FOR_BOUNDED_CODE_ASSIST.",
-    "last_user_facing_handoff": "LOCAL-AI-CODER-001 passed by contract after correcting an adjudicator bug. Local bounded code assistance is now verified; Codex remains fallback for complex/high-risk work. No further local action is required for this experiment.",
+    "last_completed_verified_action": "Recovered BOOT/STATE/LIVE/event index/current handoff; checked Gmail for Workana and n8n review changes; verified no Workana approval email; read n8n rejection of Creator workflow 20799 as too basic; publicly reverified Huescaventura remains open/evaluating proposals; scanned recent Workana automation opportunities and found no stronger contingency than Huescaventura; persisted rejection event, corrected Template 01 status, and prepared a deeper persistent-dedup replacement candidate without submitting it.",
+    "last_user_facing_handoff": "EXP-AUTO-001 remains primary. Huescaventura is still open but Workana profile approval is not verified. n8n Template 01 was rejected as too basic; a deeper persistent-dedup replacement candidate is prepared internally but not authorized for publication. No Kael action is required now.",
     "human_action_required_now": false,
     "pending_human_action": null,
     "surface": "ChatGPT Nexia Core",
     "device": "mobile or computer",
-    "why_kael": "No Kael action is required now; the next validation consists of accumulating real bounded internal tasks routed under existing authority rules.",
+    "why_kael": "No Kael action is required now. Workana submission remains gated by profile approval; n8n replacement publication is not authorized.",
     "steps": [],
-    "cost_exposure": "EUR0 cash. Ollama, Qwen2.5-Coder and Python are installed locally; future local inference consumes electricity/machine time only unless separately authorized changes are proposed.",
-    "success_check": "For the next validation, record at least 20 real bounded internal technical tasks with functional outcome, correction minutes, duration, Work/Codex avoided and rollback/failure status before calculating AGENTIC_OFFLOAD_RATE.",
-    "return_to_nexia": "No immediate return required. Continue routing suitable bounded internal coding tasks to LOCAL_AI and record outcomes.",
+    "cost_exposure": "EUR0 cash. No external contact, publication, account change or spend executed in this batch.",
+    "success_check": "Fresh session recovers that Workana approval is still pending, Huescaventura remains current/open, n8n Template 01 is rejected as too basic, replacement candidate is internal only, and LOCAL_AI bounded coding remains verified.",
+    "return_to_nexia": "No immediate return required.",
     "resume_required_reads": [
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_EVENT_INDEX.json",
       "events/EVT-2026-10-12-LOCALCODER-004.json",
-      "NEXIA_LOCAL_CODER_PASS_HANDOFF_2026-10-12.json",
-      "NEXIA_EXECUTION_QUEUE.json",
-      "experiments/LOCAL-AI-CODER-001.md"
+      "events/EVT-2026-10-12-N8NCREATOR-002.json",
+      "products/lead-intake-reliability-kit/creator-submission-01.md",
+      "products/lead-intake-reliability-kit/creator-submission-02.md",
+      "NEXIA_NEXT_HANDOFF_2026-10-12_02.json"
     ],
-    "resume_from": "LOCAL_AI is verified only for bounded internal code assist. Route eligible low-risk coding tasks locally and measure at least 20 real executions before any broader claim. Keep Codex for complex/high-risk fallback and preserve all existing Human Gates. Continue EXP-AUTO-001 and business validation as primary economic priority.",
-    "truth_limit": "This proves bounded local coding capability, not autonomous software engineering, full Codex replacement, demand, sale, payment or profit."
+    "resume_from": "Keep monetization priority on EXP-AUTO-001. Do not resubmit n8n Template 01 cosmetically. Continue zero-cost sensing for Workana approval and only submit the already-authorized Huescaventura proposal if approval is verified, the project is still open, and submission cost remains EUR0. Treat Template 02 as internal preparation until a separate publication gate. Accumulate real LOCAL_AI tasks opportunistically rather than displacing monetization work.",
+    "truth_limit": "Public project status and email checks are current evidence, not buyer response or willingness-to-pay. n8n rejection is a distribution signal, not a product sale/failure. No economic extraction occurred."
   },
-  "human_gate": "NONE_FOR_LOCAL_AI_CODER_CURRENTLY. Capability is bounded and must obey existing authority matrix. Workana/n8n/external-action gates remain unchanged.",
+  "human_gate": "NONE_IMMEDIATE. Huescaventura proposal remains conditionally authorized only after Workana profile approval is verified, project remains open, and submission cost is EUR0. n8n Template 02 publication/submission is NOT AUTHORIZED.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
   "current_blockers": [
     "Workana profile approval pending standard moderation",
-    "n8n Creator template #1 submitted and pending review; approval not verified",
+    "n8n Creator Template 01 rejected as too basic; replacement candidate prepared but external resubmission/publication not authorized",
     "AUTO-PRODUCT willingness-to-pay remains unvalidated",
     "AUTO-PRODUCT external self-serve installation <=30 minutes not yet verified with users",
     "AI UGC portfolio gap remains open; UGC-PORTFOLIO-001 prepared but not executed",
     "Local image repeatability/batch stability/commercial quality not verified",
     "LOCAL_AI real-task reliability and AGENTIC_OFFLOAD_RATE require at least 20 bounded internal task records",
     "LOCAL_BROWSER not verified",
-    "Canonical STATE v70 has not absorbed later verified events through LOCALCODER-004; MEMORY derived stale",
+    "Canonical STATE v70 has not absorbed later verified events through N8NCREATOR-002; MEMORY derived stale",
     "No willingness-to-pay, settled sale or realized profit exists"
   ],
-  "next_action": "Use LOCAL_AI for eligible bounded internal coding tasks and record outcomes toward the 20-task measurement gate, while keeping EXP-AUTO-001 and monetization validation as the economic priority."
+  "next_action": "Continue zero-cost Workana approval sensing and monetize EXP-AUTO-001 first. Do not spend additional effort on n8n resubmission unless a materially deeper self-contained candidate is ready and a separate publication gate is justified. Use LOCAL_AI on suitable bounded internal tasks opportunistically and measure them without displacing monetization work."
 }
