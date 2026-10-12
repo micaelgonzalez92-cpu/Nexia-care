@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-12",
+  "purpose": "Derived execution queue seed for routing/measurement. NEXIA_STATE.json remains canonical.",
+  "tasks": [
+    {
+      "id": "ZQ-001",
+      "name": "Run Nexia integrity/regression tests",
+      "status": "READY",
+      "executor": "GITHUB_ACTIONS",
+      "zero_quota": true,
+      "authority": "GREEN",
+      "deterministic": true
+    },
+    {
+      "id": "ZQ-002",
+      "name": "UGC-PORTFOLIO-001 Phase A local keyframes",
+      "status": "READY_LOCAL_ACCESS",
+      "executor": "LOCAL_GPU",
+      "zero_quota": true,
+      "authority": "GREEN_INTERNAL",
+      "limit": "Use preregistered UGC-PORTFOLIO-001; no publication/contact; max 18 attempts"
+    },
+    {
+      "id": "ZQ-003",
+      "name": "Public buyer/opportunity research",
+      "status": "READY",
+      "executor": "CHAT",
+      "zero_quota": true,
+      "authority": "GREEN"
+    },
+    {
+      "id": "ZQ-004",
+      "name": "Authenticated Workana GUI inspection",
+      "status": "FALLBACK_SCARCE",
+      "executor": "WORK",
+      "zero_quota": false,
+      "authority": "GREEN_YELLOW_READ_ONLY",
+      "replacement_target": "LOCAL_BROWSER_NOT_VERIFIED"
+    },
+    {
+      "id": "ZQ-005",
+      "name": "Complex new repository coding",
+      "status": "FALLBACK_SCARCE",
+      "executor": "CODEX",
+      "zero_quota": false,
+      "authority": "GREEN_INTERNAL",
+      "replacement_target": "LOCAL_AI_NOT_VERIFIED"
+    }
+  ],
+  "metrics": {
+    "agentic_offload_rate": "NOT_INSTRUMENTED",
+    "measurement_gate": "Do not publish a percentage until at least 20 technical task executions have executor/outcome records."
+  }
+}
