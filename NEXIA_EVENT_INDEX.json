@@ -8,8 +8,8 @@
     "boundary_blob_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
   "event_directory": "events/",
-  "latest_event_id": "EVT-2026-10-12-LOCALCODER-004",
-  "latest_event_path": "events/EVT-2026-10-12-LOCALCODER-004.json",
+  "latest_event_id": "EVT-2026-10-12-N8NCREATOR-002",
+  "latest_event_path": "events/EVT-2026-10-12-N8NCREATOR-002.json",
   "events": [
     {"event_id":"EVT-2026-10-11-EVOLVE-001","timestamp":"2026-10-11T16:20:00+02:00","type":"CORE_EVOLUTION_AND_EVENT_STORAGE_V2_ACTIVATION","state_version":63,"path":"events/EVT-2026-10-11-EVOLVE-001.json","verified_blob_sha":"fb278799714287c03f749990211b5c8d33a60ce5"},
     {"event_id":"EVT-2026-10-11-EVOLVE-002","timestamp":"2026-10-11T16:45:00+02:00","type":"CORE_EVOLUTION_CHECKPOINT_CLOSURE_WITH_MEMORY_SYNC_BLOCKER","state_version":65,"path":"events/EVT-2026-10-11-EVOLVE-002.json","verified_blob_sha":"9cfbd2e57f6cf67a80ba72727fed0e56ca81a543"},
@@ -33,9 +33,10 @@
     {"event_id":"EVT-2026-10-12-LOCALCODER-001","timestamp":"2026-10-12T22:50:00+02:00","type":"LOCAL_AI_CODER_BENCHMARK_AUTHORIZED","state_version":70,"path":"events/EVT-2026-10-12-LOCALCODER-001.json","verified_blob_sha":"0498fbcae370183cddd2ff51747ed6c8844bfae1"},
     {"event_id":"EVT-2026-10-12-LOCALCODER-002","timestamp":"2026-10-12T23:10:00+02:00","type":"LOCAL_AI_CODER_INSTALL_COMPLETE_BENCHMARK_BLOCKED_RUNTIME_PREREQUISITE","state_version":70,"path":"events/EVT-2026-10-12-LOCALCODER-002.json","verified_blob_sha":"761ab6c0c30ae8a8b2440a0039aafa30f1ec0553"},
     {"event_id":"EVT-2026-10-12-LOCALCODER-003","timestamp":"2026-10-12T23:24:00+02:00","type":"LOCAL_AI_CODER_PYTHON_RUNTIME_AUTHORIZED","state_version":70,"path":"events/EVT-2026-10-12-LOCALCODER-003.json","verified_blob_sha":"4d890e7c41aa96cd87439ab8f38b6760331dc3ab"},
-    {"event_id":"EVT-2026-10-12-LOCALCODER-004","timestamp":"2026-10-12T23:40:00+02:00","type":"LOCAL_AI_CODER_BENCHMARK_CORRECTIVE_ADJUDICATION_PASS","state_version":70,"path":"events/EVT-2026-10-12-LOCALCODER-004.json","verified_blob_sha":"191bda1d9521fe861f5537778c6d0248e0fda64b"}
+    {"event_id":"EVT-2026-10-12-LOCALCODER-004","timestamp":"2026-10-12T23:40:00+02:00","type":"LOCAL_AI_CODER_BENCHMARK_CORRECTIVE_ADJUDICATION_PASS","state_version":70,"path":"events/EVT-2026-10-12-LOCALCODER-004.json","verified_blob_sha":"191bda1d9521fe861f5537778c6d0248e0fda64b"},
+    {"event_id":"EVT-2026-10-12-N8NCREATOR-002","timestamp":"2026-10-12T20:49:10Z","type":"N8N_CREATOR_TEMPLATE_01_REJECTED_TOO_BASIC","state_version":70,"path":"events/EVT-2026-10-12-N8NCREATOR-002.json","verified_blob_sha":"7ce1bc819758e9493c3a87a8789dc93829dd7253"}
   ],
   "rule": "Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated.",
-  "latest_session_handoff": "NEXIA_LOCAL_CODER_PASS_HANDOFF_2026-10-12.json",
-  "latest_session_handoff_blob_sha": "d5b7a64cc2d106a4cd74a878b823d0c9ca400905"
+  "latest_session_handoff": "NEXIA_NEXT_HANDOFF_2026-10-12_02.json",
+  "latest_session_handoff_blob_sha": "2fc14c76653487e410230dd619dbbff936b28ce6"
 }
