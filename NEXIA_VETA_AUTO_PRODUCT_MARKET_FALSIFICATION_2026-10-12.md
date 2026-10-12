@@ -1,7 +1,7 @@
 # NEXIA — VETA-AUTO-PRODUCT-001 Market Falsification
 
 Date: 2026-10-12 (Europe/Madrid)
-Status: RESEARCHED / INTERNAL SKU PREPARATION / NO PUBLICATION / NO SPEND
+Status: PREPARED_INTERNAL_SKU / NO PUBLICATION / NO SPEND / NO SALES
 Vein: `VETA-AUTO-PRODUCT-001`
 
 ## Hypothesis
@@ -51,9 +51,11 @@ Internal v0.1 components:
 1. Generic Lead Intake Normalizer + Human Review workflow.
 2. Native n8n Data Table persistent dedup/idempotency bootstrap.
 3. Native n8n Data Table dedup guard.
-4. Sample valid/invalid/duplicate payloads.
-5. QA and handover checklist.
-6. Truthful technical evidence notes based only on NEXIA's executed internal proof.
+4. Internal dedup audit workflow.
+5. Synthetic valid/invalid/duplicate payloads.
+6. Automated static QA test.
+7. Self-serve installation guide and QA checklist.
+8. Truthful technical evidence boundary based only on NEXIA's executed internal proof.
 
 Explicit exclusions:
 - no autonomous customer send by default;
@@ -62,6 +64,30 @@ Explicit exclusions:
 - no hosted n8n service;
 - no claim of prior paid-client production usage;
 - no guarantee of revenue or conversion lift.
+
+## Verified product runtime — 2026-10-12
+Dedicated workflow: `.github/workflows/n8n-product-runtime-smoke.yml`.
+
+Verified GitHub Actions run: `38232599031`.
+Verified job: `114755439885`.
+Commit tested: `092458a0489a28530a3c7e6e6905c770145054b3`.
+Runtime: n8n `2.42.6`, full server process.
+Conclusion: **SUCCESS**.
+
+Verified outcomes from the completed runtime log:
+- all 4 product workflows imported and exported successfully and remained inactive by default;
+- all 4 production webhooks were registered before calls were made;
+- valid lead executed through a real n8n webhook and normalized successfully;
+- invalid lead was rejected through a real n8n webhook;
+- duplicate event with a different event ID but the same normalized email identity did not create a second persisted row;
+- audit after the duplicate attempt contained exactly 1 persisted row;
+- n8n was stopped and restarted using the same user folder;
+- a new unique phone identity was accepted after restart;
+- post-restart audit contained exactly 2 persisted rows;
+- persistence backend: native n8n Data Table;
+- `autonomous_send=false` throughout the asserted outputs.
+
+This proves internal product runtime behavior in an isolated CI environment. It does NOT prove external-user installation, product demand, willingness to pay, sales, refunds, support burden, production compatibility across all n8n versions or client environments.
 
 ## Pricing hypothesis
 Launch hypothesis: **USD 49 one-time**.
@@ -73,9 +99,9 @@ Reasoning:
 - allows later vertical packs or implementation upsell only after demand evidence.
 
 Illustrative platform economics, not realized:
-- Gumroad direct sale at USD 49: current fee structure of 10% + USD0.50 plus card processing 2.9% + USD0.30 implies roughly USD41.88 before tax/refunds.
-- Lemon Squeezy base ecommerce fee at USD49: 5% + USD0.50 implies roughly USD46.05 before possible additional international/payment-method fees and tax effects.
-- With an illustrative 25% tax reserve, the simple arithmetic path to EUR/USD-equivalent 1,000 after-tax monthly profit would require roughly 29-32 sales/month at USD49 before support/refund/FX differences. This is a screening estimate, not a forecast.
+- Gumroad direct sale at USD 49: current fee structure of 10% + USD0.50 plus card processing 2.9% + USD0.30 implies roughly USD41.88 before tax/refunds;
+- Lemon Squeezy base ecommerce fee at USD49: 5% + USD0.50 implies roughly USD46.05 before possible additional international/payment-method fees and tax effects;
+- dozens of monthly sales would likely be needed to exceed EUR1,000/month after tax at this price unless average order value rises or the product drives implementation revenue. Exact requirement remains UNKNOWN until realized fees, FX, support and taxes exist.
 
 ## Distribution route
 ### Route A — n8n Creator Hub
@@ -108,20 +134,18 @@ Pause or kill this vein if any of the following becomes true:
 - truthful positioning without client-production claims is insufficient to sell.
 
 ## Gates
-### PREPARED_INTERNAL_SKU
-Requires:
-- importable product files prepared;
-- product QA suite PASS;
-- no buyer-specific branding/data;
-- no external sends enabled;
-- setup docs and samples complete.
+### PREPARED_INTERNAL_SKU — PASSED INTERNALLY
+Passed because:
+- importable product files are prepared;
+- static product QA passes in CI;
+- dedicated full n8n 2.42.6 runtime smoke passes;
+- no buyer-specific branding/data is present in product workflows/samples;
+- no external customer send is enabled;
+- setup docs, samples and QA checklist exist.
 
-### VALIDATION_READY
-Requires PREPARED_INTERNAL_SKU plus:
-- distribution experiment defined;
-- price fixed before test;
-- success/failure thresholds fixed before publication;
-- publication/account Human Gate approved by Kael.
+### VALIDATION_READY — NOT YET AUTHORIZED EXTERNALLY
+Technical and experiment-design prerequisites are prepared. Remaining material gate:
+- Kael authorization for creator/store account and first publication/submission experiment.
 
 ### VALIDATED
 Requires real settled sales, not downloads or page views. Initial gate:
@@ -134,6 +158,8 @@ Requires real settled sales, not downloads or page views. Initial gate:
 Requires a measured path to >EUR1,000/month after tax, including traffic/acquisition and support burden.
 
 ## Current decision
-`VETA-AUTO-PRODUCT-001 = PROMOTE_TO_INTERNAL_SKU_BUILD`
+`VETA-AUTO-PRODUCT-001 = PREPARED_INTERNAL_SKU`
 
-This is not a commercial validation. Revenue, sales, WTP and profit remain zero.
+Next material test is distribution/willingness-to-pay, not more synthetic engineering. No publication/account creation has been executed.
+
+This is not commercial validation. External users, sales, settled revenue, WTP and realized profit remain zero.
