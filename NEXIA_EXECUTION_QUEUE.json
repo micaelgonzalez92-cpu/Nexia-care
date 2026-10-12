@@ -40,30 +40,32 @@
     },
     {
       "id": "ZQ-005",
-      "name": "Complex new repository coding",
+      "name": "Complex/high-risk repository coding",
       "status": "FALLBACK_SCARCE",
       "executor": "CODEX",
       "zero_quota": false,
       "authority": "GREEN_INTERNAL",
-      "replacement_target": "LOCAL_AI_NOT_VERIFIED"
+      "replacement_target": "LOCAL_AI_VERIFIED_ONLY_FOR_BOUNDED_CODE_ASSIST"
     },
     {
       "id": "ZQ-006",
-      "name": "LOCAL-AI-CODER-001 benchmark with Ollama + Qwen2.5-Coder 7B Instruct Q4_K_M",
-      "status": "BLOCKED_PYTHON_RUNTIME_OUTSIDE_CURRENT_AUTHORITY",
+      "name": "LOCAL-AI-CODER-001 benchmark with Ollama + Qwen2.5-Coder 7B Instruct",
+      "status": "COMPLETE_PASS_CORRECTIVE_ADJUDICATION",
       "executor": "LOCAL_AI_PROBE",
       "zero_quota": true,
-      "authority": "NEW_EXPLICIT_GATE_REQUIRED_FOR_PYTHON_INSTALL",
+      "authority": "AUTHORIZED_ONE_OFF_COMPLETED",
       "authorization_event": "events/EVT-2026-10-12-LOCALCODER-001.json",
-      "latest_execution_event": "events/EVT-2026-10-12-LOCALCODER-002.json",
+      "install_blocker_event": "events/EVT-2026-10-12-LOCALCODER-002.json",
+      "python_authorization_event": "events/EVT-2026-10-12-LOCALCODER-003.json",
+      "corrective_pass_event": "events/EVT-2026-10-12-LOCALCODER-004.json",
       "contract": "experiments/LOCAL-AI-CODER-001.md",
       "runner": "tools/run_local_ai_coder_001.ps1",
-      "installed_runtime": "OLLAMA_0.40.3_USER_LOG_EVIDENCE",
-      "installed_model": "qwen2.5-coder:7b-instruct_USER_LOG_EVIDENCE",
-      "scored_tasks_started": 0,
-      "benchmark_result": "BLOCKED_NOT_FAIL",
-      "max_cash_spend_eur": 0,
-      "promotion_if_pass": "LOCAL_AI_VERIFIED_FOR_BOUNDED_CODE_ASSIST"
+      "benchmark_result": "PASS_CONTRACT_ADJUDICATED",
+      "tasks_passed": 5,
+      "tasks_total": 5,
+      "median_model_response_seconds": 2.48,
+      "promotion": "LOCAL_AI_VERIFIED_FOR_BOUNDED_CODE_ASSIST",
+      "max_cash_spend_eur": 0
     }
   ],
   "metrics": {
