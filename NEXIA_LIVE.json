@@ -1,17 +1,17 @@
 {
   "updated_at": "2026-10-13",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + HUESCAVENTURA OPEN PROFILE MODERATION PENDING + AUTO-PRODUCT TEMPLATE #1 REJECTED TOO BASIC + TEMPLATE #2 CANDIDATE PREPARED + AI-UGC PORTFOLIO PHASE A 4/6 ACCEPTED RETRIES REQUIRED + LOCAL IMAGE VERIFIED + ZERO-QUOTA ROUTER VERIFIED + LOCAL-AI-CODER VERIFIED BOUNDED CODE ASSIST",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + HUESCAVENTURA OPEN PROFILE MODERATION PENDING + AUTO-PRODUCT TEMPLATE #1 REJECTED TOO BASIC + TEMPLATE #2 CANDIDATE PREPARED + AI-UGC PORTFOLIO PHASE A PASS + LOCAL IMAGE VERIFIED + ZERO-QUOTA ROUTER VERIFIED + LOCAL-AI-CODER VERIFIED BOUNDED CODE ASSIST",
   "state_version": 70,
   "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
   "boot_version": 45,
   "boot_blob_sha": "c4c465412b5e53387e8fbe4ecb6e1b54ee7b740c",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
-  "state_reconciliation": "STATE_V70_VALID; VERIFIED_POST_STATE_EVENT_DELTA_THROUGH_UGCPORT_001_REMAINS_UNABSORBED_BY_STATE; NEXT_ATOMIC_STATE_CHECKPOINT_REQUIRED",
+  "state_reconciliation": "STATE_V70_VALID; VERIFIED_POST_STATE_EVENT_DELTA_THROUGH_UGCPORT_003_REMAINS_UNABSORBED_BY_STATE; NEXT_ATOMIC_STATE_CHECKPOINT_REQUIRED",
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
-    "index_blob_sha": "4a781d1c2a53a262d5845f0bb014c49c5224ef36",
-    "latest_verified_event_id": "EVT-2026-10-13-UGCPORT-001",
-    "latest_verified_event_blob_sha": "ca798dd1a5b8bd7685bba57ffa0d99107041e8af",
+    "index_blob_sha": "984574a113197a8412a4bd2e7b888c9fd79cfec6",
+    "latest_verified_event_id": "EVT-2026-10-13-UGCPORT-003",
+    "latest_verified_event_blob_sha": "7935e5cf907cbc588fa2fe6f3880c3f0f36d100e",
     "legacy_jsonl_mode": "READ_ONLY"
   },
   "active_experiment": {
@@ -73,21 +73,22 @@
       },
       {
         "id": "VETA-AI-UGC-001",
-        "stage": "PHASE_A_FIRST_PASS_4_OF_6_ACCEPTED_RETRIES_REQUIRED",
-        "focus": "AI UGC/performance creative service; local keyframe production now has first real six-image portfolio batch under fixed QA",
+        "stage": "PHASE_A_PASS_LOCAL_KEYFRAME_WORKFLOW_VALIDATED",
+        "focus": "AI UGC/performance creative service; local keyframe production passed preregistered quality, pair, iteration and human-time gates",
         "spend": "EUR0",
         "published_portfolio": 0,
-        "portfolio_gap": "PARTIALLY_CLOSED_INTERNAL_ONLY",
-        "ugc_portfolio_experiment": "UGC-PORTFOLIO-001 PHASE_A_FIRST_PASS_QA_COMPLETE",
-        "local_image_runtime": "PROBED_AND_VERIFIED_SINGLE_RUN_PLUS_SIX_IMAGE_REAL_PORTFOLIO_BATCH",
-        "first_pass_accepted": ["A1", "A2", "B2", "C1"],
-        "first_pass_rejected": ["B1", "C2"],
-        "complete_pairs": ["A"],
-        "attempts_used_total": 6,
+        "portfolio_gap": "PHASE_A_CLOSED_INTERNAL_ONLY_PHASE_B_NOT_EXECUTED",
+        "ugc_portfolio_experiment": "UGC-PORTFOLIO-001 PHASE_A PASS",
+        "local_image_runtime": "PROBED_AND_VERIFIED_SINGLE_RUN_PLUS_EIGHT_ATTEMPT_PORTFOLIO_EXPERIMENT",
+        "final_accepted_frames": ["A1", "A2", "B1_RETRY", "B2", "C1", "C2_RETRY"],
+        "complete_pairs": ["A", "B", "C"],
+        "attempts_used_total": 8,
         "attempt_budget_total": 18,
-        "phase_a_gate": "NOT_YET_PASS_SECOND_COMPLETE_PAIR_REQUIRED",
-        "human_steering_minutes": "NOT_INSTRUMENTED",
-        "commercial_quality": "PARTIALLY_VERIFIED_INTERNAL_QA_ONLY"
+        "median_attempts_per_accepted_frame": 1,
+        "human_steering_review_minutes_approx": 20,
+        "phase_a_gate": "PASS",
+        "phase_b": "ELIGIBLE_FOR_INTERNAL_DESIGN_NOT_EXECUTED",
+        "commercial_quality": "VERIFIED_FOR_BOUNDED_SPEC_KEYFRAME_PORTFOLIO_ONLY"
       }
     ],
     "generic_etsy_templates": "NO_GO_GENERIC"
@@ -106,7 +107,7 @@
     "pc_audit_script": "PERSISTED; STRICT_READ_ONLY_NOT_ESTABLISHED_WRITES_OUTPUT_AND_INVOKES_EXECUTABLES",
     "local_capability_scoring_spec": "PERSISTED",
     "local_capability_scorer_code": "PERSISTED_RE_READ_EXACT_MATCH; 8/8_SYNTHETIC_TESTS_PASS",
-    "local_image_generation": "COMFYUI_FLUX2_KLEIN_4B_FP8_SINGLE_RUN_VERIFIED",
+    "local_image_generation": "COMFYUI_FLUX2_KLEIN_4B_FP8_PHASE_A_PORTFOLIO_PASS",
     "zero_quota_execution": "ROUTER_AND_GITHUB_ACTIONS_OFFLOAD_VERIFIED",
     "zero_quota_ci_run": 38304533964,
     "zero_quota_router_tests": "12/12 PASS",
@@ -144,36 +145,31 @@
     "reconciled_net_profit_eur": 0
   },
   "session_handoff": {
-    "last_completed_verified_action": "Kael generated the six first-pass UGC-PORTFOLIO-001 Phase-A keyframes locally in ComfyUI and uploaded them to ChatGPT. Fixed QA accepted A1=85, A2=90, B2=84 and C1=88; rejected B1=73 for wrong rotating-organizer product fidelity and C2=75 with hard fail for UI-like pseudo-text on device screens. First-pass count is 4/6 accepted but only brief A is a complete pair, so the experiment is NOT YET PASS. Event UGCPORT-001 and exact retry handoff were persisted; no images were uploaded to the public repository.",
-    "last_user_facing_handoff": "Retry only B1 and C2 once each. A successful retry of either creates the required second complete pair because B2 and C1 are already accepted. Do not regenerate A1/A2/B2/C1.",
-    "human_action_required_now": true,
-    "pending_human_action": "Generate exactly one targeted B1 retry and one targeted C2 retry in the existing local ComfyUI workflow, then upload both PNGs for QA. Also estimate total manual steering/review minutes for UGC-PORTFOLIO-001 so far if possible.",
-    "surface": "ComfyUI local",
-    "device": "computer",
-    "why_kael": "Current Chat cannot operate Kael's local ComfyUI browser session. The workflow/model are already installed and running locally.",
-    "steps": [
-      "Keep width 768, height 1360, batch 1 and steps 4.",
-      "Generate only targeted retry B1 using the exact Nexia retry prompt/seed.",
-      "Generate only targeted retry C2 using the exact Nexia retry prompt/seed.",
-      "Do not regenerate accepted A1/A2/B2/C1.",
-      "Upload both retry PNGs to Nexia for fixed QA."
-    ],
-    "cost_exposure": "EUR0 cash; local GPU electricity/machine time only; no publication, external contact or new installation.",
-    "success_check": "At least one retry scores >=75/100 with no hard fail, creating a second complete brief pair. Final Phase-A PASS also requires human steering/review <=60 minutes to be known.",
-    "return_to_nexia": "Upload the B1-retry and C2-retry PNGs; state approximate total manual steering/review minutes so far if known.",
+    "last_completed_verified_action": "UGC-PORTFOLIO-001 Phase A closed PASS after two targeted retries and Kael-reported approximate manual steering/review time of 20 minutes. Final accepted set is A1, A2, B1 retry, B2, C1 and C2 retry; all three brief pairs are complete. Total attempts 8/18, median attempts per accepted frame 1, cash spend EUR0. Events UGCPORT-002 and UGCPORT-003 plus final PASS handoff were persisted; no portfolio images were uploaded to the public repository.",
+    "last_user_facing_handoff": "Phase A is complete and must not be repeated. No Kael action is required now. Next safe work is internal Phase B storyboard design; any additional local generation/install/publication/contact remains separately gated.",
+    "human_action_required_now": false,
+    "pending_human_action": null,
+    "surface": "ChatGPT Nexia Core",
+    "device": "mobile or computer",
+    "why_kael": "No Kael action is required at this checkpoint.",
+    "steps": [],
+    "cost_exposure": "EUR0 cash. No publication, external contact, new installation or paid API used.",
+    "success_check": "Fresh recovery identifies UGC-PORTFOLIO-001 Phase A as PASS with 6 accepted frames, 3 complete pairs, 8 attempts total, median attempts 1 and approximately 20 minutes human steering/review.",
+    "return_to_nexia": "No immediate return required.",
     "resume_required_reads": [
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_EVENT_INDEX.json",
       "events/EVT-2026-10-13-UGCPORT-001.json",
-      "NEXIA_UGC_PORTFOLIO_QA_HANDOFF_2026-10-13.json",
-      "experiments/UGC-PORTFOLIO-001.md",
-      "experiments/UGC-PORTFOLIO-001_PROMPT_PACK.md"
+      "events/EVT-2026-10-13-UGCPORT-002.json",
+      "events/EVT-2026-10-13-UGCPORT-003.json",
+      "NEXIA_UGC_PORTFOLIO_PHASE_A_PASS_HANDOFF_2026-10-13.json",
+      "experiments/UGC-PORTFOLIO-001.md"
     ],
-    "resume_from": "Do not repeat accepted keyframes. Resume at targeted B1/C2 retries, which are attempts 7 and 8 overall, under unchanged fixed QA thresholds.",
-    "truth_limit": "First-pass QA partially validates local portfolio keyframe quality only. It does not prove buyer demand, video production, sale, settled payment or profit."
+    "resume_from": "Do not repeat UGC Phase A. Keep EXP-AUTO-001 as primary monetization priority while Workana moderation is pending. Phase B may be designed internally, but any new generation/tool installation/publication/contact must respect existing authority gates.",
+    "truth_limit": "UGC Phase A PASS validates bounded local SPEC keyframe production only. It does not prove buyer demand, video production, publication, sale, settled payment or profit."
   },
-  "human_gate": "LOCAL UGC RETRY TASK PENDING; this is not an expansion of business authority. Huescaventura proposal remains conditionally authorized only after Workana profile approval is verified, project remains open, and submission cost is EUR0. n8n Template 02 publication/submission remains NOT AUTHORIZED.",
+  "human_gate": "NONE_IMMEDIATE. Huescaventura proposal remains conditionally authorized only after Workana profile approval is verified, project remains open, and submission cost is EUR0. n8n Template 02 publication/submission remains NOT AUTHORIZED. UGC Phase B external generation/install/publication actions require their applicable gate.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -182,12 +178,11 @@
     "n8n Creator Template 01 rejected as too basic; replacement candidate prepared but external resubmission/publication not authorized",
     "AUTO-PRODUCT willingness-to-pay remains unvalidated",
     "AUTO-PRODUCT external self-serve installation <=30 minutes not yet verified with users",
-    "UGC-PORTFOLIO-001 Phase A has 4/6 accepted but only one complete brief pair; targeted B1/C2 retries required",
-    "UGC-PORTFOLIO-001 human steering/review minutes are not yet instrumented",
+    "UGC Phase B video/motion/lipsync production is not yet executed or verified",
     "LOCAL_AI real-task reliability and AGENTIC_OFFLOAD_RATE require at least 20 bounded internal task records",
     "LOCAL_BROWSER not verified",
-    "Canonical STATE v70 has not absorbed later verified events through UGCPORT-001; MEMORY derived stale",
+    "Canonical STATE v70 has not absorbed later verified events through UGCPORT-003; MEMORY derived stale",
     "No willingness-to-pay, settled sale or realized profit exists"
   ],
-  "next_action": "Generate targeted B1 and C2 UGC retries locally and QA them. Keep EXP-AUTO-001 as economic priority while Workana moderation remains pending."
+  "next_action": "Keep EXP-AUTO-001 as economic priority while Workana moderation remains pending. In parallel, safely design UGC Phase B internally from the strongest validated brief without executing new generation/tool installation/publication/contact unless separately authorized."
 }
