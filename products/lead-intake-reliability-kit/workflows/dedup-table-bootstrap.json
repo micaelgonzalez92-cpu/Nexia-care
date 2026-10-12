@@ -1,0 +1,52 @@
+{
+  "id": "nexia-lead-intake-dedup-bootstrap-v01",
+  "name": "Lead Intake Reliability - Dedup Table Bootstrap",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-intake-dedup-bootstrap",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [0, 0],
+      "id": "dedup-bootstrap-trigger",
+      "name": "Bootstrap Webhook",
+      "webhookId": "lead-intake-dedup-bootstrap"
+    },
+    {
+      "parameters": {
+        "resource": "table",
+        "operation": "create",
+        "tableName": "lead_intake_reliability_keys",
+        "columns": {
+          "column": [
+            {"name": "eventKey", "type": "string"},
+            {"name": "identityKey", "type": "string"},
+            {"name": "recordId", "type": "string"}
+          ]
+        },
+        "options": {"createIfNotExists": true}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [280, 0],
+      "id": "create-dedup-table",
+      "name": "Create Dedup Table"
+    }
+  ],
+  "connections": {
+    "Bootstrap Webhook": {
+      "main": [[{"node": "Create Dedup Table", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {"executionOrder": "v1"},
+  "pinData": {},
+  "meta": {
+    "nexiaProduct": "lead-intake-reliability-kit-v0.1",
+    "evidenceBoundary": "native-n8n-data-table-bootstrap-no-external-credentials"
+  }
+}
