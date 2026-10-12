@@ -8,23 +8,129 @@
     "boundary_blob_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
   "event_directory": "events/",
-  "latest_event_id": "EVT-2026-10-12-LOCALAI-001",
-  "latest_event_path": "events/EVT-2026-10-12-LOCALAI-001.json",
+  "latest_event_id": "EVT-2026-10-12-LOCALAI-002",
+  "latest_event_path": "events/EVT-2026-10-12-LOCALAI-002.json",
   "events": [
-    {"event_id":"EVT-2026-10-11-EVOLVE-001","timestamp":"2026-10-11T16:20:00+02:00","type":"CORE_EVOLUTION_AND_EVENT_STORAGE_V2_ACTIVATION","state_version":63,"path":"events/EVT-2026-10-11-EVOLVE-001.json","verified_blob_sha":"fb278799714287c03f749990211b5c8d33a60ce5"},
-    {"event_id":"EVT-2026-10-11-EVOLVE-002","timestamp":"2026-10-11T16:45:00+02:00","type":"CORE_EVOLUTION_CHECKPOINT_CLOSURE_WITH_MEMORY_SYNC_BLOCKER","state_version":65,"path":"events/EVT-2026-10-11-EVOLVE-002.json","verified_blob_sha":"9cfbd2e57f6cf67a80ba72727fed0e56ca81a543"},
-    {"event_id":"EVT-2026-10-11-CI-001","timestamp":"2026-10-11T16:56:00+02:00","type":"TECHNICAL_CONTINUOUS_INTEGRATION_ACTIVATED_AND_VERIFIED","state_version":65,"path":"events/EVT-2026-10-11-CI-001.json","verified_blob_sha":"8a6cc25993cd987e827e44aed8128c541e5be27b"},
-    {"event_id":"EVT-2026-10-12-N8N-001","timestamp":"2026-10-11T22:35:06Z","type":"CAPABILITY_VERIFICATION","state_version":66,"path":"events/EVT-2026-10-12-N8N-001.json","verified_blob_sha":"69e4754ce3f7a1afbb83433ec08e21a1b6046219"},
-    {"event_id":"EVT-2026-10-12-ACQ-001","timestamp":"2026-10-11T23:20:49Z","type":"ACQUISITION_SCAN_AND_AUTOMATION_RECONCILIATION","state_version":67,"path":"events/EVT-2026-10-12-ACQ-001.json","verified_blob_sha":"29ef6baca8e0697197d1ad40dfe206ac72862516"},
-    {"event_id":"EVT-2026-10-12-MOD-001","timestamp":"2026-10-12T01:55:00+02:00","type":"WORKANA_PRIORITY_MODERATION_DECISION_READY","state_version":67,"path":"events/EVT-2026-10-12-MOD-001.json","verified_blob_sha":"589e320716a7bb29b28a9ad09450b63c1b942a0e"},
-    {"event_id":"EVT-2026-10-12-DIV-001","timestamp":"2026-10-12T02:00:00+02:00","type":"PARALLEL_BUSINESS_DIVERSIFICATION_ACTIVATED","state_version":68,"path":"events/EVT-2026-10-12-DIV-001.json","verified_blob_sha":"4718c497b0084ec4d753644338a4385037f9389f"},
-    {"event_id":"EVT-2026-10-12-AUTOPROD-001","timestamp":"2026-10-12T11:54:22+02:00","type":"PARALLEL_VEIN_INTERNAL_PRODUCT_RUNTIME_VERIFIED","state_version":69,"path":"events/EVT-2026-10-12-AUTOPROD-001.json","verified_blob_sha":"fdeb0b61aecefb0ff0d0ab4bcad91ffe849161a0"},
-    {"event_id":"EVT-2026-10-12-AUTOPROD-002","timestamp":"2026-10-12T10:21:23Z","type":"CORRECTIVE_RUNTIME_RESTART_PROOF_AND_REVERIFICATION","state_version":70,"path":"events/EVT-2026-10-12-AUTOPROD-002.json","verified_blob_sha":"5663a6d54f593b6bab97090c44b91b2b8d4ea496"},
-    {"event_id":"EVT-2026-10-12-N8NCREATOR-001","timestamp":"2026-10-12T13:35:00+02:00","type":"N8N_CREATOR_TEMPLATE_01_SUBMITTED_PENDING_REVIEW","state_version":70,"path":"events/EVT-2026-10-12-N8NCREATOR-001.json","verified_blob_sha":"6241989866d29bb8aab964353bfbcf3ea7fdf1f4"},
-    {"event_id":"EVT-2026-10-12-PERM-001","timestamp":"2026-10-12T14:00:00+02:00","type":"PERMISSION_DRIFT_HARDENING","state_version":70,"path":"events/EVT-2026-10-12-PERM-001.json","verified_blob_sha":"8b83eb8495f63cf9f3d8a27a28944b94ceacf106"},
-    {"event_id":"EVT-2026-10-12-CAP-001","timestamp":"2026-10-12T14:48:00+02:00","type":"CAPABILITY_EVOLUTION_AND_DRIVE_CONNECTION","state_version":70,"path":"events/EVT-2026-10-12-CAP-001.json","verified_blob_sha":"cec9f7d75337a2a1214e1ae7a65d11a96870b1a7"},
-    {"event_id":"EVT-2026-10-12-INSTR-001","timestamp":"2026-10-12T15:43:15+02:00","type":"PROJECT_INSTRUCTIONS_COMPACT_MASTER_APPLIED_AND_VERIFIED","state_version":70,"path":"events/EVT-2026-10-12-INSTR-001.json","verified_blob_sha":"6abb1e261708cb4a05261eedcce417b8ffcef292"},
-    {"event_id":"EVT-2026-10-12-LOCALAI-001","timestamp":"2026-10-12T19:45:00+02:00","type":"LOCAL_AI_AUDIT_PREPARATION","state_version":70,"path":"events/EVT-2026-10-12-LOCALAI-001.json","verified_blob_sha":"758eadc68a7404df2096874db6eae17a18129b74"}
+    {
+      "event_id": "EVT-2026-10-11-EVOLVE-001",
+      "timestamp": "2026-10-11T16:20:00+02:00",
+      "type": "CORE_EVOLUTION_AND_EVENT_STORAGE_V2_ACTIVATION",
+      "state_version": 63,
+      "path": "events/EVT-2026-10-11-EVOLVE-001.json",
+      "verified_blob_sha": "fb278799714287c03f749990211b5c8d33a60ce5"
+    },
+    {
+      "event_id": "EVT-2026-10-11-EVOLVE-002",
+      "timestamp": "2026-10-11T16:45:00+02:00",
+      "type": "CORE_EVOLUTION_CHECKPOINT_CLOSURE_WITH_MEMORY_SYNC_BLOCKER",
+      "state_version": 65,
+      "path": "events/EVT-2026-10-11-EVOLVE-002.json",
+      "verified_blob_sha": "9cfbd2e57f6cf67a80ba72727fed0e56ca81a543"
+    },
+    {
+      "event_id": "EVT-2026-10-11-CI-001",
+      "timestamp": "2026-10-11T16:56:00+02:00",
+      "type": "TECHNICAL_CONTINUOUS_INTEGRATION_ACTIVATED_AND_VERIFIED",
+      "state_version": 65,
+      "path": "events/EVT-2026-10-11-CI-001.json",
+      "verified_blob_sha": "8a6cc25993cd987e827e44aed8128c541e5be27b"
+    },
+    {
+      "event_id": "EVT-2026-10-12-N8N-001",
+      "timestamp": "2026-10-11T22:35:06Z",
+      "type": "CAPABILITY_VERIFICATION",
+      "state_version": 66,
+      "path": "events/EVT-2026-10-12-N8N-001.json",
+      "verified_blob_sha": "69e4754ce3f7a1afbb83433ec08e21a1b6046219"
+    },
+    {
+      "event_id": "EVT-2026-10-12-ACQ-001",
+      "timestamp": "2026-10-11T23:20:49Z",
+      "type": "ACQUISITION_SCAN_AND_AUTOMATION_RECONCILIATION",
+      "state_version": 67,
+      "path": "events/EVT-2026-10-12-ACQ-001.json",
+      "verified_blob_sha": "29ef6baca8e0697197d1ad40dfe206ac72862516"
+    },
+    {
+      "event_id": "EVT-2026-10-12-MOD-001",
+      "timestamp": "2026-10-12T01:55:00+02:00",
+      "type": "WORKANA_PRIORITY_MODERATION_DECISION_READY",
+      "state_version": 67,
+      "path": "events/EVT-2026-10-12-MOD-001.json",
+      "verified_blob_sha": "589e320716a7bb29b28a9ad09450b63c1b942a0e"
+    },
+    {
+      "event_id": "EVT-2026-10-12-DIV-001",
+      "timestamp": "2026-10-12T02:00:00+02:00",
+      "type": "PARALLEL_BUSINESS_DIVERSIFICATION_ACTIVATED",
+      "state_version": 68,
+      "path": "events/EVT-2026-10-12-DIV-001.json",
+      "verified_blob_sha": "4718c497b0084ec4d753644338a4385037f9389f"
+    },
+    {
+      "event_id": "EVT-2026-10-12-AUTOPROD-001",
+      "timestamp": "2026-10-12T11:54:22+02:00",
+      "type": "PARALLEL_VEIN_INTERNAL_PRODUCT_RUNTIME_VERIFIED",
+      "state_version": 69,
+      "path": "events/EVT-2026-10-12-AUTOPROD-001.json",
+      "verified_blob_sha": "fdeb0b61aecefb0ff0d0ab4bcad91ffe849161a0"
+    },
+    {
+      "event_id": "EVT-2026-10-12-AUTOPROD-002",
+      "timestamp": "2026-10-12T10:21:23Z",
+      "type": "CORRECTIVE_RUNTIME_RESTART_PROOF_AND_REVERIFICATION",
+      "state_version": 70,
+      "path": "events/EVT-2026-10-12-AUTOPROD-002.json",
+      "verified_blob_sha": "5663a6d54f593b6bab97090c44b91b2b8d4ea496"
+    },
+    {
+      "event_id": "EVT-2026-10-12-N8NCREATOR-001",
+      "timestamp": "2026-10-12T13:35:00+02:00",
+      "type": "N8N_CREATOR_TEMPLATE_01_SUBMITTED_PENDING_REVIEW",
+      "state_version": 70,
+      "path": "events/EVT-2026-10-12-N8NCREATOR-001.json",
+      "verified_blob_sha": "6241989866d29bb8aab964353bfbcf3ea7fdf1f4"
+    },
+    {
+      "event_id": "EVT-2026-10-12-PERM-001",
+      "timestamp": "2026-10-12T14:00:00+02:00",
+      "type": "PERMISSION_DRIFT_HARDENING",
+      "state_version": 70,
+      "path": "events/EVT-2026-10-12-PERM-001.json",
+      "verified_blob_sha": "8b83eb8495f63cf9f3d8a27a28944b94ceacf106"
+    },
+    {
+      "event_id": "EVT-2026-10-12-CAP-001",
+      "timestamp": "2026-10-12T14:48:00+02:00",
+      "type": "CAPABILITY_EVOLUTION_AND_DRIVE_CONNECTION",
+      "state_version": 70,
+      "path": "events/EVT-2026-10-12-CAP-001.json",
+      "verified_blob_sha": "cec9f7d75337a2a1214e1ae7a65d11a96870b1a7"
+    },
+    {
+      "event_id": "EVT-2026-10-12-INSTR-001",
+      "timestamp": "2026-10-12T15:43:15+02:00",
+      "type": "PROJECT_INSTRUCTIONS_COMPACT_MASTER_APPLIED_AND_VERIFIED",
+      "state_version": 70,
+      "path": "events/EVT-2026-10-12-INSTR-001.json",
+      "verified_blob_sha": "6abb1e261708cb4a05261eedcce417b8ffcef292"
+    },
+    {
+      "event_id": "EVT-2026-10-12-LOCALAI-001",
+      "timestamp": "2026-10-12T19:45:00+02:00",
+      "type": "LOCAL_AI_AUDIT_PREPARATION",
+      "state_version": 70,
+      "path": "events/EVT-2026-10-12-LOCALAI-001.json",
+      "verified_blob_sha": "758eadc68a7404df2096874db6eae17a18129b74"
+    },
+    {
+      "event_id": "EVT-2026-10-12-LOCALAI-002",
+      "timestamp": "2026-10-12T18:29:00Z",
+      "type": "LOCAL_CAPABILITY_SCORER_SYNTHETIC_VERIFICATION",
+      "state_version": 70,
+      "path": "events/EVT-2026-10-12-LOCALAI-002.json",
+      "verified_blob_sha": "cbbe7592b1e41c020d601a65add49ede0eaa1692"
+    }
   ],
-  "rule":"Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated."
+  "rule": "Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated."
 }
