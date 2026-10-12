@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-LOCALCODER-003",
+  "timestamp": "2026-10-12T23:24:00+02:00",
+  "type": "LOCAL_AI_CODER_PYTHON_RUNTIME_AUTHORIZED",
+  "state_version": 70,
+  "experiment": "LOCAL-AI-CODER-001",
+  "action": "Kael explicitly authorized downloading, installing and using Python on the local PC to unblock the unchanged preregistered benchmark.",
+  "authorization": {
+    "install": "official Python 3 runtime only",
+    "cash_spend_max_eur": 0,
+    "pip_packages": false,
+    "additional_tools": false,
+    "additional_models": false,
+    "cloud_or_paid_api_fallback": false,
+    "browser_agents": false,
+    "external_actions": false,
+    "benchmark_contract_change": false
+  },
+  "existing_local_state_from_prior_log": {
+    "ollama": "installed 0.40.3",
+    "model": "qwen2.5-coder:7b-instruct already downloaded"
+  },
+  "result": "AUTHORIZED_NOT_YET_EXECUTED",
+  "financial_impact_eur": 0,
+  "authority_effect": "One-off Python runtime installation/use authority for LOCAL-AI-CODER-001 only; no standing software-install authority created.",
+  "truth_limit": "Authorization does not prove Python installation, benchmark execution, coding quality or quota savings."
+}
