@@ -1,0 +1,32 @@
+{
+  "event_id": "EVT-2026-10-12-UGC-001",
+  "timestamp": "2026-10-12T19:25:00+02:00",
+  "type": "AI_UGC_PORTFOLIO_GAP_AND_PAID_HIGGSFIELD_ROUTE",
+  "state_version": 70,
+  "status": "VERIFIED_PARTIAL_ROUTE",
+  "facts": [
+    "Buyer-initiated demand for AI-UGC/performance creative is verified in current marketplace briefs.",
+    "Nexia still has no portfolio-grade AI-UGC video output verified under a measured <=4h production path.",
+    "A Higgsfield plugin is available in ChatGPT but was not installed or connected in this checkpoint.",
+    "Higgsfield image/video generations consume credits; text Free Mode is zero-credit.",
+    "Higgsfield states generations outside higgsfield.ai, including MCP/automated integrations, always deduct credits regardless of Unlimited/free-generation web entitlements.",
+    "Adobe is installed/operational, but no reusable user Creative Cloud UGC/Higgsfield assets were found in the checked search.",
+    "No AI-UGC video was generated, published, submitted to a buyer, sold, or represented as prior client work."
+  ],
+  "decision": {
+    "portfolio_gap": "OPEN",
+    "higgsfield": "EXISTING_OR_PAID_RESOURCE_TO_AUDIT_BEFORE_USE; DO_NOT_ASSUME_FREE",
+    "preferred_next_route": "Verify Kael's existing Higgsfield plan/credits/assets and any web-only Unlimited/free generation entitlement before consuming credits; use plugin primarily for integration if it reduces work enough to justify credit consumption.",
+    "spend_authorized": false,
+    "credit_purchase_authorized": false,
+    "external_publication_authorized": false
+  },
+  "economics": {
+    "cash_spend_this_event_eur": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "profit_eur": 0
+  },
+  "artifact": "NEXIA_VETA_AI_UGC_PORTFOLIO_GAP_2026-10-12.md",
+  "truth_limit": "Paid-plan availability or existing credits do not prove a zero-cost production path, portfolio quality, demand conversion, sale, or profit."
+}
