@@ -1,0 +1,37 @@
+{
+  "event_id": "EVT-2026-10-12-DIV-001",
+  "timestamp": "2026-10-12T02:00:00+02:00",
+  "type": "PARALLEL_BUSINESS_DIVERSIFICATION_ACTIVATED",
+  "state_version": 68,
+  "facts": {
+    "workana_priority_moderation_decision": "DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND",
+    "primary_monetization_experiment": "EXP-AUTO-001",
+    "parallel_research_policy": "MAX_TWO_ACTIVE_RESEARCH_VEINS",
+    "active_parallel_veins": [
+      "VETA-AI-UGC-001",
+      "VETA-AUTO-PRODUCT-001"
+    ],
+    "generic_etsy_template_path": "NO_GO_GENERIC",
+    "parallel_radar_automation": "REACTIVATED_AS_NEXIA_PARALLEL_BUSINESS_RADAR",
+    "automation_inventory_after_activation": {
+      "active": 3,
+      "paused": 6,
+      "completed": 1
+    },
+    "spend_eur": 0,
+    "new_accounts": 0,
+    "external_contacts": 0,
+    "publications": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "reconciled_net_profit_eur": 0
+  },
+  "evidence": {
+    "parallel_veins_artifact": "NEXIA_PARALLEL_VEINS_2026-10-12.md",
+    "parallel_veins_commit": "d77b6f83de5e0292f4b1112bc83bd2eb019bc4b4"
+  },
+  "learning": "Nexia should diversify through a portfolio architecture: one active monetization experiment plus at most two parallel falsification tracks. AI UGC/performance creative service shows current high-ticket recurring demand but has a portfolio/tooling capability gap. Specialized n8n reliability products show paid market evidence and reuse existing verified technical assets, while generic Etsy/Canva templates are rejected due to severe commoditization.",
+  "commercial_stage_change": "NONE",
+  "authority_change": "RESEARCH_SCOPE_EXPANDED_BY_KAEL_NO_SPEND_OR_CONTACT_AUTHORITY_EXPANDED",
+  "next_action": "Wait standard Workana moderation at zero cost while falsifying VETA-AI-UGC-001 and VETA-AUTO-PRODUCT-001. Promote, pause or kill each vein only by pre-registered evidence gates."
+}
