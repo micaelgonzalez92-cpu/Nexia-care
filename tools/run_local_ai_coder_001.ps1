@@ -27,16 +27,70 @@ function Test-OllamaApi {
     }
 }
 
+function Test-PythonCandidate {
+    param(
+        [string]$Exe,
+        [string[]]$PrefixArgs = @()
+    )
+    if (-not $Exe) { return $null }
+    if ($Exe -match "\\WindowsApps\\") { return $null }
+    try {
+        $probeArgs = @($PrefixArgs) + @("-c", "import sys; print(sys.executable)")
+        $output = & $Exe @probeArgs 2>$null
+        if ($LASTEXITCODE -eq 0 -and $output) {
+            return [pscustomobject]@{ Exe = $Exe; PrefixArgs = @($PrefixArgs); Runtime = ($output | Select-Object -Last 1) }
+        }
+    } catch { }
+    return $null
+}
+
+function Get-UsablePython {
+    $py = Get-Command py -ErrorAction SilentlyContinue
+    if ($py) {
+        $hit = Test-PythonCandidate -Exe $py.Source -PrefixArgs @("-3")
+        if ($hit) { return $hit }
+    }
+
+    foreach ($name in @("python3", "python")) {
+        $cmd = Get-Command $name -ErrorAction SilentlyContinue
+        if ($cmd) {
+            $hit = Test-PythonCandidate -Exe $cmd.Source
+            if ($hit) { return $hit }
+        }
+    }
+
+    $patterns = @(
+        (Join-Path $env:LOCALAPPDATA "Programs\Python\Python*\python.exe"),
+        (Join-Path $env:ProgramFiles "Python*\python.exe")
+    )
+    if (${env:ProgramFiles(x86)}) {
+        $patterns += (Join-Path ${env:ProgramFiles(x86)} "Python*\python.exe")
+    }
+    foreach ($pattern in $patterns) {
+        foreach ($candidate in (Get-ChildItem -Path $pattern -File -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName)) {
+            $hit = Test-PythonCandidate -Exe $candidate
+            if ($hit) { return $hit }
+        }
+    }
+    return $null
+}
+
 Write-Host "NEXIA LOCAL-AI-CODER-001"
 Write-Host "Scope: Ollama + $Model only; cash spend EUR0."
 
-# Capacity gate: model package is ~4.7 GB; keep conservative local headroom.
 $systemDrive = Get-PSDrive -Name $env:SystemDrive.TrimEnd(':')
 $freeGiB = [math]::Round($systemDrive.Free / 1GB, 2)
 Write-Host "System drive free space: $freeGiB GiB"
 if ($freeGiB -lt 10) {
     throw "STOP: less than 10 GiB free on system drive; benchmark not started."
 }
+
+# Verify the preregistered harness runtime before any large model download.
+$python = Get-UsablePython
+if (-not $python) {
+    throw "STOP: no usable Python 3 runtime found. Windows Store execution aliases are not accepted. No runtime was installed because Python is outside this authorization. Model download/benchmark not started by this run."
+}
+Write-Host "Usable Python runtime found: $($python.Runtime)"
 
 $ollamaExe = Get-OllamaExe
 if (-not $ollamaExe) {
@@ -67,13 +121,17 @@ if (-not (Test-OllamaApi)) {
     if (-not $ready) { throw "Ollama local API did not become ready within 30 seconds." }
 }
 
-Write-Host "Downloading/verifying exact authorized model: $Model"
-& $ollamaExe pull $Model
-if ($LASTEXITCODE -ne 0) { throw "Model pull failed with exit code $LASTEXITCODE" }
-
 $modelList = (& $ollamaExe list | Out-String)
-if ($modelList -notmatch [regex]::Escape("qwen2.5-coder:7b-instruct")) {
-    throw "Authorized model is not visible in ollama list after pull."
+if ($modelList -match [regex]::Escape($Model)) {
+    Write-Host "Authorized model already present; no re-download: $Model"
+} else {
+    Write-Host "Downloading/verifying exact authorized model: $Model"
+    & $ollamaExe pull $Model
+    if ($LASTEXITCODE -ne 0) { throw "Model pull failed with exit code $LASTEXITCODE" }
+    $modelList = (& $ollamaExe list | Out-String)
+    if ($modelList -notmatch [regex]::Escape($Model)) {
+        throw "Authorized model is not visible in ollama list after pull."
+    }
 }
 
 New-Item -ItemType Directory -Path $OutputDir -Force | Out-Null
@@ -81,21 +139,10 @@ $harnessPath = Join-Path $OutputDir "nexia_local_ai_coder_001_benchmark.py"
 Write-Host "Downloading commit-pinned Nexia benchmark harness..."
 Invoke-WebRequest -Uri $HarnessUrl -OutFile $harnessPath -UseBasicParsing
 
-$pythonCmd = $null
-$pythonArgs = @()
-if (Get-Command py -ErrorAction SilentlyContinue) {
-    $pythonCmd = (Get-Command py).Source
-    $pythonArgs = @("-3", $harnessPath)
-} elseif (Get-Command python -ErrorAction SilentlyContinue) {
-    $pythonCmd = (Get-Command python).Source
-    $pythonArgs = @($harnessPath)
-} else {
-    throw "STOP: Python 3 was not found. No additional runtime was installed because it is outside this authorization."
-}
-
 $env:NEXIA_LOCAL_AI_CODER_OUTPUT = $OutputDir
+$pythonArgs = @($python.PrefixArgs) + @($harnessPath)
 Write-Host "Running five-task local benchmark. Scored inference endpoint: 127.0.0.1 only."
-& $pythonCmd @pythonArgs
+& $python.Exe @pythonArgs
 $benchmarkExit = $LASTEXITCODE
 
 $resultPath = Join-Path $OutputDir "benchmark-results.json"
