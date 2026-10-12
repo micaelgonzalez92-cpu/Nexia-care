@@ -1,7 +1,7 @@
 # NEXIA CORE — AUTHORITY & ACTION PERMISSION MATRIX
 
 Status: CANONICAL / ACTIVE
-Version: 1.0
+Version: 1.1
 Effective date: 2026-10-12
 Purpose: convert Kael authority + technical capability into one deterministic pre-action router. This file does **not** grant new authority. It narrows execution to the safest interpretation of existing authority.
 
@@ -51,10 +51,12 @@ This section records observed technical access; it does not override the authori
 
 ### GitHub
 - Connection: CONNECTED.
-- ChatGPT app permission: `Allow all actions` (app-specific override).
-- Observed capability: repository read/write, file create/update/delete, commits/branches/PR/issues, CI/run/log inspection within exposed connector functions.
+- ChatGPT app permission: `Use my default`.
+- Effective inherited global permission: `Allow low-risk actions`.
+- Previous app-specific override `Allow all actions` was removed by explicit Kael instruction on 2026-10-12.
+- Observed capability: repository read/write, file create/update/delete, commits/branches/PR/issues, CI/run/log inspection within exposed connector functions, subject to the current ChatGPT permission layer.
 - Limits: plugin/connector does not imply unrestricted GitHub administration, secrets access or deployment access.
-- Effective Nexia rule: internal canonical repo work may be GREEN; external/public business publication or risky destructive changes still require the relevant Kael authority gate.
+- Effective Nexia rule: internal canonical repo work may be GREEN when permitted by the platform; external/public business publication or risky destructive changes still require the relevant Kael authority gate.
 
 ### Gmail
 - Connection: CONNECTED.
@@ -145,6 +147,9 @@ Re-check the technical permission snapshot when:
 - a previously blocked authenticated browser flow starts working;
 - a command or automation begins performing a new action class;
 - Kael grants or revokes a standing authorization.
+
+Latest verified drift:
+- 2026-10-12: GitHub changed from app-specific `Allow all actions` to `Use my default`, inheriting global `Allow low-risk actions`; effect = reduced technical exposure, no expansion or reduction of Kael's business authority.
 
 Do not re-audit unchanged tools every cycle. Persist only material changes.
 
