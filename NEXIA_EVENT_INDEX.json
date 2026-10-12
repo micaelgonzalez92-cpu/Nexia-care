@@ -8,8 +8,8 @@
     "boundary_blob_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
   "event_directory": "events/",
-  "latest_event_id": "EVT-2026-10-12-DIV-001",
-  "latest_event_path": "events/EVT-2026-10-12-DIV-001.json",
+  "latest_event_id": "EVT-2026-10-12-AUTOPROD-001",
+  "latest_event_path": "events/EVT-2026-10-12-AUTOPROD-001.json",
   "events": [
     {
       "event_id": "EVT-2026-10-11-EVOLVE-001",
@@ -66,6 +66,14 @@
       "state_version": 68,
       "path": "events/EVT-2026-10-12-DIV-001.json",
       "verified_blob_sha": "4718c497b0084ec4d753644338a4385037f9389f"
+    },
+    {
+      "event_id": "EVT-2026-10-12-AUTOPROD-001",
+      "timestamp": "2026-10-12T11:54:22+02:00",
+      "type": "PARALLEL_VEIN_INTERNAL_PRODUCT_RUNTIME_VERIFIED",
+      "state_version": 69,
+      "path": "events/EVT-2026-10-12-AUTOPROD-001.json",
+      "verified_blob_sha": "fdeb0b61aecefb0ff0d0ab4bcad91ffe849161a0"
     }
   ],
   "rule": "Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated."
