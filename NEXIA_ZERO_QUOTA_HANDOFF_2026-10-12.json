@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-12",
+  "canonical_state": {"version": 70, "changed": false},
+  "initiative": "NEXIA_ZERO_QUOTA_EXECUTION_V0_1",
+  "status": "ROUTER_AND_GITHUB_ACTIONS_OFFLOAD_VERIFIED",
+  "last_completed_verified_action": "Implemented deterministic execution router, capability snapshot and queue; integrated router tests into Nexia CI; GitHub Actions run 38304533964 completed success with router test step success.",
+  "last_user_facing_handoff": "Zero-quota v0.1 is operational for deterministic CI routing; Work/Codex remain scarce fallbacks while LOCAL_AI and LOCAL_BROWSER are not verified.",
+  "human_action_required_now": false,
+  "pending_human_action": null,
+  "surface": null,
+  "device": null,
+  "success_check": "GitHub Actions run 38304533964 conclusion success; 12/12 synthetic router tests pass.",
+  "return_to_nexia": null,
+  "resume_required_reads": [
+    "NEXIA_STATE.json",
+    "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX.json",
+    "events/EVT-2026-10-12-ZQ-001.json",
+    "events/EVT-2026-10-12-LOCALBENCH-003.json",
+    "NEXIA_ZERO_QUOTA_EXECUTION_V0_1.md",
+    "NEXIA_EXECUTION_CAPABILITIES.json",
+    "NEXIA_EXECUTION_QUEUE.json"
+  ],
+  "resume_from": "Do not spend scarce Work/Codex quota on deterministic tests, public research or local image inference. Continue UGC-PORTFOLIO-001 through LOCAL_GPU when local execution is available. Next zero-quota expansion candidate is LOCAL_AI benchmark, then deterministic LOCAL_BROWSER/Playwright; each requires separate bounded install/benchmark authorization before promotion.",
+  "truth_limit": "Router/CI verification does not prove measured quota savings, autonomous execution, local coding AI, local browser control, demand, sale or profit.",
+  "economics": {"cash_spend_eur": 0, "revenue_eur": 0, "profit_eur": 0},
+  "agentic_offload_rate": "NOT_INSTRUMENTED"
+}
