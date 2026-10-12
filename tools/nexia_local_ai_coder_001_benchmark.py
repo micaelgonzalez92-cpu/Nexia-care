@@ -221,11 +221,20 @@ def main() -> int:
         "human_steering_minutes_recorded": 0,
         "human_steering_lte_15m": True,
     }
+    boolean_gate_keys = (
+        "at_least_4_of_5",
+        "bugfix_pass",
+        "no_oom_or_crash",
+        "median_response_lte_120s",
+        "automated_run_no_paid_api_fallback",
+        "human_steering_lte_15m",
+    )
+    gate_pass = all(bool(gate[key]) for key in boolean_gate_keys)
     report = {
         "schema_version": 1,
         "experiment": "LOCAL-AI-CODER-001",
         "model": MODEL,
-        "result": "PASS" if all(gate.values()) else "FAIL",
+        "result": "PASS" if gate_pass else "FAIL",
         "tasks_passed": passed_count,
         "tasks_total": 5,
         "median_model_response_seconds": median_seconds,
@@ -235,6 +244,7 @@ def main() -> int:
         "ollama_version": command_output(["ollama", "--version"]),
         "ollama_ps": command_output(["ollama", "ps"]),
         "gate": gate,
+        "gate_boolean_keys": list(boolean_gate_keys),
         "tasks": results,
         "errors": errors,
         "network_boundary": "Scored inference calls only http://127.0.0.1:11434; no cloud/API fallback in harness.",
