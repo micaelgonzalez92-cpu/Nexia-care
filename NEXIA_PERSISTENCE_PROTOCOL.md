@@ -1,13 +1,13 @@
 # NEXIA CORE — PERSISTENCE & CHECKPOINT PROTOCOL
 
 Status: ACTIVE
-Protocol version: 2.0
-Effective: 2026-10-11
+Protocol version: 2.1
+Effective: 2026-10-12
 Cost: €0
 
 ## Canonical hierarchy
 1. `NEXIA_STATE.json` — canonical operational state.
-2. `NEXIA_LIVE.json` — current execution visibility; never overrides STATE.
+2. `NEXIA_LIVE.json` — current execution visibility and exact session handoff; never overrides STATE.
 3. `NEXIA_MEMORY.md` — learning ledger; never overrides STATE.
 4. `events/*.json` — immutable event files for new critical transitions.
 5. `NEXIA_EVENT_LOG.jsonl` — legacy historical event ledger; READ-ONLY after Event Storage v2 activation.
@@ -62,32 +62,59 @@ Every critical checkpoint identifies:
 - financial impact;
 - rollback/recovery reference.
 
+## Exact session handoff rule
+Every material chat/session that ends, reaches a context limit, changes execution surface, or leaves a pending Kael action must preserve an exact resume anchor in `NEXIA_LIVE.json`.
+
+The resume anchor must contain at least:
+- `last_completed_verified_action` — the last action that actually happened and was verified;
+- `last_user_facing_handoff` — the exact pending task/status communicated to Kael;
+- `human_action_required_now` — true/false;
+- `pending_human_action` — exact bounded action or null;
+- `surface` and `device` when human action exists;
+- `success_check` and `return_to_nexia` when human action exists;
+- `resume_required_reads` — the specific repository artifacts needed to reconstruct the decision, not merely broad state;
+- `resume_from` — the exact next operational point;
+- `truth_limit` — what must not be inferred from the handoff.
+
+A conversation transcript is not the persistence layer. If a material decision/task exists only in chat and is not represented in canonical/derived persistence, continuity is NOT VERIFIED.
+
+`NEXIA_LIVE.json` may describe a newer verified execution delta than the last canonical STATE. Such a delta does not override STATE economics/authority, but it MUST be read before declaring the current Human Gate or next action.
+
 ## Integrity
 A current recovery checkpoint should expose:
 - canonical STATE version/blob;
 - BOOT state version/blob match;
-- LIVE operational phase match;
+- LIVE operational phase and exact session handoff;
 - MEMORY current canonical notice;
 - current BACKUP state version;
 - latest immutable event ID/path;
 - legacy event-log boundary SHA;
 - checkpoint/readback status.
 
-A mismatch means the newest verified canonical STATE remains authoritative and stale derived artifacts must be regenerated.
+A mismatch means the newest verified canonical STATE remains authoritative for canonical business state, while verified later LIVE/events must be reconciled before deciding the next action. Stale derived artifacts must be regenerated.
 
 ## Backup rule
 MASTER_BACKUP is generated from STATE + MEMORY + verified repository facts. It never overrides STATE. Git history preserves older backups; current backup should emphasize current recovery state rather than accumulate unlimited stale snapshots.
 
 ## Recovery
-On startup:
+On startup, before saying Nexia is fully recovered or selecting the next action:
 1. Read `NEXIA_BOOT.json`.
 2. Read `NEXIA_STATE.json`; compare version/hash with BOOT.
-3. Read current `NEXIA_MEMORY.md` when learning context is needed.
-4. Read `NEXIA_EVENT_INDEX.json`; if present, inspect the latest relevant immutable event file.
-5. Treat `NEXIA_EVENT_LOG.jsonl` as historical events before the v2 boundary.
-6. Read MASTER_BACKUP when additional recovery context is required.
-7. Reconcile stale derived artifacts.
-8. Resume current mission; do not restart discarded work.
+3. Read `NEXIA_LIVE.json` MANDATORILY. Recover `last_user_facing_handoff`, `human_action_required_now`, `pending_human_action`, `resume_required_reads` and `resume_from`.
+4. Read every artifact listed in `NEXIA_LIVE.json.resume_required_reads` that exists and is relevant to the current handoff.
+5. Read `NEXIA_EVENT_INDEX.json`; inspect every verified event newer than the STATE checkpoint that can change permissions, capabilities, Human Gates, current execution state or next action—not only the single latest event.
+6. Read current `NEXIA_MEMORY.md` when learning context is needed.
+7. Treat `NEXIA_EVENT_LOG.jsonl` as historical events before the v2 boundary.
+8. Read MASTER_BACKUP when additional recovery context is required.
+9. Reconcile stale derived artifacts.
+10. Only then declare mission, Human Gate, last verified action and next action. Resume from the exact handoff; do not restart discarded/completed work.
+
+### Recovery precedence for the next action
+- STATE remains canonical for mission/economics/authority unless a newer atomic STATE supersedes it.
+- Verified immutable events and LIVE may contain later operational facts and handoffs that STATE has not absorbed yet.
+- A pending explicit Human Gate in LIVE/event evidence must not be silently replaced by `NO_IMMEDIATE_ACTION_REQUIRED` merely because an older STATE says so.
+- If the latest chat handoff conflicts with older derived docs, preserve the latest verified evidence and flag the reconciliation need.
+- Never claim `RECOVERY COMPLETE` while `resume_required_reads` remain unread or a material post-STATE event is unexamined.
 
 ## Failure safety
 If any write fails:
@@ -102,16 +129,20 @@ If any write fails:
 Persistence changes never grant business authorization. Spending, external contact, publication, irreversible deletion and material risk remain Kael-controlled.
 
 ## Recovery test
-A fresh session should identify from BOOT + STATE, with event/memory context as needed:
+A fresh session should identify from BOOT + STATE + mandatory LIVE + required post-STATE event/context reads:
 - mission;
 - active experiment;
 - current commercial stage;
 - economics/guardrails;
-- Human Gate;
+- exact current Human Gate;
 - active blockers;
-- last verified material action;
+- last completed verified action;
+- last user-facing handoff;
+- exact resume point;
 - next safe action;
 - what is authorized versus merely available.
 
+PASS requires matching the previous session's actual final handoff, not merely reconstructing the same broad mission.
+
 ## Definition of done
-Persistence is healthy when current STATE/BOOT/LIVE/MEMORY/BACKUP agree on the operational state and the latest critical transition is durably represented either in the frozen legacy JSONL or an immutable v2 event file. Derived indexes may lag temporarily but must never override STATE.
+Persistence is healthy when current STATE/BOOT/LIVE/MEMORY/BACKUP agree on canonical facts or explicitly declare verified deltas, the latest critical transitions are durably represented, and a fresh session can reproduce the exact pending Human Gate/resume point without needing the prior chat transcript.
