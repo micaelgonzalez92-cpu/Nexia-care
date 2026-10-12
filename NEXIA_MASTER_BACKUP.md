@@ -1,7 +1,7 @@
 # NEXIA MASTER BACKUP — CURRENT RECOVERY SNAPSHOT
 
 Updated: 2026-10-12
-Status: **STATE v69 CANONICAL / AUTO-PRODUCT PREPARED INTERNAL SKU / STANDARD WORKANA MODERATION / AI-UGC WATCH / EVENT STORAGE v2 OPERATIONAL / MEMORY DERIVED STALE**
+Status: **STATE v69 CANONICAL / AUTO-PRODUCT PREPARED INTERNAL SKU / CREATOR SUBMISSION #1 PREPARED / STANDARD WORKANA MODERATION / AI-UGC WATCH / EVENT STORAGE v2 OPERATIONAL / MEMORY DERIVED STALE**
 Checkpoint: `CP-2026-10-12-AUTOPROD-001`
 
 Historical snapshots remain recoverable from Git history and never override canonical STATE.
@@ -9,7 +9,7 @@ Historical snapshots remain recoverable from Git history and never override cano
 ## Canonical recovery map
 - STATE v69: `a4e0a54e9867364d055e02d03166e43ea3f911c5`
 - BOOT v44: `7fdfbac0e84ee2ef82bdc1b6f95f2e272b5deb45`
-- LIVE: `b43aab2dff4e075bf032b7716d1e18e06a182577`
+- LIVE: `77140159292ff7c74e1922a855fe235f499850c4`
 - MEMORY last verified: `443137fd25747baa2c25a403b4ca47a38b6dee7a` — derived ledger remains stale at v63; STATE v69 overrides it.
 - Commercial pipeline: `92e53d402bf53987275b6d56e17586847a8907e2`
 - Event index: `3c543226d2d5a2480604b3529ec2b1f1731749ef`
@@ -45,7 +45,7 @@ Product: `Lead Intake Reliability Kit for n8n`.
 Directory: `products/lead-intake-reliability-kit/`.
 Market report: `NEXIA_VETA_AUTO_PRODUCT_MARKET_FALSIFICATION_2026-10-12.md`.
 Validation design: `NEXIA_VETA_AUTO_PRODUCT_VALIDATION_EXPERIMENT_2026-10-12.md`.
-Price hypothesis for first cohort: USD49 one-time.
+Price hypothesis for first paid cohort: USD49 one-time.
 
 Dedicated runtime proof:
 - workflow `.github/workflows/n8n-product-runtime-smoke.yml`;
@@ -69,6 +69,18 @@ Truth boundary: internal runtime PASS is not external-user installation, buyer d
 
 No n8n Creator account exists. No store exists. No product/template has been published. External users = 0. Paid sales = 0. Revenue = EUR0. Realized profit = EUR0.
 
+## Creator submission package
+First free-template submission package is prepared internally:
+- artifact: `products/lead-intake-reliability-kit/creator-submission-01.md`;
+- title: `Reliable Lead Intake: Normalize, Validate & Prepare Human Review via Webhook`;
+- intended price: FREE;
+- workflow: `products/lead-intake-reliability-kit/workflows/lead-intake-human-review.json`;
+- status: `PREPARED_NOT_SUBMITTED`.
+
+Current n8n Creator guidance says new creators submit one template at a time, reviews are usually within a week, and three approved templates are required before verified-creator status and the option to publish paid templates.
+
+The Creator account has NOT been created and the template has NOT been submitted or published. That remains a Human Gate.
+
 ## Product validation gate
 The first paid-cohort hypothesis is locked at USD49. Commercial validation requires real settled sales, not downloads/page views. Initial gate:
 - >=5 settled paid sales at >=USD39 equivalent;
@@ -76,13 +88,6 @@ The first paid-cohort hypothesis is locked at USD49. Commercial validation requi
 - median support <=20 minutes/sale;
 - positive contribution after platform fees and support labor;
 - no critical installation/data/security defect.
-
-The preferred first distribution experiment is the n8n Creator route. Current n8n rules require three approved templates before a creator can publish paid templates. The proposed free ladder is:
-1. `Reliable Lead Intake — Normalize + Human Review`;
-2. `Persistent Lead Dedup Guard with n8n Data Tables`;
-3. `Authenticated Webhook Intake + Error-Safe Validation`.
-
-Account creation/submission/publication remains a Human Gate.
 
 ## VETA-AI-UGC-001
 Current classification: `WATCH / PORTFOLIO_GAP`.
@@ -110,5 +115,8 @@ Not authorized:
 - ads or other spend;
 - additional marketplace proposals/contact.
 
-## Next safe action
-Prepare the **first n8n Creator free-template submission package internally** at zero cost. Do not create the account or submit/publish without explicit Kael authorization. Continue standard Workana moderation wait. Keep AI-UGC on watch unless new evidence materially improves its economics.
+## Next material action
+The next AUTO-PRODUCT step is now a Human Gate, not more internal engineering:
+`Authorize creation/use of an n8n Creator account and submission of the prepared first FREE template, with EUR0 spend and no paid-product publication.`
+
+Until authorized, continue standard Workana moderation wait and keep AI-UGC on watch.
