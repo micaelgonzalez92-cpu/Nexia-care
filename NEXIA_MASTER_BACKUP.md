@@ -1,98 +1,82 @@
 # NEXIA MASTER BACKUP — CURRENT RECOVERY SNAPSHOT
 
 Updated: 2026-10-12
-Status: **STATE v67 CANONICAL / ACQUISITION REVERIFIED / AUTOMATIONS RECONCILED / N8N RUNTIME + PERSISTENT DEDUP VERIFIED / EVENT STORAGE v2 OPERATIONAL / MEMORY DERIVED STALE**
-Checkpoint: `CP-2026-10-12-ACQ-001`
+Status: **STATE v68 CANONICAL / STANDARD WORKANA MODERATION / TWO PARALLEL BUSINESS FALSIFICATION VEINS ACTIVE / EVENT STORAGE v2 OPERATIONAL / MEMORY DERIVED STALE**
+Checkpoint: `CP-2026-10-12-DIV-001`
 
 Historical snapshots remain recoverable from Git history and never override canonical STATE.
 
 ## Canonical recovery map
-- STATE v67: `599eb1b2fe5f3760f4e2bd72bdef8fce8f56a56b`
-- BOOT v42: `d085b9e780dc9239d5ea421dff2254470f41e9a3`
-- LIVE: `d662c1afe0c5856a592d24b3cbe3b2548af1faf9`
-- MEMORY last verified: `443137fd25747baa2c25a403b4ca47a38b6dee7a` — derived ledger remains on v63 header because update was blocked by tool safety; STATE v67 overrides it.
+- STATE v68: `19073661e978f4e3a9d658875d96d1da5df319ee`
+- BOOT v43: `65ea32541156f43454c154a74f7757ae7997232b`
+- LIVE: `92d2530294b36005cd62243641a0349c41ae3916`
+- MEMORY last verified: `443137fd25747baa2c25a403b4ca47a38b6dee7a` — derived ledger remains stale at v63; STATE v68 overrides it.
 - Commercial pipeline: `92e53d402bf53987275b6d56e17586847a8907e2`
+- Event index: `c5f8394dc32d8203591afd3435eaaf154874f77e`
+- Latest verified event: `events/EVT-2026-10-12-DIV-001.json`, blob `4718c497b0084ec4d753644338a4385037f9389f`
+- Parallel veins artifact: `NEXIA_PARALLEL_VEINS_2026-10-12.md`, commit `d77b6f83de5e0292f4b1112bc83bd2eb019bc4b4`
 - Persistence protocol v2: `69f18157e693fb71739fa1230286acdf5134b370`
-- Event index: `aa0ef1ff5cdf2819d8875e0e3a807b42af8f4d42`
-- Latest verified event: `events/EVT-2026-10-12-ACQ-001.json`, blob `29ef6baca8e0697197d1ad40dfe206ac72862516`
-- Latest acquisition scan: `NEXIA_EXP_AUTO_001_ACQUISITION_SCAN_2026-10-12_01.md`, blob `648a256797b4729e618b03c5b3e8908b1859d778`
-- n8n persistence evidence: `NEXIA_EXP_AUTO_001_N8N_PERSISTENT_DEDUP_2026-10-12.md`, blob `70ef60e51f5b8f7fda946216f39d2db42ecf2ced`
 - Legacy JSONL boundary: `84db0ce6ccd1878be9ff48a770bb8b6f1e433d72`, READ-ONLY.
 
-## Mission and experiment
-Mission: `MISSION-OPPORTUNITY-ENGINE-001`.
-Active monetization experiment: `EXP-AUTO-001 — Lead Intake Reliability Sprint`.
-Phase: `VETA / PRE-VALIDACION COMERCIAL`.
-Commercial stage did **not** advance because acquisition research and technical capability are not demand, payment or profit.
+## Mission and portfolio architecture
+Mission remains `MISSION-OPPORTUNITY-ENGINE-001`: build a repeatable engine that discovers, validates and monetizes business opportunities until sustainable after-tax net profit exceeds EUR1000/month.
 
-## Commercial truth
-Huescaventura / Workana remains the primary qualified opportunity.
-- public status reverified 2026-10-12: OPEN / EVALUATING PROPOSALS;
-- status freshness target: 24h;
-- buyer budget: €200–€300;
-- latest public evidence checked in this batch showed 1 visible proposal;
-- authorized proposal: €300;
-- proposal status: `AUTHORIZED_NOT_SUBMITTED`;
-- Workana profile approval: NOT VERIFIED;
-- Gmail check 2026-10-12: no approval/rejection decision email found;
-- buyer response: none;
-- contract: none;
-- settled payment: €0;
-- revenue: €0;
-- reconciled net profit: €0.
+Only one monetization experiment is active: `EXP-AUTO-001 — Lead Intake Reliability Sprint`.
 
-Estimate only: 20% initial Workana commission assumption, €240 after platform, €60 labor assumption, €180 contribution before overhead/tax, tax UNKNOWN.
+Kael explicitly decided on 2026-10-12 to **decline paid Workana Priority Moderation** and wait for standard moderation at zero cost while Nexia investigates/falsifies parallel businesses.
 
-Fresh acquisition scan did not promote any non-Workana project to GO. Current bottleneck is acquisition access to a fresh, bounded, economically viable buyer brief — not lack of synthetic technical proof.
+Portfolio rule: one active monetization experiment plus at most two parallel research veins.
+
+Active parallel veins:
+1. `VETA-AI-UGC-001` — AI UGC / performance creative service for e-commerce. Current classification: `SEÑAL -> VETA_CANDIDATE`. Demand and recurring buyer volume are verified; Nexia still lacks verified portfolio economics and video-tool cost/time measurements.
+2. `VETA-AUTO-PRODUCT-001` — self-serve n8n `Lead Intake Reliability Kit`. Current classification: `VETA_CANDIDATE`. Paid market examples exist around USD25–97; Nexia can reuse verified n8n reliability assets, but own demand/distribution and support burden remain unvalidated.
+
+Generic Etsy/Canva/planner templates are `NO_GO_GENERIC` because broad categories show severe commoditization, 5,000+ competing listings and frequent USD1–15 pricing.
+
+## Workana / EXP-AUTO-001 truth
+Authenticated Workana dashboard: `PROFILE_UNDER_ANALYSIS_PENDING_MODERATION`.
+Priority Moderation displayed price: USD9.90.
+Decision: `DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND`.
+
+Huescaventura remains the primary qualified opportunity at the last fresh check:
+- budget EUR200–300;
+- one visible proposal;
+- existing authorized bid EUR300;
+- proposal `AUTHORIZED_NOT_SUBMITTED`;
+- submission only after approval, fresh open-status recheck and zero additional proposal spend.
+
+Revenue EUR0; settled revenue EUR0; reconciled net profit EUR0; extraction_count 0.
 
 ## Technical truth
-- generic lead-intake logic 9/9 synthetic PASS;
-- local HTTP integration 12/12 PASS;
-- Node-RED structural checks 6/6 PASS;
-- Huescaventura domain demo 13/13 synthetic PASS;
-- n8n import skeleton 12/12 structural/code PASS;
-- n8n 2.42.6 runtime execution: **VERIFIED PASS**, run `38178359319`, six asserted synthetic cases, `autonomous_send=false`;
-- native n8n Data Table persistent dedup/idempotency: **VERIFIED PASS**, run `38180738447`;
-- five separate webhook requests produced exactly two persisted unique identities;
-- after stopping/restarting n8n and a sixth duplicate request, the audit still returned exactly two rows;
-- real Airtable integration NOT EXECUTED;
-- real Google Sheets integration NOT EXECUTED;
-- real client CRM integration NOT EXECUTED;
-- client production deployment NOT EXECUTED;
-- prior client production experience NONE VERIFIED.
+n8n 2.42.6 runtime execution is VERIFIED PASS. Native n8n Data Table persistent dedup/idempotency is VERIFIED PASS across separate webhooks and process restart. These are technical proofs, not client production experience or economic validation.
 
-## Verified continuous integration
-Base workflow: `.github/workflows/nexia-ci.yml`, first verified run `38149148915` — `success`.
-Runtime/persistence workflow: `.github/workflows/n8n-runtime-smoke.yml`, verified run `38180738447` — `success`.
-
-CI success is technical evidence only; it is not buyer acceptance, customer production deployment, revenue or profit.
+Real Airtable/Google Sheets/client CRM integration: NOT EXECUTED.
+Client production deployment: NOT EXECUTED.
+Paid-client production experience: NONE VERIFIED.
 
 ## Automation architecture
-Verified live inventory: **2 active / 7 paused / 1 completed**.
-1. NEXIA Control Tower — daily; notifications enabled; includes the daily Workana moderation/Gmail sensor.
-2. EXP-AUTO-001 Parallel Work — every 6 hours; scheduler has executed at least once (`2026-10-11T19:52:12.224695Z`); returned work/result remains NOT INSTRUMENTED; notifications disabled.
+Verified current inventory: **3 active / 6 paused / 1 completed**.
+1. `NEXIA Control Tower` — daily, notifications enabled, includes Workana moderation/Gmail sensor.
+2. `EXP-AUTO-001 Parallel Work` — every 6 hours, focused on current monetization experiment and acquisition evidence.
+3. `NEXIA Parallel Business Radar` — daily around 15:00, reactivated to falsify only VETA-AI-UGC-001 and VETA-AUTO-PRODUCT-001 at zero cost.
 
-`Workana Response Watch` is PAUSED as redundant after the sensor was consolidated into Control Tower.
-
-Other paused redundant/legacy tasks include NEXIA Memory Review, Radar multivía Nexia, NEXIA Brainstorm, Radar y revisión de oportunidades, NEXIA Agentes y Automatización and Revisión de oportunidades.
-
-## Event Storage v2
-- new critical events are immutable files under `events/`;
-- `NEXIA_EVENT_INDEX.json` is derived/regenerable;
-- historical JSONL remains intact/read-only;
-- corrections create new events, never edits to immutable events.
-
-Latest verified event: `EVT-2026-10-12-ACQ-001`.
-
-## Known integrity debt
-`NEXIA_MEMORY.md` still declares STATE v63 because the attempted update was blocked by the tool safety layer. No bypass was attempted. STATE v67, BOOT v42, LIVE and this backup record the mismatch.
-
-Automation result-return remains partially uninstrumented: scheduler execution of Parallel Work is verified, but its returned work/result is not exposed in the automation state checked here.
+`Workana Response Watch` remains paused as redundant.
+No automation is authorized to spend money, create accounts, publish, contact buyers or submit proposals beyond existing specific gates.
 
 ## Authority
-No immediate Kael action required.
-Already authorized: one Huescaventura proposal at €300 after Workana approval is verified, only if zero-spend and the project remains open.
-Not authorized: paid moderation, plans/credits, extra buyer contacts, new marketplace accounts, marketplace wallet funding, purchases/ads/subscriptions, irreversible publication, or scope/price expansion.
+Authorized now:
+- zero-cost research/falsification of the two active parallel veins;
+- safe reversible repository/instrumentation work;
+- existing Huescaventura EUR300 proposal only after Workana approval and fresh zero-spend recheck.
+
+Not authorized:
+- Priority Moderation payment;
+- AI/video credits or subscriptions;
+- store/account creation;
+- product publication;
+- marketplace proposals to other buyers;
+- off-platform contact;
+- ads or any other spend.
 
 ## Next safe action
-Do **not** add synthetic technical work merely for activity. Keep the daily Workana approval sensor inside Control Tower and the 6-hour worker focused on fresh buyer-initiated alternatives. On verified Workana approval, recheck Huescaventura and submit the already-authorized €300 proposal if still open and zero-spend. Do not ask Kael to create or fund another marketplace account until a specific fresh project justifies the exposure.
+Wait for standard Workana moderation while the two parallel veins are actively falsified. For AI UGC, quantify a minimum sellable recurring package, truthful portfolio path, tool cost and human hours. For the automation product, benchmark paid competitors and define one differentiated `Lead Intake Reliability Kit` SKU around reliability/QA/idempotency rather than generic workflow volume. Promote, pause or kill each vein according to its pre-registered gates; do not preserve weak ideas merely for activity.
