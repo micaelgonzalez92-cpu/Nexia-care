@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-UGCVIDEO-002",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "UGC_VIDEO_001_RUNNER_PREPARED_AND_CI_VERIFIED",
+  "state_version": 70,
+  "experiment": "UGC-VIDEO-001",
+  "parent": "UGC-PORTFOLIO-001 Phase B",
+  "authorization_event": "EVT-2026-10-13-UGCVIDEO-001",
+  "authorization_event_blob_sha": "21e28017ad1fb853bd3a3290fbc762b09047763e",
+  "implementation": {
+    "python_runner": "tools/run_ugc_video_001.py",
+    "python_runner_commit": "e9b4a9f4a54fc25e995da65622da7e5200016972",
+    "powershell_launcher": "tools/run_ugc_video_001.ps1",
+    "powershell_launcher_commit": "5afb8154dc543570495c74217cf315c535a93e5f",
+    "ci_commit": "dfd256719dcffa9ff39b78cae5cb63a8b752bbed",
+    "ci_run": 38321314551,
+    "ci_conclusion": "success",
+    "secret_scan_run": 38321314464,
+    "secret_scan_conclusion": "success"
+  },
+  "bounded_behavior": {
+    "existing_comfyui_only": true,
+    "preflight_before_large_download": true,
+    "allowed_model_files_only": [
+      "ltx-video-2b-v0.9.5.safetensors",
+      "t5xxl_fp16.safetensors"
+    ],
+    "max_attempts": 3,
+    "seeds": [4201, 4202, 4203],
+    "target": "512x768, 97 frames, 24 fps",
+    "local_endpoint": "127.0.0.1:8188",
+    "cloud_api_fallback": false,
+    "cash_budget_eur": 0,
+    "publication": false,
+    "external_contact": false,
+    "new_application": false,
+    "custom_nodes": false
+  },
+  "result": "AUTHORIZED_READY_LOCAL_EXECUTION_NOT_YET_EXECUTED",
+  "verification_boundary": "Repository syntax, bounded prompt contract, existing test suite, canonical integrity check and secret scan passed in GitHub Actions. The runner has NOT yet been executed on Kael's Windows/ComfyUI environment, no model download is verified, and no video output exists from this runner yet.",
+  "financial_impact_eur": 0,
+  "economic_stage_change": "NONE",
+  "next_action": "Run the commit-pinned PowerShell launcher once on Kael's Windows computer. Return the runner technical-result block and upload generated MP4 output(s) for Nexia visual QA. Do not manually reconfigure ComfyUI unless the runner reports a specific blocker.",
+  "truth_limit": "Prepared and CI-verified automation is not local execution, video capability verification, buyer demand, publication, sale, payment or profit."
+}
