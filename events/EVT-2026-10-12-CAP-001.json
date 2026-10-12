@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-CAP-001",
+  "timestamp": "2026-10-12T14:48:00+02:00",
+  "type": "CAPABILITY_EVOLUTION_AND_DRIVE_CONNECTION",
+  "source": "NEXIA_CAPABILITY_AUDIT_2026-10-12",
+  "changes": {
+    "google_drive": {
+      "status": "CONNECTED",
+      "permission": "USE_MY_DEFAULT",
+      "inherited_global_permission": "ALLOW_LOW_RISK_ACTIONS",
+      "role": "DOCUMENTS_SHEETS_SLIDES_ANALYSIS_AND_DELIVERABLES_NOT_CANONICAL_STATE"
+    },
+    "codex_repo_contract": "AGENTS_MD_ADDED",
+    "codex_repo_skills": [
+      "nexia-checkpoint",
+      "nexia-change-verification"
+    ],
+    "dependabot": "WEEKLY_GITHUB_ACTIONS_UPDATES_CONFIGURED",
+    "execution_surface_protocol": "NEXIA_EXECUTION_SURFACE_PROTOCOL_V1_ACTIVE",
+    "capability_radar": "NEXIA_CAPABILITY_EVOLUTION_WEEKLY_REACTIVATED"
+  },
+  "authority_effect": "NO_EXPANSION_OF_BUSINESS_AUTHORITY",
+  "cost_eur": 0,
+  "reversibility": "REVERSIBLE",
+  "economic_effect": "NO_DIRECT_REVENUE_OR_PROFIT",
+  "truth_rule": "Capability and automation improvements are enabling infrastructure and do not count as economic validation or extraction."
+}
