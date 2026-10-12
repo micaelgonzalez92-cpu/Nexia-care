@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-LOCALAI-002",
+  "timestamp": "2026-10-12T18:29:00Z",
+  "type": "LOCAL_CAPABILITY_SCORER_SYNTHETIC_VERIFICATION",
+  "state_version": 70,
+  "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
+  "previous_event": "events/EVT-2026-10-12-LOCALAI-001.json",
+  "action": "Persist offline scorer and minimal synthetic tests; record strict verification boundaries",
+  "evidence": {
+    "scorer_path": "tools/nexia_local_capability_score.py",
+    "scorer_blob_sha": "c5cb2a677d940484355964d14cdcf7bed4db2781",
+    "tests_path": "tools/test_nexia_local_capability_score.py",
+    "tests_blob_sha": "3f8a1fca549daba0e175893fa9d3db05f80a8088",
+    "synthetic_tests": "8/8 PASS",
+    "report": "NEXIA_LOCAL_SCORER_SYNTHETIC_VERIFICATION_2026-10-12.md",
+    "report_blob_sha": "4b25d587d3ff476b3226376dc5549079874bcbcf",
+    "readback": "EXACT_SOURCE_MATCH"
+  },
+  "audit_script_static_limit": "Existing audit script writes OutputPath and invokes discovered executables; its strict read-only property is not established.",
+  "financial_impact_eur": 0,
+  "authority_effect": "NONE",
+  "canonical_state_change": "NONE",
+  "result": "VERIFIED_SYNTHETIC_TOOLING_ONLY",
+  "truth_limit": "No local-environment details in public event. Synthetic screening does not prove inference, compatibility, quality, commercial rights, demand, sales or profit. Installation/downloads remain unauthorized.",
+  "next_action": "Read scorer report and preserve existing business gates; review exact requirements before any separately authorized installation/benchmark."
+}
