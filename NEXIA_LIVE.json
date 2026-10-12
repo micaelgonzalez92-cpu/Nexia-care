@@ -1,6 +1,6 @@
 {
   "updated_at": "2026-10-12",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + AUTO-PRODUCT TEMPLATE #1 PENDING REVIEW + AI-UGC PORTFOLIO PREPARED + LOCAL IMAGE VERIFIED + ZERO-QUOTA ROUTER VERIFIED",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + AUTO-PRODUCT TEMPLATE #1 PENDING REVIEW + AI-UGC PORTFOLIO PREPARED + LOCAL IMAGE VERIFIED + ZERO-QUOTA ROUTER VERIFIED + LOCAL-AI-CODER BENCHMARK PREPARED",
   "state_version": 70,
   "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
   "boot_version": 45,
@@ -97,7 +97,8 @@
     "zero_quota_execution": "ROUTER_AND_GITHUB_ACTIONS_OFFLOAD_VERIFIED",
     "zero_quota_ci_run": 38304533964,
     "zero_quota_router_tests": "12/12 PASS",
-    "local_ai": "NOT_VERIFIED",
+    "local_ai": "BENCHMARK_PREPARED_NOT_INSTALLED_NOT_VERIFIED",
+    "local_ai_candidate": "OLLAMA_QWEN2_5_CODER_7B_INSTRUCT_Q4_K_M",
     "local_browser": "NOT_VERIFIED",
     "agentic_offload_rate": "NOT_INSTRUMENTED"
   },
@@ -119,32 +120,37 @@
     "reconciled_net_profit_eur": 0
   },
   "session_handoff": {
-    "last_completed_verified_action": "Implemented NEXIA ZERO-QUOTA EXECUTION v0.1: deterministic routing tool, synthetic tests, capability snapshot and execution queue. Integrated router tests into Nexia CI. GitHub Actions run 38304533964 completed SUCCESS, including Zero-quota execution router tests. Indexed LOCALBENCH-003 and ZQ-001.",
-    "last_user_facing_handoff": "Zero-quota v0.1 is verified for deterministic CI routing. Work/Codex remain scarce fallbacks only where local/deterministic routes are not yet verified.",
-    "human_action_required_now": false,
-    "pending_human_action": null,
-    "surface": null,
-    "device": null,
-    "why_kael": null,
-    "steps": [],
-    "cost_exposure": "EUR0; no business-authority or economic-stage change.",
-    "success_check": "GitHub Actions run 38304533964 SUCCESS; router tests 12/12 PASS; event index points through EVT-2026-10-12-ZQ-001.",
-    "return_to_nexia": null,
+    "last_completed_verified_action": "Implemented and CI-verified NEXIA ZERO-QUOTA EXECUTION v0.1, then researched and preregistered LOCAL-AI-CODER-001 using Ollama + Qwen2.5-Coder 7B Instruct Q4_K_M as the first local Codex-replacement candidate. No installation or model download executed.",
+    "last_user_facing_handoff": "LOCAL-AI-CODER-001 is prepared and blocked only on a bounded installation/benchmark authorization. Work/Codex should not be spent on deterministic tests, public research or local image inference.",
+    "human_action_required_now": true,
+    "pending_human_action": "Authorize only installation of Ollama and download/runtime benchmark of qwen2.5-coder:7b-instruct under experiments/LOCAL-AI-CODER-001.md at EUR0 cash spend; no external actions or additional models.",
+    "surface": "ChatGPT Nexia Core; execution later from authorized local computer surface",
+    "device": "computer",
+    "why_kael": "Ollama installation and model download change the local computer and consume disk/compute, so /next cannot grant that authority.",
+    "steps": [
+      "Review the exact bounded authorization in the current Nexia response.",
+      "If accepted, explicitly authorize LOCAL-AI-CODER-001 only.",
+      "Execution should occur on the computer; prefer waiting for agentic short-window reset if Work is used, or use a direct local execution path when available.",
+      "Do not authorize any second model, browser agent, publication, external contact or paid service under this gate."
+    ],
+    "cost_exposure": "EUR0 cash target; approximately 4.7 GB model package plus Ollama installation, local SSD usage, electricity and machine time. No paid/API fallback allowed.",
+    "success_check": "Fixed five-task benchmark completes with >=4/5 functionally correct, BUGFIX passing, no OOM/crash, median model response <=120 seconds, <=15 minutes human steering and no authority violations.",
+    "return_to_nexia": "LOCAL-AI-CODER benchmark complete + PASS/FAIL report with task scores, timings and RAM/VRAM measurements",
     "resume_required_reads": [
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_EVENT_INDEX.json",
       "events/EVT-2026-10-12-ZQ-001.json",
-      "events/EVT-2026-10-12-LOCALBENCH-003.json",
       "NEXIA_ZERO_QUOTA_EXECUTION_V0_1.md",
       "NEXIA_EXECUTION_CAPABILITIES.json",
       "NEXIA_EXECUTION_QUEUE.json",
+      "experiments/LOCAL-AI-CODER-001.md",
       "experiments/UGC-PORTFOLIO-001.md"
     ],
-    "resume_from": "Route deterministic/public tasks away from Work/Codex. UGC-PORTFOLIO-001 Phase A should use LOCAL_GPU when a local execution surface is available. Next offload expansion candidate is LOCAL_AI benchmark; after that deterministic LOCAL_BROWSER/Playwright. Do not install either without separate bounded authorization. Keep EXP-AUTO-001 monetization and Workana/n8n review gates unchanged.",
-    "truth_limit": "Routing/CI success is technical infrastructure, not measured quota savings, autonomous operation, demand, sale, payment or profit. Local image proof is one run only; repeatability and portfolio quality remain unverified."
+    "resume_from": "If Kael explicitly authorizes LOCAL-AI-CODER-001, execute only that bounded local installation/download/benchmark and stop after PASS/FAIL. Otherwise continue safe zero-quota research/Chat/GitHub work. Keep EXP-AUTO-001 and existing Workana/n8n gates unchanged.",
+    "truth_limit": "Candidate package size/license research and benchmark preparation do not prove local compatibility, coding quality, measured quota savings, autonomous operation, demand, sale or profit."
   },
-  "human_gate": "NO_IMMEDIATE_ACTION_REQUIRED. Do not spend scarce Work/Codex quota on deterministic tests, public research or local image inference. LOCAL_AI/LOCAL_BROWSER installation or promotion requires separate authorization and benchmark evidence. Existing Workana/n8n external gates remain unchanged.",
+  "human_gate": "LOCAL-AI-CODER-001 INSTALL/BENCHMARK NOT AUTHORIZED. Exact scope: Ollama + qwen2.5-coder:7b-instruct only, EUR0 cash target, isolated five-task benchmark, no cloud/paid fallback, no external actions. Existing Workana/n8n external gates remain unchanged.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -155,11 +161,11 @@
     "AUTO-PRODUCT external self-serve installation <=30 minutes not yet verified with users",
     "AI UGC portfolio gap remains open; UGC-PORTFOLIO-001 prepared but not executed",
     "Local image repeatability/batch stability/commercial quality not verified",
-    "LOCAL_AI not verified",
+    "LOCAL_AI candidate selected but installation/benchmark requires Kael authorization",
     "LOCAL_BROWSER not verified",
     "AGENTIC_OFFLOAD_RATE not instrumented",
     "Canonical STATE v70 has not absorbed later verified events through ZQ-001; MEMORY derived stale",
     "No willingness-to-pay, settled sale or realized profit exists"
   ],
-  "next_action": "Continue safe zero-quota work in Chat/GitHub. When local PC execution is available, run preregistered UGC-PORTFOLIO-001 Phase A through LOCAL_GPU without Work/Codex inference. Evaluate LOCAL_AI benchmark separately before any install."
+  "next_action": "Await exact Kael authorization for LOCAL-AI-CODER-001 or continue only safe zero-quota work. Do not consume scarce Work/Codex quota for deterministic/public/local-image tasks."
 }
