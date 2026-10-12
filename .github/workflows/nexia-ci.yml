@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'prototypes/**'
+      - 'products/**'
       - 'tools/**'
       - 'NEXIA_STATE.json'
       - 'NEXIA_BOOT.json'
@@ -17,6 +18,7 @@ on:
     branches: [main]
     paths:
       - 'prototypes/**'
+      - 'products/**'
       - 'tools/**'
       - 'NEXIA_STATE.json'
       - 'NEXIA_BOOT.json'
@@ -61,6 +63,9 @@ jobs:
 
       - name: Validate n8n import skeleton
         run: node prototypes/validate_n8n_huescaventura_demo.js prototypes/n8n-huescaventura-intake-demo.json
+
+      - name: Validate internal Lead Intake Reliability Kit
+        run: node products/lead-intake-reliability-kit/test_product.js
 
       - name: Integrity checker regression tests
         run: python3 tools/test_nexia_integrity_check.py
