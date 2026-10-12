@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-12",
+  "canonical_state": {
+    "version": 70,
+    "sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
+    "changed": false
+  },
+  "task": "EXPLICIT_BOUNDED_CREATIVE_BENCHMARK",
+  "status": "CLOSED_PRIVATE_EVIDENCE",
+  "authorization_event": "events/EVT-2026-10-12-LOCALBENCH-001.json",
+  "closure_event": "events/EVT-2026-10-12-LOCALBENCH-002.json",
+  "last_completed_verified_action": "Requested bounded task completed; detailed evidence retained privately in original authorized local workspace.",
+  "last_user_facing_handoff": "Result and private artifact links delivered in current chat. No immediate human action.",
+  "human_action_required_now": false,
+  "pending_human_action": null,
+  "surface": null,
+  "device": null,
+  "success_check": "Authorization and closure event re-read; private evidence retained locally.",
+  "return_to_nexia": null,
+  "resume_required_reads": [
+    "NEXIA_STATE.json",
+    "NEXIA_EVENT_INDEX.json",
+    "events/EVT-2026-10-12-LOCALBENCH-001.json",
+    "events/EVT-2026-10-12-LOCALBENCH-002.json"
+  ],
+  "resume_from": "Do not reinstall, download more models or rerun automatically. Review original private evidence through an authorized local surface only if needed. Existing business priorities and gates remain unchanged.",
+  "truth_limit": "No hardware inventory, local paths, performance measurements or generated image included. Public closure is not public reproducible runtime proof, commercial validation, demand, sale or profit.",
+  "persistence_limit": "Broad NEXIA_LIVE.json update rejected by automatic approval review; last valid LIVE preserved. This minimal handoff plus indexed later events is the current bounded-task recovery anchor."
+}
