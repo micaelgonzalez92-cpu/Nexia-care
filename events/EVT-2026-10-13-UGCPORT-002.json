@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-UGCPORT-002",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "UGC_PORTFOLIO_PHASE_A_TARGETED_RETRY_QA",
+  "state_version": 70,
+  "experiment": "UGC-PORTFOLIO-001",
+  "vein": "VETA-AI-UGC-001",
+  "evidence_source": "Two user-shared local ComfyUI retry outputs visually reviewed in ChatGPT; images were not uploaded to the public repository.",
+  "mapping": {
+    "NEXIA_BENCHMARK_00008_.png": "B1_RETRY_ATTEMPT_2",
+    "NEXIA_BENCHMARK_00009_.png": "C2_RETRY_ATTEMPT_2"
+  },
+  "qa": [
+    {
+      "id": "B1_RETRY",
+      "score": 82,
+      "hard_fail": false,
+      "decision": "ACCEPT",
+      "notes": "The hero product is now clearly circular with a round transparent tray and central rotation axis; vertical commercial framing is usable. Background packages still contain pseudo-label artifacts, reducing safety/fidelity points but not triggering a hard fail."
+    },
+    {
+      "id": "C2_RETRY",
+      "score": 86,
+      "hard_fail": false,
+      "decision": "ACCEPT",
+      "notes": "Laptop screen is deliberately blank and neutral, removing the prior pseudo-UI hard fail. Restaurant context and grey-polo creator continuity are strong; smartphone interaction requested in the prompt is not visible, so prompt-fidelity is not perfect."
+    }
+  ],
+  "phase_a_visual_result": {
+    "accepted_frames": ["A1", "A2", "B1_RETRY", "B2", "C1", "C2_RETRY"],
+    "accepted_count": 6,
+    "target_count": 6,
+    "complete_pairs": ["A", "B", "C"],
+    "attempts_used_total": 8,
+    "attempt_budget_total": 18,
+    "attempts_per_accepted_frame": [1, 1, 2, 1, 1, 2],
+    "median_attempts_per_accepted_frame": 1,
+    "qa_threshold_met": true,
+    "pair_threshold_met": true,
+    "attempt_efficiency_threshold_met": true,
+    "hard_fail_in_final_accepted_set": false
+  },
+  "human_steering_minutes": "NOT_YET_RECORDED",
+  "gate_status": "PROVISIONAL_PASS_VISUAL_AND_ITERATION_GATES_MET_PENDING_HUMAN_TIME",
+  "reason": "All visual, pair-completeness, QA and iteration-efficiency gates are met under the preregistered thresholds. Formal Phase-A PASS cannot be declared until human steering/review time is known and confirmed <=60 minutes.",
+  "next_safe_action": "Obtain Kael's approximate total manual steering/review time for UGC-PORTFOLIO-001. If <=60 minutes, close Phase A as PASS without additional generation. If >60 minutes, close Phase A as FAIL on the preregistered time gate despite visual success.",
+  "financial_impact_eur": 0,
+  "economic_stage_change": "NONE",
+  "truth_limit": "This is internal portfolio keyframe-production evidence only. It does not prove buyer demand, video production, sale, payment or profit."
+}
