@@ -1,15 +1,15 @@
 # NEXIA MASTER BACKUP — CURRENT RECOVERY SNAPSHOT
 
 Updated: 2026-10-12
-Status: **STATE v69 / AUTO-PRODUCT PREPARED INTERNAL SKU / STANDARD WORKANA MODERATION / AI-UGC WATCH / EVENT STORAGE v2 OPERATIONAL / MEMORY DERIVED STALE**
+Status: **STATE v69 CANONICAL / AUTO-PRODUCT PREPARED INTERNAL SKU / STANDARD WORKANA MODERATION / AI-UGC WATCH / EVENT STORAGE v2 OPERATIONAL / MEMORY DERIVED STALE**
 Checkpoint: `CP-2026-10-12-AUTOPROD-001`
 
 Historical snapshots remain recoverable from Git history and never override canonical STATE.
 
-## Canonical recovery map — first bind
-- STATE v69: `2c23354b1a01229aec487287015e434aec77f522`
-- BOOT v44: `730dafba43ab4091e786a87c39d00c2c776c49c5`
-- LIVE: `3bcda905db0a10e6680e290b9377d9abe1aeaece`
+## Canonical recovery map
+- STATE v69: `a4e0a54e9867364d055e02d03166e43ea3f911c5`
+- BOOT v44: `7fdfbac0e84ee2ef82bdc1b6f95f2e272b5deb45`
+- LIVE: `b43aab2dff4e075bf032b7716d1e18e06a182577`
 - MEMORY last verified: `443137fd25747baa2c25a403b4ca47a38b6dee7a` — derived ledger remains stale at v63; STATE v69 overrides it.
 - Commercial pipeline: `92e53d402bf53987275b6d56e17586847a8907e2`
 - Event index: `3c543226d2d5a2480604b3529ec2b1f1731749ef`
@@ -18,7 +18,7 @@ Historical snapshots remain recoverable from Git history and never override cano
 - Legacy JSONL boundary: `84db0ce6ccd1878be9ff48a770bb8b6f1e433d72`, READ-ONLY.
 
 ## Mission and portfolio architecture
-Mission remains `MISSION-OPPORTUNITY-ENGINE-001`: build a repeatable engine that discovers, falsifies, validates and monetizes independent businesses until sustainable after-tax net profit exceeds EUR1000/month.
+Mission: `MISSION-OPPORTUNITY-ENGINE-001` — build a repeatable engine that discovers, falsifies, validates, monetizes and replicates independent businesses until sustainable after-tax net profit exceeds EUR1000/month.
 
 One monetization experiment remains active: `EXP-AUTO-001 — Lead Intake Reliability Sprint`.
 
@@ -65,9 +65,24 @@ Verified runtime results:
 - persistence uses native n8n Data Tables;
 - asserted `autonomous_send=false`.
 
-Truth boundary: this proves an internal product candidate works in isolated n8n 2.42.6 CI. It does **not** prove external-user installation, buyer demand, willingness-to-pay, paid sales, refunds, support burden, revenue or profit.
+Truth boundary: internal runtime PASS is not external-user installation, buyer demand, willingness-to-pay, paid sales, refunds, support burden, revenue or profit.
 
-No n8n Creator account has been created. No store exists. No template/product has been published. No external user exists. Paid sales = 0. Revenue = EUR0. Realized profit = EUR0.
+No n8n Creator account exists. No store exists. No product/template has been published. External users = 0. Paid sales = 0. Revenue = EUR0. Realized profit = EUR0.
+
+## Product validation gate
+The first paid-cohort hypothesis is locked at USD49. Commercial validation requires real settled sales, not downloads/page views. Initial gate:
+- >=5 settled paid sales at >=USD39 equivalent;
+- refund rate <=10%;
+- median support <=20 minutes/sale;
+- positive contribution after platform fees and support labor;
+- no critical installation/data/security defect.
+
+The preferred first distribution experiment is the n8n Creator route. Current n8n rules require three approved templates before a creator can publish paid templates. The proposed free ladder is:
+1. `Reliable Lead Intake — Normalize + Human Review`;
+2. `Persistent Lead Dedup Guard with n8n Data Tables`;
+3. `Authenticated Webhook Intake + Error-Safe Validation`.
+
+Account creation/submission/publication remains a Human Gate.
 
 ## VETA-AI-UGC-001
 Current classification: `WATCH / PORTFOLIO_GAP`.
@@ -96,4 +111,4 @@ Not authorized:
 - additional marketplace proposals/contact.
 
 ## Next safe action
-Do not add more synthetic engineering merely to improve the product artifact. Prepare the **first n8n Creator free-template submission package internally** at zero cost. The account creation/submission/publication itself is a Human Gate. Continue standard Workana moderation wait and keep AI-UGC on watch unless new evidence materially improves its economics.
+Prepare the **first n8n Creator free-template submission package internally** at zero cost. Do not create the account or submit/publish without explicit Kael authorization. Continue standard Workana moderation wait. Keep AI-UGC on watch unless new evidence materially improves its economics.
