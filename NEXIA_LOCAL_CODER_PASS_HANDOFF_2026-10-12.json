@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-12T23:44:00+02:00",
+  "canonical_state": {"version": 70, "changed": false},
+  "experiment": "LOCAL-AI-CODER-001",
+  "status": "PASS_CONTRACT_ADJUDICATED",
+  "latest_event": "events/EVT-2026-10-12-LOCALCODER-004.json",
+  "observed": {
+    "tasks_passed": 5,
+    "tasks_total": 5,
+    "median_model_response_seconds": 2.48,
+    "approx_peak_gpu_memory_mib_whole_gpu": 5736.0,
+    "approx_peak_ollama_process_ram_mib": 135.0,
+    "cash_spend_eur": 0
+  },
+  "raw_harness_result": "FAIL_DUE_TO_ADJUDICATOR_BUG",
+  "corrective_adjudication": "PASS",
+  "defect": "human_steering_minutes_recorded=0 was incorrectly included in all(gate.values()), and numeric zero is false in Python; original <=15 minute threshold was not changed.",
+  "capability_promotion": "LOCAL_AI_VERIFIED_FOR_BOUNDED_CODE_ASSIST",
+  "scope": "Bounded internal draft/fix/test/reasoning tasks in isolated workspaces only; all existing Human Gates and external-action restrictions remain active.",
+  "next_validation": "Record at least 20 real bounded internal technical tasks before calculating AGENTIC_OFFLOAD_RATE or expanding capability claims.",
+  "human_action_required_now": false,
+  "next_action": "Route suitable bounded internal coding tasks to LOCAL_AI and collect outcome/correction/time records; retain Codex for complex/high-risk fallback.",
+  "truth_limit": "This is technical capability evidence only. No sale, settled revenue, profit or full Codex replacement has been demonstrated."
+}
