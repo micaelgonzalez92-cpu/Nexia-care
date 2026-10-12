@@ -1,0 +1,34 @@
+{
+  "event_id": "EVT-2026-10-12-LOCALAI-001",
+  "timestamp": "2026-10-12T19:45:00+02:00",
+  "type": "LOCAL_AI_AUDIT_PREPARATION",
+  "state_version": 70,
+  "status": "VERIFIED_PARTIAL",
+  "facts": [
+    "tools/nexia_pc_audit.ps1 was created and re-read from main.",
+    "The PowerShell audit is designed as read-only: no installs, cleanup, configuration changes or intentional network calls.",
+    "The audit collects CPU, RAM, storage, GPU/adapters, NVIDIA VRAM when nvidia-smi is available, OS, startup items, top memory processes, Defender status, power plan and selected developer-tool versions.",
+    "Local AI capability scoring logic was designed and synthetic-tested in the chat runtime across four scenarios with PASS results.",
+    "tools/nexia_local_capability_score.py was not persisted; connector write failed/was blocked and a later fetch returned 404.",
+    "NEXIA_LOCAL_CAPABILITY_SCORING_SPEC_2026-10-12.md was created to preserve the conservative scoring gates and verification boundaries.",
+    "No audit has been executed on Kael's physical PC yet.",
+    "No software, model, driver or dependency was installed or downloaded."
+  ],
+  "artifacts": {
+    "pc_audit": "tools/nexia_pc_audit.ps1",
+    "scoring_spec": "NEXIA_LOCAL_CAPABILITY_SCORING_SPEC_2026-10-12.md",
+    "scorer_code": "NOT_PERSISTED"
+  },
+  "next_gate": {
+    "requires_computer": true,
+    "action": "Run the read-only PC audit through an authorized local execution surface, then score actual GPU/VRAM/RAM/SSD data before any installation recommendation.",
+    "cost_eur": 0,
+    "risk": "LOW_READ_ONLY"
+  },
+  "economics": {
+    "cash_spend_eur": 0,
+    "revenue_eur": 0,
+    "profit_eur": 0
+  },
+  "truth_limit": "Preparation and synthetic scoring tests do not prove local model compatibility or commercial output quality."
+}
