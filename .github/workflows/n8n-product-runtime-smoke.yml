@@ -1,0 +1,181 @@
+name: n8n Product Runtime Smoke
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'products/lead-intake-reliability-kit/**'
+      - '.github/workflows/n8n-product-runtime-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: n8n-product-runtime-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  product-runtime:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Set up Node.js 24.21.0
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.21.0'
+
+      - name: Show n8n version
+        run: npx --yes n8n@2.42.6 --version
+
+      - name: Import and export product workflows
+        env:
+          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-import-user
+          EXPORT_FILE: ${{ runner.temp }}/product-export.json
+        run: |
+          set -euo pipefail
+          mkdir -p "$N8N_USER_FOLDER"
+          for f in products/lead-intake-reliability-kit/workflows/*.json; do
+            npx --yes n8n@2.42.6 import:workflow --input="$f"
+          done
+          npx --yes n8n@2.42.6 export:workflow --all --output="$EXPORT_FILE"
+          EXPORT_FILE="$EXPORT_FILE" node <<'NODE'
+          const fs = require('fs');
+          const assert = require('node:assert/strict');
+          const workflows = JSON.parse(fs.readFileSync(process.env.EXPORT_FILE, 'utf8'));
+          const ids = workflows.map(w => w.id).sort();
+          const expected = [
+            'nexia-lead-intake-dedup-audit-v01',
+            'nexia-lead-intake-dedup-bootstrap-v01',
+            'nexia-lead-intake-dedup-guard-v01',
+            'nexia-lead-intake-human-review-v01',
+          ].sort();
+          assert.deepEqual(ids, expected);
+          assert.ok(workflows.every(w => w.active === false));
+          console.log('PASS: all product workflows imported/exported and inactive');
+          NODE
+
+      - name: Execute product webhooks and persistent dedup in full n8n runtime
+        env:
+          N8N_ENABLED_MODULES: 'data-table'
+          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-product-user
+          N8N_PORT: '5678'
+          N8N_HOST: '127.0.0.1'
+          N8N_PROTOCOL: 'http'
+          N8N_SECURE_COOKIE: 'false'
+          N8N_DIAGNOSTICS_ENABLED: 'false'
+          N8N_PERSONALIZATION_ENABLED: 'false'
+          N8N_LOG: ${{ runner.temp }}/n8n-product.log
+          BASE_URL: http://127.0.0.1:5678
+          AUDIT_OUTPUT: ${{ runner.temp }}/product-audit.json
+        run: |
+          set -euo pipefail
+          mkdir -p "$N8N_USER_FOLDER"
+          npx --yes n8n@2.42.6 import:workflow --input=products/lead-intake-reliability-kit/workflows/lead-intake-human-review.json
+          npx --yes n8n@2.42.6 import:workflow --input=products/lead-intake-reliability-kit/workflows/dedup-table-bootstrap.json
+          npx --yes n8n@2.42.6 import:workflow --input=products/lead-intake-reliability-kit/workflows/persistent-dedup-guard.json
+          npx --yes n8n@2.42.6 import:workflow --input=products/lead-intake-reliability-kit/workflows/dedup-audit.json
+
+          npx --yes n8n@2.42.6 publish:workflow --id=nexia-lead-intake-human-review-v01
+          npx --yes n8n@2.42.6 publish:workflow --id=nexia-lead-intake-dedup-bootstrap-v01
+          npx --yes n8n@2.42.6 publish:workflow --id=nexia-lead-intake-dedup-guard-v01
+          npx --yes n8n@2.42.6 publish:workflow --id=nexia-lead-intake-dedup-audit-v01
+
+          start_n8n() {
+            : > "$N8N_LOG"
+            npx --yes n8n@2.42.6 start >> "$N8N_LOG" 2>&1 &
+            N8N_PID=$!
+            for i in $(seq 1 60); do
+              if curl -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then return 0; fi
+              sleep 1
+            done
+            echo 'n8n health check failed'
+            cat "$N8N_LOG"
+            return 1
+          }
+
+          stop_n8n() {
+            if [ -n "${N8N_PID:-}" ] && kill -0 "$N8N_PID" >/dev/null 2>&1; then
+              kill "$N8N_PID" || true
+              wait "$N8N_PID" || true
+            fi
+          }
+
+          audit_rows() {
+            local expected="$1"
+            curl -fsS -X POST "$BASE_URL/webhook/lead-intake-dedup-audit" \
+              -H 'Content-Type: application/json' --data '{}' | tee "$AUDIT_OUTPUT"
+            EXPECTED="$expected" AUDIT_OUTPUT="$AUDIT_OUTPUT" node <<'NODE'
+            const fs = require('fs');
+            const assert = require('node:assert/strict');
+            const raw = fs.readFileSync(process.env.AUDIT_OUTPUT, 'utf8');
+            const out = JSON.parse(raw);
+            const item = Array.isArray(out) ? out[0] : out;
+            assert.equal(item.pass, true);
+            assert.equal(item.rows, Number(process.env.EXPECTED));
+            assert.equal(item.persistence, 'n8n-data-table');
+            assert.equal(item.autonomous_send, false);
+            console.log(`PASS: audit contains ${item.rows} persisted rows`);
+            NODE
+          }
+
+          trap 'stop_n8n || true' EXIT
+          start_n8n
+
+          VALID=$(curl -fsS -X POST "$BASE_URL/webhook/lead-intake-reliability" \
+            -H 'Content-Type: application/json' \
+            --data @products/lead-intake-reliability-kit/samples/valid-lead.json)
+          VALID="$VALID" node <<'NODE'
+          const assert = require('node:assert/strict');
+          const out = JSON.parse(process.env.VALID);
+          const item = Array.isArray(out) ? out[0] : out;
+          assert.equal(item.ok, true);
+          assert.equal(item.status, 'prepared_for_human_review');
+          assert.equal(item.identity.email, 'alex.example@example.com');
+          assert.equal(item.identity.phone, '+34600123456');
+          assert.equal(item.autonomous_send, false);
+          console.log('PASS: valid lead executed through real n8n webhook');
+          NODE
+
+          INVALID=$(curl -fsS -X POST "$BASE_URL/webhook/lead-intake-reliability" \
+            -H 'Content-Type: application/json' \
+            --data @products/lead-intake-reliability-kit/samples/invalid-lead.json)
+          INVALID="$INVALID" node <<'NODE'
+          const assert = require('node:assert/strict');
+          const out = JSON.parse(process.env.INVALID);
+          const item = Array.isArray(out) ? out[0] : out;
+          assert.equal(item.ok, false);
+          assert.equal(item.status, 'validation_failed');
+          assert.ok(item.missing_fields.includes('name'));
+          assert.ok(item.missing_fields.includes('email_or_phone'));
+          assert.equal(item.autonomous_send, false);
+          console.log('PASS: invalid lead rejected through real n8n webhook');
+          NODE
+
+          curl -fsS -X POST "$BASE_URL/webhook/lead-intake-dedup-bootstrap" \
+            -H 'Content-Type: application/json' --data '{}' >/dev/null
+
+          curl -fsS -X POST "$BASE_URL/webhook/lead-intake-dedup-guard" \
+            -H 'Content-Type: application/json' \
+            --data @products/lead-intake-reliability-kit/samples/valid-lead.json >/dev/null
+          sleep 1
+          curl -fsS -X POST "$BASE_URL/webhook/lead-intake-dedup-guard" \
+            -H 'Content-Type: application/json' \
+            --data @products/lead-intake-reliability-kit/samples/duplicate-lead.json >/dev/null
+          sleep 2
+          audit_rows 1
+          echo 'PASS: same normalized identity with different event ID did not create a second row'
+
+          stop_n8n
+          sleep 2
+          start_n8n
+
+          curl -fsS -X POST "$BASE_URL/webhook/lead-intake-dedup-guard" \
+            -H 'Content-Type: application/json' \
+            --data '{"event_id":"sample-003","name":"Phone Only","phone":"+34 611 222 333"}' >/dev/null
+          sleep 2
+          audit_rows 2
+          echo 'PASS: product Data Table state persisted across n8n process restart'
