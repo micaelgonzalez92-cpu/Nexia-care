@@ -50,13 +50,18 @@
     {
       "id": "ZQ-006",
       "name": "LOCAL-AI-CODER-001 benchmark with Ollama + Qwen2.5-Coder 7B Instruct Q4_K_M",
-      "status": "AUTHORIZED_READY_LOCAL_EXECUTION",
+      "status": "BLOCKED_PYTHON_RUNTIME_OUTSIDE_CURRENT_AUTHORITY",
       "executor": "LOCAL_AI_PROBE",
       "zero_quota": true,
-      "authority": "AUTHORIZED_ONE_OFF_LOCAL_INSTALL_BENCHMARK",
+      "authority": "NEW_EXPLICIT_GATE_REQUIRED_FOR_PYTHON_INSTALL",
       "authorization_event": "events/EVT-2026-10-12-LOCALCODER-001.json",
+      "latest_execution_event": "events/EVT-2026-10-12-LOCALCODER-002.json",
       "contract": "experiments/LOCAL-AI-CODER-001.md",
       "runner": "tools/run_local_ai_coder_001.ps1",
+      "installed_runtime": "OLLAMA_0.40.3_USER_LOG_EVIDENCE",
+      "installed_model": "qwen2.5-coder:7b-instruct_USER_LOG_EVIDENCE",
+      "scored_tasks_started": 0,
+      "benchmark_result": "BLOCKED_NOT_FAIL",
       "max_cash_spend_eur": 0,
       "promotion_if_pass": "LOCAL_AI_VERIFIED_FOR_BOUNDED_CODE_ASSIST"
     }
