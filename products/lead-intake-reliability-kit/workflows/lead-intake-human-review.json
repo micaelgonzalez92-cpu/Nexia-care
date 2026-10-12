@@ -1,0 +1,58 @@
+{
+  "id": "nexia-lead-intake-human-review-v01",
+  "name": "Lead Intake Reliability - Normalize and Human Review",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-intake-reliability",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [0, 0],
+      "id": "lead-intake-webhook",
+      "name": "Lead Webhook",
+      "webhookId": "lead-intake-reliability"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const clean = v => String(v ?? '').trim().replace(/\\s+/g, ' ');\nconst normEmail = v => clean(v).toLowerCase();\nconst normPhone = v => { const raw = clean(v); if (!raw) return ''; const digits = raw.replace(/\\D/g, ''); return raw.startsWith('+') ? '+' + digits : digits; };\nconst input = $input.all().map(i => i.json.body ?? i.json);\nreturn input.map(raw => {\n  const eventId = clean(raw.event_id);\n  const name = clean(raw.name);\n  const email = normEmail(raw.email);\n  const phone = normPhone(raw.phone);\n  const contact = email || phone;\n  const source = clean(raw.source);\n  const service = clean(raw.service);\n  const message = clean(raw.message);\n  const desiredDate = clean(raw.desired_date);\n  const budget = clean(raw.budget);\n  const missing = [];\n  if (!eventId) missing.push('event_id');\n  if (!name) missing.push('name');\n  if (!contact) missing.push('email_or_phone');\n  if (missing.length) {\n    return {json:{ok:false,status:'validation_failed',missing_fields:missing,autonomous_send:false,next_step:'fix_input_before_processing'}};\n  }\n  const summary = [\n    `Name: ${name}`,\n    `Contact: ${contact}`,\n    `Source: ${source || 'N/A'}`,\n    `Service: ${service || 'N/A'}`,\n    `Desired date: ${desiredDate || 'N/A'}`,\n    `Budget: ${budget || 'N/A'}`,\n    `Message: ${message || 'N/A'}`\n  ].join('\\n');\n  const replyDraft = `${name}, thanks for your enquiry. We have received your details and will review them before confirming the next step. This is a draft for human review and has not been sent.`;\n  return {json:{\n    ok:true,\n    status:'prepared_for_human_review',\n    event_id:eventId,\n    identity:{email,phone},\n    normalized:{name,source,service,message,desired_date:desiredDate,budget},\n    missing_fields:[],\n    summary,\n    reply_draft:replyDraft,\n    next_step:'human_review',\n    autonomous_send:false\n  }};\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [280, 0],
+      "id": "normalize-and-review",
+      "name": "Normalize and Prepare Review"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [560, 0],
+      "id": "respond-review",
+      "name": "Respond with Review Payload"
+    }
+  ],
+  "connections": {
+    "Lead Webhook": {
+      "main": [[{"node": "Normalize and Prepare Review", "type": "main", "index": 0}]]
+    },
+    "Normalize and Prepare Review": {
+      "main": [[{"node": "Respond with Review Payload", "type": "main", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {"executionOrder": "v1"},
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "nexiaProduct": "lead-intake-reliability-kit-v0.1",
+    "evidenceBoundary": "internal-product-component-no-credentials-no-external-send"
+  }
+}
