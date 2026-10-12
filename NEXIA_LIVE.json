@@ -1,17 +1,17 @@
 {
   "updated_at": "2026-10-13",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + HUESCAVENTURA OPEN PROFILE MODERATION PENDING + AUTO-PRODUCT TEMPLATE #1 REJECTED TOO BASIC + TEMPLATE #2 CANDIDATE PREPARED + AI-UGC PORTFOLIO PHASE A PASS + LOCAL IMAGE VERIFIED + ZERO-QUOTA ROUTER VERIFIED + LOCAL-AI-CODER VERIFIED BOUNDED CODE ASSIST",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + HUESCAVENTURA OPEN PROFILE MODERATION PENDING + AUTO-PRODUCT TEMPLATE #1 REJECTED TOO BASIC + TEMPLATE #2 CANDIDATE PREPARED + AI-UGC PHASE B DESIGNED UGC-VIDEO-001 WAITING AUTHORIZATION + LOCAL IMAGE VERIFIED + ZERO-QUOTA ROUTER VERIFIED + LOCAL-AI-CODER VERIFIED BOUNDED CODE ASSIST",
   "state_version": 70,
   "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
   "boot_version": 45,
   "boot_blob_sha": "c4c465412b5e53387e8fbe4ecb6e1b54ee7b740c",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
-  "state_reconciliation": "STATE_V70_VALID; VERIFIED_POST_STATE_EVENT_DELTA_THROUGH_UGCPORT_003_REMAINS_UNABSORBED_BY_STATE; NEXT_ATOMIC_STATE_CHECKPOINT_REQUIRED",
+  "state_reconciliation": "STATE_V70_VALID; VERIFIED_POST_STATE_EVENT_DELTA_THROUGH_UGCPORT_004_REMAINS_UNABSORBED_BY_STATE; NEXT_ATOMIC_STATE_CHECKPOINT_REQUIRED",
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
-    "index_blob_sha": "984574a113197a8412a4bd2e7b888c9fd79cfec6",
-    "latest_verified_event_id": "EVT-2026-10-13-UGCPORT-003",
-    "latest_verified_event_blob_sha": "7935e5cf907cbc588fa2fe6f3880c3f0f36d100e",
+    "index_blob_sha": "d728e1af206f3c22648b5129b62b929fba97e98e",
+    "latest_verified_event_id": "EVT-2026-10-13-UGCPORT-004",
+    "latest_verified_event_blob_sha": "d8245513e86cc4e3c9a3fd7bd579d7cdc75620e5",
     "legacy_jsonl_mode": "READ_ONLY"
   },
   "active_experiment": {
@@ -73,11 +73,11 @@
       },
       {
         "id": "VETA-AI-UGC-001",
-        "stage": "PHASE_A_PASS_LOCAL_KEYFRAME_WORKFLOW_VALIDATED",
-        "focus": "AI UGC/performance creative service; local keyframe production passed preregistered quality, pair, iteration and human-time gates",
+        "stage": "PHASE_B_DESIGNED_VIDEO_BENCHMARK_PREREGISTERED_WAITING_AUTHORIZATION",
+        "focus": "AI UGC/performance creative service; local keyframe production passed and CLEARNEST 24s SPEC storyboard is designed",
         "spend": "EUR0",
         "published_portfolio": 0,
-        "portfolio_gap": "PHASE_A_CLOSED_INTERNAL_ONLY_PHASE_B_NOT_EXECUTED",
+        "portfolio_gap": "PHASE_A_CLOSED_INTERNAL_ONLY_PHASE_B_DESIGNED_NOT_EXECUTED",
         "ugc_portfolio_experiment": "UGC-PORTFOLIO-001 PHASE_A PASS",
         "local_image_runtime": "PROBED_AND_VERIFIED_SINGLE_RUN_PLUS_EIGHT_ATTEMPT_PORTFOLIO_EXPERIMENT",
         "final_accepted_frames": ["A1", "A2", "B1_RETRY", "B2", "C1", "C2_RETRY"],
@@ -87,7 +87,12 @@
         "median_attempts_per_accepted_frame": 1,
         "human_steering_review_minutes_approx": 20,
         "phase_a_gate": "PASS",
-        "phase_b": "ELIGIBLE_FOR_INTERNAL_DESIGN_NOT_EXECUTED",
+        "phase_b": "CLEARNEST_STORYBOARD_DESIGNED_NOT_EXECUTED",
+        "phase_b_artifact": "experiments/UGC-PORTFOLIO-001_PHASE_B_DESIGN.md",
+        "video_benchmark": "UGC-VIDEO-001 PREREGISTERED_NOT_AUTHORIZED_NOT_EXECUTED",
+        "video_benchmark_artifact": "experiments/UGC-VIDEO-001.md",
+        "video_candidate": "LTX-Video 2B v0.9.5 in existing ComfyUI",
+        "estimated_new_download_gb_if_absent": 15,
         "commercial_quality": "VERIFIED_FOR_BOUNDED_SPEC_KEYFRAME_PORTFOLIO_ONLY"
       }
     ],
@@ -108,6 +113,7 @@
     "local_capability_scoring_spec": "PERSISTED",
     "local_capability_scorer_code": "PERSISTED_RE_READ_EXACT_MATCH; 8/8_SYNTHETIC_TESTS_PASS",
     "local_image_generation": "COMFYUI_FLUX2_KLEIN_4B_FP8_PHASE_A_PORTFOLIO_PASS",
+    "local_video_generation": "NOT_VERIFIED_UGC_VIDEO_001_PREREGISTERED_WAITING_AUTHORIZATION",
     "zero_quota_execution": "ROUTER_AND_GITHUB_ACTIONS_OFFLOAD_VERIFIED",
     "zero_quota_ci_run": 38304533964,
     "zero_quota_router_tests": "12/12 PASS",
@@ -145,31 +151,31 @@
     "reconciled_net_profit_eur": 0
   },
   "session_handoff": {
-    "last_completed_verified_action": "UGC-PORTFOLIO-001 Phase A closed PASS after two targeted retries and Kael-reported approximate manual steering/review time of 20 minutes. Final accepted set is A1, A2, B1 retry, B2, C1 and C2 retry; all three brief pairs are complete. Total attempts 8/18, median attempts per accepted frame 1, cash spend EUR0. Events UGCPORT-002 and UGCPORT-003 plus final PASS handoff were persisted; no portfolio images were uploaded to the public repository.",
-    "last_user_facing_handoff": "Phase A is complete and must not be repeated. No Kael action is required now. Next safe work is internal Phase B storyboard design; any additional local generation/install/publication/contact remains separately gated.",
-    "human_action_required_now": false,
-    "pending_human_action": null,
+    "last_completed_verified_action": "Recovered BOOT/STATE/LIVE/index and UGCPORT-003. Selected CLEARNEST as strongest Phase-B brief, designed a 24-second vertical SPEC storyboard with three hooks/voice/captions/CTA, researched a stock-ComfyUI LTX-Video 2B v0.9.5 image-to-video route, preregistered UGC-VIDEO-001 with fixed <=3-attempt quality/runtime gates, and persisted UGCPORT-004 plus exact authorization handoff. No model download or video generation was executed.",
+    "last_user_facing_handoff": "Phase B is designed. UGC-VIDEO-001 is preregistered but requires explicit Kael authorization before any LTX-Video/T5 download or local video execution.",
+    "human_action_required_now": true,
+    "pending_human_action": "Explicitly authorize or decline UGC-VIDEO-001: existing ComfyUI; only LTX-Video 2B v0.9.5 plus t5xxl_fp16 if absent; <=3 local attempts; EUR0 cash; no cloud/API/publication/contact/second model.",
     "surface": "ChatGPT Nexia Core",
-    "device": "mobile or computer",
-    "why_kael": "No Kael action is required at this checkpoint.",
+    "device": "mobile or computer for authorization; computer required for later local execution",
+    "why_kael": "New model downloads and local generation are Human Gate actions and /next does not expand authority.",
     "steps": [],
-    "cost_exposure": "EUR0 cash. No publication, external contact, new installation or paid API used.",
-    "success_check": "Fresh recovery identifies UGC-PORTFOLIO-001 Phase A as PASS with 6 accepted frames, 3 complete pairs, 8 attempts total, median attempts 1 and approximately 20 minutes human steering/review.",
-    "return_to_nexia": "No immediate return required.",
+    "cost_exposure": "EUR0 cash; estimated approximately 15 GB new download/disk if both allowed model files are absent, plus local GPU/electricity/time. Reversible by deleting downloaded model files.",
+    "success_check": "If authorized, UGC-VIDEO-001 remains limited to the preregistered LTX v0.9.5 scope and fixed PASS/FAIL thresholds in experiments/UGC-VIDEO-001.md.",
+    "return_to_nexia": "Reply with explicit authorization or decline. Do not perform local download/generation before authorization.",
     "resume_required_reads": [
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_EVENT_INDEX.json",
-      "events/EVT-2026-10-13-UGCPORT-001.json",
-      "events/EVT-2026-10-13-UGCPORT-002.json",
       "events/EVT-2026-10-13-UGCPORT-003.json",
-      "NEXIA_UGC_PORTFOLIO_PHASE_A_PASS_HANDOFF_2026-10-13.json",
-      "experiments/UGC-PORTFOLIO-001.md"
+      "events/EVT-2026-10-13-UGCPORT-004.json",
+      "experiments/UGC-PORTFOLIO-001_PHASE_B_DESIGN.md",
+      "experiments/UGC-VIDEO-001.md",
+      "NEXIA_UGC_PHASE_B_DESIGN_HANDOFF_2026-10-13.json"
     ],
-    "resume_from": "Do not repeat UGC Phase A. Keep EXP-AUTO-001 as primary monetization priority while Workana moderation is pending. Phase B may be designed internally, but any new generation/tool installation/publication/contact must respect existing authority gates.",
-    "truth_limit": "UGC Phase A PASS validates bounded local SPEC keyframe production only. It does not prove buyer demand, video production, publication, sale, settled payment or profit."
+    "resume_from": "Do not repeat Phase A or redesign Phase B. Await explicit UGC-VIDEO-001 authorization. If authorized, execute only the preregistered candidate/scope; on FAIL do not select/download another model without a new Human Gate.",
+    "truth_limit": "Phase B design and benchmark preregistration are preparation only. Local video capability, buyer demand, publication, sale, settled payment and profit remain unverified."
   },
-  "human_gate": "NONE_IMMEDIATE. Huescaventura proposal remains conditionally authorized only after Workana profile approval is verified, project remains open, and submission cost is EUR0. n8n Template 02 publication/submission remains NOT AUTHORIZED. UGC Phase B external generation/install/publication actions require their applicable gate.",
+  "human_gate": "UGC-VIDEO-001 AUTHORIZATION PENDING. Huescaventura proposal remains conditionally authorized only after Workana profile approval is verified, project remains open, and submission cost is EUR0. n8n Template 02 publication/submission remains NOT AUTHORIZED.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -178,11 +184,11 @@
     "n8n Creator Template 01 rejected as too basic; replacement candidate prepared but external resubmission/publication not authorized",
     "AUTO-PRODUCT willingness-to-pay remains unvalidated",
     "AUTO-PRODUCT external self-serve installation <=30 minutes not yet verified with users",
-    "UGC Phase B video/motion/lipsync production is not yet executed or verified",
+    "UGC Phase B storyboard is designed but UGC-VIDEO-001 local video model download/execution is not authorized or verified",
     "LOCAL_AI real-task reliability and AGENTIC_OFFLOAD_RATE require at least 20 bounded internal task records",
     "LOCAL_BROWSER not verified",
-    "Canonical STATE v70 has not absorbed later verified events through UGCPORT-003; MEMORY derived stale",
+    "Canonical STATE v70 has not absorbed later verified events through UGCPORT-004; MEMORY derived stale",
     "No willingness-to-pay, settled sale or realized profit exists"
   ],
-  "next_action": "Keep EXP-AUTO-001 as economic priority while Workana moderation remains pending. In parallel, safely design UGC Phase B internally from the strongest validated brief without executing new generation/tool installation/publication/contact unless separately authorized."
+  "next_action": "Await explicit Kael authorization or decline for UGC-VIDEO-001 while EXP-AUTO-001 remains economic priority pending Workana moderation. Do not download video models or generate video without authorization."
 }
