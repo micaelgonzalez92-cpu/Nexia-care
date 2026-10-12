@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-LOCALCODER-004",
+  "timestamp": "2026-10-12T23:40:00+02:00",
+  "type": "LOCAL_AI_CODER_BENCHMARK_CORRECTIVE_ADJUDICATION_PASS",
+  "state_version": 70,
+  "experiment": "LOCAL-AI-CODER-001",
+  "evidence_source": "KAEL_SHARED_TERMINAL_SUMMARY_PLUS_REPOSITORY_HARNESS_INSPECTION",
+  "observed_run": {
+    "raw_harness_result": "FAIL",
+    "tasks_passed": 5,
+    "tasks_total": 5,
+    "median_model_response_seconds": 2.48,
+    "approx_peak_gpu_memory_mib_whole_gpu": 5736.0,
+    "approx_peak_ollama_process_ram_mib": 135.0
+  },
+  "defect": {
+    "id": "NON_BOOLEAN_METRIC_INCLUDED_IN_ALL_GATE_VALUES",
+    "detail": "The harness computed PASS with all(gate.values()) while gate also contained human_steering_minutes_recorded=0. Python treats numeric zero as false, forcing FAIL even though the preregistered criterion is human steering <=15 minutes.",
+    "threshold_change": false,
+    "prompt_change": false,
+    "task_change": false
+  },
+  "contract_adjudication": {
+    "result": "PASS",
+    "reason": "5/5 scored tasks passed, including BUGFIX and REPO-REASONING; median response 2.48s <=120s; the run completed without OOM/crash; local-only/no-paid-fallback boundary was fixed in the harness; recorded human steering value 0 satisfies <=15m. The raw FAIL was caused only by the adjudicator implementation defect.",
+    "promotion": "LOCAL_AI_VERIFIED_FOR_BOUNDED_CODE_ASSIST"
+  },
+  "promotion_scope": {
+    "allowed": "Draft/fix/test bounded internal code in isolated/local workspaces under existing authority rules.",
+    "not_allowed": "Autonomous commits/pushes, secrets access, external actions, buyer contact, publication, destructive operations, or blanket replacement of Codex for complex/high-risk work."
+  },
+  "next_validation": "Accumulate at least 20 real bounded internal technical tasks before publishing a measured AGENTIC_OFFLOAD_RATE.",
+  "financial_impact_eur": 0,
+  "economic_stage_change": "NONE",
+  "truth_limit": "This validates bounded local coding assistance, not autonomous software engineering, business demand, sale, payment or profit."
+}
