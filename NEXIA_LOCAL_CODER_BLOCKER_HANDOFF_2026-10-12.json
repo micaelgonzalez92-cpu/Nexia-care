@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-12T23:16:00+02:00",
+  "canonical_state": {"version": 70, "changed": false},
+  "experiment": "LOCAL-AI-CODER-001",
+  "status": "BLOCKED_BEFORE_SCORED_TASKS",
+  "latest_event": "events/EVT-2026-10-12-LOCALCODER-002.json",
+  "execution_evidence": {
+    "source": "KAEL_SHARED_TERMINAL_LOG",
+    "ollama": "0.40.3 INSTALLED",
+    "model": "qwen2.5-coder:7b-instruct DOWNLOADED_VERIFIED_BY_OLLAMA_LOG",
+    "scored_tasks_started": 0,
+    "benchmark_result": "BLOCKED_NOT_FAIL",
+    "results_file_created": false
+  },
+  "blocker": "No usable Python 3 runtime. Windows Store alias is not an interpreter.",
+  "authority": "Current one-off gate does not permit Python installation or any additional runtime.",
+  "corrective_action_completed": "Runner now checks for a real Python interpreter before model download and rejects WindowsApps aliases. LOCAL-AI-CODER-001 prompts/scoring remain unchanged.",
+  "human_action_required_now": true,
+  "pending_human_action": "Choose whether to explicitly authorize installing only Python 3 for the unchanged preregistered benchmark. Do not install it under the existing Ollama-only authorization.",
+  "surface": "ChatGPT Nexia Core",
+  "device": "computer or mobile for authorization; computer required for later execution",
+  "cost_exposure": "EUR0 cash; additional local disk/runtime footprint only if separately authorized.",
+  "success_check": "If separately authorized, Python 3 is installed without pip packages or other tools, then the unchanged five-task benchmark runs and produces benchmark-results.json.",
+  "return_to_nexia": "Explicit authorization or rejection of Python 3 installation for LOCAL-AI-CODER-001.",
+  "truth_limit": "Do not classify LOCAL_AI as verified or failed until the five scored tasks actually run."
+}
