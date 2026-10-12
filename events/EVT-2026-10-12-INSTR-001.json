@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-INSTR-001",
+  "timestamp": "2026-10-12T15:43:15+02:00",
+  "type": "PROJECT_INSTRUCTIONS_COMPACT_MASTER_APPLIED_AND_VERIFIED",
+  "state_version": 70,
+  "source": "KAEL_PROJECT_SETTINGS_CONFIRMATION_PLUS_CURRENT_PROJECT_RUNTIME_BEHAVIOR",
+  "action": "Kael replaced the prior Nexia Core Project instructions with the compact master instruction set designed for the 8000-character limit.",
+  "verification": {
+    "kael_confirmation": "HECHO",
+    "current_runtime_instructions_present": true,
+    "material_to_use_rule_present": true,
+    "surface_device_human_task_contract_present": true,
+    "continuity_recovery_order_present": true,
+    "economic_ladder_o1_o4_present": true,
+    "github_state_remains_canonical": true
+  },
+  "human_gate": {
+    "previous": "REPLACE_PROJECT_INSTRUCTIONS_WITH_COMPACT_MASTER",
+    "status": "CLOSED_VERIFIED",
+    "pending_human_action": null
+  },
+  "authority_effect": "NONE",
+  "financial_impact_eur": 0,
+  "risk": "LOW_REVERSIBLE_CONFIGURATION_CHANGE",
+  "result": "PASS",
+  "next_operational_point": "Resume EXP-AUTO-001 as sole monetization experiment; keep VELA-01 paused; Workana standard moderation and n8n Creator template #1 review remain external blockers while zero-cost sensing continues.",
+  "truth_limit": "Project-instruction activation improves routing, continuity and task packaging but is not economic validation, revenue, settled payment or profit. Canonical STATE v70 still requires later reconciliation of post-state verified events."
+}
