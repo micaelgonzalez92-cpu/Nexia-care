@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-LOCALBENCH-001",
+  "timestamp": "2026-10-12T19:26:00Z",
+  "type": "EXPLICIT_BOUNDED_LOCAL_BENCHMARK_AUTHORIZATION",
+  "state_version": 70,
+  "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
+  "source": "KAEL_EXPLICIT_CURRENT_CHAT_REQUEST",
+  "authorized_scope": {
+    "action": "Verify real SSD free space and estimate required storage; if reasonable install isolated reversible ComfyUI and prepare one suitable image model; execute minimal local image generation benchmark",
+    "preferred_model": "FLUX.2 Klein 4B or equivalent compatible with Nexia rules",
+    "disallowed": [
+      "Openfield",
+      "browser agents",
+      "video model downloads",
+      "sensitive system configuration changes",
+      "paid inference or new financial exposure",
+      "secrets"
+    ],
+    "chosen_package": "ComfyUI Portable v0.39.0 NVIDIA cu126",
+    "chosen_image_model": "Official FLUX.2 Klein 4B FP8 distilled",
+    "benchmark_contract": "One 1024x1024 image, four steps, fixed seed 42, ten-minute generation timeout; PASS requires success history and valid nonblank coherent image"
+  },
+  "financial_impact_eur": 0,
+  "authority_effect": "ONE_OFF_LOCAL_INSTALL_AND_BENCHMARK_ONLY; ALL_OTHER_GATES_UNCHANGED",
+  "privacy_boundary": "No local hardware inventory, installation paths or performance measurements in this public event.",
+  "result": "AUTHORIZATION_RECORDED_NOT_BENCHMARK_PROOF",
+  "truth_limit": "Technical authorization and preparation are not model-runtime proof, commercial validation, revenue or profit."
+}
