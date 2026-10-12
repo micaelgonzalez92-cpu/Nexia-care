@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-UGCVIDEO-001",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "UGC_VIDEO_001_EXPLICIT_BOUNDED_AUTHORIZATION",
+  "state_version": 70,
+  "experiment": "UGC-VIDEO-001",
+  "parent": "UGC-PORTFOLIO-001 Phase B",
+  "actor": "Kael",
+  "authorization": {
+    "existing_comfyui_only": true,
+    "allowed_model_files": [
+      "ltx-video-2b-v0.9.5.safetensors",
+      "t5xxl_fp16.safetensors only if absent"
+    ],
+    "max_generation_attempts": 3,
+    "max_cash_spend_eur": 0,
+    "second_model": false,
+    "cloud_or_paid_api": false,
+    "publication": false,
+    "external_contact": false,
+    "new_application": false,
+    "custom_nodes": false
+  },
+  "authorized_action": "Download only the allowed LTX-Video 2B v0.9.5 and T5XXL files if absent and execute the preregistered local UGC-VIDEO-001 benchmark in the existing ComfyUI, up to three attempts.",
+  "result": "AUTHORIZED_NOT_YET_EXECUTED",
+  "financial_impact_eur": 0,
+  "authority_effect": "ONE_OFF_BOUNDED_AUTHORIZATION_ONLY; no standing authority and no expansion to other models/tools/publication/contact.",
+  "truth_limit": "Authorization is not execution. No model download, video generation, PASS, demand, sale, payment or profit is established by this event."
+}
