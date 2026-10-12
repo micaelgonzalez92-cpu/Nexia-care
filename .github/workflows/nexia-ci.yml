@@ -87,6 +87,39 @@ jobs:
             exit 1
           }
 
+      - name: UGC video runner syntax and bounded prompt contract
+        shell: bash
+        run: |
+          python3 -m py_compile tools/run_ugc_video_001.py
+          python3 - <<'PY'
+          import importlib.util
+          spec = importlib.util.spec_from_file_location('ugcvideo', 'tools/run_ugc_video_001.py')
+          module = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
+          prompt = module.build_prompt(4201)
+          assert module.SEEDS == [4201, 4202, 4203]
+          assert module.MODEL_CHECKPOINT == 'ltx-video-2b-v0.9.5.safetensors'
+          assert module.MODEL_TEXT_ENCODER == 't5xxl_fp16.safetensors'
+          assert prompt['77']['inputs']['width'] == 512
+          assert prompt['77']['inputs']['height'] == 768
+          assert prompt['77']['inputs']['length'] == 97
+          assert prompt['72']['inputs']['noise_seed'] == 4201
+          assert prompt['80']['inputs']['fps'] == 24.0
+          assert prompt['81']['inputs']['format'] == 'auto'
+          assert module.BASE_URL == 'http://127.0.0.1:8188'
+          PY
+
+      - name: UGC video PowerShell launcher syntax
+        shell: pwsh
+        run: |
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path 'tools/run_ugc_video_001.ps1'), [ref]$tokens, [ref]$errors) | Out-Null
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Error $_.Message }
+            exit 1
+          }
+
       - name: Canonical STATE BOOT LIVE integrity check
         shell: bash
         run: |
