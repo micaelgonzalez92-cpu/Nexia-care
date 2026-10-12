@@ -46,6 +46,17 @@
       "zero_quota": false,
       "authority": "GREEN_INTERNAL",
       "replacement_target": "LOCAL_AI_NOT_VERIFIED"
+    },
+    {
+      "id": "ZQ-006",
+      "name": "LOCAL-AI-CODER-001 benchmark with Ollama + Qwen2.5-Coder 7B Instruct Q4_K_M",
+      "status": "WAITING_KAEL_INSTALL_AUTHORIZATION",
+      "executor": "LOCAL_AI_PROBE",
+      "zero_quota": true,
+      "authority": "RED_INSTALL_GATE",
+      "contract": "experiments/LOCAL-AI-CODER-001.md",
+      "max_cash_spend_eur": 0,
+      "promotion_if_pass": "LOCAL_AI_VERIFIED_FOR_BOUNDED_CODE_ASSIST"
     }
   ],
   "metrics": {
