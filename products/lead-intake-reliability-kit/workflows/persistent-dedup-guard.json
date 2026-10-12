@@ -1,0 +1,106 @@
+{
+  "id": "nexia-lead-intake-dedup-guard-v01",
+  "name": "Lead Intake Reliability - Persistent Dedup Guard",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-intake-dedup-guard",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [0, 0],
+      "id": "dedup-webhook-trigger",
+      "name": "Webhook",
+      "webhookId": "lead-intake-dedup-guard"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const raw = $json.body ?? $json;\nconst clean = v => String(v ?? '').trim().replace(/\\s+/g, ' ');\nconst eventId = clean(raw.event_id);\nconst email = clean(raw.email).toLowerCase();\nconst phoneRaw = clean(raw.phone);\nconst digits = phoneRaw.replace(/\\D/g, '');\nconst phone = phoneRaw ? (phoneRaw.startsWith('+') ? '+' + digits : digits) : '';\nif (!eventId) throw new Error('missing_event_id');\nif (!email && !phone) throw new Error('missing_identity');\nconst identityKey = email ? `email:${email}` : `phone:${phone}`;\nreturn [{json:{eventKey:`event:${eventId}`, identityKey, recordId:`lead:${eventId}`, autonomous_send:false}}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [260, 0],
+      "id": "normalize-dedup-keys",
+      "name": "Normalize Dedup Keys"
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "rowNotExists",
+        "dataTableId": {"__rl": true, "value": "lead_intake_reliability_keys", "mode": "name"},
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {"keyName": "eventKey", "condition": "eq", "keyValue": "={{ $json.eventKey }}"}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [520, 0],
+      "id": "event-not-seen",
+      "name": "Event Not Seen"
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "rowNotExists",
+        "dataTableId": {"__rl": true, "value": "lead_intake_reliability_keys", "mode": "name"},
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {"keyName": "identityKey", "condition": "eq", "keyValue": "={{ $json.identityKey }}"}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [780, 0],
+      "id": "identity-not-seen",
+      "name": "Identity Not Seen"
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "insert",
+        "dataTableId": {"__rl": true, "value": "lead_intake_reliability_keys", "mode": "name"},
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "eventKey": "={{ $json.eventKey }}",
+            "identityKey": "={{ $json.identityKey }}",
+            "recordId": "={{ $json.recordId }}"
+          },
+          "schema": [
+            {"id": "eventKey", "displayName": "eventKey", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "identityKey", "displayName": "identityKey", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true},
+            {"id": "recordId", "displayName": "recordId", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true}
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [1040, 0],
+      "id": "insert-new-identity",
+      "name": "Insert New Identity"
+    }
+  ],
+  "connections": {
+    "Webhook": {"main": [[{"node": "Normalize Dedup Keys", "type": "main", "index": 0}]]},
+    "Normalize Dedup Keys": {"main": [[{"node": "Event Not Seen", "type": "main", "index": 0}]]},
+    "Event Not Seen": {"main": [[{"node": "Identity Not Seen", "type": "main", "index": 0}]]},
+    "Identity Not Seen": {"main": [[{"node": "Insert New Identity", "type": "main", "index": 0}]]}
+  },
+  "active": false,
+  "settings": {"executionOrder": "v1"},
+  "pinData": {},
+  "meta": {
+    "nexiaProduct": "lead-intake-reliability-kit-v0.1",
+    "evidenceBoundary": "native-data-table-dedup-component-no-external-send"
+  }
+}
