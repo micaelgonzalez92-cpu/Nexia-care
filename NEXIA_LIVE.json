@@ -1,16 +1,17 @@
 {
   "updated_at": "2026-10-12",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + AUTO-PRODUCT TEMPLATE #1 SUBMITTED PENDING REVIEW + AI-UGC WATCH",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + AUTO-PRODUCT TEMPLATE #1 SUBMITTED PENDING REVIEW + AI-UGC WATCH + CAPABILITY RADAR ACTIVE",
   "state_version": 70,
   "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
   "boot_version": 45,
   "boot_blob_sha": "c4c465412b5e53387e8fbe4ecb6e1b54ee7b740c",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
+  "state_reconciliation": "STATE_V70_VALID_BUT_LAGS_VERIFIED_EVENT_DELTA_THROUGH_CAP_001; NEXT_ATOMIC_STATE_CHECKPOINT_REQUIRED",
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
-    "index_blob_sha": "dfd9cc12a59e8c4fe109de10b235e2129391f8b9",
-    "latest_verified_event_id": "EVT-2026-10-12-N8NCREATOR-001",
-    "latest_verified_event_blob_sha": "6241989866d29bb8aab964353bfbcf3ea7fdf1f4",
+    "index_blob_sha": "390c7f0dd6dba3bd388babd9150922b74a610b47",
+    "latest_verified_event_id": "EVT-2026-10-12-CAP-001",
+    "latest_verified_event_blob_sha": "cec9f7d75337a2a1214e1ae7a65d11a96870b1a7",
     "legacy_jsonl_mode": "READ_ONLY"
   },
   "active_experiment": {
@@ -26,8 +27,9 @@
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
     "primary_opportunity": "WORKANA-HUESCAVENTURA-001",
     "public_opportunity_status": "OPEN_EVALUATING_PROPOSALS_REVERIFIED_2026-10-12",
-    "visible_proposals": 1,
-    "budget_eur": "200-300"
+    "visible_proposals_last_canonical_check": 1,
+    "budget_eur": "200-300",
+    "gmail_check_2026_10_12": "PRIORITY_MODERATION_SALES_EMAIL_FOUND; NO_PROFILE_APPROVAL_REJECTION_OR_ACTION_REQUIRED_EMAIL_VERIFIED"
   },
   "parallel_business_state": {
     "status": "ACTIVE_PARALLEL_FALSIFICATION",
@@ -50,7 +52,8 @@
           "creator_account": "ACTIVE",
           "approval": "NOT_YET_VERIFIED",
           "approved_count": 0,
-          "cost_eur": 0
+          "cost_eur": 0,
+          "gmail_check_2026_10_12": "ACCOUNT_CONFIRMATION_EMAIL_ONLY; NO_LATER_APPROVAL_CHANGE_REQUEST_OR_REJECTION_EMAIL_VERIFIED"
         },
         "runtime_job": 114764135662,
         "tested_commit": "ca54ddbc626520a13450aecda6c550d165a42300",
@@ -71,13 +74,26 @@
     ],
     "generic_etsy_templates": "NO_GO_GENERIC"
   },
+  "capability_state": {
+    "google_drive": "CONNECTED_USE_MY_DEFAULT_LOW_RISK_ACTIONS",
+    "github_permission": "USE_MY_DEFAULT_LOW_RISK_ACTIONS",
+    "codex_repo_contract": "AGENTS_MD_ADDED",
+    "repo_skills": [
+      "nexia-checkpoint",
+      "nexia-change-verification"
+    ],
+    "dependabot": "WEEKLY_GITHUB_ACTIONS_UPDATES_CONFIGURED",
+    "execution_surface_protocol": "ACTIVE",
+    "authority_effect": "NO_EXPANSION_OF_BUSINESS_AUTHORITY"
+  },
   "automation_state": {
-    "active_count": 3,
-    "paused_count": 6,
+    "active_count": 4,
+    "paused_count": 5,
     "completed_count": 1,
-    "control_tower": "ACTIVE_DAILY_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_SENSOR",
+    "control_tower": "ACTIVE_DAILY_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_AND_N8N_CREATOR_EMAIL_SENSOR",
     "parallel_worker": "ACTIVE_EVERY_6_HOURS",
     "parallel_business_radar": "ACTIVE_DAILY_AROUND_15",
+    "capability_evolution": "ACTIVE_WEEKLY_WEDNESDAY_AROUND_10",
     "workana_response_watch": "PAUSED_REDUNDANT"
   },
   "commercial_pipeline": {
@@ -87,17 +103,18 @@
     "settled_revenue_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "human_gate": "No immediate n8n Creator action while template #1 is pending review. Do not submit template #2 or publish a paid product without a new explicit authorization. Workana remains standard-wait; if profile approval is verified, recheck Huescaventura and use the already-authorized EUR300 proposal only if still open and submission remains EUR0.",
+  "human_gate": "No immediate Kael action. Do not pay Workana priority moderation. Do not submit n8n template #2 or publish a paid product without new explicit authorization. If Workana approval is verified, recheck Huescaventura and use the already-authorized EUR300 proposal only if still open and submission remains EUR0. If n8n template #1 is approved, prepare template #2 internally but do not submit it without authorization.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
   "current_blockers": [
     "Workana profile approval pending standard moderation",
-    "n8n Creator template #1 is submitted and pending review; approval is not yet verified",
+    "n8n Creator template #1 submitted and pending review; approval not verified",
     "AUTO-PRODUCT willingness-to-pay remains unvalidated; pending free-template review is distribution evidence only",
     "AUTO-PRODUCT external self-serve installation <=30 minutes not yet verified with users",
     "AI UGC has portfolio/tool-cost/time uncertainty and remains WATCH",
+    "Canonical STATE v70 has not yet absorbed verified events N8NCREATOR-001, PERM-001 and CAP-001",
     "No willingness-to-pay, settled sale or realized profit exists"
   ],
-  "next_action": "Do not add more internal engineering to the verified SKU. Wait for n8n Creator review and standard Workana moderation while continuing zero-cost opportunity sensing. If n8n requests changes, correct only the requested issues; if approved, prepare template #2 but do not submit without a new explicit authorization. If Workana approves the profile, reverify Huescaventura before the already-authorized EUR300 proposal. Canonical STATE remains v70 and must absorb this LIVE/event delta at the next atomic state checkpoint."
+  "next_action": "Keep VELA-01 paused. Continue EXP-AUTO-001 as sole monetization WIP. Huescaventura remains P0 after fresh public recheck; no superior replacement promoted. Wait for standard Workana moderation and n8n Creator review while zero-cost acquisition sensing continues. Do not add internal engineering to the verified SKU. Next persistence action is an atomic STATE checkpoint that absorbs post-v70 verified event deltas without changing commercial truth."
 }
