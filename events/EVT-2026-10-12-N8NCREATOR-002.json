@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-N8NCREATOR-002",
+  "timestamp": "2026-10-12T20:49:10Z",
+  "type": "N8N_CREATOR_TEMPLATE_01_REJECTED_TOO_BASIC",
+  "state_version": 70,
+  "vein": "VETA-AUTO-PRODUCT-001",
+  "submission": {
+    "creator_workflow_id": 20799,
+    "title": "Normalize inbound lead intake for human review via webhook",
+    "previous_status": "SUBMITTED_PENDING_REVIEW",
+    "result": "REJECTED_NOT_PUBLISHED",
+    "review_feedback": "too basic to meet publishing criteria",
+    "reviewer_suggestion": "If intended for beginners, consider a YouTube tutorial linked as a sticky note on the canvas."
+  },
+  "evidence_source": "Gmail message from creators@n8n.io read 2026-10-12",
+  "interpretation": {
+    "demand_proof": false,
+    "willingness_to_pay_proof": false,
+    "technical_runtime_invalidated": false,
+    "distribution_signal": "NEGATIVE_FOR_TEMPLATE_01_AS_SUBMITTED",
+    "learning": "A minimal credential-free normalization/review workflow is insufficiently substantive for n8n template-library publication. Any replacement should add materially deeper reusable automation rather than cosmetic complexity."
+  },
+  "next_safe_action": "Prepare, but do not submit, a materially deeper replacement candidate using already-verified native Data Table persistent deduplication and explicit human-review boundaries.",
+  "authority_effect": "NONE; resubmission/publication remains a separate external-action gate.",
+  "financial_impact_eur": 0,
+  "economic_stage_change": "NONE",
+  "truth_limit": "Template rejection is a distribution-quality signal only; it does not invalidate the internal n8n runtime proof and does not prove market demand, payment or profit."
+}
