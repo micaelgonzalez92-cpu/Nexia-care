@@ -1,6 +1,6 @@
 # LOCAL-AI-CODER-001 — authorized bounded local runner
-# Scope: Ollama + qwen2.5-coder:7b-instruct + preregistered five-task benchmark only.
-# No other model, browser agent, paid/cloud API, external contact, publication or repo mutation.
+# Scope: Python 3 runtime + Ollama + qwen2.5-coder:7b-instruct + preregistered five-task benchmark only.
+# No pip packages, other tools/models, browser agent, paid/cloud API, external contact, publication or repo mutation.
 
 param(
     [string]$OutputDir = "$env:USERPROFILE\NEXIA_LOCAL_AI_CODER_001"
@@ -8,6 +8,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $Model = "qwen2.5-coder:7b-instruct"
+$PythonPackage = "Python.Python.3.12"
 $HarnessUrl = "https://raw.githubusercontent.com/micaelgonzalez92-cpu/Nexia-care/e6d25f3988f8d8a8c7c58b87a456844a920ab0c9/tools/nexia_local_ai_coder_001_benchmark.py"
 
 function Get-OllamaExe {
@@ -35,10 +36,10 @@ function Test-PythonCandidate {
     if (-not $Exe) { return $null }
     if ($Exe -match "\\WindowsApps\\") { return $null }
     try {
-        $probeArgs = @($PrefixArgs) + @("-c", "import sys; print(sys.executable)")
-        $output = & $Exe @probeArgs 2>$null
-        if ($LASTEXITCODE -eq 0 -and $output) {
-            return [pscustomobject]@{ Exe = $Exe; PrefixArgs = @($PrefixArgs); Runtime = ($output | Select-Object -Last 1) }
+        $probeArgs = @($PrefixArgs) + @("-c", "import sys; print(sys.executable); print(sys.version_info.major)")
+        $output = @(& $Exe @probeArgs 2>$null)
+        if ($LASTEXITCODE -eq 0 -and $output.Count -ge 2 -and $output[-1].Trim() -eq "3") {
+            return [pscustomobject]@{ Exe = $Exe; PrefixArgs = @($PrefixArgs); Runtime = $output[0].Trim() }
         }
     } catch { }
     return $null
@@ -76,7 +77,7 @@ function Get-UsablePython {
 }
 
 Write-Host "NEXIA LOCAL-AI-CODER-001"
-Write-Host "Scope: Ollama + $Model only; cash spend EUR0."
+Write-Host "Scope: Python 3 runtime + Ollama + $Model only; cash spend EUR0."
 
 $systemDrive = Get-PSDrive -Name $env:SystemDrive.TrimEnd(':')
 $freeGiB = [math]::Round($systemDrive.Free / 1GB, 2)
@@ -85,10 +86,23 @@ if ($freeGiB -lt 10) {
     throw "STOP: less than 10 GiB free on system drive; benchmark not started."
 }
 
-# Verify the preregistered harness runtime before any large model download.
+# Verify/install only the explicitly authorized Python 3 runtime before benchmark execution.
 $python = Get-UsablePython
 if (-not $python) {
-    throw "STOP: no usable Python 3 runtime found. Windows Store execution aliases are not accepted. No runtime was installed because Python is outside this authorization. Model download/benchmark not started by this run."
+    $winget = Get-Command winget -ErrorAction SilentlyContinue
+    if (-not $winget) {
+        throw "STOP: Python 3 is absent and winget is unavailable. No fallback installer was used."
+    }
+    Write-Host "Installing only authorized Python 3 runtime via winget package $PythonPackage..."
+    & $winget.Source install --id $PythonPackage --exact --source winget --accept-package-agreements --accept-source-agreements --silent
+    if ($LASTEXITCODE -ne 0) { throw "Python installation failed with exit code $LASTEXITCODE" }
+    Start-Sleep -Seconds 3
+    $python = Get-UsablePython
+    if (-not $python) {
+        throw "Python installation reported success but no usable Python 3 interpreter was found. Benchmark not started."
+    }
+} else {
+    Write-Host "Usable Python 3 already present; no Python reinstall."
 }
 Write-Host "Usable Python runtime found: $($python.Runtime)"
 
