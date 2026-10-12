@@ -36,8 +36,8 @@
     {"event_id":"EVT-2026-10-12-LOCALCODER-004","timestamp":"2026-10-12T23:40:00+02:00","type":"LOCAL_AI_CODER_BENCHMARK_CORRECTIVE_ADJUDICATION_PASS","state_version":70,"path":"events/EVT-2026-10-12-LOCALCODER-004.json","verified_blob_sha":"191bda1d9521fe861f5537778c6d0248e0fda64b"},
     {"event_id":"EVT-2026-10-12-N8NCREATOR-002","timestamp":"2026-10-12T20:49:10Z","type":"N8N_CREATOR_TEMPLATE_01_REJECTED_TOO_BASIC","state_version":70,"path":"events/EVT-2026-10-12-N8NCREATOR-002.json","verified_blob_sha":"7ce1bc819758e9493c3a87a8789dc93829dd7253"},
     {"event_id":"EVT-2026-10-13-UGCPORT-001","timestamp":"2026-10-13","type":"UGC_PORTFOLIO_PHASE_A_FIRST_PASS_QA","state_version":70,"path":"events/EVT-2026-10-13-UGCPORT-001.json","verified_blob_sha":"ca798dd1a5b8bd7685bba57ffa0d99107041e8af"},
-    {"event_id":"EVT-2026-10-13-UGCPORT-002","timestamp":"2026-10-13","type":"UGC_PORTFOLIO_PHASE_A_TARGETED_RETRY_QA","state_version":70,"path":"events/EVT-2026-10-13-UGCPORT-002.json","verified_blob_sha":"PENDING_READBACK"},
-    {"event_id":"EVT-2026-10-13-UGCPORT-003","timestamp":"2026-10-13","type":"UGC_PORTFOLIO_PHASE_A_FINAL_PASS","state_version":70,"path":"events/EVT-2026-10-13-UGCPORT-003.json","verified_blob_sha":"PENDING_READBACK"}
+    {"event_id":"EVT-2026-10-13-UGCPORT-002","timestamp":"2026-10-13","type":"UGC_PORTFOLIO_PHASE_A_TARGETED_RETRY_QA","state_version":70,"path":"events/EVT-2026-10-13-UGCPORT-002.json","verified_blob_sha":"5424b815fccc3fa64d42af359fcdc2388a496c2f"},
+    {"event_id":"EVT-2026-10-13-UGCPORT-003","timestamp":"2026-10-13","type":"UGC_PORTFOLIO_PHASE_A_FINAL_PASS","state_version":70,"path":"events/EVT-2026-10-13-UGCPORT-003.json","verified_blob_sha":"7935e5cf907cbc588fa2fe6f3880c3f0f36d100e"}
   ],
   "rule": "Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated.",
   "latest_session_handoff": "NEXIA_UGC_PORTFOLIO_PHASE_A_PASS_HANDOFF_2026-10-13.json",
