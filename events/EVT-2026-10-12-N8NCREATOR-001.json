@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-N8NCREATOR-001",
+  "timestamp": "2026-10-12T13:35:00+02:00",
+  "type": "N8N_CREATOR_TEMPLATE_01_SUBMITTED_PENDING_REVIEW",
+  "state_version": 70,
+  "source": "KAEL_AUTHENTICATED_CREATOR_DASHBOARD_CONFIRMATION",
+  "vein": "VETA-AUTO-PRODUCT-001",
+  "product": "Lead Intake Reliability Kit for n8n",
+  "creator_submission": {
+    "template_number": 1,
+    "creator_portal_workflow_id": 20799,
+    "title": "Normalize inbound lead intake for human review via webhook",
+    "price": "FREE",
+    "status": "SUBMITTED_PENDING_REVIEW",
+    "publication_cost_eur": 0,
+    "creator_account": "ACTIVE",
+    "approval": "NOT_YET_VERIFIED",
+    "approved_count": 0
+  },
+  "technical_evidence": {
+    "runtime": "VERIFIED_PASS_FULL_N8N_SERVER",
+    "n8n_version": "2.42.6",
+    "autonomous_send": false,
+    "distribution_json": "WAF_SAFE_VARIANT_ACCEPTED_BY_CREATOR_PORTAL_FOR_SUBMISSION_FLOW"
+  },
+  "economics": {
+    "capital_spent_eur": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "profit_eur": 0,
+    "willingness_to_pay_evidence": false
+  },
+  "authority": {
+    "authorization": "Kael explicitly authorized creation/use of n8n Creator profile and submission of first free template only",
+    "cost_cap_eur": 0,
+    "additional_template_submission_authorized": false,
+    "paid_product_publication_authorized": false
+  },
+  "next_gate": "WAIT_FOR_N8N_REVIEW_RESULT",
+  "success_condition": "TEMPLATE_01_APPROVED",
+  "change_condition": "N8N_REQUESTS_CHANGES",
+  "failure_condition": "TEMPLATE_01_REJECTED",
+  "truth_rule": "Pending review is not approval, demand, willingness-to-pay, sale, settled payment or profit.",
+  "canonical_state_reconciliation": "PENDING_NEXT_ATOMIC_STATE_CHECKPOINT",
+  "financial_impact_eur": 0
+}
