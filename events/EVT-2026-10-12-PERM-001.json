@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-PERM-001",
+  "timestamp": "2026-10-12T14:00:00+02:00",
+  "type": "PERMISSION_DRIFT_HARDENING",
+  "source": "CHATGPT_PLUGIN_PERMISSION_CHANGE",
+  "change": {
+    "app": "GitHub",
+    "previous_permission": "Allow all actions",
+    "new_permission": "Use my default",
+    "inherited_global_permission": "Allow low-risk actions"
+  },
+  "authority_effect": "NONE",
+  "security_effect": "REDUCED_TECHNICAL_EXPOSURE",
+  "cost_eur": 0,
+  "reversibility": "REVERSIBLE",
+  "business_impact": "NO_DIRECT_ECONOMIC_RESULT",
+  "truth_rule": "Technical app permission changes do not expand or replace Kael authority gates."
+}
