@@ -8,8 +8,8 @@
     "boundary_blob_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
   "event_directory": "events/",
-  "latest_event_id": "EVT-2026-10-12-INSTR-001",
-  "latest_event_path": "events/EVT-2026-10-12-INSTR-001.json",
+  "latest_event_id": "EVT-2026-10-12-LOCALAI-001",
+  "latest_event_path": "events/EVT-2026-10-12-LOCALAI-001.json",
   "events": [
     {"event_id":"EVT-2026-10-11-EVOLVE-001","timestamp":"2026-10-11T16:20:00+02:00","type":"CORE_EVOLUTION_AND_EVENT_STORAGE_V2_ACTIVATION","state_version":63,"path":"events/EVT-2026-10-11-EVOLVE-001.json","verified_blob_sha":"fb278799714287c03f749990211b5c8d33a60ce5"},
     {"event_id":"EVT-2026-10-11-EVOLVE-002","timestamp":"2026-10-11T16:45:00+02:00","type":"CORE_EVOLUTION_CHECKPOINT_CLOSURE_WITH_MEMORY_SYNC_BLOCKER","state_version":65,"path":"events/EVT-2026-10-11-EVOLVE-002.json","verified_blob_sha":"9cfbd2e57f6cf67a80ba72727fed0e56ca81a543"},
@@ -23,7 +23,8 @@
     {"event_id":"EVT-2026-10-12-N8NCREATOR-001","timestamp":"2026-10-12T13:35:00+02:00","type":"N8N_CREATOR_TEMPLATE_01_SUBMITTED_PENDING_REVIEW","state_version":70,"path":"events/EVT-2026-10-12-N8NCREATOR-001.json","verified_blob_sha":"6241989866d29bb8aab964353bfbcf3ea7fdf1f4"},
     {"event_id":"EVT-2026-10-12-PERM-001","timestamp":"2026-10-12T14:00:00+02:00","type":"PERMISSION_DRIFT_HARDENING","state_version":70,"path":"events/EVT-2026-10-12-PERM-001.json","verified_blob_sha":"8b83eb8495f63cf9f3d8a27a28944b94ceacf106"},
     {"event_id":"EVT-2026-10-12-CAP-001","timestamp":"2026-10-12T14:48:00+02:00","type":"CAPABILITY_EVOLUTION_AND_DRIVE_CONNECTION","state_version":70,"path":"events/EVT-2026-10-12-CAP-001.json","verified_blob_sha":"cec9f7d75337a2a1214e1ae7a65d11a96870b1a7"},
-    {"event_id":"EVT-2026-10-12-INSTR-001","timestamp":"2026-10-12T15:43:15+02:00","type":"PROJECT_INSTRUCTIONS_COMPACT_MASTER_APPLIED_AND_VERIFIED","state_version":70,"path":"events/EVT-2026-10-12-INSTR-001.json","verified_blob_sha":"6abb1e261708cb4a05261eedcce417b8ffcef292"}
+    {"event_id":"EVT-2026-10-12-INSTR-001","timestamp":"2026-10-12T15:43:15+02:00","type":"PROJECT_INSTRUCTIONS_COMPACT_MASTER_APPLIED_AND_VERIFIED","state_version":70,"path":"events/EVT-2026-10-12-INSTR-001.json","verified_blob_sha":"6abb1e261708cb4a05261eedcce417b8ffcef292"},
+    {"event_id":"EVT-2026-10-12-LOCALAI-001","timestamp":"2026-10-12T19:45:00+02:00","type":"LOCAL_AI_AUDIT_PREPARATION","state_version":70,"path":"events/EVT-2026-10-12-LOCALAI-001.json","verified_blob_sha":"758eadc68a7404df2096874db6eae17a18129b74"}
   ],
   "rule":"Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated."
 }
