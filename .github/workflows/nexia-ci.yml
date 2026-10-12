@@ -70,6 +70,9 @@ jobs:
       - name: Integrity checker regression tests
         run: python3 tools/test_nexia_integrity_check.py
 
+      - name: Zero-quota execution router tests
+        run: python3 tools/test_nexia_execution_router.py
+
       - name: Canonical STATE BOOT LIVE integrity check
         shell: bash
         run: |
