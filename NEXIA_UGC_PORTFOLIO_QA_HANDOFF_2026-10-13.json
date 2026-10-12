@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-13",
+  "canonical_state": {"version": 70, "changed": false},
+  "experiment": "UGC-PORTFOLIO-001",
+  "status": "PHASE_A_FIRST_PASS_QA_COMPLETE_RETRIES_REQUIRED",
+  "latest_event": "events/EVT-2026-10-13-UGCPORT-001.json",
+  "first_pass": {
+    "accepted": ["A1", "A2", "B2", "C1"],
+    "rejected": ["B1", "C2"],
+    "scores": {"A1":85,"A2":90,"B1":73,"B2":84,"C1":88,"C2":75},
+    "complete_pairs": ["A"],
+    "attempts_used_total": 6,
+    "attempt_budget_total": 18,
+    "human_steering_minutes": "NOT_INSTRUMENTED"
+  },
+  "gate_status": "NOT_YET_PASS",
+  "gate_reason": "At least 4/6 accepted is satisfied, but at least two complete brief pairs is not. One successful retry of B1 or C2 is sufficient to create a second complete pair because B2 and C1 are already accepted. Human steering <=60m remains to be recorded before a final PASS claim.",
+  "human_action_required_now": true,
+  "pending_human_action": "Generate exactly one targeted retry for B1 and one targeted retry for C2 in the existing ComfyUI workflow, then upload both images to Nexia for QA. Do not regenerate accepted frames.",
+  "surface": "ComfyUI local",
+  "device": "computer",
+  "cost_exposure": "EUR0 cash; local GPU electricity/time only; no publication/contact/new installation.",
+  "success_check": "At least one of the two retry images scores >=75/100 with no hard fail, creating a second complete brief pair; final experiment PASS still requires human steering <=60m to be known.",
+  "return_to_nexia": "Upload the two retry PNGs and, if known, state approximate total minutes spent manually changing prompts/seeds/reviewing during UGC-PORTFOLIO-001 so far.",
+  "resume_required_reads": [
+    "NEXIA_STATE.json",
+    "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX.json",
+    "events/EVT-2026-10-13-UGCPORT-001.json",
+    "NEXIA_UGC_PORTFOLIO_QA_HANDOFF_2026-10-13.json",
+    "experiments/UGC-PORTFOLIO-001.md",
+    "experiments/UGC-PORTFOLIO-001_PROMPT_PACK.md"
+  ],
+  "resume_from": "Do not repeat A1/A2/B2/C1. Retry only B1 and C2 once each with targeted prompt corrections, preserving 768x1360, batch 1, 4 steps and fixed QA thresholds. Count them as attempts 7 and 8 overall.",
+  "truth_limit": "First-pass image QA is portfolio-production evidence only, not demand, sale, payment or profit."
+}
