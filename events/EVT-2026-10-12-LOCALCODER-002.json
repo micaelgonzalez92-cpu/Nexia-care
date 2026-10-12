@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-12-LOCALCODER-002",
+  "timestamp": "2026-10-12T23:10:00+02:00",
+  "type": "LOCAL_AI_CODER_INSTALL_COMPLETE_BENCHMARK_BLOCKED_RUNTIME_PREREQUISITE",
+  "state_version": 70,
+  "experiment": "LOCAL-AI-CODER-001",
+  "evidence_source": "KAEL_SHARED_TERMINAL_LOG",
+  "execution": {
+    "ollama_install": "SUCCESS_REPORTED_BY_TERMINAL_LOG",
+    "ollama_version": "0.40.3",
+    "model": "qwen2.5-coder:7b-instruct",
+    "model_pull": "SUCCESS_REPORTED_BY_TERMINAL_LOG",
+    "model_payload_gb": 4.7,
+    "free_space_before_gib": 176,
+    "scored_tasks_started": 0,
+    "benchmark_results_file_created": false,
+    "benchmark_result": "BLOCKED_NOT_FAIL"
+  },
+  "blocker": {
+    "id": "PYTHON_RUNTIME_UNAVAILABLE",
+    "detail": "The preregistered harness requires Python 3. Windows resolved the python command to the Microsoft Store execution alias rather than a usable Python runtime.",
+    "authority": "Installing Python is outside the current one-off authorization, which allowed system changes only for Ollama.",
+    "resolution_requires": "Either explicit new authorization to install a bounded Python runtime while preserving LOCAL-AI-CODER-001 unchanged, or a separately preregistered new benchmark if the runtime is redesigned. Do not silently alter LOCAL-AI-CODER-001 scoring."
+  },
+  "financial_impact_eur": 0,
+  "economic_stage_change": "NONE",
+  "learning": "Prerequisite/runtime checks must happen before large model downloads. The runner should verify a real Python interpreter and reject Windows Store aliases before pulling the model.",
+  "truth_limit": "The shared terminal log is direct user-provided execution evidence, not independent remote readback. It proves neither benchmark quality nor LOCAL_AI promotion."
+}
