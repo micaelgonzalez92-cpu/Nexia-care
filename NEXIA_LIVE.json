@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-10-12",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + HUESCAVENTURA OPEN PROFILE MODERATION PENDING + AUTO-PRODUCT TEMPLATE #1 REJECTED TOO BASIC + TEMPLATE #2 CANDIDATE PREPARED + AI-UGC PORTFOLIO PREPARED + LOCAL IMAGE VERIFIED + ZERO-QUOTA ROUTER VERIFIED + LOCAL-AI-CODER VERIFIED BOUNDED CODE ASSIST",
+  "updated_at": "2026-10-13",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + HUESCAVENTURA OPEN PROFILE MODERATION PENDING + AUTO-PRODUCT TEMPLATE #1 REJECTED TOO BASIC + TEMPLATE #2 CANDIDATE PREPARED + AI-UGC PORTFOLIO PHASE A 4/6 ACCEPTED RETRIES REQUIRED + LOCAL IMAGE VERIFIED + ZERO-QUOTA ROUTER VERIFIED + LOCAL-AI-CODER VERIFIED BOUNDED CODE ASSIST",
   "state_version": 70,
   "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
   "boot_version": 45,
   "boot_blob_sha": "c4c465412b5e53387e8fbe4ecb6e1b54ee7b740c",
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
-  "state_reconciliation": "STATE_V70_VALID; VERIFIED_POST_STATE_EVENT_DELTA_THROUGH_N8NCREATOR_002_REMAINS_UNABSORBED_BY_STATE; NEXT_ATOMIC_STATE_CHECKPOINT_REQUIRED",
+  "state_reconciliation": "STATE_V70_VALID; VERIFIED_POST_STATE_EVENT_DELTA_THROUGH_UGCPORT_001_REMAINS_UNABSORBED_BY_STATE; NEXT_ATOMIC_STATE_CHECKPOINT_REQUIRED",
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
-    "index_blob_sha": "cb750bfd2e03453a8f1a23dd6743cc527faa1a32",
-    "latest_verified_event_id": "EVT-2026-10-12-N8NCREATOR-002",
-    "latest_verified_event_blob_sha": "7ce1bc819758e9493c3a87a8789dc93829dd7253",
+    "index_blob_sha": "4a781d1c2a53a262d5845f0bb014c49c5224ef36",
+    "latest_verified_event_id": "EVT-2026-10-13-UGCPORT-001",
+    "latest_verified_event_blob_sha": "ca798dd1a5b8bd7685bba57ffa0d99107041e8af",
     "legacy_jsonl_mode": "READ_ONLY"
   },
   "active_experiment": {
@@ -73,15 +73,21 @@
       },
       {
         "id": "VETA-AI-UGC-001",
-        "stage": "ACTIVE_RESEARCH_PORTFOLIO_GAP",
-        "focus": "AI UGC/performance creative service; local image stack now proven in one bounded run",
+        "stage": "PHASE_A_FIRST_PASS_4_OF_6_ACCEPTED_RETRIES_REQUIRED",
+        "focus": "AI UGC/performance creative service; local keyframe production now has first real six-image portfolio batch under fixed QA",
         "spend": "EUR0",
         "published_portfolio": 0,
-        "portfolio_gap": "OPEN",
-        "ugc_portfolio_experiment": "UGC-PORTFOLIO-001 PREPARED_NOT_EXECUTED",
-        "local_image_runtime": "PROBED_AND_VERIFIED_SINGLE_RUN",
-        "local_image_repeatability": "NOT_VERIFIED",
-        "commercial_quality": "NOT_VERIFIED"
+        "portfolio_gap": "PARTIALLY_CLOSED_INTERNAL_ONLY",
+        "ugc_portfolio_experiment": "UGC-PORTFOLIO-001 PHASE_A_FIRST_PASS_QA_COMPLETE",
+        "local_image_runtime": "PROBED_AND_VERIFIED_SINGLE_RUN_PLUS_SIX_IMAGE_REAL_PORTFOLIO_BATCH",
+        "first_pass_accepted": ["A1", "A2", "B2", "C1"],
+        "first_pass_rejected": ["B1", "C2"],
+        "complete_pairs": ["A"],
+        "attempts_used_total": 6,
+        "attempt_budget_total": 18,
+        "phase_a_gate": "NOT_YET_PASS_SECOND_COMPLETE_PAIR_REQUIRED",
+        "human_steering_minutes": "NOT_INSTRUMENTED",
+        "commercial_quality": "PARTIALLY_VERIFIED_INTERNAL_QA_ONLY"
       }
     ],
     "generic_etsy_templates": "NO_GO_GENERIC"
@@ -138,31 +144,36 @@
     "reconciled_net_profit_eur": 0
   },
   "session_handoff": {
-    "last_completed_verified_action": "Recovered BOOT/STATE/LIVE/event index/current handoff; checked Gmail for Workana and n8n review changes; verified no Workana approval email; read n8n rejection of Creator workflow 20799 as too basic; publicly reverified Huescaventura remains open/evaluating proposals; scanned recent Workana automation opportunities and found no stronger contingency than Huescaventura; persisted rejection event, corrected Template 01 status, and prepared a deeper persistent-dedup replacement candidate without submitting it.",
-    "last_user_facing_handoff": "EXP-AUTO-001 remains primary. Huescaventura is still open but Workana profile approval is not verified. n8n Template 01 was rejected as too basic; a deeper persistent-dedup replacement candidate is prepared internally but not authorized for publication. No Kael action is required now.",
-    "human_action_required_now": false,
-    "pending_human_action": null,
-    "surface": "ChatGPT Nexia Core",
-    "device": "mobile or computer",
-    "why_kael": "No Kael action is required now. Workana submission remains gated by profile approval; n8n replacement publication is not authorized.",
-    "steps": [],
-    "cost_exposure": "EUR0 cash. No external contact, publication, account change or spend executed in this batch.",
-    "success_check": "Fresh session recovers that Workana approval is still pending, Huescaventura remains current/open, n8n Template 01 is rejected as too basic, replacement candidate is internal only, and LOCAL_AI bounded coding remains verified.",
-    "return_to_nexia": "No immediate return required.",
+    "last_completed_verified_action": "Kael generated the six first-pass UGC-PORTFOLIO-001 Phase-A keyframes locally in ComfyUI and uploaded them to ChatGPT. Fixed QA accepted A1=85, A2=90, B2=84 and C1=88; rejected B1=73 for wrong rotating-organizer product fidelity and C2=75 with hard fail for UI-like pseudo-text on device screens. First-pass count is 4/6 accepted but only brief A is a complete pair, so the experiment is NOT YET PASS. Event UGCPORT-001 and exact retry handoff were persisted; no images were uploaded to the public repository.",
+    "last_user_facing_handoff": "Retry only B1 and C2 once each. A successful retry of either creates the required second complete pair because B2 and C1 are already accepted. Do not regenerate A1/A2/B2/C1.",
+    "human_action_required_now": true,
+    "pending_human_action": "Generate exactly one targeted B1 retry and one targeted C2 retry in the existing local ComfyUI workflow, then upload both PNGs for QA. Also estimate total manual steering/review minutes for UGC-PORTFOLIO-001 so far if possible.",
+    "surface": "ComfyUI local",
+    "device": "computer",
+    "why_kael": "Current Chat cannot operate Kael's local ComfyUI browser session. The workflow/model are already installed and running locally.",
+    "steps": [
+      "Keep width 768, height 1360, batch 1 and steps 4.",
+      "Generate only targeted retry B1 using the exact Nexia retry prompt/seed.",
+      "Generate only targeted retry C2 using the exact Nexia retry prompt/seed.",
+      "Do not regenerate accepted A1/A2/B2/C1.",
+      "Upload both retry PNGs to Nexia for fixed QA."
+    ],
+    "cost_exposure": "EUR0 cash; local GPU electricity/machine time only; no publication, external contact or new installation.",
+    "success_check": "At least one retry scores >=75/100 with no hard fail, creating a second complete brief pair. Final Phase-A PASS also requires human steering/review <=60 minutes to be known.",
+    "return_to_nexia": "Upload the B1-retry and C2-retry PNGs; state approximate total manual steering/review minutes so far if known.",
     "resume_required_reads": [
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_EVENT_INDEX.json",
-      "events/EVT-2026-10-12-LOCALCODER-004.json",
-      "events/EVT-2026-10-12-N8NCREATOR-002.json",
-      "products/lead-intake-reliability-kit/creator-submission-01.md",
-      "products/lead-intake-reliability-kit/creator-submission-02.md",
-      "NEXIA_NEXT_HANDOFF_2026-10-12_02.json"
+      "events/EVT-2026-10-13-UGCPORT-001.json",
+      "NEXIA_UGC_PORTFOLIO_QA_HANDOFF_2026-10-13.json",
+      "experiments/UGC-PORTFOLIO-001.md",
+      "experiments/UGC-PORTFOLIO-001_PROMPT_PACK.md"
     ],
-    "resume_from": "Keep monetization priority on EXP-AUTO-001. Do not resubmit n8n Template 01 cosmetically. Continue zero-cost sensing for Workana approval and only submit the already-authorized Huescaventura proposal if approval is verified, the project is still open, and submission cost remains EUR0. Treat Template 02 as internal preparation until a separate publication gate. Accumulate real LOCAL_AI tasks opportunistically rather than displacing monetization work.",
-    "truth_limit": "Public project status and email checks are current evidence, not buyer response or willingness-to-pay. n8n rejection is a distribution signal, not a product sale/failure. No economic extraction occurred."
+    "resume_from": "Do not repeat accepted keyframes. Resume at targeted B1/C2 retries, which are attempts 7 and 8 overall, under unchanged fixed QA thresholds.",
+    "truth_limit": "First-pass QA partially validates local portfolio keyframe quality only. It does not prove buyer demand, video production, sale, settled payment or profit."
   },
-  "human_gate": "NONE_IMMEDIATE. Huescaventura proposal remains conditionally authorized only after Workana profile approval is verified, project remains open, and submission cost is EUR0. n8n Template 02 publication/submission is NOT AUTHORIZED.",
+  "human_gate": "LOCAL UGC RETRY TASK PENDING; this is not an expansion of business authority. Huescaventura proposal remains conditionally authorized only after Workana profile approval is verified, project remains open, and submission cost is EUR0. n8n Template 02 publication/submission remains NOT AUTHORIZED.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
@@ -171,12 +182,12 @@
     "n8n Creator Template 01 rejected as too basic; replacement candidate prepared but external resubmission/publication not authorized",
     "AUTO-PRODUCT willingness-to-pay remains unvalidated",
     "AUTO-PRODUCT external self-serve installation <=30 minutes not yet verified with users",
-    "AI UGC portfolio gap remains open; UGC-PORTFOLIO-001 prepared but not executed",
-    "Local image repeatability/batch stability/commercial quality not verified",
+    "UGC-PORTFOLIO-001 Phase A has 4/6 accepted but only one complete brief pair; targeted B1/C2 retries required",
+    "UGC-PORTFOLIO-001 human steering/review minutes are not yet instrumented",
     "LOCAL_AI real-task reliability and AGENTIC_OFFLOAD_RATE require at least 20 bounded internal task records",
     "LOCAL_BROWSER not verified",
-    "Canonical STATE v70 has not absorbed later verified events through N8NCREATOR-002; MEMORY derived stale",
+    "Canonical STATE v70 has not absorbed later verified events through UGCPORT-001; MEMORY derived stale",
     "No willingness-to-pay, settled sale or realized profit exists"
   ],
-  "next_action": "Continue zero-cost Workana approval sensing and monetize EXP-AUTO-001 first. Do not spend additional effort on n8n resubmission unless a materially deeper self-contained candidate is ready and a separate publication gate is justified. Use LOCAL_AI on suitable bounded internal tasks opportunistically and measure them without displacing monetization work."
+  "next_action": "Generate targeted B1 and C2 UGC retries locally and QA them. Keep EXP-AUTO-001 as economic priority while Workana moderation remains pending."
 }
