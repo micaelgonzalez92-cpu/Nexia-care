@@ -148,5 +148,7 @@
       "verified_blob_sha": "a55c0870e9563caa50948ed79af98a0c92b91a8c"
     }
   ],
-  "rule": "Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated."
+  "rule": "Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated.",
+  "latest_session_handoff": "NEXIA_LOCAL_BENCHMARK_HANDOFF_2026-10-12.json",
+  "latest_session_handoff_blob_sha": "e6b9fd737564a7404fd4c9d5b6de649a53a25fdf"
 }
