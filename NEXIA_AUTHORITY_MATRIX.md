@@ -1,7 +1,7 @@
 # NEXIA CORE — AUTHORITY & ACTION PERMISSION MATRIX
 
 Status: CANONICAL / ACTIVE
-Version: 1.1
+Version: 1.2
 Effective date: 2026-10-12
 Purpose: convert Kael authority + technical capability into one deterministic pre-action router. This file does **not** grant new authority. It narrows execution to the safest interpretation of existing authority.
 
@@ -33,6 +33,8 @@ A tool's technical permission never expands Kael's authority. Work, Codex, brows
 | Create/update internal automations that only monitor/research/notify | GREEN | YES | Future task inherits the same authority limits; scheduling never grants future publication/contact/spend authority. |
 | Draft proposals, emails, listings, templates, forms | GREEN | YES | Draft/preparation only; do not submit/send/publish. |
 | Read connected Gmail for project-relevant operational signals | GREEN | YES | Read/search only; avoid unrelated personal data. |
+| Read/search connected Google Drive for project-relevant files | GREEN | YES | Do not treat Drive as canonical Nexia state. |
+| Create/edit internal Docs/Sheets/Slides for analysis or deliverables | GREEN/YELLOW | YES only when no external sharing/publication is created | GitHub remains canonical for Nexia state; preserve existing sharing and organization. |
 | Archive/label/modify external mailbox state | YELLOW | NO by default | Execute only when specifically useful and authorized; sending is separate RED class. |
 | Authenticated browser navigation / read-only inspection of an already authorized account | GREEN/YELLOW | YES only if no side effect | Stop before submission, purchase, account setting changes or commitments unless separately authorized. |
 | Fill a form but do not submit | YELLOW / PREPARE_ONLY | YES when reversible | Must stop before external commitment. |
@@ -63,6 +65,13 @@ This section records observed technical access; it does not override the authori
 - ChatGPT app permission: inherits global `Allow low-risk actions`.
 - Observed connector family includes read/search plus mail-changing/sending actions.
 - Effective Nexia rule: project-relevant read/search is GREEN; sending/forwarding external mail is RED unless explicitly authorized; mailbox mutations are YELLOW unless specifically required.
+
+### Google Drive / Docs / Sheets / Slides
+- Connection: CONNECTED on 2026-10-12 by Kael.
+- ChatGPT app permission: `Use my default`.
+- Effective inherited global permission: `Allow low-risk actions`.
+- Capability: Drive discovery/file lifecycle plus native Docs, Sheets and Slides workflows available through the unified Google Drive plugin.
+- Effective Nexia rule: Drive is an analysis/deliverable layer, **not** a replacement for canonical GitHub STATE/BOOT/LIVE/events. Internal read/search and bounded internal artifacts may be GREEN; sharing/publication, deletion or permission changes remain separately gated by exposure/risk.
 
 ### TinyFish / browser automation
 - Connection/plugin: INSTALLED / AVAILABLE.
@@ -102,6 +111,7 @@ Nexia may, without asking again:
 - create/update safe monitoring automations;
 - prepare drafts and execution packages;
 - reconcile/persist verified project state in the canonical repo;
+- create bounded internal analytical/deliverable artifacts in connected Drive when useful and non-public;
 - stop or avoid an action when evidence, capability or authority is insufficient.
 
 ### Always gated unless Kael gives an exact standing authorization
@@ -113,7 +123,8 @@ Nexia may, without asking again:
 - material deletion/destructive changes;
 - payment/wallet/banking setup;
 - legal/contractual commitments;
-- widening data access or permissions.
+- widening data access or permissions;
+- external sharing/publication changes in Drive.
 
 ## 5. Permission inheritance rule
 
@@ -150,6 +161,7 @@ Re-check the technical permission snapshot when:
 
 Latest verified drift:
 - 2026-10-12: GitHub changed from app-specific `Allow all actions` to `Use my default`, inheriting global `Allow low-risk actions`; effect = reduced technical exposure, no expansion or reduction of Kael's business authority.
+- 2026-10-12: Google Drive connected, permission `Use my default` inheriting global `Allow low-risk actions`; effect = new bounded Docs/Sheets/Slides execution capability, no change to canonical-state hierarchy or publication/spend authority.
 
 Do not re-audit unchanged tools every cycle. Persist only material changes.
 
