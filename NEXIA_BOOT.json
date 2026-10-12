@@ -5,7 +5,7 @@
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
   "state_version": 68,
-  "state_blob_sha": "19073661e978f4e3a9d658875d96d1da5df319ee",
+  "state_blob_sha": "7f4b9908fe556e79a0e34cb87b174937457792d7",
   "mission": {"id": "MISSION-OPPORTUNITY-ENGINE-001"},
   "live_state": "NEXIA_LIVE.json",
   "learning_ledger": "NEXIA_MEMORY.md",
@@ -27,37 +27,14 @@
   },
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
   "active_experiment": {"id":"EXP-AUTO-001","status":"PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL","authorized_price_eur":300,"max_delivery_hours":4},
-  "workana": {
-    "moderation_status": "PROFILE_UNDER_ANALYSIS_PENDING_MODERATION",
-    "priority_moderation_decision": "DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND",
-    "primary_opportunity": "WORKANA-HUESCAVENTURA-001",
-    "proposal_status": "AUTHORIZED_NOT_SUBMITTED"
-  },
-  "parallel_research": {
-    "status": "ACTIVE_PARALLEL_FALSIFICATION",
-    "max_paths": 2,
-    "veins": ["VETA-AI-UGC-001","VETA-AUTO-PRODUCT-001"],
-    "generic_etsy_templates": "NO_GO_GENERIC"
-  },
-  "automation_architecture": {
-    "active": 3,
-    "paused": 6,
-    "completed": 1,
-    "control_tower": "DAILY_ACTIVE_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_SENSOR",
-    "exp_auto_worker": "EVERY_6_HOURS_ACTIVE",
-    "parallel_business_radar": "DAILY_ACTIVE_AROUND_15",
-    "workana_response_watch": "PAUSED_REDUNDANT"
-  },
-  "continuous_integration": {
-    "status": "VERIFIED",
-    "workflow": ".github/workflows/nexia-ci.yml",
-    "n8n_runtime_workflow": ".github/workflows/n8n-runtime-smoke.yml",
-    "deployment": "NONE"
-  },
+  "workana": {"moderation_status":"PROFILE_UNDER_ANALYSIS_PENDING_MODERATION","priority_moderation_decision":"DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND","primary_opportunity":"WORKANA-HUESCAVENTURA-001","proposal_status":"AUTHORIZED_NOT_SUBMITTED"},
+  "parallel_research": {"status":"ACTIVE_PARALLEL_FALSIFICATION","max_paths":2,"veins":["VETA-AI-UGC-001","VETA-AUTO-PRODUCT-001"],"generic_etsy_templates":"NO_GO_GENERIC"},
+  "automation_architecture": {"active":3,"paused":6,"completed":1,"control_tower":"DAILY_ACTIVE_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_SENSOR","parallel_worker":"EVERY_6_HOURS_ACTIVE","parallel_business_radar":"DAILY_ACTIVE_AROUND_15","workana_response_watch":"PAUSED_REDUNDANT"},
+  "continuous_integration": {"status":"VERIFIED","workflow":".github/workflows/nexia-ci.yml","n8n_runtime_workflow":".github/workflows/n8n-runtime-smoke.yml","deployment":"NONE"},
   "human_gate": "No immediate action. Wait standard Workana moderation. Parallel research is authorized only at zero cost with no accounts, publication or external contact.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
-  "sync_status": "STATE_V68_PARALLEL_DIVERSIFICATION_FIRST_BIND_MEMORY_DERIVED_STALE",
+  "sync_status": "STATE_V68_FINAL_SHA_BOUND_PARALLEL_DIVERSIFICATION_MEMORY_DERIVED_STALE",
   "next_action": "Wait standard Workana moderation while falsifying VETA-AI-UGC-001 and VETA-AUTO-PRODUCT-001. Promote, pause or kill by evidence gates."
 }
