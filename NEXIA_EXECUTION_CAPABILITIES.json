@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-12",
+  "purpose": "Routing snapshot for NEXIA ZERO-QUOTA EXECUTION; this file does not grant authority.",
+  "capabilities": {
+    "github_actions": {"status": "VERIFIED", "zero_agentic_quota": true},
+    "local_script": {"status": "AVAILABLE_WHEN_LOCAL_SURFACE_GRANTED", "zero_agentic_quota": true},
+    "local_gpu_image": {"status": "PROBED_AND_VERIFIED_SINGLE_RUN", "zero_agentic_quota": true, "engine": "ComfyUI + FLUX.2 Klein 4B FP8"},
+    "local_ai": {"status": "NOT_VERIFIED", "zero_agentic_quota": true},
+    "local_browser": {"status": "NOT_VERIFIED", "zero_agentic_quota": true},
+    "work": {"status": "AVAILABLE_SCARCE", "zero_agentic_quota": false},
+    "codex": {"status": "AVAILABLE_SCARCE", "zero_agentic_quota": false}
+  },
+  "rules": [
+    "Authority Engine always precedes executor selection.",
+    "Secrets never route to public GitHub Actions.",
+    "Work/Codex are fallback premium execution planes, not defaults.",
+    "LOCAL_AI and LOCAL_BROWSER cannot be selected until benchmarked and verified.",
+    "Local image runtime proof is one-run only; batch stability remains unverified."
+  ]
+}
