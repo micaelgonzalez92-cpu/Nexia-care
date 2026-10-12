@@ -1,6 +1,6 @@
 {
   "updated_at": "2026-10-12",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + AUTO-PRODUCT PREPARED INTERNAL SKU + CREATOR SUBMISSION #1 PREPARED + AI-UGC WATCH",
+  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION + AUTO-PRODUCT TEMPLATE #1 SUBMITTED PENDING REVIEW + AI-UGC WATCH",
   "state_version": 70,
   "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
   "boot_version": 45,
@@ -8,9 +8,9 @@
   "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
   "event_storage": {
     "mode": "IMMUTABLE_EVENT_FILES_V2",
-    "index_blob_sha": "ec2420cc3ffdd26c2536ffa0f4eb31f00c824796",
-    "latest_verified_event_id": "EVT-2026-10-12-AUTOPROD-002",
-    "latest_verified_event_blob_sha": "5663a6d54f593b6bab97090c44b91b2b8d4ea496",
+    "index_blob_sha": "dfd9cc12a59e8c4fe109de10b235e2129391f8b9",
+    "latest_verified_event_id": "EVT-2026-10-12-N8NCREATOR-001",
+    "latest_verified_event_blob_sha": "6241989866d29bb8aab964353bfbcf3ea7fdf1f4",
     "legacy_jsonl_mode": "READ_ONLY"
   },
   "active_experiment": {
@@ -24,26 +24,33 @@
     "moderation": "PROFILE_UNDER_ANALYSIS_PENDING_MODERATION",
     "priority_moderation": "DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND",
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
-    "primary_opportunity": "WORKANA-HUESCAVENTURA-001"
+    "primary_opportunity": "WORKANA-HUESCAVENTURA-001",
+    "public_opportunity_status": "OPEN_EVALUATING_PROPOSALS_REVERIFIED_2026-10-12",
+    "visible_proposals": 1,
+    "budget_eur": "200-300"
   },
   "parallel_business_state": {
     "status": "ACTIVE_PARALLEL_FALSIFICATION",
     "veins": [
       {
         "id": "VETA-AUTO-PRODUCT-001",
-        "stage": "PREPARED_INTERNAL_SKU",
+        "stage": "DISTRIBUTION_TEST_PENDING_REVIEW",
         "focus": "self-serve n8n Lead Intake Reliability digital product",
         "runtime": "VERIFIED_PASS_FULL_N8N_SERVER",
         "runtime_run": 38235228044,
         "external_users": 0,
         "paid_sales": 0,
-        "publication": "NOT_EXECUTED_NOT_AUTHORIZED",
+        "publication": "SUBMITTED_PENDING_N8N_REVIEW",
         "creator_submission_01": {
-          "status": "PREPARED_NOT_SUBMITTED",
+          "status": "SUBMITTED_PENDING_REVIEW",
+          "creator_portal_workflow_id": 20799,
           "artifact": "products/lead-intake-reliability-kit/creator-submission-01.md",
-          "title": "Reliable Lead Intake: Normalize, Validate & Prepare Human Review via Webhook",
+          "title": "Normalize inbound lead intake for human review via webhook",
           "price": "FREE",
-          "creator_account": "NOT_CREATED_NOT_AUTHORIZED"
+          "creator_account": "ACTIVE",
+          "approval": "NOT_YET_VERIFIED",
+          "approved_count": 0,
+          "cost_eur": 0
         },
         "runtime_job": 114764135662,
         "tested_commit": "ca54ddbc626520a13450aecda6c550d165a42300",
@@ -80,16 +87,17 @@
     "settled_revenue_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "human_gate": "AUTO-PRODUCT next material action requires explicit Kael authorization: create/use an n8n Creator account and submit the first FREE template only, EUR0 spend, no paid product publication. Workana remains standard-wait with no immediate action.",
+  "human_gate": "No immediate n8n Creator action while template #1 is pending review. Do not submit template #2 or publish a paid product without a new explicit authorization. Workana remains standard-wait; if profile approval is verified, recheck Huescaventura and use the already-authorized EUR300 proposal only if still open and submission remains EUR0.",
   "capital_spent_eur": 0,
   "revenue_eur": 0,
   "profit_eur": 0,
   "current_blockers": [
     "Workana profile approval pending standard moderation",
-    "AUTO-PRODUCT willingness-to-pay not validated; first Creator submission is prepared but account/submission/publication are not authorized",
+    "n8n Creator template #1 is submitted and pending review; approval is not yet verified",
+    "AUTO-PRODUCT willingness-to-pay remains unvalidated; pending free-template review is distribution evidence only",
     "AUTO-PRODUCT external self-serve installation <=30 minutes not yet verified with users",
     "AI UGC has portfolio/tool-cost/time uncertainty and remains WATCH",
     "No willingness-to-pay, settled sale or realized profit exists"
   ],
-  "next_action": "Technical SKU gate is verified; do not add more internal engineering. Review the prepared first FREE n8n Creator template Human Gate covering public exposure at EUR0 before account/submission/publication. Before any paid-product experiment, preregister missing measurement/economic details and obtain a separate WIP/priority decision. EXP-AUTO-001 remains the sole active monetization experiment; no external action is authorized by this checkpoint."
+  "next_action": "Do not add more internal engineering to the verified SKU. Wait for n8n Creator review and standard Workana moderation while continuing zero-cost opportunity sensing. If n8n requests changes, correct only the requested issues; if approved, prepare template #2 but do not submit without a new explicit authorization. If Workana approves the profile, reverify Huescaventura before the already-authorized EUR300 proposal. Canonical STATE remains v70 and must absorb this LIVE/event delta at the next atomic state checkpoint."
 }
