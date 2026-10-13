@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALWORKER-006",
+  "date": "2026-10-13",
+  "project": "NEXIA CORE",
+  "type": "LOCAL_WORKER_SAFETY_LADDER_PASS_THROUGH_FAIL_CLOSED_CI",
+  "classification": "HECHO_VERIFICADO_WITH_LOCAL_USER_EVIDENCE_BOUNDARY",
+  "canonical_state_base_version": 71,
+  "summary": "Local Worker v0.1 completed the bounded safety ladder through remote STOP, remote RUN unable to clear the local STOP latch, explicit local re-arm, GitHub-fetch fail-closed behavior, Windows reboot persistence while Disabled, and canonical CI fail-closed regression. Persistent recurrence remains unauthorized and unverified.",
+  "verified_evidence": {
+    "remote_stop_runtime": {
+      "result": "PASS",
+      "status": "STOPPED",
+      "last_result": "NOT_EXECUTED",
+      "reason": "STOP_LATCHED",
+      "queue_consumed": false
+    },
+    "remote_run_cannot_rearm": {
+      "result": "PASS_LOCAL",
+      "observed_local_status": "STOPPED / NOT_EXECUTED / STOP_LATCHED",
+      "scheduled_task_state": "Disabled",
+      "truth_limit": "Observed from Kael-provided PowerShell output; not independently read from Windows by Nexia."
+    },
+    "explicit_local_rearm": {
+      "result": "PASS_LOCAL",
+      "observed_local_status": "IDLE / NO_TASK",
+      "scheduled_task_state": "Disabled",
+      "remote_sanitized_status_after_cycle": "IDLE / NO_TASK",
+      "remote_status_blob_sha": "7e48572e9fa5d0eb644ad1ef358f7f63078c4cc0"
+    },
+    "github_fail_closed_manual": {
+      "result": "PASS_LOCAL",
+      "child_exit_code": 1,
+      "status_file_exists": false,
+      "ledger_exists": false,
+      "scheduled_task_state": "Disabled",
+      "cached_ready_task_executed": false,
+      "truth_limit": "Observed from Kael-provided isolated PowerShell test output."
+    },
+    "windows_reboot_recovery": {
+      "result": "PASS_LOCAL",
+      "task_exists": true,
+      "task_state": "Disabled",
+      "last_run": "1999-11-30T00:00:00",
+      "last_task_result": 267011,
+      "worker_file_exists": true,
+      "cycle_file_exists": true,
+      "automatic_run_after_reboot": false,
+      "truth_limit": "Observed from Kael-provided post-reboot PowerShell output."
+    },
+    "transport_hardening": {
+      "repository_commit": "f51ee4ba35aad9feb8f7cedad8f10a658c2193e7",
+      "behavior": "GitHub fetch/write failures abort explicitly; malformed or incomplete remote JSON fails closed before worker execution."
+    },
+    "ci_regression": {
+      "harness_fix_commit": "ed393cf583e3f1ec5cc048c92569a8f65745795c",
+      "workflow_run_id": 38442072987,
+      "workflow_conclusion": "success",
+      "fail_closed_step": "success",
+      "worker_regression_tests": "11_OF_11_PASS",
+      "canonical_integrity": "PASS_IN_SUCCESSFUL_WORKFLOW"
+    },
+    "current_remote_control": {
+      "desired_state": "RUN",
+      "deployment_authorized": false,
+      "external_effects_authorized": false,
+      "control_blob_sha": "fd1f9f77e682d467d4095718f137da217ddb67b6"
+    }
+  },
+  "safety_conclusion": {
+    "one_shot_runtime": "VERIFIED",
+    "remote_stop_latch": "VERIFIED",
+    "remote_run_cannot_clear_latch": "VERIFIED_LOCAL",
+    "local_explicit_rearm": "VERIFIED_LOCAL",
+    "github_fetch_failure_fail_closed": "VERIFIED_LOCAL_AND_CI",
+    "reboot_persistence_disabled": "VERIFIED_LOCAL",
+    "recurring_runtime": "NOT_AUTHORIZED_NOT_VERIFIED",
+    "watchdog_retry": "NOT_YET_VERIFIED",
+    "external_effects": "FORBIDDEN_V0_1"
+  },
+  "economics": {
+    "software_api_cost_eur": 0,
+    "electricity_cost": "UNKNOWN_NOT_INSTRUMENTED",
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "next_gate": "LOCALWORKER-WATCHDOG-RETRY-001",
+  "next_gate_scope": "Test bounded retry/watchdog semantics without enabling recurring 24x7 execution or external effects.",
+  "truth_limit": "This event proves the bounded safety properties listed above. It does not prove unattended recurrence, long-duration stability, 24x7 durability, production use, external actions, revenue or profit."
+}
