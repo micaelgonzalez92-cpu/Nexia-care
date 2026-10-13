@@ -1,16 +1,16 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "updated_at": "2026-10-13",
-  "status": "ACTIVE / EXP-AUTO-001 PROPOSAL INTERNALLY READY / WORKANA PROFILE APPROVAL NOT VERIFIED / LOCAL READ-ONLY BRIDGE VERIFIED ONE-SHOT AUTOMATIC START",
-  "state_version": 70,
-  "state_status": "CANONICAL_VALID_POST_STATE_DELTA_UNABSORBED",
-  "state_reconciliation": "STATE_V70 remains canonical. Verified post-state events through COMMERCIAL-001 are represented by NEXIA_EVENT_INDEX_V3.json and current handoff; they are not yet absorbed into STATE.",
+  "status": "ACTIVE / EXP-AUTO-001 PROPOSAL INTERNALLY READY / WORKANA PROFILE APPROVAL NOT VERIFIED / STATE V71 CURRENT",
+  "state_version": 71,
+  "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
+  "state_status": "CANONICAL_CURRENT_THROUGH_COMMERCIAL_001",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
-    "base_index": "NEXIA_EVENT_INDEX.json",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "latest_verified_event_id": "EVT-2026-10-13-COMMERCIAL-001",
-    "latest_verified_event_path": "events/EVT-2026-10-13-COMMERCIAL-001.json",
+    "active_index_blob_sha": "2e10fb9488b549af48e828659cb5308e2a533840",
+    "latest_verified_event_id": "EVT-2026-10-13-CHECKPOINT-001",
+    "latest_verified_event_path": "events/EVT-2026-10-13-CHECKPOINT-001.json",
     "latest_material_business_event_id": "EVT-2026-10-13-COMMERCIAL-001"
   },
   "active_experiment": {
@@ -28,6 +28,7 @@
     "profile_rejection": "NOT_VERIFIED",
     "generic_dashboard_moderation_probe": "UNKNOWN_NO_EXPLICIT_MARKER",
     "latest_probe_event": "EVT-2026-10-13-WORKANA-READ-002",
+    "latest_gmail_check": "2026-10-13_NO_NEW_WORKANA_EMAIL_AFTER_DAILY_CHECK",
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED_INTERNAL_READY",
     "proposal_artifact": "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md",
     "proposal_professional_gate": "PASS_INTERNAL_READY",
@@ -53,6 +54,15 @@
     "VETA-AUTO-PRODUCT-001": "PREPARED_INTERNAL_SKU / TEMPLATE_01 REJECTED TOO BASIC / TEMPLATE_02 NOT_READY_NOT_SUBMITTED",
     "VETA-AI-UGC-001": "VIDEO TECHNICAL PASS / PROFESSIONAL QUALITY FAIL / CAPABILITY PROMOTION DENIED"
   },
+  "automation_state": {
+    "active_count": 4,
+    "paused_count": 5,
+    "completed_count": 1,
+    "control_tower": "ACTIVE_DAILY_MATERIAL_GMAIL_SENSOR",
+    "exp_auto_worker": "ACTIVE_DAILY_OPTIMIZED_FROM_EVERY_6_HOURS",
+    "venture_radar": "ACTIVE_DAILY_TWO_VEINS_WIP_STRICT",
+    "capability_evolution": "ACTIVE_WEEKLY"
+  },
   "economics": {
     "capital_spent_eur": 0,
     "revenue_eur": 0,
@@ -69,11 +79,10 @@
     "Workana profile approval is not verified",
     "No buyer response, paid pilot, settled payment or realized profit exists",
     "Recurring/persistent local execution is not authorized or verified",
-    "Authenticated external Workana write actions remain separately gated",
-    "Canonical STATE v70 has not yet absorbed post-state events"
+    "Authenticated external Workana write actions remain separately gated"
   ],
   "session_handoff": {
-    "last_completed_verified_action": "Huescaventura was freshly revalidated as open/evaluating with one visible proposal and EUR200-300 budget, then a complete EUR300 proposal answering all 10 buyer questions was prepared, scope-locked and passed the internal professional/adversarial gate. No external submission occurred.",
+    "last_completed_verified_action": "Canonical STATE v71 checkpoint prepared to absorb verified post-v70 local browser, local bridge, scheduler, Workana read-only and commercially-ready proposal evidence plus automation optimization. Latest manual Gmail check found no new Workana email.",
     "last_user_facing_handoff": "EXP-AUTO-001 proposal is internally ready. Do not submit until Workana profile approval is explicitly verified.",
     "human_action_required_now": false,
     "pending_human_action": null,
@@ -91,11 +100,12 @@
       "NEXIA_LIVE.json",
       "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
       "NEXIA_EVENT_INDEX_V3.json",
+      "events/EVT-2026-10-13-CHECKPOINT-001.json",
       "events/EVT-2026-10-13-COMMERCIAL-001.json",
       "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md"
     ],
-    "resume_from": "Do not redo proposal drafting or bridge benchmarks. Wait for explicit Workana approval evidence; on approval revalidate Huescaventura and submit only if still open and EUR0. Otherwise continue only non-redundant zero-cost opportunity falsification.",
-    "truth_limit": "Internal readiness is not submission, buyer interest, payment or profit."
+    "resume_from": "Do not redo bridge benchmarks, generic moderation probes or proposal drafting. Wait for explicit Workana approval evidence; on approval revalidate Huescaventura and submit only if still open and EUR0. Otherwise continue only non-redundant zero-cost falsification.",
+    "truth_limit": "Internal readiness and canonical reconciliation are not submission, buyer interest, payment or profit."
   },
   "next_action": "Preserve the ready EUR300 Huescaventura proposal. Use existing daily Gmail sensing for approval/rejection. Do not repeat moderation probes or proposal drafting unless material evidence changes."
 }

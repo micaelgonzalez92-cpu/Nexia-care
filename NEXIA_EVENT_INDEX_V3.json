@@ -2,6 +2,7 @@
   "schema_version": 3,
   "updated_at": "2026-10-13",
   "mode": "COMPOSITE_BASE_PLUS_DELTA",
+  "canonical_state_version": 71,
   "base_index": {
     "path": "NEXIA_EVENT_INDEX.json",
     "verified_blob_sha": "3349fd64509fa05bb8f44a2920322b782dc92600",
@@ -27,12 +28,13 @@
     {"event_id":"EVT-2026-10-13-WORKANA-READ-001","path":"events/EVT-2026-10-13-WORKANA-READ-001.json","verified_blob_sha":"f82da9994c9ebe128e58e3125cbb7aa13b3c84d2"},
     {"event_id":"EVT-2026-10-13-WORKANA-READ-002","path":"events/EVT-2026-10-13-WORKANA-READ-002.json","verified_blob_sha":"bd948a4839b521c554b181fc144c5ba623aded6a"},
     {"event_id":"EVT-2026-10-13-CONTINUITY-001","path":"events/EVT-2026-10-13-CONTINUITY-001.json","verified_blob_sha":"cee1f319cee4ce9082c787d0128f2d2aca1d72bd"},
-    {"event_id":"EVT-2026-10-13-COMMERCIAL-001","path":"events/EVT-2026-10-13-COMMERCIAL-001.json","verified_blob_sha":"cb4361354c60bc24281fa4b8d9e33062842562c4"}
+    {"event_id":"EVT-2026-10-13-COMMERCIAL-001","path":"events/EVT-2026-10-13-COMMERCIAL-001.json","verified_blob_sha":"cb4361354c60bc24281fa4b8d9e33062842562c4"},
+    {"event_id":"EVT-2026-10-13-CHECKPOINT-001","path":"events/EVT-2026-10-13-CHECKPOINT-001.json","verified_blob_sha":"259aec77cd2dd508072726cf1c355cb4d684a733"}
   ],
-  "latest_event_id": "EVT-2026-10-13-COMMERCIAL-001",
-  "latest_event_path": "events/EVT-2026-10-13-COMMERCIAL-001.json",
-  "latest_event_blob_sha": "cb4361354c60bc24281fa4b8d9e33062842562c4",
+  "latest_event_id": "EVT-2026-10-13-CHECKPOINT-001",
+  "latest_event_path": "events/EVT-2026-10-13-CHECKPOINT-001.json",
+  "latest_event_blob_sha": "259aec77cd2dd508072726cf1c355cb4d684a733",
   "latest_material_business_event_id": "EVT-2026-10-13-COMMERCIAL-001",
   "latest_session_handoff": "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
-  "rule": "Read the immutable base index first, then every delta event in order. Failed events remain evidence and are superseded only by explicit later correction events."
+  "rule": "Read STATE v71 as canonical. The immutable base index and delta remain audit history; failed events remain evidence and are superseded only by explicit later correction events."
 }

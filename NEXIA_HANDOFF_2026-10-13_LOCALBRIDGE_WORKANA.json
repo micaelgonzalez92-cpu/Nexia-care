@@ -1,9 +1,10 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "generated_at": "2026-10-13",
   "project": "NEXIA CORE",
-  "canonical_state_version": 70,
-  "state_status": "VALID_BUT_POST_STATE_DELTA_UNABSORBED",
+  "canonical_state_version": 71,
+  "canonical_state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
+  "state_status": "CURRENT_THROUGH_COMMERCIAL_001",
   "mission": "MISSION-OPPORTUNITY-ENGINE-001",
   "active_experiment": {
     "id": "EXP-AUTO-001",
@@ -25,8 +26,8 @@
     "moderation_probe": "UNKNOWN",
     "explicit_approved_marker": false,
     "explicit_rejected_marker": false,
-    "pending_marker_in_generic_dashboard_probe": false,
     "profile_approval_verified": false,
+    "latest_gmail_check": "2026-10-13_NO_NEW_WORKANA_EMAIL_AFTER_DAILY_CHECK",
     "commercial_gate": "BLOCKED_PROFILE_APPROVAL_NOT_VERIFIED",
     "proposal_submission": "DO_NOT_EXECUTE"
   },
@@ -43,6 +44,15 @@
     "proposal_submitted": false,
     "submission_condition": "Only after Workana profile approval is explicitly verified, project is freshly rechecked open, and submission requires EUR0 additional spend"
   },
+  "automation_state": {
+    "active": 4,
+    "paused": 5,
+    "completed": 1,
+    "exp_auto_worker": "DAILY_OPTIMIZED",
+    "control_tower": "DAILY_MATERIAL_SENSOR",
+    "venture_radar": "DAILY_TWO_VEINS_ONLY",
+    "capability_evolution": "WEEKLY"
+  },
   "economics": {
     "actual_revenue_eur": 0,
     "settled_revenue_eur": 0,
@@ -56,7 +66,8 @@
     "events/EVT-2026-10-13-LOCALBRIDGE-011.json",
     "events/EVT-2026-10-13-WORKANA-READ-002.json",
     "events/EVT-2026-10-13-CONTINUITY-001.json",
-    "events/EVT-2026-10-13-COMMERCIAL-001.json"
+    "events/EVT-2026-10-13-COMMERCIAL-001.json",
+    "events/EVT-2026-10-13-CHECKPOINT-001.json"
   ],
   "resume_required_reads": [
     "NEXIA_BOOT.json",
@@ -64,13 +75,12 @@
     "NEXIA_LIVE.json",
     "NEXIA_EVENT_INDEX_V3.json",
     "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
-    "NEXIA_EXECUTION_CAPABILITIES.json",
+    "events/EVT-2026-10-13-CHECKPOINT-001.json",
     "events/EVT-2026-10-13-COMMERCIAL-001.json",
-    "events/EVT-2026-10-13-WORKANA-READ-002.json",
     "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md"
   ],
   "resume_from": "Do not repeat bridge benchmarks, generic moderation probes or proposal drafting. EXP-AUTO-001 proposal is internally ready. Wait for explicit Workana approval evidence via existing sensing. On approval, freshly revalidate Huescaventura and submit only the already-authorized EUR300 proposal if still open and EUR0 submission cost. Otherwise continue zero-cost non-redundant opportunity falsification.",
   "human_action_required_now": false,
   "pending_human_action": null,
-  "truth_limit": "Proposal preparation is not submission, buyer interest, payment, acceptance or profit. The local bridge does not authorize external Workana write actions."
+  "truth_limit": "Proposal preparation and canonical-state reconciliation are not submission, buyer interest, payment, acceptance or profit. The local bridge does not authorize external Workana write actions."
 }
