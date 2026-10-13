@@ -3,36 +3,35 @@
   "updated_at": "2026-10-13",
   "canonical_state": {"version": 70, "changed": false},
   "experiment": "UGC-VIDEO-001",
-  "status": "AUTHORIZED_LAUNCHER_FIXED_WAITING_LOCAL_RETRY",
+  "status": "AUTHORIZED_BLOCKED_LOCAL_COMFYUI_NOT_REACHABLE_PENDING_MANUAL_START_AND_RETRY",
   "authorization_event": "events/EVT-2026-10-13-UGCVIDEO-001.json",
-  "latest_event": "events/EVT-2026-10-13-UGCVIDEO-003.json",
+  "latest_event": "events/EVT-2026-10-13-UGCVIDEO-004.json",
   "runner": {
     "powershell": "tools/run_ugc_video_001.ps1",
     "powershell_commit": "da76a5fec2d359830f14ba1d26e4de95c0bcf556",
     "python": "tools/run_ugc_video_001.py",
     "python_commit": "e9b4a9f4a54fc25e995da65622da7e5200016972",
-    "ci_run": 38322988432,
-    "ci_result": "SUCCESS",
-    "secret_scan_run": 38322988487,
-    "secret_scan_result": "SUCCESS",
-    "first_local_attempt": "BLOCKED_BEFORE_MODEL_DOWNLOAD_OR_VIDEO_ATTEMPT_BY_NARROW_PYTHON_DISCOVERY",
-    "attempts_consumed": 0
+    "first_local_attempt": "BLOCKED_PYTHON_DISCOVERY_DEFECT_FIXED",
+    "second_local_attempt": "BLOCKED_COMFYUI_CONNECTION_REFUSED",
+    "video_attempts_consumed": 0,
+    "cash_spend_eur": 0
   },
   "exact_human_action": {
-    "surface": "Windows PowerShell",
+    "surface": "Windows existing ComfyUI console + PowerShell",
     "device": "computer",
-    "why_kael": "Current ChatGPT session has no direct execution channel into Kael's local Windows process space. The corrected launcher now searches the already-installed Python runtime in standard Windows locations without installing any new software.",
-    "command": "$u='https://raw.githubusercontent.com/micaelgonzalez92-cpu/Nexia-care/da76a5fec2d359830f14ba1d26e4de95c0bcf556/tools/run_ugc_video_001.ps1'; $p=\"$env:TEMP\\run_ugc_video_001.ps1\"; Invoke-WebRequest -Uri $u -OutFile $p -UseBasicParsing; powershell.exe -NoProfile -ExecutionPolicy Bypass -File $p",
+    "why_kael": "The runner can reach the local API only while the existing ComfyUI server remains live on 127.0.0.1:8188. The second run reached Python but the local endpoint refused the connection.",
+    "comfy_launcher": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\creative-benchmark-2026-10-12\\ComfyUI_windows_portable\\run_nvidia_gpu.bat",
+    "api_check_url": "http://127.0.0.1:8188",
+    "retry_command": "$u='https://raw.githubusercontent.com/micaelgonzalez92-cpu/Nexia-care/da76a5fec2d359830f14ba1d26e4de95c0bcf556/tools/run_ugc_video_001.ps1'; $p=\"$env:TEMP\\run_ugc_video_001.ps1\"; Invoke-WebRequest -Uri $u -OutFile $p -UseBasicParsing; powershell.exe -NoProfile -ExecutionPolicy Bypass -File $p",
     "steps": [
-      "Open Windows PowerShell.",
-      "Paste the exact updated command and press Enter once.",
-      "Do not install Python or any other software manually; the corrected launcher only discovers an existing Python 3 runtime.",
-      "Do not install custom nodes or download another model if the runner stops on another blocker.",
-      "When complete, return the final technical-result block and upload generated MP4 output(s) if any."
+      "Launch the existing run_nvidia_gpu.bat and keep its console window open.",
+      "Wait until ComfyUI reports it is serving locally, then open http://127.0.0.1:8188 and confirm the UI loads.",
+      "With that ComfyUI console still open, run the same corrected commit-pinned UGC-VIDEO-001 PowerShell command once.",
+      "Do not install software/custom nodes or another model. If ComfyUI itself closes/errors before the UI loads, return the last visible console lines instead of rerunning."
     ],
-    "cost_exposure": "EUR0 cash; authorized model download/disk exposure up to approximately 15 GB if files are absent, plus local electricity and machine time. The failed first launcher run downloaded no authorized model and consumed no video attempt.",
-    "success_check": "Corrected launcher finds Python 3 and runner reaches COMPLETED_OUTPUTS_READY_FOR_VISUAL_QA with at least one generated output. Formal UGC-VIDEO-001 PASS still requires Nexia visual QA against the preregistered >=75/100/no-hard-fail gate.",
-    "return_to_nexia": "Paste the terminal block beginning === NEXIA UGC-VIDEO-001 TECHNICAL RESULT === and upload generated MP4 output(s). If blocked, paste only the ERROR/final result block."
+    "cost_exposure": "EUR0 cash; zero video attempts consumed so far. Authorized model download/disk exposure remains up to approximately 15 GB if files are absent, plus local electricity and machine time.",
+    "success_check": "ComfyUI UI is reachable at 127.0.0.1:8188 and the runner reaches COMPLETED_OUTPUTS_READY_FOR_VISUAL_QA with at least one generated output.",
+    "return_to_nexia": "If successful, paste the terminal block beginning === NEXIA UGC-VIDEO-001 TECHNICAL RESULT === and upload MP4 output(s). If ComfyUI does not stay open, paste the last visible ComfyUI console lines."
   },
   "authority": {
     "max_attempts": 3,
@@ -47,18 +46,6 @@
     "new_software_install": false
   },
   "human_action_required_now": true,
-  "resume_required_reads": [
-    "NEXIA_STATE.json",
-    "NEXIA_LIVE.json",
-    "NEXIA_EVENT_INDEX.json",
-    "events/EVT-2026-10-13-UGCVIDEO-001.json",
-    "events/EVT-2026-10-13-UGCVIDEO-002.json",
-    "events/EVT-2026-10-13-UGCVIDEO-003.json",
-    "experiments/UGC-VIDEO-001.md",
-    "tools/run_ugc_video_001.py",
-    "tools/run_ugc_video_001.ps1",
-    "NEXIA_UGC_VIDEO_001_AUTH_HANDOFF_2026-10-13.json"
-  ],
-  "resume_from": "Authorization and benchmark gates remain unchanged. The first local launcher attempt failed before model download/video generation because Python discovery was too narrow. The launcher fix is CI-verified; retry exactly once with the updated commit-pinned command. If outputs exist, perform fixed visual QA. If blocked, diagnose only inside the existing authorized scope.",
-  "truth_limit": "The corrected launcher is repository/CI verified but has not yet been re-run on Kael's Windows PC. Local model presence/download, ComfyUI API execution, video output quality, demand, sale, payment and profit remain unverified."
+  "resume_from": "Do not repeat authorization or Phase A. Start the existing ComfyUI manually and keep it alive on 127.0.0.1:8188, then rerun the same corrected benchmark command exactly once. If the existing ComfyUI console errors/exits, diagnose that blocker only.",
+  "truth_limit": "The second local run proved Python discovery works but ComfyUI was not reachable at the required local endpoint. No model download, video attempt, video quality result, demand, sale, payment or profit is verified."
 }
