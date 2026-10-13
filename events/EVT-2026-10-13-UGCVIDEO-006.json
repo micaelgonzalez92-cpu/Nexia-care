@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-UGCVIDEO-006",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "UGC_VIDEO_001_VISUAL_QA_COMPLETE_HUMAN_TIME_PENDING",
+  "state_version": 70,
+  "experiment": "UGC-VIDEO-001",
+  "vein": "VETA-AI-UGC-001",
+  "evidence": {
+    "supplied_outputs": [
+      "NEXIA_UGC_VIDEO_001_00001_.mp4",
+      "NEXIA_UGC_VIDEO_001_00002_.mp4",
+      "NEXIA_UGC_VIDEO_001_00003_.mp4"
+    ],
+    "measured_media_properties_each": {
+      "width": 512,
+      "height": 768,
+      "frames": 97,
+      "fps": 24.0,
+      "duration_seconds": 4.0416666667
+    },
+    "review_method": "Direct visual inspection of sampled frames across each full 4.04s clip plus frame-to-frame continuity checks. No new generation was performed."
+  },
+  "fixed_rubric": {
+    "temporal_stability": 25,
+    "identity_preservation": 25,
+    "motion_realism": 20,
+    "commercial_utility": 15,
+    "vertical_framing": 10,
+    "brand_policy_safety": 5,
+    "acceptable_threshold": 75,
+    "hard_fail_required_absent": true
+  },
+  "clip_results": [
+    {
+      "file": "NEXIA_UGC_VIDEO_001_00001_.mp4",
+      "seed": 4201,
+      "scores": {"temporal_stability": 23, "identity_preservation": 7, "motion_realism": 7, "commercial_utility": 4, "vertical_framing": 9, "brand_policy_safety": 5},
+      "total": 55,
+      "hard_fail": true,
+      "hard_fail_reason": "Transparent storage geometry is materially malformed/replaced by implausible stacked basket/blob-like structure; not suitable as source-product-preserving ad footage.",
+      "adjudication": "FAIL"
+    },
+    {
+      "file": "NEXIA_UGC_VIDEO_001_00002_.mp4",
+      "seed": 4202,
+      "scores": {"temporal_stability": 24, "identity_preservation": 11, "motion_realism": 8, "commercial_utility": 7, "vertical_framing": 9, "brand_policy_safety": 5},
+      "total": 64,
+      "hard_fail": true,
+      "hard_fail_reason": "Transparent-bin identity is materially lost into opaque drawer-like geometry, violating the preregistered product-identity requirement.",
+      "adjudication": "FAIL"
+    },
+    {
+      "file": "NEXIA_UGC_VIDEO_001_00003_.mp4",
+      "seed": 4203,
+      "scores": {"temporal_stability": 23, "identity_preservation": 23, "motion_realism": 17, "commercial_utility": 11, "vertical_framing": 9, "brand_policy_safety": 5},
+      "total": 88,
+      "hard_fail": false,
+      "hard_fail_reason": null,
+      "usable_seconds": ">=3.0",
+      "observations": "Transparent organizer geometry remains materially stable; hand withdrawal is plausible with no central anatomy break; no severe flicker/collapse/camera jump or invented prominent text/logo is visible; clip is usable as vertical product B-roll.",
+      "adjudication": "VISUAL_PASS"
+    }
+  ],
+  "visual_gate": {
+    "status": "PASS",
+    "best_clip": "NEXIA_UGC_VIDEO_001_00003_.mp4",
+    "best_seed": 4203,
+    "best_score": 88,
+    "hard_fail": false,
+    "usable_seconds_requirement": "PASS"
+  },
+  "formal_experiment_result": "PENDING_HUMAN_STEERING_TIME_ONLY",
+  "remaining_gate": "Kael must state approximate active human steering/review minutes for UGC-VIDEO-001. Formal PASS requires <=30 minutes. Machine generation/wait time is not counted as active human steering.",
+  "authority_compliance": {
+    "attempts_used": 3,
+    "attempt_limit": 3,
+    "cash_spend_eur": 0,
+    "cloud_api_fallback": false,
+    "second_model": false,
+    "publication": false,
+    "external_contact": false
+  },
+  "promotion_if_time_gate_passes": "LOCAL_VIDEO_VERIFIED_FOR_BOUNDED_SPEC_I2V",
+  "truth_limit": "Visual QA PASS is established for clip 00003, but formal UGC-VIDEO-001 PASS and capability promotion remain pending the preregistered human-time gate. This is not buyer-demand, sale, payment or profit evidence."
+}
