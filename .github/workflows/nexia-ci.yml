@@ -11,6 +11,7 @@ on:
       - 'NEXIA_BOOT.json'
       - 'NEXIA_LIVE.json'
       - 'NEXIA_EVENT_INDEX.json'
+      - 'NEXIA_LOCAL_WORKER_*.json'
       - 'NEXIA_MASTER_BACKUP.md'
       - 'events/**'
       - '.github/workflows/nexia-ci.yml'
@@ -24,6 +25,7 @@ on:
       - 'NEXIA_BOOT.json'
       - 'NEXIA_LIVE.json'
       - 'NEXIA_EVENT_INDEX.json'
+      - 'NEXIA_LOCAL_WORKER_*.json'
       - 'NEXIA_MASTER_BACKUP.md'
       - 'events/**'
       - '.github/workflows/nexia-ci.yml'
@@ -72,6 +74,25 @@ jobs:
 
       - name: Zero-quota execution router tests
         run: python3 tools/test_nexia_execution_router.py
+
+      - name: Local worker safety regression tests
+        run: |
+          python3 -m py_compile tools/nexia_local_worker_v0_1.py
+          python3 tools/test_nexia_local_worker_v0_1.py
+
+      - name: Local worker PowerShell transport syntax
+        shell: pwsh
+        run: |
+          $files = @('tools/run_nexia_local_worker_cycle_v0_1.ps1','tools/manage_nexia_local_worker_v0_1.ps1')
+          foreach ($file in $files) {
+            $tokens = $null
+            $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $file), [ref]$tokens, [ref]$errors) | Out-Null
+            if ($errors.Count -gt 0) {
+              $errors | ForEach-Object { Write-Error "$file :: $($_.Message)" }
+              exit 1
+            }
+          }
 
       - name: Local coder benchmark harness syntax
         run: python3 -m py_compile tools/nexia_local_ai_coder_001_benchmark.py
