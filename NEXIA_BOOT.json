@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "boot_version": 54,
+  "boot_version": 55,
   "generated_at": "2026-10-13",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -26,10 +26,10 @@
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "3a00f4f6325e19da5a8c53f5f0d777d3f6d2e217",
-    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-005",
-    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-005.json",
-    "latest_verified_event_blob_sha": "01280ba34e3210b2ad505f36501a730e88ff8fad",
+    "active_index_blob_sha": "abf1e7c682b688a2350172bb570e18a027cc1bfa",
+    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-006",
+    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-006.json",
+    "latest_verified_event_blob_sha": "ce8865a3963c127fcbc135569117cf4e5b7532f4",
     "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
   },
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001 + CAPABILITY EVOLUTION LOCAL WORKER",
@@ -43,9 +43,14 @@
     "browser": "VERIFIED_WORKANA_AUTHENTICATED_READ_ONLY_PERSISTENT_SESSION",
     "integrated_bridge": "VERIFIED_AUTOMATIC_SANITIZED_RESULT_RETURN",
     "scheduler": "LOCAL_WORKER_TASK_INSTALLED_DISABLED",
-    "local_worker_v0_1": "ONE_SHOT_HEALTH_CHECK_VERIFIED_END_TO_END",
-    "local_worker_manager_control_branch_fix": "CI_VERIFIED_11_OF_11_PASS",
-    "local_worker_control": "STOP_REMOTE_KILL_SWITCH_TEST_ARMED",
+    "local_worker_v0_1": "SAFETY_LADDER_THROUGH_FAIL_CLOSED_CI_VERIFIED",
+    "local_worker_remote_stop": "VERIFIED",
+    "local_worker_remote_run_cannot_rearm": "VERIFIED_LOCAL",
+    "local_worker_explicit_rearm": "VERIFIED_LOCAL",
+    "local_worker_fail_closed": "VERIFIED_LOCAL_AND_CI",
+    "local_worker_reboot_persistence": "VERIFIED_DISABLED_NO_AUTO_RUN",
+    "local_worker_control": "RUN_WITH_DEPLOYMENT_AUTHORIZATION_FALSE",
+    "watchdog_retry": "NEXT_GATE_NOT_YET_VERIFIED",
     "recurring_service": "NOT_AUTHORIZED_NOT_VERIFIED",
     "external_write_actions": "NOT_AUTHORIZED_NOT_VERIFIED"
   },
@@ -58,8 +63,8 @@
     "local_worker_software_api_cost_eur": 0,
     "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
-  "human_gate": "Run exactly one manual Local Worker cycle while remote control is STOP. The task remains Disabled, recurrence and external effects remain unauthorized.",
-  "sync_status": "STATE_V71_BASE_PLUS_VERIFIED_LOCALWORKER_005_DELTA",
-  "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
-  "next_action": "LOCALWORKER-REMOTE-STOP-001: Kael runs one manual cycle against main while STOP is armed. Nexia then verifies STOPPED/NOT_EXECUTED and queue unchanged. Do not claim 24x7 yet."
+  "human_gate": "No human action required until the bounded watchdog/retry harness is prepared. Persistent recurrence remains unauthorized.",
+  "sync_status": "STATE_V71_BASE_PLUS_VERIFIED_LOCALWORKER_006_DELTA",
+  "checkpoint_commit_sha": "4eed768239d713cbe9981e557c35daa5834aa9eb",
+  "next_action": "LOCALWORKER-WATCHDOG-RETRY-001: prepare and verify a bounded retry/watchdog harness with strict attempt cap, no recurring Scheduled Task activation and no external effects."
 }
