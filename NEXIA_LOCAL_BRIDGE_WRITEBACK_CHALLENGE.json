@@ -1,10 +1,12 @@
 {
-  "schema_version": 1,
-  "challenge_id": "LOCAL-BRIDGE-WRITEBACK-002",
-  "nonce": "NEXIA-WB-002-20261013-A7F2",
-  "status": "CHALLENGE_READY",
-  "expected_writer": "NEXIA_LOCAL_PC_GH_API",
-  "sanitized": true,
-  "contains_secrets": false,
-  "cash_spend_eur": 0
+    "schema_version":  1,
+    "challenge_id":  "LOCAL-BRIDGE-WRITEBACK-002",
+    "nonce":  "NEXIA-WB-002-20261013-A7F2",
+    "status":  "LOCAL_PC_WRITEBACK_PASS",
+    "source":  "NEXIA_LOCAL_PC",
+    "transport":  "GH_API",
+    "timestamp_utc":  "2026-10-13T02:30:59.3829064Z",
+    "sanitized":  true,
+    "contains_secrets":  false,
+    "cash_spend_eur":  0
 }
