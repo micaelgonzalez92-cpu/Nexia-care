@@ -1,21 +1,23 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-12",
+  "updated_at": "2026-10-13",
   "purpose": "Routing snapshot for NEXIA ZERO-QUOTA EXECUTION; this file does not grant authority.",
   "capabilities": {
     "github_actions": {"status": "VERIFIED", "zero_agentic_quota": true},
     "local_script": {"status": "AVAILABLE_WHEN_LOCAL_SURFACE_GRANTED", "zero_agentic_quota": true},
-    "local_gpu_image": {"status": "PROBED_AND_VERIFIED_SINGLE_RUN", "zero_agentic_quota": true, "engine": "ComfyUI + FLUX.2 Klein 4B FP8"},
-    "local_ai": {"status": "NOT_VERIFIED", "zero_agentic_quota": true},
-    "local_browser": {"status": "NOT_VERIFIED", "zero_agentic_quota": true},
-    "work": {"status": "AVAILABLE_SCARCE", "zero_agentic_quota": false},
-    "codex": {"status": "AVAILABLE_SCARCE", "zero_agentic_quota": false}
+    "local_gpu_image": {"status": "VERIFIED_BOUNDED_IMAGE_GENERATION", "zero_agentic_quota": true, "engine": "ComfyUI + FLUX.2 Klein 4B FP8"},
+    "local_ai": {"status": "VERIFIED_FOR_BOUNDED_CODE_ASSIST", "zero_agentic_quota": true, "engine": "Ollama + Qwen2.5-Coder 7B Instruct", "evidence_event": "events/EVT-2026-10-12-LOCALCODER-004.json", "scope_limit": "No autonomous commits/pushes, secrets or external actions; complex/high-risk engineering remains unverified for full Codex replacement."},
+    "local_browser": {"status": "NOT_VERIFIED", "zero_agentic_quota": true, "next_gate": "LOCAL-BROWSER-001 zero-install browser probe then authenticated-profile benchmark"},
+    "local_execution_bridge": {"status": "NOT_IMPLEMENTED", "zero_agentic_quota": true, "next_gate": "bounded task/result exchange after local browser verification"},
+    "work": {"status": "AVAILABLE_SCARCE_FALLBACK", "zero_agentic_quota": false},
+    "codex": {"status": "AVAILABLE_SCARCE_FALLBACK", "zero_agentic_quota": false}
   },
   "rules": [
     "Authority Engine always precedes executor selection.",
     "Secrets never route to public GitHub Actions.",
     "Work/Codex are fallback premium execution planes, not defaults.",
-    "LOCAL_AI and LOCAL_BROWSER cannot be selected until benchmarked and verified.",
-    "Local image runtime proof is one-run only; batch stability remains unverified."
+    "LOCAL_AI may handle bounded internal code-assist tasks only within its verified scope.",
+    "LOCAL_BROWSER cannot replace Work for authenticated GUI tasks until benchmarked and verified.",
+    "General unattended local execution is not claimed until the execution bridge is implemented and verified."
   ]
 }
