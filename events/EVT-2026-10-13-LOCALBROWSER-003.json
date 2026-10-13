@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBROWSER-003",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "LOCAL_BROWSER_DOM_INTERACTION_VERIFIED_PENDING_AUTHENTICATED_PROFILE",
+  "state_version": 70,
+  "evidence_source": "KAEL_SHARED_POWERSHELL_OUTPUT",
+  "observed": {
+    "browser": "Chrome/154.0.8037.98",
+    "cdp_reachable": true,
+    "target_create": "PASS",
+    "websocket_connect": "PASS",
+    "dom_inject": "PASS",
+    "dom_read": "PASS",
+    "input_value": "Kael",
+    "result_text": "clicked:Kael",
+    "title_after_click": "NEXIA_CLICKED",
+    "dom_fill_click_result": "PASS",
+    "target_close": "PASS",
+    "installation_required": false,
+    "cash_spend_eur": 0
+  },
+  "interpretation": {
+    "local_browser_public_control": "VERIFIED",
+    "dom_read": "VERIFIED",
+    "dom_fill": "VERIFIED",
+    "dom_click": "VERIFIED",
+    "result_readback": "VERIFIED",
+    "authenticated_profile_automation": "NOT_YET_VERIFIED",
+    "persistent_authenticated_session": "NOT_YET_VERIFIED",
+    "work_replacement": "PARTIAL_NOT_YET_VERIFIED_FOR_AUTHENTICATED_GUI"
+  },
+  "next_gate": "LOCAL-BROWSER-001E authenticated-profile persistence/read-only benchmark using the isolated Chrome profile. Kael performs any login manually; Nexia must not receive credentials. Verify session persistence and read-only authenticated navigation before any external action capability is considered.",
+  "authority_effect": "NONE. This does not authorize external submissions, publication, buyer contact, spending, production changes, credential capture or autonomous authenticated actions.",
+  "truth_limit": "This proves zero-install DOM read/fill/click control on a synthetic local page. It does not yet prove authenticated-session reliability, unattended execution bridge, or full Work replacement."
+}
