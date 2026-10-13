@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "challenge_id": "LOCAL-BRIDGE-SCHEDULER-001",
+  "nonce": "NEXIA-SCHED-001-20261013-F19C",
+  "status": "READY",
+  "expected_task_id": "LOCAL-EXECUTION-BRIDGE-001",
+  "required_launch_mode": "WINDOWS_TASK_SCHEDULER_ONCE",
+  "required_transport": "GH_API",
+  "required_source": "NEXIA_LOCAL_PC",
+  "required_authenticated_read_only": true,
+  "required_sanitized": true,
+  "required_contains_secrets": false,
+  "required_recurrence": false,
+  "required_polling": false,
+  "allowed_external_side_effects": [],
+  "cash_spend_eur": 0,
+  "truth_limit": "Internal one-shot scheduler benchmark only. It does not authorize proposals, messages, purchases, account/profile changes, publication, recurrence, polling or persistent service execution."
+}
