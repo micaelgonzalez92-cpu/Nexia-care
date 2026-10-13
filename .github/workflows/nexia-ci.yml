@@ -106,6 +106,62 @@ jobs:
             }
           }
 
+      - name: Local worker GitHub fail-closed regression
+        shell: pwsh
+        run: |
+          $root = Join-Path $env:RUNNER_TEMP 'nexia-failclosed-ci'
+          $bin = Join-Path $root 'bin'
+          $fakeBin = Join-Path $root 'fakebin'
+          New-Item -ItemType Directory -Force -Path $bin,$fakeBin | Out-Null
+          Copy-Item 'tools/nexia_local_worker_v0_1.py' (Join-Path $bin 'nexia_local_worker_v0_1.py')
+          Copy-Item 'tools/run_nexia_local_worker_cycle_v0_1.ps1' (Join-Path $bin 'run_nexia_local_worker_cycle_v0_1.ps1')
+
+          @'
+          {
+            "schema_version": 1,
+            "tasks": [
+              {
+                "task_id": "FAILCLOSED-CACHED-CI-001",
+                "action": "HEALTH_CHECK",
+                "authority": "GREEN_INTERNAL",
+                "external_effects": false,
+                "status": "READY",
+                "payload": {}
+              }
+            ]
+          }
+          '@ | Set-Content -Encoding utf8 (Join-Path $root 'queue.remote.json')
+
+          $pythonCalled = Join-Path $root 'python-called.txt'
+          $env:NEXIA_FAKE_PYTHON_CALLED = $pythonCalled
+
+          $fakeGh = Join-Path $fakeBin 'gh'
+          @'
+          #!/usr/bin/env bash
+          echo "gh: simulated unavailable transport" >&2
+          exit 1
+          '@ | Set-Content -Encoding utf8 $fakeGh
+          & chmod +x $fakeGh
+
+          $fakePython = Join-Path $fakeBin 'python'
+          @'
+          #!/usr/bin/env bash
+          touch "$NEXIA_FAKE_PYTHON_CALLED"
+          exit 99
+          '@ | Set-Content -Encoding utf8 $fakePython
+          & chmod +x $fakePython
+
+          $env:PATH = "$fakeBin$([IO.Path]::PathSeparator)$env:PATH"
+          $cycle = Join-Path $bin 'run_nexia_local_worker_cycle_v0_1.ps1'
+          & pwsh -NoProfile -ExecutionPolicy Bypass -File $cycle -Repo 'owner/repo' -Branch main -BaseDir $root
+          $code = $LASTEXITCODE
+
+          if($code -eq 0){ throw 'Fail-closed regression: transport failure returned exit code 0.' }
+          if(Test-Path (Join-Path $root 'status.json')){ throw 'Fail-closed regression: status.json was created.' }
+          if(Test-Path (Join-Path $root 'state/ledger.json')){ throw 'Fail-closed regression: ledger.json was created.' }
+          if(Test-Path $pythonCalled){ throw 'Fail-closed regression: worker Python process was launched despite GitHub fetch failure.' }
+          Write-Host 'FAIL_CLOSED_GITHUB_CI: PASS'
+
       - name: Local coder benchmark harness syntax
         run: python3 -m py_compile tools/nexia_local_ai_coder_001_benchmark.py
 
