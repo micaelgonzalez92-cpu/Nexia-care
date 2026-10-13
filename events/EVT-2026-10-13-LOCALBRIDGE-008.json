@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBRIDGE-008",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "INTEGRATED_LOCAL_BROWSER_PLUS_AUTOMATIC_GITHUB_WRITEBACK_VERIFIED",
+  "state_version": 70,
+  "evidence_source": "DIRECT_GITHUB_REMOTE_VERIFICATION_OF_INTEGRATED_002_CHALLENGE",
+  "supersedes": "EVT-2026-10-13-LOCALBRIDGE-007",
+  "observed": {
+    "challenge_id": "LOCAL-BRIDGE-INTEGRATED-002",
+    "challenge_status": "LOCAL_PC_INTEGRATED_PASS",
+    "task_id": "LOCAL-EXECUTION-BRIDGE-001",
+    "source": "NEXIA_LOCAL_PC",
+    "transport": "GH_API",
+    "final_url": "https://www.workana.com/dashboard",
+    "has_password_field": false,
+    "body_length": 2639,
+    "authenticated_read_only": true,
+    "browser": "Chrome/154.0.8037.98",
+    "sanitized": true,
+    "contains_secrets": false,
+    "external_side_effects": [],
+    "cash_spend_eur": 0,
+    "remote_blob_sha": "057e392756d7ab806f411685061594191264b22c"
+  },
+  "interpretation": {
+    "integrated_001": "FAIL_NOT_VERIFIED_SUPERSEDED_AS_ROUTE_BY_INTEGRATED_002",
+    "integrated_002": "PASS_DIRECT_REMOTE_VERIFICATION",
+    "repo_task_to_local_authenticated_browser": "VERIFIED_BOUNDED_READ_ONLY",
+    "automatic_sanitized_result_return_to_github": "VERIFIED",
+    "kael_copy_paste_result_required": false,
+    "manual_local_start_still_required": true,
+    "unattended_local_start": "NOT_YET_VERIFIED",
+    "work_replacement": "VERIFIED_FOR_BOUNDED_AUTHENTICATED_WORKANA_READ_ONLY_TASKS_WITH_MANUAL_LOCAL_START"
+  },
+  "next_gate": "LOCAL-BRIDGE-SCHEDULER-001: explicitly authorize and run a reversible one-shot Windows Task Scheduler benchmark for automatic local start. Do not enable recurring polling or persistent service execution under this gate.",
+  "authority_effect": "NONE. No proposal submission, messaging, purchases, profile changes, publication or other external business side effects are authorized.",
+  "truth_limit": "One integrated run is verified end to end. Unattended startup and repeat reliability remain unverified."
+}
