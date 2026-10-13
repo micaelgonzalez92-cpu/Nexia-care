@@ -30,12 +30,13 @@
     {"event_id":"EVT-2026-10-13-CONTINUITY-001","path":"events/EVT-2026-10-13-CONTINUITY-001.json","verified_blob_sha":"cee1f319cee4ce9082c787d0128f2d2aca1d72bd"},
     {"event_id":"EVT-2026-10-13-COMMERCIAL-001","path":"events/EVT-2026-10-13-COMMERCIAL-001.json","verified_blob_sha":"cb4361354c60bc24281fa4b8d9e33062842562c4"},
     {"event_id":"EVT-2026-10-13-CHECKPOINT-001","path":"events/EVT-2026-10-13-CHECKPOINT-001.json","verified_blob_sha":"259aec77cd2dd508072726cf1c355cb4d684a733"},
-    {"event_id":"EVT-2026-10-13-CHECKPOINT-002","path":"events/EVT-2026-10-13-CHECKPOINT-002.json","verified_blob_sha":"3120fc2b4fb7eca94e9805b677c0a83e1e5a132b"}
+    {"event_id":"EVT-2026-10-13-CHECKPOINT-002","path":"events/EVT-2026-10-13-CHECKPOINT-002.json","verified_blob_sha":"3120fc2b4fb7eca94e9805b677c0a83e1e5a132b"},
+    {"event_id":"EVT-2026-10-13-WORKANA-PROFILE-GATE-001","path":"events/EVT-2026-10-13-WORKANA-PROFILE-GATE-001.json","verified_blob_sha":"0f6b34b04db10ffbe39673c94b40b08397673aef"}
   ],
-  "latest_event_id": "EVT-2026-10-13-CHECKPOINT-002",
-  "latest_event_path": "events/EVT-2026-10-13-CHECKPOINT-002.json",
-  "latest_event_blob_sha": "3120fc2b4fb7eca94e9805b677c0a83e1e5a132b",
-  "latest_material_business_event_id": "EVT-2026-10-13-COMMERCIAL-001",
-  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
-  "rule": "Read STATE v71 as canonical. The immutable base index and delta remain audit history; failed events remain evidence and are superseded only by explicit later correction events."
+  "latest_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001",
+  "latest_event_path": "events/EVT-2026-10-13-WORKANA-PROFILE-GATE-001.json",
+  "latest_event_blob_sha": "0f6b34b04db10ffbe39673c94b40b08397673aef",
+  "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-13_WORKANA_PROFILE_COMPLETION.json",
+  "rule": "Read STATE v71 as canonical base. Then apply indexed post-state delta events and the latest handoff; failed events remain evidence and are superseded only by explicit later correction events."
 }
