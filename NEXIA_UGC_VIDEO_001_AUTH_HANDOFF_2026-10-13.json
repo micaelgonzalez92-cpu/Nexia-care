@@ -3,49 +3,47 @@
   "updated_at": "2026-10-13",
   "canonical_state": {"version": 70, "changed": false},
   "experiment": "UGC-VIDEO-001",
-  "status": "TECHNICAL_PASS_VISUAL_PASS_HUMAN_TIME_PENDING",
+  "status": "FINAL_FAIL_PROFESSIONAL_VISUAL_QUALITY",
   "authorization_event": "events/EVT-2026-10-13-UGCVIDEO-001.json",
-  "latest_event": "events/EVT-2026-10-13-UGCVIDEO-006.json",
-  "technical_result": {
-    "status": "PASS",
+  "technical_completion_event": "events/EVT-2026-10-13-UGCVIDEO-005.json",
+  "superseded_model_only_visual_event": "events/EVT-2026-10-13-UGCVIDEO-006.json",
+  "latest_event": "events/EVT-2026-10-13-UGCVIDEO-007.json",
+  "result": {
+    "technical_execution": "PASS",
     "generation_attempts_completed": 3,
     "attempt_limit": 3,
     "cash_spend_eur": 0,
-    "peak_gpu_memory_mib_whole_gpu": 11577.0,
-    "outputs_count": 3
+    "outputs_count": 3,
+    "professional_visual_quality": "FAIL",
+    "human_acceptance": "FAIL_ALL_THREE",
+    "primary_defect": "visible hand/anatomy quality unacceptable for professional customer-facing UGC",
+    "capability_promotion": "DENIED"
   },
-  "visual_result": {
-    "status": "PASS",
-    "best_output": "NEXIA_UGC_VIDEO_001_00003_.mp4",
-    "best_seed": 4203,
-    "best_score": 88,
-    "hard_fail": false,
-    "usable_seconds": ">=3.0",
-    "other_outputs": [
-      {"file":"NEXIA_UGC_VIDEO_001_00001_.mp4","score":55,"hard_fail":true},
-      {"file":"NEXIA_UGC_VIDEO_001_00002_.mp4","score":64,"hard_fail":true}
-    ]
-  },
-  "remaining_gate": {
-    "human_action_required_now": true,
-    "surface": "ChatGPT Chat",
-    "device": "mobile_or_computer",
-    "why_kael": "The preregistered PASS gate includes active human steering/review <=30 minutes and only Kael can report that elapsed active manual effort accurately.",
-    "action": "State the approximate active human steering/review time spent on UGC-VIDEO-001, excluding unattended model download/generation/wait time.",
-    "success_check": "If reported active human steering/review time is <=30 minutes, close UGC-VIDEO-001 PASS and promote only to LOCAL_VIDEO_VERIFIED_FOR_BOUNDED_SPEC_I2V. If >30 minutes, close FAIL on the preregistered efficiency gate despite visual PASS.",
-    "return_to_nexia": "Reply with an approximate value such as ~10 min, ~20 min, ~30 min or >30 min."
+  "quality_correction": {
+    "standard": "NEXIA_PROFESSIONAL_QUALITY_GATE.md",
+    "rule": "Technical completion or aggregate scoring cannot override an obvious professional hard defect. Human rejection of subjective customer-facing creative is material evidence.",
+    "future_visual_target": "professional readiness >=90/100 plus no obvious hard defect; lower experiment thresholds do not imply portfolio/client readiness",
+    "future_n8n_rule": "external template readiness requires substantive reusable value, failure handling, self-contained setup and adversarial reviewer differentiation"
   },
   "authority": {
-    "max_attempts": 3,
-    "attempts_used": 3,
-    "cash_budget_eur": 0,
-    "cloud_api": false,
-    "second_model": false,
-    "publication": false,
-    "external_contact": false,
-    "new_application": false,
-    "custom_nodes": false
+    "additional_generation_authorized": false,
+    "second_model_authorized": false,
+    "new_application_authorized": false,
+    "custom_nodes_authorized": false,
+    "cloud_api_authorized": false,
+    "publication_authorized": false,
+    "external_contact_authorized": false
   },
-  "resume_from": "Do not regenerate. Technical and visual gates are complete. Await only Kael's active human steering/review time, then adjudicate formal PASS/FAIL against the fixed <=30 minute threshold.",
-  "truth_limit": "Visual QA PASS is verified for clip 00003, but formal experiment PASS and capability promotion remain pending the human-time gate. Buyer demand, publication, sale, payment and profit remain unverified."
+  "human_action_required_now": false,
+  "resume_required_reads": [
+    "NEXIA_STATE.json",
+    "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX.json",
+    "events/EVT-2026-10-13-UGCVIDEO-007.json",
+    "experiments/UGC-VIDEO-001.md",
+    "NEXIA_PROFESSIONAL_QUALITY_GATE.md",
+    "products/lead-intake-reliability-kit/creator-submission-02.md"
+  ],
+  "resume_from": "UGC-VIDEO-001 is closed FAIL for professional visual quality. Do not regenerate or widen model/tool scope under the old authorization. Next safe work is zero-cost research/design of a more professional production route and application of the new professional gate across future externally judged deliverables. EXP-AUTO-001 remains the economic priority.",
+  "truth_limit": "The correction improves process and records a failed quality gate. It does not prove a future visual workflow will pass, nor buyer demand, publication, sale, payment or profit."
 }
