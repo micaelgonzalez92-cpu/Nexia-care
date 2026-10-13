@@ -1,0 +1,43 @@
+name: Nexia Local Worker Stability CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/run_nexia_local_worker_stability_v0_1.ps1'
+      - 'tools/manage_nexia_local_worker_stability_24h_v0_1.ps1'
+      - 'tools/test_nexia_local_worker_stability_v0_1.ps1'
+      - '.github/workflows/nexia-local-worker-stability-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  stability-safety:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate PowerShell syntax
+        shell: pwsh
+        run: |
+          $files=@(
+            'tools/run_nexia_local_worker_stability_v0_1.ps1',
+            'tools/manage_nexia_local_worker_stability_24h_v0_1.ps1',
+            'tools/test_nexia_local_worker_stability_v0_1.ps1'
+          )
+          foreach($file in $files){
+            $tokens=$null;$errors=$null
+            [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $file),[ref]$tokens,[ref]$errors)|Out-Null
+            if($errors.Count){
+              $errors|ForEach-Object { Write-Error "$file :: $($_.Message)" }
+              exit 1
+            }
+          }
+
+      - name: Stability fail-closed regression
+        shell: pwsh
+        run: ./tools/test_nexia_local_worker_stability_v0_1.ps1
