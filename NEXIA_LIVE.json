@@ -1,19 +1,19 @@
 {
   "schema_version": 3,
   "updated_at": "2026-10-13",
-  "status": "ACTIVE / EXP-AUTO-001 / WORKANA PROFILE 100 PERCENT COMPLETION HUMAN GATE / STATE V71 BASE CURRENT",
+  "status": "ACTIVE / EXP-AUTO-001 + LOCAL WORKER V0.1 DEPLOYMENT GATE / STATE V71 BASE CURRENT",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
-  "boot_version": 50,
-  "boot_blob_sha": "1b251b685208959ce849f934e26d7fe85ca24cec",
-  "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTA",
+  "boot_version": 51,
+  "boot_blob_sha": "2c2d53d319c903f342aca217df93a9cabffae6bd",
+  "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
   "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "29727d27ae8d142fef535297fe57ef20c59af213",
-    "latest_verified_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001",
-    "latest_verified_event_path": "events/EVT-2026-10-13-WORKANA-PROFILE-GATE-001.json",
+    "active_index_blob_sha": "f8545cdc964983b4ab6106c269d18aab980199f3",
+    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-001",
+    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-001.json",
     "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
   },
   "active_experiment": {
@@ -47,13 +47,15 @@
     "gh_api_writeback": "VERIFIED_BOUNDED_SANITIZED",
     "integrated_local_bridge": "VERIFIED_AUTHENTICATED_READ_ONLY_WITH_AUTOMATIC_RESULT_RETURN",
     "windows_task_scheduler": "VERIFIED_ONE_SHOT_AUTOMATIC_START_AND_CLEANUP",
-    "kael_manual_worker_launch_required_for_verified_one_shot_route": false,
+    "local_worker_v0_1": "IMPLEMENTED_AND_CI_VERIFIED_NOT_DEPLOYED",
+    "local_worker_remote_control": "STOP_FAIL_CLOSED",
+    "local_worker_external_effects": "FORBIDDEN_V0_1",
     "recurrence_polling_persistent_service": "NOT_AUTHORIZED_NOT_VERIFIED",
     "authenticated_workana_write_actions": "NOT_AUTHORIZED_NOT_VERIFIED",
     "work_codex_role": "SCARCE_FALLBACK_NOT_DEFAULT"
   },
   "parallel_business_state": {
-    "VETA-AUTO-PRODUCT-001": "PREPARED_INTERNAL_SKU / TEMPLATE_01 REJECTED TOO_BASIC / TEMPLATE_02 NOT_READY_NOT_SUBMITTED",
+    "VETA-AUTO-PRODUCT-001": "PREPARED_INTERNAL_SKU / TEMPLATE_01 REJECTED_TOO_BASIC / TEMPLATE_02 NOT_READY_NOT_SUBMITTED",
     "VETA-AI-UGC-001": "VIDEO TECHNICAL PASS / PROFESSIONAL QUALITY FAIL / CAPABILITY PROMOTION DENIED"
   },
   "automation_state": {
@@ -75,45 +77,49 @@
     "estimated_after_platform_eur": 240,
     "estimated_labor_eur": 60,
     "estimated_contribution_before_overhead_tax_eur": 180,
+    "local_worker_software_api_cost_eur": 0,
+    "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED",
     "classification": "ESTIMATE_NOT_REALIZED"
   },
   "current_blockers": [
+    "Local Worker v0.1 is not installed on Kael's PC",
+    "Persistent/recurrent runtime is not authorized or verified",
     "Workana profile has not yet been verified at 100% completion",
     "Workana profile approval is not verified",
     "No buyer response, paid pilot, settled payment or realized profit exists",
     "Authenticated external Workana write actions remain separately gated"
   ],
   "session_handoff": {
-    "last_completed_verified_action": "Verified Workana official 100% profile completion requirement, persisted policy evidence, created a post-state event and updated recovery pointers. No Workana profile change was executed.",
-    "last_user_facing_handoff": "The remaining Workana profile field is now the highest-value blocker. A truthful personal n8n project entry is prepared but not published.",
+    "last_completed_verified_action": "Implemented NEXIA Local Worker v0.1 in GitHub and verified it in CI: 9/9 worker safety tests PASS, PowerShell transport syntax PASS, canonical STATE/BOOT/LIVE integrity PASS. No local installation or persistent runtime was executed.",
+    "last_user_facing_handoff": "Local Worker v0.1 is ready for a disabled-only Windows installation gate. It is not a running 24/7 worker yet.",
     "human_action_required_now": true,
-    "pending_human_action": "Complete the remaining Workana profile field truthfully to reach 100% using the prepared personal-project entry.",
-    "surface": "Workana authenticated freelancer profile",
-    "device": "mobile_or_computer",
-    "why_kael": "External profile/account modification requires Kael.",
+    "pending_human_action": "Install Local Worker v0.1 on the Windows PC in DISABLED state only.",
+    "surface": "Windows PowerShell on Kael's PC",
+    "device": "computer",
+    "why_kael": "Creating a recurring Windows Scheduled Task modifies the local operating system and persistent execution was not authorized by /evolve alone.",
     "steps": [
-      "Open the Workana freelancer profile editor.",
-      "Locate the incomplete project/history or featured-project field.",
-      "Use commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md and keep it explicitly personal/internal, not paid client work.",
-      "Save only if no payment is required.",
-      "Verify 100% completion and the displayed moderation state."
+      "Run the pinned LOCALWORKER-INSTALL-DISABLED-001 PowerShell command provided by Nexia.",
+      "Confirm the output contains INSTALL_DISABLED: PASS.",
+      "Do not enable or rearm the task.",
+      "Return the terminal output to Nexia."
     ],
-    "material_to_use": "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
-    "cost_exposure": "EUR0; Priority Moderation remains not authorized",
-    "success_check": "Workana shows 100% profile completion and an explicit moderation status without false claims.",
-    "return_to_nexia": "Report the completion percentage and moderation status shown after saving; screenshot only if ambiguous.",
+    "material_to_use": "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
+    "cost_exposure": "EUR0 software/API; electricity cost is UNKNOWN_NOT_INSTRUMENTED and no recurring runtime is enabled by this gate.",
+    "success_check": "Windows Scheduled Task 'NEXIA Local Worker v0.1' exists in Disabled state; no worker cycle has executed; remote status remains NOT_DEPLOYED until a separately authorized runtime test.",
+    "return_to_nexia": "Paste the terminal output after InstallDisabled. Nexia will verify the installation before requesting any bounded HEALTH_CHECK execution.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_HANDOFF_2026-10-13_WORKANA_PROFILE_COMPLETION.json",
+      "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
       "NEXIA_EVENT_INDEX_V3.json",
-      "events/EVT-2026-10-13-WORKANA-PROFILE-GATE-001.json",
-      "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
-      "commercial/WORKANA_PROFILE_MODERATION_EVIDENCE_2026-10-13.md"
+      "events/EVT-2026-10-13-LOCALWORKER-001.json",
+      "NEXIA_LOCAL_WORKER_CONTROL.json",
+      "NEXIA_LOCAL_WORKER_QUEUE.json",
+      "NEXIA_LOCAL_WORKER_STATUS.json"
     ],
-    "resume_from": "After profile 100% completion is verified, continue approval sensing. On explicit approval, revalidate Huescaventura and submit only if still open and EUR0.",
-    "truth_limit": "Profile completion is not approval, proposal submission, buyer interest, payment or profit."
+    "resume_from": "Verify disabled local installation first. Then separately authorize and execute one bounded HEALTH_CHECK. Only after STOP, restart/recovery, offline fail-closed and durability tests may recurrence be considered.",
+    "truth_limit": "Repository CI verification is not local deployment, persistence or 24x7 operation."
   },
-  "next_action": "Human Gate: complete Workana profile to 100% using the prepared truthful personal-project entry at EUR0, then verify moderation status."
+  "next_action": "LOCALWORKER-INSTALL-DISABLED-001: install the CI-verified worker as a Disabled Windows scheduled task only, then verify."
 }
