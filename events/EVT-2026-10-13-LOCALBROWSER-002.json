@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBROWSER-002",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "LOCAL_BROWSER_BOUNDED_CONTROL_NAVIGATION_READ_CLOSE_VERIFIED",
+  "state_version": 70,
+  "evidence_source": "KAEL_SHARED_POWERSHELL_OUTPUT",
+  "observed": {
+    "cdp_reachable": true,
+    "browser": "Chrome/154.0.8037.98",
+    "target_create": "PASS",
+    "target_read": "PASS",
+    "page_title": "Example Domain",
+    "page_url": "https://example.com/",
+    "navigation_result": "PASS",
+    "target_close": "PASS",
+    "installation_required": false,
+    "cash_spend_eur": 0
+  },
+  "interpretation": {
+    "local_browser_bounded_control": "VERIFIED_PUBLIC_READ_ONLY",
+    "navigation": "VERIFIED",
+    "result_readback": "VERIFIED",
+    "target_lifecycle": "VERIFIED_CREATE_READ_CLOSE",
+    "dom_interaction": "NOT_YET_VERIFIED",
+    "authenticated_profile_automation": "NOT_YET_VERIFIED",
+    "work_replacement": "PARTIAL_NOT_YET_VERIFIED_FOR_AUTHENTICATED_GUI"
+  },
+  "next_gate": "LOCAL-BROWSER-001D zero-install DOM interaction benchmark using Chrome DevTools Protocol: create an isolated about:blank target, inject a local synthetic form, read DOM state, fill an input, click a button and verify resulting DOM/title state without external submission or authentication.",
+  "authority_effect": "NONE. This does not authorize authenticated external actions, submissions, publication, contact, spending or production changes.",
+  "truth_limit": "This proves bounded local browser navigation/readback and tab lifecycle without Work or new installation. It does not yet prove DOM interaction reliability, authenticated-session automation, unattended execution bridge, or full Work replacement."
+}
