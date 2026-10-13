@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-002",
+  "date": "2026-10-13",
+  "project": "NEXIA CORE",
+  "type": "WORKANA_PROFILE_MODERATION_REQUIREMENTS_REVALIDATED",
+  "classification": "HECHO_VERIFICADO_PUBLIC_OFFICIAL_DOCS",
+  "canonical_state_base_version": 71,
+  "summary": "Official Workana help pages updated in October 2026 confirm that profile completion to 100% is mandatory for evaluation/moderation, that the dashboard exposes the current moderation phase (Pendiente, No aprobado, Aprobado), and that explicit approval is communicated by email. This reinforces the existing commercial gate; no proposal may be submitted until 100% completion and explicit approval are verified.",
+  "official_requirements": {
+    "profile_100_percent_required_for_evaluation": true,
+    "standard_moderation_typical_days_min": 15,
+    "standard_moderation_typical_days_max": 30,
+    "dashboard_states": ["PENDIENTE", "NO_APROBADO", "APROBADO"],
+    "approval_confirmation_channel": "EMAIL",
+    "hourly_rate_required_during_moderation": true,
+    "profile_fields_highlighted": [
+      "nombre_y_foto",
+      "categoria",
+      "valor_por_hora",
+      "sobre_mi",
+      "habilidades_principales",
+      "experiencia_profesional",
+      "idiomas",
+      "certificaciones"
+    ],
+    "portfolio_recommended": true,
+    "truthfulness_required": true
+  },
+  "current_account_evidence": {
+    "explicit_approval_email_found": false,
+    "fresh_dashboard_state": "NOT_INSPECTED",
+    "fresh_profile_completion_percent": "NOT_INSPECTED"
+  },
+  "commercial_consequence": {
+    "huescaventura_submission_allowed_now": false,
+    "blocking_gate": "VERIFY_WORKANA_DASHBOARD_100_PERCENT_AND_APPROVED",
+    "paid_priority_moderation_authorized": false,
+    "proposal_submission_executed": false,
+    "cash_spend_eur": 0
+  },
+  "radar_note": {
+    "fresh_low_competition_candidate_found": "Desarrollo de Sistema de Rescate y Seguimiento de Leads para Whatsapp",
+    "candidate_status": "REJECTED_FOR_EXP_AUTO_001",
+    "reason": "Requires autonomous WhatsApp follow-up/messages, outside the current bounded offer and external-effects policy."
+  },
+  "economics": {
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "next_gate": "KAEL_READS_WORKANA_DASHBOARD_STATUS_AND_COMPLETION",
+  "truth_limit": "This event verifies public Workana rules and the absence of an explicit approval email in the recent Gmail check. It does not verify the current authenticated dashboard state or completion percentage."
+}
