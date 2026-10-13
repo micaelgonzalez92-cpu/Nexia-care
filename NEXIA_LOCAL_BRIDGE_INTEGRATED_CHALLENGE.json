@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "challenge_id": "LOCAL-BRIDGE-INTEGRATED-002",
+  "nonce": "NEXIA-INT-002-20261013-C4E8",
+  "status": "READY",
+  "expected_task_id": "LOCAL-EXECUTION-BRIDGE-001",
+  "required_transport": "GH_API",
+  "required_source": "NEXIA_LOCAL_PC",
+  "required_authenticated_read_only": true,
+  "required_sanitized": true,
+  "required_contains_secrets": false,
+  "allowed_external_side_effects": [],
+  "cash_spend_eur": 0,
+  "truth_limit": "This is a deterministic internal benchmark challenge only. Updating it does not authorize proposals, messages, purchases, profile changes, publication or scheduled service activation."
+}
