@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
-  "updated_at": "2026-10-13",
-  "desired_state": "STOP",
-  "reason": "REMOTE_KILL_SWITCH_TEST_001",
-  "remote_rule": "STOP may latch remotely. RUN never clears a local STOP latch; local explicit re-arm is required.",
-  "deployment_authorized": false,
-  "external_effects_authorized": false
+    "schema_version":  1,
+    "updated_at":  "2026-10-13",
+    "desired_state":  "RUN",
+    "reason":  "REMOTE_RUN_MUST_NOT_CLEAR_STOP_LATCH_001",
+    "remote_rule":  "STOP may latch remotely. RUN never clears a local STOP latch; local explicit re-arm is required.",
+    "deployment_authorized":  false,
+    "external_effects_authorized":  false
 }
