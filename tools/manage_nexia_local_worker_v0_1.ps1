@@ -26,12 +26,11 @@ switch($Action){
     & python -m py_compile $worker
     $tokens=$null;$errors=$null;[System.Management.Automation.Language.Parser]::ParseFile($cycle,[ref]$tokens,[ref]$errors)|Out-Null
     if($errors.Count){ throw ($errors | ForEach-Object {$_.Message} | Out-String) }
-    $ps="`"$PSHOME\powershell.exe`" -NoProfile -ExecutionPolicy Bypass -File `"$cycle`" -Repo `"$Repo`" -Branch `"$Branch`" -BaseDir `"$BaseDir`""
-    $action=New-ScheduledTaskAction -Execute 'powershell.exe' -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$cycle`" -Repo `"$Repo`" -Branch `"$Branch`" -BaseDir `"$BaseDir`""
+    $taskAction=New-ScheduledTaskAction -Execute 'powershell.exe' -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$cycle`" -Repo `"$Repo`" -Branch `"$Branch`" -BaseDir `"$BaseDir`""
     $trigger=New-ScheduledTaskTrigger -Once -At ((Get-Date).AddMinutes(2)) -RepetitionInterval (New-TimeSpan -Minutes 5) -RepetitionDuration (New-TimeSpan -Days 3650)
     $settings=New-ScheduledTaskSettingsSet -StartWhenAvailable -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Minutes 10)
     $principal=New-ScheduledTaskPrincipal -UserId ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name) -LogonType Interactive -RunLevel Limited
-    Register-ScheduledTask -TaskName $TaskName -Action $action -Trigger $trigger -Settings $settings -Principal $principal -Force | Out-Null
+    Register-ScheduledTask -TaskName $TaskName -Action $taskAction -Trigger $trigger -Settings $settings -Principal $principal -Force | Out-Null
     Disable-ScheduledTask -TaskName $TaskName | Out-Null
     Write-Host 'INSTALL_DISABLED: PASS'
     Write-Host 'The task exists but cannot run until separately enabled.'
