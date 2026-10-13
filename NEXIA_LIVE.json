@@ -1,16 +1,17 @@
 {
   "schema_version": 3,
   "updated_at": "2026-10-13",
-  "status": "ACTIVE / EXP-AUTO-001 PROPOSAL INTERNALLY READY / WORKANA PROFILE APPROVAL NOT VERIFIED / STATE V71 CURRENT",
+  "status": "ACTIVE / EXP-AUTO-001 PROPOSAL INTERNALLY READY / WORKANA PROFILE APPROVAL NOT VERIFIED / STATE V71 CURRENT AND VERIFIED",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_CURRENT_THROUGH_COMMERCIAL_001",
+  "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "2e10fb9488b549af48e828659cb5308e2a533840",
-    "latest_verified_event_id": "EVT-2026-10-13-CHECKPOINT-001",
-    "latest_verified_event_path": "events/EVT-2026-10-13-CHECKPOINT-001.json",
+    "active_index_blob_sha": "e37eaf2bd1fe7c9d798a74d8ed5cdb69383f2a70",
+    "latest_verified_event_id": "EVT-2026-10-13-CHECKPOINT-002",
+    "latest_verified_event_path": "events/EVT-2026-10-13-CHECKPOINT-002.json",
     "latest_material_business_event_id": "EVT-2026-10-13-COMMERCIAL-001"
   },
   "active_experiment": {
@@ -82,7 +83,7 @@
     "Authenticated external Workana write actions remain separately gated"
   ],
   "session_handoff": {
-    "last_completed_verified_action": "Canonical STATE v71 checkpoint prepared to absorb verified post-v70 local browser, local bridge, scheduler, Workana read-only and commercially-ready proposal evidence plus automation optimization. Latest manual Gmail check found no new Workana email.",
+    "last_completed_verified_action": "Canonical STATE v71 was committed atomically in commit 3b112135d0d951d28500649a2cd8900220d84007 and re-fetched with matching state and boot hashes. Latest manual Gmail check found no new Workana email.",
     "last_user_facing_handoff": "EXP-AUTO-001 proposal is internally ready. Do not submit until Workana profile approval is explicitly verified.",
     "human_action_required_now": false,
     "pending_human_action": null,
@@ -100,7 +101,7 @@
       "NEXIA_LIVE.json",
       "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
       "NEXIA_EVENT_INDEX_V3.json",
-      "events/EVT-2026-10-13-CHECKPOINT-001.json",
+      "events/EVT-2026-10-13-CHECKPOINT-002.json",
       "events/EVT-2026-10-13-COMMERCIAL-001.json",
       "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md"
     ],

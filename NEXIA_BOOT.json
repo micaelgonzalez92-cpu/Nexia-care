@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "boot_version": 48,
+  "boot_version": 49,
   "generated_at": "2026-10-13",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -26,10 +26,10 @@
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "2e10fb9488b549af48e828659cb5308e2a533840",
-    "latest_verified_event_id": "EVT-2026-10-13-CHECKPOINT-001",
-    "latest_verified_event_path": "events/EVT-2026-10-13-CHECKPOINT-001.json",
-    "latest_verified_event_blob_sha": "259aec77cd2dd508072726cf1c355cb4d684a733",
+    "active_index_blob_sha": "e37eaf2bd1fe7c9d798a74d8ed5cdb69383f2a70",
+    "latest_verified_event_id": "EVT-2026-10-13-CHECKPOINT-002",
+    "latest_verified_event_path": "events/EVT-2026-10-13-CHECKPOINT-002.json",
+    "latest_verified_event_blob_sha": "3120fc2b4fb7eca94e9805b677c0a83e1e5a132b",
     "latest_material_business_event_id": "EVT-2026-10-13-COMMERCIAL-001"
   },
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
@@ -72,6 +72,7 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gate": "No immediate Kael action. Huescaventura proposal is internally ready but blocked until explicit Workana profile approval is verified, the project remains open and submission cost is EUR0.",
-  "sync_status": "ATOMIC_STATE_V71_CHECKPOINT_READY_IN_SINGLE_TREE_COMMIT",
+  "sync_status": "STATE_V71_ATOMIC_SINGLE_TREE_COMMIT_VERIFIED_POST_COMMIT_REFETCH",
+  "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
   "next_action": "Do not redo bridge benchmarks, generic moderation probes or proposal drafting. Use existing daily Gmail sensor for explicit Workana approval/rejection. On explicit approval, freshly revalidate Huescaventura and submit only the already-authorized EUR300 proposal if still open and submission remains EUR0."
 }

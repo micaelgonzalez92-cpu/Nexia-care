@@ -4,7 +4,8 @@
   "project": "NEXIA CORE",
   "canonical_state_version": 71,
   "canonical_state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
-  "state_status": "CURRENT_THROUGH_COMMERCIAL_001",
+  "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
+  "state_status": "CURRENT_AND_POST_COMMIT_VERIFIED_THROUGH_COMMERCIAL_001",
   "mission": "MISSION-OPPORTUNITY-ENGINE-001",
   "active_experiment": {
     "id": "EXP-AUTO-001",
@@ -65,9 +66,8 @@
   "latest_verified_events": [
     "events/EVT-2026-10-13-LOCALBRIDGE-011.json",
     "events/EVT-2026-10-13-WORKANA-READ-002.json",
-    "events/EVT-2026-10-13-CONTINUITY-001.json",
     "events/EVT-2026-10-13-COMMERCIAL-001.json",
-    "events/EVT-2026-10-13-CHECKPOINT-001.json"
+    "events/EVT-2026-10-13-CHECKPOINT-002.json"
   ],
   "resume_required_reads": [
     "NEXIA_BOOT.json",
@@ -75,7 +75,7 @@
     "NEXIA_LIVE.json",
     "NEXIA_EVENT_INDEX_V3.json",
     "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
-    "events/EVT-2026-10-13-CHECKPOINT-001.json",
+    "events/EVT-2026-10-13-CHECKPOINT-002.json",
     "events/EVT-2026-10-13-COMMERCIAL-001.json",
     "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md"
   ],

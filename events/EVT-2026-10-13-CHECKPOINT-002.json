@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-CHECKPOINT-002",
+  "timestamp": "2026-10-13T15:10:00+02:00",
+  "timestamp_precision": "minute",
+  "type": "CANONICAL_STATE_V71_ATOMIC_RECONCILIATION_VERIFIED",
+  "state_version": 71,
+  "supersedes_checkpoint_status_of": "EVT-2026-10-13-CHECKPOINT-001",
+  "evidence_source": "DIRECT_GITHUB_REF_UPDATE_AND_POST_COMMIT_FILE_REFETCH",
+  "observed": {
+    "atomic_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
+    "previous_main_sha": "8e764790a4550d71617d0be594cf3c5dc697aa2c",
+    "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
+    "boot_blob_sha": "43cdc8d473f6aac5da2d9182f1d1734f464780d5",
+    "live_blob_sha": "6dd95956d4586635f02b13719f1ab99900e423c5",
+    "handoff_blob_sha": "2299a632c1ee06cd8f4205b5dc0c900284e4d969",
+    "event_index_v3_blob_sha": "2e10fb9488b549af48e828659cb5308e2a533840",
+    "state_refetch_version": 71,
+    "state_refetch_sha_matches": true,
+    "boot_refetch_state_version": 71,
+    "boot_refetch_state_sha_matches": true,
+    "cash_spend_eur": 0,
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "interpretation": {
+    "checkpoint_status": "VERIFIED_SINGLE_TREE_COMMIT",
+    "canonical_state": "NEXIA_STATE_JSON_V71",
+    "post_v70_delta_absorbed_through": "EVT-2026-10-13-COMMERCIAL-001",
+    "economic_priority": "EXP_AUTO_001",
+    "commercial_gate": "WORKANA_PROFILE_APPROVAL_NOT_VERIFIED"
+  },
+  "authority_effect": "NONE. Internal persistence verification only.",
+  "truth_limit": "Canonical reconciliation is technical continuity work, not economic validation or revenue."
+}
