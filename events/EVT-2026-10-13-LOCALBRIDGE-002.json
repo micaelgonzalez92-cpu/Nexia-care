@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBRIDGE-002",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "LOCAL_BRIDGE_TRANSPORT_PROBE_NO_EXISTING_GIT_OR_GH_CHANNEL",
+  "state_version": 70,
+  "evidence_source": "KAEL_SHARED_POWERSHELL_OUTPUT",
+  "observed": {
+    "git_found": false,
+    "gh_found": false,
+    "local_repo_found": false,
+    "windows_task_scheduler_available": true,
+    "return_channel_candidate": "NONE_VERIFIED",
+    "cash_spend_eur": 0
+  },
+  "interpretation": {
+    "automatic_local_start_foundation": "TASK_SCHEDULER_AVAILABLE",
+    "automatic_result_return": "BLOCKED_NO_EXISTING_AUTHENTICATED_GITHUB_TRANSPORT",
+    "existing_zero_install_git_transport": "NOT_AVAILABLE",
+    "work_replacement": "STILL_MANUAL_LAUNCH_AND_MANUAL_RESULT_RETURN"
+  },
+  "next_gate": "LOCAL-BRIDGE-TRANSPORT-002: read-only probe for Windows Package Manager (winget) and GitHub CLI package availability. If available, present a separate Kael gate before any installation/authentication. Preferred path is GitHub CLI OAuth/device login so Nexia never receives a raw token.",
+  "authority_effect": "NONE. No software installation, authentication change, scheduled task creation, external submission or spend is authorized by this event.",
+  "truth_limit": "Task Scheduler availability means automatic local startup is technically plausible. No automatic result return channel is yet verified."
+}
