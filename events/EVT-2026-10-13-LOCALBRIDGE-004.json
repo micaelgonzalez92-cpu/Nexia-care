@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBRIDGE-004",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "GITHUB_CLI_INSTALL_AUTH_REPO_ACCESS_VERIFIED_THEN_ROLLED_BACK",
+  "state_version": 70,
+  "evidence_source": "KAEL_SHARED_POWERSHELL_OUTPUT",
+  "observed": {
+    "github_cli_version": "2.102.0",
+    "github_cli_install": "PASS",
+    "github_web_device_authentication": "PASS",
+    "active_account": "micaelgonzalez92-cpu",
+    "repo_access": "PASS",
+    "repo": "micaelgonzalez92-cpu/Nexia-care",
+    "viewer_permission": "ADMIN",
+    "repo_private": false,
+    "git_executable": "NOT_FOUND",
+    "git_operations_warning": "GH_CLI_COULD_NOT_FIND_GIT_EXECUTABLE_IN_PATH",
+    "github_cli_logout_after_test": "PASS",
+    "github_cli_uninstall_after_test": "PASS",
+    "cash_spend_eur": 0
+  },
+  "interpretation": {
+    "gh_api_transport_feasibility": "VERIFIED",
+    "git_for_windows_required_for_planned_gh_api_result_transport": false,
+    "current_gh_installation": "ABSENT_AFTER_ROLLBACK",
+    "current_gh_authentication": "ABSENT_AFTER_ROLLBACK",
+    "automatic_result_return": "NOT_OPERATIONAL_CURRENTLY",
+    "reason": "Kael executed the documented rollback commands immediately after successful verification."
+  },
+  "next_gate": "Reinstall GitHub CLI and authenticate again via browser/device flow, but leave gh installed and authenticated. Then run a bounded gh-api write/re-read/delete-or-supersede benchmark using only sanitized non-sensitive test data in Nexia-care; no Git executable is required for this API path.",
+  "authority_effect": "NONE. No standing authority is expanded. GitHub CLI account authentication and local installation remain under Kael control; external business actions remain gated.",
+  "truth_limit": "The test proved GitHub CLI installation, OAuth authentication and repository API visibility with ADMIN permission. Because Kael then logged out and uninstalled gh, the return transport is not currently operational."
+}
