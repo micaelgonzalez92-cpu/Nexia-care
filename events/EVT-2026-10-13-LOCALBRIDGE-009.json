@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBRIDGE-009",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "LOCAL_BRIDGE_SCHEDULER_001_EXPLICIT_ONE_SHOT_AUTHORIZATION",
+  "state_version": 70,
+  "evidence_source": "KAEL_EXPLICIT_CHAT_AUTHORIZATION",
+  "authorization": {
+    "task_id": "LOCAL-BRIDGE-SCHEDULER-001",
+    "windows_task_scheduler": true,
+    "single_execution_only": true,
+    "reversible": true,
+    "cash_spend_eur": 0,
+    "scope": "Run only the bounded authenticated Workana read-only local bridge and sanitized GitHub writeback benchmark.",
+    "recurrence_authorized": false,
+    "polling_authorized": false,
+    "persistent_service_authorized": false,
+    "external_business_actions_authorized": false,
+    "proposal_submission_authorized_by_this_gate": false,
+    "messages_authorized_by_this_gate": false,
+    "purchases_authorized_by_this_gate": false,
+    "profile_changes_authorized_by_this_gate": false,
+    "publication_authorized_by_this_gate": false
+  },
+  "experiment_contract": {
+    "hypothesis": "Windows Task Scheduler can launch the already-verified bounded local bridge once, without Kael manually starting the worker, and the worker can return a sanitized result to GitHub.",
+    "metric": "One-shot scheduler registration plus automatic task start plus authenticated read-only browser PASS plus sanitized GH_API writeback plus local scheduler cleanup verification.",
+    "success": "Remote challenge records scheduler-launched bridge PASS, no external side effects, zero spend, and cleanup harness verifies the scheduled task is absent afterward.",
+    "failure": "Task does not run, browser or writeback fails, recurring/persistent execution is created, cleanup cannot verify task removal, or any unauthorized side effect occurs.",
+    "risk": "A Windows scheduled task could remain configured or execute unexpectedly; mitigated by one-shot trigger, no recurrence, bounded worker, execution time limit, cleanup in finally, and explicit absence verification."
+  },
+  "next_gate": "Prepare deterministic scheduler worker, pre-created challenge, and one-shot registration/cleanup harness. Kael must execute the prepared setup command on the local PC; no recurring task or persistent service may be created.",
+  "authority_effect": "BOUNDED_LOCAL_SYSTEM_AUTHORIZATION_ONLY. No business authority is expanded.",
+  "truth_limit": "Authorization is not execution. Scheduler capability remains unverified until the remote challenge and cleanup evidence are observed."
+}
