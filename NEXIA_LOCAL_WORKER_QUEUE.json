@@ -1,21 +1,29 @@
 {
-  "schema_version": 1,
-  "updated_at": "2026-10-13",
-  "worker_min_version": "0.1.0",
-  "tasks": [
-    {
-      "task_id": "LOCALWORKER-HC-001",
-      "action": "HEALTH_CHECK",
-      "authority": "GREEN_INTERNAL",
-      "external_effects": false,
-      "status": "READY",
-      "payload": {}
-    }
-  ],
-  "rules": {
-    "auto_authorities": ["GREEN", "GREEN_INTERNAL"],
-    "yellow_red_unknown": "HUMAN_GATE",
-    "external_effects": "FORBIDDEN_V0_1",
-    "silence_is_approval": false
-  }
+    "schema_version":  1,
+    "updated_at":  "2026-10-13",
+    "worker_min_version":  "0.1.0",
+    "tasks":  [
+                  {
+                      "task_id":  "LOCALWORKER-HC-001",
+                      "action":  "HEALTH_CHECK",
+                      "authority":  "GREEN_INTERNAL",
+                      "external_effects":  false,
+                      "payload":  {
+
+                                  },
+                      "status":  "DONE",
+                      "last_result":  "PASS",
+                      "worker_version":  "0.1.0",
+                      "completed_at":  "2026-10-13T16:30:49Z"
+                  }
+              ],
+    "rules":  {
+                  "auto_authorities":  [
+                                           "GREEN",
+                                           "GREEN_INTERNAL"
+                                       ],
+                  "yellow_red_unknown":  "HUMAN_GATE",
+                  "external_effects":  "FORBIDDEN_V0_1",
+                  "silence_is_approval":  false
+              }
 }
