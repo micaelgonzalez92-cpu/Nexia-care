@@ -155,6 +155,7 @@ jobs:
           if(Test-Path (Join-Path $root 'state/ledger.json')){ throw 'Fail-closed regression: ledger.json was created.' }
           if(Test-Path $pythonCalled){ throw 'Fail-closed regression: worker Python process was launched despite GitHub fetch failure.' }
           Write-Host 'FAIL_CLOSED_GITHUB_CI: PASS'
+          exit 0
 
       - name: Local coder benchmark harness syntax
         run: python3 -m py_compile tools/nexia_local_ai_coder_001_benchmark.py
