@@ -3,36 +3,39 @@ param(
   [string]$Action='Status',
   [string]$Repo='micaelgonzalez92-cpu/Nexia-care',
   [string]$Branch='main',
+  [string]$ControlBranch='main',
   [string]$BaseDir="$env:LOCALAPPDATA\NEXIA\worker"
 )
 $ErrorActionPreference='Stop'
 $TaskName='NEXIA Local Worker v0.1'
 $bin=Join-Path $BaseDir 'bin'; $worker=Join-Path $bin 'nexia_local_worker_v0_1.py'; $cycle=Join-Path $bin 'run_nexia_local_worker_cycle_v0_1.ps1'
-function Raw([string]$Path){ "https://raw.githubusercontent.com/$Repo/$Branch/$Path" }
+function RawCode([string]$Path){ "https://raw.githubusercontent.com/$Repo/$Branch/$Path" }
+function RawControl([string]$Path){ "https://raw.githubusercontent.com/$Repo/$ControlBranch/$Path" }
 function Require-Base {
   if(-not (Get-Command gh -ErrorAction SilentlyContinue)){ throw 'GitHub CLI (gh) is required and was previously verified by Nexia.' }
   if(-not (Get-Command python -ErrorAction SilentlyContinue)){ throw 'Python is required.' }
 }
 function Remote-Control {
-  return Invoke-RestMethod -Uri (Raw 'NEXIA_LOCAL_WORKER_CONTROL.json') -TimeoutSec 15
+  return Invoke-RestMethod -Uri (RawControl 'NEXIA_LOCAL_WORKER_CONTROL.json') -TimeoutSec 15
 }
 
 switch($Action){
   'InstallDisabled' {
     Require-Base
     New-Item -ItemType Directory -Force -Path $bin | Out-Null
-    Invoke-WebRequest -UseBasicParsing -Uri (Raw 'tools/nexia_local_worker_v0_1.py') -OutFile $worker
-    Invoke-WebRequest -UseBasicParsing -Uri (Raw 'tools/run_nexia_local_worker_cycle_v0_1.ps1') -OutFile $cycle
+    Invoke-WebRequest -UseBasicParsing -Uri (RawCode 'tools/nexia_local_worker_v0_1.py') -OutFile $worker
+    Invoke-WebRequest -UseBasicParsing -Uri (RawCode 'tools/run_nexia_local_worker_cycle_v0_1.ps1') -OutFile $cycle
     & python -m py_compile $worker
     $tokens=$null;$errors=$null;[System.Management.Automation.Language.Parser]::ParseFile($cycle,[ref]$tokens,[ref]$errors)|Out-Null
     if($errors.Count){ throw ($errors | ForEach-Object {$_.Message} | Out-String) }
-    $taskAction=New-ScheduledTaskAction -Execute 'powershell.exe' -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$cycle`" -Repo `"$Repo`" -Branch `"$Branch`" -BaseDir `"$BaseDir`""
+    $taskAction=New-ScheduledTaskAction -Execute 'powershell.exe' -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$cycle`" -Repo `"$Repo`" -Branch `"$ControlBranch`" -BaseDir `"$BaseDir`""
     $trigger=New-ScheduledTaskTrigger -Once -At ((Get-Date).AddMinutes(2)) -RepetitionInterval (New-TimeSpan -Minutes 5) -RepetitionDuration (New-TimeSpan -Days 3650)
     $settings=New-ScheduledTaskSettingsSet -StartWhenAvailable -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Minutes 10)
     $principal=New-ScheduledTaskPrincipal -UserId ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name) -LogonType Interactive -RunLevel Limited
     Register-ScheduledTask -TaskName $TaskName -Action $taskAction -Trigger $trigger -Settings $settings -Principal $principal -Force | Out-Null
     Disable-ScheduledTask -TaskName $TaskName | Out-Null
     Write-Host 'INSTALL_DISABLED: PASS'
+    Write-Host "Code ref: $Branch | Control branch: $ControlBranch"
     Write-Host 'The task exists but cannot run until separately enabled.'
   }
   'Enable' {
@@ -62,5 +65,6 @@ switch($Action){
     if(-not $t){ Write-Host 'TASK: NOT_INSTALLED'; exit 0 }
     $i=Get-ScheduledTaskInfo -TaskName $TaskName
     Write-Host "TASK: $($t.State) | Last=$($i.LastRunTime) | Result=$($i.LastTaskResult) | Next=$($i.NextRunTime)"
+    Write-Host "EXPECTED_CONTROL_BRANCH: $ControlBranch"
   }
 }
