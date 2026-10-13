@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-COMMERCIAL-001",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "HUESCAVENTURA_PROPOSAL_PROFESSIONALLY_GATED_INTERNAL_READY",
+  "state_version": 70,
+  "evidence_source": "NEXIA_INTERNAL_PREPARATION_PLUS_FRESH_PUBLIC_BRIEF_REVALIDATION",
+  "observed": {
+    "artifact": "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md",
+    "artifact_commit": "ab7a0ee5608896792ce43df034c4226510d4af8f",
+    "public_project_revalidated_date": "2026-10-13",
+    "public_project_status": "OPEN_EVALUATING_PROPOSALS",
+    "visible_proposals": 1,
+    "public_budget_eur": "200-300",
+    "buyer_payment_verified": true,
+    "proposal_price_eur": 300,
+    "answers_all_buyer_questions": 10,
+    "scope_locked": true,
+    "professional_rejection_memo_completed": true,
+    "external_contact_occurred": false,
+    "proposal_submitted": false,
+    "cash_spend_eur": 0
+  },
+  "professional_gate": {
+    "technical_gate": "PASS",
+    "domain_gate": "PASS",
+    "defect_gate": "PASS_WITH_SCOPE_LOCK",
+    "professional_benchmark_gate": "PASS",
+    "adversarial_review_gate": "PASS",
+    "economic_exposure_gate": "BLOCKED_EXISTING_CONDITIONS",
+    "internal_ready": true
+  },
+  "commercial_gate": {
+    "workana_profile_approval_verified": false,
+    "required_before_submission": [
+      "Explicit Workana profile approval verified",
+      "Fresh Huescaventura open-project recheck",
+      "EUR0 additional submission cost"
+    ],
+    "submission_authority": "EXISTING_CONDITIONAL_AUTHORIZATION_ONLY"
+  },
+  "economics": {
+    "gross_eur": 300,
+    "platform_fee_assumption_pct": 20,
+    "estimated_after_platform_eur": 240,
+    "human_labor_target_hours_max": 4,
+    "labor_rate_eur_per_hour": 15,
+    "estimated_labor_eur_max": 60,
+    "estimated_contribution_before_overhead_tax_eur": 180,
+    "tax_eur": "UNKNOWN",
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "authority_effect": "NONE. Internal preparation only. No proposal, message, publication, purchase, recurring service or account change was executed.",
+  "next_gate": "Wait for explicit Workana approval evidence. On approval, freshly revalidate Huescaventura and submit only the already-authorized EUR300 proposal if still open and submission remains EUR0.",
+  "truth_limit": "Internal proposal readiness is not buyer interest, submission, response, payment, acceptance or profit."
+}
