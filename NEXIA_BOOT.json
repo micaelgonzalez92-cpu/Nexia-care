@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "boot_version": 51,
+  "boot_version": 52,
   "generated_at": "2026-10-13",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -26,10 +26,10 @@
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "f8545cdc964983b4ab6106c269d18aab980199f3",
-    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-001",
-    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-001.json",
-    "latest_verified_event_blob_sha": "578558afe7400913b6807dedb6a9c14d1bc81b5f",
+    "active_index_blob_sha": "56a0ea4a945cf9acd43e85dd42484e154228a6ea",
+    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-002",
+    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-002.json",
+    "latest_verified_event_blob_sha": "329b17832962b89cf808be2e0f884c51833aa3fe",
     "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
   },
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001 + CAPABILITY EVOLUTION LOCAL WORKER",
@@ -39,35 +39,15 @@
     "authorized_price_eur": 300,
     "max_delivery_hours": 4
   },
-  "workana": {
-    "authenticated_dashboard": "VERIFIED_READ_ONLY",
-    "moderation_status": "APPROVAL_NOT_VERIFIED",
-    "profile_completion_latest_verified": "APPROX_70_PERCENT_PREVIOUSLY_VERIFIED_NOT_YET_100_PERCENT_VERIFIED",
-    "profile_completion_requirement": "OFFICIAL_100_PERCENT_REQUIRED_FOR_EVALUATION_AND_PROPOSALS",
-    "profile_entry_artifact": "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
-    "profile_entry_status": "PREPARED_NOT_PUBLISHED",
-    "primary_opportunity": "WORKANA-HUESCAVENTURA-001",
-    "proposal_status": "AUTHORIZED_NOT_SUBMITTED_INTERNAL_READY",
-    "proposal_artifact": "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md",
-    "proposal_execution_condition": "Explicit profile approval + fresh open-project recheck + EUR0 submission cost"
-  },
   "local_execution": {
     "browser": "VERIFIED_WORKANA_AUTHENTICATED_READ_ONLY_PERSISTENT_SESSION",
     "integrated_bridge": "VERIFIED_AUTOMATIC_SANITIZED_RESULT_RETURN",
     "scheduler": "VERIFIED_ONE_SHOT_AUTOMATIC_START_AND_CLEANUP",
-    "local_worker_v0_1": "IMPLEMENTED_AND_CI_VERIFIED_NOT_DEPLOYED",
+    "local_worker_v0_1": "CORRECTED_AND_CI_VERIFIED_INSTALL_RETRY_REQUIRED",
+    "local_worker_safe_retry_revision": "073cd0b5d75458609ef54e8b020d9f97ccdb6b74",
     "local_worker_control": "STOP_FAIL_CLOSED",
     "recurring_service": "NOT_AUTHORIZED_NOT_VERIFIED",
     "external_write_actions": "NOT_AUTHORIZED_NOT_VERIFIED"
-  },
-  "automation_architecture": {
-    "active": 4,
-    "paused": 5,
-    "completed": 1,
-    "exp_auto_worker": "DAILY_OPTIMIZED_FROM_EVERY_6_HOURS",
-    "control_tower": "DAILY_GMAIL_MATERIAL_SENSOR",
-    "venture_radar": "DAILY_TWO_VEINS_WIP_STRICT",
-    "capability_evolution": "WEEKLY"
   },
   "economics": {
     "capital_spent_eur": 0,
@@ -78,8 +58,8 @@
     "local_worker_software_api_cost_eur": 0,
     "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
-  "human_gate": "Current capability gate: install Local Worker v0.1 in DISABLED state only, then verify before any runtime activation. Separate economic gate remains: Workana profile completion to 100%. No recurring execution or external effects are authorized.",
-  "sync_status": "STATE_V71_BASE_PLUS_VERIFIED_LOCALWORKER_001_DELTA",
+  "human_gate": "Retry Local Worker v0.1 installation in DISABLED state only from pinned revision 073cd0b5d75458609ef54e8b020d9f97ccdb6b74. No recurring execution or external effects are authorized.",
+  "sync_status": "STATE_V71_BASE_PLUS_VERIFIED_LOCALWORKER_002_DELTA",
   "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
-  "next_action": "LOCALWORKER-INSTALL-DISABLED-001: Kael installs the CI-verified worker as a disabled Windows scheduled task only. After verification, authorize one bounded HEALTH_CHECK before considering recurrence. Do not claim 24x7 yet."
+  "next_action": "LOCALWORKER-INSTALL-DISABLED-001-RETRY: Kael retries the corrected CI-verified worker as a disabled Windows scheduled task only. After verification, authorize one bounded HEALTH_CHECK before considering recurrence. Do not claim 24x7 yet."
 }
