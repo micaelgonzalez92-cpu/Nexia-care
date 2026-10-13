@@ -4,27 +4,32 @@
   "project": "NEXIA CORE",
   "canonical_state_version": 71,
   "focus": "CAPABILITY_EVOLUTION_LOCAL_WORKER_BOUNDED_STABILITY",
-  "status": "STABILITY_24H_AUTHORIZED_CI_VERIFIED_PRESTART",
+  "status": "STABILITY_24H_RUNNING_PENDING_FINAL_RECONCILIATION",
   "verified_evidence": {
-    "latest_event": "events/EVT-2026-10-13-LOCALWORKER-008.json",
-    "latest_event_blob_sha": "0d228b3aca512a52a2aca0ecb1bddc8e6c333e13",
+    "latest_event": "events/EVT-2026-10-13-LOCALWORKER-009.json",
+    "latest_event_blob_sha": "9a7910f75a6acf53c5e961bb05a7641f92f4fc9f",
     "safety_ladder_through_watchdog_windows": "VERIFIED",
     "stability_safety_ci": "VERIFIED_SUCCESS",
     "stability_ci_run_id": 38445633232,
     "stability_ci_commit": "4bf653834ff832f22bda5e930371452b79477a11",
-    "main_windows_task": "INSTALLED_DISABLED",
+    "main_windows_task_at_start": "DISABLED",
     "recurring_24x7_runtime": "NOT_AUTHORIZED_NOT_VERIFIED"
   },
   "authorized_trial": {
     "gate_id": "LOCALWORKER-STABILITY-24H-001",
-    "status": "AUTHORIZED_NOT_STARTED",
+    "status": "RUNNING",
     "scope": "24h temporary recurrence, GREEN_INTERNAL only, no external effects, automatic shutdown at end.",
+    "start_at": "2026-10-13T20:22:39.3995480+02:00",
+    "end_at": "2026-10-14T20:22:39.3995480+02:00",
     "duration_hours": 24,
     "interval_minutes": 5,
-    "main_task_must_remain_disabled": true,
+    "stability_task_state_at_start": "Ready",
+    "cleanup_task_state_at_start": "Ready",
+    "main_task_state_at_start": "Disabled",
     "software_api_cost_eur": 0,
     "electricity_cost": "UNKNOWN_NOT_INSTRUMENTED",
-    "reversible": true
+    "reversible": true,
+    "final_result": "PENDING"
   },
   "fixed_success_thresholds": {
     "minimum_total_cycle_records": 285,
@@ -39,20 +44,19 @@
     "main_task_final_state": "Disabled"
   },
   "human_gate": {
-    "gate_id": "LOCALWORKER-STABILITY-24H-001-START",
-    "status": "REQUIRES_KAEL_WINDOWS_INSTALLSTART",
-    "scope": "Install and start only the separate bounded stability task and one-time cleanup task. Do not enable the indefinite main Local Worker task.",
+    "gate_id": "LOCALWORKER-STABILITY-24H-001-FINAL-RECONCILIATION",
+    "status": "WAIT_UNTIL_WINDOW_END_THEN_KAEL_RETURNS_LOCAL_STATUS",
+    "scope": "Do not restart or duplicate the stability trial. Do not enable the main worker task. After the window and auto-shutdown, return the final manager status/reconciliation output.",
     "external_actions_authorized": false,
     "commercial_actions_authorized": false,
     "persistent_24x7_authorized": false
   },
-  "success_check_for_start": "STABILITY_24H_START: PASS; START_AT and END_AT shown; stability and cleanup tasks Ready; MAIN_TASK_STATE: Disabled.",
-  "return_to_nexia": "Immediately paste the InstallStart output. Nexia records STARTED but cannot declare the stability gate PASS until the 24h window completes and final local evidence is reconciled.",
+  "return_to_nexia": "After 2026-10-14T20:22:39.3995480+02:00 and once cleanup has had up to 10 minutes, return the local final reconciliation/status output. Nexia must compare it against the predeclared thresholds before declaring PASS, FAIL or INCONCLUSIVE.",
   "economic_priority_preserved": {
     "active_experiment": "EXP-AUTO-001",
     "workana_profile_gate_still_pending": true,
     "realized_revenue_eur": 0,
     "realized_profit_eur": 0
   },
-  "truth_limit": "Authorization and CI preparation are verified. The 24h local test is not started, completed or passed yet. Interactive-session scheduling is not equivalent to a service-grade 24x7 daemon."
+  "truth_limit": "The trial start is verified from Kael's Windows output. Twenty-four-hour continuity, cycle count, gap limits, final auto-shutdown and production-grade 24x7 durability are not yet verified."
 }
