@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALWORKER-003",
+  "timestamp": "2026-10-13T18:18:00+02:00",
+  "timestamp_precision": "minute",
+  "type": "LOCAL_WORKER_INSTALL_DISABLED_VERIFIED_BY_KAEL_OUTPUT",
+  "state_version": 71,
+  "evidence_source": "KAEL_WINDOWS_POWERSHELL_OUTPUT",
+  "observed": {
+    "installer_revision": "073cd0b5d75458609ef54e8b020d9f97ccdb6b74",
+    "output": [
+      "INSTALL_DISABLED: PASS",
+      "The task exists but cannot run until separately enabled."
+    ],
+    "scheduled_task_name": "NEXIA Local Worker v0.1",
+    "installation": "PASS_DISABLED",
+    "recurring_runtime_enabled": false,
+    "worker_cycle_executed": false,
+    "external_effects": false,
+    "cash_spend_eur": 0
+  },
+  "interpretation": {
+    "status": "INSTALLED_DISABLED_NOT_RUNTIME_VERIFIED",
+    "next_gate": "ONE_SHOT_HEALTH_CHECK_GREEN_INTERNAL",
+    "claim_24x7": false
+  },
+  "truth_limit": "Installer output verifies the disabled installation path. It does not prove one-shot runtime, GitHub writeback, STOP behavior, restart recovery or persistent 24x7 operation."
+}
