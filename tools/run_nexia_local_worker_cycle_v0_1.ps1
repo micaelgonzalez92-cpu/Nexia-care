@@ -17,6 +17,12 @@ function Put-GhJsonFile([string]$Path,$Object,[string]$Sha,[string]$Message) {
   $b64 = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($json + "`n"))
   gh api --method PUT "repos/$Repo/contents/$Path" -f message="$Message" -f content="$b64" -f sha="$Sha" -f branch="$Branch" | Out-Null
 }
+function Write-Utf8NoBom([string]$Path,[string]$Text) {
+  [IO.File]::WriteAllText($Path,$Text,[Text.UTF8Encoding]::new($false))
+}
+function Set-Note($Object,[string]$Name,$Value) {
+  $Object | Add-Member -NotePropertyName $Name -NotePropertyValue $Value -Force
+}
 function MaterialStatus($s) {
   return [ordered]@{
     worker_version=[string]$s.worker_version
@@ -41,8 +47,8 @@ $queueRemote = Get-GhJsonFile 'NEXIA_LOCAL_WORKER_QUEUE.json'
 $controlLocal = Join-Path $BaseDir 'control.remote.json'
 $queueLocal = Join-Path $BaseDir 'queue.remote.json'
 $statusLocal = Join-Path $BaseDir 'status.json'
-$controlRemote.Text | Set-Content -Encoding utf8 $controlLocal
-$queueRemote.Text | Set-Content -Encoding utf8 $queueLocal
+Write-Utf8NoBom $controlLocal $controlRemote.Text
+Write-Utf8NoBom $queueLocal $queueRemote.Text
 
 & python $worker --once --state-dir (Join-Path $BaseDir 'state') --queue-file $queueLocal --control-file $controlLocal --status-file $statusLocal
 $workerExit=$LASTEXITCODE
@@ -57,15 +63,15 @@ if($status.task_id -and $status.state -ne 'STOPPED') {
   foreach($t in @($queueLatest.Object.tasks)) {
     if([string]$t.task_id -eq [string]$status.task_id) {
       switch([string]$status.result) {
-        'PASS' { $t.status='DONE'; $changed=$true }
-        'SKIPPED_DUPLICATE' { $t.status='DONE'; $changed=$true }
-        'FAIL' { $t.status='FAILED'; $changed=$true }
-        'NOT_EXECUTED' { if($status.state -eq 'HUMAN_GATE'){ $t.status='HUMAN_GATE'; $changed=$true } }
+        'PASS' { Set-Note $t 'status' 'DONE'; $changed=$true }
+        'SKIPPED_DUPLICATE' { Set-Note $t 'status' 'DONE'; $changed=$true }
+        'FAIL' { Set-Note $t 'status' 'FAILED'; $changed=$true }
+        'NOT_EXECUTED' { if($status.state -eq 'HUMAN_GATE'){ Set-Note $t 'status' 'HUMAN_GATE'; $changed=$true } }
       }
       if($changed){
-        $t.last_result=[string]$status.result
-        $t.worker_version=[string]$status.worker_version
-        $t.completed_at=[string]$status.updated_at
+        Set-Note $t 'last_result' ([string]$status.result)
+        Set-Note $t 'worker_version' ([string]$status.worker_version)
+        Set-Note $t 'completed_at' ([string]$status.updated_at)
       }
       break
     }
