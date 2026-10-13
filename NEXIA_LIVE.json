@@ -1,23 +1,23 @@
 {
   "schema_version": 2,
   "updated_at": "2026-10-13",
-  "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION / WORKANA PROFILE APPROVAL NOT VERIFIED / LOCAL READ-ONLY BRIDGE VERIFIED ONE-SHOT AUTOMATIC START",
+  "status": "ACTIVE / EXP-AUTO-001 PROPOSAL INTERNALLY READY / WORKANA PROFILE APPROVAL NOT VERIFIED / LOCAL READ-ONLY BRIDGE VERIFIED ONE-SHOT AUTOMATIC START",
   "state_version": 70,
   "state_status": "CANONICAL_VALID_POST_STATE_DELTA_UNABSORBED",
-  "state_reconciliation": "STATE_V70 remains canonical. Verified post-state events through CONTINUITY-001 are represented by NEXIA_EVENT_INDEX_V3.json and current handoff; they are not yet absorbed into STATE.",
+  "state_reconciliation": "STATE_V70 remains canonical. Verified post-state events through COMMERCIAL-001 are represented by NEXIA_EVENT_INDEX_V3.json and current handoff; they are not yet absorbed into STATE.",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "base_index": "NEXIA_EVENT_INDEX.json",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "latest_verified_event_id": "EVT-2026-10-13-CONTINUITY-001",
-    "latest_verified_event_path": "events/EVT-2026-10-13-CONTINUITY-001.json",
-    "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-READ-002"
+    "latest_verified_event_id": "EVT-2026-10-13-COMMERCIAL-001",
+    "latest_verified_event_path": "events/EVT-2026-10-13-COMMERCIAL-001.json",
+    "latest_material_business_event_id": "EVT-2026-10-13-COMMERCIAL-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
     "stage": "VETA / PRE-VALIDACION COMERCIAL",
-    "status": "PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
+    "status": "PROPOSAL_INTERNALLY_READY_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "economic_priority": true
@@ -28,8 +28,13 @@
     "profile_rejection": "NOT_VERIFIED",
     "generic_dashboard_moderation_probe": "UNKNOWN_NO_EXPLICIT_MARKER",
     "latest_probe_event": "EVT-2026-10-13-WORKANA-READ-002",
-    "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
+    "proposal_status": "AUTHORIZED_NOT_SUBMITTED_INTERNAL_READY",
+    "proposal_artifact": "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md",
+    "proposal_professional_gate": "PASS_INTERNAL_READY",
     "primary_opportunity": "WORKANA-HUESCAVENTURA-001",
+    "public_opportunity_status": "OPEN_EVALUATING_PROPOSALS_REVERIFIED_2026-10-13",
+    "visible_proposals_last_check": 1,
+    "public_budget_eur": "200-300",
     "proposal_authorized_price_eur": 300,
     "proposal_execution_condition": "Approval verified + Huescaventura freshly rechecked open + EUR0 submission cost",
     "commercial_gate": "BLOCKED_PROFILE_APPROVAL_NOT_VERIFIED"
@@ -45,7 +50,7 @@
     "work_codex_role": "SCARCE_FALLBACK_NOT_DEFAULT"
   },
   "parallel_business_state": {
-    "VETA-AUTO-PRODUCT-001": "PREPARED_INTERNAL_SKU / TEMPLATE_01_REJECTED_TOO_BASIC / TEMPLATE_02 NOT_READY_NOT_SUBMITTED",
+    "VETA-AUTO-PRODUCT-001": "PREPARED_INTERNAL_SKU / TEMPLATE_01 REJECTED TOO BASIC / TEMPLATE_02 NOT_READY_NOT_SUBMITTED",
     "VETA-AI-UGC-001": "VIDEO TECHNICAL PASS / PROFESSIONAL QUALITY FAIL / CAPABILITY PROMOTION DENIED"
   },
   "economics": {
@@ -68,17 +73,17 @@
     "Canonical STATE v70 has not yet absorbed post-state events"
   ],
   "session_handoff": {
-    "last_completed_verified_action": "BOOT, LIVE, current handoff and composite event-index delta were reconciled through CONTINUITY-001 after verification of the one-shot automatic local read-only bridge. Workana generic dashboard moderation remains UNKNOWN and cannot be treated as approval.",
-    "last_user_facing_handoff": "EXP-AUTO-001 remains the economic priority. Do not submit the Workana proposal until approval is explicitly verified.",
+    "last_completed_verified_action": "Huescaventura was freshly revalidated as open/evaluating with one visible proposal and EUR200-300 budget, then a complete EUR300 proposal answering all 10 buyer questions was prepared, scope-locked and passed the internal professional/adversarial gate. No external submission occurred.",
+    "last_user_facing_handoff": "EXP-AUTO-001 proposal is internally ready. Do not submit until Workana profile approval is explicitly verified.",
     "human_action_required_now": false,
     "pending_human_action": null,
     "surface": "ChatGPT Chat",
     "device": "mobile_or_computer",
     "why_kael": "No immediate action is required while Workana approval remains unverified.",
     "steps": [],
-    "material_to_use": "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
+    "material_to_use": "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md",
     "cost_exposure": "EUR0",
-    "success_check": "On resume, recover STATE v70 plus NEXIA_EVENT_INDEX_V3 delta and preserve the Workana approval gate without redoing verified bridge benchmarks.",
+    "success_check": "On explicit profile approval, revalidate Huescaventura open status and EUR0 submission cost, then execute only the already-authorized EUR300 proposal.",
     "return_to_nexia": "No immediate return required.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
@@ -86,13 +91,11 @@
       "NEXIA_LIVE.json",
       "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
       "NEXIA_EVENT_INDEX_V3.json",
-      "NEXIA_EXECUTION_CAPABILITIES.json",
-      "events/EVT-2026-10-13-CONTINUITY-001.json",
-      "events/EVT-2026-10-13-LOCALBRIDGE-011.json",
-      "events/EVT-2026-10-13-WORKANA-READ-002.json"
+      "events/EVT-2026-10-13-COMMERCIAL-001.json",
+      "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md"
     ],
-    "resume_from": "Wait for explicit Workana approval evidence while continuing only non-redundant zero-cost work. On approval, freshly revalidate Huescaventura and execute only the already-authorized EUR300 proposal if still open and no additional spend is required.",
-    "truth_limit": "Technical execution capability is not economic validation. No sale, payment or profit has occurred."
+    "resume_from": "Do not redo proposal drafting or bridge benchmarks. Wait for explicit Workana approval evidence; on approval revalidate Huescaventura and submit only if still open and EUR0. Otherwise continue only non-redundant zero-cost opportunity falsification.",
+    "truth_limit": "Internal readiness is not submission, buyer interest, payment or profit."
   },
-  "next_action": "Preserve EXP-AUTO-001. Avoid redundant moderation probes. Use existing daily Gmail sensor for approval/rejection changes; otherwise perform only non-redundant zero-cost opportunity falsification or state maintenance."
+  "next_action": "Preserve the ready EUR300 Huescaventura proposal. Use existing daily Gmail sensing for approval/rejection. Do not repeat moderation probes or proposal drafting unless material evidence changes."
 }
