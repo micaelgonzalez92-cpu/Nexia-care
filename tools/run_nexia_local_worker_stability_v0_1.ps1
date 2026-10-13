@@ -18,6 +18,11 @@ $eventsPath = Join-Path $BaseDir 'stability-events.jsonl'
 if(-not (Test-Path $watchdog)){ throw "Watchdog missing: $watchdog" }
 if(-not (Get-Command gh -ErrorAction SilentlyContinue)){ throw 'GitHub CLI (gh) is required.' }
 
+$hostExe = $null
+if(Get-Command powershell.exe -ErrorAction SilentlyContinue){ $hostExe='powershell.exe' }
+elseif(Get-Command pwsh -ErrorAction SilentlyContinue){ $hostExe='pwsh' }
+else { throw 'No PowerShell child host available.' }
+
 try { $endAt = [DateTimeOffset]::Parse($EndAtIso) }
 catch { throw "Invalid EndAtIso: $EndAtIso" }
 
@@ -135,7 +140,11 @@ if($pending.Count -gt 0){
   exit 75
 }
 
-& powershell.exe -NoProfile -ExecutionPolicy Bypass -File $watchdog -Repo $Repo -Branch $Branch -BaseDir $BaseDir -MaxAttempts $MaxAttempts -DelaySeconds $DelaySeconds
+if($hostExe -eq 'powershell.exe'){
+  & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $watchdog -Repo $Repo -Branch $Branch -BaseDir $BaseDir -MaxAttempts $MaxAttempts -DelaySeconds $DelaySeconds
+}else{
+  & pwsh -NoProfile -File $watchdog -Repo $Repo -Branch $Branch -BaseDir $BaseDir -MaxAttempts $MaxAttempts -DelaySeconds $DelaySeconds
+}
 $watchdogExit = $LASTEXITCODE
 if($watchdogExit -ne 0){
   Write-StabilityRecord 'WATCHDOG_FAIL' 'WATCHDOG_NONZERO_EXIT' $watchdogExit $false $false
