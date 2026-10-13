@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "challenge_id": "WORKANA-MODERATION-PROBE-001",
+  "nonce": "NEXIA-WORKANA-MOD-001-20261013-A91D",
+  "status": "READY",
+  "target": "https://www.workana.com/dashboard",
+  "required_authenticated_read_only": true,
+  "required_sanitized": true,
+  "required_contains_secrets": false,
+  "allowed_external_side_effects": [],
+  "cash_spend_eur": 0,
+  "truth_limit": "This benchmark may classify only explicit moderation markers visible on the authenticated Workana dashboard. Absence of a pending marker is not approval. APPROVED may be reported only when an explicit approval/verified marker is detected; otherwise return PENDING_SIGNAL, REJECTED_SIGNAL or UNKNOWN."
+}
