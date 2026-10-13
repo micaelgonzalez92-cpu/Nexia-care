@@ -1,19 +1,19 @@
 {
   "schema_version": 3,
   "updated_at": "2026-10-13",
-  "status": "ACTIVE / EXP-AUTO-001 + LOCAL WORKER V0.1 SAFETY LADDER THROUGH FAIL-CLOSED CI VERIFIED / WATCHDOG GATE",
+  "status": "ACTIVE / EXP-AUTO-001 + LOCAL WORKER V0.1 WATCHDOG LOGIC CI VERIFIED / WINDOWS WATCHDOG RUNTIME GATE",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
-  "boot_version": 55,
-  "boot_blob_sha": "aa1a2012f3dfc8b9bf1913c8cb355c0891e11bc3",
+  "boot_version": 56,
+  "boot_blob_sha": "d0dfc32ecfcfd947866e310313c78873f5e8dd4e",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
-  "checkpoint_commit_sha": "80149b62fc7355f788c5d4a693370010937b17d3",
+  "checkpoint_commit_sha": "b1e3cf319ff08d171bfaa53ea656f86a453f51cc",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "abf1e7c682b688a2350172bb570e18a027cc1bfa",
-    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-006",
-    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-006.json",
+    "active_index_blob_sha": "aaef6e4f157effe77b85cf8bdcdeb1229c2972e5",
+    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-007",
+    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-007.json",
     "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
   },
   "active_experiment": {
@@ -25,35 +25,14 @@
     "max_delivery_hours": 4,
     "economic_priority": true
   },
-  "workana_state": {
-    "authenticated_dashboard": "VERIFIED_READ_ONLY",
-    "profile_approval": "NOT_VERIFIED",
-    "profile_rejection": "NOT_VERIFIED",
-    "profile_completion_previous_verified": "APPROX_70_PERCENT",
-    "profile_100_percent_requirement": "OFFICIAL_WORKANA_REQUIREMENT_VERIFIED_2026-10-13",
-    "profile_entry_artifact": "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
-    "profile_entry_status": "PREPARED_NOT_PUBLISHED",
-    "proposal_status": "AUTHORIZED_NOT_SUBMITTED_INTERNAL_READY",
-    "primary_opportunity": "WORKANA-HUESCAVENTURA-001",
-    "proposal_authorized_price_eur": 300,
-    "commercial_gate": "BLOCKED_PROFILE_COMPLETION_THEN_APPROVAL"
-  },
   "execution_capabilities": {
-    "local_browser": "VERIFIED_WORKANA_AUTHENTICATED_READ_ONLY_PERSISTENT_SESSION",
-    "gh_api_writeback": "VERIFIED_BOUNDED_SANITIZED",
-    "integrated_local_bridge": "VERIFIED_AUTHENTICATED_READ_ONLY_WITH_AUTOMATIC_RESULT_RETURN",
-    "windows_task_scheduler": "LOCAL_WORKER_TASK_INSTALLED_DISABLED",
     "local_worker_v0_1": "SAFETY_LADDER_THROUGH_FAIL_CLOSED_CI_VERIFIED",
-    "local_worker_remote_stop": "VERIFIED",
-    "local_worker_remote_run_cannot_rearm": "VERIFIED_LOCAL",
-    "local_worker_explicit_rearm": "VERIFIED_LOCAL",
-    "local_worker_fail_closed": "VERIFIED_LOCAL_AND_CI",
-    "local_worker_reboot_persistence": "VERIFIED_DISABLED_NO_AUTO_RUN",
-    "local_worker_watchdog_retry": "PREPARATION_PENDING",
+    "watchdog_retry_logic": "VERIFIED_CI",
+    "watchdog_ci_run_id": 38443106060,
+    "windows_watchdog_runtime": "NOT_YET_VERIFIED",
+    "windows_task_scheduler": "LOCAL_WORKER_TASK_INSTALLED_DISABLED",
     "local_worker_external_effects": "FORBIDDEN_V0_1",
-    "recurrence_polling_persistent_service": "NOT_AUTHORIZED_NOT_VERIFIED",
-    "authenticated_workana_write_actions": "NOT_AUTHORIZED_NOT_VERIFIED",
-    "work_codex_role": "SCARCE_FALLBACK_NOT_DEFAULT"
+    "recurrence_polling_persistent_service": "NOT_AUTHORIZED_NOT_VERIFIED"
   },
   "economics": {
     "capital_spent_eur": 0,
@@ -61,47 +40,42 @@
     "settled_revenue_eur": 0,
     "profit_eur": 0,
     "reconciled_net_profit_eur": 0,
-    "estimated_offer_gross_eur": 300,
-    "estimated_after_platform_eur": 240,
-    "estimated_labor_eur": 60,
-    "estimated_contribution_before_overhead_tax_eur": 180,
     "local_worker_software_api_cost_eur": 0,
-    "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED",
-    "classification": "ESTIMATE_NOT_REALIZED"
+    "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
   "current_blockers": [
-    "Watchdog/retry behavior is not yet verified",
+    "Windows watchdog runtime integration is not yet verified",
     "Persistent/recurrent runtime is not authorized or verified",
-    "Long-duration stability trial has not been authorized or executed",
+    "Long-duration stability trial is not authorized or executed",
     "Workana profile has not yet been verified at 100% completion",
     "Workana profile approval is not verified",
     "No buyer response, paid pilot, settled payment or realized profit exists"
   ],
   "session_handoff": {
-    "last_completed_verified_action": "LOCALWORKER-006 records the verified safety ladder through fail-closed CI. GitHub Actions run 38442072987 completed SUCCESS; remote sanitized status is IDLE/NO_TASK; deployment_authorized and external_effects_authorized remain false.",
-    "last_user_facing_handoff": "No human action required while Nexia prepares the bounded watchdog/retry harness.",
-    "human_action_required_now": false,
-    "pending_human_action": null,
-    "surface": "ChatGPT + GitHub",
-    "device": "none",
-    "why_kael": null,
-    "material_to_use": "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
-    "cost_exposure": "EUR0 software/API; Scheduled Task remains Disabled; external effects forbidden; electricity cost UNKNOWN_NOT_INSTRUMENTED.",
-    "success_check": "CI proves strict capped retry on transient failure and fail-closed after cap; no Scheduled Task activation and no external effects.",
-    "return_to_nexia": "No action required until a local runtime watchdog test is prepared and explicitly requested.",
+    "last_completed_verified_action": "LOCALWORKER-007: bounded watchdog retry semantics verified in dedicated GitHub Actions run 38443106060 SUCCESS. Transient recovery and persistent retry-cap behavior passed. Scheduled recurrence remains unauthorized.",
+    "last_user_facing_handoff": "Run LOCALWORKER-WATCHDOG-WINDOWS-001 only; do not enable the Scheduled Task.",
+    "human_action_required_now": true,
+    "pending_human_action": "Install the verified watchdog script locally and run isolated transient/persistent simulations plus one real no-task watchdog cycle.",
+    "surface": "Windows PowerShell on Kael's PC",
+    "device": "computer",
+    "why_kael": "Windows runtime compatibility must be proven on the actual local installation; Nexia cannot independently execute commands on the PC from this chat.",
+    "material_to_use": "Exact PowerShell block supplied in chat for LOCALWORKER-WATCHDOG-WINDOWS-001.",
+    "cost_exposure": "EUR0 software/API; task remains Disabled; no external effects; electricity cost UNKNOWN_NOT_INSTRUMENTED.",
+    "success_check": "Transient simulation recovers on attempt 2; persistent simulation stops at attempt 2; real watchdog reports PASS/attempts=1 or bounded recovery, with no READY/PENDING queue task; Scheduled Task remains Disabled.",
+    "return_to_nexia": "Paste the final WATCHDOG_* lines, REAL WATCHDOG STATUS and SCHEDULED TASK STATE.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
       "NEXIA_EVENT_INDEX_V3.json",
-      "events/EVT-2026-10-13-LOCALWORKER-006.json",
+      "events/EVT-2026-10-13-LOCALWORKER-007.json",
       "NEXIA_LOCAL_WORKER_CONTROL.json",
       "NEXIA_LOCAL_WORKER_QUEUE.json",
       "NEXIA_LOCAL_WORKER_STATUS.json"
     ],
-    "resume_from": "Prepare and CI-verify LOCALWORKER-WATCHDOG-RETRY-001. Do not enable unattended recurrence. After watchdog passes, design a separately authorized limited GREEN stability trial.",
-    "truth_limit": "Safety through fail-closed CI and disabled reboot persistence are verified; watchdog/retry, recurrence and 24x7 durability are not."
+    "resume_from": "Verify LOCALWORKER-WATCHDOG-WINDOWS-001. If PASS, record evidence and stop at the separate Human Gate for any limited unattended stability trial; /next alone cannot authorize recurrence.",
+    "truth_limit": "Watchdog logic is CI-verified; Windows integration, recurrence and 24x7 durability are not."
   },
-  "next_action": "LOCALWORKER-WATCHDOG-RETRY-001: prepare bounded retry/watchdog harness, strict attempt cap, no recurrence activation, no external effects."
+  "next_action": "LOCALWORKER-WATCHDOG-WINDOWS-001: Kael runs bounded Windows watchdog runtime test with Scheduled Task Disabled."
 }
