@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBRIDGE-006",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "LOCAL_PC_GH_API_SANITIZED_WRITEBACK_VERIFIED",
+  "state_version": 70,
+  "evidence_source": "DIRECT_GITHUB_REMOTE_VERIFICATION",
+  "observed": {
+    "challenge_path": "NEXIA_LOCAL_BRIDGE_WRITEBACK_CHALLENGE.json",
+    "challenge_id": "LOCAL-BRIDGE-WRITEBACK-002",
+    "nonce": "NEXIA-WB-002-20261013-A7F2",
+    "status": "LOCAL_PC_WRITEBACK_PASS",
+    "source": "NEXIA_LOCAL_PC",
+    "transport": "GH_API",
+    "sanitized": true,
+    "contains_secrets": false,
+    "cash_spend_eur": 0,
+    "remote_commit_sha": "5b326de1e7da1ce698a400a388bf24fd452072df"
+  },
+  "interpretation": {
+    "automatic_result_return_transport": "VERIFIED_FOR_BOUNDED_SANITIZED_GITHUB_API_WRITEBACK",
+    "manual_copyback_to_chat": "NOT_REQUIRED_FOR_THIS_BENCHMARK",
+    "git_for_windows_required": false,
+    "github_cli_required": true,
+    "unattended_local_start": "NOT_YET_VERIFIED",
+    "integrated_browser_plus_writeback": "NOT_YET_VERIFIED_AT_THIS_EVENT"
+  },
+  "next_gate": "Verify one integrated bounded run: canonical read-only browser task -> authenticated local browser -> sanitized result -> gh API writeback -> remote re-read. Use a pre-created remote challenge/result file so the writeback follows the already verified update path.",
+  "authority_effect": "NONE. This verifies internal sanitized result transport only and does not authorize external business side effects or scheduled service activation.",
+  "truth_limit": "This proves bounded sanitized result return from the local PC to Nexia-care through GitHub CLI API. It does not prove unattended startup or integrated browser execution plus writeback in one run."
+}
