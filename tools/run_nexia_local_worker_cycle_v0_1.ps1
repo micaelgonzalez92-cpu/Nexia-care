@@ -7,15 +7,37 @@ $ErrorActionPreference='Stop'
 $ProgressPreference='SilentlyContinue'
 
 function Get-GhJsonFile([string]$Path) {
-  $raw = gh api "repos/$Repo/contents/$Path`?ref=$Branch" | ConvertFrom-Json
-  $bytes = [Convert]::FromBase64String(([string]$raw.content -replace '\s',''))
+  $apiOutput = & gh api "repos/$Repo/contents/$Path`?ref=$Branch" 2>&1
+  $ghExit = $LASTEXITCODE
+  if($ghExit -ne 0){ throw "GITHUB_FETCH_FAILED: $Path" }
+
+  try {
+    $raw = (($apiOutput | Out-String).Trim()) | ConvertFrom-Json -ErrorAction Stop
+  } catch {
+    throw "GITHUB_RESPONSE_INVALID_JSON: $Path"
+  }
+  if(-not $raw.sha -or -not $raw.content){ throw "GITHUB_RESPONSE_INCOMPLETE: $Path" }
+
+  try {
+    $bytes = [Convert]::FromBase64String(([string]$raw.content -replace '\s',''))
+  } catch {
+    throw "GITHUB_CONTENT_BASE64_INVALID: $Path"
+  }
   $text = [Text.Encoding]::UTF8.GetString($bytes)
-  return [pscustomobject]@{ Sha=[string]$raw.sha; Object=($text | ConvertFrom-Json); Text=$text }
+
+  try {
+    $obj = $text | ConvertFrom-Json -ErrorAction Stop
+  } catch {
+    throw "GITHUB_CONTENT_INVALID_JSON: $Path"
+  }
+  return [pscustomobject]@{ Sha=[string]$raw.sha; Object=$obj; Text=$text }
 }
 function Put-GhJsonFile([string]$Path,$Object,[string]$Sha,[string]$Message) {
   $json = $Object | ConvertTo-Json -Depth 30
   $b64 = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($json + "`n"))
-  gh api --method PUT "repos/$Repo/contents/$Path" -f message="$Message" -f content="$b64" -f sha="$Sha" -f branch="$Branch" | Out-Null
+  $null = & gh api --method PUT "repos/$Repo/contents/$Path" -f message="$Message" -f content="$b64" -f sha="$Sha" -f branch="$Branch" 2>&1
+  $ghExit = $LASTEXITCODE
+  if($ghExit -ne 0){ throw "GITHUB_WRITE_FAILED: $Path" }
 }
 function Write-Utf8NoBom([string]$Path,[string]$Text) {
   [IO.File]::WriteAllText($Path,$Text,[Text.UTF8Encoding]::new($false))
