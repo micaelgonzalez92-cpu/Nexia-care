@@ -1,6 +1,6 @@
 # n8n Creator Submission 02 — INTERNAL REPLACEMENT CANDIDATE
 
-Status: `PREPARED / NOT SUBMITTED / EXTERNAL PUBLICATION NOT AUTHORIZED`
+Status: `PREPARED / NOT READY FOR SUBMISSION / EXTERNAL PUBLICATION NOT AUTHORIZED`
 Date: 2026-10-12
 Vein: `VETA-AUTO-PRODUCT-001`
 
@@ -9,6 +9,8 @@ Vein: `VETA-AUTO-PRODUCT-001`
 Template #1 (`Normalize inbound lead intake for human review via webhook`, Creator workflow 20799) was rejected by n8n as **too basic to meet publishing criteria**.
 
 This replacement is intentionally not a cosmetic rewrite. It uses a materially deeper capability already present and runtime-verified inside the Lead Intake Reliability Kit: persistent duplicate protection with native n8n Data Tables.
+
+However, technical depth alone is no longer sufficient for submission readiness. This candidate must pass `NEXIA_PROFESSIONAL_QUALITY_GATE.md` before any future submission is proposed.
 
 ## Candidate title
 
@@ -68,22 +70,39 @@ A native Data Table named `lead_intake_reliability_keys` with `eventKey`, `ident
 
 Before any future submission, package the setup so a new user can reproduce it without relying on undocumented internal state.
 
-## Pre-submission gate
+## Professional pre-submission gate
 
-Do **not** submit this candidate yet.
+Do **not** submit this candidate merely because it imports and runs.
 
-A future submission is allowed only after all of the following are true:
+Before it can be considered ready, all of the following must be evidenced:
 
 - the workflow remains importable and inactive by default;
-- setup is self-contained or clearly reproducible;
+- setup is self-contained or clearly reproducible without hidden internal state;
 - valid first event is accepted;
 - repeated event ID is blocked;
 - repeated normalized identity is blocked;
-- persistence across separate executions is demonstrated;
+- persistence across separate executions and restart is demonstrated;
+- invalid input and at least one realistic failure path are handled explicitly;
 - no credentials or buyer-specific data are embedded;
 - no autonomous external send occurs;
+- configuration points are obvious to a new user;
+- the workflow is understandable without substantial undocumented scaffolding;
+- a concise “why import this instead of building it in a few minutes?” answer is defensible with concrete time/risk reduction;
 - the current Creator Portal requirements are rechecked;
+- an internal rejection memo identifies the strongest reasons n8n could reject it and each reason is rebutted by evidence;
 - Kael separately authorizes external submission/publication.
+
+## Adversarial reviewer test
+
+Before any external reviewer sees this candidate, Nexia must answer:
+
+1. What is the most obvious reason an experienced n8n user would call this basic?
+2. What reusable reliability behavior is difficult enough to justify saving/importing the template?
+3. What happens on malformed input, duplicate retries, partial setup, missing table or runtime interruption?
+4. Can a new user reproduce the setup in one pass without reading internal Nexia documentation?
+5. Does the template teach or deliver something materially beyond a beginner tutorial?
+
+If any answer is weak or unsupported by evidence, status remains `NOT READY FOR SUBMISSION`.
 
 ## Falsification rule
 
