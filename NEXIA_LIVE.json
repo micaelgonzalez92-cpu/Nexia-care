@@ -5,7 +5,7 @@
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "boot_version": 53,
-  "boot_blob_sha": "PENDING_BOOT_V53_WRITE",
+  "boot_blob_sha": "20e794bbc37c89be146d0e8992f066eb05d627e1",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
   "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
   "event_storage": {
