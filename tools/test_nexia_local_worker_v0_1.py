@@ -27,5 +27,16 @@ class WorkerTests(unittest.TestCase):
         self.assertEqual(self.worker.once()['task_id'],'B')
     def test_no_task_idle(self):
         w.write(self.worker.queue_file, {'tasks':[]}); out=self.worker.once(); self.assertEqual((out['state'],out['result']),('IDLE','NO_TASK'))
+    def test_manager_does_not_reassign_validated_action_parameter(self):
+        text=Path('tools/manage_nexia_local_worker_v0_1.ps1').read_text(encoding='utf-8')
+        assignments=[line.strip().lower() for line in text.splitlines() if line.strip().lower().startswith('$action=')]
+        self.assertEqual(assignments, [])
+    def test_manager_separates_pinned_code_from_dynamic_control_branch(self):
+        text=Path('tools/manage_nexia_local_worker_v0_1.ps1').read_text(encoding='utf-8')
+        self.assertIn("[string]$ControlBranch='main'", text)
+        self.assertIn('function RawCode', text)
+        self.assertIn('function RawControl', text)
+        self.assertIn('-Branch `"$ControlBranch`"', text)
+        self.assertIn("RawControl 'NEXIA_LOCAL_WORKER_CONTROL.json'", text)
 
 if __name__=='__main__': unittest.main()
