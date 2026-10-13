@@ -1,19 +1,19 @@
 {
   "schema_version": 3,
   "updated_at": "2026-10-13",
-  "status": "ACTIVE / EXP-AUTO-001 + LOCAL WORKER V0.1 INSTALLED DISABLED / HEALTH CHECK READY / STATE V71 BASE CURRENT",
+  "status": "ACTIVE / EXP-AUTO-001 + LOCAL WORKER V0.1 ONE-SHOT VERIFIED / REMOTE STOP TEST ARMED / STATE V71 BASE CURRENT",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
-  "boot_version": 53,
-  "boot_blob_sha": "20e794bbc37c89be146d0e8992f066eb05d627e1",
+  "boot_version": 54,
+  "boot_blob_sha": "d4b6ebf215d4f11c41fd5d0ea2fd587a3742a70e",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
   "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "9e8fca41a893f4848ec37fe70796fc1733a293f0",
-    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-004",
-    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-004.json",
+    "active_index_blob_sha": "3a00f4f6325e19da5a8c53f5f0d777d3f6d2e217",
+    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-005",
+    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-005.json",
     "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
   },
   "active_experiment": {
@@ -29,16 +29,13 @@
     "authenticated_dashboard": "VERIFIED_READ_ONLY",
     "profile_approval": "NOT_VERIFIED",
     "profile_rejection": "NOT_VERIFIED",
-    "latest_gmail_check": "2026-10-13_NO_NEW_EXPLICIT_APPROVAL_EMAIL",
     "profile_completion_previous_verified": "APPROX_70_PERCENT",
     "profile_100_percent_requirement": "OFFICIAL_WORKANA_REQUIREMENT_VERIFIED_2026-10-13",
     "profile_entry_artifact": "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
     "profile_entry_status": "PREPARED_NOT_PUBLISHED",
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED_INTERNAL_READY",
-    "proposal_artifact": "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md",
     "primary_opportunity": "WORKANA-HUESCAVENTURA-001",
     "proposal_authorized_price_eur": 300,
-    "proposal_execution_condition": "Approval verified + Huescaventura freshly rechecked open + EUR0 submission cost",
     "commercial_gate": "BLOCKED_PROFILE_COMPLETION_THEN_APPROVAL"
   },
   "execution_capabilities": {
@@ -46,9 +43,9 @@
     "gh_api_writeback": "VERIFIED_BOUNDED_SANITIZED",
     "integrated_local_bridge": "VERIFIED_AUTHENTICATED_READ_ONLY_WITH_AUTOMATIC_RESULT_RETURN",
     "windows_task_scheduler": "LOCAL_WORKER_TASK_INSTALLED_DISABLED",
-    "local_worker_v0_1": "INSTALLED_DISABLED_HEALTH_CHECK_READY",
+    "local_worker_v0_1": "ONE_SHOT_HEALTH_CHECK_VERIFIED_END_TO_END",
     "local_worker_manager_control_branch_fix": "CI_VERIFIED_11_OF_11_PASS",
-    "local_worker_remote_control": "RUN_ONE_SHOT_ONLY_DEPLOYMENT_NOT_AUTHORIZED",
+    "local_worker_remote_control": "STOP_REMOTE_KILL_SWITCH_TEST_ARMED_NOT_YET_RUNTIME_VERIFIED",
     "local_worker_external_effects": "FORBIDDEN_V0_1",
     "recurrence_polling_persistent_service": "NOT_AUTHORIZED_NOT_VERIFIED",
     "authenticated_workana_write_actions": "NOT_AUTHORIZED_NOT_VERIFIED",
@@ -69,39 +66,38 @@
     "classification": "ESTIMATE_NOT_REALIZED"
   },
   "current_blockers": [
-    "One-shot Local Worker HEALTH_CHECK has not yet executed end-to-end",
+    "Remote STOP latch is armed but not yet runtime-verified on Kael's PC",
     "Persistent/recurrent runtime is not authorized or verified",
+    "Offline fail-closed and restart recovery are not yet runtime-verified",
     "Workana profile has not yet been verified at 100% completion",
     "Workana profile approval is not verified",
-    "No buyer response, paid pilot, settled payment or realized profit exists",
-    "Authenticated external Workana write actions remain separately gated"
+    "No buyer response, paid pilot, settled payment or realized profit exists"
   ],
   "session_handoff": {
-    "last_completed_verified_action": "Kael installed NEXIA Local Worker v0.1 successfully in Disabled state. Nexia then separated pinned code ref from dynamic control branch, added regression coverage, and verified CI run 38429909544 job 115409056033 SUCCESS with 11/11 worker tests and canonical integrity PASS. A single GREEN_INTERNAL HEALTH_CHECK is queued; deployment_authorized and external_effects_authorized remain false.",
-    "last_user_facing_handoff": "Run one combined local command that overwrites the task Disabled with the control-branch-separated manager and invokes exactly one manual HEALTH_CHECK against main. Do not enable the scheduled task.",
+    "last_completed_verified_action": "Kael executed LOCALWORKER-HC-001. GitHub queue records DONE/PASS at 2026-10-13T16:30:49Z and sanitized remote worker status reports IDLE/PASS at 2026-10-13T18:30:52+02:00. Nexia restored remote control to STOP with reason REMOTE_KILL_SWITCH_TEST_001. Scheduled recurrence remains unauthorized.",
+    "last_user_facing_handoff": "Run exactly one manual worker cycle while STOP is armed. Do not enable the scheduled task.",
     "human_action_required_now": true,
-    "pending_human_action": "Execute LOCALWORKER-HEALTHCHECK-001 one-shot command on Windows.",
+    "pending_human_action": "Execute LOCALWORKER-REMOTE-STOP-001 one-shot cycle on Windows.",
     "surface": "Windows PowerShell on Kael's PC",
     "device": "computer",
-    "why_kael": "The one-shot runtime must execute on Kael's local Windows machine; recurring execution remains unapproved.",
+    "why_kael": "Runtime proof of the remote STOP latch must occur on the local Windows worker; the scheduled task remains Disabled.",
     "material_to_use": "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
     "cost_exposure": "EUR0 software/API; no recurring runtime; external effects forbidden; electricity cost UNKNOWN_NOT_INSTRUMENTED.",
-    "success_check": "Scheduled task remains Disabled; GitHub queue task LOCALWORKER-HC-001 becomes DONE with PASS; remote status reports sanitized one-shot result.",
-    "return_to_nexia": "After running the command, reply only HECHO or paste any error. Nexia will read GitHub to verify the result.",
+    "success_check": "NEXIA_LOCAL_WORKER_STATUS.json becomes STOPPED / NOT_EXECUTED / STOP_LATCHED and queue LOCALWORKER-HC-001 remains DONE/PASS.",
+    "return_to_nexia": "After running the one-shot STOP test, reply HECHO or paste any error. Nexia will verify GitHub directly.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
       "NEXIA_EVENT_INDEX_V3.json",
-      "events/EVT-2026-10-13-LOCALWORKER-003.json",
-      "events/EVT-2026-10-13-LOCALWORKER-004.json",
+      "events/EVT-2026-10-13-LOCALWORKER-005.json",
       "NEXIA_LOCAL_WORKER_CONTROL.json",
       "NEXIA_LOCAL_WORKER_QUEUE.json",
       "NEXIA_LOCAL_WORKER_STATUS.json"
     ],
-    "resume_from": "Verify one-shot HEALTH_CHECK end-to-end. Then restore remote STOP and test STOP latch. Only after STOP, offline fail-closed, restart recovery and durability tests may recurrence be considered.",
-    "truth_limit": "Installed Disabled plus CI verification is not 24x7 operation."
+    "resume_from": "Verify remote STOP runtime latch. Then switch remote control to RUN without local re-arm and verify the worker remains STOPPED. Only after that perform an explicit local re-arm test, then offline and restart recovery tests before recurrence.",
+    "truth_limit": "One-shot runtime and GitHub writeback are verified; 24x7 operation is not."
   },
-  "next_action": "LOCALWORKER-HEALTHCHECK-001: overwrite the task Disabled with control branch main and execute one manual GREEN_INTERNAL HEALTH_CHECK."
+  "next_action": "LOCALWORKER-REMOTE-STOP-001: run one manual worker cycle against main while STOP is armed; verify STOPPED/NOT_EXECUTED and unchanged queue."
 }
