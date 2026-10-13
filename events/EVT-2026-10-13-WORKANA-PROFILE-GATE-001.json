@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001",
+  "timestamp": "2026-10-13T17:23:00+02:00",
+  "timestamp_precision": "minute",
+  "type": "WORKANA_PROFILE_100_PERCENT_REQUIREMENT_VERIFIED_HUMAN_GATE",
+  "state_version": 71,
+  "evidence_source": "OFFICIAL_WORKANA_HELP_PLUS_EXISTING_INTERNAL_PROFILE_ENTRY",
+  "observed": {
+    "official_profile_100_percent_requirement_verified": true,
+    "standard_moderation_days": "15-30",
+    "priority_moderation_optional_paid": true,
+    "priority_moderation_guarantees_approval": false,
+    "personal_projects_allowed_as_capability_examples_when_platform_allows": true,
+    "prepared_profile_entry": "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
+    "policy_evidence_artifact": "commercial/WORKANA_PROFILE_MODERATION_EVIDENCE_2026-10-13.md",
+    "prepared_entry_status": "PREPARED_NOT_PUBLISHED",
+    "external_profile_change_performed": false,
+    "cash_spend_eur": 0,
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "interpretation": {
+    "previous_wait_only_route": "SUPERSEDED_AS_HIGHEST_VALUE_NEXT_ACTION",
+    "current_blocker": "WORKANA_PROFILE_NOT_YET_VERIFIED_100_PERCENT_COMPLETE",
+    "next_best_action": "KAEL_COMPLETES_REMAINING_PROFILE_FIELD_TRUTHFULLY_USING_PREPARED_PERSONAL_PROJECT_ENTRY",
+    "commercial_gate_after_completion": "VERIFY_100_PERCENT_AND_MODERATION_STATE_THEN_WAIT_FOR_OR_DETECT_EXPLICIT_APPROVAL"
+  },
+  "human_gate": {
+    "required": true,
+    "reason": "External Workana profile/account modification",
+    "cost_exposure": "EUR0",
+    "paid_priority_moderation": "NOT_AUTHORIZED",
+    "external_contact": "NONE",
+    "success_check": "Profile reaches 100% and displays an explicit moderation state without false paid-client claims or payment"
+  },
+  "authority_effect": "NONE. Records evidence and a required Human Gate; does not authorize or perform the Workana profile change.",
+  "truth_limit": "Profile completion is not approval, proposal submission, buyer interest, sale, payment or profit."
+}
