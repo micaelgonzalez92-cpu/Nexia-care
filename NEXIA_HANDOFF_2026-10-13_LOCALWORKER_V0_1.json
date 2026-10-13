@@ -4,21 +4,23 @@
   "project": "NEXIA CORE",
   "canonical_state_version": 71,
   "focus": "CAPABILITY_EVOLUTION_LOCAL_WORKER_24X7",
-  "status": "WORKER_V0_1_INSTALLED_DISABLED_HEALTH_CHECK_READY",
+  "status": "WORKER_V0_1_ONE_SHOT_RUNTIME_VERIFIED_REMOTE_STOP_TEST_PENDING",
   "verified_evidence": {
     "initial_event": "events/EVT-2026-10-13-LOCALWORKER-001.json",
     "install_fix_event": "events/EVT-2026-10-13-LOCALWORKER-002.json",
     "disabled_install_event": "events/EVT-2026-10-13-LOCALWORKER-003.json",
     "control_branch_event": "events/EVT-2026-10-13-LOCALWORKER-004.json",
+    "one_shot_pass_event": "events/EVT-2026-10-13-LOCALWORKER-005.json",
     "windows_installation": "PASS_DISABLED",
-    "installed_revision": "073cd0b5d75458609ef54e8b020d9f97ccdb6b74",
     "manager_control_branch_revision": "841848280e23206a5609b69122718b13e3d5d79f",
     "ci_run_id": 38429909544,
     "ci_job_id": 115409056033,
     "ci_conclusion": "SUCCESS",
     "worker_regression_tests": "11_OF_11_PASS",
-    "powershell_syntax": "PASS",
-    "canonical_integrity": "PASS"
+    "one_shot_health_check": "VERIFIED_END_TO_END_PASS",
+    "github_read_writeback": "VERIFIED_SANITIZED",
+    "last_task_id": "LOCALWORKER-HC-001",
+    "last_result": "PASS"
   },
   "local_worker": {
     "core": "tools/nexia_local_worker_v0_1.py",
@@ -27,37 +29,27 @@
     "control": "NEXIA_LOCAL_WORKER_CONTROL.json",
     "queue": "NEXIA_LOCAL_WORKER_QUEUE.json",
     "status": "NEXIA_LOCAL_WORKER_STATUS.json",
-    "repo_implementation": "VERIFIED",
     "windows_installation": "INSTALLED_DISABLED",
-    "scheduled_task_created": true,
     "scheduled_task_enabled": false,
-    "recurring_runtime": "NOT_EXECUTED_NOT_VERIFIED",
+    "one_shot_runtime": "VERIFIED_PASS",
+    "recurring_runtime": "NOT_AUTHORIZED_NOT_VERIFIED",
     "external_effects": "FORBIDDEN_V0_1",
-    "control_desired_state": "RUN_FOR_ONE_SHOT_HEALTH_CHECK_ONLY",
+    "control_desired_state": "STOP",
+    "control_reason": "REMOTE_KILL_SWITCH_TEST_001",
     "deployment_authorized": false,
-    "external_effects_authorized": false,
-    "known_upgrade_requirement": "Overwrite the disabled scheduled task with the code-ref/control-branch-separated manager before any future recurrence."
-  },
-  "prepared_health_check": {
-    "task_id": "LOCALWORKER-HC-001",
-    "action": "HEALTH_CHECK",
-    "authority": "GREEN_INTERNAL",
-    "external_effects": false,
-    "queue_status": "READY",
-    "execution_mode": "ONE_SHOT_MANUAL_ONLY",
-    "control_branch": "main"
+    "external_effects_authorized": false
   },
   "safety": {
     "green_only_auto_execution": true,
     "yellow_red_unknown_to_human_gate": true,
-    "remote_stop_latched": true,
-    "remote_run_cannot_rearm": true,
+    "remote_stop_latched_design": true,
+    "remote_stop_runtime": "ARMED_NOT_YET_VERIFIED",
+    "remote_run_cannot_rearm_design": true,
     "local_explicit_rearm_required": true,
-    "github_failure": "FAIL_CLOSED",
-    "queue_conflict": "FAIL_CLOSED",
+    "github_failure": "FAIL_CLOSED_DESIGN_NOT_YET_RUNTIME_VERIFIED",
+    "queue_conflict": "FAIL_CLOSED_DESIGN_NOT_YET_RUNTIME_VERIFIED",
     "deployment_authorized": false,
-    "external_effects_authorized": false,
-    "secrets_in_public_repo": "FORBIDDEN"
+    "external_effects_authorized": false
   },
   "economic_priority_preserved": {
     "active_experiment": "EXP-AUTO-001",
@@ -67,15 +59,15 @@
     "realized_profit_eur": 0
   },
   "human_gate": {
-    "gate_id": "LOCALWORKER-HEALTHCHECK-001",
-    "status": "REQUIRES_KAEL_LOCAL_ACTION",
-    "scope": "Overwrite the scheduled task while keeping it Disabled using the CI-verified manager, then invoke exactly one worker cycle manually against control branch main.",
+    "gate_id": "LOCALWORKER-REMOTE-STOP-001",
+    "status": "REQUIRES_KAEL_LOCAL_ONE_SHOT",
+    "scope": "Run exactly one manual worker cycle while GitHub control is STOP. Scheduled task remains Disabled. No queued work should execute.",
     "persistent_execution_authorized": false,
     "external_actions_authorized": false,
     "financial_cost_eur": 0,
     "reversible": true
   },
-  "success_check": "Scheduled task remains Disabled; LOCALWORKER-HC-001 becomes DONE/PASS in GitHub and NEXIA_LOCAL_WORKER_STATUS.json reports the sanitized one-shot result. No recurring task runs and no external side effect occurs.",
-  "next_after_success": "Immediately restore remote control to STOP and test the latched STOP path before any recurrence authorization.",
-  "truth_limit": "Disabled installation plus prepared health check is not 24x7 operation."
+  "success_check": "NEXIA_LOCAL_WORKER_STATUS.json reports execution_status STOPPED, last_result NOT_EXECUTED, reason STOP_LATCHED; queue remains unchanged; scheduled task remains Disabled.",
+  "next_after_success": "Set remote control back to RUN without local re-arm and execute another one-shot cycle to verify the STOP latch persists. Only then perform an explicit local re-arm test.",
+  "truth_limit": "One-shot execution is verified. Remote STOP latch, restart recovery, offline fail-closed behavior, unattended recurrence and 24x7 durability are not yet verified."
 }
