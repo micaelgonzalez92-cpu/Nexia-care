@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALWORKER-002",
+  "timestamp": "2026-10-13T18:11:00+02:00",
+  "timestamp_precision": "minute",
+  "type": "LOCAL_WORKER_INSTALL_DISABLED_RUNTIME_FAILURE_CORRECTED_CI_VERIFIED",
+  "state_version": 71,
+  "evidence_source": "KAEL_WINDOWS_POWERSHELL_OUTPUT_PLUS_DIRECT_GITHUB_PATCH_PLUS_GITHUB_ACTIONS_CI",
+  "observed": {
+    "attempted_gate": "LOCALWORKER-INSTALL-DISABLED-001",
+    "attempted_revision": "0a0770a8803a73e6037f624f9c0d83ce8fd00a30",
+    "result": "FAIL_BEFORE_SCHEDULED_TASK_REGISTRATION",
+    "error": "ValidateSetFailure assigning MSFT_TaskExecAction to PowerShell parameter variable Action",
+    "root_cause": "PowerShell variables are case-insensitive; local assignment $action collided with validated parameter $Action",
+    "scheduled_task_created": false,
+    "worker_enabled": false,
+    "worker_cycle_executed": false,
+    "external_effects": false,
+    "cash_spend_eur": 0
+  },
+  "correction": {
+    "script_commit": "ecd1c40bda5e685639cb3263d2f142e8946392e8",
+    "regression_guard_commit": "073cd0b5d75458609ef54e8b020d9f97ccdb6b74",
+    "change": "Renamed scheduled-task action object from $action to $taskAction and added AST regression guard forbidding assignment to validated Action parameter.",
+    "ci_run_id": 38428153380,
+    "ci_job_id": 115402956139,
+    "ci_conclusion": "SUCCESS",
+    "worker_safety_tests": "PASS",
+    "powershell_transport_and_collision_guard": "PASS",
+    "canonical_integrity": "PASS"
+  },
+  "interpretation": {
+    "installation": "NOT_COMPLETED_RETRY_REQUIRED",
+    "safe_retry_revision": "073cd0b5d75458609ef54e8b020d9f97ccdb6b74",
+    "persistent_24x7_runtime": "NOT_VERIFIED",
+    "next_gate": "RETRY_INSTALL_DISABLED_ONLY"
+  },
+  "truth_limit": "The corrected script is CI-verified but the Windows installation still requires a fresh local retry and verification."
+}
