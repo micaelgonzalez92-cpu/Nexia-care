@@ -6,6 +6,7 @@ $root=Join-Path ([IO.Path]::GetTempPath()) ('nexia-stability-test-'+[guid]::NewG
 $bin=Join-Path $root 'bin'
 $fakeBin=Join-Path $root 'fakebin'
 New-Item -ItemType Directory -Force -Path $bin,$fakeBin | Out-Null
+$oldPath=$env:PATH
 
 try {
   $watchdog=Join-Path $bin 'run_nexia_local_worker_watchdog_v0_1.ps1'
@@ -19,34 +20,34 @@ Set-Content -NoNewline -Encoding ascii $countPath $n
 exit 0
 '@ | Set-Content -Encoding utf8 $watchdog
 
-  $controlRun='{"desired_state":"RUN","deployment_authorized":false,"external_effects_authorized":false}'
-  $queueEmpty='{"tasks":[]}'
-  $queueReady='{"tasks":[{"task_id":"X","action":"HEALTH_CHECK","authority":"GREEN_INTERNAL","external_effects":false,"status":"READY"}]}'
+  $controlRun='{"desired_state":"RUN","deployment_authorized":false,"external_effects_authorized":false}'.Replace('\"','"')
+  $queueEmpty='{"tasks":[]}'.Replace('\"','"')
+  $queueReady='{"tasks":[{"task_id":"X","action":"HEALTH_CHECK","authority":"GREEN_INTERNAL","external_effects":false,"status":"READY"}]}'.Replace('\"','"')
   $controlB64=[Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($controlRun))
   $queueEmptyB64=[Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($queueEmpty))
   $queueReadyB64=[Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($queueReady))
 
   $fakeGh=Join-Path $fakeBin 'gh'
-  $script=@"
+  $script=@'
 #!/usr/bin/env bash
-if [[ \"\$NEXIA_FAKE_GH_MODE\" == \"fail\" ]]; then exit 1; fi
-if [[ \"\$*\" == *\"NEXIA_LOCAL_WORKER_CONTROL.json\"* ]]; then
-  printf '%s\\n' '{\"content\":\"$controlB64\"}'
+if [[ "$NEXIA_FAKE_GH_MODE" == "fail" ]]; then exit 1; fi
+if [[ "$*" == *"NEXIA_LOCAL_WORKER_CONTROL.json"* ]]; then
+  printf '%s\n' '{"content":"__CONTROL__"}'
   exit 0
 fi
-if [[ \"\$*\" == *\"NEXIA_LOCAL_WORKER_QUEUE.json\"* ]]; then
-  if [[ \"\$NEXIA_FAKE_GH_MODE\" == \"queue_ready\" ]]; then
-    printf '%s\\n' '{\"content\":\"$queueReadyB64\"}'
+if [[ "$*" == *"NEXIA_LOCAL_WORKER_QUEUE.json"* ]]; then
+  if [[ "$NEXIA_FAKE_GH_MODE" == "queue_ready" ]]; then
+    printf '%s\n' '{"content":"__QUEUE_READY__"}'
   else
-    printf '%s\\n' '{\"content\":\"$queueEmptyB64\"}'
+    printf '%s\n' '{"content":"__QUEUE_EMPTY__"}'
   fi
   exit 0
 fi
 exit 2
-"@
+'@
+  $script=$script.Replace('__CONTROL__',$controlB64).Replace('__QUEUE_EMPTY__',$queueEmptyB64).Replace('__QUEUE_READY__',$queueReadyB64)
   [IO.File]::WriteAllText($fakeGh,$script,[Text.UTF8Encoding]::new($false))
   & chmod +x $fakeGh
-  $oldPath=$env:PATH
   $env:PATH="$fakeBin$([IO.Path]::PathSeparator)$oldPath"
 
   $future=[DateTimeOffset]::Now.AddHours(1).ToString('o')
@@ -81,6 +82,7 @@ exit 2
   Write-Host 'PASS expired window stops before network or watchdog'
 
   Write-Host '4/4 stability safety checks passed'
+  exit 0
 } finally {
   $env:PATH=$oldPath
   Remove-Item Env:NEXIA_FAKE_GH_MODE -ErrorAction SilentlyContinue
