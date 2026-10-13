@@ -4,13 +4,14 @@
   "status": "ACTIVE / EXP-AUTO-001 PRE-VALIDATION / WORKANA PROFILE APPROVAL NOT VERIFIED / LOCAL READ-ONLY BRIDGE VERIFIED ONE-SHOT AUTOMATIC START",
   "state_version": 70,
   "state_status": "CANONICAL_VALID_POST_STATE_DELTA_UNABSORBED",
-  "state_reconciliation": "STATE_V70 remains canonical. Verified post-state events through WORKANA-READ-002 are represented by NEXIA_EVENT_INDEX_V3.json and current handoff; they are not yet absorbed into STATE.",
+  "state_reconciliation": "STATE_V70 remains canonical. Verified post-state events through CONTINUITY-001 are represented by NEXIA_EVENT_INDEX_V3.json and current handoff; they are not yet absorbed into STATE.",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "base_index": "NEXIA_EVENT_INDEX.json",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "latest_verified_event_id": "EVT-2026-10-13-WORKANA-READ-002",
-    "latest_verified_event_path": "events/EVT-2026-10-13-WORKANA-READ-002.json"
+    "latest_verified_event_id": "EVT-2026-10-13-CONTINUITY-001",
+    "latest_verified_event_path": "events/EVT-2026-10-13-CONTINUITY-001.json",
+    "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-READ-002"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
@@ -67,7 +68,7 @@
     "Canonical STATE v70 has not yet absorbed post-state events"
   ],
   "session_handoff": {
-    "last_completed_verified_action": "Reconciled current operating snapshot after verifying one-shot automatic local browser bridge and sanitized GitHub result return; Workana generic dashboard moderation probe returned UNKNOWN and cannot be treated as approval.",
+    "last_completed_verified_action": "BOOT, LIVE, current handoff and composite event-index delta were reconciled through CONTINUITY-001 after verification of the one-shot automatic local read-only bridge. Workana generic dashboard moderation remains UNKNOWN and cannot be treated as approval.",
     "last_user_facing_handoff": "EXP-AUTO-001 remains the economic priority. Do not submit the Workana proposal until approval is explicitly verified.",
     "human_action_required_now": false,
     "pending_human_action": null,
@@ -83,9 +84,10 @@
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V3.json",
       "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
+      "NEXIA_EVENT_INDEX_V3.json",
       "NEXIA_EXECUTION_CAPABILITIES.json",
+      "events/EVT-2026-10-13-CONTINUITY-001.json",
       "events/EVT-2026-10-13-LOCALBRIDGE-011.json",
       "events/EVT-2026-10-13-WORKANA-READ-002.json"
     ],
