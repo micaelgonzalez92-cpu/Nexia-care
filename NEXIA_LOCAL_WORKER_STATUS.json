@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-13",
+  "worker_version": "0.1.0",
+  "deployment_status": "NOT_DEPLOYED",
+  "execution_status": "STOPPED_FAIL_CLOSED",
+  "last_task_id": null,
+  "last_result": null,
+  "heartbeat": "NOT_INSTRUMENTED_UNTIL_DEPLOYMENT",
+  "cash_spend_eur": 0,
+  "truth_limit": "Repository implementation is not a running 24/7 worker."
+}
