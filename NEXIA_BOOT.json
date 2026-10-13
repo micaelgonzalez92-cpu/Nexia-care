@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "boot_version": 53,
+  "boot_version": 54,
   "generated_at": "2026-10-13",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -26,10 +26,10 @@
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "9e8fca41a893f4848ec37fe70796fc1733a293f0",
-    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-004",
-    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-004.json",
-    "latest_verified_event_blob_sha": "47be42878d3b322d862406c8d28896e7a5826cb0",
+    "active_index_blob_sha": "3a00f4f6325e19da5a8c53f5f0d777d3f6d2e217",
+    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-005",
+    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-005.json",
+    "latest_verified_event_blob_sha": "01280ba34e3210b2ad505f36501a730e88ff8fad",
     "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
   },
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001 + CAPABILITY EVOLUTION LOCAL WORKER",
@@ -43,9 +43,9 @@
     "browser": "VERIFIED_WORKANA_AUTHENTICATED_READ_ONLY_PERSISTENT_SESSION",
     "integrated_bridge": "VERIFIED_AUTOMATIC_SANITIZED_RESULT_RETURN",
     "scheduler": "LOCAL_WORKER_TASK_INSTALLED_DISABLED",
-    "local_worker_v0_1": "INSTALLED_DISABLED_HEALTH_CHECK_READY",
+    "local_worker_v0_1": "ONE_SHOT_HEALTH_CHECK_VERIFIED_END_TO_END",
     "local_worker_manager_control_branch_fix": "CI_VERIFIED_11_OF_11_PASS",
-    "local_worker_control": "RUN_ONE_SHOT_ONLY_DEPLOYMENT_NOT_AUTHORIZED",
+    "local_worker_control": "STOP_REMOTE_KILL_SWITCH_TEST_ARMED",
     "recurring_service": "NOT_AUTHORIZED_NOT_VERIFIED",
     "external_write_actions": "NOT_AUTHORIZED_NOT_VERIFIED"
   },
@@ -58,8 +58,8 @@
     "local_worker_software_api_cost_eur": 0,
     "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
-  "human_gate": "Execute exactly one manual GREEN_INTERNAL HEALTH_CHECK on the installed Disabled Local Worker. The manager may overwrite the task while keeping it Disabled. Recurring execution and external effects remain unauthorized.",
-  "sync_status": "STATE_V71_BASE_PLUS_VERIFIED_LOCALWORKER_004_DELTA",
+  "human_gate": "Run exactly one manual Local Worker cycle while remote control is STOP. The task remains Disabled, recurrence and external effects remain unauthorized.",
+  "sync_status": "STATE_V71_BASE_PLUS_VERIFIED_LOCALWORKER_005_DELTA",
   "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
-  "next_action": "LOCALWORKER-HEALTHCHECK-001: Kael runs the combined disabled-reinstall + one-shot HEALTH_CHECK command. Then Nexia verifies queue/status via GitHub and restores remote STOP. Do not claim 24x7 yet."
+  "next_action": "LOCALWORKER-REMOTE-STOP-001: Kael runs one manual cycle against main while STOP is armed. Nexia then verifies STOPPED/NOT_EXECUTED and queue unchanged. Do not claim 24x7 yet."
 }
