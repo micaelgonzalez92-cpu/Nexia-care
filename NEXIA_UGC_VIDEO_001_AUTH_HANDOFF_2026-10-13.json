@@ -3,55 +3,49 @@
   "updated_at": "2026-10-13",
   "canonical_state": {"version": 70, "changed": false},
   "experiment": "UGC-VIDEO-001",
-  "status": "TECHNICAL_EXECUTION_PASS_VISUAL_QA_PENDING",
+  "status": "TECHNICAL_PASS_VISUAL_PASS_HUMAN_TIME_PENDING",
   "authorization_event": "events/EVT-2026-10-13-UGCVIDEO-001.json",
-  "latest_event": "events/EVT-2026-10-13-UGCVIDEO-005.json",
-  "runner": {
-    "powershell": "tools/run_ugc_video_001.ps1",
-    "powershell_commit": "da76a5fec2d359830f14ba1d26e4de95c0bcf556",
-    "python": "tools/run_ugc_video_001.py",
-    "python_commit": "e9b4a9f4a54fc25e995da65622da7e5200016972",
-    "first_local_attempt": "BLOCKED_PYTHON_DISCOVERY_DEFECT_FIXED",
-    "second_local_attempt": "BLOCKED_COMFYUI_CONNECTION_REFUSED_RESOLVED_BY_MANUAL_EXISTING_SERVER_START",
-    "third_local_execution": "COMPLETED_OUTPUTS_READY_FOR_VISUAL_QA",
+  "latest_event": "events/EVT-2026-10-13-UGCVIDEO-006.json",
+  "technical_result": {
+    "status": "PASS",
     "generation_attempts_completed": 3,
+    "attempt_limit": 3,
     "cash_spend_eur": 0,
-    "peak_gpu_memory_mib_whole_gpu": 11577.0
+    "peak_gpu_memory_mib_whole_gpu": 11577.0,
+    "outputs_count": 3
   },
-  "outputs": [
-    "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\creative-benchmark-2026-10-12\\ComfyUI_windows_portable\\ComfyUI\\output\\video\\NEXIA_UGC_VIDEO_001_00001_.mp4",
-    "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\creative-benchmark-2026-10-12\\ComfyUI_windows_portable\\ComfyUI\\output\\video\\NEXIA_UGC_VIDEO_001_00002_.mp4",
-    "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\creative-benchmark-2026-10-12\\ComfyUI_windows_portable\\ComfyUI\\output\\video\\NEXIA_UGC_VIDEO_001_00003_.mp4"
-  ],
-  "exact_human_action": {
-    "surface": "ChatGPT Chat file upload",
-    "device": "computer",
-    "why_kael": "The generated MP4 files exist only on Kael's local Windows filesystem and are not accessible to this chat until Kael uploads them.",
-    "action": "Upload all three generated MP4 files to this chat; if upload limits prevent that, upload the three one at a time without regenerating them.",
-    "steps": [
-      "Use the chat attachment control on this computer.",
-      "Open the ComfyUI output\\video folder shown in outputs.",
-      "Attach NEXIA_UGC_VIDEO_001_00001_.mp4, NEXIA_UGC_VIDEO_001_00002_.mp4 and NEXIA_UGC_VIDEO_001_00003_.mp4.",
-      "Do not generate additional attempts; the preregistered attempt budget is exhausted at 3/3."
-    ],
-    "cost_exposure": "EUR0; no further generation or download required for visual QA.",
-    "success_check": "Nexia can inspect the supplied video files and score them against the fixed 100-point rubric, hard-fail rules, >=75/100 acceptable threshold and >=3 usable seconds requirement.",
-    "return_to_nexia": "Upload the MP4 files. Also state approximate total human steering/review minutes for UGC-VIDEO-001 if known; formal PASS requires <=30 minutes."
+  "visual_result": {
+    "status": "PASS",
+    "best_output": "NEXIA_UGC_VIDEO_001_00003_.mp4",
+    "best_seed": 4203,
+    "best_score": 88,
+    "hard_fail": false,
+    "usable_seconds": ">=3.0",
+    "other_outputs": [
+      {"file":"NEXIA_UGC_VIDEO_001_00001_.mp4","score":55,"hard_fail":true},
+      {"file":"NEXIA_UGC_VIDEO_001_00002_.mp4","score":64,"hard_fail":true}
+    ]
+  },
+  "remaining_gate": {
+    "human_action_required_now": true,
+    "surface": "ChatGPT Chat",
+    "device": "mobile_or_computer",
+    "why_kael": "The preregistered PASS gate includes active human steering/review <=30 minutes and only Kael can report that elapsed active manual effort accurately.",
+    "action": "State the approximate active human steering/review time spent on UGC-VIDEO-001, excluding unattended model download/generation/wait time.",
+    "success_check": "If reported active human steering/review time is <=30 minutes, close UGC-VIDEO-001 PASS and promote only to LOCAL_VIDEO_VERIFIED_FOR_BOUNDED_SPEC_I2V. If >30 minutes, close FAIL on the preregistered efficiency gate despite visual PASS.",
+    "return_to_nexia": "Reply with an approximate value such as ~10 min, ~20 min, ~30 min or >30 min."
   },
   "authority": {
     "max_attempts": 3,
     "attempts_used": 3,
     "cash_budget_eur": 0,
-    "allowed_models": ["ltx-video-2b-v0.9.5.safetensors", "t5xxl_fp16.safetensors if absent"],
     "cloud_api": false,
     "second_model": false,
     "publication": false,
     "external_contact": false,
     "new_application": false,
-    "custom_nodes": false,
-    "new_software_install": false
+    "custom_nodes": false
   },
-  "human_action_required_now": true,
-  "resume_from": "Technical local generation is complete at 3/3 attempts, EUR0, with three MP4 outputs. Do not rerun or regenerate. Await uploaded outputs, then apply the preregistered visual rubric and hard-fail gate. Record human steering/review time before final PASS/FAIL adjudication.",
-  "truth_limit": "Technical execution PASS does not yet prove visual-quality PASS or promotion to LOCAL_VIDEO_VERIFIED_FOR_BOUNDED_SPEC_I2V. Buyer demand, publication, sale, payment and profit remain unverified."
+  "resume_from": "Do not regenerate. Technical and visual gates are complete. Await only Kael's active human steering/review time, then adjudicate formal PASS/FAIL against the fixed <=30 minute threshold.",
+  "truth_limit": "Visual QA PASS is verified for clip 00003, but formal experiment PASS and capability promotion remain pending the human-time gate. Buyer demand, publication, sale, payment and profit remain unverified."
 }
