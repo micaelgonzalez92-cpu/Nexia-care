@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALWORKER-009",
+  "date": "2026-10-13",
+  "project": "NEXIA CORE",
+  "type": "LOCAL_WORKER_24H_STABILITY_STARTED",
+  "classification": "HECHO_VERIFICADO_FROM_KAEL_LOCAL_OUTPUT",
+  "canonical_state_base_version": 71,
+  "trial_id": "LOCALWORKER-STABILITY-24H-001",
+  "summary": "Kael returned the bounded Windows InstallStart output proving the authorized 24h GREEN_INTERNAL stability trial started successfully. The stability and cleanup Scheduled Tasks were Ready and the indefinite main Local Worker Scheduled Task remained Disabled. This is start evidence only, not a 24h stability PASS.",
+  "local_output": {
+    "stability_cycle": "PASS",
+    "stability_24h_start": "PASS",
+    "start_at": "2026-10-13T20:22:39.3995480+02:00",
+    "end_at": "2026-10-14T20:22:39.3995480+02:00",
+    "stability_task_state": "Ready",
+    "cleanup_task_state": "Ready",
+    "main_task_state": "Disabled",
+    "post_start_status_payload_returned": false
+  },
+  "scope": {
+    "green_internal_only": true,
+    "external_effects_authorized": false,
+    "persistent_24x7_authorized": false,
+    "commercial_actions_authorized": false,
+    "financial_spend_authorized": false,
+    "automatic_shutdown_required": true
+  },
+  "fixed_final_success_thresholds": {
+    "wall_clock_window_hours": 24,
+    "scheduled_interval_minutes": 5,
+    "minimum_total_cycle_records": 285,
+    "maximum_cycle_failures": 0,
+    "maximum_inter_record_gap_minutes": 10,
+    "ready_pending_tasks_executed": 0,
+    "external_effects": 0,
+    "main_worker_task_must_remain_disabled": true,
+    "automatic_shutdown_deadline_minutes_after_window_end": 10,
+    "finalizer_file_required": "stability-final.json",
+    "stability_and_cleanup_tasks_must_end_disabled": true
+  },
+  "current_status": "STARTED_RUNNING_WINDOW_NOT_YET_RECONCILED",
+  "final_result": "PENDING",
+  "economics": {
+    "software_api_cost_eur": 0,
+    "electricity_cost": "UNKNOWN_NOT_INSTRUMENTED",
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "next_verification_gate": "LOCALWORKER-STABILITY-24H-001-FINAL-RECONCILIATION",
+  "truth_limit": "This event proves only the successful local start and task states reported by Kael. It does not prove 24h continuity, cycle count, absence of gaps, final auto-shutdown, finalizer creation, or production-grade 24x7 durability."
+}
