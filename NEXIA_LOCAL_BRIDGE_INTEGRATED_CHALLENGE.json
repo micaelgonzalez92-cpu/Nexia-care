@@ -1,15 +1,22 @@
 {
-  "schema_version": 1,
-  "challenge_id": "LOCAL-BRIDGE-INTEGRATED-002",
-  "nonce": "NEXIA-INT-002-20261013-C4E8",
-  "status": "READY",
-  "expected_task_id": "LOCAL-EXECUTION-BRIDGE-001",
-  "required_transport": "GH_API",
-  "required_source": "NEXIA_LOCAL_PC",
-  "required_authenticated_read_only": true,
-  "required_sanitized": true,
-  "required_contains_secrets": false,
-  "allowed_external_side_effects": [],
-  "cash_spend_eur": 0,
-  "truth_limit": "This is a deterministic internal benchmark challenge only. Updating it does not authorize proposals, messages, purchases, profile changes, publication or scheduled service activation."
+    "schema_version":  1,
+    "challenge_id":  "LOCAL-BRIDGE-INTEGRATED-002",
+    "nonce":  "NEXIA-INT-002-20261013-C4E8",
+    "status":  "LOCAL_PC_INTEGRATED_PASS",
+    "task_id":  "LOCAL-EXECUTION-BRIDGE-001",
+    "source":  "NEXIA_LOCAL_PC",
+    "transport":  "GH_API",
+    "final_url":  "https://www.workana.com/dashboard",
+    "title":  "WORKANA \u003e Contrata freelancers, encuentra trabajo",
+    "has_password_field":  false,
+    "body_length":  2639,
+    "authenticated_read_only":  true,
+    "browser":  "Chrome/154.0.8037.98",
+    "timestamp_utc":  "2026-10-13T02:42:40.2028954Z",
+    "sanitized":  true,
+    "contains_secrets":  false,
+    "external_side_effects":  [
+
+                              ],
+    "cash_spend_eur":  0
 }
