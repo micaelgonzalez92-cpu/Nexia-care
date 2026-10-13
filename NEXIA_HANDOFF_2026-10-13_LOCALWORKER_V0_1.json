@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-13",
+  "project": "NEXIA CORE",
+  "canonical_state_version": 71,
+  "focus": "CAPABILITY_EVOLUTION_LOCAL_WORKER_24X7",
+  "status": "WORKER_V0_1_IMPLEMENTED_AND_CI_VERIFIED_NOT_DEPLOYED",
+  "verified_evidence": {
+    "event": "events/EVT-2026-10-13-LOCALWORKER-001.json",
+    "ci_run_id": 38426755938,
+    "ci_job_id": 115398062369,
+    "ci_conclusion": "SUCCESS",
+    "worker_regression_tests": "9_OF_9_PASS",
+    "powershell_syntax": "PASS",
+    "canonical_integrity": "PASS"
+  },
+  "local_worker": {
+    "core": "tools/nexia_local_worker_v0_1.py",
+    "transport": "tools/run_nexia_local_worker_cycle_v0_1.ps1",
+    "manager": "tools/manage_nexia_local_worker_v0_1.ps1",
+    "control": "NEXIA_LOCAL_WORKER_CONTROL.json",
+    "queue": "NEXIA_LOCAL_WORKER_QUEUE.json",
+    "status": "NEXIA_LOCAL_WORKER_STATUS.json",
+    "repo_implementation": "VERIFIED",
+    "windows_installation": "NOT_EXECUTED",
+    "recurring_runtime": "NOT_EXECUTED_NOT_VERIFIED",
+    "external_effects": "FORBIDDEN_V0_1",
+    "remote_control": "STOP",
+    "deployment_authorized": false
+  },
+  "safety": {
+    "green_only_auto_execution": true,
+    "yellow_red_unknown_to_human_gate": true,
+    "remote_stop_latched": true,
+    "remote_run_cannot_rearm": true,
+    "local_explicit_rearm_required": true,
+    "github_failure": "FAIL_CLOSED",
+    "queue_conflict": "FAIL_CLOSED",
+    "secrets_in_public_repo": "FORBIDDEN"
+  },
+  "economic_priority_preserved": {
+    "active_experiment": "EXP-AUTO-001",
+    "workana_profile_gate_still_pending": true,
+    "huescaventura_proposal_eur": 300,
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "human_gate": {
+    "gate_id": "LOCALWORKER-INSTALL-DISABLED-001",
+    "status": "REQUIRES_KAEL_LOCAL_ACTION",
+    "scope": "Install the verified worker files and create Windows Scheduled Task NEXIA Local Worker v0.1 in DISABLED state only.",
+    "persistent_execution_authorized": false,
+    "external_actions_authorized": false,
+    "software_purchase": false,
+    "new_account": false,
+    "financial_cost_eur": 0,
+    "electricity_cost": "UNKNOWN_NOT_INSTRUMENTED",
+    "reversible": true,
+    "rollback": "Run tools/manage_nexia_local_worker_v0_1.ps1 -Action Uninstall and delete %LOCALAPPDATA%\\NEXIA\\worker if desired."
+  },
+  "success_check": "Local command reports INSTALL_DISABLED: PASS. Scheduled task exists and is Disabled. No worker cycle has executed and remote NEXIA_LOCAL_WORKER_STATUS.json remains NOT_DEPLOYED until a separately authorized runtime test.",
+  "next_after_success": "Verify disabled installation, then separately authorize one bounded HEALTH_CHECK cycle before enabling recurrence. Do not jump directly to 24x7 claim.",
+  "truth_limit": "The current repository implementation is not yet a 24/7 worker on Kael's PC."
+}
