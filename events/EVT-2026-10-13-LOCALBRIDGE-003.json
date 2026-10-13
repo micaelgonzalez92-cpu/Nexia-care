@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBRIDGE-003",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "LOCAL_BRIDGE_TRANSPORT_WINGET_AND_GITHUB_CLI_PACKAGE_AVAILABLE",
+  "state_version": 70,
+  "evidence_source": "KAEL_SHARED_POWERSHELL_OUTPUT",
+  "observed": {
+    "winget_found": true,
+    "winget_path": "C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps\\winget.exe",
+    "winget_version": "v1.29.380",
+    "github_cli_package_available": true,
+    "curl_found": true,
+    "curl_path": "C:\\Windows\\system32\\curl.exe",
+    "cash_spend_eur": 0
+  },
+  "interpretation": {
+    "github_cli_install_path": "AVAILABLE_VIA_WINGET",
+    "automatic_result_return": "STILL_NOT_VERIFIED",
+    "github_cli_installed": false,
+    "github_cli_authenticated": false,
+    "scheduled_local_service": "NOT_CREATED_NOT_AUTHORIZED"
+  },
+  "next_gate": "LOCAL-BRIDGE-TRANSPORT-003: Kael explicitly installs GitHub CLI via winget and authenticates through GitHub browser/device flow. Nexia must not receive raw credentials or tokens. Then verify gh auth status and read-only repository access before testing any automated result write-back.",
+  "authority_effect": "NONE. This event records package availability only; it does not authorize software installation, account authentication, scheduled task creation, automated writes or external side effects.",
+  "truth_limit": "Package availability proves a feasible zero-cost installation route, not a working authenticated return channel."
+}
