@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-WORKANA-READ-001",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "WORKANA_MODERATION_SANITIZED_READ_ONLY_PROBE_PREPARED",
+  "state_version": 70,
+  "evidence_source": "NEXIA_INTERNAL_PREPARATION",
+  "observed": {
+    "challenge": "NEXIA_WORKANA_MODERATION_CHALLENGE.json",
+    "runner": "tools/run_workana_moderation_probe_001.ps1",
+    "target": "https://www.workana.com/dashboard",
+    "authenticated_read_only": true,
+    "sanitized_result_only": true,
+    "raw_body_return": false,
+    "credentials_or_session_material_return": false,
+    "external_side_effects": [],
+    "cash_spend_eur": 0
+  },
+  "experiment_contract": {
+    "hypothesis": "The authenticated Workana dashboard exposes an explicit moderation marker that can classify the profile as APPROVED_EXPLICIT, REJECTED_EXPLICIT, PENDING_SIGNAL or UNKNOWN without external side effects.",
+    "success": "Runner writes a sanitized PASS result to the pre-created challenge and Nexia directly verifies it remotely.",
+    "failure": "Browser/auth/writeback fails, a password field is observed, target URL differs, or classification cannot be produced safely.",
+    "truth_rule": "UNKNOWN is not approval. Approval may be promoted only when an explicit approval marker is detected."
+  },
+  "authority_effect": "NONE. This probe is read-only within existing authority and does not authorize proposal submission, messaging, purchases, profile changes or publication.",
+  "next_gate": "Kael manually launches the prepared read-only probe once; Nexia then reads the GitHub challenge directly."
+}
