@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-WORKANA-READ-002",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "WORKANA_AUTHENTICATED_READ_ONLY_MODERATION_PROBE_UNKNOWN",
+  "state_version": 70,
+  "evidence_source": "DIRECT_GITHUB_REMOTE_VERIFICATION_OF_WORKANA_MODERATION_CHALLENGE",
+  "observed": {
+    "challenge_id": "WORKANA-MODERATION-PROBE-001",
+    "status": "PASS",
+    "final_url": "https://www.workana.com/dashboard",
+    "authenticated_read_only": true,
+    "moderation_classification": "UNKNOWN",
+    "explicit_approved_marker": false,
+    "explicit_rejected_marker": false,
+    "pending_marker": false,
+    "sanitized": true,
+    "contains_secrets": false,
+    "external_side_effects": [],
+    "cash_spend_eur": 0,
+    "timestamp_utc": "2026-10-13T12:18:12.6904487Z"
+  },
+  "interpretation": {
+    "profile_approval_verified": false,
+    "profile_rejection_verified": false,
+    "pending_status_verified_by_this_probe": false,
+    "dashboard_probe_result": "NO_EXPLICIT_MODERATION_MARKER_FOUND",
+    "commercial_gate": "BLOCKED_PROFILE_APPROVAL_NOT_VERIFIED",
+    "proposal_submission": "DO_NOT_EXECUTE"
+  },
+  "next_gate": "Perform a second bounded authenticated read-only inspection focused on profile/account/moderation surfaces rather than the generic dashboard, returning only sanitized classification metadata. Do not infer approval from absence of a pending marker.",
+  "authority_effect": "NONE. No proposal, message, purchase, publication, account change or other external side effect is authorized or executed.",
+  "truth_limit": "UNKNOWN means the generic dashboard did not expose any of the explicit approval, rejection or pending phrases used by the probe. It is not evidence of approval, rejection or absence of moderation."
+}
