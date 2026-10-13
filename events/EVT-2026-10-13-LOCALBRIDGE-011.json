@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBRIDGE-011",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "ONE_SHOT_WINDOWS_TASK_SCHEDULER_AUTOMATIC_START_AND_CLEANUP_VERIFIED",
+  "state_version": 70,
+  "evidence_source": "DIRECT_GITHUB_REMOTE_VERIFICATION_AFTER_DELAYED_SCHEDULER_COMPLETION",
+  "supersedes": "EVT-2026-10-13-LOCALBRIDGE-010",
+  "observed": {
+    "challenge_path": "NEXIA_LOCAL_BRIDGE_SCHEDULER_CHALLENGE.json",
+    "challenge_status": "LOCAL_PC_SCHEDULER_PASS_CLEANED",
+    "task_id": "LOCAL-EXECUTION-BRIDGE-001",
+    "launch_mode": "WINDOWS_TASK_SCHEDULER_ONCE",
+    "transport": "GH_API",
+    "authenticated_read_only": true,
+    "recurrence": false,
+    "polling": false,
+    "persistent_service": false,
+    "sanitized": true,
+    "contains_secrets": false,
+    "external_side_effects": [],
+    "cash_spend_eur": 0,
+    "scheduler_last_run_time": "2026-10-13T14:06:06+02:00",
+    "scheduler_last_task_result": 0,
+    "scheduler_task_removed": true,
+    "worker_timestamp_utc": "2026-10-13T12:06:16.8192156Z",
+    "cleanup_timestamp_utc": "2026-10-13T12:07:28.0777364Z",
+    "remote_blob_sha": "1a2b4a238cfaa08c7f52ae015ccb57464be18596"
+  },
+  "interpretation": {
+    "scheduler_001": "PASS_DIRECT_REMOTE_VERIFICATION",
+    "automatic_local_start": "VERIFIED_ONE_SHOT_BOUNDED",
+    "automatic_sanitized_result_return": "VERIFIED",
+    "scheduler_cleanup": "VERIFIED_TASK_REMOVED",
+    "kael_manual_worker_launch_required": false,
+    "recurring_unattended_service": "NOT_AUTHORIZED_NOT_VERIFIED",
+    "work_replacement": "VERIFIED_FOR_BOUNDED_AUTHENTICATED_WORKANA_READ_ONLY_TASKS_USING_ONE_SHOT_LOCAL_SCHEDULER_LAUNCH"
+  },
+  "authority_effect": "NONE. This verification does not authorize recurrence, polling, persistent services, proposal submission, messaging, purchases, profile changes or publication.",
+  "truth_limit": "One one-shot automatic-start run with cleanup is verified. Recurring reliability, long-lived local service execution and authenticated Workana write actions remain unverified and unauthorized."
+}
