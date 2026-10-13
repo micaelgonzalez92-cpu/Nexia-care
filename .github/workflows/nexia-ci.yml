@@ -87,10 +87,22 @@ jobs:
           foreach ($file in $files) {
             $tokens = $null
             $errors = $null
-            [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $file), [ref]$tokens, [ref]$errors) | Out-Null
+            $ast = [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $file), [ref]$tokens, [ref]$errors)
             if ($errors.Count -gt 0) {
               $errors | ForEach-Object { Write-Error "$file :: $($_.Message)" }
               exit 1
+            }
+            if ($file -eq 'tools/manage_nexia_local_worker_v0_1.ps1') {
+              $shadowAssignments = $ast.FindAll({
+                param($node)
+                $node -is [System.Management.Automation.Language.AssignmentStatementAst] -and
+                $node.Left -is [System.Management.Automation.Language.VariableExpressionAst] -and
+                $node.Left.VariablePath.UserPath -ieq 'Action'
+              }, $true)
+              if ($shadowAssignments.Count -gt 0) {
+                Write-Error 'manage_nexia_local_worker_v0_1.ps1 must not assign to the validated Action parameter.'
+                exit 1
+              }
             }
           }
 
