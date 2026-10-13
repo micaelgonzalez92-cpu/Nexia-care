@@ -8,8 +8,8 @@
     "boundary_blob_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
   },
   "event_directory": "events/",
-  "latest_event_id": "EVT-2026-10-13-UGCVIDEO-003",
-  "latest_event_path": "events/EVT-2026-10-13-UGCVIDEO-003.json",
+  "latest_event_id": "EVT-2026-10-13-UGCVIDEO-005",
+  "latest_event_path": "events/EVT-2026-10-13-UGCVIDEO-005.json",
   "events": [
     {"event_id":"EVT-2026-10-11-EVOLVE-001","timestamp":"2026-10-11T16:20:00+02:00","type":"CORE_EVOLUTION_AND_EVENT_STORAGE_V2_ACTIVATION","state_version":63,"path":"events/EVT-2026-10-11-EVOLVE-001.json","verified_blob_sha":"fb278799714287c03f749990211b5c8d33a60ce5"},
     {"event_id":"EVT-2026-10-11-EVOLVE-002","timestamp":"2026-10-11T16:45:00+02:00","type":"CORE_EVOLUTION_CHECKPOINT_CLOSURE_WITH_MEMORY_SYNC_BLOCKER","state_version":65,"path":"events/EVT-2026-10-11-EVOLVE-002.json","verified_blob_sha":"9cfbd2e57f6cf67a80ba72727fed0e56ca81a543"},
@@ -41,9 +41,11 @@
     {"event_id":"EVT-2026-10-13-UGCPORT-004","timestamp":"2026-10-13","type":"UGC_PHASE_B_DESIGN_AND_VIDEO_BENCHMARK_PREREGISTRATION","state_version":70,"path":"events/EVT-2026-10-13-UGCPORT-004.json","verified_blob_sha":"d8245513e86cc4e3c9a3fd7bd579d7cdc75620e5"},
     {"event_id":"EVT-2026-10-13-UGCVIDEO-001","timestamp":"2026-10-13","type":"UGC_VIDEO_001_EXPLICIT_BOUNDED_AUTHORIZATION","state_version":70,"path":"events/EVT-2026-10-13-UGCVIDEO-001.json","verified_blob_sha":"21e28017ad1fb853bd3a3290fbc762b09047763e"},
     {"event_id":"EVT-2026-10-13-UGCVIDEO-002","timestamp":"2026-10-13","type":"UGC_VIDEO_001_RUNNER_PREPARED_AND_CI_VERIFIED","state_version":70,"path":"events/EVT-2026-10-13-UGCVIDEO-002.json","verified_blob_sha":"2158a0030c5a581043da885a0d7f845a9f83da4f"},
-    {"event_id":"EVT-2026-10-13-UGCVIDEO-003","timestamp":"2026-10-13","type":"UGC_VIDEO_001_LOCAL_LAUNCHER_PYTHON_DETECTION_FIX","state_version":70,"path":"events/EVT-2026-10-13-UGCVIDEO-003.json","verified_blob_sha":"b12dde1c480f7575a2d137bfe4d1e47cf6ec3958"}
+    {"event_id":"EVT-2026-10-13-UGCVIDEO-003","timestamp":"2026-10-13","type":"UGC_VIDEO_001_LOCAL_LAUNCHER_PYTHON_DETECTION_FIX","state_version":70,"path":"events/EVT-2026-10-13-UGCVIDEO-003.json","verified_blob_sha":"b12dde1c480f7575a2d137bfe4d1e47cf6ec3958"},
+    {"event_id":"EVT-2026-10-13-UGCVIDEO-004","timestamp":"2026-10-13","type":"UGC_VIDEO_001_LOCAL_COMFYUI_CONNECTION_REFUSED","state_version":70,"path":"events/EVT-2026-10-13-UGCVIDEO-004.json","verified_blob_sha":"fb48a1f10c4820cd4bcbe0a7c14dc19da275a814"},
+    {"event_id":"EVT-2026-10-13-UGCVIDEO-005","timestamp":"2026-10-13","type":"UGC_VIDEO_001_TECHNICAL_EXECUTION_COMPLETE_PENDING_VISUAL_QA","state_version":70,"path":"events/EVT-2026-10-13-UGCVIDEO-005.json","verified_blob_sha":"462856cf07ff403c5e6a5ba4ecf3922b5948c113"}
   ],
   "rule": "Event files are immutable after verified creation. Corrections create new events. This index is derived and may be regenerated.",
   "latest_session_handoff": "NEXIA_UGC_VIDEO_001_AUTH_HANDOFF_2026-10-13.json",
-  "latest_session_handoff_blob_sha": "312bf4f2ba29d22c4ed39afc9c724ada9fdc9e89"
+  "latest_session_handoff_blob_sha": "4397a605a265fd7405f472608018301a2122a8d7"
 }
