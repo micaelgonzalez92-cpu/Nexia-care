@@ -1,9 +1,9 @@
 # UGC-VIDEO-001 — Minimal Local Image-to-Video Benchmark
 
-Status: PREREGISTERED / NOT AUTHORIZED / NOT EXECUTED
+Status: FINAL FAIL — TECHNICAL EXECUTION PASS / PROFESSIONAL VISUAL QUALITY FAIL
 Date: 2026-10-13
 Parent: UGC-PORTFOLIO-001 Phase B
-Cash budget if authorized: EUR0
+Cash budget: EUR0
 
 ## Hypothesis
 
@@ -28,22 +28,20 @@ No publication, no external contact, no cloud/API fallback, no additional video 
 - motion intent: restrained camera push/lateral movement plus small plausible hand/item movement
 - avoid readable text/logos
 
-Exact sampler/guidance values should begin from the official ComfyUI LTXV image-to-video template. Do not optimize against the gate after observing outputs beyond the permitted attempt budget.
+Exact sampler/guidance values begin from the official ComfyUI LTXV image-to-video template. Do not optimize against the gate after observing outputs beyond the permitted attempt budget.
 
-## Download/install bound if later authorized
+## Authorized download/install bound
 
 Allowed files only:
 1. `ltx-video-2b-v0.9.5.safetensors`
 2. `t5xxl_fp16.safetensors` only if not already present
 3. official stock-ComfyUI workflow/template data needed to run the existing core nodes
 
-No new application, custom node pack, second video model, browser agent or cloud API is included.
+No new application, custom node pack, second video model, browser agent or cloud API was included.
 
-Estimated download exposure if both model files are absent: approximately 15 GB total. This is an estimate from current official ComfyUI template metadata, not a measured local download.
+## Original fixed PASS gate
 
-## Fixed PASS gate
-
-PASS requires all of the following:
+PASS required all of the following:
 - at least 1 acceptable clip within <=3 generation attempts;
 - no OOM, crash or unrecovered ComfyUI failure;
 - source product identity remains recognizable and transparent-bin geometry remains materially stable;
@@ -54,7 +52,7 @@ PASS requires all of the following:
 - cash spend EUR0;
 - no cloud/API fallback.
 
-## Quality rubric — 100 points
+## Original quality rubric — 100 points
 
 - temporal stability / absence of flicker or collapse: 25
 - product/scene identity preservation: 25
@@ -63,7 +61,7 @@ PASS requires all of the following:
 - vertical framing/editing headroom: 10
 - brand/policy safety: 5
 
-Acceptable clip: >=75/100 and no hard fail.
+Original acceptable threshold: >=75/100 and no hard fail.
 
 ## Hard fails
 
@@ -74,28 +72,51 @@ Acceptable clip: >=75/100 and no hard fail.
 - output cannot provide at least 3 usable seconds;
 - unauthorized external/cloud execution occurs.
 
-## FAIL gate
+## Execution evidence
 
-FAIL if no acceptable clip is obtained after 3 attempts, any unrecovered OOM/crash blocks execution, human steering exceeds 30 minutes, or any authority/cash gate is violated.
+Technical execution completed locally at EUR0:
 
-Thresholds are fixed before execution and must not be loosened after seeing results.
+- attempt 1 — seed 4201 — 114.14s — completed;
+- attempt 2 — seed 4202 — 73.02s — completed;
+- attempt 3 — seed 4203 — 72.92s — completed;
+- peak whole-GPU VRAM observed: 11577 MiB;
+- three MP4 outputs produced;
+- no paid/cloud fallback;
+- runner exit code 0.
 
-## Evidence to record
+Technical capability result: **PASS for bounded local execution only**.
 
-- exact model files used;
-- ComfyUI version if visible;
-- each attempt seed/config;
-- wall time per attempt;
-- approximate peak whole-GPU VRAM if available;
-- approximate RAM if available;
-- output dimensions/frames/fps;
-- QA score and hard-fail decision;
-- human steering minutes;
-- errors/recovery;
-- cash spend.
+## Final professional adjudication
+
+The initial model-only visual QA incorrectly rated attempt 3 as visually acceptable. Kael's direct review rejected all three outputs as professionally unusable, specifically calling out poor hand/anatomy quality. That stronger customer-facing acceptance evidence supersedes the prior optimistic adjudication.
+
+Final result: **FAIL**.
+
+Reason:
+- the three-attempt budget is exhausted;
+- none of the three outputs meets the professional commercial-quality bar;
+- visible hand/anatomy defects are unacceptable for customer-facing UGC;
+- attempt 3 must be treated as a hard fail under the original rule `central visible hand/body anatomy is materially broken` rather than rescued by an aggregate score;
+- no capability promotion to `LOCAL_VIDEO_VERIFIED_FOR_BOUNDED_SPEC_I2V` is allowed from this experiment.
+
+The previous event `EVT-2026-10-13-UGCVIDEO-006` remains historical evidence of an overly permissive QA decision and is superseded by the subsequent corrective event.
+
+## Corrective learning
+
+Future visual experiments must apply `NEXIA_PROFESSIONAL_QUALITY_GATE.md` in addition to experiment-specific technical gates.
+
+For customer-facing visual work:
+- obvious hand/finger/face/body defects are hard fail at normal playback speed;
+- professional/portfolio readiness requires a stricter internal bar than a minimal capability threshold;
+- high-risk anatomy should be deliberately avoided, controlled, cropped or generated with a workflow proven to handle it rather than accepted optimistically after generation;
+- visual QA must include an adversarial defect pass before any PASS claim.
+
+No second model, new application, custom nodes, cloud route or additional generation is authorized by this correction.
 
 ## Promotion rule
 
-If PASS: promote only to `LOCAL_VIDEO_VERIFIED_FOR_BOUNDED_SPEC_I2V` and proceed to internal Phase-B assembly design/execution planning. This is NOT proof of general video generation, lip-sync, production reliability or buyer demand.
+`UGC-VIDEO-001` is closed as FAIL. Any new video-generation approach requires a separately designed experiment and, where scope changes materially, new Kael authorization.
 
-If FAIL: do not download a second model or widen scope without a new Kael authorization.
+## Commercial truth
+
+Technical local generation was demonstrated. Professional video quality was not. Buyer demand, publication, sale, settled payment and profit remain unverified.
