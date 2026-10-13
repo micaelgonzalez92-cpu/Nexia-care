@@ -3,38 +3,44 @@
   "updated_at": "2026-10-13",
   "canonical_state": {"version": 70, "changed": false},
   "experiment": "UGC-VIDEO-001",
-  "status": "AUTHORIZED_BLOCKED_LOCAL_COMFYUI_NOT_REACHABLE_PENDING_MANUAL_START_AND_RETRY",
+  "status": "TECHNICAL_EXECUTION_PASS_VISUAL_QA_PENDING",
   "authorization_event": "events/EVT-2026-10-13-UGCVIDEO-001.json",
-  "latest_event": "events/EVT-2026-10-13-UGCVIDEO-004.json",
+  "latest_event": "events/EVT-2026-10-13-UGCVIDEO-005.json",
   "runner": {
     "powershell": "tools/run_ugc_video_001.ps1",
     "powershell_commit": "da76a5fec2d359830f14ba1d26e4de95c0bcf556",
     "python": "tools/run_ugc_video_001.py",
     "python_commit": "e9b4a9f4a54fc25e995da65622da7e5200016972",
     "first_local_attempt": "BLOCKED_PYTHON_DISCOVERY_DEFECT_FIXED",
-    "second_local_attempt": "BLOCKED_COMFYUI_CONNECTION_REFUSED",
-    "video_attempts_consumed": 0,
-    "cash_spend_eur": 0
+    "second_local_attempt": "BLOCKED_COMFYUI_CONNECTION_REFUSED_RESOLVED_BY_MANUAL_EXISTING_SERVER_START",
+    "third_local_execution": "COMPLETED_OUTPUTS_READY_FOR_VISUAL_QA",
+    "generation_attempts_completed": 3,
+    "cash_spend_eur": 0,
+    "peak_gpu_memory_mib_whole_gpu": 11577.0
   },
+  "outputs": [
+    "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\creative-benchmark-2026-10-12\\ComfyUI_windows_portable\\ComfyUI\\output\\video\\NEXIA_UGC_VIDEO_001_00001_.mp4",
+    "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\creative-benchmark-2026-10-12\\ComfyUI_windows_portable\\ComfyUI\\output\\video\\NEXIA_UGC_VIDEO_001_00002_.mp4",
+    "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\creative-benchmark-2026-10-12\\ComfyUI_windows_portable\\ComfyUI\\output\\video\\NEXIA_UGC_VIDEO_001_00003_.mp4"
+  ],
   "exact_human_action": {
-    "surface": "Windows existing ComfyUI console + PowerShell",
+    "surface": "ChatGPT Chat file upload",
     "device": "computer",
-    "why_kael": "The runner can reach the local API only while the existing ComfyUI server remains live on 127.0.0.1:8188. The second run reached Python but the local endpoint refused the connection.",
-    "comfy_launcher": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\creative-benchmark-2026-10-12\\ComfyUI_windows_portable\\run_nvidia_gpu.bat",
-    "api_check_url": "http://127.0.0.1:8188",
-    "retry_command": "$u='https://raw.githubusercontent.com/micaelgonzalez92-cpu/Nexia-care/da76a5fec2d359830f14ba1d26e4de95c0bcf556/tools/run_ugc_video_001.ps1'; $p=\"$env:TEMP\\run_ugc_video_001.ps1\"; Invoke-WebRequest -Uri $u -OutFile $p -UseBasicParsing; powershell.exe -NoProfile -ExecutionPolicy Bypass -File $p",
+    "why_kael": "The generated MP4 files exist only on Kael's local Windows filesystem and are not accessible to this chat until Kael uploads them.",
+    "action": "Upload all three generated MP4 files to this chat; if upload limits prevent that, upload the three one at a time without regenerating them.",
     "steps": [
-      "Launch the existing run_nvidia_gpu.bat and keep its console window open.",
-      "Wait until ComfyUI reports it is serving locally, then open http://127.0.0.1:8188 and confirm the UI loads.",
-      "With that ComfyUI console still open, run the same corrected commit-pinned UGC-VIDEO-001 PowerShell command once.",
-      "Do not install software/custom nodes or another model. If ComfyUI itself closes/errors before the UI loads, return the last visible console lines instead of rerunning."
+      "Use the chat attachment control on this computer.",
+      "Open the ComfyUI output\\video folder shown in outputs.",
+      "Attach NEXIA_UGC_VIDEO_001_00001_.mp4, NEXIA_UGC_VIDEO_001_00002_.mp4 and NEXIA_UGC_VIDEO_001_00003_.mp4.",
+      "Do not generate additional attempts; the preregistered attempt budget is exhausted at 3/3."
     ],
-    "cost_exposure": "EUR0 cash; zero video attempts consumed so far. Authorized model download/disk exposure remains up to approximately 15 GB if files are absent, plus local electricity and machine time.",
-    "success_check": "ComfyUI UI is reachable at 127.0.0.1:8188 and the runner reaches COMPLETED_OUTPUTS_READY_FOR_VISUAL_QA with at least one generated output.",
-    "return_to_nexia": "If successful, paste the terminal block beginning === NEXIA UGC-VIDEO-001 TECHNICAL RESULT === and upload MP4 output(s). If ComfyUI does not stay open, paste the last visible ComfyUI console lines."
+    "cost_exposure": "EUR0; no further generation or download required for visual QA.",
+    "success_check": "Nexia can inspect the supplied video files and score them against the fixed 100-point rubric, hard-fail rules, >=75/100 acceptable threshold and >=3 usable seconds requirement.",
+    "return_to_nexia": "Upload the MP4 files. Also state approximate total human steering/review minutes for UGC-VIDEO-001 if known; formal PASS requires <=30 minutes."
   },
   "authority": {
     "max_attempts": 3,
+    "attempts_used": 3,
     "cash_budget_eur": 0,
     "allowed_models": ["ltx-video-2b-v0.9.5.safetensors", "t5xxl_fp16.safetensors if absent"],
     "cloud_api": false,
@@ -46,6 +52,6 @@
     "new_software_install": false
   },
   "human_action_required_now": true,
-  "resume_from": "Do not repeat authorization or Phase A. Start the existing ComfyUI manually and keep it alive on 127.0.0.1:8188, then rerun the same corrected benchmark command exactly once. If the existing ComfyUI console errors/exits, diagnose that blocker only.",
-  "truth_limit": "The second local run proved Python discovery works but ComfyUI was not reachable at the required local endpoint. No model download, video attempt, video quality result, demand, sale, payment or profit is verified."
+  "resume_from": "Technical local generation is complete at 3/3 attempts, EUR0, with three MP4 outputs. Do not rerun or regenerate. Await uploaded outputs, then apply the preregistered visual rubric and hard-fail gate. Record human steering/review time before final PASS/FAIL adjudication.",
+  "truth_limit": "Technical execution PASS does not yet prove visual-quality PASS or promotion to LOCAL_VIDEO_VERIFIED_FOR_BOUNDED_SPEC_I2V. Buyer demand, publication, sale, payment and profit remain unverified."
 }
