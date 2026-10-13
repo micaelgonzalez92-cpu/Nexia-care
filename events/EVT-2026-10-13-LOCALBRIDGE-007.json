@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBRIDGE-007",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "INTEGRATED_LOCAL_BROWSER_PLUS_WRITEBACK_ATTEMPT_NOT_OBSERVED_REMOTE",
+  "state_version": 70,
+  "evidence_source": "DIRECT_GITHUB_REMOTE_VERIFICATION_AFTER_KAEL_REPORTED_DONE",
+  "observed": {
+    "expected_path": "NEXIA_LOCAL_BRIDGE_INTEGRATED_RESULT.json",
+    "expected_file_remote": "NOT_FOUND",
+    "expected_commit_message": "nexia: integrated local browser task result pass",
+    "expected_commit_search": "NO_MATCH",
+    "cash_spend_eur": 0
+  },
+  "interpretation": {
+    "integrated_001": "FAIL_NOT_VERIFIED",
+    "local_browser_capability": "REMAINS_PREVIOUSLY_VERIFIED_BOUNDED_READ_ONLY",
+    "gh_api_writeback_capability": "REMAINS_PREVIOUSLY_VERIFIED_BY_LOCALBRIDGE_006",
+    "failure_scope": "INTEGRATION_ONLY",
+    "root_cause": "UNKNOWN_NOT_INSTRUMENTED_FROM_REMOTE_EVIDENCE"
+  },
+  "next_gate": "LOCAL-BRIDGE-INTEGRATED-002 using a pre-created root-level challenge/result file and a repo-hosted deterministic runner. The runner must verify browser PASS locally, update the existing remote challenge through gh api, and re-read it. No scheduled task activation yet.",
+  "authority_effect": "NONE. No external business action, spend, publication, messaging or scheduled service activation occurred.",
+  "truth_limit": "Kael reported the command completed, but the expected remote result file and commit were absent. Therefore the integrated browser-plus-writeback path is not yet verified."
+}
