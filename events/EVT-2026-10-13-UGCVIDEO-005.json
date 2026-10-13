@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-UGCVIDEO-005",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "UGC_VIDEO_001_TECHNICAL_EXECUTION_COMPLETE_PENDING_VISUAL_QA",
+  "state_version": 70,
+  "experiment": "UGC-VIDEO-001",
+  "vein": "VETA-AI-UGC-001",
+  "trigger_evidence": "Kael returned the local runner final block showing COMPLETED_OUTPUTS_READY_FOR_VISUAL_QA, exit code 0, three completed attempts and three MP4 outputs.",
+  "execution_result": {
+    "technical_status": "COMPLETED_OUTPUTS_READY_FOR_VISUAL_QA",
+    "attempts_completed": 3,
+    "attempt_limit": 3,
+    "seeds": [4201, 4202, 4203],
+    "wall_seconds": [114.14, 73.02, 72.92],
+    "total_generation_wall_seconds": 260.08,
+    "median_attempt_wall_seconds": 73.02,
+    "peak_gpu_memory_mib_whole_gpu": 11577.0,
+    "cash_spend_eur": 0,
+    "runner_exit_code": 0,
+    "source_image": "NEXIA_BENCHMARK_00003_.png",
+    "comfy_core_node_preflight": "PASS",
+    "python_runtime": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "outputs": [
+      "NEXIA_UGC_VIDEO_001_00001_.mp4",
+      "NEXIA_UGC_VIDEO_001_00002_.mp4",
+      "NEXIA_UGC_VIDEO_001_00003_.mp4"
+    ]
+  },
+  "gate_status": {
+    "technical_execution": "PASS",
+    "visual_quality_gate": "PENDING_NEXIA_QA",
+    "formal_experiment_result": "PENDING",
+    "reason": "The preregistered PASS gate requires at least one clip scoring >=75/100 with no hard fail plus >=3 usable seconds and human steering/review <=30 minutes. The videos have not yet been supplied to Nexia for visual adjudication."
+  },
+  "authority_compliance": {
+    "cash_budget_eur": 0,
+    "cloud_api_fallback": false,
+    "second_model": false,
+    "publication": false,
+    "external_contact": false,
+    "new_application": false,
+    "custom_nodes": false
+  },
+  "next_safe_action": "Kael uploads the three generated MP4 outputs, or at minimum the best available output, to this chat. Nexia then scores each supplied clip against the preregistered 100-point rubric and hard-fail rules without changing thresholds.",
+  "truth_limit": "This event verifies local technical generation only. It does not establish visual quality, formal UGC-VIDEO-001 PASS, general video capability, buyer demand, publication, sale, payment or profit."
+}
