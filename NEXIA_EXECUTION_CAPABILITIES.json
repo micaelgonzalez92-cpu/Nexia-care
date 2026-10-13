@@ -7,18 +7,19 @@
     "local_script": {"status": "AVAILABLE_WHEN_LOCAL_SURFACE_GRANTED", "zero_agentic_quota": true},
     "local_gpu_image": {"status": "VERIFIED_BOUNDED_IMAGE_GENERATION", "zero_agentic_quota": true, "engine": "ComfyUI + FLUX.2 Klein 4B FP8"},
     "local_ai": {"status": "VERIFIED_FOR_BOUNDED_CODE_ASSIST", "zero_agentic_quota": true, "engine": "Ollama + Qwen2.5-Coder 7B Instruct", "evidence_event": "events/EVT-2026-10-12-LOCALCODER-004.json", "scope_limit": "No autonomous commits/pushes, secrets or external actions; complex/high-risk engineering remains unverified for full Codex replacement."},
-    "local_browser": {"status": "VERIFIED_PUBLIC_CONTROL_AND_SYNTHETIC_DOM_INTERACTION_AUTH_PROFILE_PENDING", "zero_agentic_quota": true, "engine": "Chrome DevTools Protocol on isolated local Chrome profile", "evidence_event": "events/EVT-2026-10-13-LOCALBROWSER-003.json", "verified_scope": "Create/navigate/read/close public tabs plus synthetic DOM read/fill/click/result verification without Work or new installation", "next_gate": "LOCAL-BROWSER-001E isolated authenticated-profile persistence/read-only benchmark; Kael logs in manually and credentials remain outside Nexia"},
-    "local_execution_bridge": {"status": "NOT_IMPLEMENTED", "zero_agentic_quota": true, "next_gate": "bounded task/result exchange after authenticated-profile verification"},
+    "local_browser": {"status": "VERIFIED_WORKANA_AUTHENTICATED_READ_ONLY_PERSISTENT_SESSION", "zero_agentic_quota": true, "engine": "Chrome DevTools Protocol on isolated local Chrome profile", "evidence_event": "events/EVT-2026-10-13-LOCALBROWSER-004.json", "verified_scope": "Public navigation/readback, synthetic DOM read/fill/click, and persistent authenticated Workana read-only dashboard inspection after browser restart without Work or new installation", "scope_limit": "No proposal submission, messages, purchases, profile/account changes, publication or other external side effects; those remain separately gated", "next_gate": "LOCAL-EXECUTION-BRIDGE-001 sanitized task/result exchange for bounded authenticated read-only inspection"},
+    "local_execution_bridge": {"status": "PREPARATION_AUTHORIZED_NOT_YET_VERIFIED", "zero_agentic_quota": true, "next_gate": "Dispatch one sanitized repo task to local browser and return structured non-sensitive terminal result; no polling/service/scheduled-task activation yet"},
     "work": {"status": "AVAILABLE_SCARCE_FALLBACK", "zero_agentic_quota": false},
     "codex": {"status": "AVAILABLE_SCARCE_FALLBACK", "zero_agentic_quota": false}
   },
   "rules": [
     "Authority Engine always precedes executor selection.",
-    "Secrets never route to public GitHub Actions.",
+    "Secrets never route to public GitHub Actions or the public canonical repository.",
     "Work/Codex are fallback premium execution planes, not defaults.",
     "LOCAL_AI may handle bounded internal code-assist tasks only within its verified scope.",
-    "LOCAL_BROWSER may replace Work for bounded public browser tasks in its verified scope; authenticated GUI use remains unverified until isolated authenticated-profile persistence/read-only benchmark passes.",
-    "Credentials are entered only by Kael directly into the isolated local browser; Nexia must not request or store passwords.",
-    "General unattended local execution is not claimed until the execution bridge is implemented and verified."
+    "LOCAL_BROWSER may replace Work for bounded authenticated Workana read-only inspection within the verified scope; external actions remain gated.",
+    "Credentials are entered only by Kael directly into the isolated local browser; Nexia must not request, print, transmit or store passwords/session tokens.",
+    "General unattended local execution is not claimed until the execution bridge is implemented and verified.",
+    "A future scheduled/local service requires separate bounded authorization because it changes local system execution behavior."
   ]
 }
