@@ -2,22 +2,24 @@
     "schema_version":  1,
     "challenge_id":  "LOCAL-BRIDGE-SCHEDULER-001",
     "nonce":  "NEXIA-SCHED-001-20261013-F19C",
-    "status":  "LOCAL_PC_SCHEDULER_WORKER_PASS",
+    "status":  "LOCAL_PC_SCHEDULER_PASS_CLEANED",
     "task_id":  "LOCAL-EXECUTION-BRIDGE-001",
     "source":  "NEXIA_LOCAL_PC",
     "launch_mode":  "WINDOWS_TASK_SCHEDULER_ONCE",
-    "scheduler_task_name":  "NEXIA_LOCAL_BRIDGE_SCHEDULER_001",
+    "transport":  "GH_API",
+    "authenticated_read_only":  true,
     "recurrence":  false,
     "polling":  false,
     "persistent_service":  false,
-    "transport":  "GH_API",
-    "authenticated_read_only":  true,
     "sanitized":  true,
     "contains_secrets":  false,
     "external_side_effects":  [
 
                               ],
     "cash_spend_eur":  0,
-    "scheduler_task_removed":  false,
-    "worker_timestamp_utc":  "2026-10-13T12:06:16.8192156Z"
+    "scheduler_last_run_time":  "2026-10-13T14:06:06.0000000+02:00",
+    "scheduler_last_task_result":  0,
+    "scheduler_task_removed":  true,
+    "worker_timestamp_utc":  "2026-10-13T12:06:16.8192156Z",
+    "cleanup_timestamp_utc":  "2026-10-13T12:07:28.0777364Z"
 }
