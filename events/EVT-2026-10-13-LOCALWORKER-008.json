@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALWORKER-008",
+  "date": "2026-10-13",
+  "project": "NEXIA CORE",
+  "type": "LOCAL_WORKER_24H_STABILITY_AUTHORIZED_AND_CI_PREPARED",
+  "classification": "HECHO_VERIFICADO_PRESTART",
+  "canonical_state_base_version": 71,
+  "summary": "Kael explicitly authorized LOCALWORKER-STABILITY-24H-001 limited to GREEN_INTERNAL, no external effects, and automatic shutdown. A separate bounded stability runner and Windows task manager were prepared; the main indefinite NEXIA Local Worker v0.1 Scheduled Task is not to be enabled. Stability safety CI completed successfully. Local 24h execution has not yet started and must not be claimed as started until Windows evidence is returned.",
+  "authorization": {
+    "exact_scope": "LOCALWORKER-STABILITY-24H-001, solo GREEN_INTERNAL, sin efectos externos y con autoapagado al finalizar",
+    "persistent_24x7_authorized": false,
+    "external_effects_authorized": false,
+    "commercial_actions_authorized": false,
+    "financial_spend_authorized": false
+  },
+  "prepared_artifacts": {
+    "runner": "tools/run_nexia_local_worker_stability_v0_1.ps1",
+    "manager": "tools/manage_nexia_local_worker_stability_24h_v0_1.ps1",
+    "regression": "tools/test_nexia_local_worker_stability_v0_1.ps1",
+    "workflow": ".github/workflows/nexia-local-worker-stability-ci.yml"
+  },
+  "verified_ci": {
+    "harness_fix_commit": "4bf653834ff832f22bda5e930371452b79477a11",
+    "workflow_run_id": 38445633232,
+    "workflow_conclusion": "success",
+    "syntax_validation": "success",
+    "stability_fail_closed_regression": "success",
+    "tested_invariants": [
+      "NO_TASK normal cycle can invoke bounded watchdog",
+      "GitHub fetch failure stops before watchdog",
+      "READY or PENDING queue stops before watchdog",
+      "expired window stops before network and watchdog"
+    ]
+  },
+  "fixed_success_thresholds_before_start": {
+    "wall_clock_window_hours": 24,
+    "scheduled_interval_minutes": 5,
+    "minimum_total_cycle_records": 285,
+    "maximum_cycle_failures": 0,
+    "maximum_inter_record_gap_minutes": 10,
+    "main_worker_task_must_remain_disabled": true,
+    "ready_pending_tasks_executed": 0,
+    "external_effects": 0,
+    "automatic_shutdown_deadline_minutes_after_window_end": 10,
+    "finalizer_file_required": "stability-final.json",
+    "stability_and_cleanup_tasks_must_end_disabled": true
+  },
+  "inconclusive_conditions": [
+    "PC sleep or shutdown causes minimum cycle count or gap threshold to fail",
+    "interactive Windows session is logged out and scheduled cycles are missed",
+    "GitHub/network outage causes gaps above the fixed threshold",
+    "any material evidence required for final reconciliation is missing"
+  ],
+  "local_execution_status": "NOT_STARTED_PENDING_KAEL_WINDOWS_INSTALLSTART",
+  "economics": {
+    "software_api_cost_eur": 0,
+    "electricity_cost": "UNKNOWN_NOT_INSTRUMENTED",
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "next_gate": "LOCALWORKER-STABILITY-24H-001-START",
+  "truth_limit": "This event proves authorization, prepared code, CI safety regression and predeclared thresholds only. It does not prove the Windows test has started, completed, remained continuously available, auto-shut down, or established production-grade 24x7 operation."
+}
