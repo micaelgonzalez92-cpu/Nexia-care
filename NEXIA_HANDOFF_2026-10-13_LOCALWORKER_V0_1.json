@@ -3,47 +3,56 @@
   "generated_at": "2026-10-13",
   "project": "NEXIA CORE",
   "canonical_state_version": 71,
-  "focus": "CAPABILITY_EVOLUTION_LOCAL_WORKER_24X7",
-  "status": "WATCHDOG_RETRY_LOGIC_CI_VERIFIED_WINDOWS_RUNTIME_PENDING",
+  "focus": "CAPABILITY_EVOLUTION_LOCAL_WORKER_BOUNDED_STABILITY",
+  "status": "STABILITY_24H_AUTHORIZED_CI_VERIFIED_PRESTART",
   "verified_evidence": {
-    "latest_event": "events/EVT-2026-10-13-LOCALWORKER-007.json",
-    "latest_event_blob_sha": "7595d7c7c2904ce0c6669747085a7459b46f08b7",
-    "safety_ladder_through_fail_closed": "VERIFIED",
-    "watchdog_retry_logic": "VERIFIED_CI",
-    "watchdog_ci_run_id": 38443106060,
-    "watchdog_ci_conclusion": "SUCCESS",
-    "max_attempts_hard_cap": 3,
-    "windows_installation": "INSTALLED_DISABLED",
-    "recurring_runtime": "NOT_AUTHORIZED_NOT_VERIFIED"
+    "latest_event": "events/EVT-2026-10-13-LOCALWORKER-008.json",
+    "latest_event_blob_sha": "0d228b3aca512a52a2aca0ecb1bddc8e6c333e13",
+    "safety_ladder_through_watchdog_windows": "VERIFIED",
+    "stability_safety_ci": "VERIFIED_SUCCESS",
+    "stability_ci_run_id": 38445633232,
+    "stability_ci_commit": "4bf653834ff832f22bda5e930371452b79477a11",
+    "main_windows_task": "INSTALLED_DISABLED",
+    "recurring_24x7_runtime": "NOT_AUTHORIZED_NOT_VERIFIED"
   },
-  "local_worker": {
-    "core": "tools/nexia_local_worker_v0_1.py",
-    "transport": "tools/run_nexia_local_worker_cycle_v0_1.ps1",
-    "watchdog": "tools/run_nexia_local_worker_watchdog_v0_1.ps1",
-    "watchdog_test": "tools/test_nexia_local_worker_watchdog_retry.ps1",
-    "manager": "tools/manage_nexia_local_worker_v0_1.ps1",
-    "windows_installation": "INSTALLED_DISABLED",
-    "scheduled_task_enabled": false,
-    "control_desired_state": "RUN",
-    "deployment_authorized": false,
-    "external_effects_authorized": false
-  },
-  "human_gate": {
-    "gate_id": "LOCALWORKER-WATCHDOG-WINDOWS-001",
-    "status": "REQUIRES_KAEL_LOCAL_BOUNDED_TEST",
-    "scope": "Install the verified watchdog script locally, run isolated transient and persistent retry simulations, then run one real no-task watchdog cycle. Scheduled Task remains Disabled.",
-    "persistent_execution_authorized": false,
-    "external_actions_authorized": false,
-    "financial_cost_eur": 0,
+  "authorized_trial": {
+    "gate_id": "LOCALWORKER-STABILITY-24H-001",
+    "status": "AUTHORIZED_NOT_STARTED",
+    "scope": "24h temporary recurrence, GREEN_INTERNAL only, no external effects, automatic shutdown at end.",
+    "duration_hours": 24,
+    "interval_minutes": 5,
+    "main_task_must_remain_disabled": true,
+    "software_api_cost_eur": 0,
+    "electricity_cost": "UNKNOWN_NOT_INSTRUMENTED",
     "reversible": true
   },
-  "success_check": "Windows isolated transient test recovers on attempt 2; persistent test stops exactly at attempt 2; real worker watchdog exits PASS with no READY/PENDING queue item; Scheduled Task remains Disabled.",
-  "next_after_success": "Record Windows watchdog runtime PASS. Then present a separate Human Gate for any limited unattended GREEN stability trial; /next alone must not enable recurrence.",
+  "fixed_success_thresholds": {
+    "minimum_total_cycle_records": 285,
+    "maximum_cycle_failures": 0,
+    "maximum_inter_record_gap_minutes": 10,
+    "ready_pending_tasks_executed": 0,
+    "external_effects": 0,
+    "automatic_shutdown_deadline_minutes_after_window_end": 10,
+    "finalizer_file_required": true,
+    "stability_task_final_state": "Disabled",
+    "cleanup_task_final_state": "Disabled",
+    "main_task_final_state": "Disabled"
+  },
+  "human_gate": {
+    "gate_id": "LOCALWORKER-STABILITY-24H-001-START",
+    "status": "REQUIRES_KAEL_WINDOWS_INSTALLSTART",
+    "scope": "Install and start only the separate bounded stability task and one-time cleanup task. Do not enable the indefinite main Local Worker task.",
+    "external_actions_authorized": false,
+    "commercial_actions_authorized": false,
+    "persistent_24x7_authorized": false
+  },
+  "success_check_for_start": "STABILITY_24H_START: PASS; START_AT and END_AT shown; stability and cleanup tasks Ready; MAIN_TASK_STATE: Disabled.",
+  "return_to_nexia": "Immediately paste the InstallStart output. Nexia records STARTED but cannot declare the stability gate PASS until the 24h window completes and final local evidence is reconciled.",
   "economic_priority_preserved": {
     "active_experiment": "EXP-AUTO-001",
     "workana_profile_gate_still_pending": true,
     "realized_revenue_eur": 0,
     "realized_profit_eur": 0
   },
-  "truth_limit": "Watchdog logic is CI-verified. Windows runtime watchdog integration, unattended recurrence, long-duration stability and 24x7 durability are not yet verified."
+  "truth_limit": "Authorization and CI preparation are verified. The 24h local test is not started, completed or passed yet. Interactive-session scheduling is not equivalent to a service-grade 24x7 daemon."
 }
