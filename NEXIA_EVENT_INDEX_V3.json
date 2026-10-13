@@ -26,12 +26,13 @@
     {"event_id":"EVT-2026-10-13-LOCALBRIDGE-011","path":"events/EVT-2026-10-13-LOCALBRIDGE-011.json","verified_blob_sha":"f60a212594f60ce6c31f79aa3119b541d77abbd8"},
     {"event_id":"EVT-2026-10-13-WORKANA-READ-001","path":"events/EVT-2026-10-13-WORKANA-READ-001.json","verified_blob_sha":"f82da9994c9ebe128e58e3125cbb7aa13b3c84d2"},
     {"event_id":"EVT-2026-10-13-WORKANA-READ-002","path":"events/EVT-2026-10-13-WORKANA-READ-002.json","verified_blob_sha":"bd948a4839b521c554b181fc144c5ba623aded6a"},
-    {"event_id":"EVT-2026-10-13-CONTINUITY-001","path":"events/EVT-2026-10-13-CONTINUITY-001.json","verified_blob_sha":"cee1f319cee4ce9082c787d0128f2d2aca1d72bd"}
+    {"event_id":"EVT-2026-10-13-CONTINUITY-001","path":"events/EVT-2026-10-13-CONTINUITY-001.json","verified_blob_sha":"cee1f319cee4ce9082c787d0128f2d2aca1d72bd"},
+    {"event_id":"EVT-2026-10-13-COMMERCIAL-001","path":"events/EVT-2026-10-13-COMMERCIAL-001.json","verified_blob_sha":"PENDING_REFETCH"}
   ],
-  "latest_event_id": "EVT-2026-10-13-CONTINUITY-001",
-  "latest_event_path": "events/EVT-2026-10-13-CONTINUITY-001.json",
-  "latest_event_blob_sha": "cee1f319cee4ce9082c787d0128f2d2aca1d72bd",
-  "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-READ-002",
+  "latest_event_id": "EVT-2026-10-13-COMMERCIAL-001",
+  "latest_event_path": "events/EVT-2026-10-13-COMMERCIAL-001.json",
+  "latest_event_blob_sha": "PENDING_REFETCH",
+  "latest_material_business_event_id": "EVT-2026-10-13-COMMERCIAL-001",
   "latest_session_handoff": "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
   "rule": "Read the immutable base index first, then every delta event in order. Failed events remain evidence and are superseded only by explicit later correction events."
 }
