@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALWORKER-004",
+  "timestamp": "2026-10-13T18:23:00+02:00",
+  "timestamp_precision": "minute",
+  "type": "LOCAL_WORKER_CODE_REF_CONTROL_BRANCH_SEPARATION_CI_VERIFIED",
+  "state_version": 71,
+  "evidence_source": "DIRECT_GITHUB_PATCH_PLUS_GITHUB_ACTIONS_CI",
+  "observed": {
+    "installed_task_state_from_prior_event": "DISABLED",
+    "manager_change": "Code artifacts remain pinned by Branch while runtime control/queue/status use separate ControlBranch=main.",
+    "manager_commit": "9be3d220442d8199882c5526ef49a81ee5c3ff0b",
+    "regression_test_commit": "841848280e23206a5609b69122718b13e3d5d79f",
+    "ci_run_id": 38429909544,
+    "ci_job_id": 115409056033,
+    "ci_conclusion": "SUCCESS",
+    "worker_regression_tests": "11_OF_11_PASS",
+    "powershell_syntax": "PASS",
+    "canonical_integrity": "PASS",
+    "deployment_authorized": false,
+    "external_effects_authorized": false,
+    "recurring_runtime_enabled": false,
+    "cash_spend_eur": 0
+  },
+  "prepared_health_check": {
+    "task_id": "LOCALWORKER-HC-001",
+    "action": "HEALTH_CHECK",
+    "authority": "GREEN_INTERNAL",
+    "external_effects": false,
+    "control_desired_state": "RUN",
+    "deployment_authorized": false,
+    "execution_mode": "ONE_SHOT_MANUAL_ONLY"
+  },
+  "interpretation": {
+    "status": "DISABLED_INSTALL_PRESENT_HEALTH_CHECK_READY_MANAGER_REINSTALL_NEEDED_FOR_FUTURE_RECURRENCE",
+    "next_gate": "REINSTALL_DISABLED_WITH_SEPARATED_CONTROL_BRANCH_AND_RUN_ONE_SHOT_HEALTH_CHECK",
+    "claim_24x7": false
+  },
+  "truth_limit": "CI verifies code paths, not Windows end-to-end runtime. The existing disabled scheduled task was created before control-branch separation and must be overwritten disabled before recurrence can later be considered."
+}
