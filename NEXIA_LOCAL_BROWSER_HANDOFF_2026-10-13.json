@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-13",
+  "canonical_state": {"version": 70, "changed": false},
+  "capability": "LOCAL_BROWSER",
+  "status": "PUBLIC_CONTROL_AND_SYNTHETIC_DOM_INTERACTION_VERIFIED_AUTH_PROFILE_PENDING",
+  "latest_event": "events/EVT-2026-10-13-LOCALBROWSER-003.json",
+  "verified": {
+    "chrome_cdp": true,
+    "public_navigation": true,
+    "page_title_url_readback": true,
+    "target_create_close": true,
+    "websocket_control": true,
+    "synthetic_dom_read": true,
+    "synthetic_dom_fill": true,
+    "synthetic_dom_click": true,
+    "result_readback": true,
+    "new_installation_required": false,
+    "cash_spend_eur": 0
+  },
+  "not_yet_verified": {
+    "authenticated_profile_persistence": true,
+    "authenticated_read_only_navigation": true,
+    "unattended_execution_bridge": true,
+    "full_work_replacement": true
+  },
+  "next_human_gate": {
+    "id": "LOCAL-BROWSER-001E",
+    "surface": "isolated local Chrome profile",
+    "device": "computer",
+    "why_kael": "Authentication credentials must be entered directly by Kael; Nexia must not request or receive passwords or 2FA codes.",
+    "action": "Open Workana in the isolated Chrome profile, sign in manually to the existing account, stop after reaching an authenticated account/dashboard page, then return the exact post-login URL shown in the address bar. Do not submit proposals, contact buyers, change profile settings or purchase anything.",
+    "cost_exposure": "EUR0; authentication only; no publication/contact/spend.",
+    "success_check": "Kael reaches an authenticated Workana page in the isolated NEXIA browser profile and provides only the resulting URL, not credentials or session tokens.",
+    "return_to_nexia": "Provide the exact authenticated page URL. Nexia will prepare a read-only persistence/reopen benchmark against the same isolated profile."
+  },
+  "authority_effect": "NONE. Login does not authorize proposals, submissions, publication, contact, spending or profile changes.",
+  "truth_limit": "LOCAL_BROWSER can now control public pages and synthetic DOM locally without Work, but authenticated Workana automation and unattended dispatch are not yet verified."
+}
