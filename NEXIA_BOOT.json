@@ -1,49 +1,52 @@
 {
   "schema_version": 3,
-  "boot_version": 49,
+  "boot_version": 50,
   "generated_at": "2026-10-13",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
-  "state_status": "CANONICAL_CURRENT_THROUGH_COMMERCIAL_001",
+  "state_status": "CANONICAL_BASE_PLUS_POST_STATE_WORKANA_PROFILE_GATE",
   "mission": {"id": "MISSION-OPPORTUNITY-ENGINE-001"},
   "recovery_order": [
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
+    "NEXIA_HANDOFF_2026-10-13_WORKANA_PROFILE_COMPLETION.json",
     "NEXIA_EVENT_INDEX_V3.json",
     "events after STATE v71 only if any",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "current_handoff": "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
+  "current_handoff": "NEXIA_HANDOFF_2026-10-13_WORKANA_PROFILE_COMPLETION.json",
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
   "learning_ledger": "NEXIA_MEMORY.md",
   "memory_status": "DERIVED_STALE_DO_NOT_USE_AS_CANONICAL_STATE",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "e37eaf2bd1fe7c9d798a74d8ed5cdb69383f2a70",
-    "latest_verified_event_id": "EVT-2026-10-13-CHECKPOINT-002",
-    "latest_verified_event_path": "events/EVT-2026-10-13-CHECKPOINT-002.json",
-    "latest_verified_event_blob_sha": "3120fc2b4fb7eca94e9805b677c0a83e1e5a132b",
-    "latest_material_business_event_id": "EVT-2026-10-13-COMMERCIAL-001"
+    "active_index_blob_sha": "29727d27ae8d142fef535297fe57ef20c59af213",
+    "latest_verified_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001",
+    "latest_verified_event_path": "events/EVT-2026-10-13-WORKANA-PROFILE-GATE-001.json",
+    "latest_verified_event_blob_sha": "0f6b34b04db10ffbe39673c94b40b08397673aef",
+    "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
   },
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
   "active_experiment": {
     "id": "EXP-AUTO-001",
-    "status": "PROPOSAL_INTERNALLY_READY_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
+    "status": "BLOCKED_PENDING_WORKANA_PROFILE_100_PERCENT_COMPLETION_AND_APPROVAL",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4
   },
   "workana": {
     "authenticated_dashboard": "VERIFIED_READ_ONLY",
     "moderation_status": "APPROVAL_NOT_VERIFIED",
+    "profile_completion_latest_verified": "APPROX_70_PERCENT_PREVIOUSLY_VERIFIED_NOT_YET_100_PERCENT_VERIFIED",
+    "profile_completion_requirement": "OFFICIAL_100_PERCENT_REQUIRED_FOR_EVALUATION_AND_PROPOSALS",
+    "profile_entry_artifact": "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
+    "profile_entry_status": "PREPARED_NOT_PUBLISHED",
     "primary_opportunity": "WORKANA-HUESCAVENTURA-001",
-    "primary_opportunity_revalidated_date": "2026-10-13",
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED_INTERNAL_READY",
     "proposal_artifact": "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md",
     "proposal_execution_condition": "Explicit profile approval + fresh open-project recheck + EUR0 submission cost"
@@ -71,8 +74,8 @@
     "profit_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "human_gate": "No immediate Kael action. Huescaventura proposal is internally ready but blocked until explicit Workana profile approval is verified, the project remains open and submission cost is EUR0.",
-  "sync_status": "STATE_V71_ATOMIC_SINGLE_TREE_COMMIT_VERIFIED_POST_COMMIT_REFETCH",
+  "human_gate": "Kael must explicitly complete the remaining Workana profile field truthfully to reach 100%, using the prepared personal n8n project entry. This is an external profile modification; do not purchase Priority Moderation.",
+  "sync_status": "STATE_V71_BASE_PLUS_VERIFIED_POST_STATE_PROFILE_GATE",
   "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
-  "next_action": "Do not redo bridge benchmarks, generic moderation probes or proposal drafting. Use existing daily Gmail sensor for explicit Workana approval/rejection. On explicit approval, freshly revalidate Huescaventura and submit only the already-authorized EUR300 proposal if still open and submission remains EUR0."
+  "next_action": "Human Gate: complete Workana profile to 100% at EUR0 using commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md without claiming paid-client work. Then verify the displayed moderation state. On explicit approval, freshly revalidate Huescaventura and submit only the already-authorized EUR300 proposal if still open and submission remains EUR0."
 }
