@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-13",
+  "project": "NEXIA CORE",
+  "canonical_state_version": 71,
+  "state_status": "STATE_V71_CURRENT_PLUS_POST_STATE_WORKANA_PROFILE_GATE",
+  "mission": "MISSION-OPPORTUNITY-ENGINE-001",
+  "active_experiment": {
+    "id": "EXP-AUTO-001",
+    "status": "BLOCKED_PENDING_WORKANA_PROFILE_100_PERCENT_COMPLETION_AND_APPROVAL",
+    "authorized_price_eur": 300,
+    "max_delivery_hours": 4
+  },
+  "verified_change": {
+    "event": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001",
+    "official_requirement": "Workana requires 100% profile completion for evaluation/sending proposals",
+    "prepared_material": "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
+    "policy_evidence": "commercial/WORKANA_PROFILE_MODERATION_EVIDENCE_2026-10-13.md",
+    "external_change_executed": false,
+    "cash_spend_eur": 0
+  },
+  "session_handoff": {
+    "last_completed_verified_action": "Official Workana moderation/profile guidance was verified and persisted; a truthful personal n8n project entry was already prepared but not published.",
+    "human_action_required_now": true,
+    "pending_human_action": "Complete the remaining Workana profile field truthfully to reach 100% using the prepared personal-project entry, without paying Priority Moderation.",
+    "surface": "Workana authenticated profile",
+    "device": "mobile_or_computer",
+    "why_kael": "This changes an external account/profile and therefore requires Kael's explicit action/approval.",
+    "steps": [
+      "Open the authenticated Workana freelancer profile/editor.",
+      "Locate the remaining incomplete project/history or featured-project field preventing 100% completion.",
+      "Add the prepared personal n8n project truthfully; do not present it as paid client work.",
+      "Save the profile change only if Workana accepts a personal project/example and no payment is required.",
+      "Confirm whether the profile now displays 100% completion and note the explicit moderation status shown."
+    ],
+    "material_to_use": "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
+    "cost_exposure": "EUR0; do not purchase Priority Moderation",
+    "success_check": "Profile displays 100% completion and an explicit moderation state with no false client claims and no payment.",
+    "return_to_nexia": "Report the displayed completion percentage and moderation status, or provide a screenshot if the field/status is ambiguous.",
+    "resume_from": "After 100% completion is verified, continue sensing for explicit approval. On approval, freshly revalidate Huescaventura and submit only the already-authorized EUR300 proposal if still open and submission remains EUR0.",
+    "truth_limit": "Profile completion is not approval, proposal submission, buyer interest, payment or profit."
+  }
+}
