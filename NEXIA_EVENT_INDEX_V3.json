@@ -39,11 +39,12 @@
     {"event_id":"EVT-2026-10-13-LOCALWORKER-005","path":"events/EVT-2026-10-13-LOCALWORKER-005.json","verified_blob_sha":"01280ba34e3210b2ad505f36501a730e88ff8fad"},
     {"event_id":"EVT-2026-10-13-LOCALWORKER-006","path":"events/EVT-2026-10-13-LOCALWORKER-006.json","verified_blob_sha":"ce8865a3963c127fcbc135569117cf4e5b7532f4"},
     {"event_id":"EVT-2026-10-13-LOCALWORKER-007","path":"events/EVT-2026-10-13-LOCALWORKER-007.json","verified_blob_sha":"7595d7c7c2904ce0c6669747085a7459b46f08b7"},
-    {"event_id":"EVT-2026-10-13-LOCALWORKER-008","path":"events/EVT-2026-10-13-LOCALWORKER-008.json","verified_blob_sha":"0d228b3aca512a52a2aca0ecb1bddc8e6c333e13"}
+    {"event_id":"EVT-2026-10-13-LOCALWORKER-008","path":"events/EVT-2026-10-13-LOCALWORKER-008.json","verified_blob_sha":"0d228b3aca512a52a2aca0ecb1bddc8e6c333e13"},
+    {"event_id":"EVT-2026-10-13-LOCALWORKER-009","path":"events/EVT-2026-10-13-LOCALWORKER-009.json","verified_blob_sha":"9a7910f75a6acf53c5e961bb05a7641f92f4fc9f"}
   ],
-  "latest_event_id": "EVT-2026-10-13-LOCALWORKER-008",
-  "latest_event_path": "events/EVT-2026-10-13-LOCALWORKER-008.json",
-  "latest_event_blob_sha": "0d228b3aca512a52a2aca0ecb1bddc8e6c333e13",
+  "latest_event_id": "EVT-2026-10-13-LOCALWORKER-009",
+  "latest_event_path": "events/EVT-2026-10-13-LOCALWORKER-009.json",
+  "latest_event_blob_sha": "9a7910f75a6acf53c5e961bb05a7641f92f4fc9f",
   "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001",
   "latest_session_handoff": "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
   "rule": "Read STATE v71 as canonical base. Then apply indexed post-state delta events and the latest handoff; failed events remain evidence and are superseded only by explicit later correction events."
