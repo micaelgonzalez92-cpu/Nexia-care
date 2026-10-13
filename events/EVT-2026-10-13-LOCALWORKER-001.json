@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALWORKER-001",
+  "timestamp": "2026-10-13T18:00:00+02:00",
+  "timestamp_precision": "minute",
+  "type": "LOCAL_WORKER_V0_1_REPO_IMPLEMENTATION_CI_VERIFIED_NOT_DEPLOYED",
+  "state_version": 71,
+  "evidence_source": "DIRECT_GITHUB_FILES_PLUS_GITHUB_ACTIONS_CI",
+  "observed": {
+    "worker_core": "tools/nexia_local_worker_v0_1.py",
+    "worker_tests": "tools/test_nexia_local_worker_v0_1.py",
+    "transport": "tools/run_nexia_local_worker_cycle_v0_1.ps1",
+    "scheduler_manager": "tools/manage_nexia_local_worker_v0_1.ps1",
+    "control_plane": "NEXIA_LOCAL_WORKER_CONTROL.json",
+    "queue": "NEXIA_LOCAL_WORKER_QUEUE.json",
+    "status": "NEXIA_LOCAL_WORKER_STATUS.json",
+    "ci_run_id": 38426755938,
+    "ci_job_id": 115398062369,
+    "ci_conclusion": "SUCCESS",
+    "worker_regression_tests": "9_OF_9_PASS",
+    "powershell_transport_syntax": "PASS",
+    "canonical_state_boot_live_integrity": "PASS",
+    "remote_control_default": "STOP",
+    "deployment_authorized": false,
+    "external_effects_authorized": false,
+    "queue_task_count": 0,
+    "local_pc_deployment": "NOT_EXECUTED",
+    "windows_recurring_task_installed": false,
+    "windows_recurring_task_enabled": false,
+    "persistent_24x7_runtime": "NOT_VERIFIED",
+    "cash_spend_eur": 0,
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "safety_properties": {
+    "auto_execute_authority": ["GREEN", "GREEN_INTERNAL"],
+    "yellow_red_unknown": "HUMAN_GATE",
+    "external_effects_v0_1": "FORBIDDEN",
+    "remote_stop": "LATCHED",
+    "remote_run_cannot_clear_stop": true,
+    "local_explicit_rearm_required": true,
+    "github_unavailable": "FAIL_CLOSED_NO_CACHED_QUEUE_EXECUTION",
+    "queue_conflict": "FAIL_CLOSED",
+    "remote_result": "SANITIZED_NO_TASK_OUTPUT_SECRETS_PAGE_BODIES_OR_COOKIES"
+  },
+  "interpretation": {
+    "status": "IMPLEMENTED_AND_CI_VERIFIED_IN_REPOSITORY_NOT_DEPLOYED",
+    "next_gate": "LOCAL_INSTALL_DISABLED_AND_RUNTIME_HEALTH_CHECK",
+    "claim_24x7": false
+  },
+  "authority_effect": "NONE. Repository implementation only. Does not authorize local persistent deployment, polling, account writes or external business side effects.",
+  "truth_limit": "CI verification is not proof of Windows runtime persistence, restart recovery, remote STOP end-to-end behavior or 24/7 operation on Kael's PC."
+}
