@@ -1,24 +1,24 @@
 {
   "schema_version": 3,
   "updated_at": "2026-10-13",
-  "status": "ACTIVE / EXP-AUTO-001 PROPOSAL INTERNALLY READY / WORKANA PROFILE APPROVAL NOT VERIFIED / STATE V71 CURRENT AND VERIFIED",
+  "status": "ACTIVE / EXP-AUTO-001 / WORKANA PROFILE 100 PERCENT COMPLETION HUMAN GATE / STATE V71 BASE CURRENT",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
-  "state_status": "CANONICAL_CURRENT_THROUGH_COMMERCIAL_001",
+  "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTA",
   "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "e37eaf2bd1fe7c9d798a74d8ed5cdb69383f2a70",
-    "latest_verified_event_id": "EVT-2026-10-13-CHECKPOINT-002",
-    "latest_verified_event_path": "events/EVT-2026-10-13-CHECKPOINT-002.json",
-    "latest_material_business_event_id": "EVT-2026-10-13-COMMERCIAL-001"
+    "active_index_blob_sha": "29727d27ae8d142fef535297fe57ef20c59af213",
+    "latest_verified_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001",
+    "latest_verified_event_path": "events/EVT-2026-10-13-WORKANA-PROFILE-GATE-001.json",
+    "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "name": "Lead Intake Reliability Sprint",
     "stage": "VETA / PRE-VALIDACION COMERCIAL",
-    "status": "PROPOSAL_INTERNALLY_READY_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
+    "status": "BLOCKED_PENDING_WORKANA_PROFILE_100_PERCENT_COMPLETION_AND_APPROVAL",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "economic_priority": true
@@ -27,19 +27,18 @@
     "authenticated_dashboard": "VERIFIED_READ_ONLY",
     "profile_approval": "NOT_VERIFIED",
     "profile_rejection": "NOT_VERIFIED",
-    "generic_dashboard_moderation_probe": "UNKNOWN_NO_EXPLICIT_MARKER",
-    "latest_probe_event": "EVT-2026-10-13-WORKANA-READ-002",
-    "latest_gmail_check": "2026-10-13_NO_NEW_WORKANA_EMAIL_AFTER_DAILY_CHECK",
+    "latest_gmail_check": "2026-10-13_NO_NEW_EXPLICIT_APPROVAL_EMAIL",
+    "profile_completion_previous_verified": "APPROX_70_PERCENT",
+    "profile_100_percent_requirement": "OFFICIAL_WORKANA_REQUIREMENT_VERIFIED_2026-10-13",
+    "profile_entry_artifact": "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
+    "profile_entry_status": "PREPARED_NOT_PUBLISHED",
+    "policy_evidence_artifact": "commercial/WORKANA_PROFILE_MODERATION_EVIDENCE_2026-10-13.md",
     "proposal_status": "AUTHORIZED_NOT_SUBMITTED_INTERNAL_READY",
     "proposal_artifact": "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md",
-    "proposal_professional_gate": "PASS_INTERNAL_READY",
     "primary_opportunity": "WORKANA-HUESCAVENTURA-001",
-    "public_opportunity_status": "OPEN_EVALUATING_PROPOSALS_REVERIFIED_2026-10-13",
-    "visible_proposals_last_check": 1,
-    "public_budget_eur": "200-300",
     "proposal_authorized_price_eur": 300,
     "proposal_execution_condition": "Approval verified + Huescaventura freshly rechecked open + EUR0 submission cost",
-    "commercial_gate": "BLOCKED_PROFILE_APPROVAL_NOT_VERIFIED"
+    "commercial_gate": "BLOCKED_PROFILE_COMPLETION_THEN_APPROVAL"
   },
   "execution_capabilities": {
     "local_browser": "VERIFIED_WORKANA_AUTHENTICATED_READ_ONLY_PERSISTENT_SESSION",
@@ -60,8 +59,8 @@
     "paused_count": 5,
     "completed_count": 1,
     "control_tower": "ACTIVE_DAILY_MATERIAL_GMAIL_SENSOR",
-    "exp_auto_worker": "ACTIVE_DAILY_OPTIMIZED_FROM_EVERY_6_HOURS",
-    "venture_radar": "ACTIVE_DAILY_TWO_VEINS_WIP_STRICT",
+    "exp_auto_worker": "ACTIVE_DAILY_OPTIMIZED",
+    "venture_radar": "ACTIVE_DAILY_TWO_VEINS_ONLY",
     "capability_evolution": "ACTIVE_WEEKLY"
   },
   "economics": {
@@ -77,36 +76,42 @@
     "classification": "ESTIMATE_NOT_REALIZED"
   },
   "current_blockers": [
+    "Workana profile has not yet been verified at 100% completion",
     "Workana profile approval is not verified",
     "No buyer response, paid pilot, settled payment or realized profit exists",
-    "Recurring/persistent local execution is not authorized or verified",
     "Authenticated external Workana write actions remain separately gated"
   ],
   "session_handoff": {
-    "last_completed_verified_action": "Canonical STATE v71 was committed atomically in commit 3b112135d0d951d28500649a2cd8900220d84007 and re-fetched with matching state and boot hashes. Latest manual Gmail check found no new Workana email.",
-    "last_user_facing_handoff": "EXP-AUTO-001 proposal is internally ready. Do not submit until Workana profile approval is explicitly verified.",
-    "human_action_required_now": false,
-    "pending_human_action": null,
-    "surface": "ChatGPT Chat",
+    "last_completed_verified_action": "Verified Workana official 100% profile completion requirement, persisted policy evidence, created a post-state event and updated recovery pointers. No Workana profile change was executed.",
+    "last_user_facing_handoff": "The remaining Workana profile field is now the highest-value blocker. A truthful personal n8n project entry is prepared but not published.",
+    "human_action_required_now": true,
+    "pending_human_action": "Complete the remaining Workana profile field truthfully to reach 100% using the prepared personal-project entry.",
+    "surface": "Workana authenticated freelancer profile",
     "device": "mobile_or_computer",
-    "why_kael": "No immediate action is required while Workana approval remains unverified.",
-    "steps": [],
-    "material_to_use": "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md",
-    "cost_exposure": "EUR0",
-    "success_check": "On explicit profile approval, revalidate Huescaventura open status and EUR0 submission cost, then execute only the already-authorized EUR300 proposal.",
-    "return_to_nexia": "No immediate return required.",
+    "why_kael": "External profile/account modification requires Kael.",
+    "steps": [
+      "Open the Workana freelancer profile editor.",
+      "Locate the incomplete project/history or featured-project field.",
+      "Use commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md and keep it explicitly personal/internal, not paid client work.",
+      "Save only if no payment is required.",
+      "Verify 100% completion and the displayed moderation state."
+    ],
+    "material_to_use": "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
+    "cost_exposure": "EUR0; Priority Moderation remains not authorized",
+    "success_check": "Workana shows 100% profile completion and an explicit moderation status without false claims.",
+    "return_to_nexia": "Report the completion percentage and moderation status shown after saving; screenshot only if ambiguous.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
+      "NEXIA_HANDOFF_2026-10-13_WORKANA_PROFILE_COMPLETION.json",
       "NEXIA_EVENT_INDEX_V3.json",
-      "events/EVT-2026-10-13-CHECKPOINT-002.json",
-      "events/EVT-2026-10-13-COMMERCIAL-001.json",
-      "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md"
+      "events/EVT-2026-10-13-WORKANA-PROFILE-GATE-001.json",
+      "commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md",
+      "commercial/WORKANA_PROFILE_MODERATION_EVIDENCE_2026-10-13.md"
     ],
-    "resume_from": "Do not redo bridge benchmarks, generic moderation probes or proposal drafting. Wait for explicit Workana approval evidence; on approval revalidate Huescaventura and submit only if still open and EUR0. Otherwise continue only non-redundant zero-cost falsification.",
-    "truth_limit": "Internal readiness and canonical reconciliation are not submission, buyer interest, payment or profit."
+    "resume_from": "After profile 100% completion is verified, continue approval sensing. On explicit approval, revalidate Huescaventura and submit only if still open and EUR0.",
+    "truth_limit": "Profile completion is not approval, proposal submission, buyer interest, payment or profit."
   },
-  "next_action": "Preserve the ready EUR300 Huescaventura proposal. Use existing daily Gmail sensing for approval/rejection. Do not repeat moderation probes or proposal drafting unless material evidence changes."
+  "next_action": "Human Gate: complete Workana profile to 100% using the prepared truthful personal-project entry at EUR0, then verify moderation status."
 }
