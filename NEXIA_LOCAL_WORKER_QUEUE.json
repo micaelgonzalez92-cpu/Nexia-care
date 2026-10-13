@@ -2,7 +2,16 @@
   "schema_version": 1,
   "updated_at": "2026-10-13",
   "worker_min_version": "0.1.0",
-  "tasks": [],
+  "tasks": [
+    {
+      "task_id": "LOCALWORKER-HC-001",
+      "action": "HEALTH_CHECK",
+      "authority": "GREEN_INTERNAL",
+      "external_effects": false,
+      "status": "READY",
+      "payload": {}
+    }
+  ],
   "rules": {
     "auto_authorities": ["GREEN", "GREEN_INTERNAL"],
     "yellow_red_unknown": "HUMAN_GATE",
