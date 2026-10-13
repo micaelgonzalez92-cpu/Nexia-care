@@ -108,7 +108,10 @@ jobs:
 
       - name: Local worker GitHub fail-closed regression
         shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          if(-not (Get-Command gh -ErrorAction SilentlyContinue)){ throw 'gh CLI unavailable on runner.' }
           $root = Join-Path $env:RUNNER_TEMP 'nexia-failclosed-ci'
           $bin = Join-Path $root 'bin'
           $fakeBin = Join-Path $root 'fakebin'
@@ -134,15 +137,6 @@ jobs:
 
           $pythonCalled = Join-Path $root 'python-called.txt'
           $env:NEXIA_FAKE_PYTHON_CALLED = $pythonCalled
-
-          $fakeGh = Join-Path $fakeBin 'gh'
-          @'
-          #!/usr/bin/env bash
-          echo "gh: simulated unavailable transport" >&2
-          exit 1
-          '@ | Set-Content -Encoding utf8 $fakeGh
-          & chmod +x $fakeGh
-
           $fakePython = Join-Path $fakeBin 'python'
           @'
           #!/usr/bin/env bash
@@ -150,10 +144,10 @@ jobs:
           exit 99
           '@ | Set-Content -Encoding utf8 $fakePython
           & chmod +x $fakePython
-
           $env:PATH = "$fakeBin$([IO.Path]::PathSeparator)$env:PATH"
+
           $cycle = Join-Path $bin 'run_nexia_local_worker_cycle_v0_1.ps1'
-          & pwsh -NoProfile -ExecutionPolicy Bypass -File $cycle -Repo 'owner/repo' -Branch main -BaseDir $root
+          & pwsh -NoProfile -File $cycle -Repo 'micaelgonzalez92-cpu/NEXIA-REPO-THAT-MUST-NOT-EXIST-FAILCLOSED-CI' -Branch main -BaseDir $root
           $code = $LASTEXITCODE
 
           if($code -eq 0){ throw 'Fail-closed regression: transport failure returned exit code 0.' }
