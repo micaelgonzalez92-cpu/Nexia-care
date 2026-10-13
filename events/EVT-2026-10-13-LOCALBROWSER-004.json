@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBROWSER-004",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "WORKANA_AUTHENTICATED_SESSION_PERSISTENCE_READ_ONLY_VERIFIED",
+  "state_version": 70,
+  "evidence_source": "KAEL_SHARED_POWERSHELL_OUTPUT",
+  "observed": {
+    "precondition_browser_stopped": "PASS",
+    "browser_restart_same_profile": "PASS",
+    "browser": "Chrome/154.0.8037.98",
+    "dashboard_target_create": "PASS",
+    "websocket_connect": "PASS",
+    "final_url": "https://www.workana.com/dashboard",
+    "title": "WORKANA > Contrata freelancers, encuentra trabajo",
+    "has_password_field": false,
+    "body_length": 2639,
+    "auth_session_persistence": "PASS",
+    "target_close": "PASS",
+    "cash_spend_eur": 0,
+    "new_installation_required": false
+  },
+  "interpretation": {
+    "isolated_profile_persistence": "VERIFIED",
+    "workana_authenticated_read_only_navigation": "VERIFIED_BOUNDED",
+    "credential_capture": "NONE",
+    "local_browser_work_replacement": "VERIFIED_FOR_BOUNDED_WORKANA_READ_ONLY_INSPECTION_ONLY",
+    "authenticated_write_actions": "NOT_VERIFIED_AND_NOT_AUTHORIZED",
+    "unattended_execution_bridge": "NOT_YET_VERIFIED"
+  },
+  "next_gate": "LOCAL-EXECUTION-BRIDGE-001: dispatch one sanitized read-only Workana inspection task from canonical repo to the local browser runner and return a structured sanitized result without Work.",
+  "authority_effect": "NONE. Read-only authenticated inspection is within existing authority. Proposal submission, messaging, purchases, profile/account changes, publication and other external side effects remain separately gated.",
+  "truth_limit": "This verifies session persistence and bounded authenticated read-only inspection on Workana using the isolated local Chrome profile. It does not prove general authenticated automation, unattended orchestration, proposal submission or full Work replacement."
+}
