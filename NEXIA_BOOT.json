@@ -1,34 +1,39 @@
 {
-  "schema_version": 2,
-  "boot_version": 45,
-  "generated_at": "2026-10-12",
+  "schema_version": 3,
+  "boot_version": 46,
+  "generated_at": "2026-10-13",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
   "state_version": 70,
-  "state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
+  "state_status": "VALID_POST_STATE_DELTA_UNABSORBED",
   "mission": {
     "id": "MISSION-OPPORTUNITY-ENGINE-001"
   },
+  "recovery_order": [
+    "NEXIA_BOOT.json",
+    "NEXIA_STATE.json",
+    "NEXIA_LIVE.json",
+    "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
+    "NEXIA_EVENT_INDEX_V3.json",
+    "events referenced by the V3 delta after STATE",
+    "NEXIA_MEMORY.md only when needed",
+    "NEXIA_MASTER_BACKUP.md only when needed"
+  ],
   "live_state": "NEXIA_LIVE.json",
+  "current_handoff": "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
+  "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
   "learning_ledger": "NEXIA_MEMORY.md",
-  "memory_status": "DERIVED_STALE_AT_V63_HEADER_WRITE_BLOCKED_BY_TOOL_SAFETY",
-  "commercial_pipeline": "NEXIA_COMMERCIAL_PIPELINE.json",
-  "parallel_veins": "NEXIA_PARALLEL_VEINS_2026-10-12.md",
-  "auto_product_market_report": "NEXIA_VETA_AUTO_PRODUCT_MARKET_FALSIFICATION_2026-10-12.md",
-  "auto_product_validation_experiment": "NEXIA_VETA_AUTO_PRODUCT_VALIDATION_EXPERIMENT_2026-10-12.md",
-  "ai_ugc_falsification": "NEXIA_VETA_AI_UGC_FALSIFICATION_2026-10-12.md",
+  "memory_status": "DERIVED_STALE_DO_NOT_USE_AS_CANONICAL_STATE",
   "portable_backup": "NEXIA_MASTER_BACKUP.md",
   "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
-  "persistence_protocol_version": "2.0",
   "event_storage": {
-    "mode": "IMMUTABLE_EVENT_FILES_V2",
-    "index": "NEXIA_EVENT_INDEX.json",
-    "index_blob_sha": "ec2420cc3ffdd26c2536ffa0f4eb31f00c824796",
-    "latest_verified_event_id": "EVT-2026-10-12-AUTOPROD-002",
-    "latest_verified_event_path": "events/EVT-2026-10-12-AUTOPROD-002.json",
-    "latest_verified_event_blob_sha": "5663a6d54f593b6bab97090c44b91b2b8d4ea496",
-    "legacy_jsonl_mode": "READ_ONLY",
-    "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
+    "mode": "COMPOSITE_BASE_PLUS_DELTA",
+    "base_index": "NEXIA_EVENT_INDEX.json",
+    "active_index": "NEXIA_EVENT_INDEX_V3.json",
+    "latest_verified_event_id": "EVT-2026-10-13-WORKANA-READ-002",
+    "latest_verified_event_path": "events/EVT-2026-10-13-WORKANA-READ-002.json",
+    "latest_verified_event_blob_sha": "bd948a4839b521c554b181fc144c5ba623aded6a",
+    "legacy_jsonl_mode": "READ_ONLY"
   },
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
   "active_experiment": {
@@ -38,69 +43,28 @@
     "max_delivery_hours": 4
   },
   "workana": {
-    "moderation_status": "PROFILE_UNDER_ANALYSIS_PENDING_MODERATION",
+    "authenticated_dashboard": "VERIFIED_READ_ONLY",
+    "moderation_status": "APPROVAL_NOT_VERIFIED_GENERIC_DASHBOARD_PROBE_UNKNOWN",
     "priority_moderation_decision": "DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND",
     "primary_opportunity": "WORKANA-HUESCAVENTURA-001",
-    "proposal_status": "AUTHORIZED_NOT_SUBMITTED"
+    "proposal_status": "AUTHORIZED_NOT_SUBMITTED",
+    "proposal_execution_condition": "Explicit profile approval + fresh open-project recheck + EUR0 submission cost"
   },
-  "parallel_research": {
-    "status": "ACTIVE_PARALLEL_FALSIFICATION",
-    "max_paths": 2,
-    "veins": [
-      {
-        "id": "VETA-AUTO-PRODUCT-001",
-        "status": "PREPARED_INTERNAL_SKU",
-        "priority": 1,
-        "product": "Lead Intake Reliability Kit for n8n"
-      },
-      {
-        "id": "VETA-AI-UGC-001",
-        "status": "WATCH_PORTFOLIO_GAP",
-        "priority": 2
-      }
-    ],
-    "generic_etsy_templates": "NO_GO_GENERIC"
+  "local_execution": {
+    "browser": "VERIFIED_WORKANA_AUTHENTICATED_READ_ONLY_PERSISTENT_SESSION",
+    "integrated_bridge": "VERIFIED_AUTOMATIC_SANITIZED_RESULT_RETURN",
+    "scheduler": "VERIFIED_ONE_SHOT_AUTOMATIC_START_AND_CLEANUP",
+    "recurring_service": "NOT_AUTHORIZED_NOT_VERIFIED",
+    "external_write_actions": "NOT_AUTHORIZED_NOT_VERIFIED"
   },
-  "auto_product_runtime": {
-    "status": "VERIFIED_PASS_FULL_N8N_SERVER",
-    "n8n_version": "2.42.6",
-    "github_actions_run": 38235228044,
-    "github_actions_job": 114764135662,
-    "tested_commit": "ca54ddbc626520a13450aecda6c550d165a42300",
-    "persistent_dedup_across_restart": true,
-    "autonomous_send": false,
-    "external_users": 0,
-    "paid_sales": 0,
-    "process_stop_and_readiness_verified": true,
-    "rows_immediately_after_restart_before_new_write": 1,
-    "rows_after_new_unique_identity": 2,
-    "audit_404_retries": 0,
-    "orphan_n8n_start_processes_in_final_cleanup": 0,
-    "evidence_report": "NEXIA_VETA_AUTO_PRODUCT_RUNTIME_REVERIFICATION_2026-10-12.md",
-    "evidence_report_blob_sha": "bd7d26a21f448fe28f705034eeeb511a8dfadc6d"
+  "economics": {
+    "capital_spent_eur": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "profit_eur": 0,
+    "reconciled_net_profit_eur": 0
   },
-  "automation_architecture": {
-    "active": 3,
-    "paused": 6,
-    "completed": 1,
-    "control_tower": "DAILY_ACTIVE_NOTIFICATIONS_ENABLED_INCLUDES_WORKANA_SENSOR",
-    "parallel_worker": "EVERY_6_HOURS_ACTIVE",
-    "parallel_business_radar": "DAILY_ACTIVE_AROUND_15",
-    "workana_response_watch": "PAUSED_REDUNDANT"
-  },
-  "continuous_integration": {
-    "status": "VERIFIED",
-    "workflow": ".github/workflows/nexia-ci.yml",
-    "n8n_runtime_workflow": ".github/workflows/n8n-runtime-smoke.yml",
-    "n8n_product_runtime_workflow": ".github/workflows/n8n-product-runtime-smoke.yml",
-    "n8n_product_runtime_run": 38235228044,
-    "n8n_product_runtime_conclusion": "success",
-    "deployment": "NONE"
-  },
-  "human_gate": "No immediate action for Workana. Product distribution/account/publication remains NOT AUTHORIZED; next material product test would be zero-spend n8n Creator submission after explicit Kael authorization.",
-  "capital_spent_eur": 0,
-  "revenue_eur": 0,
-  "profit_eur": 0,
-  "sync_status": "STATE_V70_FINAL_SHA_BOUND_RUNTIME_RESTART_PROOF_CORRECTED_MEMORY_DERIVED_STALE",
-  "next_action": "Technical SKU gate is verified; do not add more internal engineering. Review the prepared first FREE n8n Creator template Human Gate covering public exposure at EUR0 before account/submission/publication. Before any paid-product experiment, preregister missing measurement/economic details and obtain a separate WIP/priority decision. EXP-AUTO-001 remains the sole active monetization experiment; no external action is authorized by this checkpoint."
+  "human_gate": "No immediate Kael action. Huescaventura proposal remains conditionally authorized only after explicit Workana profile approval is verified, project remains open and submission cost is EUR0. Recurring/persistent local automation and external Workana write actions remain separately gated.",
+  "sync_status": "BOOT_AND_LIVE_RECONCILED_THROUGH_WORKANA_READ_002_STATE_V70_NOT_YET_ATOMICALLY_CHECKPOINTED",
+  "next_action": "Do not repeat verified bridge benchmarks or generic Workana dashboard moderation probes. Keep EXP-AUTO-001 as economic priority; use existing daily Gmail sensor for a material moderation change. On explicit approval, freshly revalidate Huescaventura and execute only the already-authorized EUR300 proposal if all gates remain satisfied."
 }
