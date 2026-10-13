@@ -1,19 +1,19 @@
 {
   "schema_version": 3,
   "updated_at": "2026-10-13",
-  "status": "ACTIVE / EXP-AUTO-001 + LOCAL WORKER V0.1 DEPLOYMENT GATE / STATE V71 BASE CURRENT",
+  "status": "ACTIVE / EXP-AUTO-001 + LOCAL WORKER V0.1 CORRECTED INSTALL RETRY GATE / STATE V71 BASE CURRENT",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
-  "boot_version": 51,
-  "boot_blob_sha": "2c2d53d319c903f342aca217df93a9cabffae6bd",
+  "boot_version": 52,
+  "boot_blob_sha": "56fd94aef1ef98f7a1bc89d5ff8cacff46cdc7fa",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
   "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "f8545cdc964983b4ab6106c269d18aab980199f3",
-    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-001",
-    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-001.json",
+    "active_index_blob_sha": "56a0ea4a945cf9acd43e85dd42484e154228a6ea",
+    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-002",
+    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-002.json",
     "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
   },
   "active_experiment": {
@@ -47,7 +47,8 @@
     "gh_api_writeback": "VERIFIED_BOUNDED_SANITIZED",
     "integrated_local_bridge": "VERIFIED_AUTHENTICATED_READ_ONLY_WITH_AUTOMATIC_RESULT_RETURN",
     "windows_task_scheduler": "VERIFIED_ONE_SHOT_AUTOMATIC_START_AND_CLEANUP",
-    "local_worker_v0_1": "IMPLEMENTED_AND_CI_VERIFIED_NOT_DEPLOYED",
+    "local_worker_v0_1": "CORRECTED_AND_CI_VERIFIED_INSTALL_RETRY_REQUIRED",
+    "local_worker_safe_retry_revision": "073cd0b5d75458609ef54e8b020d9f97ccdb6b74",
     "local_worker_remote_control": "STOP_FAIL_CLOSED",
     "local_worker_external_effects": "FORBIDDEN_V0_1",
     "recurrence_polling_persistent_service": "NOT_AUTHORIZED_NOT_VERIFIED",
@@ -82,7 +83,7 @@
     "classification": "ESTIMATE_NOT_REALIZED"
   },
   "current_blockers": [
-    "Local Worker v0.1 is not installed on Kael's PC",
+    "Local Worker v0.1 corrected installation retry is pending on Kael's PC",
     "Persistent/recurrent runtime is not authorized or verified",
     "Workana profile has not yet been verified at 100% completion",
     "Workana profile approval is not verified",
@@ -90,15 +91,15 @@
     "Authenticated external Workana write actions remain separately gated"
   ],
   "session_handoff": {
-    "last_completed_verified_action": "Implemented NEXIA Local Worker v0.1 in GitHub and verified it in CI: 9/9 worker safety tests PASS, PowerShell transport syntax PASS, canonical STATE/BOOT/LIVE integrity PASS. No local installation or persistent runtime was executed.",
-    "last_user_facing_handoff": "Local Worker v0.1 is ready for a disabled-only Windows installation gate. It is not a running 24/7 worker yet.",
+    "last_completed_verified_action": "Diagnosed failed disabled-install attempt before task registration, fixed PowerShell $Action/$action collision, added a regression guard, and verified commit 073cd0b5d75458609ef54e8b020d9f97ccdb6b74 with Nexia CI run 38428153380 SUCCESS. No scheduled task was created and no worker cycle executed.",
+    "last_user_facing_handoff": "Retry the same disabled-only installation gate using corrected pinned revision 073cd0b5d75458609ef54e8b020d9f97ccdb6b74.",
     "human_action_required_now": true,
-    "pending_human_action": "Install Local Worker v0.1 on the Windows PC in DISABLED state only.",
+    "pending_human_action": "Retry Local Worker v0.1 installation on the Windows PC in DISABLED state only using corrected pinned revision 073cd0b5d75458609ef54e8b020d9f97ccdb6b74.",
     "surface": "Windows PowerShell on Kael's PC",
     "device": "computer",
-    "why_kael": "Creating a recurring Windows Scheduled Task modifies the local operating system and persistent execution was not authorized by /evolve alone.",
+    "why_kael": "Creating a recurring Windows Scheduled Task modifies the local operating system; only disabled installation is authorized at this gate.",
     "steps": [
-      "Run the pinned LOCALWORKER-INSTALL-DISABLED-001 PowerShell command provided by Nexia.",
+      "Run the corrected pinned LOCALWORKER-INSTALL-DISABLED-001-RETRY PowerShell command provided by Nexia.",
       "Confirm the output contains INSTALL_DISABLED: PASS.",
       "Do not enable or rearm the task.",
       "Return the terminal output to Nexia."
@@ -106,20 +107,20 @@
     "material_to_use": "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
     "cost_exposure": "EUR0 software/API; electricity cost is UNKNOWN_NOT_INSTRUMENTED and no recurring runtime is enabled by this gate.",
     "success_check": "Windows Scheduled Task 'NEXIA Local Worker v0.1' exists in Disabled state; no worker cycle has executed; remote status remains NOT_DEPLOYED until a separately authorized runtime test.",
-    "return_to_nexia": "Paste the terminal output after InstallDisabled. Nexia will verify the installation before requesting any bounded HEALTH_CHECK execution.",
+    "return_to_nexia": "Paste the terminal output after corrected InstallDisabled retry. Nexia will verify the installation before requesting any bounded HEALTH_CHECK execution.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
       "NEXIA_EVENT_INDEX_V3.json",
-      "events/EVT-2026-10-13-LOCALWORKER-001.json",
+      "events/EVT-2026-10-13-LOCALWORKER-002.json",
       "NEXIA_LOCAL_WORKER_CONTROL.json",
       "NEXIA_LOCAL_WORKER_QUEUE.json",
       "NEXIA_LOCAL_WORKER_STATUS.json"
     ],
-    "resume_from": "Verify disabled local installation first. Then separately authorize and execute one bounded HEALTH_CHECK. Only after STOP, restart/recovery, offline fail-closed and durability tests may recurrence be considered.",
-    "truth_limit": "Repository CI verification is not local deployment, persistence or 24x7 operation."
+    "resume_from": "Verify corrected disabled local installation first. Then separately authorize and execute one bounded HEALTH_CHECK. Only after STOP, restart/recovery, offline fail-closed and durability tests may recurrence be considered.",
+    "truth_limit": "Corrected repository CI verification is not local deployment, persistence or 24x7 operation."
   },
-  "next_action": "LOCALWORKER-INSTALL-DISABLED-001: install the CI-verified worker as a Disabled Windows scheduled task only, then verify."
+  "next_action": "LOCALWORKER-INSTALL-DISABLED-001-RETRY: install corrected pinned revision 073cd0b5d75458609ef54e8b020d9f97ccdb6b74 as a Disabled Windows scheduled task only, then verify."
 }
