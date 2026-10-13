@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "task_id": "LOCAL-EXECUTION-BRIDGE-001",
+  "updated_at": "2026-10-13",
+  "status": "READY_FOR_ONE_SHOT_BENCHMARK",
+  "executor": "LOCAL_BROWSER",
+  "action": "AUTHENTICATED_READ_ONLY_PAGE_PROBE",
+  "url": "https://www.workana.com/dashboard",
+  "allowed_host": "www.workana.com",
+  "expected_url_prefix": "https://www.workana.com/dashboard",
+  "min_body_length": 50,
+  "forbid_password_field": true,
+  "read_only": true,
+  "effects": [],
+  "result_policy": {
+    "print_body_text": false,
+    "print_cookies": false,
+    "print_storage": false,
+    "print_headers": false,
+    "allowed_fields": [
+      "task_id",
+      "status",
+      "final_url",
+      "title",
+      "has_password_field",
+      "body_length",
+      "authenticated_read_only",
+      "browser"
+    ]
+  },
+  "authority": "GREEN_YELLOW_READ_ONLY_EXISTING_ACCOUNT",
+  "cash_spend_eur": 0,
+  "truth_limit": "This task may only inspect the existing authenticated Workana dashboard and return sanitized metadata. It must not click, fill, submit, message, purchase, change settings or expose credentials/session material."
+}
