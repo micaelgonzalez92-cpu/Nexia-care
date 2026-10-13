@@ -1,38 +1,38 @@
 {
   "schema_version": 3,
-  "boot_version": 50,
+  "boot_version": 51,
   "generated_at": "2026-10-13",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
-  "state_status": "CANONICAL_BASE_PLUS_POST_STATE_WORKANA_PROFILE_GATE",
+  "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
   "mission": {"id": "MISSION-OPPORTUNITY-ENGINE-001"},
   "recovery_order": [
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "NEXIA_HANDOFF_2026-10-13_WORKANA_PROFILE_COMPLETION.json",
+    "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
     "NEXIA_EVENT_INDEX_V3.json",
     "events after STATE v71 only if any",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "current_handoff": "NEXIA_HANDOFF_2026-10-13_WORKANA_PROFILE_COMPLETION.json",
+  "current_handoff": "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
   "learning_ledger": "NEXIA_MEMORY.md",
   "memory_status": "DERIVED_STALE_DO_NOT_USE_AS_CANONICAL_STATE",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "29727d27ae8d142fef535297fe57ef20c59af213",
-    "latest_verified_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001",
-    "latest_verified_event_path": "events/EVT-2026-10-13-WORKANA-PROFILE-GATE-001.json",
-    "latest_verified_event_blob_sha": "0f6b34b04db10ffbe39673c94b40b08397673aef",
+    "active_index_blob_sha": "f8545cdc964983b4ab6106c269d18aab980199f3",
+    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-001",
+    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-001.json",
+    "latest_verified_event_blob_sha": "578558afe7400913b6807dedb6a9c14d1bc81b5f",
     "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
   },
-  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001 + CAPABILITY EVOLUTION LOCAL WORKER",
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "status": "BLOCKED_PENDING_WORKANA_PROFILE_100_PERCENT_COMPLETION_AND_APPROVAL",
@@ -55,6 +55,8 @@
     "browser": "VERIFIED_WORKANA_AUTHENTICATED_READ_ONLY_PERSISTENT_SESSION",
     "integrated_bridge": "VERIFIED_AUTOMATIC_SANITIZED_RESULT_RETURN",
     "scheduler": "VERIFIED_ONE_SHOT_AUTOMATIC_START_AND_CLEANUP",
+    "local_worker_v0_1": "IMPLEMENTED_AND_CI_VERIFIED_NOT_DEPLOYED",
+    "local_worker_control": "STOP_FAIL_CLOSED",
     "recurring_service": "NOT_AUTHORIZED_NOT_VERIFIED",
     "external_write_actions": "NOT_AUTHORIZED_NOT_VERIFIED"
   },
@@ -72,10 +74,12 @@
     "revenue_eur": 0,
     "settled_revenue_eur": 0,
     "profit_eur": 0,
-    "reconciled_net_profit_eur": 0
+    "reconciled_net_profit_eur": 0,
+    "local_worker_software_api_cost_eur": 0,
+    "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
-  "human_gate": "Kael must explicitly complete the remaining Workana profile field truthfully to reach 100%, using the prepared personal n8n project entry. This is an external profile modification; do not purchase Priority Moderation.",
-  "sync_status": "STATE_V71_BASE_PLUS_VERIFIED_POST_STATE_PROFILE_GATE",
+  "human_gate": "Current capability gate: install Local Worker v0.1 in DISABLED state only, then verify before any runtime activation. Separate economic gate remains: Workana profile completion to 100%. No recurring execution or external effects are authorized.",
+  "sync_status": "STATE_V71_BASE_PLUS_VERIFIED_LOCALWORKER_001_DELTA",
   "checkpoint_commit_sha": "3b112135d0d951d28500649a2cd8900220d84007",
-  "next_action": "Human Gate: complete Workana profile to 100% at EUR0 using commercial/WORKANA_PROFILE_PROJECT_ENTRY_V1.md without claiming paid-client work. Then verify the displayed moderation state. On explicit approval, freshly revalidate Huescaventura and submit only the already-authorized EUR300 proposal if still open and submission remains EUR0."
+  "next_action": "LOCALWORKER-INSTALL-DISABLED-001: Kael installs the CI-verified worker as a disabled Windows scheduled task only. After verification, authorize one bounded HEALTH_CHECK before considering recurrence. Do not claim 24x7 yet."
 }
