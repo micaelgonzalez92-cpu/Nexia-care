@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-UGCVIDEO-004",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "UGC_VIDEO_001_LOCAL_COMFYUI_CONNECTION_REFUSED",
+  "state_version": 70,
+  "experiment": "UGC-VIDEO-001",
+  "vein": "VETA-AI-UGC-001",
+  "trigger_evidence": "Kael re-ran the corrected launcher. The Python runtime was discovered and the runner started, but it stopped before model download/video generation with URLError WinError 10061: connection refused to the local ComfyUI endpoint.",
+  "execution_effect": {
+    "attempts_completed": 0,
+    "video_attempts_consumed": 0,
+    "cash_spend_eur": 0,
+    "model_download_verified_started": false,
+    "visual_gate_reached": false
+  },
+  "diagnosis": {
+    "classification": "LOCAL_COMFYUI_API_NOT_REACHABLE",
+    "evidence": "The runner targets http://127.0.0.1:8188. WinError 10061 means the local TCP connection was explicitly refused at the time of the API call. This is consistent with ComfyUI not remaining reachable on port 8188; it is not evidence of an LTX model failure.",
+    "runner_reference": "tools/run_ugc_video_001.py"
+  },
+  "next_safe_action": "Start the already-existing ComfyUI manually with its existing run_nvidia_gpu.bat, wait until http://127.0.0.1:8188 is open/reachable, then rerun the same corrected UGC-VIDEO-001 launcher exactly once. Do not install software, custom nodes or another model.",
+  "status": "BLOCKED_LOCAL_COMFYUI_NOT_REACHABLE_PENDING_MANUAL_START_AND_RETRY",
+  "truth_limit": "No video attempt, model quality result, sale, payment or profit is verified."
+}
