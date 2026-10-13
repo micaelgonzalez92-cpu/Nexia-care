@@ -9,7 +9,8 @@ param(
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 
-$cycle = Join-Path $BaseDir 'bin\run_nexia_local_worker_cycle_v0_1.ps1'
+$binDir = Join-Path $BaseDir 'bin'
+$cycle = Join-Path $binDir 'run_nexia_local_worker_cycle_v0_1.ps1'
 $statusPath = Join-Path $BaseDir 'watchdog-status.json'
 if(-not (Test-Path $cycle)){ throw "Worker cycle missing: $cycle" }
 
