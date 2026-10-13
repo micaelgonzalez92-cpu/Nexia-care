@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-13",
+  "desired_state": "STOP",
+  "reason": "NOT_DEPLOYED_FAIL_CLOSED",
+  "remote_rule": "STOP may latch remotely. RUN never clears a local STOP latch; local explicit re-arm is required.",
+  "deployment_authorized": false,
+  "external_effects_authorized": false
+}
