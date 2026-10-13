@@ -1,38 +1,48 @@
 {
   "schema_version": 3,
   "updated_at": "2026-10-13",
-  "status": "ACTIVE / EXP-AUTO-001 + LOCAL WORKER V0.1 WATCHDOG LOGIC CI VERIFIED / WINDOWS WATCHDOG RUNTIME GATE",
+  "status": "ACTIVE / EXP-AUTO-001 + LOCAL WORKER V0.1 WATCHDOG WINDOWS PASS + 24H STABILITY AUTHORIZED CI-VERIFIED PRESTART",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
-  "boot_version": 56,
-  "boot_blob_sha": "d0dfc32ecfcfd947866e310313c78873f5e8dd4e",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
-  "checkpoint_commit_sha": "b1e3cf319ff08d171bfaa53ea656f86a453f51cc",
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "aaef6e4f157effe77b85cf8bdcdeb1229c2972e5",
-    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-007",
-    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-007.json",
+    "active_index_blob_sha": "edf1823bcc510358861cada8f1f83030b851bf29",
+    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-008",
+    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-008.json",
+    "latest_verified_event_blob_sha": "0d228b3aca512a52a2aca0ecb1bddc8e6c333e13",
     "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
-    "name": "Lead Intake Reliability Sprint",
     "stage": "VETA / PRE-VALIDACION COMERCIAL",
     "status": "BLOCKED_PENDING_WORKANA_PROFILE_100_PERCENT_COMPLETION_AND_APPROVAL",
     "authorized_price_eur": 300,
-    "max_delivery_hours": 4,
     "economic_priority": true
   },
   "execution_capabilities": {
-    "local_worker_v0_1": "SAFETY_LADDER_THROUGH_FAIL_CLOSED_CI_VERIFIED",
-    "watchdog_retry_logic": "VERIFIED_CI",
-    "watchdog_ci_run_id": 38443106060,
-    "windows_watchdog_runtime": "NOT_YET_VERIFIED",
-    "windows_task_scheduler": "LOCAL_WORKER_TASK_INSTALLED_DISABLED",
-    "local_worker_external_effects": "FORBIDDEN_V0_1",
-    "recurrence_polling_persistent_service": "NOT_AUTHORIZED_NOT_VERIFIED"
+    "local_worker_safety_ladder": "VERIFIED_THROUGH_WATCHDOG_WINDOWS",
+    "watchdog_retry_logic": "VERIFIED_CI_AND_WINDOWS",
+    "stability_24h_harness": "CI_VERIFIED_NOT_STARTED_LOCAL",
+    "stability_ci_run_id": 38445633232,
+    "main_windows_task": "INSTALLED_DISABLED",
+    "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
+    "external_effects": "FORBIDDEN_V0_1"
+  },
+  "authorized_stability_trial": {
+    "id": "LOCALWORKER-STABILITY-24H-001",
+    "authorization": "GREEN_INTERNAL_ONLY_NO_EXTERNAL_EFFECTS_AUTO_SHUTDOWN",
+    "status": "AUTHORIZED_PREPARED_NOT_STARTED",
+    "duration_hours": 24,
+    "interval_minutes": 5,
+    "minimum_total_cycle_records": 285,
+    "maximum_cycle_failures": 0,
+    "maximum_gap_minutes": 10,
+    "auto_shutdown_deadline_minutes_after_end": 10,
+    "main_worker_task_must_remain_disabled": true,
+    "separate_stability_task": true,
+    "separate_cleanup_task": true
   },
   "economics": {
     "capital_spent_eur": 0,
@@ -40,42 +50,31 @@
     "settled_revenue_eur": 0,
     "profit_eur": 0,
     "reconciled_net_profit_eur": 0,
-    "local_worker_software_api_cost_eur": 0,
-    "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
+    "stability_trial_software_api_cost_eur": 0,
+    "stability_trial_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
-  "current_blockers": [
-    "Windows watchdog runtime integration is not yet verified",
-    "Persistent/recurrent runtime is not authorized or verified",
-    "Long-duration stability trial is not authorized or executed",
-    "Workana profile has not yet been verified at 100% completion",
-    "Workana profile approval is not verified",
-    "No buyer response, paid pilot, settled payment or realized profit exists"
-  ],
   "session_handoff": {
-    "last_completed_verified_action": "LOCALWORKER-007: bounded watchdog retry semantics verified in dedicated GitHub Actions run 38443106060 SUCCESS. Transient recovery and persistent retry-cap behavior passed. Scheduled recurrence remains unauthorized.",
-    "last_user_facing_handoff": "Run LOCALWORKER-WATCHDOG-WINDOWS-001 only; do not enable the Scheduled Task.",
+    "last_completed_verified_action": "Stability safety CI run 38445633232 completed SUCCESS after correcting a test-harness JSON escaping defect. Windows watchdog runtime had already passed locally with transient recovery, retry cap, real NO_TASK PASS and main Scheduled Task Disabled.",
+    "last_user_facing_handoff": "Kael authorized LOCALWORKER-STABILITY-24H-001. Harness is prepared and CI-verified; local Windows test has not started yet.",
     "human_action_required_now": true,
-    "pending_human_action": "Install the verified watchdog script locally and run isolated transient/persistent simulations plus one real no-task watchdog cycle.",
+    "pending_human_action": "Run the bounded InstallStart command for LOCALWORKER-STABILITY-24H-001 on Windows PowerShell, then return the START/END/task-state output.",
     "surface": "Windows PowerShell on Kael's PC",
     "device": "computer",
-    "why_kael": "Windows runtime compatibility must be proven on the actual local installation; Nexia cannot independently execute commands on the PC from this chat.",
-    "material_to_use": "Exact PowerShell block supplied in chat for LOCALWORKER-WATCHDOG-WINDOWS-001.",
-    "cost_exposure": "EUR0 software/API; task remains Disabled; no external effects; electricity cost UNKNOWN_NOT_INSTRUMENTED.",
-    "success_check": "Transient simulation recovers on attempt 2; persistent simulation stops at attempt 2; real watchdog reports PASS/attempts=1 or bounded recovery, with no READY/PENDING queue task; Scheduled Task remains Disabled.",
-    "return_to_nexia": "Paste the final WATCHDOG_* lines, REAL WATCHDOG STATUS and SCHEDULED TASK STATE.",
+    "why_kael": "The 24h Windows Scheduled Task must be installed and started on the actual local PC; Nexia cannot directly execute Windows commands from this chat.",
+    "cost_exposure": "EUR0 software/API; electricity UNKNOWN_NOT_INSTRUMENTED; no Workana, commercial or external effects; main worker task remains Disabled.",
+    "success_check": "InstallStart prints STABILITY_24H_START: PASS, explicit START_AT and END_AT, Stability task Ready, Cleanup task Ready, and MAIN_TASK_STATE: Disabled. Final 24h pass requires fixed thresholds from LOCALWORKER-008.",
+    "return_to_nexia": "Paste the output from STABILITY_CYCLE/PREFLIGHT through MAIN_TASK_STATE immediately after InstallStart. Nexia will record STARTED; final PASS will only be assessed after the 24h window.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
       "NEXIA_EVENT_INDEX_V3.json",
-      "events/EVT-2026-10-13-LOCALWORKER-007.json",
+      "events/EVT-2026-10-13-LOCALWORKER-008.json",
       "NEXIA_LOCAL_WORKER_CONTROL.json",
-      "NEXIA_LOCAL_WORKER_QUEUE.json",
-      "NEXIA_LOCAL_WORKER_STATUS.json"
+      "NEXIA_LOCAL_WORKER_QUEUE.json"
     ],
-    "resume_from": "Verify LOCALWORKER-WATCHDOG-WINDOWS-001. If PASS, record evidence and stop at the separate Human Gate for any limited unattended stability trial; /next alone cannot authorize recurrence.",
-    "truth_limit": "Watchdog logic is CI-verified; Windows integration, recurrence and 24x7 durability are not."
+    "resume_from": "LOCALWORKER-STABILITY-24H-001-START. Do not enable the indefinite NEXIA Local Worker v0.1 task."
   },
-  "next_action": "LOCALWORKER-WATCHDOG-WINDOWS-001: Kael runs bounded Windows watchdog runtime test with Scheduled Task Disabled."
+  "next_action": "LOCALWORKER-STABILITY-24H-001-START"
 }
