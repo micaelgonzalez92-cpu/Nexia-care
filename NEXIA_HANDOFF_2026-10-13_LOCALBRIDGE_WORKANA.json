@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-13",
+  "project": "NEXIA CORE",
+  "canonical_state_version": 70,
+  "state_status": "VALID_BUT_POST_STATE_DELTA_UNABSORBED",
+  "mission": "MISSION-OPPORTUNITY-ENGINE-001",
+  "active_experiment": {
+    "id": "EXP-AUTO-001",
+    "stage": "VETA / PRE-VALIDACION COMERCIAL",
+    "status": "PREPARED_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
+    "authorized_price_eur": 300,
+    "max_delivery_hours": 4,
+    "economic_priority": true
+  },
+  "latest_verified_capabilities": {
+    "local_browser": "VERIFIED_WORKANA_AUTHENTICATED_READ_ONLY_PERSISTENT_SESSION",
+    "integrated_local_bridge": "VERIFIED_AUTHENTICATED_READ_ONLY_WITH_AUTOMATIC_SANITIZED_GH_API_RESULT_RETURN",
+    "windows_task_scheduler": "VERIFIED_ONE_SHOT_AUTOMATIC_START_AND_CLEANUP",
+    "recurring_or_persistent_local_service": "NOT_AUTHORIZED_NOT_VERIFIED",
+    "authenticated_workana_write_actions": "NOT_VERIFIED_NOT_AUTHORIZED"
+  },
+  "latest_verified_workana_evidence": {
+    "dashboard_authenticated_read_only": true,
+    "moderation_probe": "UNKNOWN",
+    "explicit_approved_marker": false,
+    "explicit_rejected_marker": false,
+    "pending_marker_in_generic_dashboard_probe": false,
+    "profile_approval_verified": false,
+    "commercial_gate": "BLOCKED_PROFILE_APPROVAL_NOT_VERIFIED",
+    "proposal_submission": "DO_NOT_EXECUTE"
+  },
+  "primary_opportunity": {
+    "id": "WORKANA-HUESCAVENTURA-001",
+    "proposal_authorized": true,
+    "authorized_gross_price_eur": 300,
+    "proposal_submitted": false,
+    "submission_condition": "Only after Workana profile approval is verified, project is freshly rechecked open, and submission requires EUR0 additional spend"
+  },
+  "economics": {
+    "actual_revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "actual_profit_eur": 0,
+    "reconciled_net_profit_eur": 0,
+    "cash_spend_this_bridge_work_eur": 0
+  },
+  "latest_verified_events": [
+    "events/EVT-2026-10-13-LOCALBROWSER-004.json",
+    "events/EVT-2026-10-13-LOCALBRIDGE-006.json",
+    "events/EVT-2026-10-13-LOCALBRIDGE-008.json",
+    "events/EVT-2026-10-13-LOCALBRIDGE-011.json",
+    "events/EVT-2026-10-13-WORKANA-READ-002.json"
+  ],
+  "resume_required_reads": [
+    "NEXIA_BOOT.json",
+    "NEXIA_STATE.json",
+    "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V3.json",
+    "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
+    "NEXIA_EXECUTION_CAPABILITIES.json",
+    "events/EVT-2026-10-13-LOCALBRIDGE-011.json",
+    "events/EVT-2026-10-13-WORKANA-READ-002.json"
+  ],
+  "resume_from": "Preserve EXP-AUTO-001 as economic priority. Do not infer Workana approval from the generic dashboard. Daily Gmail sensing remains sufficient. If explicit approval appears, immediately revalidate Huescaventura and execute only the already-authorized EUR300 proposal if still open and EUR0 submission cost. Otherwise continue zero-cost falsification/research without creating redundant polling.",
+  "human_action_required_now": false,
+  "pending_human_action": null,
+  "truth_limit": "The local bridge capability reduces Work dependence for bounded authenticated read-only Workana tasks. It does not authorize recurring services or external Workana write actions. No sale, settled payment or realized profit has occurred."
+}
