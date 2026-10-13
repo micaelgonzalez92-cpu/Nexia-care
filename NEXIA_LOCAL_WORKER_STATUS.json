@@ -1,12 +1,12 @@
 {
     "schema_version":  1,
-    "updated_at":  "2026-10-13T18:35:02.0830751+02:00",
+    "updated_at":  "2026-10-13T18:40:27.7387730+02:00",
     "worker_version":  "0.1.0",
     "deployment_status":  "DEPLOYED_CODE_PATH_ACTIVE",
-    "execution_status":  "STOPPED",
+    "execution_status":  "IDLE",
     "last_task_id":  null,
-    "last_result":  "NOT_EXECUTED",
-    "reason":  "STOP_LATCHED",
+    "last_result":  "NO_TASK",
+    "reason":  null,
     "heartbeat":  "REMOTE_TRANSITION_OR_6H_HEARTBEAT",
     "cash_spend_eur":  0,
     "truth_limit":  "Status proves only the last sanitized worker cycle; it does not authorize external effects."
