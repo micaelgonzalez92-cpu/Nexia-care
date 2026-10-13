@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-LOCALBRIDGE-010",
+  "timestamp": "2026-10-13",
+  "timestamp_precision": "date_only",
+  "type": "ONE_SHOT_SCHEDULER_BENCHMARK_ATTEMPT_NOT_OBSERVED_REMOTE",
+  "state_version": 70,
+  "evidence_source": "DIRECT_GITHUB_REMOTE_VERIFICATION_AFTER_KAEL_REPORTED_DONE",
+  "observed": {
+    "challenge_path": "NEXIA_LOCAL_BRIDGE_SCHEDULER_CHALLENGE.json",
+    "challenge_status": "READY_UNCHANGED",
+    "expected_worker_status": "LOCAL_PC_SCHEDULER_WORKER_PASS_OR_LOCAL_PC_SCHEDULER_PASS_CLEANED",
+    "expected_worker_status_observed": false,
+    "expected_scheduler_commit_search": "NO_MATCH",
+    "cash_spend_eur": 0
+  },
+  "interpretation": {
+    "scheduler_001": "FAIL_NOT_VERIFIED",
+    "automatic_local_start": "NOT_VERIFIED",
+    "integrated_manual_start_bridge": "REMAINS_VERIFIED_BY_LOCALBRIDGE_008",
+    "automatic_result_return": "REMAINS_VERIFIED_BY_LOCALBRIDGE_008",
+    "failure_scope": "SCHEDULER_AUTOMATIC_START_BENCHMARK_ONLY",
+    "root_cause": "UNKNOWN_FROM_REMOTE_EVIDENCE",
+    "authorized_one_shot_run": "CONSUMED_BY_USER_EXECUTION_ATTEMPT"
+  },
+  "next_gate": "Run a zero-side-effect local diagnostic only: inspect whether the scheduled task still exists, read the bounded local worker log if present, confirm gh auth availability, and report only sanitized diagnostics. Do not create or run another scheduled task without a new explicit authorization.",
+  "authority_effect": "NONE. The prior authorization is not expanded. No recurring task, polling, persistent service or external business action is authorized.",
+  "truth_limit": "Kael reported completion, but the remote scheduler challenge remained READY and no expected scheduler writeback commit was observed. Therefore unattended local start is not verified."
+}
