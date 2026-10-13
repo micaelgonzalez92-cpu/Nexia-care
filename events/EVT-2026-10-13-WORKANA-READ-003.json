@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-13-WORKANA-READ-003",
+  "date": "2026-10-13",
+  "project": "NEXIA CORE",
+  "type": "WORKANA_OPPORTUNITY_AND_PROFILE_APPROVAL_REVALIDATION",
+  "classification": "HECHO_VERIFICADO_READ_ONLY",
+  "canonical_state_base_version": 71,
+  "summary": "During the running 24h local-worker stability window, Nexia used only read-only external checks to revalidate the active commercial opportunity and profile-approval gate. Huescaventura remains publicly open and evaluating proposals, while Gmail contains no explicit Workana profile approval message in the recent period.",
+  "huescaventura": {
+    "project_id": "WORKANA-HUESCAVENTURA-001",
+    "public_status": "OPEN_EVALUATING_PROPOSALS",
+    "public_page_crawled_today": true,
+    "published_date": "2026-05-23",
+    "budget_eur_range": [200, 300],
+    "visible_proposals": 1,
+    "visible_freelancers_interested": 1,
+    "buyer_payment_verified": true,
+    "buyer_projects_published": 2,
+    "buyer_projects_paid": 1,
+    "proposal_submission_executed": false,
+    "authorized_offer_eur": 300
+  },
+  "gmail_profile_gate": {
+    "search_scope": "Recent Workana messages, newer_than 7d, excluding spam/trash",
+    "explicit_profile_approval_found": false,
+    "latest_relevant_subject": "Estás a un paso de ser aprobado en Workana 🚀",
+    "latest_relevant_message_date_utc": "2026-10-12T10:10:28+00:00",
+    "interpretation": "NOT_EXPLICIT_APPROVAL"
+  },
+  "commercial_gate": {
+    "profile_100_percent_complete": "NOT_FRESHLY_VERIFIED",
+    "profile_approved": false,
+    "submission_allowed_now": false,
+    "reason": "Conditional authorization requires explicit profile approval, fresh still-open verification and zero submission cost. Opportunity is fresh/open, but explicit profile approval is not verified."
+  },
+  "actions_taken": {
+    "external_messages_sent": 0,
+    "proposals_submitted": 0,
+    "profile_changes": 0,
+    "cash_spend_eur": 0
+  },
+  "economics": {
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "next_gate": "WORKANA_PROFILE_100_PERCENT_AND_EXPLICIT_APPROVAL",
+  "truth_limit": "Public Workana project status and recent Gmail messages were revalidated read-only. Authenticated profile completion percentage was not inspected in this event, and no commercial action was executed."
+}
