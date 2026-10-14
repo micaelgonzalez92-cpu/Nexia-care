@@ -1,17 +1,24 @@
 {
   "schema_version": 3,
   "updated_at": "2026-10-14",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA PROFILE 100% APPROVAL PENDING + LOCAL WORKER 24H STABILITY RUNNING",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA PROFILE 100% APPROVAL PENDING + LOCAL WORKER 24H STABILITY RUNNING + MASTER INSTRUCTIONS V2 APPROVED",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
+  "instruction_policy": {
+    "working_policy": "NEXIA_MASTER_INSTRUCTIONS_V2_2026-10-14.md",
+    "approved_by_kael": true,
+    "github_persisted": true,
+    "chatgpt_project_settings_installed": false,
+    "event_id": "EVT-2026-10-14-INSTRUCTIONS-001"
+  },
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "c333dd9f89bbc2a8764c1b2b0b52cc19a0d7ee65",
-    "latest_verified_event_id": "EVT-2026-10-14-WORKANA-PROFILE-100-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-WORKANA-PROFILE-100-001.json",
-    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROFILE-100-001"
+    "active_index_blob_sha": "3c1cb4edbf2cef3bc1436da917327872f50e3c49",
+    "latest_verified_event_id": "EVT-2026-10-14-INSTRUCTIONS-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-INSTRUCTIONS-001.json",
+    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
@@ -58,24 +65,26 @@
     "stability_trial_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Kael reported Workana profile completion at 100%. Fresh Gmail recheck found no explicit approval message; latest Workana email remains 'Estás a un paso de ser aprobado en Workana' dated 2026-10-12. Completion gate cleared by user report; approval gate remains pending.",
-    "last_user_facing_handoff": "Workana profile is now 100%; do not submit Huescaventura until explicit approval is verified.",
+    "last_completed_verified_action": "Kael approved the fused Nexia Master Instructions V2. The artifact was persisted at NEXIA_MASTER_INSTRUCTIONS_V2_2026-10-14.md and indexed as EVT-2026-10-14-INSTRUCTIONS-001. Project-settings installation remains unverified and must not be claimed.",
+    "last_user_facing_handoff": "Master Instructions V2 approved and persisted; Workana approval and local-worker stability final reconciliation remain pending.",
     "human_action_required_now": false,
-    "pending_human_action": "None until Workana approval appears. Do not buy priority moderation and do not submit a proposal before explicit approval.",
+    "pending_human_action": "Optional: install the exact V2 text in ChatGPT Project instructions if Kael wants the UI configuration updated. Separately, report explicit Workana approval if it arrives. Do not interfere with the running stability trial.",
     "surface": "None currently",
     "device": "none",
     "cost_exposure": "EUR0; no commercial action executed.",
-    "success_check": "Explicit Workana approval is verified by dashboard or email, then Huescaventura is freshly revalidated open with zero submission cost before the existing 300 EUR proposal may be submitted.",
-    "return_to_nexia": "If Workana sends an approval email or dashboard changes to Aprobado, report it. Final local-worker reconciliation remains due after 2026-10-14T20:22:39.3995480+02:00 plus up to 10 minutes.",
+    "success_check": "Future recovery reads the V2 instruction artifact/event; Workana approval remains explicit; local-worker trial is reconciled only after its end window.",
+    "return_to_nexia": "No action required now unless Kael chooses to update the Project instructions UI, Workana approval arrives, or the local-worker stability window ends.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_EVENT_INDEX_V3.json",
-      "events/EVT-2026-10-14-WORKANA-PROFILE-100-001.json",
+      "events/EVT-2026-10-14-INSTRUCTIONS-001.json",
+      "NEXIA_MASTER_INSTRUCTIONS_V2_2026-10-14.md",
+      "events/EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001.json",
       "events/EVT-2026-10-13-LOCALWORKER-009.json"
     ],
-    "resume_from": "Workana profile completion gate cleared by user report; wait for explicit approval while preserving the running 24h local-worker stability trial."
+    "resume_from": "Use Master Instructions V2 as approved working policy; wait for explicit Workana approval and preserve the running 24h local-worker stability trial."
   },
   "next_action": "WAIT_FOR_WORKANA_EXPLICIT_APPROVAL_AND_FINALIZE_LOCALWORKER_AFTER_WINDOW"
 }
