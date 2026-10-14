@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-LOCALWORKER-010",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "LOCAL_WORKER_24H_STABILITY_FINAL_RECONCILIATION",
+  "classification": "HECHO_VERIFICADO_FROM_KAEL_LOCAL_OUTPUT_PLUS_REPOSITORY_HARNESS_REVIEW",
+  "canonical_state_base_version": 71,
+  "trial_id": "LOCALWORKER-STABILITY-24H-001",
+  "final_result": "FAIL",
+  "failure_reason": "PREDECLARED_MAX_INTER_RECORD_GAP_EXCEEDED",
+  "thresholds": {
+    "minimum_total_cycle_records": 285,
+    "maximum_cycle_failures": 0,
+    "maximum_inter_record_gap_minutes": 10,
+    "ready_pending_tasks_executed": 0,
+    "external_effects": 0,
+    "automatic_shutdown_deadline_minutes_after_window_end": 10,
+    "stability_task_final_state": "Disabled",
+    "cleanup_task_final_state": "Disabled",
+    "main_task_final_state": "Disabled"
+  },
+  "observed": {
+    "records": 288,
+    "cycles_pass": 288,
+    "cycles_fail": 0,
+    "max_gap_minutes_reported_rounded_3dp": 10.001,
+    "threshold_excess_minutes": 0.001,
+    "threshold_excess_seconds_approx": 0.06,
+    "non_pass_records": 0,
+    "external_effects_authorized_true_records": 0,
+    "stability_task_final_state": "Disabled",
+    "cleanup_task_final_state": "Disabled",
+    "main_task_final_state": "Disabled",
+    "status_result": "WINDOW_COMPLETE_AUTO_DISABLED",
+    "status_reason": "END_TIME_REACHED",
+    "status_last_exit_code": 0,
+    "finalizer": "AUTO_SHUTDOWN"
+  },
+  "interpretation": {
+    "strict_gate_result": "FAIL",
+    "safety_failure": false,
+    "commercial_or_external_effect": false,
+    "persistent_24x7_authorized": false,
+    "note": "The trial passes cycle-count, zero-failure, no-external-effect and final-disabled-state criteria, but fails the fixed max-gap criterion. The threshold is not relaxed post hoc despite the small exceedance."
+  },
+  "harness_review": {
+    "runner_path": "tools/run_nexia_local_worker_stability_v0_1.ps1",
+    "queue_nonempty_would_fail_closed": true,
+    "deployment_authorized_true_would_safety_stop": true,
+    "external_effects_authorized_true_would_safety_stop": true
+  },
+  "economics": {
+    "software_api_cost_eur": 0,
+    "electricity_cost": "UNKNOWN_NOT_INSTRUMENTED",
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "authority": {
+    "main_worker_enabled": false,
+    "persistent_24x7_authorized": false,
+    "external_actions_authorized": false,
+    "commercial_actions_authorized": false
+  },
+  "next_step": "DIAGNOSE_EXACT_MAX_GAP_TIMESTAMP_AND_CAUSE_BEFORE_ANY_RERUN_OR_THRESHOLD_CHANGE",
+  "truth_limit": "The max gap value was returned by Kael using the agreed read-only reconciliation command rounded to three decimals. Exact offending timestamps have not yet been captured in repository evidence."
+}
