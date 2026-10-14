@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "EXP_AUTO_001_CONTRA_ACCOUNT_AUTHENTICATED_PROFILE_CHECKLIST_VISIBLE",
+  "classification": "HECHO_VERIFICADO_FROM_USER_SCREENSHOT",
+  "canonical_state_base_version": 71,
+  "microtest": "EXP-AUTO-001_CONTRA_MICROTEST_V1",
+  "observed": {
+    "contra_account_created_verified": true,
+    "contra_authenticated_session_verified": true,
+    "onboarding_completed_visible": true,
+    "profile_completion_percent_visible": 11,
+    "profile_cover_added": false,
+    "four_work_pieces_added": false,
+    "rate_added": false,
+    "social_link_added": false,
+    "identity_and_payout_completed": false,
+    "applications_submitted": 0,
+    "cash_spend_eur": 0,
+    "human_setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED"
+  },
+  "decision": {
+    "execution_mode": "MANUAL_ASSISTED_LOCAL_BROWSER",
+    "next_priority": "BUILD_FOUR_TRUTHFUL_PORTFOLIO_PIECES_BEFORE_KYC",
+    "precommitted_limits_changed": false
+  },
+  "portfolio_truth_rule": "Use only truthful internal demos/case studies; no fabricated clients, testimonials, production deployments or revenue claims.",
+  "next_step": "KAEL_OPENS_ADD_4_PIECES_OF_WORK; NEXIA_PREPARES_EXACT_COPY_AND_ASSETS_FROM_VERIFIED_INTERNAL_WORK"
+}
