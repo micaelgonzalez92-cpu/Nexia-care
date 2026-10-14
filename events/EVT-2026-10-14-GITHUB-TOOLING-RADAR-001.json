@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-GITHUB-TOOLING-RADAR-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "GITHUB_TOOLING_RADAR_RESEARCH",
+  "classification": "HECHO_VERIFICADO_PUBLIC_REPOSITORY_RESEARCH_PLUS_CONSERVATIVE_RECOMMENDATION",
+  "canonical_state_base_version": 71,
+  "artifact": "research/NEXIA_GITHUB_TOOLING_RADAR_2026-10-14.md",
+  "artifact_blob_sha": "deafbb32f1ab33b17273844e20f7345727434eb4",
+  "user_provided_repositories_verified": [
+    "public-apis/public-apis",
+    "punkpeye/awesome-mcp-servers",
+    "nexu-io/open-design",
+    "Shubhamsaboo/awesome-llm-apps",
+    "sindresorhus/awesome",
+    "D4Vinci/Scrapling",
+    "ripienaar/free-for-dev"
+  ],
+  "additional_repositories_evaluated": [
+    "microsoft/playwright-mcp",
+    "unclecode/crawl4ai",
+    "browser-use/browser-use",
+    "firecrawl/firecrawl",
+    "apify/crawlee",
+    "modelcontextprotocol/servers",
+    "n8n-io/n8n"
+  ],
+  "priority": {
+    "test_first": ["microsoft/playwright-mcp", "unclecode/crawl4ai"],
+    "conditional_fallback": ["D4Vinci/Scrapling"],
+    "reserve": ["browser-use/browser-use", "nexu-io/open-design", "apify/crawlee", "firecrawl/firecrawl"],
+    "radar_only": ["public-apis/public-apis", "punkpeye/awesome-mcp-servers", "ripienaar/free-for-dev", "sindresorhus/awesome", "Shubhamsaboo/awesome-llm-apps", "modelcontextprotocol/servers"]
+  },
+  "key_findings": [
+    "Directory popularity is not execution capability; public-apis, awesome-mcp-servers, awesome and free-for-dev are discovery sources rather than runtimes.",
+    "Microsoft Playwright MCP is the highest-value candidate to standardize browser automation around the existing local read-only bridge.",
+    "Crawl4AI is the preferred first public-web extraction PoC because it is Apache-2.0, self-hostable, Python-based, MCP-capable and LLM-oriented.",
+    "Scrapling is a strong fallback for difficult permitted public pages but its stealth/anti-bot capabilities require tighter compliance controls.",
+    "OpenDesign is capable but currently redundant with existing design/document surfaces and has a high installation/maintenance footprint.",
+    "Firecrawl is technically strong but AGPL-3.0 and a heavier service footprint reduce priority while lower-friction alternatives are untested.",
+    "n8n is source-available/fair-code rather than OSI open source; internal use and commercial consulting/workflow building are allowed under its documented model, while embedding/providing n8n as a product/service can require separate licensing."
+  ],
+  "authority": {
+    "software_installed": false,
+    "accounts_created": 0,
+    "external_actions": 0,
+    "cash_spend_eur": 0,
+    "pocs_executed": 0
+  },
+  "next_gate": "ONLY_RUN_A_TOOLING_POC_WHEN_IT_OUTRANKS_CURRENT_COMMERCIAL_WORK_AND_HAS_A_NAMED_BOTTLENECK_EUR0_FIRST_METRICS_AND_REVERSIBLE_SCOPE",
+  "truth_limit": "Repository metadata and public documentation were checked on 2026-10-14. Stars, licenses, pricing, free tiers and repository state can change; revalidate before adoption."
+}
