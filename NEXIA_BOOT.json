@@ -1,6 +1,6 @@
 {
   "schema_version": 4,
-  "boot_version": 61,
+  "boot_version": 62,
   "generated_at": "2026-10-14",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -12,7 +12,7 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
+    "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
     "NEXIA_EVENT_INDEX_V4.json",
     "follow V4 base to NEXIA_EVENT_INDEX_V3.json",
     "events after STATE v71 only if any",
@@ -20,19 +20,21 @@
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "current_handoff": "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
+  "current_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "current_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
+  "execution_capabilities_blob_sha": "cfa8a860a08649ea85b22a6d3e0abcd245356ad5",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
     "active_index": "NEXIA_EVENT_INDEX_V4.json",
-    "active_index_blob_sha": "84a7e74cfe88b45066065248bdcdae1e7dce039f",
+    "active_index_blob_sha": "de24ff2c5d48bcce7470d38b2bb77f1500ad30ca",
     "base_index": "NEXIA_EVENT_INDEX_V3.json",
     "latest_verified_event_id": "EVT-2026-10-14-LOCALWORKER-010",
     "latest_verified_event_path": "events/EVT-2026-10-14-LOCALWORKER-010.json",
     "latest_verified_event_blob_sha": "486faec0d39fe371514a59f2abaa14d0a2b2e140",
     "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001"
   },
-  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001 + LOCAL WORKER 24H TRIAL CLOSED STRICT FAIL ON GAP",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; LOCAL WORKER 24H TRIAL CLOSED STRICT FAIL ON GAP",
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "status": "BLOCKED_PENDING_EXPLICIT_WORKANA_APPROVAL",
@@ -47,7 +49,7 @@
   },
   "local_execution": {
     "local_worker_v0_1": "SAFETY_LADDER_THROUGH_WATCHDOG_WINDOWS_VERIFIED",
-    "stability_24h_trial": "CLOSED_FAIL_PREDECLARED_MAX_GAP",
+    "stability_24h_trial": "CLOSED_FAIL_PREDECLARED_MAX_GAP_WITH_STRONG_OPERATIONAL_EVIDENCE",
     "stability_records": 288,
     "stability_failures": 0,
     "stability_max_gap_minutes_reported_rounded_3dp": 10.001,
@@ -67,6 +69,6 @@
     "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
   "human_gate": "Commercial gate remains explicit Workana approval. Local worker 24h trial is closed as strict FAIL on max-gap only; do not enable indefinite main worker. No human action is required merely to preserve this result.",
-  "sync_status": "STATE_V71_PLUS_V3_PLUS_V4_THROUGH_LOCALWORKER_010",
-  "next_action": "Keep EXP-AUTO-001 primary. Diagnose the exact local max-gap timestamp/cause before any local-worker rerun; do not change the old threshold post hoc."
+  "sync_status": "STATE_V71_PLUS_V3_PLUS_V4_THROUGH_LOCALWORKER_010_AND_FINAL_HANDOFF",
+  "next_action": "Keep EXP-AUTO-001 primary. Prioritize commercial validation; diagnose or rerun local-worker scheduling only if later evidence shows higher expected value."
 }
