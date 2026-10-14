@@ -46,6 +46,12 @@
       "blob_sha": "7ffd07f296a9da0a6f4827920ecbc66d5a6b1169",
       "result": "UPDATED_WITH_HUMAN_ATTENTION_AND_AUTOMATION_VALUE_METRICS"
     },
+    "instruction_evolution": {
+      "path": "NEXIA_INSTRUCTION_EVOLUTION.md",
+      "blob_sha": "8bafe640c932c29c3e93bd9180dab14f2f500983",
+      "result": "UPDATED_TO_REMOVE_SUPERSEDED_LIMIT_INVESTIGATION_AS_CURRENT_GATE",
+      "current_contract": "8000_OPERATIONAL_LIMIT_7800_SAFE_CEILING_7791_V3_CANDIDATE"
+    },
     "automations": {
       "venture_radar": "UPDATED_AND_POST_UPDATE_READBACK_VERIFIED",
       "capability_evolution": "UPDATED_AND_POST_UPDATE_READBACK_VERIFIED"
