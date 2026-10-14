@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001",
+  "date": "2026-10-15",
+  "project": "NEXIA CORE",
+  "type": "CROSS_PROJECT_BOUNDED_AUTONOMY_URGENCY_STANDARD_ACTIVATED",
+  "classification": "ACTIVE_STANDARD",
+  "canonical_state_base_version": 71,
+  "artifact": {
+    "path": "governance/NEXIA_BOUNDED_AUTONOMY_URGENCY_STANDARD_2026-10-15.md"
+  },
+  "operating_principle": "NO_SELF_IMPOSED_FENCES_HARD_GATES_STAY_HARD_UNTIL_EXPLICITLY_REVISED",
+  "default_behavior": {
+    "green": "EXECUTE_WITHOUT_UNNECESSARY_PERMISSION_REQUESTS",
+    "yellow": "RESEARCH_PREPARE_SIMULATE_TEST_UNTIL_REAL_DECISION_BOUNDARY",
+    "red": "STOP_AT_MINIMUM_IRREDUCIBLE_HUMAN_GATE_WITH_DECISION_PACKAGE"
+  },
+  "time_value": {
+    "delay_is_cost": true,
+    "prefer_fastest_safe_route_to_economic_evidence": true,
+    "reduce_kael_attention": true,
+    "parallelize_green_when_it_reduces_wall_clock_delay_without_portfolio_sprawl": true
+  },
+  "constraint_review": {
+    "existing_limits_remain_active_until_changed": true,
+    "nexia_should_proactively_propose_review_when_limit_becomes_material_bottleneck": true,
+    "kael_decides_material_relaxation": true,
+    "precommitted_experiment_history_must_not_be_rewritten": true
+  },
+  "hard_boundaries": {
+    "safety_legal_platform_rules_unchanged": true,
+    "no_security_or_access_bypass": true,
+    "no_unapproved_spend_or_external_commitment": true,
+    "no_false_claims": true,
+    "no_secret_or_sensitive_data_exposure": true
+  },
+  "integration": [
+    "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md",
+    "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
+    "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md"
+  ],
+  "current_application": "EXP-AUTO-001 remains primary; while Contra identity/payout are Kael-only gates, Nexia continues all useful GREEN portfolio, benchmark, acquisition-preparation and evidence work without waiting.",
+  "economics": {
+    "cash_spend_eur": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "limits_changed": false,
+  "next_step": "APPLY_MAXIMUM_GREEN_AUTONOMY_AND_CONTINUOUS_QUALITY_TO_CURRENT_CONTRA_V2_WORK; ESCALATE_ONLY_IRREDUCIBLE_HUMAN_GATES"
+}
