@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "EXP_AUTO_001_CONTRA_ACQUISITION_MICROTEST_DESIGN",
+  "classification": "HECHO_VERIFICADO_OFFICIAL_PLATFORM_RESEARCH_PLUS_PRECOMMITTED_EXPERIMENT_DESIGN",
+  "canonical_state_base_version": 71,
+  "active_experiment": "EXP-AUTO-001",
+  "workana_state": "PENDING",
+  "correction": {
+    "previous_best_tactical_escape_channel": "FREELANCER_COM",
+    "new_best_zero_purchase_escape_channel": "CONTRA",
+    "reason": "Freelancer.com official Fees & Charges currently requires a standard USD20 minimum available account balance before bidding, so it does not satisfy the zero-spend activation criterion."
+  },
+  "contra_microtest": {
+    "artifact": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
+    "status": "DESIGNED_NOT_AUTHORIZED",
+    "cash_spend_ceiling_eur": 0,
+    "max_applications": 6,
+    "window_days": 14,
+    "max_acquisition_human_attention_hours": 4,
+    "success_primary": "AT_LEAST_1_QUALIFIED_BUYER_RESPONSE",
+    "success_economic": "AT_LEAST_1_PAID_OR_ACCEPTED_PILOT_GE_249_EUR_EQUIVALENT_WITH_POSITIVE_EXPECTED_CONTRIBUTION",
+    "kill_on_mandatory_spend": true,
+    "kill_on_false_experience_requirement": true,
+    "cold_outreach_allowed": false,
+    "paid_boosts_allowed": false,
+    "pro_upgrade_allowed": false
+  },
+  "authority": {
+    "account_creation_authorized": false,
+    "profile_publication_authorized": false,
+    "identity_verification_authorized": false,
+    "wallet_setup_authorized": false,
+    "applications_authorized": false,
+    "cash_spend_eur": 0
+  },
+  "next_gate": "EXPLICIT_KAEL_APPROVAL_REQUIRED_BEFORE_CREATING_CONTRA_ACCOUNT_OR_STARTING_MICROTEST"
+}
