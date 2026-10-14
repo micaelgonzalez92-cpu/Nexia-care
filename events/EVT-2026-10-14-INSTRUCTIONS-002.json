@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-INSTRUCTIONS-002",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "PROJECT_INSTRUCTIONS_SIZE_REGRESSION_CORRECTED",
+  "classification": "HECHO_VERIFICADO_INTERNAL",
+  "canonical_state_base_version": 71,
+  "problem": "A newly prepared master instruction V2 was 15246 bytes and was incorrectly presented as a Project-UI replacement despite a prior verified 8000-character operational constraint.",
+  "root_cause": "Instruction-edit tasks did not have a mandatory recovery preflight for instruction-specific constraints and prior INSTR events. The information existed in GitHub but was not forced into the decision path.",
+  "recovered_evidence": {
+    "verified_prior_event": "events/EVT-2026-10-12-INSTR-001.json",
+    "prior_result": "PASS",
+    "operational_project_ui_limit_chars": 8000,
+    "previous_installed_compact_file": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT.md",
+    "previous_compact_size_bytes": 6951
+  },
+  "correction": {
+    "full_spec_file": "NEXIA_MASTER_INSTRUCTIONS_V2_2026-10-14.md",
+    "full_spec_role": "REPOSITORY_SPEC_ONLY",
+    "new_compact_candidate": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V2_2026-10-14.md",
+    "new_compact_exact_char_count": 7739,
+    "safe_generation_ceiling_chars": 7800,
+    "contract": "NEXIA_PROJECT_INSTRUCTION_CONTRACT.json",
+    "candidate_installed_in_project_ui": false
+  },
+  "new_invariant": "Before any Project-instruction rewrite, recover the contract, installed compact baseline, instruction evolution protocol and latest INSTR event; count exact paste-ready characters; fail closed above 7800; keep long specs in GitHub.",
+  "economic_impact": "NONE_DIRECT",
+  "cash_spend_eur": 0,
+  "truth_limit": "The repository correction is verified. Kael has not yet replaced the live Project UI instructions with the new 7739-character candidate.",
+  "next_gate": "KAEL_OPTIONAL_INSTALL_COMPACT_V2_AND_VERIFY"
+}
