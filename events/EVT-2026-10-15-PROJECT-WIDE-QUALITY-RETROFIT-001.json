@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-PROJECT-WIDE-QUALITY-RETROFIT-001",
+  "date": "2026-10-15",
+  "project": "NEXIA CORE",
+  "type": "PROJECT_WIDE_QUALITY_RETROFIT_ACTIVATED",
+  "classification": "ACTIVE_MIGRATION_PROGRAM",
+  "canonical_state_base_version": 71,
+  "artifact": {
+    "path": "quality/NEXIA_PROJECT_WIDE_QUALITY_RETROFIT_2026-10-15.md",
+    "verified_blob_sha": "e30fb13d1522bff066950795d55f361892ea88a7"
+  },
+  "trigger_rule": "EVERY_NEW_MATERIAL_CROSS_PROJECT_STANDARD_MUST_AUTOMATICALLY_TRIAGE_AFFECTED_ACTIVE_AND_REUSABLE_NEXIA_ASSETS_BEFORE_FULL_INTEGRATION_IS_CLAIMED",
+  "scope_policy": {
+    "active_material": "AUDIT_FIRST",
+    "active_support": "AUDIT_AFTER_MATERIAL_OR_WHEN_DEPENDENCY_TOUCHED",
+    "reusable": "MUST_PASS_CURRENT_STANDARD_BEFORE_REUSE",
+    "historical_immutable": "PRESERVE_FACTS_NO_RETROACTIVE_REWRITE",
+    "deprecated_archive": "NO_POLISH_UNLESS_REACTIVATED",
+    "unknown": "TRIAGE_BEFORE_REWORK"
+  },
+  "waves": [
+    "WAVE_A_REVENUE_AND_MARKET_FACING",
+    "WAVE_B_EXECUTION_RELIABILITY_RECOVERY",
+    "WAVE_C_GOVERNANCE_STRATEGIC_OS",
+    "WAVE_D_RESEARCH_REUSABLE_ASSETS",
+    "WAVE_E_HISTORY_ARCHIVE_PRESERVE"
+  ],
+  "immediate_top3": [
+    "EXP_AUTO_001_CONTRA_PROFILE_PORTFOLIO_OFFER_ACQUISITION",
+    "ACQUISITION_COMMERCIAL_CONTROL_RADAR_PIPELINE_TEMPLATES_CHANNEL_POSITIONING",
+    "PROJECT_TRUTH_RECOVERY_REPORTING_BOOT_LIVE_DASHBOARD_EXECUTION_CAPABILITIES_INDEX_CHAIN"
+  ],
+  "initial_audit_findings": [
+    {
+      "artifact": "NEXIA_PROGRESS_DASHBOARD.md",
+      "status": "QUALITY_DEBT_HIGH",
+      "finding": "Dashboard content is materially stale relative to current LIVE and execution-capability evidence: it still describes Workana as the primary commercial route and the 24h Local Worker trial as pending final reconciliation.",
+      "risk": "Can cause wrong prioritization or false current-state interpretation.",
+      "action": "Reconcile dashboard against current STATE+LIVE+indexed deltas before treating it as current reporting."
+    },
+    {
+      "artifact": "NEXIA_EXECUTION_CAPABILITIES.json",
+      "status": "CURRENT_EVIDENCE_SOURCE_FOR_WORKER_RESULT",
+      "finding": "Contains final formal Local Worker result and current bounded capability limits; must be used during dashboard retrofit rather than old pending language."
+    },
+    {
+      "artifact": "repository_active_and_reusable_assets",
+      "status": "TRIAGE_IN_PROGRESS",
+      "finding": "Repository contains broad governance, commercial, automation, CI, experiment and recovery assets; not all are assumed compliant until individually audited."
+    }
+  ],
+  "history_integrity": {
+    "rewrite_historical_results": false,
+    "retroactively_change_experiment_thresholds": false,
+    "supersede_with_new_artifacts_when_needed": true
+  },
+  "economics": {
+    "cash_spend_eur": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "authority": {
+    "new_spend_authorized": false,
+    "new_external_contact_authorized": false,
+    "existing_human_gates_unchanged": true
+  },
+  "next_step": "EXECUTE_WAVE_A_AND_PROJECT_TRUTH_REPORTING_RETROFIT_IN_PARALLEL_WHERE_GREEN; START_BY_RECONCILING_PROGRESS_DASHBOARD_AND_CONTINUING_CONTRA_V2"
+}
