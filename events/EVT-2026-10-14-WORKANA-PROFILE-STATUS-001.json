@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-WORKANA-PROFILE-STATUS-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "WORKANA_AUTHENTICATED_PROFILE_STATUS_FROM_USER_VIDEO",
+  "classification": "HECHO_VERIFICADO_FROM_USER_SUPPLIED_VIDEO",
+  "canonical_state_base_version": 71,
+  "summary": "User-supplied authenticated Workana screen recording was inspected read-only. The dashboard shows 'Estamos analizando tu perfil', the profile completion card shows 70% completed, and the only completion item visibly missing is 'Ingresa trabajos o proyectos que hayas completado en el pasado' worth +30%. The account still shows 'Aún no puedes enviar propuestas'.",
+  "authenticated_account_evidence": {
+    "moderation_state_visible_text": "ESTAMOS_ANALIZANDO_TU_PERFIL",
+    "interpreted_moderation_state": "PENDIENTE_EN_ANALISIS",
+    "profile_completion_percent": 70,
+    "proposal_submission_available": false,
+    "proposal_block_visible_text": "Aún no puedes enviar propuestas",
+    "missing_completion_item": "Ingresa trabajos o proyectos que hayas completado en el pasado",
+    "missing_completion_weight_percent": 30,
+    "fast_moderation_offer_visible": true,
+    "fast_moderation_price_visible_usd": 9.90,
+    "fast_moderation_purchased": false
+  },
+  "other_visible_profile_facts": {
+    "hourly_rate_eur": 30,
+    "category_text": "Scripting & Automations / Programación y Tecnología",
+    "skills_visible": ["API", "CRM", "Inteligencia Artificial"],
+    "featured_personal_project_visible": "Sistema de recepción y clasificación de leads con n8n",
+    "work_history_form_visible_and_empty": true
+  },
+  "commercial_consequence": {
+    "huescaventura_submission_allowed_now": false,
+    "reason": "Profile is still under analysis, only 70% complete, and proposal submission is visibly blocked.",
+    "paid_priority_moderation_authorized": false,
+    "profile_change_executed_by_nexia": false,
+    "cash_spend_eur": 0
+  },
+  "next_gate": "COMPLETE_TRUTHFUL_WORK_OR_PROJECT_HISTORY_TO_100_PERCENT_AND_RECHECK_MODERATION",
+  "truth_limit": "The video proves the visible authenticated state at capture time. It does not prove Workana will accept any specific work-history entry, that moderation will complete after 100%, or that the profile is approved."
+}
