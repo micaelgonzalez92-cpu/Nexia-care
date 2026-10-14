@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-GROWTH-AUTONOMY-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "GROWTH_AUTONOMY_OPERATING_MODEL_INTEGRATED",
+  "classification": "HECHO_VERIFICADO_INTERNAL_RESEARCH_AND_GREEN_IMPROVEMENT",
+  "canonical_state_base_version": 71,
+  "trigger": "Kael requested that the previously supplied prompts for passive/semi-passive income, opportunity discovery, digital assets, content monetization, business automation, diversified portfolio, BI, 36-month planning, daily planning, strategic reasoning, research, learning, decisions, problem solving and editing be researched and integrated only where profitable and beneficial to Nexia.",
+  "research_conclusions": [
+    "Do not optimize for the label passive income; optimize for sustainable after-tax profit, repeatability and low verified human attention relative to economic value.",
+    "Recurring revenue improves predictability only when continuing customer value exists; MRR/ARR/churn/LTV/CAC are model-conditional metrics and must not be forced onto one-time businesses.",
+    "Digital products can reduce inventory and replication cost but still require demand, distribution, differentiation, support/update and legal/platform analysis.",
+    "Content/audience is first treated as a distribution asset; reach/followers are not business outcomes until connected to leads, buyers, settled revenue and contribution.",
+    "Reliable automation should be measured, observable and retain human approval for sensitive external effects until the exact path is authorized and verified.",
+    "Broad idea generation is discovery only; WIP remains one primary monetization experiment plus maximum two material research veins."
+  ],
+  "changes": {
+    "progress_dashboard": {
+      "path": "NEXIA_PROGRESS_DASHBOARD.md",
+      "version": "2.0",
+      "blob_sha": "aa4a80ab28712875619d901e439320332c132b8d",
+      "result": "UPDATED_AND_READBACK_VERIFIED",
+      "removed_stale_state": "STATE_V48_RESALE_VIEW",
+      "current_base": "STATE_V71_PLUS_LIVE_AND_INDEXED_DELTAS"
+    },
+    "opportunity_scorecard": {
+      "path": "NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md",
+      "blob_sha": "f60cf7e6a4d9d5539ddeaf2acfd803534c8d4d2f",
+      "result": "CREATED_AND_READBACK_VERIFIED",
+      "funnel": "LONG_LIST_MAX_30_TO_TOP_10_TO_TOP_3_TO_MAX_2_VEINS_TO_1_PRIMARY"
+    },
+    "growth_autonomy_model": {
+      "path": "NEXIA_GROWTH_AUTONOMY_OPERATING_MODEL_2026-10-14.md",
+      "blob_sha": "05a86e0635ae507265a5ce3793c600fa034f9e55",
+      "result": "CREATED_AND_READBACK_VERIFIED"
+    },
+    "operating_day": {
+      "path": "NEXIA_OPERATING_DAY.md",
+      "blob_sha": "41118d449caccab04c37836f6a0c73d0b60a8957",
+      "result": "UPDATED_TO_ADAPTIVE_EXECUTIVE_OS",
+      "calendar_dependency": "LIVE_CALENDAR_TASK_DATA_NOT_CLAIMED_CONNECTED"
+    },
+    "timeos": {
+      "path": "TIMEOS.md",
+      "blob_sha": "7ffd07f296a9da0a6f4827920ecbc66d5a6b1169",
+      "result": "UPDATED_WITH_HUMAN_ATTENTION_AND_AUTOMATION_VALUE_METRICS"
+    },
+    "automations": {
+      "venture_radar": "UPDATED_AND_POST_UPDATE_READBACK_VERIFIED",
+      "capability_evolution": "UPDATED_AND_POST_UPDATE_READBACK_VERIFIED"
+    }
+  },
+  "project_instruction_decision": {
+    "modified": false,
+    "reason": "Project Compact V3 already contains the required invariants and is 7791 characters against the 7800-character safe generation ceiling. Duplicating the long prompts into the UI layer would increase fragility and violate anti-duplication/size discipline.",
+    "routing": "Detailed behavior lives in repository operating modules and automations; Project instructions remain invariant-focused."
+  },
+  "authority_impact": "NONE",
+  "cash_spend_eur": 0,
+  "new_accounts_created": 0,
+  "external_contacts": 0,
+  "publications": 0,
+  "commercial_actions": 0,
+  "active_experiment_changed": false,
+  "current_primary": "EXP-AUTO-001",
+  "current_commercial_gate": "EXPLICIT_WORKANA_APPROVAL",
+  "truth_limit": "This event proves research integration, repository persistence and automation-prompt readback only. It does not prove demand, sale, payment, profit, content audience, recurring revenue, external-user digital-product success or persistent 24x7 autonomy.",
+  "next_gate": "WORKANA_EXPLICIT_APPROVAL_OR_LOCALWORKER_24H_FINAL_RECONCILIATION_WHEN_DUE"
+}
