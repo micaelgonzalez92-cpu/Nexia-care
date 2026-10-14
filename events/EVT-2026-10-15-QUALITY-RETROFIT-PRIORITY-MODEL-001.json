@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-QUALITY-RETROFIT-PRIORITY-MODEL-001",
+  "date": "2026-10-15",
+  "project": "NEXIA CORE",
+  "type": "PROJECT_WIDE_RETROFIT_PRIORITIZATION_MODEL_REVISED",
+  "classification": "ACTIVE_STANDARD_REVISION",
+  "canonical_state_base_version": 71,
+  "artifact": {
+    "path": "quality/NEXIA_PROJECT_WIDE_QUALITY_RETROFIT_2026-10-15.md",
+    "verified_blob_sha": "b0e8ab5ce392384f07739272c64ee82f14ec5414"
+  },
+  "supersedes": "ECONOMY_FIRST_WAVE_PRIORITY_INTERPRETATION",
+  "new_model": {
+    "project_wide_not_economy_first": true,
+    "hard_precedence": [
+      "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
+      "TRUTH_EVIDENCE_INTEGRITY",
+      "AUTHORITY_HUMAN_GATE_INTEGRITY",
+      "CONTINUITY_RECOVERABILITY_CORRUPTION_RISK"
+    ],
+    "multi_axis_dimensions": [
+      "SYSTEM_CRITICALITY",
+      "DEPENDENCY_CENTRALITY",
+      "ECONOMIC_IMPACT",
+      "CUSTOMER_USER_IMPACT",
+      "STRATEGIC_LEVERAGE",
+      "URGENCY_TIME_SENSITIVITY",
+      "COMPETITIVE_GAP",
+      "INFORMATION_VALUE",
+      "HUMAN_ATTENTION_EFFECT",
+      "COST_REVERSIBILITY_RISK"
+    ],
+    "waves_reclassified_as": "AUDIT_DOMAINS_NOT_FIXED_PRIORITY_SEQUENCE",
+    "global_triage_required_before_assuming_execution_order": true,
+    "dynamic_queue_can_reorder_with_new_evidence": true
+  },
+  "current_dynamic_queue": [
+    "PROJECT_TRUTH_RECOVERY_REPORTING_LAYER",
+    "EXP_AUTO_001_MARKET_SURFACE",
+    "ACQUISITION_COMMERCIAL_CONTROL_LAYER"
+  ],
+  "rationale": "Economic impact is a major Nexia objective but cannot dominate truth, safety, continuity, authority, reliability, dependency centrality or strategic leverage. A systemic defect may rationally outrank a revenue-adjacent improvement.",
+  "history_integrity": {
+    "rewrite_historical_results": false,
+    "retroactively_change_experiment_thresholds": false
+  },
+  "economics": {
+    "cash_spend_eur": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "next_step": "CONTINUE_GLOBAL_TRIAGE_ACROSS_ALL_ACTIVE_REUSABLE_DOMAINS_AND_EXECUTE_GREEN_REMEDIATION_BY_HARD_PRECEDENCE_PLUS_MULTI_AXIS_PRIORITY"
+}
