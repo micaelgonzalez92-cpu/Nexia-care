@@ -1,0 +1,26 @@
+{
+  "schema_version": 16,
+  "updated_at": "2026-10-14",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V15.json",
+    "verified_blob_sha": "93442aaea57d000a85343a40fbacb21df3b95733",
+    "latest_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001",
+    "latest_event_blob_sha": "2b2a74c62791655410482654b0dea406e31dc153"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001",
+      "path": "events/EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001.json",
+      "verified_blob_sha": "ee7eda4fcbe4135f2bfa19a82b377de4df0514ca"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001",
+  "latest_event_path": "events/EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001.json",
+  "latest_event_blob_sha": "ee7eda4fcbe4135f2bfa19a82b377de4df0514ca",
+  "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "latest_session_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+  "rule": "Read STATE v71 as canonical base, then V3 through V16 in order. Contra microtest remains explicitly authorized. Remote isolated browser signup route is blocked by Cloudflare human verification; do not bypass it. Continue account creation and sensitive authentication manually in Kael's normal local browser, while Nexia prepares truthful profile materials and preserves all precommitted EUR0/time/application limits."
+}
