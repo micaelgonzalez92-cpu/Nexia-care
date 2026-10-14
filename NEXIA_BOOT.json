@@ -1,6 +1,6 @@
 {
-  "schema_version": 24,
-  "boot_version": 79,
+  "schema_version": 25,
+  "boot_version": 80,
   "generated_at": "2026-10-15",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -13,27 +13,27 @@
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
     "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
-    "NEXIA_EVENT_INDEX_V24.json",
-    "follow V24 base through V23 to V3",
+    "NEXIA_EVENT_INDEX_V25.json",
+    "follow V25 base through V24 to V3",
     "events after STATE v71 only if any",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "00fab6883fed5078b3bd5e9dcabd16995be42799",
+  "live_state_blob_sha": "42c61420a88f9f4a9b93915bbcf5bf07a946649e",
   "current_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V24.json",
-    "active_index_blob_sha": "b1221d2cfd5fb9f67fcb7de503c7c326400dbd13",
-    "base_index": "NEXIA_EVENT_INDEX_V23.json",
-    "latest_verified_event_id": "EVT-2026-10-15-QUALITY-RETROFIT-DASHBOARD-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-QUALITY-RETROFIT-DASHBOARD-001.json",
-    "latest_verified_event_blob_sha": "efe7712e53275b95e02294da6cdc493619270a68",
+    "active_index": "NEXIA_EVENT_INDEX_V25.json",
+    "active_index_blob_sha": "07233fc57dfdbde65d1003a264753d329aee0b2f",
+    "base_index": "NEXIA_EVENT_INDEX_V24.json",
+    "latest_verified_event_id": "EVT-2026-10-15-QUALITY-RETROFIT-PRIORITY-MODEL-001",
+    "latest_verified_event_path": "events/EVT-2026-10-15-QUALITY-RETROFIT-PRIORITY-MODEL-001.json",
+    "latest_verified_event_blob_sha": "ddf05357cdac5621b48fa8c5bdbc0326ab810a21",
     "latest_material_business_event_id": "EVT-2026-10-15-PROJECT-WIDE-QUALITY-RETROFIT-001"
   },
-  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; CONTRA PROFILE 89%; V2 PREMIUM PORTFOLIO REDESIGN ACTIVE; PROJECT-WIDE QUALITY RETROFIT ACTIVE; DASHBOARD V3 RECONCILED; WORKANA PENDING; IDENTITY/PAYOUT PENDING",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; CONTRA PROFILE 89%; V2 PREMIUM PORTFOLIO REDESIGN; PROJECT-WIDE QUALITY RETROFIT MULTI-AXIS; WORKANA PENDING; IDENTITY/PAYOUT PENDING",
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_PROFILE_89_V2_REDESIGN_ACTIVE",
@@ -60,13 +60,21 @@
   },
   "retrofit_rule": {
     "automatic_on_new_material_standard": true,
-    "scope": "AFFECTED_ACTIVE_AND_REUSABLE_ASSETS",
-    "historical_evidence": "PRESERVE_IMMUTABLY",
-    "current_top3": [
-      "EXP_AUTO_001_MARKET_SURFACE",
-      "ACQUISITION_COMMERCIAL_CONTROL_LAYER",
-      "PROJECT_TRUTH_RECOVERY_REPORTING_LAYER"
+    "project_wide_not_economy_first": true,
+    "audit_domains_not_priority_waves": true,
+    "global_triage_required": true,
+    "hard_precedence": [
+      "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
+      "TRUTH_EVIDENCE_INTEGRITY",
+      "AUTHORITY_HUMAN_GATE_INTEGRITY",
+      "CONTINUITY_RECOVERABILITY_CORRUPTION_RISK"
     ],
+    "dynamic_queue": [
+      "PROJECT_TRUTH_RECOVERY_REPORTING_LAYER",
+      "EXP_AUTO_001_MARKET_SURFACE",
+      "ACQUISITION_COMMERCIAL_CONTROL_LAYER"
+    ],
+    "historical_evidence": "PRESERVE_IMMUTABLY",
     "first_completed_item": "NEXIA_PROGRESS_DASHBOARD.md_V3_IMPROVED_AND_REVERIFIED"
   },
   "economics": {
@@ -76,7 +84,7 @@
     "profit_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "human_gate": "No human action required while Nexia continues GREEN project-wide retrofit and Contra V2 work. Identity verification and payout-bank setup remain Kael-only inside Contra. Historical evidence must not be rewritten to satisfy newer standards.",
-  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V24_THROUGH_DASHBOARD_RETROFIT_001",
-  "next_action": "CONTINUE_WAVE_A_CONTRA_V2_AND_AUDIT_ACQUISITION_COMMERCIAL_CONTROL_ARTIFACTS; EXECUTE_GREEN_IMPROVEMENTS_AUTOMATICALLY."
+  "human_gate": "No human action required while Nexia continues GREEN global triage and retrofit. Contra identity/payout remain Kael-only inside Contra. Historical evidence must not be rewritten to satisfy newer standards.",
+  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V25_THROUGH_RETROFIT_PRIORITY_MODEL_001",
+  "next_action": "CONTINUE_GLOBAL_TRIAGE_ACROSS_ACTIVE_REUSABLE_NEXIA_AND_EXECUTE_GREEN_REMEDIATION_BY_HARD_PRECEDENCE_PLUS_MULTI_AXIS_PRIORITY."
 }
