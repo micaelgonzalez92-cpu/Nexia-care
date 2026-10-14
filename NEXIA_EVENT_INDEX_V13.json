@@ -1,0 +1,26 @@
+{
+  "schema_version": 13,
+  "updated_at": "2026-10-14",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V12.json",
+    "verified_blob_sha": "c5fc4a8a987f09808dec711ef670d1270acd95e3",
+    "latest_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001",
+    "latest_event_blob_sha": "94691c9e1a93c3d94800ebda43756684083a56cc"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-14-GITHUB-TOOLING-RADAR-001",
+      "path": "events/EVT-2026-10-14-GITHUB-TOOLING-RADAR-001.json",
+      "verified_blob_sha": "01f4032bd2796afa928fc21861e6f3d4f4f701be"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-14-GITHUB-TOOLING-RADAR-001",
+  "latest_event_path": "events/EVT-2026-10-14-GITHUB-TOOLING-RADAR-001.json",
+  "latest_event_blob_sha": "01f4032bd2796afa928fc21861e6f3d4f4f701be",
+  "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "latest_session_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+  "rule": "Read STATE v71 as canonical base, then V3 through V13 in order. GitHub tooling radar is research-only and authorizes no installation. Playwright MCP and Crawl4AI are the highest-value future PoCs; Scrapling is conditional fallback. Tooling work must not displace EXP-AUTO-001 commercial priority or bypass Human Gates."
+}
