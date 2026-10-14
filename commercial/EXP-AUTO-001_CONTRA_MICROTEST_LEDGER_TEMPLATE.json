@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "experiment_id": "EXP-AUTO-001_CONTRA_MICROTEST_V1",
+  "status": "TEMPLATE_NOT_EXECUTED",
+  "created_at": "2026-10-14",
+  "cash_spend_ceiling_eur": 0,
+  "attention_budget": {
+    "setup_reusable_ceiling_minutes": 120,
+    "acquisition_variable_ceiling_minutes": 120,
+    "total_ceiling_minutes": 240,
+    "max_applications": 6,
+    "variable_average_ceiling_minutes_per_application": 20,
+    "buckets_interchangeable": false
+  },
+  "setup": {
+    "started_at": null,
+    "operational_at": null,
+    "minutes_total": null,
+    "profile_operational": false,
+    "samples_published_count": 0,
+    "identity_verification_completed": false,
+    "wallet_setup_completed": false,
+    "cash_spend_eur": 0,
+    "notes": null
+  },
+  "acquisition_window": {
+    "starts_at": null,
+    "ends_at": null,
+    "calendar_days": 14
+  },
+  "applications": [],
+  "aggregate": {
+    "matched_jobs_found": 0,
+    "applications_submitted": 0,
+    "variable_minutes_total": 0,
+    "variable_minutes_per_application": null,
+    "qualified_responses": 0,
+    "requests_for_call_or_details": 0,
+    "paid_or_accepted_pilots": 0,
+    "settled_revenue_eur": 0,
+    "contribution_eur": null,
+    "setup_reusable_hours": null,
+    "acquisition_variable_hours": null,
+    "total_acquisition_human_attention_hours": null,
+    "human_attention_hours_per_qualified_response": null,
+    "human_attention_hours_per_paid_or_accepted_pilot": null,
+    "revenue_per_acquisition_human_attention_hour": null,
+    "contribution_per_acquisition_human_attention_hour": null
+  },
+  "application_record_schema": {
+    "application_number": "1..6",
+    "job_id_or_url": "public identifier only; no secrets",
+    "job_title": "string",
+    "matched_scope": "true|false",
+    "buyer_initiated": "true|false",
+    "estimated_ticket_or_budget": "number/range/UNKNOWN",
+    "submitted_at": "ISO8601",
+    "human_attention_minutes": "number",
+    "response_received": "true|false",
+    "qualified_response": "true|false",
+    "qualification_basis": "scope|price|timing|next_step|none",
+    "paid_or_accepted_pilot": "true|false",
+    "pilot_value_eur_equivalent": "number/UNKNOWN",
+    "cash_spend_eur": "number",
+    "notes": "no secrets or raw personal data"
+  },
+  "stop_reason": null,
+  "final_result": "NOT_EXECUTED",
+  "truth_rules": [
+    "UNKNOWN_NOT_INSTRUMENTED_NEVER_EQUALS_ZERO",
+    "NO_RETROACTIVE_THRESHOLD_CHANGES",
+    "SETUP_AND_VARIABLE_ATTENTION_REPORTED_SEPARATELY",
+    "ONLY_SETTLED_REVENUE_COUNTS_AS_SETTLED_REVENUE",
+    "NO_PAID_CLIENT_EXPERIENCE_CLAIMS_WITHOUT_EVIDENCE"
+  ]
+}
