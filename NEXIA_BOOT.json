@@ -1,6 +1,6 @@
 {
-  "schema_version": 21,
-  "boot_version": 77,
+  "schema_version": 22,
+  "boot_version": 78,
   "generated_at": "2026-10-15",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -13,8 +13,8 @@
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
     "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
-    "NEXIA_EVENT_INDEX_V21.json",
-    "follow V21 base through V20 to V3",
+    "NEXIA_EVENT_INDEX_V22.json",
+    "follow V22 base through V21 to V3",
     "events after STATE v71 only if any",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
@@ -24,15 +24,15 @@
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V21.json",
-    "active_index_blob_sha": "ce637f2895b83907a23c26857aeaaa81dab5ada9",
-    "base_index": "NEXIA_EVENT_INDEX_V20.json",
-    "latest_verified_event_id": "EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001.json",
-    "latest_verified_event_blob_sha": "de0fd1bcb53ca5b2ab704a6afb80a56fa449fe01",
-    "latest_material_business_event_id": "EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001"
+    "active_index": "NEXIA_EVENT_INDEX_V22.json",
+    "active_index_blob_sha": "9e79fe6aed522af6b390ab40f5bed557323b017b",
+    "base_index": "NEXIA_EVENT_INDEX_V21.json",
+    "latest_verified_event_id": "EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001",
+    "latest_verified_event_path": "events/EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001.json",
+    "latest_verified_event_blob_sha": "9fa96855783ac0d9c66bcd3a0e9ace887f65f166",
+    "latest_material_business_event_id": "EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001"
   },
-  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; WORKANA PENDING; CONTRA PROFILE 89%; V2 PREMIUM PORTFOLIO REDESIGN ACTIVE; COMPETITIVE INTELLIGENCE + LAWFUL REVERSE ENGINEERING + CONTINUOUS QUALITY EVOLUTION ACTIVE; IDENTITY/PAYOUT PENDING",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; WORKANA PENDING; CONTRA PROFILE 89%; V2 PREMIUM PORTFOLIO REDESIGN ACTIVE; COMPETITIVE INTELLIGENCE + LAWFUL REVERSE ENGINEERING + CONTINUOUS QUALITY EVOLUTION + BOUNDED AUTONOMY URGENCY ACTIVE; IDENTITY/PAYOUT PENDING",
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_PROFILE_89_V2_REDESIGN_ACTIVE",
@@ -64,7 +64,8 @@
   "strategic_standards": {
     "competitive_intelligence_reverse_engineering": "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
     "art_direction_v2": "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md",
-    "continuous_quality_evolution": "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md"
+    "continuous_quality_evolution": "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md",
+    "bounded_autonomy_urgency": "governance/NEXIA_BOUNDED_AUTONOMY_URGENCY_STANDARD_2026-10-15.md"
   },
   "quality_rule": {
     "material_task_loop": "VERIFY -> CRITIQUE -> COMPARE -> IMPROVE -> RE-VERIFY -> CAPTURE -> STOP_RATIONALLY",
@@ -74,6 +75,15 @@
     "generalizable_learning_must_update_system": true,
     "anti_perfectionism": "STOP_WHEN_MARGINAL_VALUE_IS_BELOW_NEXT_BOTTLENECK"
   },
+  "autonomy_rule": {
+    "green": "EXECUTE_BY_DEFAULT",
+    "yellow": "RESEARCH_PREPARE_TEST_BY_DEFAULT",
+    "red": "ESCALATE_ONLY_IRREDUCIBLE_HUMAN_GATE",
+    "delay_is_cost": true,
+    "challenge_assumed_constraints": true,
+    "propose_review_of_material_bottleneck_limits": true,
+    "hard_gates_remain_until_explicitly_revised": true
+  },
   "economics": {
     "capital_spent_eur": 0,
     "revenue_eur": 0,
@@ -81,7 +91,7 @@
     "profit_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "human_gate": "No human action required while Nexia applies the quality standard to current V2 Contra portfolio work. Identity verification and payout-bank setup remain Kael-only actions inside Contra. Never share passwords, OTPs, identity documents or bank credentials in chat.",
-  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V21_THROUGH_CONTINUOUS_QUALITY_EVOLUTION_001",
-  "next_action": "APPLY_CONTINUOUS_QUALITY_STANDARD_TO_CURRENT_V2_CONTRA_PORTFOLIO_THEN_CONTINUE_EXP_AUTO_001_WITHOUT_BYPASSING_HUMAN_GATES."
+  "human_gate": "No human action required while Nexia continues maximum useful GREEN work. Contra identity verification and payout-bank setup remain Kael-only actions inside Contra. Any material relaxation of existing project limits must be presented for explicit review; generic trust does not silently authorize RED actions.",
+  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V22_THROUGH_BOUNDED_AUTONOMY_URGENCY_001",
+  "next_action": "EXECUTE_MAXIMUM_GREEN_WORK_ON_CONTRA_V2_PORTFOLIO_AND_ACQUISITION_PREPARATION; ESCALATE_ONLY_IRREDUCIBLE_HUMAN_GATES_OR_EVIDENCED_CONSTRAINT_REVIEWS."
 }
