@@ -1,0 +1,26 @@
+{
+  "schema_version": 20,
+  "updated_at": "2026-10-15",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V19.json",
+    "verified_blob_sha": "e405716219d5d8884561b3b932b2e1273af45a37",
+    "latest_event_id": "EVT-2026-10-15-CONTRA-PROFILE-89-001",
+    "latest_event_blob_sha": "5889bbd0aa7e90cefb40e062c56420d56adab25d"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001",
+      "path": "events/EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001.json",
+      "verified_blob_sha": "c31c44b203f7dd2f17fe49b38907c5f56e8508f6"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001",
+  "latest_event_path": "events/EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001.json",
+  "latest_event_blob_sha": "c31c44b203f7dd2f17fe49b38907c5f56e8508f6",
+  "latest_material_business_event_id": "EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "latest_session_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+  "rule": "Read STATE v71 as canonical base, then V3 through V20 in order. Competitive Intelligence + lawful Reverse Engineering and Premium Art Direction V2 are now active cross-project standards. Material public-facing assets require current benchmark/parity/differentiation review before publication. Contra remains at profile 89% with identity/payout pending; V1 portfolio covers are supporting media and V2 hero covers are required before acquisition applications, subject to the existing setup-time ceiling."
+}
