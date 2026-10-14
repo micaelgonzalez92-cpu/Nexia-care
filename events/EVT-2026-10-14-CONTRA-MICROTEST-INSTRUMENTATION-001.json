@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "EXP_AUTO_001_CONTRA_MICROTEST_PREEXECUTION_INSTRUMENTATION",
+  "classification": "INTERNAL_PREEXECUTION_MEASUREMENT_DESIGN",
+  "canonical_state_base_version": 71,
+  "active_experiment": "EXP-AUTO-001",
+  "microtest_status": "DESIGNED_NOT_AUTHORIZED",
+  "ledger_template": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_LEDGER_TEMPLATE.json",
+  "ledger_template_blob_sha": "684bddf5f6c41b93d2fabaa5abf68ba2a587f108",
+  "instrumentation": {
+    "setup_reusable_minutes": true,
+    "acquisition_variable_minutes": true,
+    "minutes_per_application": true,
+    "qualified_responses": true,
+    "paid_or_accepted_pilots": true,
+    "settled_revenue": true,
+    "contribution": true,
+    "revenue_per_acquisition_attention_hour": true,
+    "contribution_per_acquisition_attention_hour": true,
+    "unknown_not_instrumented_distinct_from_zero": true
+  },
+  "preexecution_guards": {
+    "setup_ceiling_minutes": 120,
+    "variable_acquisition_ceiling_minutes": 120,
+    "max_applications": 6,
+    "window_days": 14,
+    "cash_spend_ceiling_eur": 0,
+    "threshold_changes_after_execution_start": "FORBIDDEN"
+  },
+  "authority": {
+    "account_creation_authorized": false,
+    "profile_publication_authorized": false,
+    "identity_verification_authorized": false,
+    "wallet_setup_authorized": false,
+    "applications_authorized": false,
+    "cash_spend_eur": 0
+  },
+  "next_gate": "EXPLICIT_KAEL_APPROVAL_REQUIRED_BEFORE_EXECUTION"
+}
