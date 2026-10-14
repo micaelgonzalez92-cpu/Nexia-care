@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "updated_at": "2026-10-14",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA PROFILE 100% APPROVAL PENDING + LOCAL WORKER 24H STABILITY RUNNING + PROJECT COMPACT V3 AND GLOBAL CUSTOM INSTRUCTIONS PREPARED_NOT_INSTALLED",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA PROFILE 100% APPROVAL PENDING + LOCAL WORKER 24H STABILITY PENDING FINAL RECONCILIATION + GROWTH/AUTONOMY OPERATING MODEL INTEGRATED + PROJECT COMPACT V3 AND GLOBAL CUSTOM INSTRUCTIONS PREPARED_NOT_INSTALLED",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
@@ -17,15 +17,17 @@
     "global_custom_instructions_exact_char_count": 1421,
     "global_custom_instructions_installed": false,
     "github_persisted": true,
-    "latest_instruction_event_id": "EVT-2026-10-14-INSTRUCTIONS-004"
+    "latest_instruction_event_id": "EVT-2026-10-14-INSTRUCTIONS-004",
+    "instruction_evolution_protocol": "NEXIA_INSTRUCTION_EVOLUTION.md",
+    "instruction_evolution_reconciled_2026_10_14": true
   },
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "b27cecea80c00cb0565f65aba6f56cfab6856133",
-    "latest_verified_event_id": "EVT-2026-10-14-AUTOMATION-DRIFT-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-AUTOMATION-DRIFT-001.json",
-    "latest_verified_event_blob_sha": "6dec7a3e13b9e3930eaf738a5110dde78dfd195a",
+    "active_index_blob_sha": "2265c646435c305fd5053022c53e7e1f2a498cfb",
+    "latest_verified_event_id": "EVT-2026-10-14-GROWTH-AUTONOMY-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-GROWTH-AUTONOMY-001.json",
+    "latest_verified_event_blob_sha": "5642d05d0d3f060a08e0039250cc9ac957a70cc5",
     "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001"
   },
   "active_experiment": {
@@ -39,10 +41,21 @@
     "workana_approval_email_found": false,
     "workana_proposal_submission_available": false
   },
+  "growth_autonomy": {
+    "status": "INTEGRATED_REPOSITORY_AND_ACTIVE_RADARS",
+    "operating_model": "NEXIA_GROWTH_AUTONOMY_OPERATING_MODEL_2026-10-14.md",
+    "opportunity_scorecard": "NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md",
+    "progress_dashboard": "NEXIA_PROGRESS_DASHBOARD.md",
+    "operating_day": "NEXIA_OPERATING_DAY.md",
+    "timeos": "TIMEOS.md",
+    "optimization_target": "SUSTAINABLE_AFTER_TAX_PROFIT_PLUS_REPEATABILITY_PLUS_LOW_VERIFIED_HUMAN_ATTENTION",
+    "wip_rule": "ONE_PRIMARY_PLUS_MAX_TWO_MATERIAL_RESEARCH_VEINS",
+    "project_ui_instructions_changed_by_integration": false
+  },
   "execution_capabilities": {
     "local_worker_safety_ladder": "VERIFIED_THROUGH_WATCHDOG_WINDOWS",
     "watchdog_retry_logic": "VERIFIED_CI_AND_WINDOWS",
-    "stability_24h_harness": "STARTED_RUNNING_WINDOW_NOT_YET_RECONCILED",
+    "stability_24h_harness": "STARTED_PENDING_FINAL_RECONCILIATION",
     "stability_ci_run_id": 38445633232,
     "main_windows_task": "INSTALLED_DISABLED_AT_START",
     "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
@@ -51,7 +64,7 @@
   "authorized_stability_trial": {
     "id": "LOCALWORKER-STABILITY-24H-001",
     "authorization": "GREEN_INTERNAL_ONLY_NO_EXTERNAL_EFFECTS_AUTO_SHUTDOWN",
-    "status": "RUNNING_PENDING_FINAL_RECONCILIATION",
+    "status": "PENDING_FINAL_RECONCILIATION",
     "start_at": "2026-10-13T20:22:39.3995480+02:00",
     "end_at": "2026-10-14T20:22:39.3995480+02:00",
     "duration_hours": 24,
@@ -73,31 +86,36 @@
     "stability_trial_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Corrected and read-back-verified context drift in the active EXP-AUTO-001 Daily Work automation so it now treats Kael-reported 100% Workana profile completion as complete and explicit Workana approval as the pending commercial gate; persisted EVT-2026-10-14-AUTOMATION-DRIFT-001 and synchronized the active event index. Project Compact V3 and Global Custom Instructions V1 remain prepared but not claimed UI-installed.",
-    "last_user_facing_handoff": "Automation context drift corrected and persisted; no Workana action, spend, publication or worker-state claim was made.",
+    "last_completed_verified_action": "Integrated Kael's growth/passive-income/asset/content/automation/BI/36-month/daily-OS prompts as evidence-gated repository modules instead of duplicating the near-limit Project UI layer; updated and read-back-verified the active progress dashboard to STATE v71; created Opportunity Scorecard V2 and Growth & Autonomy Operating Model; made Operating Day adaptive; extended TimeOS with human-attention metrics; updated Venture Radar and Capability Evolution automations; reconciled NEXIA_INSTRUCTION_EVOLUTION.md with the verified 8000/7800 Project instruction contract; persisted EVT-2026-10-14-GROWTH-AUTONOMY-001 and synchronized the active event index.",
+    "last_user_facing_handoff": "Growth/autonomy research has been converted into operational gates and active radar behavior without changing EXP-AUTO-001, authority, spend or external permissions.",
     "human_action_required_now": true,
-    "pending_human_action": "Install the exact global Custom Instructions candidate in ChatGPT global personalization and the exact Project Compact V3 candidate in Nexia core Project instructions, save both, then verify in fresh chats. Do not interfere with the running local-worker stability trial.",
+    "pending_human_action": "Install the exact global Custom Instructions candidate in ChatGPT global personalization and the exact Project Compact V3 candidate in Nexia core Project instructions, save both, then verify in fresh chats. Do not enable the indefinite main Local Worker task; final stability result still requires reconciliation evidence.",
     "surface": "ChatGPT settings + Nexia core Project settings",
     "device": "mobile or computer",
     "cost_exposure": "EUR0; no commercial action executed.",
     "success_check": "A fresh general chat follows the global layer; a fresh Nexia project chat recovers mission/authority/continuity and states that >1000 EUR/month is the first scale milestone, not the final objective. Only then mark UI installation VERIFIED.",
-    "return_to_nexia": "Return with the result of both fresh-chat checks; do not report installation as verified before those checks.",
+    "return_to_nexia": "Return with the result of both fresh-chat checks; do not report installation as verified before those checks. Local Worker stability remains separate and must be reconciled from final local evidence.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_EVENT_INDEX_V3.json",
+      "events/EVT-2026-10-14-GROWTH-AUTONOMY-001.json",
       "events/EVT-2026-10-14-INSTRUCTIONS-003.json",
       "events/EVT-2026-10-14-INSTRUCTIONS-004.json",
       "events/EVT-2026-10-14-AUTOMATION-DRIFT-001.json",
       "NEXIA_PROJECT_INSTRUCTION_CONTRACT.json",
+      "NEXIA_INSTRUCTION_EVOLUTION.md",
       "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V3_2026-10-14.md",
       "NEXIA_MASTER_INSTRUCTIONS_V2_ECONOMIC_OBJECTIVE_AMENDMENT_2026-10-14.md",
       "NEXIA_GLOBAL_CUSTOM_INSTRUCTIONS_V1_2026-10-14.md",
+      "NEXIA_GROWTH_AUTONOMY_OPERATING_MODEL_2026-10-14.md",
+      "NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md",
+      "NEXIA_PROGRESS_DASHBOARD.md",
       "events/EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001.json",
       "events/EVT-2026-10-13-LOCALWORKER-009.json"
     ],
-    "resume_from": "Use Master Instructions V2 plus the economic-objective amendment as repository working policy; Project Compact V3 and Global Custom Instructions V1 are prepared but not UI-installed. EXP-AUTO-001 Daily Work automation drift is corrected. Wait for explicit Workana approval and preserve the running 24h local-worker stability trial."
+    "resume_from": "Use Master Instructions V2 plus economic-objective amendment as repository working policy. Growth/autonomy modules are active repository routing, not a replacement for Project instructions. EXP-AUTO-001 remains primary; wait for explicit Workana approval. Project Compact V3 and Global Custom Instructions V1 remain repository-prepared but not claimed UI-installed. Local Worker 24h final result remains PENDING until reconciled from final evidence."
   },
-  "next_action": "KAEL_INSTALL_GLOBAL_AND_PROJECT_INSTRUCTIONS_THEN_VERIFY_FRESH_CHATS"
+  "next_action": "PRESERVE_EXP_AUTO_001_COMMERCIAL_GATE_AND_RECONCILE_PENDING_HUMAN_UI_INSTRUCTION_INSTALLATION_AND_LOCALWORKER_FINAL_EVIDENCE_SEPARATELY"
 }
