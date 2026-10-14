@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
-  "boot_version": 57,
-  "generated_at": "2026-10-13",
+  "boot_version": 58,
+  "generated_at": "2026-10-14",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
   "state_version": 71,
@@ -26,11 +26,11 @@
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "c96b913b0e94ea6c8076598136a5e71de2ff6adf",
-    "latest_verified_event_id": "EVT-2026-10-13-LOCALWORKER-009",
-    "latest_verified_event_path": "events/EVT-2026-10-13-LOCALWORKER-009.json",
-    "latest_verified_event_blob_sha": "9a7910f75a6acf53c5e961bb05a7641f92f4fc9f",
-    "latest_material_business_event_id": "EVT-2026-10-13-WORKANA-PROFILE-GATE-001"
+    "active_index_blob_sha": "692922b0f08b233046b9c4faafa28f854bead343",
+    "latest_verified_event_id": "EVT-2026-10-14-INSTRUCTIONS-004",
+    "latest_verified_event_path": "events/EVT-2026-10-14-INSTRUCTIONS-004.json",
+    "latest_verified_event_blob_sha": "7897535662caa4bd127f287208e1c958867e4b5a",
+    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001"
   },
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001 + LOCAL WORKER 24H STABILITY RUNNING",
   "active_experiment": {
@@ -60,6 +60,6 @@
     "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
   "human_gate": "LOCALWORKER-STABILITY-24H-001-FINAL-RECONCILIATION: no action during the running window unless a local safety stop/failure appears. After the end window and auto-cleanup, Kael returns the final local status. Do not enable the indefinite main worker task.",
-  "sync_status": "STATE_V71_BASE_PLUS_VERIFIED_LOCALWORKER_009_DELTA",
+  "sync_status": "STATE_V71_BASE_PLUS_INDEXED_POST_STATE_DELTAS_THROUGH_INSTRUCTIONS_004",
   "next_action": "Do not restart or duplicate LOCALWORKER-STABILITY-24H-001. Final reconciliation after 2026-10-14T20:22:39.3995480+02:00 plus up to 10 minutes for cleanup."
 }
