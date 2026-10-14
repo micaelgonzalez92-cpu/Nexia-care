@@ -1,0 +1,26 @@
+{
+  "schema_version": 18,
+  "updated_at": "2026-10-14",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V17.json",
+    "verified_blob_sha": "33fc4309fccdd0223476fd644578a2153858553d",
+    "latest_event_id": "EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001",
+    "latest_event_blob_sha": "1c728a2304a92f0ada1dfd57778c12c1bbd7e362"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001",
+      "path": "events/EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001.json",
+      "verified_blob_sha": "67c03f41a5bb48ba731680c2ac4df36dc5aabd4e"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001",
+  "latest_event_path": "events/EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001.json",
+  "latest_event_blob_sha": "67c03f41a5bb48ba731680c2ac4df36dc5aabd4e",
+  "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "latest_session_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+  "rule": "Read STATE v71 as canonical base, then V3 through V18 in order. Contra account is active/authenticated at last verified 11% profile completion. Four truthful internal-demo portfolio pieces are prepared but zero are verified published. Preserve EUR0/time/application limits and map copy to the actual Contra work-item form before publication."
+}
