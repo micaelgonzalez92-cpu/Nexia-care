@@ -1,23 +1,30 @@
 {
   "schema_version": 3,
   "updated_at": "2026-10-14",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA PROFILE 100% APPROVAL PENDING + LOCAL WORKER 24H STABILITY RUNNING + MASTER INSTRUCTIONS V2 APPROVED",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA PROFILE 100% APPROVAL PENDING + LOCAL WORKER 24H STABILITY RUNNING + PROJECT COMPACT V3 AND GLOBAL CUSTOM INSTRUCTIONS PREPARED_NOT_INSTALLED",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
   "instruction_policy": {
-    "working_policy": "NEXIA_MASTER_INSTRUCTIONS_V2_2026-10-14.md",
-    "approved_by_kael": true,
+    "working_policy_base": "NEXIA_MASTER_INSTRUCTIONS_V2_2026-10-14.md",
+    "working_policy_amendment": "NEXIA_MASTER_INSTRUCTIONS_V2_ECONOMIC_OBJECTIVE_AMENDMENT_2026-10-14.md",
+    "master_v2_approved_by_kael": true,
+    "economic_objective_amendment_approved_by_kael": true,
+    "project_ui_candidate": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V3_2026-10-14.md",
+    "project_ui_candidate_exact_char_count": 7791,
+    "project_ui_installed": false,
+    "global_custom_instructions_candidate": "NEXIA_GLOBAL_CUSTOM_INSTRUCTIONS_V1_2026-10-14.md",
+    "global_custom_instructions_exact_char_count": 1421,
+    "global_custom_instructions_installed": false,
     "github_persisted": true,
-    "chatgpt_project_settings_installed": false,
-    "event_id": "EVT-2026-10-14-INSTRUCTIONS-001"
+    "latest_instruction_event_id": "EVT-2026-10-14-INSTRUCTIONS-004"
   },
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "3c1cb4edbf2cef3bc1436da917327872f50e3c49",
-    "latest_verified_event_id": "EVT-2026-10-14-INSTRUCTIONS-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-INSTRUCTIONS-001.json",
+    "active_index_blob_sha": "692922b0f08b233046b9c4faafa28f854bead343",
+    "latest_verified_event_id": "EVT-2026-10-14-INSTRUCTIONS-004",
+    "latest_verified_event_path": "events/EVT-2026-10-14-INSTRUCTIONS-004.json",
     "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001"
   },
   "active_experiment": {
@@ -65,26 +72,30 @@
     "stability_trial_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Kael approved the fused Nexia Master Instructions V2. The artifact was persisted at NEXIA_MASTER_INSTRUCTIONS_V2_2026-10-14.md and indexed as EVT-2026-10-14-INSTRUCTIONS-001. Project-settings installation remains unverified and must not be claimed.",
-    "last_user_facing_handoff": "Master Instructions V2 approved and persisted; Workana approval and local-worker stability final reconciliation remain pending.",
-    "human_action_required_now": false,
-    "pending_human_action": "Optional: install the exact V2 text in ChatGPT Project instructions if Kael wants the UI configuration updated. Separately, report explicit Workana approval if it arrives. Do not interfere with the running stability trial.",
-    "surface": "None currently",
-    "device": "none",
+    "last_completed_verified_action": "Prepared and persisted Project Compact V3 with the clarified economic objective (>1000 EUR/month is first scale milestone, not final ceiling), added the superseding master amendment, prepared the global Custom Instructions candidate, indexed INSTRUCTIONS-002/003/004, and synchronized BOOT/LIVE event references. Neither ChatGPT UI instruction field is claimed installed.",
+    "last_user_facing_handoff": "Repository-side instruction preparation is complete. Project Compact V3 (7791 chars) and Global Custom Instructions V1 (1421 chars) are ready but not installed in ChatGPT UI.",
+    "human_action_required_now": true,
+    "pending_human_action": "Install the exact global Custom Instructions candidate in ChatGPT global personalization and the exact Project Compact V3 candidate in Nexia core Project instructions, save both, then verify in fresh chats. Do not interfere with the running local-worker stability trial.",
+    "surface": "ChatGPT settings + Nexia core Project settings",
+    "device": "mobile or computer",
     "cost_exposure": "EUR0; no commercial action executed.",
-    "success_check": "Future recovery reads the V2 instruction artifact/event; Workana approval remains explicit; local-worker trial is reconciled only after its end window.",
-    "return_to_nexia": "No action required now unless Kael chooses to update the Project instructions UI, Workana approval arrives, or the local-worker stability window ends.",
+    "success_check": "A fresh general chat follows the global layer; a fresh Nexia project chat recovers mission/authority/continuity and states that >1000 EUR/month is the first scale milestone, not the final objective. Only then mark UI installation VERIFIED.",
+    "return_to_nexia": "Return with the result of both fresh-chat checks; do not report installation as verified before those checks.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_EVENT_INDEX_V3.json",
-      "events/EVT-2026-10-14-INSTRUCTIONS-001.json",
-      "NEXIA_MASTER_INSTRUCTIONS_V2_2026-10-14.md",
+      "events/EVT-2026-10-14-INSTRUCTIONS-003.json",
+      "events/EVT-2026-10-14-INSTRUCTIONS-004.json",
+      "NEXIA_PROJECT_INSTRUCTION_CONTRACT.json",
+      "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V3_2026-10-14.md",
+      "NEXIA_MASTER_INSTRUCTIONS_V2_ECONOMIC_OBJECTIVE_AMENDMENT_2026-10-14.md",
+      "NEXIA_GLOBAL_CUSTOM_INSTRUCTIONS_V1_2026-10-14.md",
       "events/EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001.json",
       "events/EVT-2026-10-13-LOCALWORKER-009.json"
     ],
-    "resume_from": "Use Master Instructions V2 as approved working policy; wait for explicit Workana approval and preserve the running 24h local-worker stability trial."
+    "resume_from": "Use Master Instructions V2 plus the economic-objective amendment as repository working policy; Project Compact V3 and Global Custom Instructions V1 are prepared but not UI-installed. Wait for explicit Workana approval and preserve the running 24h local-worker stability trial."
   },
-  "next_action": "WAIT_FOR_WORKANA_EXPLICIT_APPROVAL_AND_FINALIZE_LOCALWORKER_AFTER_WINDOW"
+  "next_action": "KAEL_INSTALL_GLOBAL_AND_PROJECT_INSTRUCTIONS_THEN_VERIFY_FRESH_CHATS"
 }
