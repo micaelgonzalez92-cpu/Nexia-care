@@ -18,7 +18,7 @@
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
     "active_index": "NEXIA_EVENT_INDEX_V4.json",
-    "active_index_blob_sha": "84a7e74cfe88b45066065248bdcdae1e7dce039f",
+    "active_index_blob_sha": "de24ff2c5d48bcce7470d38b2bb77f1500ad30ca",
     "previous_index": "NEXIA_EVENT_INDEX_V3.json",
     "latest_verified_event_id": "EVT-2026-10-14-LOCALWORKER-010",
     "latest_verified_event_path": "events/EVT-2026-10-14-LOCALWORKER-010.json",
@@ -45,9 +45,12 @@
     "wip_rule": "ONE_PRIMARY_PLUS_MAX_TWO_MATERIAL_RESEARCH_VEINS"
   },
   "execution_capabilities": {
+    "snapshot": "NEXIA_EXECUTION_CAPABILITIES.json",
+    "snapshot_blob_sha": "cfa8a860a08649ea85b22a6d3e0abcd245356ad5",
     "local_worker_safety_ladder": "VERIFIED_THROUGH_WATCHDOG_WINDOWS",
     "watchdog_retry_logic": "VERIFIED_CI_AND_WINDOWS",
     "stability_24h_harness": "FINAL_RECONCILED_FAIL_STRICT_GAP_THRESHOLD",
+    "stability_24h_operational_signal": "STRONG_288_OF_288_PASS_ZERO_FUNCTIONAL_FAILURES",
     "main_windows_task": "DISABLED_FINAL_VERIFIED",
     "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
     "external_effects": "FORBIDDEN_V0_1"
@@ -69,7 +72,7 @@
     "stability_task_final_state": "Disabled",
     "cleanup_task_final_state": "Disabled",
     "main_task_final_state": "Disabled",
-    "next_gate": "DIAGNOSE_EXACT_MAX_GAP_TIMESTAMP_AND_CAUSE_BEFORE_ANY_RERUN"
+    "next_gate": "NO_RERUN_BY_DEFAULT; DIAGNOSE_EXACT_MAX_GAP_ONLY_IF_ECONOMIC_PRIORITY_JUSTIFIES_IT"
   },
   "economics": {
     "capital_spent_eur": 0,
@@ -81,21 +84,24 @@
     "stability_trial_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Reconciled LOCALWORKER-STABILITY-24H-001 against its predeclared thresholds. 288/288 records passed with zero functional failures, zero external-effect authorization and verified auto-shutdown, but max inter-record gap was reported as 10.001 minutes against a <=10 minute gate, so strict result is FAIL without post-hoc threshold relaxation. Persisted event LOCALWORKER-010, chained index V4 and final handoff.",
+    "current_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+    "current_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+    "last_completed_verified_action": "Reconciled LOCALWORKER-STABILITY-24H-001 against its predeclared thresholds. 288/288 records passed with zero functional failures, zero external-effect authorization and verified auto-shutdown, but max inter-record gap was reported as 10.001 minutes against a <=10 minute gate, so strict result is FAIL without post-hoc threshold relaxation. Persisted LOCALWORKER-010, final handoff, V4 index and execution-capability reconciliation.",
     "human_action_required_now": false,
     "pending_human_action": null,
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
+      "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
       "NEXIA_EVENT_INDEX_V4.json",
       "events/EVT-2026-10-14-LOCALWORKER-010.json",
+      "NEXIA_EXECUTION_CAPABILITIES.json",
       "events/EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001.json",
       "NEXIA_GROWTH_AUTONOMY_OPERATING_MODEL_2026-10-14.md",
       "NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md"
     ],
-    "resume_from": "EXP-AUTO-001 remains primary and blocked only by explicit Workana approval. Do not enable persistent Local Worker. Treat the 24h trial as strict FAIL on max-gap only; diagnose the exact offending timestamp/cause before considering any rerun."
+    "resume_from": "EXP-AUTO-001 remains primary and blocked only by explicit Workana approval. Do not enable persistent Local Worker. Treat the 24h trial as strict FAIL on max-gap only and strong operational evidence; do not rerun unless diagnosis has higher expected value than commercial validation."
   },
-  "next_action": "PRESERVE_EXP_AUTO_001_COMMERCIAL_GATE_AND_DIAGNOSE_LOCALWORKER_MAX_GAP_ONLY_IF_IT_OUTRANKS_OTHER_GREEN_WORK"
+  "next_action": "PRESERVE_EXP_AUTO_001_COMMERCIAL_GATE_AND_PRIORITIZE_REVENUE_VALIDATION_OVER_LOCALWORKER_RERUN"
 }
