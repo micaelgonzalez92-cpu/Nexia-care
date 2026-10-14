@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "EXP_AUTO_001_CHANNEL_ESCAPE_HATCH_RESEARCH",
+  "classification": "HECHO_VERIFICADO_PUBLIC_OFFICIAL_PLATFORM_RESEARCH_PLUS_CONSERVATIVE_RECOMMENDATION",
+  "canonical_state_base_version": 71,
+  "active_experiment": "EXP-AUTO-001",
+  "workana_state": "PENDING",
+  "artifact": "commercial/EXP-AUTO-001_CHANNEL_ESCAPE_HATCH_V1.md",
+  "artifact_blob_sha": "dd4e5801878c8172b7b0ed3005655062848834ec",
+  "decision": {
+    "workana_primary_remains": true,
+    "best_tactical_escape_channel": "FREELANCER_COM",
+    "best_strategic_escape_channel": "CONTRA",
+    "upwork": "RESERVE_HIGHER_ACQUISITION_FRICTION",
+    "peopleperhour": "RESERVE_RECREATES_MODERATION_FRICTION",
+    "malt": "RESERVE_EUROPEAN_STRATEGIC_CHANNEL"
+  },
+  "economics": {
+    "freelancer_hypothetical_gross_eur": 300,
+    "freelancer_verified_fixed_price_fee_percent": 10,
+    "freelancer_estimated_after_platform_eur": 270,
+    "labor_assumption_eur": 60,
+    "freelancer_estimated_contribution_pre_overhead_tax_eur": 210,
+    "workana_current_estimated_contribution_pre_overhead_tax_eur": 180,
+    "contra_exact_eur_contribution": "UNKNOWN_UNTIL_FX_PAYOUT_AND_CONTRACT_TIME_FEES"
+  },
+  "verified_market_signals": {
+    "freelancer_recent_n8n_real_estate_lead_project_seen": true,
+    "freelancer_recent_project_budget_eur_range": [30, 250],
+    "freelancer_recent_project_proposals": 139,
+    "contra_n8n_marketplace_category_present": true
+  },
+  "authority": {
+    "new_accounts_created": 0,
+    "profiles_published": 0,
+    "proposals_submitted": 0,
+    "messages_sent": 0,
+    "identity_documents_uploaded": 0,
+    "payment_methods_added": 0,
+    "cash_spend_eur": 0
+  },
+  "next_gate": "NO_ALTERNATIVE_CHANNEL_ACTIVATION_WITHOUT_EXPLICIT_KAEL_APPROVAL_FOR_NEW_ACCOUNT_AND_A_PRECOMMITTED_ZERO_SPEND_TEST",
+  "truth_limits": [
+    "Platform rules, fees and job states can change after this research date.",
+    "Contra exact payout/FX economics are not yet known.",
+    "No claim of paid-client production experience is permitted.",
+    "This event authorizes research only, not account creation, publication, contact or spend."
+  ]
+}
