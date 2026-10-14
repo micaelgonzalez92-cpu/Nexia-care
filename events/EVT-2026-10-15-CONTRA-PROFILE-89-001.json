@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-CONTRA-PROFILE-89-001",
+  "date": "2026-10-15",
+  "project": "NEXIA CORE",
+  "type": "EXP_AUTO_001_CONTRA_PROFILE_PROGRESS",
+  "classification": "PROFILE_89_PERCENT_IDENTITY_AND_PAYOUT_PENDING",
+  "canonical_state_base_version": 71,
+  "microtest": "EXP-AUTO-001_CONTRA_MICROTEST_V1",
+  "evidence": {
+    "source": "user_report_plus_shared_screen_recording_context",
+    "profile_completion_percent_visible": 89,
+    "instagram_social_link_shared": true,
+    "identity_verification_completed": false,
+    "payout_method_completed": false
+  },
+  "truth_limits": {
+    "published_work_piece_count": "NOT_RECONCILED_IN_THIS_EVENT",
+    "qualified_responses": 0,
+    "applications_submitted": 0,
+    "cash_spend_eur": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "authority": {
+    "identity_verification_requires_kael": true,
+    "payout_method_selection_requires_kael": true,
+    "do_not_share_passwords_otp_or_identity_documents_in_chat": true
+  },
+  "next_step": "KAEL_COMPLETES_CONTRA_IDENTITY_VERIFICATION_AND_SELECTS_PAYOUT_METHOD_DIRECTLY_IN_CONTRA; NEXIA_RECONCILES_PROFILE_POSTCONDITION_AFTERWARD",
+  "limits_changed": false
+}
