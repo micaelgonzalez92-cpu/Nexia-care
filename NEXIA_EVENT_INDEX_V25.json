@@ -1,0 +1,22 @@
+{
+  "schema_version": 25,
+  "updated_at": "2026-10-15",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V24.json",
+    "verified_blob_sha": "b1221d2cfd5fb9f67fcb7de503c7c326400dbd13"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-15-QUALITY-RETROFIT-PRIORITY-MODEL-001",
+      "path": "events/EVT-2026-10-15-QUALITY-RETROFIT-PRIORITY-MODEL-001.json",
+      "verified_blob_sha": "ddf05357cdac5621b48fa8c5bdbc0326ab810a21"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-15-QUALITY-RETROFIT-PRIORITY-MODEL-001",
+  "latest_event_path": "events/EVT-2026-10-15-QUALITY-RETROFIT-PRIORITY-MODEL-001.json",
+  "latest_event_blob_sha": "ddf05357cdac5621b48fa8c5bdbc0326ab810a21",
+  "latest_material_business_event_id": "EVT-2026-10-15-PROJECT-WIDE-QUALITY-RETROFIT-001",
+  "rule": "Retrofit uses hard precedence plus multi-axis prioritization. Audit domains are not a fixed economic priority sequence. Dynamic queue may reorder with evidence."
+}
