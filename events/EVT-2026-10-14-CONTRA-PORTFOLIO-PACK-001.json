@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "EXP_AUTO_001_CONTRA_PORTFOLIO_PACK_PREPARED",
+  "classification": "PREPARED_NOT_PUBLISHED",
+  "canonical_state_base_version": 71,
+  "microtest": "EXP-AUTO-001_CONTRA_MICROTEST_V1",
+  "account_state": {
+    "contra_account_created_verified": true,
+    "contra_authenticated_session_verified": true,
+    "profile_completion_percent_last_verified": 11
+  },
+  "artifact": "commercial/EXP-AUTO-001_CONTRA_PORTFOLIO_V1.md",
+  "artifact_blob_sha": "09159188b1b949c96b7be6e22317d64ae015a4a3",
+  "portfolio_pack": {
+    "pieces_prepared": 4,
+    "pieces_published_verified": 0,
+    "titles": [
+      "n8n Lead Intake & Human Review Workflow",
+      "Persistent Lead Deduplication with n8n Data Tables",
+      "Fail-Safe Lead Processing Engine — Node.js",
+      "Automated n8n Workflow QA & Regression Checks"
+    ],
+    "truth_boundary": "Internal demos, synthetic fixtures and verified technical proofs only. No fabricated clients, production deployments, testimonials, commercial results, revenue lift or ROI claims."
+  },
+  "evidence_sources": [
+    "NEXIA_EXP_AUTO_001_N8N_RUNTIME_EXECUTION_2026-10-11.md",
+    "NEXIA_EXP_AUTO_001_N8N_PERSISTENT_DEDUP_2026-10-12.md",
+    "NEXIA_EXP_AUTO_001_CAPABILITY_DEMO_2026-10-11.md",
+    ".github/workflows/n8n-runtime-smoke.yml",
+    ".github/workflows/n8n-product-runtime-smoke.yml",
+    "products/lead-intake-reliability-kit/README.md",
+    "products/lead-intake-reliability-kit/QA_CHECKLIST.md"
+  ],
+  "execution_truth": {
+    "contra_work_pieces_published": 0,
+    "applications_submitted": 0,
+    "identity_and_payout_completed": false,
+    "cash_spend_eur": 0,
+    "human_setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED"
+  },
+  "limits_changed": false,
+  "next_step": "KAEL_OPENS_ADD_4_PIECES_OF_WORK_AND_SHOWS_FIRST_CREATION_FORM; NEXIA_MAPS_EXACT_FIELDS_AND_PREPARES_REQUIRED_MEDIA_BEFORE_PUBLICATION",
+  "truth_limit": "The portfolio copy is prepared from verified internal evidence, but no Contra work item is claimed published until the platform shows the postcondition."
+}
