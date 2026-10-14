@@ -1,6 +1,6 @@
 {
-  "schema_version": 6,
-  "boot_version": 64,
+  "schema_version": 7,
+  "boot_version": 65,
   "generated_at": "2026-10-14",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -13,8 +13,8 @@
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
     "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
-    "NEXIA_EVENT_INDEX_V6.json",
-    "follow V6 base to V5 then V4 then V3",
+    "NEXIA_EVENT_INDEX_V7.json",
+    "follow V7 base to V6 then V5 then V4 then V3",
     "events after STATE v71 only if any",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
@@ -26,19 +26,25 @@
   "execution_capabilities_blob_sha": "cfa8a860a08649ea85b22a6d3e0abcd245356ad5",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V6.json",
-    "base_index": "NEXIA_EVENT_INDEX_V5.json",
-    "latest_verified_event_id": "EVT-2026-10-14-WORKANA-PIPELINE-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-WORKANA-PIPELINE-001.json",
-    "latest_verified_event_blob_sha": "3e0f5264faa300206d185a0912c2a8980393a3d2",
-    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PIPELINE-001"
+    "active_index": "NEXIA_EVENT_INDEX_V7.json",
+    "active_index_blob_sha": "805809fdc14b71bdbb4cb4fa41f8062c131664af",
+    "base_index": "NEXIA_EVENT_INDEX_V6.json",
+    "latest_verified_event_id": "EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001.json",
+    "latest_verified_event_blob_sha": "c4bed5d4f8b0bea3d2cdec84cfff1a5a884b2653",
+    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001"
   },
-  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; HUESCAVENTURA PRIMARY OPEN; WORKANA APPROVAL PENDING; BACKUP BUYER PIPELINE READY; LOCAL WORKER 24H CLOSED STRICT FAIL ON GAP",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; HUESCAVENTURA PRIMARY OPEN; WORKANA EXPLICIT APPROVAL SIGNAL PENDING; BACKUP BUYER PIPELINE READY; LOCAL WORKER 24H CLOSED STRICT FAIL ON GAP",
   "active_experiment": {
     "id": "EXP-AUTO-001",
-    "status": "BLOCKED_PENDING_EXPLICIT_WORKANA_APPROVAL",
+    "status": "BLOCKED_PENDING_EXPLICIT_WORKANA_APPROVAL_SIGNAL",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
+    "workana_profile_completion_percent_reported": 100,
+    "workana_profile_100_percent_is_approval": false,
+    "workana_approval_valid_signals": ["OFFICIAL_APPROVAL_EMAIL", "AUTHENTICATED_DASHBOARD_APPROVED_STATE"],
+    "workana_approval_email_found": false,
+    "workana_dashboard_state_verified": false,
     "huescaventura_public_status": "OPEN_EVALUATING_PROPOSALS",
     "huescaventura_fresh_public_revalidation_date": "2026-10-14",
     "buyer_pipeline_artifact": "commercial/EXP-AUTO-001_WORKANA_PIPELINE_V1.md",
@@ -72,7 +78,7 @@
     "local_worker_software_api_cost_eur": 0,
     "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
-  "human_gate": "Commercial gate remains explicit Workana approval. Huescaventura remains the only active target; backup buyers are research-only and authorize no contact. Local worker 24h is closed as strict FAIL on max-gap only; indefinite worker remains disabled.",
-  "sync_status": "STATE_V71_PLUS_V3_PLUS_V4_PLUS_V5_PLUS_V6_THROUGH_WORKANA_PIPELINE_001",
-  "next_action": "Keep EXP-AUTO-001 primary and wait for explicit Workana approval. If Huescaventura becomes unavailable or materially worse after gate clearance, freshly recheck ranked backup buyers before any proposal."
+  "human_gate": "Read the exact authenticated Workana Control Panel moderation state. APPROVED or the official approval email can verify moderation approval; 100% profile completion alone cannot. Do not submit/contact until approval is verified and Huescaventura is freshly rechecked.",
+  "sync_status": "STATE_V71_PLUS_V3_PLUS_V4_PLUS_V5_PLUS_V6_PLUS_V7_THROUGH_WORKANA_GATE_CLARIFICATION_001",
+  "next_action": "Kael reads the exact Workana dashboard moderation state: Pending, Not Approved, or Approved. No proposal submission yet."
 }
