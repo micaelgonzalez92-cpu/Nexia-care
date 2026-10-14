@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-WORKANA-PENDING-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "WORKANA_MODERATION_STATUS",
+  "classification": "USER_REPORTED_OPERATIONAL_EVIDENCE",
+  "active_experiment": "EXP-AUTO-001",
+  "status": "PENDING",
+  "approval_verified": false,
+  "proposal_submission_allowed": false,
+  "cash_spend_eur": 0,
+  "next_gate": "WAIT_FOR_OFFICIAL_APPROVAL_SIGNAL_BEFORE_SUBMISSION"
+}
