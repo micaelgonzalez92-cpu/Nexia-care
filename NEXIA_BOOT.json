@@ -1,6 +1,6 @@
 {
-  "schema_version": 19,
-  "boot_version": 75,
+  "schema_version": 20,
+  "boot_version": 76,
   "generated_at": "2026-10-15",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -13,8 +13,8 @@
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
     "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
-    "NEXIA_EVENT_INDEX_V19.json",
-    "follow V19 base through V18 to V3",
+    "NEXIA_EVENT_INDEX_V20.json",
+    "follow V20 base through V19 to V3",
     "events after STATE v71 only if any",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
@@ -24,18 +24,18 @@
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V19.json",
-    "active_index_blob_sha": "e405716219d5d8884561b3b932b2e1273af45a37",
-    "base_index": "NEXIA_EVENT_INDEX_V18.json",
-    "latest_verified_event_id": "EVT-2026-10-15-CONTRA-PROFILE-89-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-CONTRA-PROFILE-89-001.json",
-    "latest_verified_event_blob_sha": "5889bbd0aa7e90cefb40e062c56420d56adab25d",
-    "latest_material_business_event_id": "EVT-2026-10-15-CONTRA-PROFILE-89-001"
+    "active_index": "NEXIA_EVENT_INDEX_V20.json",
+    "active_index_blob_sha": "6662e481a50610367213312bb4ebf5cccc7a5a83",
+    "base_index": "NEXIA_EVENT_INDEX_V19.json",
+    "latest_verified_event_id": "EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001",
+    "latest_verified_event_path": "events/EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001.json",
+    "latest_verified_event_blob_sha": "c31c44b203f7dd2f17fe49b38907c5f56e8508f6",
+    "latest_material_business_event_id": "EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001"
   },
-  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; WORKANA PENDING; CONTRA PROFILE 89%; INSTAGRAM SHARED; IDENTITY AND PAYOUT PENDING; LOCAL MANUAL_ASSISTED ACTIVE",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; WORKANA PENDING; CONTRA PROFILE 89%; V2 PREMIUM PORTFOLIO REDESIGN ACTIVE; COMPETITIVE INTELLIGENCE + LAWFUL REVERSE ENGINEERING STANDARD ACTIVE; IDENTITY/PAYOUT PENDING",
   "active_experiment": {
     "id": "EXP-AUTO-001",
-    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_PROFILE_89_IDENTITY_PAYOUT_PENDING",
+    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_PROFILE_89_V2_REDESIGN_ACTIVE",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "workana_dashboard_state": "PENDING",
@@ -55,11 +55,16 @@
     "contra_authenticated_session_verified": true,
     "contra_profile_completion_percent_visible": 89,
     "contra_instagram_social_link_shared": true,
-    "contra_work_pieces_published_verified": "UNKNOWN_NOT_RECONCILED_AFTER_PROFILE_EDIT_FLOW",
-    "contra_rate_status": "USER_GUIDED_50_75_USD_PER_HOUR_NOT_POSTCONDITION_VERIFIED",
+    "contra_portfolio_v1_status": "SUPPORTING_MEDIA_ONLY",
+    "contra_portfolio_v2_status": "REDESIGN_REQUIRED_BEFORE_APPLICATIONS",
     "contra_identity_verified": false,
     "contra_payout_method_completed": false,
     "contra_applications_submitted": 0
+  },
+  "strategic_standards": {
+    "competitive_intelligence_reverse_engineering": "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
+    "art_direction_v2": "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md",
+    "contra_visual_benchmark": "commercial/EXP-AUTO-001_CONTRA_VISUAL_BENCHMARK_V2_2026-10-15.md"
   },
   "economics": {
     "capital_spent_eur": 0,
@@ -68,7 +73,7 @@
     "profit_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "human_gate": "Contra profile is at 89% with Instagram linked. Identity verification and payout setup are the remaining gates. Kael must complete them directly in Contra; do not share passwords, OTPs, identity documents or payment credentials in chat. Stop if any paid upgrade, deposit or unexpected spend is required.",
-  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V19_THROUGH_CONTRA_PROFILE_89_001",
-  "next_action": "KAEL_COMPLETES_CONTRA_IDENTITY_VERIFICATION_AND_PAYOUT_SETUP_DIRECTLY_IN_CONTRA; NEXIA_RECONCILES_POSTCONDITION."
+  "human_gate": "No human action required while Nexia generates/reviews four V2 hero covers. After assets are ready, Kael may replace Contra media and later complete identity verification and payout-bank setup directly inside Contra. Never share passwords, OTPs, identity documents or bank credentials in chat.",
+  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V20_THROUGH_COMPETITIVE_REVERSE_ENGINEERING_001",
+  "next_action": "NEXIA_GENERATES_AND_REVIEWS_FOUR_CONTRA_V2_HERO_COVERS_AGAINST_ART_DIRECTION_STANDARD."
 }
