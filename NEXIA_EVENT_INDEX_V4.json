@@ -19,6 +19,7 @@
   "latest_event_path": "events/EVT-2026-10-14-LOCALWORKER-010.json",
   "latest_event_blob_sha": "486faec0d39fe371514a59f2abaa14d0a2b2e140",
   "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001",
-  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
-  "rule": "Read STATE v71 as canonical base, then V3, then V4 deltas. Failed experiment events remain evidence and may be superseded only by explicit later events; do not retroactively change predeclared thresholds."
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "latest_session_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+  "rule": "Read STATE v71 as canonical base, then V3, then V4 deltas. LOCALWORKER-010 closes the trial as formal FAIL due solely to max gap 10.001 > 10.000 minutes while preserving strong operational and safety evidence. Failed experiment events remain evidence and may be superseded only by explicit later events; do not retroactively change predeclared thresholds."
 }
