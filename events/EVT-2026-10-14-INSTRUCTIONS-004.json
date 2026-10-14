@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-INSTRUCTIONS-004",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "GLOBAL_CUSTOM_INSTRUCTIONS_CANDIDATE_PREPARED",
+  "classification": "HECHO_VERIFICADO_INTERNAL",
+  "canonical_state_base_version": 71,
+  "artifact": "NEXIA_GLOBAL_CUSTOM_INSTRUCTIONS_V1_2026-10-14.md",
+  "artifact_blob_sha": "5a3bf624565daa9748c4571cffb0e28cfcc65282",
+  "paste_ready_exact_char_count": 1421,
+  "purpose": "Global ChatGPT instruction layer for truthfulness, critical reasoning, current-source verification, concise execution and non-fabrication. Project-specific mission, economics, authority and continuity remain in Nexia Project instructions.",
+  "chatgpt_global_settings_installed": false,
+  "personality_observed": "Eficiente",
+  "economic_impact": "NONE_DIRECT",
+  "cash_spend_eur": 0,
+  "verification": "PASS_REPOSITORY_SIDE_PREPARED_NOT_UI_INSTALLED",
+  "next_gate": "KAEL_INSTALL_GLOBAL_CUSTOM_INSTRUCTIONS_AND_VERIFY"
+}
