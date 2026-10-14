@@ -1,6 +1,6 @@
 {
-  "schema_version": 12,
-  "boot_version": 69,
+  "schema_version": 13,
+  "boot_version": 70,
   "generated_at": "2026-10-14",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -13,28 +13,26 @@
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
     "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
-    "NEXIA_EVENT_INDEX_V12.json",
-    "follow V12 base through V11 to V3",
+    "NEXIA_EVENT_INDEX_V13.json",
+    "follow V13 base through V12 to V3",
     "events after STATE v71 only if any",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
   "current_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
-  "current_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
-  "execution_capabilities_blob_sha": "cfa8a860a08649ea85b22a6d3e0abcd245356ad5",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V12.json",
-    "active_index_blob_sha": "c5fc4a8a987f09808dec711ef670d1270acd95e3",
-    "base_index": "NEXIA_EVENT_INDEX_V11.json",
-    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001.json",
-    "latest_verified_event_blob_sha": "94691c9e1a93c3d94800ebda43756684083a56cc",
+    "active_index": "NEXIA_EVENT_INDEX_V13.json",
+    "active_index_blob_sha": "825a3be89cfab20c0272d332bf76084ef8955ba5",
+    "base_index": "NEXIA_EVENT_INDEX_V12.json",
+    "latest_verified_event_id": "EVT-2026-10-14-GITHUB-TOOLING-RADAR-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-GITHUB-TOOLING-RADAR-001.json",
+    "latest_verified_event_blob_sha": "01f4032bd2796afa928fc21861e6f3d4f4f701be",
     "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001"
   },
-  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; HUESCAVENTURA PRIMARY OPEN; WORKANA MODERATION PENDING; CONTRA MICROTEST DESIGNED_NOT_AUTHORIZED_AND_INSTRUMENTED; LOCAL WORKER 24H CLOSED STRICT FAIL ON GAP",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; WORKANA PENDING; CONTRA MICROTEST DESIGNED_NOT_AUTHORIZED_AND_INSTRUMENTED; GITHUB TOOLING RADAR RESEARCH_ONLY COMPLETE; LOCAL WORKER 24H CLOSED STRICT FAIL ON GAP",
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "status": "BLOCKED_PENDING_WORKANA_APPROVAL_WITH_CONTRA_MICROTEST_READY_FOR_HUMAN_GATE",
@@ -42,8 +40,6 @@
     "max_delivery_hours": 4,
     "workana_dashboard_state": "PENDING",
     "huescaventura_public_status": "OPEN_EVALUATING_PROPOSALS",
-    "buyer_pipeline_artifact": "commercial/EXP-AUTO-001_WORKANA_PIPELINE_V1.md",
-    "channel_escape_hatch_artifact": "commercial/EXP-AUTO-001_CHANNEL_ESCAPE_HATCH_V1.md",
     "best_zero_purchase_escape_channel": "CONTRA",
     "contra_microtest_artifact": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
     "contra_microtest_ledger_template": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_LEDGER_TEMPLATE.json",
@@ -53,19 +49,23 @@
     "contra_microtest_window_days": 14,
     "contra_microtest_setup_reusable_ceiling_hours": 2,
     "contra_microtest_variable_acquisition_ceiling_hours": 2,
-    "contra_microtest_total_acquisition_attention_ceiling_hours": 4,
-    "contra_microtest_average_variable_attention_ceiling_minutes_per_application": 20,
-    "contra_microtest_attention_buckets_interchangeable": false,
-    "contra_microtest_four_hour_limit_is_permanent_nexia_rule": false
+    "contra_microtest_total_acquisition_attention_ceiling_hours": 4
+  },
+  "tooling_radar": {
+    "artifact": "research/NEXIA_GITHUB_TOOLING_RADAR_2026-10-14.md",
+    "artifact_blob_sha": "deafbb32f1ab33b17273844e20f7345727434eb4",
+    "status": "RESEARCH_COMPLETE_NO_INSTALLATION",
+    "test_first": ["microsoft/playwright-mcp", "unclecode/crawl4ai"],
+    "conditional_fallback": "D4Vinci/Scrapling",
+    "installation_authorized": false,
+    "pocs_executed": 0
   },
   "growth_autonomy": {
     "status": "INTEGRATED",
     "operating_model": "NEXIA_GROWTH_AUTONOMY_OPERATING_MODEL_2026-10-14.md",
-    "opportunity_scorecard": "NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md",
-    "target": "SUSTAINABLE_AFTER_TAX_PROFIT_REPEATABILITY_LOW_VERIFIED_HUMAN_ATTENTION"
+    "opportunity_scorecard": "NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md"
   },
   "local_execution": {
-    "local_worker_v0_1": "SAFETY_LADDER_THROUGH_WATCHDOG_WINDOWS_VERIFIED",
     "stability_24h_trial": "CLOSED_FAIL_PREDECLARED_MAX_GAP_WITH_STRONG_OPERATIONAL_EVIDENCE",
     "stability_records": 288,
     "stability_failures": 0,
@@ -78,11 +78,9 @@
     "revenue_eur": 0,
     "settled_revenue_eur": 0,
     "profit_eur": 0,
-    "reconciled_net_profit_eur": 0,
-    "workana_estimated_contribution_pre_overhead_tax_eur": 180,
-    "contra_exact_contribution": "UNKNOWN_UNTIL_CONTRACT_TIME_USD_EUR_AND_FEE_ALLOCATION"
+    "reconciled_net_profit_eur": 0
   },
-  "human_gate": "Workana remains PENDING. Contra microtest is fully designed and instrumented but requires explicit Kael approval before account creation, public profile, identity verification, wallet setup or applications. Generic /next does not authorize it.",
-  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V12_THROUGH_CONTRA_MICROTEST_INSTRUMENTATION_001",
-  "next_action": "KAEL_DECIDES_EXPLICITLY_WHETHER_TO_AUTHORIZE_EXP_AUTO_001_CONTRA_MICROTEST_V1; NO ACCOUNT OR KYC BEFORE THAT DECISION."
+  "human_gate": "Contra microtest remains fully designed/instrumented but requires explicit Kael approval before account creation, public profile, identity verification, wallet setup or applications. GitHub tooling research authorizes no installation or PoC execution.",
+  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V13_THROUGH_GITHUB_TOOLING_RADAR_001",
+  "next_action": "HUMAN_GATE_DECIDE_CONTRA_MICROTEST; TOOLING_POC_ONLY_IF_A_NAMED_BOTTLENECK_OUTRANKS_COMMERCIAL_WORK."
 }
