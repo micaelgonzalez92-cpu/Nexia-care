@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-INSTRUCTIONS-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "MASTER_INSTRUCTIONS_V2_APPROVED_AND_PERSISTED",
+  "classification": "HECHO_VERIFICADO_INTERNAL",
+  "canonical_state_base_version": 71,
+  "summary": "Kael explicitly requested that the useful elements from the reviewed prompt groups be applied and fused into one instruction revision. Nexia created NEXIA_MASTER_INSTRUCTIONS_V2_2026-10-14.md, merging the existing mission/authority/evidence/economics/continuity rules with a reasoning-quality layer, Portfolio & Asset Engine, anti-dispersion, anti-overengineering, KPI freshness/provenance, experiment kill criteria, attention economics and multi-horizon planning.",
+  "artifact": {
+    "path": "NEXIA_MASTER_INSTRUCTIONS_V2_2026-10-14.md",
+    "create_commit": "0d23fac02cd5efb2c7e170abb1a8ac2b484d984c",
+    "working_policy_requested_by_kael": true,
+    "chatgpt_project_settings_installed": false
+  },
+  "new_material_capabilities": [
+    "reasoning_and_quality_layer",
+    "portfolio_and_asset_engine",
+    "anti_dispersion_max_two_parallel_vetas_default",
+    "anti_overengineering_gate",
+    "metric_freshness_and_provenance",
+    "experiment_kill_criteria",
+    "revenue_per_human_attention_hour",
+    "manual_to_automatic_verified_maturity_ladder",
+    "90_day_12_month_36_month_planning_horizons"
+  ],
+  "truth_limit": "The instruction artifact is persisted in GitHub and Kael approved its use. Nexia cannot claim the ChatGPT Project custom-instructions UI was modified without a separate human update and verification.",
+  "next_gate": "OPTIONAL_PROJECT_INSTRUCTIONS_UI_UPDATE_BY_KAEL"
+}
