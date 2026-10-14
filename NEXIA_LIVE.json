@@ -1,7 +1,7 @@
 {
-  "schema_version": 10,
+  "schema_version": 12,
   "updated_at": "2026-10-14",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA MODERATION PENDING + HUESCAVENTURA PRIMARY OPEN + CONTRA ZERO-SPEND MICROTEST DESIGNED_NOT_AUTHORIZED + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA MODERATION PENDING + HUESCAVENTURA PRIMARY OPEN + CONTRA ZERO-SPEND MICROTEST DESIGNED_NOT_AUTHORIZED + PREEXECUTION ATTENTION INSTRUMENTATION READY + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
@@ -17,13 +17,13 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V10.json",
-    "active_index_blob_sha": "153076003adcc9b10399c2de4b3e2c4c572448fe",
-    "previous_index": "NEXIA_EVENT_INDEX_V9.json",
-    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-001.json",
-    "latest_verified_event_blob_sha": "9a76b592d5cb272eaa5e69e7a8d6c811954dfa4e",
-    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-001"
+    "active_index": "NEXIA_EVENT_INDEX_V12.json",
+    "active_index_blob_sha": "c5fc4a8a987f09808dec711ef670d1270acd95e3",
+    "previous_index": "NEXIA_EVENT_INDEX_V11.json",
+    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001.json",
+    "latest_verified_event_blob_sha": "94691c9e1a93c3d94800ebda43756684083a56cc",
+    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
@@ -39,16 +39,23 @@
     "huescaventura_budget_eur_range": [200, 300],
     "buyer_pipeline_artifact": "commercial/EXP-AUTO-001_WORKANA_PIPELINE_V1.md",
     "channel_escape_hatch_artifact": "commercial/EXP-AUTO-001_CHANNEL_ESCAPE_HATCH_V1.md",
-    "channel_escape_hatch_artifact_blob_sha": "42750c27e43e282a2d7755c5212eb6143ecef32f",
     "best_zero_purchase_escape_channel": "CONTRA",
     "freelancer_com_zero_spend_candidate": false,
     "freelancer_com_minimum_available_balance_usd": 20,
     "contra_microtest_artifact": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
+    "contra_microtest_artifact_blob_sha": "4d1fbbbc1101cbe25c3c29b38ad8a68c1ec30b2b",
+    "contra_microtest_ledger_template": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_LEDGER_TEMPLATE.json",
+    "contra_microtest_ledger_template_blob_sha": "684bddf5f6c41b93d2fabaa5abf68ba2a587f108",
     "contra_microtest_status": "DESIGNED_NOT_AUTHORIZED",
     "contra_microtest_cash_spend_ceiling_eur": 0,
     "contra_microtest_max_applications": 6,
     "contra_microtest_window_days": 14,
-    "contra_microtest_max_acquisition_human_attention_hours": 4,
+    "contra_microtest_setup_reusable_ceiling_hours": 2,
+    "contra_microtest_variable_acquisition_ceiling_hours": 2,
+    "contra_microtest_total_acquisition_attention_ceiling_hours": 4,
+    "contra_microtest_average_variable_attention_ceiling_minutes_per_application": 20,
+    "contra_microtest_attention_buckets_interchangeable": false,
+    "contra_microtest_four_hour_limit_is_permanent_nexia_rule": false,
     "alternative_channel_activation_authorized": false
   },
   "growth_autonomy": {
@@ -75,28 +82,28 @@
     "reconciled_net_profit_eur": 0,
     "workana_estimated_contribution_pre_overhead_tax_eur": 180,
     "contra_exact_contribution": "UNKNOWN_UNTIL_CONTRACT_TIME_USD_EUR_AND_FEE_ALLOCATION",
-    "freelancer_com_hypothetical_contribution_pre_overhead_tax_eur": 210,
     "freelancer_com_required_available_balance_usd": 20
   },
   "session_handoff": {
-    "last_completed_verified_action": "Fresh official research falsified Freelancer.com as a zero-spend escape route because a standard USD20 minimum available balance is required before bidding. Contra is now the preferred zero-purchase candidate. A bounded Contra microtest was precommitted at EUR0 cash spend, max 6 matched applications, 14 days and max 4h acquisition attention, but remains DESIGNED_NOT_AUTHORIZED. No account, public profile, KYC, wallet, application, contact or spend occurred.",
+    "last_completed_verified_action": "Refined the designed Contra microtest before execution: the 4h acquisition-attention ceiling is explicitly a test-specific information-cost cap, split into non-interchangeable 2h reusable setup plus 2h variable acquisition. Added preexecution instrumentation for setup time, variable minutes/application, qualified responses, pilot conversion, settled revenue, contribution and revenue/contribution per acquisition attention hour. No account, profile, KYC, wallet, application, contact or spend occurred.",
     "human_action_required_now": true,
-    "pending_human_action": "Kael must explicitly approve or reject the specific CONTRA microtest before any new account, public profile, identity verification, wallet setup or application activity. Generic /next does not authorize it.",
+    "pending_human_action": "Kael must explicitly approve or reject EXP-AUTO-001_CONTRA_MICROTEST_V1 before any new account, public profile, identity verification, wallet setup or application activity. Generic /next does not authorize it.",
     "surface": "Chat decision first; Contra only after explicit approval",
     "device": "mobile or computer",
     "cost_exposure": "EUR0 cash ceiling; identity/KYC data would be disclosed directly by Kael to Contra/Persona if activated.",
-    "success_check": "Explicit authorization for EXP-AUTO-001_CONTRA_MICROTEST_V1, after which execution must stay within its predeclared six-application/14-day/EUR0/4h limits.",
+    "success_check": "Explicit authorization for the specific microtest. If authorized, measurement must use the precommitted ledger and the 2h setup / 2h variable acquisition limits without post-hoc changes.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V10.json",
-      "events/EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-001.json",
+      "NEXIA_EVENT_INDEX_V12.json",
+      "events/EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001.json",
+      "events/EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-002.json",
       "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
-      "commercial/EXP-AUTO-001_CHANNEL_ESCAPE_HATCH_V1.md",
+      "commercial/EXP-AUTO-001_CONTRA_MICROTEST_LEDGER_TEMPLATE.json",
       "events/EVT-2026-10-14-WORKANA-PENDING-001.json"
     ],
-    "resume_from": "Workana remains PENDING and Huescaventura remains primary. Contra microtest is designed but not authorized. Freelancer.com requires capital availability and is no longer the zero-spend escape candidate."
+    "resume_from": "Workana remains PENDING and Huescaventura remains primary. Contra microtest is fully designed and instrumented but not authorized. The 4h limit is test-specific and split into 2h reusable setup plus 2h variable acquisition."
   },
-  "next_action": "HUMAN_GATE_DECIDE_CONTRA_MICROTEST; DO_NOT_CREATE_ANY_ACCOUNT_OR_PERFORM_KYC_UNTIL_EXPLICIT_APPROVAL."
+  "next_action": "HUMAN_GATE_DECIDE_CONTRA_MICROTEST; DO_NOT_CREATE_ANY_ACCOUNT_OR_PERFORM_KYC UNTIL EXPLICIT APPROVAL."
 }
