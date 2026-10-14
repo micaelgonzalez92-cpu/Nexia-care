@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-WORKANA-REVALIDATION-002",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "WORKANA_HUESCAVENTURA_PUBLIC_REVALIDATION",
+  "classification": "HECHO_VERIFICADO_PUBLIC_READ_ONLY",
+  "canonical_state_base_version": 71,
+  "opportunity_id": "WORKANA-HUESCAVENTURA-001",
+  "source": {
+    "url": "https://www.workana.com/es/job/automatizar-recepcion-y-clasificacion-de-leads-desde-formulario-con-airtable-y-n8n",
+    "checked_at_date": "2026-10-14",
+    "access_mode": "PUBLIC_READ_ONLY"
+  },
+  "observed": {
+    "project_status_banner": "EVALUANDO_PROPUESTAS",
+    "project_open": true,
+    "published_date": "2026-05-23",
+    "fixed_budget_orientation_eur": [200, 300],
+    "visible_proposals": 1,
+    "visible_interested_freelancers": 1,
+    "buyer_projects_published": 2,
+    "buyer_projects_paid": 1,
+    "buyer_payment_verified": true,
+    "human_review_required_before_customer_message": true,
+    "n8n_self_hosted_already_available_to_buyer": true,
+    "potential_follow_on_work_stated": true
+  },
+  "fit_with_exp_auto_001": {
+    "scope_alignment": "HIGH",
+    "bounded_semiautomatic_first_phase": true,
+    "classification_summary_draft_notification_followup_dedup_documentation_requested": true,
+    "anti_overengineering_requirement_explicit": true,
+    "proposal_price_eur": 300,
+    "proposal_still_within_public_budget_range": true
+  },
+  "commercial_gate": {
+    "explicit_workana_profile_approval_verified": false,
+    "proposal_submission_authorized": false,
+    "external_contact_performed": false,
+    "cash_spend_eur": 0
+  },
+  "interpretation": "The target opportunity remains materially attractive relative to the current evidence: it is still open/evaluating, low visible competition persists, the EUR300 offer remains within the buyer's stated range, and the requested first phase matches EXP-AUTO-001. This does not override the explicit Workana approval gate.",
+  "economics": {
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "next_gate": "EXPLICIT_WORKANA_APPROVAL_THEN_FRESH_OPEN_AND_ZERO_COST_SUBMISSION_RECHECK"
+}
