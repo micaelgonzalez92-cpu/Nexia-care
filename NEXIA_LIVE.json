@@ -22,9 +22,10 @@
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "692922b0f08b233046b9c4faafa28f854bead343",
-    "latest_verified_event_id": "EVT-2026-10-14-INSTRUCTIONS-004",
-    "latest_verified_event_path": "events/EVT-2026-10-14-INSTRUCTIONS-004.json",
+    "active_index_blob_sha": "b27cecea80c00cb0565f65aba6f56cfab6856133",
+    "latest_verified_event_id": "EVT-2026-10-14-AUTOMATION-DRIFT-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-AUTOMATION-DRIFT-001.json",
+    "latest_verified_event_blob_sha": "6dec7a3e13b9e3930eaf738a5110dde78dfd195a",
     "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001"
   },
   "active_experiment": {
@@ -72,8 +73,8 @@
     "stability_trial_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Prepared and persisted Project Compact V3 with the clarified economic objective (>1000 EUR/month is first scale milestone, not final ceiling), added the superseding master amendment, prepared the global Custom Instructions candidate, indexed INSTRUCTIONS-002/003/004, and synchronized BOOT/LIVE event references. Neither ChatGPT UI instruction field is claimed installed.",
-    "last_user_facing_handoff": "Repository-side instruction preparation is complete. Project Compact V3 (7791 chars) and Global Custom Instructions V1 (1421 chars) are ready but not installed in ChatGPT UI.",
+    "last_completed_verified_action": "Corrected and read-back-verified context drift in the active EXP-AUTO-001 Daily Work automation so it now treats Kael-reported 100% Workana profile completion as complete and explicit Workana approval as the pending commercial gate; persisted EVT-2026-10-14-AUTOMATION-DRIFT-001 and synchronized the active event index. Project Compact V3 and Global Custom Instructions V1 remain prepared but not claimed UI-installed.",
+    "last_user_facing_handoff": "Automation context drift corrected and persisted; no Workana action, spend, publication or worker-state claim was made.",
     "human_action_required_now": true,
     "pending_human_action": "Install the exact global Custom Instructions candidate in ChatGPT global personalization and the exact Project Compact V3 candidate in Nexia core Project instructions, save both, then verify in fresh chats. Do not interfere with the running local-worker stability trial.",
     "surface": "ChatGPT settings + Nexia core Project settings",
@@ -88,6 +89,7 @@
       "NEXIA_EVENT_INDEX_V3.json",
       "events/EVT-2026-10-14-INSTRUCTIONS-003.json",
       "events/EVT-2026-10-14-INSTRUCTIONS-004.json",
+      "events/EVT-2026-10-14-AUTOMATION-DRIFT-001.json",
       "NEXIA_PROJECT_INSTRUCTION_CONTRACT.json",
       "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V3_2026-10-14.md",
       "NEXIA_MASTER_INSTRUCTIONS_V2_ECONOMIC_OBJECTIVE_AMENDMENT_2026-10-14.md",
@@ -95,7 +97,7 @@
       "events/EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001.json",
       "events/EVT-2026-10-13-LOCALWORKER-009.json"
     ],
-    "resume_from": "Use Master Instructions V2 plus the economic-objective amendment as repository working policy; Project Compact V3 and Global Custom Instructions V1 are prepared but not UI-installed. Wait for explicit Workana approval and preserve the running 24h local-worker stability trial."
+    "resume_from": "Use Master Instructions V2 plus the economic-objective amendment as repository working policy; Project Compact V3 and Global Custom Instructions V1 are prepared but not UI-installed. EXP-AUTO-001 Daily Work automation drift is corrected. Wait for explicit Workana approval and preserve the running 24h local-worker stability trial."
   },
   "next_action": "KAEL_INSTALL_GLOBAL_AND_PROJECT_INSTRUCTIONS_THEN_VERIFY_FRESH_CHATS"
 }
