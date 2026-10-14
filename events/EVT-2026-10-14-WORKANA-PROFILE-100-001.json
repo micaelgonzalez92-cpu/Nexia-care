@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-WORKANA-PROFILE-100-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "WORKANA_PROFILE_COMPLETION_REPORTED_100_PERCENT",
+  "classification": "HECHO_REPORTADO_POR_KAEL_GMAIL_RECHECKED",
+  "canonical_state_base_version": 71,
+  "summary": "Kael reported that the Workana profile has been completed to 100%. A fresh Gmail check found no explicit Workana approval email yet, so the commercial gate advances from profile-completion pending to approval pending. No proposal was submitted and no paid priority moderation was purchased.",
+  "profile": {
+    "completion_percent_reported_by_kael": 100,
+    "previous_verified_percent": 70,
+    "completion_gate": "CLEARED_BY_USER_REPORT",
+    "explicit_approval_email_found": false,
+    "approval_gate": "PENDING",
+    "proposal_submission_allowed_now": false
+  },
+  "gmail_recheck": {
+    "scope": "from workana.com newer_than 2d excluding spam/trash",
+    "latest_message_subject": "Estás a un paso de ser aprobado en Workana 🚀",
+    "latest_message_date_utc": "2026-10-12T10:10:28+00:00",
+    "explicit_approval_found": false
+  },
+  "actions_taken": {
+    "proposal_submitted": false,
+    "priority_moderation_purchased": false,
+    "cash_spend_eur": 0
+  },
+  "next_gate": "WORKANA_EXPLICIT_APPROVAL",
+  "truth_limit": "The 100% completion is based on Kael's direct report in chat. Explicit approval remains unverified and no proposal may be submitted until approval is confirmed and Huescaventura is freshly revalidated open with zero submission cost."
+}
