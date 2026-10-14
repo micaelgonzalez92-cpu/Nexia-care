@@ -1,24 +1,24 @@
 {
-  "schema_version": 19,
+  "schema_version": 20,
   "updated_at": "2026-10-15",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA PENDING + CONTRA PROFILE 89% + INSTAGRAM SHARED + IDENTITY_AND_PAYOUT_PENDING + REMOTE BROWSER BLOCKED_LOCAL_MANUAL_ASSISTED + GITHUB TOOLING RADAR RESEARCH_ONLY",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA PENDING + CONTRA PROFILE 89% + V2 PREMIUM PORTFOLIO REDESIGN ACTIVE + COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING STANDARD ACTIVE + IDENTITY_AND_PAYOUT_PENDING",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V19.json",
-    "active_index_blob_sha": "e405716219d5d8884561b3b932b2e1273af45a37",
-    "previous_index": "NEXIA_EVENT_INDEX_V18.json",
-    "latest_verified_event_id": "EVT-2026-10-15-CONTRA-PROFILE-89-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-CONTRA-PROFILE-89-001.json",
-    "latest_verified_event_blob_sha": "5889bbd0aa7e90cefb40e062c56420d56adab25d",
-    "latest_material_business_event_id": "EVT-2026-10-15-CONTRA-PROFILE-89-001"
+    "active_index": "NEXIA_EVENT_INDEX_V20.json",
+    "active_index_blob_sha": "6662e481a50610367213312bb4ebf5cccc7a5a83",
+    "previous_index": "NEXIA_EVENT_INDEX_V19.json",
+    "latest_verified_event_id": "EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001",
+    "latest_verified_event_path": "events/EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001.json",
+    "latest_verified_event_blob_sha": "c31c44b203f7dd2f17fe49b38907c5f56e8508f6",
+    "latest_material_business_event_id": "EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "stage": "VETA / PRE-VALIDACION COMERCIAL",
-    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_PROFILE_89_IDENTITY_PAYOUT_PENDING",
+    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_PROFILE_89_V2_REDESIGN_ACTIVE",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "economic_priority": true,
@@ -37,18 +37,32 @@
     "contra_setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED",
     "contra_account_created_verified": true,
     "contra_authenticated_session_verified": true,
-    "contra_onboarding_completed_visible": true,
     "contra_profile_completion_percent_visible": 89,
     "contra_instagram_social_link_shared": true,
-    "contra_portfolio_pack_prepared": true,
-    "contra_portfolio_pack_pieces_prepared": 4,
-    "contra_portfolio_pack_artifact": "commercial/EXP-AUTO-001_CONTRA_PORTFOLIO_V1.md",
+    "contra_portfolio_v1_status": "SUPPORTING_MEDIA_ONLY",
+    "contra_portfolio_v2_status": "REDESIGN_REQUIRED_BEFORE_APPLICATIONS",
+    "contra_visual_benchmark_artifact": "commercial/EXP-AUTO-001_CONTRA_VISUAL_BENCHMARK_V2_2026-10-15.md",
     "contra_work_pieces_published_verified": "UNKNOWN_NOT_RECONCILED_AFTER_PROFILE_EDIT_FLOW",
     "contra_rate_status": "USER_GUIDED_50_75_USD_PER_HOUR_NOT_POSTCONDITION_VERIFIED",
     "contra_identity_verified": false,
     "contra_payout_method_completed": false,
     "contra_applications_submitted": 0,
     "alternative_channel_activation_authorized": true
+  },
+  "strategic_standards": {
+    "competitive_intelligence_reverse_engineering": {
+      "status": "ACTIVE",
+      "artifact": "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
+      "mandatory_sequence": "BENCHMARK_DECOMPOSE_PARITY_DIFFERENTIATION_PROOF_SHIP",
+      "public_asset_benchmark_required": true,
+      "security_or_access_bypass_authorized": false
+    },
+    "art_direction_v2": {
+      "status": "ACTIVE",
+      "artifact": "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md",
+      "target": "PREMIUM_CASE_STUDY_SENIOR_CREATIVE_DIRECTION",
+      "publication_score_target_min": 80
+    }
   },
   "tooling_radar": {
     "artifact": "research/NEXIA_GITHUB_TOOLING_RADAR_2026-10-14.md",
@@ -71,23 +85,25 @@
     "reconciled_net_profit_eur": 0
   },
   "session_handoff": {
-    "last_completed_verified_action": "Contra profile reached 89% and Instagram social link was shared. Identity verification and payout setup remain incomplete. Do not request or store passwords, OTPs, identity documents or payment credentials in chat.",
-    "human_action_required_now": true,
-    "pending_human_action": "Complete Contra identity verification and select the payout method directly inside Contra. Stop before any paid upgrade, deposit or unexpected fee and return to Nexia for review.",
-    "surface": "Contra profile/wallet in normal local browser",
+    "last_completed_verified_action": "Activated cross-project Competitive Intelligence + lawful Reverse Engineering standard and Premium Art Direction V2 after benchmarking strong Contra automation and top-tier creative portfolios. Contra remains at 89% with Instagram linked; identity and payout remain incomplete. V1 covers are demoted to supporting media and V2 outcome-first hero covers are required before applications, subject to the existing setup-attention ceiling.",
+    "human_action_required_now": false,
+    "pending_human_action": "After Nexia generates and reviews four V2 hero covers, Kael can replace the current Contra cover media and later complete identity/payout directly in Contra. Do not share passwords, OTPs, identity documents or bank credentials in chat.",
+    "surface": "Nexia internal design/research now; Contra local browser after V2 assets are ready",
     "device": "mobile or computer",
-    "cost_exposure": "EUR0 cash ceiling for microtest; stop if Contra requires spend",
-    "success_check": "Identity shows verified and payout method shows configured without paid upgrade or unapproved spend.",
+    "cost_exposure": "EUR0 cash ceiling",
+    "success_check": "Four V2 covers reach the active art-direction standard without fabricated client/commercial claims; then profile media can be upgraded before acquisition applications.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V19.json",
-      "events/EVT-2026-10-15-CONTRA-PROFILE-89-001.json",
-      "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
-      "commercial/EXP-AUTO-001_CONTRA_PORTFOLIO_V1.md"
+      "NEXIA_EVENT_INDEX_V20.json",
+      "events/EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001.json",
+      "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
+      "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md",
+      "commercial/EXP-AUTO-001_CONTRA_VISUAL_BENCHMARK_V2_2026-10-15.md",
+      "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md"
     ],
-    "resume_from": "Contra profile 89%; Instagram linked; identity verification and payout setup pending."
+    "resume_from": "Competitive/reverse-engineering standard active; Contra 89%; V2 premium portfolio redesign is the current GREEN task before applications."
   },
-  "next_action": "KAEL_COMPLETES_CONTRA_IDENTITY_VERIFICATION_AND_PAYOUT_SETUP_DIRECTLY_IN_CONTRA; NEXIA_RECONCILES_POSTCONDITION."
+  "next_action": "NEXIA_GENERATES_AND_REVIEWS_FOUR_CONTRA_V2_HERO_COVERS_AGAINST_ART_DIRECTION_STANDARD."
 }
