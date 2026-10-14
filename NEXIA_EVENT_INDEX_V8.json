@@ -1,0 +1,21 @@
+{
+  "schema_version": 8,
+  "updated_at": "2026-10-14",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V7.json",
+    "verified_blob_sha": "805809fdc14b71bdbb4cb4fa41f8062c131664af",
+    "latest_event_id": "EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-14-WORKANA-PENDING-001",
+      "path": "events/EVT-2026-10-14-WORKANA-PENDING-001.json"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-14-WORKANA-PENDING-001",
+  "latest_event_path": "events/EVT-2026-10-14-WORKANA-PENDING-001.json",
+  "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PENDING-001",
+  "rule": "Read STATE v71 as canonical base, then V3 through V8 in order. Workana moderation is currently PENDING based on Kael's read of the authenticated dashboard. No proposal may be submitted until an official approval signal is verified."
+}
