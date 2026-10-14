@@ -1,31 +1,31 @@
 {
-  "schema_version": 17,
+  "schema_version": 18,
   "updated_at": "2026-10-14",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA MODERATION PENDING + HUESCAVENTURA PRIMARY OPEN + CONTRA ACCOUNT AUTHENTICATED PROFILE 11% PORTFOLIO_NEXT + GITHUB TOOLING RADAR RESEARCH COMPLETE_NO_INSTALLATION + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA PENDING + CONTRA ACCOUNT AUTHENTICATED PROFILE 11% + CONTRA PORTFOLIO PACK 4 PREPARED_0_PUBLISHED + REMOTE BROWSER BLOCKED_LOCAL_MANUAL_ASSISTED + GITHUB TOOLING RADAR RESEARCH_ONLY",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V17.json",
-    "active_index_blob_sha": "33fc4309fccdd0223476fd644578a2153858553d",
-    "previous_index": "NEXIA_EVENT_INDEX_V16.json",
-    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001.json",
-    "latest_verified_event_blob_sha": "1c728a2304a92f0ada1dfd57778c12c1bbd7e362",
-    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001"
+    "active_index": "NEXIA_EVENT_INDEX_V18.json",
+    "active_index_blob_sha": "c10018b9073c368039b9359a169938b5303bae48",
+    "previous_index": "NEXIA_EVENT_INDEX_V17.json",
+    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001.json",
+    "latest_verified_event_blob_sha": "67c03f41a5bb48ba731680c2ac4df36dc5aabd4e",
+    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "stage": "VETA / PRE-VALIDACION COMERCIAL",
-    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_ACCOUNT_ACTIVE_PROFILE_BUILD",
+    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_ACCOUNT_ACTIVE_PORTFOLIO_PACK_PREPARED",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "economic_priority": true,
     "workana_dashboard_state": "PENDING",
     "huescaventura_public_status": "OPEN_EVALUATING_PROPOSALS",
     "best_zero_purchase_escape_channel": "CONTRA",
-    "contra_microtest_status": "AUTHORIZED_ACCOUNT_ACTIVE_PROFILE_11_PERCENT",
+    "contra_microtest_status": "AUTHORIZED_ACCOUNT_ACTIVE_PROFILE_BUILD",
     "contra_microtest_cash_spend_ceiling_eur": 0,
     "contra_microtest_max_applications": 6,
     "contra_microtest_window_days": 14,
@@ -41,6 +41,11 @@
     "contra_profile_completion_percent_visible": 11,
     "contra_profile_cover_added": false,
     "contra_four_work_pieces_added": false,
+    "contra_work_pieces_published_verified": 0,
+    "contra_portfolio_pack_prepared": true,
+    "contra_portfolio_pack_pieces_prepared": 4,
+    "contra_portfolio_pack_artifact": "commercial/EXP-AUTO-001_CONTRA_PORTFOLIO_V1.md",
+    "contra_portfolio_pack_artifact_blob_sha": "09159188b1b949c96b7be6e22317d64ae015a4a3",
     "contra_rate_added": false,
     "contra_social_link_added": false,
     "contra_identity_and_payout_completed": false,
@@ -68,23 +73,24 @@
     "reconciled_net_profit_eur": 0
   },
   "session_handoff": {
-    "last_completed_verified_action": "User screenshot verified an authenticated Contra account with onboarding complete and profile completion at 11%. Remote isolated browser remains blocked by Cloudflare and is not bypassed. Continue via manual-assisted local browser. No work pieces, rate, social link, KYC/payout or applications are yet verified. No spend occurred.",
+    "last_completed_verified_action": "Prepared a four-piece Contra portfolio pack from verified internal n8n/Node.js/CI evidence. No portfolio piece is yet verified published. The account remains authenticated and last observed at 11% completion. No application, KYC/payout completion or spend occurred.",
     "human_action_required_now": true,
-    "pending_human_action": "Open Add 4 pieces of work in Contra and show the creation form. Nexia will prepare exact truthful portfolio copy/assets from verified internal work. Do not fabricate clients, testimonials, production deployments or revenue claims.",
+    "pending_human_action": "Open 'Add 4 pieces of work to your profile' in Contra and show the first creation form. Nexia will map exact fields and prepare required visual media without strengthening claims beyond evidence.",
     "surface": "Contra profile checklist in normal local browser",
     "device": "mobile or computer",
     "cost_exposure": "EUR0 cash ceiling",
-    "success_check": "Four truthful portfolio pieces published, then rate/social link and only afterward identity/payout as needed.",
+    "success_check": "Actual Contra work-item form observed; then publish four truthful internal-demo pieces with postcondition verification.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V17.json",
+      "NEXIA_EVENT_INDEX_V18.json",
+      "events/EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001.json",
+      "commercial/EXP-AUTO-001_CONTRA_PORTFOLIO_V1.md",
       "events/EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001.json",
-      "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
-      "events/EVT-2026-10-14-WORKANA-PENDING-001.json"
+      "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md"
     ],
-    "resume_from": "Contra account is active/authenticated at 11% profile completion. Build four truthful portfolio pieces next; remote-browser route remains blocked."
+    "resume_from": "Contra account active/authenticated; four truthful portfolio pieces prepared; zero verified published. Observe first work-item form next."
   },
-  "next_action": "KAEL_OPENS_ADD_4_PIECES_OF_WORK_AND_SHOWS_FORM; NEXIA_PREPARES_EXACT_TRUTHFUL_PORTFOLIO_CONTENT."
+  "next_action": "KAEL_OPENS_ADD_4_PIECES_OF_WORK_AND_SHOWS_FIRST_FORM; NEXIA_MAPS_FIELDS_AND_PREPARES_MEDIA."
 }
