@@ -1,6 +1,6 @@
 {
-  "schema_version": 16,
-  "boot_version": 72,
+  "schema_version": 17,
+  "boot_version": 73,
   "generated_at": "2026-10-14",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -13,8 +13,8 @@
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
     "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
-    "NEXIA_EVENT_INDEX_V16.json",
-    "follow V16 base through V15 to V3",
+    "NEXIA_EVENT_INDEX_V17.json",
+    "follow V17 base through V16 to V3",
     "events after STATE v71 only if any",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
@@ -24,61 +24,39 @@
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V16.json",
-    "active_index_blob_sha": "0c5df4ddb5c7f2fc313ac28923dbb3c6121559ae",
-    "base_index": "NEXIA_EVENT_INDEX_V15.json",
-    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001.json",
-    "latest_verified_event_blob_sha": "ee7eda4fcbe4135f2bfa19a82b377de4df0514ca",
-    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001"
+    "active_index": "NEXIA_EVENT_INDEX_V17.json",
+    "active_index_blob_sha": "33fc4309fccdd0223476fd644578a2153858553d",
+    "base_index": "NEXIA_EVENT_INDEX_V16.json",
+    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001.json",
+    "latest_verified_event_blob_sha": "1c728a2304a92f0ada1dfd57778c12c1bbd7e362",
+    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001"
   },
-  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; WORKANA PENDING; CONTRA MICROTEST AUTHORIZED_REMOTE_BROWSER_BLOCKED_MANUAL_ASSISTED_LOCAL_SIGNUP; GITHUB TOOLING RADAR RESEARCH_ONLY COMPLETE; LOCAL WORKER 24H CLOSED STRICT FAIL ON GAP",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; WORKANA PENDING; CONTRA ACCOUNT AUTHENTICATED PROFILE 11% PORTFOLIO BUILD NEXT; REMOTE BROWSER BLOCKED; LOCAL MANUAL_ASSISTED ACTIVE",
   "active_experiment": {
     "id": "EXP-AUTO-001",
-    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_MANUAL_ASSISTED_LOCAL_SIGNUP_REQUIRED",
+    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_ACCOUNT_ACTIVE_PROFILE_BUILD",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "workana_dashboard_state": "PENDING",
     "huescaventura_public_status": "OPEN_EVALUATING_PROPOSALS",
     "best_zero_purchase_escape_channel": "CONTRA",
-    "contra_microtest_artifact": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
-    "contra_microtest_ledger_template": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_LEDGER_TEMPLATE.json",
-    "contra_microtest_status": "AUTHORIZED_REMOTE_BROWSER_BLOCKED_MANUAL_ASSISTED_LOCAL_SIGNUP",
-    "contra_microtest_authorization_verified": true,
+    "contra_microtest_status": "AUTHORIZED_ACCOUNT_ACTIVE_PROFILE_11_PERCENT",
     "contra_microtest_cash_spend_ceiling_eur": 0,
     "contra_microtest_max_applications": 6,
     "contra_microtest_window_days": 14,
     "contra_microtest_setup_reusable_ceiling_hours": 2,
     "contra_microtest_variable_acquisition_ceiling_hours": 2,
     "contra_microtest_total_acquisition_attention_ceiling_hours": 4,
-    "contra_remote_browser_cloudflare_verification": "FAILED",
     "contra_remote_browser_route": "BLOCKED_DO_NOT_BYPASS",
     "contra_fallback_execution_mode": "MANUAL_ASSISTED_LOCAL_BROWSER",
     "contra_setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED",
-    "contra_account_created_verified": false,
-    "contra_authenticated_session_verified": false,
+    "contra_account_created_verified": true,
+    "contra_authenticated_session_verified": true,
+    "contra_profile_completion_percent_visible": 11,
+    "contra_four_work_pieces_added": false,
+    "contra_identity_and_payout_completed": false,
     "contra_applications_submitted": 0
-  },
-  "tooling_radar": {
-    "artifact": "research/NEXIA_GITHUB_TOOLING_RADAR_2026-10-14.md",
-    "status": "RESEARCH_COMPLETE_NO_INSTALLATION",
-    "test_first": ["microsoft/playwright-mcp", "unclecode/crawl4ai"],
-    "conditional_fallback": "D4Vinci/Scrapling",
-    "installation_authorized": false,
-    "pocs_executed": 0
-  },
-  "growth_autonomy": {
-    "status": "INTEGRATED",
-    "operating_model": "NEXIA_GROWTH_AUTONOMY_OPERATING_MODEL_2026-10-14.md",
-    "opportunity_scorecard": "NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md"
-  },
-  "local_execution": {
-    "stability_24h_trial": "CLOSED_FAIL_PREDECLARED_MAX_GAP_WITH_STRONG_OPERATIONAL_EVIDENCE",
-    "stability_records": 288,
-    "stability_failures": 0,
-    "stability_auto_shutdown": "VERIFIED",
-    "main_windows_task": "DISABLED_FINAL_VERIFIED",
-    "persistent_24x7_service": "NOT_AUTHORIZED_NOT_VERIFIED"
   },
   "economics": {
     "capital_spent_eur": 0,
@@ -87,7 +65,7 @@
     "profit_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "human_gate": "Contra microtest remains authorized. Remote isolated-browser signup is blocked by Cloudflare human verification and must not be bypassed. Kael must create/sign into the Contra Independent account in a normal local browser and complete any human verification directly there. Credentials, OTPs and identity documents remain on official surfaces.",
-  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V16_THROUGH_CONTRA_REMOTE_VERIFICATION_BLOCK_001",
-  "next_action": "KAEL_COMPLETES_CONTRA_SIGNUP_OR_SIGNIN_IN_NORMAL_LOCAL_BROWSER_AND_REPORTS_AUTHENTICATED_ACCESS; THEN_NEXIA_CONTINUES_PROFILE_SETUP_ASSISTED."
+  "human_gate": "Contra account is active and authenticated. Next human step is to open Add 4 pieces of work and show the form. Portfolio must use truthful internal demos/case studies only. Do not fabricate clients, testimonials, deployment history or revenue. KYC/payout can follow after profile content is commercially ready.",
+  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V17_THROUGH_CONTRA_ACCOUNT_ACTIVE_001",
+  "next_action": "KAEL_OPENS_ADD_4_PIECES_OF_WORK_AND_SHOWS_FORM; NEXIA_PREPARES_EXACT_TRUTHFUL_PORTFOLIO_CONTENT."
 }
