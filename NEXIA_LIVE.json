@@ -1,19 +1,19 @@
 {
-  "schema_version": 22,
+  "schema_version": 24,
   "updated_at": "2026-10-15",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA PENDING + CONTRA PROFILE 89% + V2 PREMIUM PORTFOLIO REDESIGN ACTIVE + COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING ACTIVE + CONTINUOUS_QUALITY_EVOLUTION ACTIVE + BOUNDED_AUTONOMY_URGENCY ACTIVE + IDENTITY_AND_PAYOUT_PENDING",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA PENDING + CONTRA PROFILE 89% + V2 PREMIUM PORTFOLIO REDESIGN ACTIVE + PROJECT_WIDE_QUALITY_RETROFIT ACTIVE + DASHBOARD_V3_RECONCILED + IDENTITY_AND_PAYOUT_PENDING",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V22.json",
-    "active_index_blob_sha": "9e79fe6aed522af6b390ab40f5bed557323b017b",
-    "previous_index": "NEXIA_EVENT_INDEX_V21.json",
-    "latest_verified_event_id": "EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001.json",
-    "latest_verified_event_blob_sha": "9fa96855783ac0d9c66bcd3a0e9ace887f65f166",
-    "latest_material_business_event_id": "EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001"
+    "active_index": "NEXIA_EVENT_INDEX_V24.json",
+    "active_index_blob_sha": "b1221d2cfd5fb9f67fcb7de503c7c326400dbd13",
+    "previous_index": "NEXIA_EVENT_INDEX_V23.json",
+    "latest_verified_event_id": "EVT-2026-10-15-QUALITY-RETROFIT-DASHBOARD-001",
+    "latest_verified_event_path": "events/EVT-2026-10-15-QUALITY-RETROFIT-DASHBOARD-001.json",
+    "latest_verified_event_blob_sha": "efe7712e53275b95e02294da6cdc493619270a68",
+    "latest_material_business_event_id": "EVT-2026-10-15-PROJECT-WIDE-QUALITY-RETROFIT-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
@@ -54,9 +54,7 @@
     "competitive_intelligence_reverse_engineering": {
       "status": "ACTIVE",
       "artifact": "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
-      "mandatory_sequence": "BENCHMARK_DECOMPOSE_PARITY_DIFFERENTIATION_PROOF_SHIP",
-      "public_asset_benchmark_required": true,
-      "security_or_access_bypass_authorized": false
+      "mandatory_sequence": "BENCHMARK_DECOMPOSE_PARITY_DIFFERENTIATION_PROOF_SHIP"
     },
     "art_direction_v2": {
       "status": "ACTIVE",
@@ -67,33 +65,42 @@
     "continuous_quality_evolution": {
       "status": "ACTIVE",
       "artifact": "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md",
-      "mandatory_material_task_loop": "VERIFY_CRITIQUE_COMPARE_IMPROVE_REVERIFY_CAPTURE_STOP_RATIONALLY",
-      "public_commercial_minimum": "COMPETITIVE",
-      "strategic_flagship_target": "TOP_TIER",
-      "claimed_superiority_requires_external_evidence": true,
-      "anti_perfectionism_economic_stop_rule": true
+      "mandatory_material_task_loop": "VERIFY_CRITIQUE_COMPARE_IMPROVE_REVERIFY_CAPTURE_STOP_RATIONALLY"
     },
     "bounded_autonomy_urgency": {
       "status": "ACTIVE",
       "artifact": "governance/NEXIA_BOUNDED_AUTONOMY_URGENCY_STANDARD_2026-10-15.md",
-      "operating_principle": "NO_SELF_IMPOSED_FENCES_HARD_GATES_STAY_HARD_UNTIL_EXPLICITLY_REVISED",
       "green_default": "EXECUTE",
       "yellow_default": "RESEARCH_PREPARE_TEST",
-      "red_default": "ESCALATE_ONLY_IRREDUCIBLE_HUMAN_GATE",
-      "delay_is_economic_cost": true,
-      "constraint_review_proactive": true
+      "red_default": "ESCALATE_ONLY_IRREDUCIBLE_HUMAN_GATE"
+    },
+    "project_wide_quality_retrofit": {
+      "status": "ACTIVE",
+      "artifact": "quality/NEXIA_PROJECT_WIDE_QUALITY_RETROFIT_2026-10-15.md",
+      "automatic_trigger_on_material_standard_change": true,
+      "active_reusable_assets_must_be_triaged": true,
+      "historical_evidence_rewrite": false,
+      "current_top3": [
+        "EXP_AUTO_001_MARKET_SURFACE",
+        "ACQUISITION_COMMERCIAL_CONTROL_LAYER",
+        "PROJECT_TRUTH_RECOVERY_REPORTING_LAYER"
+      ]
     }
   },
-  "tooling_radar": {
-    "artifact": "research/NEXIA_GITHUB_TOOLING_RADAR_2026-10-14.md",
-    "status": "RESEARCH_COMPLETE_NO_INSTALLATION",
-    "test_first": ["microsoft/playwright-mcp", "unclecode/crawl4ai"],
-    "conditional_fallback": "D4Vinci/Scrapling",
-    "installation_authorized": false,
-    "pocs_executed": 0
+  "quality_retrofit": {
+    "dashboard": {
+      "path": "NEXIA_PROGRESS_DASHBOARD.md",
+      "version": "3.0",
+      "status": "IMPROVED_AND_REVERIFIED",
+      "blob_sha": "7fd502d1b0e035b29e22151f452986b91d152257"
+    },
+    "next_wave": "WAVE_A_REVENUE_MARKET_SURFACE_PLUS_ACQUISITION_CONTROL",
+    "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM"
   },
   "execution_capabilities": {
     "snapshot": "NEXIA_EXECUTION_CAPABILITIES.json",
+    "local_worker_24h_formal_result": "FAIL_MAX_GAP_ONLY",
+    "local_worker_24h_operational_evidence": "288_288_PASS_ZERO_FUNCTIONAL_FAILURES_AUTO_SHUTDOWN_VERIFIED",
     "main_windows_task": "DISABLED_FINAL_VERIFIED",
     "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED"
   },
@@ -105,26 +112,23 @@
     "reconciled_net_profit_eur": 0
   },
   "session_handoff": {
-    "last_completed_verified_action": "Activated Bounded Autonomy & Urgency as a cross-project standard. Nexia now defaults to maximum GREEN execution, continues YELLOW research/preparation until a real decision boundary, proactively challenges evidenced bottleneck constraints, and escalates only irreducible RED Human Gates. Existing experiment, spend, safety, legal, platform and authority limits remain unchanged until explicitly revised. Continuous Quality, Competitive Intelligence and Art Direction standards remain active. Contra remains at 89% with V2 portfolio redesign active; identity and payout are Kael-only gates.",
+    "last_completed_verified_action": "Activated automatic project-wide quality retrofit and completed the first high-priority retrofit item: NEXIA_PROGRESS_DASHBOARD.md v3.0 now reconciles current Contra routing and the final Local Worker result. New material standards must automatically triage affected active/reusable Nexia assets before full integration is claimed.",
     "human_action_required_now": false,
-    "pending_human_action": "No action while Nexia continues maximum useful GREEN work on Contra V2 portfolio and acquisition preparation. Later Kael completes identity/payout inside Contra or reviews a material constraint change if Nexia presents one.",
-    "surface": "Nexia internal design/research/preparation now; Contra local browser at irreducible human gates",
-    "device": "mobile or computer",
+    "pending_human_action": "None while Nexia continues GREEN Wave A retrofit and Contra V2 quality work. Identity/payout remain Kael-only when reached.",
+    "surface": "Nexia internal research/design/reconciliation now; Contra local browser only at human gates",
     "cost_exposure": "EUR0 cash ceiling remains active for Contra microtest",
-    "success_check": "Nexia progresses without unnecessary permission requests, preserves hard gates, and surfaces only evidence-backed constraint reviews or irreducible human actions.",
+    "success_check": "Wave A market-facing assets and acquisition control are audited/upgraded without rewriting historical evidence or delaying paid-validation work unnecessarily.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V22.json",
-      "events/EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001.json",
-      "governance/NEXIA_BOUNDED_AUTONOMY_URGENCY_STANDARD_2026-10-15.md",
-      "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md",
-      "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
-      "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md",
-      "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md"
+      "NEXIA_EVENT_INDEX_V24.json",
+      "events/EVT-2026-10-15-PROJECT-WIDE-QUALITY-RETROFIT-001.json",
+      "events/EVT-2026-10-15-QUALITY-RETROFIT-DASHBOARD-001.json",
+      "quality/NEXIA_PROJECT_WIDE_QUALITY_RETROFIT_2026-10-15.md",
+      "NEXIA_PROGRESS_DASHBOARD.md"
     ],
-    "resume_from": "Bounded Autonomy & Urgency active: execute maximum GREEN work, preserve hard gates, continue Contra V2 redesign and acquisition preparation without waiting."
+    "resume_from": "Project-wide quality retrofit active; dashboard v3 complete; continue Wave A and Contra V2."
   },
-  "next_action": "EXECUTE_MAXIMUM_GREEN_WORK_ON_CONTRA_V2_PORTFOLIO_AND_ACQUISITION_PREPARATION; ESCALATE_ONLY_IRREDUCIBLE_HUMAN_GATES_OR_EVIDENCED_CONSTRAINT_REVIEWS."
+  "next_action": "CONTINUE_WAVE_A_CONTRA_V2_AND_AUDIT_ACQUISITION_COMMERCIAL_CONTROL_ARTIFACTS; EXECUTE_GREEN_IMPROVEMENTS_AUTOMATICALLY."
 }
