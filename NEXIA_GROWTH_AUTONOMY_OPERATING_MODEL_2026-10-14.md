@@ -29,6 +29,9 @@ Preferred target class: **ATTENTION-LIGHT REVENUE ENGINE** — a validated busin
 13. Decision support → alternatives compared by economics, risk, reversibility and long-term effects.
 14. Complex problem solving → symptom → evidence → immediate cause → root cause → minimal test → solution.
 15. Text improvement → standard editing capability; no extra persistent subsystem required.
+16. Competitive intelligence / benchmark → `research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md` before material public-facing assets or offers.
+17. Public-facing visual/creative work → `design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md` and benchmark current top references before publication.
+18. Reverse engineering request → lawful observe/decompose/parity/differentiate loop; never bypass security/access controls or copy protected proprietary implementation without right.
 
 ## Digital Asset Gate
 Before substantial creation of a course, e-book, template, prompt pack, workflow, software, membership, printable, stock asset or license, require:
@@ -90,6 +93,27 @@ Track when possible:
 - Revenue/Contribution per Human Attention Hour.
 
 Do not automate a broken, unmeasured or economically irrelevant process.
+
+## Competitive Intelligence & Reverse Engineering Gate
+Before a material public-facing product, service, offer, portfolio asset, landing page or customer experience is treated as ready:
+1. benchmark at least 3 direct references when available plus 1 top-tier adjacent reference when visual/UX quality matters;
+2. decompose buyer promise, proof, packaging/pricing, friction, trust, visual/UX standard, distribution and weaknesses;
+3. classify Nexia position as `PARITY / SUPERIOR / NOT RELEVANT` on customer-relevant dimensions;
+4. define the smallest improvement hypothesis that can be tested;
+5. preserve IP/license/ToS/privacy/security boundaries;
+6. do not ship solely because Nexia's internal asset is complete if market evidence shows a clearly inferior standard.
+
+Use `research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md` as the active standard.
+
+Reverse engineering is a means to improve economic outcomes, reliability, speed and defensibility. It does not authorize bypassing authentication, CAPTCHA, DRM, paywalls, access controls, extracting secrets/private data, violating licenses, or copying proprietary code/creative expression without right.
+
+## Creative Quality Gate
+Public-facing visuals must benchmark current strong competitors/references and apply `design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md`.
+
+Preferred hierarchy:
+`BUYER OUTCOME -> VISUAL IDEA -> EVIDENCE -> TECHNOLOGY`.
+
+A cover/hero is not approved merely because it is technically accurate. It must also achieve competitive commercial credibility, thumbnail/mobile legibility and proof integrity. Premium case-study quality is the target; generic AI/SaaS infographic output is not the default.
 
 ## Portfolio doctrine
 Maintain one primary monetization engine and at most two material research veins.
