@@ -1,0 +1,25 @@
+{
+  "schema_version": 7,
+  "updated_at": "2026-10-14",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V6.json",
+    "verified_blob_sha": "61a634d0991cb17e1cc7fc4889ad0c535b2cbc28",
+    "latest_event_id": "EVT-2026-10-14-WORKANA-PIPELINE-001"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001",
+      "path": "events/EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001.json",
+      "verified_blob_sha": "c4bed5d4f8b0bea3d2cdec84cfff1a5a884b2653"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001",
+  "latest_event_path": "events/EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001.json",
+  "latest_event_blob_sha": "c4bed5d4f8b0bea3d2cdec84cfff1a5a884b2653",
+  "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "latest_session_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+  "rule": "Read STATE v71 as canonical base, then V3→V4→V5→V6→V7 deltas. Workana approval remains mandatory, but explicit approval may be verified by either the official approval email or an APPROVED state in the authenticated Workana Control Panel. Profile completion at 100% alone does not clear the gate."
+}
