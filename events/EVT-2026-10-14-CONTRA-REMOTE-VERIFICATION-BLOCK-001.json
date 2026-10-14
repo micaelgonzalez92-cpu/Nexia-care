@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "EXP_AUTO_001_CONTRA_REMOTE_BROWSER_HUMAN_VERIFICATION_BLOCK",
+  "classification": "HECHO_VERIFICADO_FROM_USER_SCREENSHOT",
+  "canonical_state_base_version": 71,
+  "microtest": "EXP-AUTO-001_CONTRA_MICROTEST_V1",
+  "authorization_event": "EVT-2026-10-14-CONTRA-MICROTEST-AUTHORIZED-001",
+  "observed": {
+    "surface": "isolated remote browser setup session",
+    "cloudflare_human_verification": "FAILED",
+    "contra_authenticated_session_verified": false,
+    "contra_account_created_verified": false,
+    "profile_published": false,
+    "identity_verification_completed": false,
+    "wallet_setup_completed": false,
+    "applications_submitted": 0,
+    "cash_spend_eur": 0,
+    "human_setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED"
+  },
+  "decision": {
+    "do_not_bypass_cloudflare_or_captcha": true,
+    "remote_browser_route_status": "BLOCKED",
+    "fallback_execution_mode": "MANUAL_ASSISTED_LOCAL_BROWSER_FOR_SIGNUP_AND_SENSITIVE_STEPS",
+    "precommitted_limits_changed": false
+  },
+  "preserved_limits": {
+    "cash_spend_ceiling_eur": 0,
+    "max_applications": 6,
+    "window_days": 14,
+    "setup_reusable_ceiling_hours": 2,
+    "variable_acquisition_ceiling_hours": 2,
+    "total_acquisition_attention_ceiling_hours": 4
+  },
+  "next_step": "KAEL_OPENS_CONTRA_IN_NORMAL_LOCAL_BROWSER_AND_COMPLETES_SIGNUP_LOGIN_HUMAN_VERIFICATION_DIRECTLY; NEXIA_PREPARES_CONTENT_AND_TRACKS_EXPERIMENT; NO PAID FEATURES OR APPLICATIONS UNTIL PROFILE_SETUP_IS_READY",
+  "truth_limit": "The screenshot verifies verification failure in the remote setup surface only; it does not prove Contra itself is unavailable in a normal local browser."
+}
