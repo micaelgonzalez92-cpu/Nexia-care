@@ -1,120 +1,145 @@
 # NEXIA — REAL PROGRESS DASHBOARD
 
 Status: ACTIVE / EVIDENCE-GATED
-Version: 1.2
-Updated: 2026-10-09
-Canonical operational source: `NEXIA_STATE.json`
-Purpose: separate technical activity from verified business outcomes. This document is a reporting view, not an independent source of truth.
+Version: 2.0
+Updated: 2026-10-14
+Canonical operational source: `NEXIA_STATE.json` v71 plus `NEXIA_LIVE.json` and indexed post-STATE deltas.
+Purpose: separate technical activity from verified economic progress and measure whether Nexia is becoming more profitable, repeatable and less dependent on human attention. This is a reporting view, never an independent source of truth.
 
 ## Reading rules
 
-- **VERIFIED**: backed by observable evidence in the stated source.
-- **PENDING**: a known task or gate has not completed.
-- **NOT INSTRUMENTED**: no connected data source or reliable measurement exists; do not display as zero.
-- **NOT ACHIEVED**: a target has not been met by available evidence.
-- A repository commit proves persistence of that repository change only. It does not prove deployment, functioning automation, demand, a sale, cash receipt or profit.
-- Do not aggregate technical activity into an economic-progress score. Show the two dimensions separately.
-- **Central scoring rule:** file count, commits, messages, tasks closed and automation count add zero points by themselves. The primary score is demonstrated progress toward sustainable after-tax net profit. Operational metrics diagnose reliability and throughput only.
+- **VERIFIED** = backed by observable evidence in the stated source.
+- **PENDING** = a known gate or measurement is incomplete.
+- **NOT INSTRUMENTED** = no reliable measurement exists; never display as zero.
+- **NOT ACHIEVED** = a target is not supported by current evidence.
+- **NOT APPLICABLE** = the metric does not fit the current business model or stage.
+- A commit proves persistence only. A technical PASS does not prove demand, sale, cash receipt, profit, customer acceptance or scale.
+- Primary progress = sustainable after-tax net profit supported by real demand and repeatability. Automation, files, followers, messages and task counts are supporting signals only.
 
-## A. Business outcomes — primary scorecard
+## A. Current business position
 
 | Indicator | Current reading | Status | Evidence / limitation |
 |---|---:|---|---|
-| Capital spent | €0 | VERIFIED | STATE v48; no pilot payment recorded |
-| Revenue received | €0 | VERIFIED | Canonical STATE; no sale or receipt recorded |
-| Profit after tax | €0 recorded | VERIFIED AS RECORDED, NOT A PROFITABILITY PROOF | No trading results; actual tax-adjusted unit economics not yet measured |
-| Completed extractions | 0 | VERIFIED | Canonical STATE |
-| Reproducible extractions | 0 | VERIFIED | Canonical STATE |
-| Real customer transactions | 0 recorded | VERIFIED AS RECORDED | No transaction evidence recorded |
-| Demand validation | Not yet validated for this operation | NOT ACHIEVED | Public demand signals exist; own sell-through remains unknown |
-| Unit economics | Not validated | PENDING | Pilot contribution threshold inconsistency recorded in `NEXIA_EXP_RESALE_001A_UNIT_ECONOMICS_FALSIFICATION_2026-10-09.md` |
-| Sellable inventory from pilot | Unknown / not received | PENDING | No purchase executed; do not fabricate SKU/intake records |
-| Repeatable sourcing | Not validated | NOT ACHIEVED | Supplier consistency, sell-through, time per item and returns remain unknown |
+| Canonical STATE | v71 | VERIFIED | BOOT/LIVE recover STATE v71 plus indexed deltas |
+| Active experiment | EXP-AUTO-001 — Lead Intake Reliability Sprint | VERIFIED | Primary monetization experiment |
+| Stage | VETA / pre-validación comercial | VERIFIED | Own willingness-to-pay evidence still absent |
+| Current commercial opportunity | Huescaventura / Workana | VERIFIED AS LAST REVALIDATED | Proposal internally ready; public state can change |
+| Authorized gross price | €300 | VERIFIED | Proposal not submitted |
+| Current commercial gate | Explicit Workana profile approval | BLOCKED | Profile reported 100%; approval itself unverified |
+| Capital spent | €0 | VERIFIED | Canonical economics |
+| Revenue | €0 | VERIFIED | No realized sale |
+| Settled revenue | €0 | VERIFIED | No settled payment |
+| Reconciled net profit | €0 | VERIFIED AS RECORDED | No economic extraction yet |
+| Completed extractions | 0 | VERIFIED | No economic result yet |
+| Reproducible extractions | 0 | VERIFIED | No repeated economic cycle yet |
+| Own willingness-to-pay evidence | None | NOT ACHIEVED | Public buyer demand is signal, not Nexia payment evidence |
 
-## B. Operational throughput — supporting scorecard
+## B. Current economics
 
-| Indicator | Current reading | Status | Evidence / limitation |
-|---|---|---|---|
-| Canonical STATE | v48 | VERIFIED | STATE blob SHA is checked against BOOT |
-| Rules R1–R5 | Persisted | VERIFIED | `NEXIA_OPERATIONAL_RULES.md`, linked from STATE |
-| Experiment execution | Pilot approved; purchase not executed | PENDING HUMAN ACTION | EXP-RESALE-001A, checkout €61.30 delivered; payment pending Kael |
-| External contact / customer recruitment | Not connected for authorized execution | BLOCKED | Current capability matrix / external ops state |
-| Automation actually running | No production automation verified by this dashboard | NOT VERIFIED | Documentation or inventory entries are not runtime evidence |
-| Hours/minutes of human work saved | Unknown | NOT INSTRUMENTED | No baseline, timer, telemetry or before/after measurement connected |
-| Active real users / participants | No verified pilot participants recorded | NOT ACHIEVED / NOT INSTRUMENTED | Do not count repository activity as users |
-| Deployment / public application health | Not verified here | NOT INSTRUMENTED | GitHub commit/readback alone does not establish runtime health |
+Current proposal economics are estimates, not realized results:
 
-## C. Required measurement contract
+- Gross offer: €300.
+- Workana initial commission assumption: 20%.
+- Estimated amount after platform: €240.
+- Labor assumption: 4 h maximum × €15/h = €60.
+- Estimated contribution before overhead and tax: €180.
+- Tax / after-tax profit: UNKNOWN until real accounting treatment and transaction data exist.
 
-Every metric record should include:
-1. Name and business purpose.
-2. Numerator/denominator or precise formula and unit.
-3. Current value, target and reporting period.
-4. Evidence source and last verified timestamp.
-5. Status: VERIFIED, PENDING, NOT ACHIEVED, NOT INSTRUMENTED or BLOCKED.
-6. Owner and next action when blocked.
-7. Known exclusions, uncertainty and revision history.
+O1 is not achieved until a pilot of at least €249 economic equivalent is accepted/paid, completed in <=4 measured human hours and produces positive contribution.
 
-### Core economic formulas
+## C. Revenue intelligence — model-conditional metrics
 
-- **Net sales** = cash/settled sales attributable to completed orders, less cancellations/refunds as defined by the accounting policy.
-- **Contribution per sold unit** = realized net sale proceeds − allocated acquisition cost − platform/payment fees − packaging/shipping borne by seller − expected/actual return/defect costs − other variable costs.
-- **After-tax net profit** = recognized revenue − all deductible business costs − applicable taxes, reconciled to the actual tax/accounting treatment. Do not estimate it as verified profit.
-- **Sell-through** = units sold in a defined cohort/time window ÷ units made available for sale in that cohort.
-- **Human time saved** = measured baseline time for a fixed workload − measured assisted time for the same workload; disclose sample size and measurement method.
-- **Automation success rate** = successful verified executions ÷ attempted executions over a defined period; a designed or connected integration without execution telemetry is NOT INSTRUMENTED.
-- **Reproducibility** = repeated successful runs under recorded conditions, with the same success criteria; one isolated result does not count.
+Do not force the same KPI set onto every business model.
 
-## D. Current bottleneck and next measurement action
+| Metric | Current status | Activation rule |
+|---|---|---|
+| MRR / ARR | NOT APPLICABLE / NOT INSTRUMENTED | Activate only when a real recurring revenue model exists |
+| Churn / retention / NRR | NOT APPLICABLE | Activate with paying recurring cohorts |
+| CAC | NOT COMPUTABLE | Requires attributable acquisition cost and acquired customers; €0 cash spend alone is not validated CAC |
+| LTV | NOT COMPUTABLE | Requires actual customer value/retention evidence; do not invent from price alone |
+| Conversion rate | NOT INSTRUMENTED | Activate for a defined funnel with denominator and timestamp |
+| Refund / defect / failure rate | NOT INSTRUMENTED FOR REAL CLIENTS | Technical synthetic failures are separate from customer outcomes |
+| Sell-through | NOT APPLICABLE TO EXP-AUTO-001 | Use only for inventory/commerce cohorts |
+| Audience reach → lead → buyer → contribution | NOT APPLICABLE CURRENTLY | Activate only when a content/audience engine is materially active |
+| Revenue concentration | NOT COMPUTABLE | No realized revenue yet |
+| Current acquisition-channel dependency | HIGH QUALITATIVE | Workana is current primary commercial route; this is dependency, not realized revenue concentration |
 
-**Bottleneck:** the approved pilot has not been paid for or received, so own sell-through, sellable rate, preparation time, realized price, fees, returns and contribution cannot yet be measured.
+## D. Human dependency and attention-light metrics
 
-**Next action:** no new purchase or external contact. Prepare the zero-cost intake/measurement sheet and a comparable-sourcing matrix while preserving the existing pilot approval. Once inventory is physically received, record item-level intake evidence and timestamps before listing.
+Nexia should optimize for profitable **attention-light** systems, not assume that recurring or digital automatically means passive.
 
-**Current economics:** checkout €61.30 delivered for 10 items; payment not executed; spend €0, revenue €0, profit €0 recorded. The €15 average realized-price target and €10 contribution target remain unresolved as documented; do not change the gate without Kael's explicit decision.
+| Metric | Current reading | Status |
+|---|---:|---|
+| Human Attention Hours / week | Unknown | NOT INSTRUMENTED |
+| Human Actions / real transaction | Unknown | NOT INSTRUMENTED — no real transaction yet |
+| EXP-AUTO delivery human-time ceiling | <=4 h | PRECOMMITTED GATE |
+| Revenue per Human Attention Hour | Not computable | Requires settled revenue/contribution plus measured human attention |
+| Verified automation success rate | Model-specific | Measure only executed workflows with telemetry |
+| Automation exception rate | Unknown | NOT INSTRUMENTED across real business operations |
+| Human approval required for sensitive external actions | Yes | VERIFIED GOVERNANCE |
 
+Human actions should eventually be classified as: identity/legal requirement, authorization, strategic decision, exception handling, automatable-but-not-yet-automated, or unnecessary friction. Reduce only the last two automatically; preserve real Human Gates.
 
-## E. Progress ladder — what each stage actually proves
+## E. Portfolio / WIP
 
-| Stage | What to measure | What it demonstrates | Minimum evidence to claim the stage |
-|---|---|---|---|
-| **Activity** | Researches completed, actions executed, tasks closed | Work was performed | Action log and artifact/result; never equate activity with business success |
-| **Evidence** | Verifiable data, source quality, independent corroboration, timestamps | A claim is better supported | Observable source/proof, provenance and limitations; distinguish primary from secondary evidence |
-| **Validation** | Real demand, sellable rate, realized prices, full costs, contribution margin, returns and time | The hypothesis withstands tests at the stated scope | Actual pilot/cohort data and complete unit economics; counter-evidence and failure criteria addressed |
-| **Extraction** | Settled revenue, refunds, variable costs and realized contribution | Economic value was actually generated | Transaction/payment evidence plus reconciled costs; listings, gross asking prices or projections do not count |
-| **Repeatability** | Repeated extractions under the same documented method, success rate and variance | The method can work again | More than one independent successful cycle/cohort under recorded conditions; an isolated win is insufficient |
-| **Scale** | Sustainable after-tax net profit, throughput, capacity, working capital, quality and operational failure rate | Growth has a sound economic and operational basis | Multiple repeatable cycles, reconciled tax-adjusted economics, demand beyond the initial sample and demonstrated capacity without unacceptable quality/risk degradation |
+Primary monetization:
+- **EXP-AUTO-001** — Lead Intake Reliability Sprint. Current priority.
 
-### Stage assignment and anti-inflation rules
-- Report the **highest stage supported by evidence**, and show each earlier stage separately; do not average stages into a vanity score.
-- A stage may be marked **IN PROGRESS** while evidence is collected, but not as achieved.
-- Keep evidence status separate from stage status: for example, a verified repository commit can prove activity/document persistence, not demand validation or extraction.
-- Current resale mission position: **ACTIVITY / RESEARCH EVIDENCE**. The pilot has not been paid for or received; there are no verified own sales, no extraction and no repeatability evidence. Scale is **NOT ACHIEVED**.
-- Stage changes require a dated evidence record and canonical-state update. If evidence is missing or contradictory, retain the lower stage and explain the blocker.
+Parallel research veins — maximum two:
+- **VETA-AUTO-PRODUCT-001** — Lead Intake Reliability Kit for n8n. Internal runtime evidence exists; external users, sales and willingness-to-pay remain unverified. Template 01 rejected; Template 02 not ready/submitted.
+- **VETA-AI-UGC-001** — local image capability exists; prior video technical result failed professional-quality gate for anatomy/hands and is not promoted as a commercial capability.
 
+No third material vein may be activated unless one is closed/promoted/replaced under the portfolio rule.
 
-## F. Scoring and decision policy
+## F. Automation / execution capability
 
-### Primary score: sustainable economic progress
-Do not create a vanity composite from activity counts. The primary scoreboard reports, separately and with evidence:
-1. **Net profit after tax** over a stated period, reconciled against settled receipts and all attributable costs.
-2. **Realized contribution per SKU and experiment**, including product acquisition, inbound shipping, VAT/tax treatment, platform/payment fees, packaging, defects/returns, advertising and the cost of labor/time.
-3. **Settled transactions and repeatability**, with refunds/chargebacks and timing included.
-4. **Validated demand and unit economics**, with sample size, period, uncertainty and counter-evidence.
-5. **Distance to the €1,000/month after-tax net-profit objective**, only when the underlying accounting data supports the calculation.
+- n8n full-runtime and persistent native-data-table dedup evidence: VERIFIED in bounded technical tests.
+- Local authenticated Workana browser read-only path: VERIFIED within bounded scope.
+- One-shot local bridge automatic start + sanitized result return: VERIFIED within bounded scope.
+- Local Worker 24 h stability trial: RUNNING / PENDING FINAL RECONCILIATION as of this dashboard update.
+- Persistent 24x7 worker: NOT AUTHORIZED / NOT VERIFIED.
+- Authenticated Workana write/submission through the local bridge: NOT AUTHORIZED / NOT VERIFIED.
+- Client production deployment: NOT EXECUTED.
 
-No files, commits, automations, messages or technical tasks contribute points directly. They can affect a business metric only when a measurable causal result is shown (for example, verified time saved net of maintenance, lower failure costs, or increased settled contribution). If the causal result is not measured, report it as an operational change only.
+## G. Progress ladder
 
-### Common unit-economics formula
-For each SKU and experiment, use actual realized values rather than asking prices:
-- Net sales proceeds excluding VAT collected on behalf of tax authorities, after discounts and refunds.
-- Minus landed product cost allocated to sellable units.
-- Minus platform/payment fees, packaging, shipping subsidies, returns/defects, advertising and other variable costs.
-- Minus labor cost = measured minutes × an explicit hourly-cost assumption; label the hourly rate as an estimate until confirmed.
-- Result = **contribution after attributable labor and variable costs**. Report fixed overhead and tax provision separately, then reconcile to net profit after tax. Do not subtract VAT twice; document the tax treatment and uncertainty.
-- For an experiment, include setup/research labor and all cohort costs, not only the cost of the sold unit. Show both cash result and fully costed result if labor is not paid in cash.
+RUMOR → SEÑAL → VETA → VALIDADA → EXTRACCIÓN → REFINADA → ESCALABLE.
 
-### Decision priority
-Choose the next action by: (a) authority/safety gate; (b) bottleneck and unmet evidence gate; (c) expected economic impact or uncertainty reduced; (d) cost and downside risk; (e) human time; (f) repeatability. Avoid duplicate research unless a new source, changed condition or explicit falsification question justifies it.
+Current economic position: **VETA / EVIDENCE_TO_VALIDATION**.
 
-Current score interpretation: **technical/documentary progress is not economic progress**. Current verified own revenue and profit remain €0 recorded; validation/extraction/repeatability/scale remain unachieved. This reflects current evidence, not a claim that every data stream is instrumented.
+- Technical proofs can strengthen feasibility but cannot advance economic stage alone.
+- VALIDADA requires real market validation under the experiment gate.
+- EXTRACCIÓN requires real economic result, not proposal price or projected margin.
+- REFINADA requires measured repeatability and improved economics/attention burden.
+- ESCALABLE requires sustainable reconciled after-tax net profit, capacity and controlled risk. >€1,000/month is the first demonstrated scalable-engine milestone, not Nexia's final ceiling.
+
+## H. Current bottlenecks — ordered
+
+1. **Commercial:** explicit Workana approval remains unverified, so the already-prepared €300 Huescaventura proposal cannot yet be submitted under the existing conditional authorization.
+2. **Economic evidence:** no own paid pilot / settled payment / realized contribution exists yet.
+3. **Execution capability:** the bounded Local Worker stability trial still requires final reconciliation before any durability claim; persistent 24x7 remains unauthorized.
+
+## I. Next economic measurement chain
+
+`Workana approval verified → Huescaventura still open + submission cost €0 → authorized proposal submitted → qualified response → paid pilot >=€249 → measured delivery/support time → buyer acceptance → settled payment → realized contribution → tax/overhead reconciliation → repeatability`.
+
+Do not skip intermediate evidence states.
+
+## J. Measurement contract
+
+Every metric must record: purpose, formula/unit, period, evidence source/date, status, owner/blocker, uncertainty and exclusions.
+
+Core formulas:
+- Contribution = realized net proceeds − platform/payment fees − variable tooling − delivery/support labor − other attributable variable costs.
+- After-tax net profit = recognized revenue − all attributable/fixed deductible costs − applicable taxes, reconciled to actual treatment.
+- Revenue per Human Attention Hour = realized contribution or net revenue (state which) ÷ measured human attention hours for the same scope/period.
+- Automation success rate = verified successful executions ÷ attempted executions over a defined period.
+- Human Dependency Ratio = human-required operational actions ÷ total meaningful workflow actions, only when instrumentation exists.
+
+## K. Decision policy
+
+Choose next work by: authority/safety → current bottleneck → real economic impact / information value → cost/downside → human attention → repeatability → scalability.
+
+Recurring revenue is valuable only when continuing customer value supports it; do not force subscriptions onto one-time problems. Digital products and content have low replication cost but still require buyer demand, distribution, support/maintenance and platform-risk analysis. Automate only after the process is measured, standardized and tested; keep human approval around sensitive external effects until the specific path is authorized and verified.
+
+Current verified economic truth: **capital €0, revenue €0, settled revenue €0, reconciled net profit €0; technical capability has advanced but O1 is not yet demonstrated.**
