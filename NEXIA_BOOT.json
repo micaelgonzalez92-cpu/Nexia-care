@@ -1,6 +1,6 @@
 {
-  "schema_version": 17,
-  "boot_version": 73,
+  "schema_version": 18,
+  "boot_version": 74,
   "generated_at": "2026-10-14",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -13,8 +13,8 @@
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
     "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
-    "NEXIA_EVENT_INDEX_V17.json",
-    "follow V17 base through V16 to V3",
+    "NEXIA_EVENT_INDEX_V18.json",
+    "follow V18 base through V17 to V3",
     "events after STATE v71 only if any",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
@@ -24,24 +24,24 @@
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V17.json",
-    "active_index_blob_sha": "33fc4309fccdd0223476fd644578a2153858553d",
-    "base_index": "NEXIA_EVENT_INDEX_V16.json",
-    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001.json",
-    "latest_verified_event_blob_sha": "1c728a2304a92f0ada1dfd57778c12c1bbd7e362",
-    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-ACCOUNT-ACTIVE-001"
+    "active_index": "NEXIA_EVENT_INDEX_V18.json",
+    "active_index_blob_sha": "c10018b9073c368039b9359a169938b5303bae48",
+    "base_index": "NEXIA_EVENT_INDEX_V17.json",
+    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001.json",
+    "latest_verified_event_blob_sha": "67c03f41a5bb48ba731680c2ac4df36dc5aabd4e",
+    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-PORTFOLIO-PACK-001"
   },
-  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; WORKANA PENDING; CONTRA ACCOUNT AUTHENTICATED PROFILE 11% PORTFOLIO BUILD NEXT; REMOTE BROWSER BLOCKED; LOCAL MANUAL_ASSISTED ACTIVE",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; WORKANA PENDING; CONTRA ACCOUNT AUTHENTICATED PROFILE LAST VERIFIED 11%; FOUR-PIECE PORTFOLIO PACK PREPARED_0_PUBLISHED; REMOTE BROWSER BLOCKED; LOCAL MANUAL_ASSISTED ACTIVE",
   "active_experiment": {
     "id": "EXP-AUTO-001",
-    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_ACCOUNT_ACTIVE_PROFILE_BUILD",
+    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_ACCOUNT_ACTIVE_PORTFOLIO_PACK_PREPARED",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "workana_dashboard_state": "PENDING",
     "huescaventura_public_status": "OPEN_EVALUATING_PROPOSALS",
     "best_zero_purchase_escape_channel": "CONTRA",
-    "contra_microtest_status": "AUTHORIZED_ACCOUNT_ACTIVE_PROFILE_11_PERCENT",
+    "contra_microtest_status": "AUTHORIZED_ACCOUNT_ACTIVE_PROFILE_BUILD",
     "contra_microtest_cash_spend_ceiling_eur": 0,
     "contra_microtest_max_applications": 6,
     "contra_microtest_window_days": 14,
@@ -54,7 +54,10 @@
     "contra_account_created_verified": true,
     "contra_authenticated_session_verified": true,
     "contra_profile_completion_percent_visible": 11,
-    "contra_four_work_pieces_added": false,
+    "contra_portfolio_pack_prepared": true,
+    "contra_portfolio_pack_pieces_prepared": 4,
+    "contra_portfolio_pack_artifact": "commercial/EXP-AUTO-001_CONTRA_PORTFOLIO_V1.md",
+    "contra_work_pieces_published_verified": 0,
     "contra_identity_and_payout_completed": false,
     "contra_applications_submitted": 0
   },
@@ -65,7 +68,7 @@
     "profit_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "human_gate": "Contra account is active and authenticated. Next human step is to open Add 4 pieces of work and show the form. Portfolio must use truthful internal demos/case studies only. Do not fabricate clients, testimonials, deployment history or revenue. KYC/payout can follow after profile content is commercially ready.",
-  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V17_THROUGH_CONTRA_ACCOUNT_ACTIVE_001",
-  "next_action": "KAEL_OPENS_ADD_4_PIECES_OF_WORK_AND_SHOWS_FORM; NEXIA_PREPARES_EXACT_TRUTHFUL_PORTFOLIO_CONTENT."
+  "human_gate": "Contra account is active/authenticated. Four truthful internal-demo portfolio pieces are prepared but none is verified published. Open the first Add Work form and show it so Nexia can map exact fields/media without fabricating client or commercial claims.",
+  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V18_THROUGH_CONTRA_PORTFOLIO_PACK_001",
+  "next_action": "KAEL_OPENS_ADD_4_PIECES_OF_WORK_AND_SHOWS_FIRST_FORM; NEXIA_MAPS_FIELDS_AND_PREPARES_MEDIA."
 }
