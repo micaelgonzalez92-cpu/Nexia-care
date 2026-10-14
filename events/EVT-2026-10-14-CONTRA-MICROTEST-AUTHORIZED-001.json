@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-CONTRA-MICROTEST-AUTHORIZED-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "EXP_AUTO_001_CONTRA_MICROTEST_EXPLICIT_AUTHORIZATION",
+  "classification": "HUMAN_GATE_EXPLICITLY_APPROVED",
+  "canonical_state_base_version": 71,
+  "active_experiment": "EXP-AUTO-001",
+  "microtest": "EXP-AUTO-001_CONTRA_MICROTEST_V1",
+  "authorization_source": "Kael explicit chat instruction: Autorizo EXP-AUTO-001_CONTRA_MICROTEST_V1.",
+  "status": "AUTHORIZED_NOT_YET_EXECUTED",
+  "precommitted_limits_unchanged": {
+    "cash_spend_ceiling_eur": 0,
+    "max_applications": 6,
+    "window_days": 14,
+    "setup_reusable_ceiling_hours": 2,
+    "variable_acquisition_ceiling_hours": 2,
+    "total_acquisition_attention_ceiling_hours": 4,
+    "average_variable_attention_ceiling_minutes_per_application": 20,
+    "attention_buckets_interchangeable": false
+  },
+  "authorized_actions": {
+    "create_one_contra_independent_account": true,
+    "publish_truthful_profile": true,
+    "publish_exactly_four_truthful_work_samples": true,
+    "identity_verification_by_kael_on_official_surface": true,
+    "wallet_setup_by_kael_on_official_surface": true,
+    "submit_up_to_six_matched_buyer_initiated_applications": true
+  },
+  "still_forbidden": [
+    "cash spend above EUR0",
+    "paid boosts or Pro upgrade",
+    "fabricated testimonials, clients, production history or revenue claims",
+    "cold DMs or off-platform outreach",
+    "unpaid bespoke sample work beyond trivial clarification",
+    "sharing raw passwords, one-time codes, payment credentials or identity documents in chat or GitHub",
+    "changing precommitted success/failure thresholds after execution starts"
+  ],
+  "execution_truth": {
+    "account_created": false,
+    "profile_published": false,
+    "identity_verification_completed": false,
+    "wallet_setup_completed": false,
+    "applications_submitted": 0,
+    "cash_spend_eur": 0
+  },
+  "next_step": "BEGIN_SETUP_AND_INSTRUMENT_FROM_FIRST_MINUTE; STOP_AT_ANY_IRREDUCIBLE_HUMAN_AUTHENTICATION_OR_IDENTITY_STEP",
+  "truth_limit": "Authorization is verified; execution is not yet verified and must not be claimed until postconditions are observed."
+}
