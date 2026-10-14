@@ -1,7 +1,7 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "updated_at": "2026-10-14",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA APPROVAL PENDING + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED + PROJECT/GLOBAL INSTRUCTION UI VERIFICATION PENDING",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA APPROVAL PENDING + HUESCAVENTURA PUBLICLY REVALIDATED OPEN + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED + PROJECT/GLOBAL INSTRUCTION UI VERIFICATION PENDING",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
@@ -17,13 +17,13 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V4.json",
-    "active_index_blob_sha": "de24ff2c5d48bcce7470d38b2bb77f1500ad30ca",
-    "previous_index": "NEXIA_EVENT_INDEX_V3.json",
-    "latest_verified_event_id": "EVT-2026-10-14-LOCALWORKER-010",
-    "latest_verified_event_path": "events/EVT-2026-10-14-LOCALWORKER-010.json",
-    "latest_verified_event_blob_sha": "486faec0d39fe371514a59f2abaa14d0a2b2e140",
-    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001"
+    "active_index": "NEXIA_EVENT_INDEX_V5.json",
+    "active_index_blob_sha": "3d7f063758490fbdc4849485f4db1a09a7d30613",
+    "previous_index": "NEXIA_EVENT_INDEX_V4.json",
+    "latest_verified_event_id": "EVT-2026-10-14-WORKANA-REVALIDATION-002",
+    "latest_verified_event_path": "events/EVT-2026-10-14-WORKANA-REVALIDATION-002.json",
+    "latest_verified_event_blob_sha": "cbae1cd94c47ce3da7b7d043e5b46ae10d64c08e",
+    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-REVALIDATION-002"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
@@ -35,7 +35,13 @@
     "workana_profile_completion_percent_reported": 100,
     "workana_moderation_state": "PENDING_EXPLICIT_APPROVAL",
     "workana_approval_email_found": false,
-    "workana_proposal_submission_available": false
+    "workana_proposal_submission_available": false,
+    "huescaventura_public_status": "OPEN_EVALUATING_PROPOSALS",
+    "huescaventura_visible_proposals": 1,
+    "huescaventura_visible_interested_freelancers": 1,
+    "huescaventura_budget_eur_range": [200, 300],
+    "huescaventura_buyer_payment_verified": true,
+    "huescaventura_fresh_public_revalidation_date": "2026-10-14"
   },
   "growth_autonomy": {
     "status": "INTEGRATED_REPOSITORY_AND_ACTIVE_RADARS",
@@ -86,7 +92,7 @@
   "session_handoff": {
     "current_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
     "current_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
-    "last_completed_verified_action": "Reconciled LOCALWORKER-STABILITY-24H-001 against its predeclared thresholds. 288/288 records passed with zero functional failures, zero external-effect authorization and verified auto-shutdown, but max inter-record gap was reported as 10.001 minutes against a <=10 minute gate, so strict result is FAIL without post-hoc threshold relaxation. Persisted LOCALWORKER-010, final handoff, V4 index and execution-capability reconciliation.",
+    "last_completed_verified_action": "Closed and reconciled LOCALWORKER-STABILITY-24H-001 without moving its threshold, synchronized final handoff/index/capability state, then freshly revalidated Huescaventura public Workana state: still open/evaluating, one visible proposal, one interested freelancer, buyer payment verified and EUR200-300 stated range. No submission/contact/spend occurred because explicit Workana approval remains unverified.",
     "human_action_required_now": false,
     "pending_human_action": null,
     "resume_required_reads": [
@@ -94,14 +100,14 @@
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
-      "NEXIA_EVENT_INDEX_V4.json",
+      "NEXIA_EVENT_INDEX_V5.json",
+      "events/EVT-2026-10-14-WORKANA-REVALIDATION-002.json",
       "events/EVT-2026-10-14-LOCALWORKER-010.json",
       "NEXIA_EXECUTION_CAPABILITIES.json",
-      "events/EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001.json",
       "NEXIA_GROWTH_AUTONOMY_OPERATING_MODEL_2026-10-14.md",
       "NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md"
     ],
-    "resume_from": "EXP-AUTO-001 remains primary and blocked only by explicit Workana approval. Do not enable persistent Local Worker. Treat the 24h trial as strict FAIL on max-gap only and strong operational evidence; do not rerun unless diagnosis has higher expected value than commercial validation."
+    "resume_from": "EXP-AUTO-001 remains primary. Huescaventura was freshly revalidated as open/evaluating and still fits the EUR300 offer, but explicit Workana profile approval remains the commercial gate. Do not submit/contact or enable persistent Local Worker without the required authority."
   },
-  "next_action": "PRESERVE_EXP_AUTO_001_COMMERCIAL_GATE_AND_PRIORITIZE_REVENUE_VALIDATION_OVER_LOCALWORKER_RERUN"
+  "next_action": "WAIT_FOR_EXPLICIT_WORKANA_APPROVAL_WHILE_USING_GREEN_TIME_ONLY_FOR_HIGH_VALUE_RESEARCH_OR_FALSIFICATION; DO_NOT_RERUN_LOCALWORKER_BY_DEFAULT"
 }
