@@ -1,7 +1,7 @@
 {
-  "schema_version": 15,
+  "schema_version": 16,
   "updated_at": "2026-10-14",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA MODERATION PENDING + HUESCAVENTURA PRIMARY OPEN + CONTRA MICROTEST AUTHORIZED_SETUP_BROWSER_PROFILE_PREPARED_WAITING_HUMAN_SIGNIN + GITHUB TOOLING RADAR RESEARCH COMPLETE_NO_INSTALLATION + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA MODERATION PENDING + HUESCAVENTURA PRIMARY OPEN + CONTRA MICROTEST AUTHORIZED_REMOTE_BROWSER_BLOCKED_MANUAL_ASSISTED_LOCAL_SIGNUP + GITHUB TOOLING RADAR RESEARCH COMPLETE_NO_INSTALLATION + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
@@ -17,18 +17,18 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V15.json",
-    "active_index_blob_sha": "93442aaea57d000a85343a40fbacb21df3b95733",
-    "previous_index": "NEXIA_EVENT_INDEX_V14.json",
-    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001.json",
-    "latest_verified_event_blob_sha": "2b2a74c62791655410482654b0dea406e31dc153",
-    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001"
+    "active_index": "NEXIA_EVENT_INDEX_V16.json",
+    "active_index_blob_sha": "0c5df4ddb5c7f2fc313ac28923dbb3c6121559ae",
+    "previous_index": "NEXIA_EVENT_INDEX_V15.json",
+    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001.json",
+    "latest_verified_event_blob_sha": "ee7eda4fcbe4135f2bfa19a82b377de4df0514ca",
+    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "stage": "VETA / PRE-VALIDACION COMERCIAL",
-    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_SETUP_WAITING_HUMAN_SIGNIN",
+    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_MANUAL_ASSISTED_LOCAL_SIGNUP_REQUIRED",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "economic_priority": true,
@@ -43,7 +43,7 @@
     "contra_microtest_artifact_blob_sha": "4d1fbbbc1101cbe25c3c29b38ad8a68c1ec30b2b",
     "contra_microtest_ledger_template": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_LEDGER_TEMPLATE.json",
     "contra_microtest_ledger_template_blob_sha": "684bddf5f6c41b93d2fabaa5abf68ba2a587f108",
-    "contra_microtest_status": "AUTHORIZED_SETUP_BROWSER_PROFILE_PREPARED_WAITING_HUMAN_SIGNIN",
+    "contra_microtest_status": "AUTHORIZED_REMOTE_BROWSER_BLOCKED_MANUAL_ASSISTED_LOCAL_SIGNUP",
     "contra_microtest_authorization_verified": true,
     "contra_microtest_cash_spend_ceiling_eur": 0,
     "contra_microtest_max_applications": 6,
@@ -53,7 +53,10 @@
     "contra_microtest_total_acquisition_attention_ceiling_hours": 4,
     "contra_microtest_average_variable_attention_ceiling_minutes_per_application": 20,
     "contra_microtest_attention_buckets_interchangeable": false,
-    "contra_browser_context_profile_prepared": true,
+    "contra_remote_browser_cloudflare_verification": "FAILED",
+    "contra_remote_browser_route": "BLOCKED_DO_NOT_BYPASS",
+    "contra_fallback_execution_mode": "MANUAL_ASSISTED_LOCAL_BROWSER",
+    "contra_setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED",
     "contra_account_created_verified": false,
     "contra_authenticated_session_verified": false,
     "contra_profile_published_verified": false,
@@ -99,25 +102,25 @@
     "contra_exact_contribution": "UNKNOWN_UNTIL_CONTRACT_TIME_USD_EUR_AND_FEE_ALLOCATION"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Kael explicitly authorized EXP-AUTO-001_CONTRA_MICROTEST_V1. Authorization was persisted without changing any precommitted threshold. An isolated browser context profile targeting Contra was prepared, but no Contra account, authenticated session, public profile, KYC, wallet or application is yet verified. No spend occurred.",
+    "last_completed_verified_action": "Contra microtest remained authorized. The isolated remote browser encountered a Cloudflare human-verification failure. Nexia did not attempt to bypass the verification. Remote-browser signup is marked BLOCKED and execution falls back to manual-assisted signup/login in Kael's normal local browser. No account creation, authenticated session, profile publication, KYC, wallet or application is verified; cash spend remains EUR0. Human setup time already spent is UNKNOWN_NOT_INSTRUMENTED rather than zero.",
     "human_action_required_now": true,
-    "pending_human_action": "Open the isolated Contra setup session, create/sign into the Contra Independent account using the official UI, then save the browser profile. Do not share passwords, OTPs, payment credentials or ID documents in chat. Do not buy Pro/boosts or send applications manually yet.",
-    "surface": "Isolated Contra browser profile setup",
+    "pending_human_action": "Open Contra directly in Kael's normal browser, create/sign into the Independent account, complete any human verification there, and stop once authenticated. Do not buy Pro/boosts and do not submit applications yet. Report only whether authenticated access was achieved; do not share passwords, OTPs or identity documents.",
+    "surface": "Kael normal local browser on official Contra site",
     "device": "mobile or computer",
-    "cost_exposure": "EUR0 cash ceiling; account data is disclosed to Contra only through its official UI.",
-    "success_check": "Browser profile saved after authenticated Contra account access; then Nexia verifies session state and continues setup within the 2h reusable setup budget.",
+    "cost_exposure": "EUR0 cash ceiling; account/KYC data remains on official Contra surfaces.",
+    "success_check": "Authenticated Contra Independent account access in local browser, with no paid feature purchase and no applications submitted.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V15.json",
-      "events/EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001.json",
+      "NEXIA_EVENT_INDEX_V16.json",
+      "events/EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001.json",
       "events/EVT-2026-10-14-CONTRA-MICROTEST-AUTHORIZED-001.json",
       "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
       "commercial/EXP-AUTO-001_CONTRA_MICROTEST_LEDGER_TEMPLATE.json",
       "events/EVT-2026-10-14-WORKANA-PENDING-001.json"
     ],
-    "resume_from": "Contra microtest is authorized and browser setup is prepared. Await Kael sign-up/sign-in and save-profile step; do not claim account creation until authenticated state is verified."
+    "resume_from": "Contra microtest is authorized. Remote isolated signup is blocked by Cloudflare; use manual-assisted local browser signup/login without bypassing verification or changing experiment limits."
   },
-  "next_action": "KAEL_COMPLETES_CONTRA_SIGNUP_OR_SIGNIN_IN_ISOLATED_SETUP_SESSION_AND_SAVES_BROWSER_PROFILE; THEN_NEXIA_VERIFIES_AND_CONTINUES."
+  "next_action": "KAEL_COMPLETES_CONTRA_SIGNUP_OR_SIGNIN_IN_NORMAL_LOCAL_BROWSER_AND_REPORTS_AUTHENTICATED_ACCESS; THEN_NEXIA_CONTINUES_PROFILE_SETUP_ASSISTED."
 }
