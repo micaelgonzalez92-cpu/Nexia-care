@@ -1,0 +1,26 @@
+{
+  "schema_version": 9,
+  "updated_at": "2026-10-14",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V8.json",
+    "verified_blob_sha": "8a43887c78334a4607fa78ba033a547548915ff9",
+    "latest_event_id": "EVT-2026-10-14-WORKANA-PENDING-001",
+    "latest_event_blob_sha": "51087ca0714cfa84f9ec195036e7beae4338f8fa"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001",
+      "path": "events/EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001.json",
+      "verified_blob_sha": "04af56c5e0f0180d6a0ca5d22764486132ef92e5"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001",
+  "latest_event_path": "events/EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001.json",
+  "latest_event_blob_sha": "04af56c5e0f0180d6a0ca5d22764486132ef92e5",
+  "latest_material_business_event_id": "EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "latest_session_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+  "rule": "Read STATE v71 as canonical base, then V3 through V9 in order. Workana remains primary and moderation remains PENDING. CHANNEL-ESCAPE-HATCH-001 adds research-only alternative acquisition channels inside EXP-AUTO-001; it does not authorize account creation, publication, identity upload, payment methods, proposals, contact or spend."
+}
