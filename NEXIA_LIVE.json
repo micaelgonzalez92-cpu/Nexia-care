@@ -1,7 +1,7 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "updated_at": "2026-10-14",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA MODERATION PENDING + HUESCAVENTURA PRIMARY OPEN + WORKANA BUYER PIPELINE READY + ALTERNATIVE CHANNEL ESCAPE HATCH RESEARCH READY + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA MODERATION PENDING + HUESCAVENTURA PRIMARY OPEN + CONTRA ZERO-SPEND MICROTEST DESIGNED_NOT_AUTHORIZED + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
@@ -17,42 +17,38 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V9.json",
-    "active_index_blob_sha": "38f0a63626e6e72e4b3ffe9707c4a6ff1e0431a6",
-    "previous_index": "NEXIA_EVENT_INDEX_V8.json",
-    "latest_verified_event_id": "EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001.json",
-    "latest_verified_event_blob_sha": "04af56c5e0f0180d6a0ca5d22764486132ef92e5",
-    "latest_material_business_event_id": "EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001"
+    "active_index": "NEXIA_EVENT_INDEX_V10.json",
+    "active_index_blob_sha": "153076003adcc9b10399c2de4b3e2c4c572448fe",
+    "previous_index": "NEXIA_EVENT_INDEX_V9.json",
+    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-001.json",
+    "latest_verified_event_blob_sha": "9a76b592d5cb272eaa5e69e7a8d6c811954dfa4e",
+    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "stage": "VETA / PRE-VALIDACION COMERCIAL",
-    "status": "BLOCKED_PENDING_WORKANA_APPROVAL",
+    "status": "BLOCKED_PENDING_WORKANA_APPROVAL_WITH_CONTRA_MICROTEST_READY_FOR_HUMAN_GATE",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "economic_priority": true,
-    "workana_profile_completion_percent_reported": 100,
-    "workana_profile_100_percent_is_approval": false,
-    "workana_approval_valid_signals": ["OFFICIAL_APPROVAL_EMAIL", "AUTHENTICATED_DASHBOARD_APPROVED_STATE"],
-    "workana_approval_email_found": false,
     "workana_dashboard_state_verified": true,
     "workana_dashboard_state": "PENDING",
-    "workana_proposal_submission_available": false,
+    "workana_approval_email_found": false,
     "huescaventura_public_status": "OPEN_EVALUATING_PROPOSALS",
-    "huescaventura_visible_proposals": 1,
-    "huescaventura_visible_interested_freelancers": 1,
     "huescaventura_budget_eur_range": [200, 300],
-    "huescaventura_buyer_payment_verified": true,
-    "huescaventura_fresh_public_revalidation_date": "2026-10-14",
     "buyer_pipeline_artifact": "commercial/EXP-AUTO-001_WORKANA_PIPELINE_V1.md",
-    "buyer_pipeline_status": "READY_RESEARCH_ONLY",
-    "backup_rank_2": "WORKANA-RB-PROCESS-AUTOMATION-001",
-    "backup_rank_3": "WORKANA-EI-N8N-FLOWS-001",
     "channel_escape_hatch_artifact": "commercial/EXP-AUTO-001_CHANNEL_ESCAPE_HATCH_V1.md",
-    "channel_escape_hatch_status": "READY_RESEARCH_ONLY",
-    "best_tactical_escape_channel": "FREELANCER_COM",
-    "best_strategic_escape_channel": "CONTRA",
+    "channel_escape_hatch_artifact_blob_sha": "42750c27e43e282a2d7755c5212eb6143ecef32f",
+    "best_zero_purchase_escape_channel": "CONTRA",
+    "freelancer_com_zero_spend_candidate": false,
+    "freelancer_com_minimum_available_balance_usd": 20,
+    "contra_microtest_artifact": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
+    "contra_microtest_status": "DESIGNED_NOT_AUTHORIZED",
+    "contra_microtest_cash_spend_ceiling_eur": 0,
+    "contra_microtest_max_applications": 6,
+    "contra_microtest_window_days": 14,
+    "contra_microtest_max_acquisition_human_attention_hours": 4,
     "alternative_channel_activation_authorized": false
   },
   "growth_autonomy": {
@@ -66,12 +62,10 @@
     "snapshot": "NEXIA_EXECUTION_CAPABILITIES.json",
     "snapshot_blob_sha": "cfa8a860a08649ea85b22a6d3e0abcd245356ad5",
     "local_worker_safety_ladder": "VERIFIED_THROUGH_WATCHDOG_WINDOWS",
-    "watchdog_retry_logic": "VERIFIED_CI_AND_WINDOWS",
     "stability_24h_harness": "FINAL_RECONCILED_FAIL_STRICT_GAP_THRESHOLD",
     "stability_24h_operational_signal": "STRONG_288_OF_288_PASS_ZERO_FUNCTIONAL_FAILURES",
     "main_windows_task": "DISABLED_FINAL_VERIFIED",
-    "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
-    "external_effects": "FORBIDDEN_V0_1"
+    "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED"
   },
   "economics": {
     "capital_spent_eur": 0,
@@ -80,24 +74,29 @@
     "profit_eur": 0,
     "reconciled_net_profit_eur": 0,
     "workana_estimated_contribution_pre_overhead_tax_eur": 180,
-    "freelancer_com_hypothetical_eur300_contribution_pre_overhead_tax_eur": 210,
-    "contra_exact_contribution": "UNKNOWN_UNTIL_CONTRACT_TIME_FX_PAYOUT_FEES"
+    "contra_exact_contribution": "UNKNOWN_UNTIL_CONTRACT_TIME_USD_EUR_AND_FEE_ALLOCATION",
+    "freelancer_com_hypothetical_contribution_pre_overhead_tax_eur": 210,
+    "freelancer_com_required_available_balance_usd": 20
   },
   "session_handoff": {
-    "last_completed_verified_action": "Workana remains PENDING. Researched alternative acquisition channels for the same EXP-AUTO-001 without creating accounts or external effects. Freelancer.com is the best tactical speed-to-first-application candidate; Contra is the best strategic low-fee/attention-light candidate. Upwork, PeoplePerHour and Malt remain reserves. No account, publication, identity upload, payment method, proposal, contact or spend occurred.",
-    "human_action_required_now": false,
-    "pending_human_action": null,
+    "last_completed_verified_action": "Fresh official research falsified Freelancer.com as a zero-spend escape route because a standard USD20 minimum available balance is required before bidding. Contra is now the preferred zero-purchase candidate. A bounded Contra microtest was precommitted at EUR0 cash spend, max 6 matched applications, 14 days and max 4h acquisition attention, but remains DESIGNED_NOT_AUTHORIZED. No account, public profile, KYC, wallet, application, contact or spend occurred.",
+    "human_action_required_now": true,
+    "pending_human_action": "Kael must explicitly approve or reject the specific CONTRA microtest before any new account, public profile, identity verification, wallet setup or application activity. Generic /next does not authorize it.",
+    "surface": "Chat decision first; Contra only after explicit approval",
+    "device": "mobile or computer",
+    "cost_exposure": "EUR0 cash ceiling; identity/KYC data would be disclosed directly by Kael to Contra/Persona if activated.",
+    "success_check": "Explicit authorization for EXP-AUTO-001_CONTRA_MICROTEST_V1, after which execution must stay within its predeclared six-application/14-day/EUR0/4h limits.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V9.json",
-      "events/EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001.json",
+      "NEXIA_EVENT_INDEX_V10.json",
+      "events/EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-001.json",
+      "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
       "commercial/EXP-AUTO-001_CHANNEL_ESCAPE_HATCH_V1.md",
-      "events/EVT-2026-10-14-WORKANA-PENDING-001.json",
-      "commercial/EXP-AUTO-001_WORKANA_PIPELINE_V1.md"
+      "events/EVT-2026-10-14-WORKANA-PENDING-001.json"
     ],
-    "resume_from": "EXP-AUTO-001 remains primary and Workana moderation remains PENDING. Huescaventura remains the primary buyer. Alternative channels are research-only; activation requires explicit Kael approval for a new account and a precommitted zero-spend experiment."
+    "resume_from": "Workana remains PENDING and Huescaventura remains primary. Contra microtest is designed but not authorized. Freelancer.com requires capital availability and is no longer the zero-spend escape candidate."
   },
-  "next_action": "WAIT_FOR_OFFICIAL_WORKANA_APPROVAL_SIGNAL; KEEP_ESCAPE_CHANNELS_READY; REQUEST_EXPLICIT_NEW_ACCOUNT_DECISION_ONLY_IF_WORKANA_DELAY_MATERIALLY_THREATENS_O1_VELOCITY."
+  "next_action": "HUMAN_GATE_DECIDE_CONTRA_MICROTEST; DO_NOT_CREATE_ANY_ACCOUNT_OR_PERFORM_KYC_UNTIL_EXPLICIT_APPROVAL."
 }
