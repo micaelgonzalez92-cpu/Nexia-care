@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "WORKANA_PROFILE_APPROVAL_GATE_CLARIFICATION",
+  "classification": "HECHO_VERIFICADO_OFFICIAL_WORKANA_DOCUMENTATION_PLUS_INTERNAL_GATE_REFINEMENT",
+  "canonical_state_base_version": 71,
+  "active_experiment": "EXP-AUTO-001",
+  "official_findings": {
+    "profile_must_be_approved_before_proposals": true,
+    "profile_100_percent_complete_is_not_equivalent_to_approved": true,
+    "normal_moderation_estimate_days": [15, 30],
+    "approval_confirmation_email_is_sent": true,
+    "dashboard_exposes_exact_moderation_state": true,
+    "dashboard_states": ["PENDING", "NOT_APPROVED", "APPROVED"],
+    "approved_state_allows_proposals": true,
+    "priority_moderation_optional_paid_service": true,
+    "priority_moderation_guarantees_approval": false
+  },
+  "source_basis": [
+    "Workana Help: Como funciona la moderacion de perfiles en Workana, updated 2026-10-05",
+    "Workana Help: Profile Moderation: Process, Approval, and Priority Moderation, updated 2026-10-14",
+    "Workana Help: Como verificar el estado de tu cuenta y potenciar tu aprobacion, updated 2026-10-08"
+  ],
+  "gate_refinement": {
+    "old_operational_assumption": "WAIT_FOR_EXPLICIT_APPROVAL_EMAIL",
+    "new_operational_rule": "REQUIRE_EXPLICIT_OFFICIAL_APPROVAL_SIGNAL_VIA_EMAIL_OR_DASHBOARD_APPROVED_STATE",
+    "gate_weakened": false,
+    "approval_currently_verified": false,
+    "email_approval_found": false,
+    "dashboard_approval_state_verified": false,
+    "proposal_submission_authorized": false
+  },
+  "economic_decision": {
+    "priority_moderation_purchase": "NOT_AUTHORIZED_NOT_JUSTIFIED",
+    "cash_spend_eur": 0,
+    "reason": "Paid priority moderation is optional, does not guarantee approval, and no spending hypothesis/gate has been approved."
+  },
+  "next_gate": "READ_EXACT_WORKANA_DASHBOARD_MODERATION_STATE. IF APPROVED, REVALIDATE_HUESCAVENTURA_AND_ZERO_COST_SUBMISSION_PATH; IF PENDING_OR_NOT_APPROVED, DO_NOT_SUBMIT.",
+  "truth_limit": "Official documentation clarifies valid approval signals, but the user's private Workana dashboard state has not been read in this chat."
+}
