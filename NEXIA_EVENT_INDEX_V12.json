@@ -1,0 +1,26 @@
+{
+  "schema_version": 12,
+  "updated_at": "2026-10-14",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V11.json",
+    "verified_blob_sha": "c61b5c4d142fdb91e732366022ad200c5bceeca8",
+    "latest_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-002",
+    "latest_event_blob_sha": "736c737aaa9f89e0346878389d0a9e9bb6a7ad71"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001",
+      "path": "events/EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001.json",
+      "verified_blob_sha": "94691c9e1a93c3d94800ebda43756684083a56cc"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001",
+  "latest_event_path": "events/EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001.json",
+  "latest_event_blob_sha": "94691c9e1a93c3d94800ebda43756684083a56cc",
+  "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-INSTRUMENTATION-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "latest_session_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+  "rule": "Read STATE v71 as canonical base, then V3 through V12 in order. Contra microtest remains DESIGN_ONLY and not authorized. Preexecution instrumentation is ready, with setup and variable acquisition attention recorded separately and UNKNOWN/NOT_INSTRUMENTED never treated as zero."
+}
