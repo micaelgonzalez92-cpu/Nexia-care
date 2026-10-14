@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-AUTOMATION-DRIFT-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "AUTOMATION_CONTEXT_DRIFT_CORRECTED",
+  "classification": "HECHO_VERIFICADO_INTERNAL",
+  "canonical_state_base_version": 71,
+  "trigger": "Startup audit detected that the active EXP-AUTO-001 Daily Work automation still described the Workana profile as approximately 70 percent complete and treated profile completion as the pending Human Gate, while LIVE and later indexed evidence record Kael-reported 100 percent completion and explicit Workana approval as the current gate.",
+  "affected_automation": "EXP-AUTO-001 Daily Work",
+  "correction": {
+    "old_stale_gate": "COMPLETE_WORKANA_PROFILE_FROM_APPROX_70_PERCENT",
+    "current_gate": "WAIT_FOR_EXPLICIT_WORKANA_APPROVAL",
+    "recovery_order_updated": true,
+    "live_handoff_reference_used": true,
+    "duplicate_work_suppression_preserved": true,
+    "gmail_sensor_left_to_control_tower": true,
+    "vela_01_remains_frozen": true,
+    "external_actions_authorized": false,
+    "spend_authorized": false
+  },
+  "verification": {
+    "automation_update": "PASS",
+    "post_update_readback": "PASS",
+    "active": true,
+    "notifications": false,
+    "email": false
+  },
+  "authority_impact": "NONE",
+  "cash_spend_eur": 0,
+  "economic_result": "NONE_DIRECT",
+  "truth_limit": "This event proves correction and readback of the automation prompt only. It does not prove Workana approval, proposal submission, sale, payment, worker stability completion or profit.",
+  "next_gate": "EXPLICIT_WORKANA_APPROVAL_OR_LOCALWORKER_24H_FINAL_RECONCILIATION_WHEN_DUE"
+}
