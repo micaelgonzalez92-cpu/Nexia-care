@@ -1,19 +1,19 @@
 {
-  "schema_version": 21,
+  "schema_version": 22,
   "updated_at": "2026-10-15",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA PENDING + CONTRA PROFILE 89% + V2 PREMIUM PORTFOLIO REDESIGN ACTIVE + COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING ACTIVE + CONTINUOUS_QUALITY_EVOLUTION ACTIVE + IDENTITY_AND_PAYOUT_PENDING",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA PENDING + CONTRA PROFILE 89% + V2 PREMIUM PORTFOLIO REDESIGN ACTIVE + COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING ACTIVE + CONTINUOUS_QUALITY_EVOLUTION ACTIVE + BOUNDED_AUTONOMY_URGENCY ACTIVE + IDENTITY_AND_PAYOUT_PENDING",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V21.json",
-    "active_index_blob_sha": "ce637f2895b83907a23c26857aeaaa81dab5ada9",
-    "previous_index": "NEXIA_EVENT_INDEX_V20.json",
-    "latest_verified_event_id": "EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001.json",
-    "latest_verified_event_blob_sha": "de0fd1bcb53ca5b2ab704a6afb80a56fa449fe01",
-    "latest_material_business_event_id": "EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001"
+    "active_index": "NEXIA_EVENT_INDEX_V22.json",
+    "active_index_blob_sha": "9e79fe6aed522af6b390ab40f5bed557323b017b",
+    "previous_index": "NEXIA_EVENT_INDEX_V21.json",
+    "latest_verified_event_id": "EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001",
+    "latest_verified_event_path": "events/EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001.json",
+    "latest_verified_event_blob_sha": "9fa96855783ac0d9c66bcd3a0e9ace887f65f166",
+    "latest_material_business_event_id": "EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
@@ -37,6 +37,7 @@
     "contra_setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED",
     "contra_account_created_verified": true,
     "contra_authenticated_session_verified": true,
+    "contra_onboarding_completed_visible": true,
     "contra_profile_completion_percent_visible": 89,
     "contra_instagram_social_link_shared": true,
     "contra_portfolio_v1_status": "SUPPORTING_MEDIA_ONLY",
@@ -71,6 +72,16 @@
       "strategic_flagship_target": "TOP_TIER",
       "claimed_superiority_requires_external_evidence": true,
       "anti_perfectionism_economic_stop_rule": true
+    },
+    "bounded_autonomy_urgency": {
+      "status": "ACTIVE",
+      "artifact": "governance/NEXIA_BOUNDED_AUTONOMY_URGENCY_STANDARD_2026-10-15.md",
+      "operating_principle": "NO_SELF_IMPOSED_FENCES_HARD_GATES_STAY_HARD_UNTIL_EXPLICITLY_REVISED",
+      "green_default": "EXECUTE",
+      "yellow_default": "RESEARCH_PREPARE_TEST",
+      "red_default": "ESCALATE_ONLY_IRREDUCIBLE_HUMAN_GATE",
+      "delay_is_economic_cost": true,
+      "constraint_review_proactive": true
     }
   },
   "tooling_radar": {
@@ -94,26 +105,26 @@
     "reconciled_net_profit_eur": 0
   },
   "session_handoff": {
-    "last_completed_verified_action": "Activated Continuous Quality & Evolution as a cross-project standard. Every material task now requires verified postcondition, critique, relevant benchmark, highest-value GREEN improvement, re-verification and capture of generalizable learning. Competitive Intelligence and Premium Art Direction remain active. Contra remains at 89% with V2 portfolio redesign active; identity and payout remain incomplete.",
+    "last_completed_verified_action": "Activated Bounded Autonomy & Urgency as a cross-project standard. Nexia now defaults to maximum GREEN execution, continues YELLOW research/preparation until a real decision boundary, proactively challenges evidenced bottleneck constraints, and escalates only irreducible RED Human Gates. Existing experiment, spend, safety, legal, platform and authority limits remain unchanged until explicitly revised. Continuous Quality, Competitive Intelligence and Art Direction standards remain active. Contra remains at 89% with V2 portfolio redesign active; identity and payout are Kael-only gates.",
     "human_action_required_now": false,
-    "pending_human_action": "No action while Nexia applies the active quality standard to current V2 Contra portfolio work. Later Kael may replace Contra media and complete identity/payout directly in Contra.",
-    "surface": "Nexia internal design/research now; Contra local browser after V2 assets are ready",
+    "pending_human_action": "No action while Nexia continues maximum useful GREEN work on Contra V2 portfolio and acquisition preparation. Later Kael completes identity/payout inside Contra or reviews a material constraint change if Nexia presents one.",
+    "surface": "Nexia internal design/research/preparation now; Contra local browser at irreducible human gates",
     "device": "mobile or computer",
-    "cost_exposure": "EUR0 cash ceiling",
-    "success_check": "Current and future material work follows quality loop; public-facing assets are not treated as ready below competitive standard unless explicitly timeboxed for learning.",
+    "cost_exposure": "EUR0 cash ceiling remains active for Contra microtest",
+    "success_check": "Nexia progresses without unnecessary permission requests, preserves hard gates, and surfaces only evidence-backed constraint reviews or irreducible human actions.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V21.json",
-      "events/EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001.json",
+      "NEXIA_EVENT_INDEX_V22.json",
+      "events/EVT-2026-10-15-BOUNDED-AUTONOMY-URGENCY-001.json",
+      "governance/NEXIA_BOUNDED_AUTONOMY_URGENCY_STANDARD_2026-10-15.md",
       "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md",
-      "events/EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001.json",
       "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
       "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md",
       "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md"
     ],
-    "resume_from": "Continuous Quality & Evolution standard active across Nexia; apply it to V2 Contra portfolio and all future material tasks."
+    "resume_from": "Bounded Autonomy & Urgency active: execute maximum GREEN work, preserve hard gates, continue Contra V2 redesign and acquisition preparation without waiting."
   },
-  "next_action": "APPLY_CONTINUOUS_QUALITY_STANDARD_TO_CURRENT_V2_CONTRA_PORTFOLIO_THEN_CONTINUE_EXP_AUTO_001_WITHOUT_BYPASSING_HUMAN_GATES."
+  "next_action": "EXECUTE_MAXIMUM_GREEN_WORK_ON_CONTRA_V2_PORTFOLIO_AND_ACQUISITION_PREPARATION; ESCALATE_ONLY_IRREDUCIBLE_HUMAN_GATES_OR_EVIDENCED_CONSTRAINT_REVIEWS."
 }
