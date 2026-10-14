@@ -1,0 +1,26 @@
+{
+  "schema_version": 21,
+  "updated_at": "2026-10-15",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V20.json",
+    "verified_blob_sha": "6662e481a50610367213312bb4ebf5cccc7a5a83",
+    "latest_event_id": "EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001",
+    "latest_event_blob_sha": "c31c44b203f7dd2f17fe49b38907c5f56e8508f6"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001",
+      "path": "events/EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001.json",
+      "verified_blob_sha": "de0fd1bcb53ca5b2ab704a6afb80a56fa449fe01"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001",
+  "latest_event_path": "events/EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001.json",
+  "latest_event_blob_sha": "de0fd1bcb53ca5b2ab704a6afb80a56fa449fe01",
+  "latest_material_business_event_id": "EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "latest_session_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+  "rule": "Read STATE v71 as canonical base, then V3 through V21 in order. Continuous Quality & Evolution is now an active cross-project standard: every material task requires verified postcondition, critique, relevant benchmark, highest-value GREEN improvement, re-verification and capture of generalizable learning. Public-facing assets require competitive minimum quality; strategic flagship assets target top-tier. Quality improvement is bounded by economics and anti-overengineering."
+}
