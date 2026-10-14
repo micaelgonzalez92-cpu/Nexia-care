@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "boot_version": 58,
+  "boot_version": 59,
   "generated_at": "2026-10-14",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -26,16 +26,16 @@
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "692922b0f08b233046b9c4faafa28f854bead343",
-    "latest_verified_event_id": "EVT-2026-10-14-INSTRUCTIONS-004",
-    "latest_verified_event_path": "events/EVT-2026-10-14-INSTRUCTIONS-004.json",
-    "latest_verified_event_blob_sha": "7897535662caa4bd127f287208e1c958867e4b5a",
+    "active_index_blob_sha": "b27cecea80c00cb0565f65aba6f56cfab6856133",
+    "latest_verified_event_id": "EVT-2026-10-14-AUTOMATION-DRIFT-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-AUTOMATION-DRIFT-001.json",
+    "latest_verified_event_blob_sha": "6dec7a3e13b9e3930eaf738a5110dde78dfd195a",
     "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001"
   },
   "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001 + LOCAL WORKER 24H STABILITY RUNNING",
   "active_experiment": {
     "id": "EXP-AUTO-001",
-    "status": "BLOCKED_PENDING_WORKANA_PROFILE_100_PERCENT_COMPLETION_AND_APPROVAL",
+    "status": "BLOCKED_PENDING_EXPLICIT_WORKANA_APPROVAL",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4
   },
@@ -59,7 +59,7 @@
     "local_worker_software_api_cost_eur": 0,
     "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
-  "human_gate": "LOCALWORKER-STABILITY-24H-001-FINAL-RECONCILIATION: no action during the running window unless a local safety stop/failure appears. After the end window and auto-cleanup, Kael returns the final local status. Do not enable the indefinite main worker task.",
-  "sync_status": "STATE_V71_BASE_PLUS_INDEXED_POST_STATE_DELTAS_THROUGH_INSTRUCTIONS_004",
-  "next_action": "Do not restart or duplicate LOCALWORKER-STABILITY-24H-001. Final reconciliation after 2026-10-14T20:22:39.3995480+02:00 plus up to 10 minutes for cleanup."
+  "human_gate": "LOCALWORKER-STABILITY-24H-001-FINAL-RECONCILIATION: no action during the running window unless a local safety stop/failure appears. Commercial gate remains explicit Workana approval. After the end window and auto-cleanup, Kael returns the final local status. Do not enable the indefinite main worker task.",
+  "sync_status": "STATE_V71_BASE_PLUS_INDEXED_POST_STATE_DELTAS_THROUGH_AUTOMATION_DRIFT_001",
+  "next_action": "Do not restart or duplicate LOCALWORKER-STABILITY-24H-001. Final reconciliation after 2026-10-14T20:22:39.3995480+02:00 plus up to 10 minutes for cleanup; meanwhile preserve explicit Workana approval as the commercial gate."
 }
