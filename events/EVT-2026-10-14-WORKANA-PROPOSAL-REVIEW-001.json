@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "WORKANA_HUESCAVENTURA_PROPOSAL_AND_OPPORTUNITY_REVALIDATION",
+  "classification": "HECHO_VERIFICADO_READ_ONLY_INTERNAL_REVIEW",
+  "canonical_state_base_version": 71,
+  "summary": "Huescaventura was freshly revalidated on its public Workana page and remains open/evaluating proposals with one visible proposal, one interested freelancer, buyer payment verified and an approximate fixed budget of EUR200-300. The prepared EUR300 proposal was re-read against all ten buyer questions and requires no mandatory change: it remains truthful about the absence of paid-client production history, uses executed technical evidence instead, preserves human review before customer messaging and locks scope to a bounded first phase. No proposal was submitted because explicit Workana profile approval is still unverified.",
+  "opportunity": {
+    "id": "WORKANA-HUESCAVENTURA-001",
+    "public_status": "OPEN_EVALUATING_PROPOSALS",
+    "fresh_public_revalidation_date": "2026-10-14",
+    "budget_eur_range": [200, 300],
+    "visible_proposals": 1,
+    "visible_interested_freelancers": 1,
+    "buyer_payment_verified": true,
+    "buyer_projects_published": 2,
+    "buyer_projects_paid": 1,
+    "buyer_requests_human_review_before_customer_sending": true
+  },
+  "proposal_review": {
+    "artifact": "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md",
+    "authorized_gross_price_eur": 300,
+    "answers_all_10_buyer_questions": true,
+    "claims_paid_client_production_experience": false,
+    "technical_evidence_presented_as_test_not_client_delivery": true,
+    "scope_lock_present": true,
+    "mandatory_changes_required": false,
+    "status": "INTERNALLY_READY_BLOCKED_BY_APPROVAL_GATE"
+  },
+  "commercial_gate": {
+    "profile_completion_percent_reported": 100,
+    "explicit_profile_approval_verified": false,
+    "proposal_submission_allowed_now": false,
+    "submission_cost_requirement": "MUST_BE_EUR0_WHEN_GATE_CLEARS"
+  },
+  "actions_taken": {
+    "proposal_submitted": false,
+    "external_message_sent": false,
+    "cash_spend_eur": 0
+  },
+  "economics": {
+    "gross_offer_eur": 300,
+    "platform_fee_assumption_percent": 20,
+    "estimated_contribution_pre_overhead_tax_eur": 180,
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "next_gate": "WORKANA_EXPLICIT_APPROVAL_THEN_FRESH_OPEN_AND_ZERO_COST_RECHECK",
+  "truth_limit": "Public opportunity state and internal proposal quality were revalidated. Workana approval remains unverified, submission has not occurred, and no revenue or economic result exists."
+}
