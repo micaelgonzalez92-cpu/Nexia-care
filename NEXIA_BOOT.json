@@ -1,6 +1,6 @@
 {
-  "schema_version": 15,
-  "boot_version": 71,
+  "schema_version": 16,
+  "boot_version": 72,
   "generated_at": "2026-10-14",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -13,8 +13,8 @@
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
     "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
-    "NEXIA_EVENT_INDEX_V15.json",
-    "follow V15 base through V14 to V3",
+    "NEXIA_EVENT_INDEX_V16.json",
+    "follow V16 base through V15 to V3",
     "events after STATE v71 only if any",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
@@ -24,18 +24,18 @@
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V15.json",
-    "active_index_blob_sha": "93442aaea57d000a85343a40fbacb21df3b95733",
-    "base_index": "NEXIA_EVENT_INDEX_V14.json",
-    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001.json",
-    "latest_verified_event_blob_sha": "2b2a74c62791655410482654b0dea406e31dc153",
-    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001"
+    "active_index": "NEXIA_EVENT_INDEX_V16.json",
+    "active_index_blob_sha": "0c5df4ddb5c7f2fc313ac28923dbb3c6121559ae",
+    "base_index": "NEXIA_EVENT_INDEX_V15.json",
+    "latest_verified_event_id": "EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001.json",
+    "latest_verified_event_blob_sha": "ee7eda4fcbe4135f2bfa19a82b377de4df0514ca",
+    "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-REMOTE-VERIFICATION-BLOCK-001"
   },
-  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; WORKANA PENDING; CONTRA MICROTEST AUTHORIZED_SETUP_BROWSER_PROFILE_PREPARED_WAITING_HUMAN_SIGNIN; GITHUB TOOLING RADAR RESEARCH_ONLY COMPLETE; LOCAL WORKER 24H CLOSED STRICT FAIL ON GAP",
+  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001; WORKANA PENDING; CONTRA MICROTEST AUTHORIZED_REMOTE_BROWSER_BLOCKED_MANUAL_ASSISTED_LOCAL_SIGNUP; GITHUB TOOLING RADAR RESEARCH_ONLY COMPLETE; LOCAL WORKER 24H CLOSED STRICT FAIL ON GAP",
   "active_experiment": {
     "id": "EXP-AUTO-001",
-    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_SETUP_WAITING_HUMAN_SIGNIN",
+    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_MANUAL_ASSISTED_LOCAL_SIGNUP_REQUIRED",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "workana_dashboard_state": "PENDING",
@@ -43,7 +43,7 @@
     "best_zero_purchase_escape_channel": "CONTRA",
     "contra_microtest_artifact": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
     "contra_microtest_ledger_template": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_LEDGER_TEMPLATE.json",
-    "contra_microtest_status": "AUTHORIZED_SETUP_BROWSER_PROFILE_PREPARED_WAITING_HUMAN_SIGNIN",
+    "contra_microtest_status": "AUTHORIZED_REMOTE_BROWSER_BLOCKED_MANUAL_ASSISTED_LOCAL_SIGNUP",
     "contra_microtest_authorization_verified": true,
     "contra_microtest_cash_spend_ceiling_eur": 0,
     "contra_microtest_max_applications": 6,
@@ -51,7 +51,10 @@
     "contra_microtest_setup_reusable_ceiling_hours": 2,
     "contra_microtest_variable_acquisition_ceiling_hours": 2,
     "contra_microtest_total_acquisition_attention_ceiling_hours": 4,
-    "contra_browser_context_profile_prepared": true,
+    "contra_remote_browser_cloudflare_verification": "FAILED",
+    "contra_remote_browser_route": "BLOCKED_DO_NOT_BYPASS",
+    "contra_fallback_execution_mode": "MANUAL_ASSISTED_LOCAL_BROWSER",
+    "contra_setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED",
     "contra_account_created_verified": false,
     "contra_authenticated_session_verified": false,
     "contra_applications_submitted": 0
@@ -84,7 +87,7 @@
     "profit_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "human_gate": "Contra microtest authorization is complete. Kael must now create/sign into the Contra Independent account inside the isolated setup browser and save the profile. Credentials, OTPs, payment credentials and identity documents stay on official surfaces and are never requested in chat.",
-  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V15_THROUGH_CONTRA_MICROTEST_SETUP_001",
-  "next_action": "KAEL_COMPLETES_CONTRA_SIGNUP_OR_SIGNIN_IN_ISOLATED_SETUP_SESSION_AND_SAVES_BROWSER_PROFILE; THEN_NEXIA_VERIFIES_AND_CONTINUES."
+  "human_gate": "Contra microtest remains authorized. Remote isolated-browser signup is blocked by Cloudflare human verification and must not be bypassed. Kael must create/sign into the Contra Independent account in a normal local browser and complete any human verification directly there. Credentials, OTPs and identity documents remain on official surfaces.",
+  "sync_status": "STATE_V71_PLUS_V3_THROUGH_V16_THROUGH_CONTRA_REMOTE_VERIFICATION_BLOCK_001",
+  "next_action": "KAEL_COMPLETES_CONTRA_SIGNUP_OR_SIGNIN_IN_NORMAL_LOCAL_BROWSER_AND_REPORTS_AUTHENTICATED_ACCESS; THEN_NEXIA_CONTINUES_PROFILE_SETUP_ASSISTED."
 }
