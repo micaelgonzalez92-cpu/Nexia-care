@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "updated_at": "2026-10-14",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA PROFILE 70% PENDING ANALYSIS + LOCAL WORKER 24H STABILITY RUNNING",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA PROFILE 100% APPROVAL PENDING + LOCAL WORKER 24H STABILITY RUNNING",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
@@ -9,20 +9,19 @@
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
     "active_index_blob_sha": "c333dd9f89bbc2a8764c1b2b0b52cc19a0d7ee65",
-    "latest_verified_event_id": "EVT-2026-10-14-WORKANA-PROFILE-STATUS-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-WORKANA-PROFILE-STATUS-001.json",
-    "latest_verified_event_blob_sha": "b42c26be62fc38106f008335cce64c1004356d11",
-    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROFILE-STATUS-001"
+    "latest_verified_event_id": "EVT-2026-10-14-WORKANA-PROFILE-100-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-WORKANA-PROFILE-100-001.json",
+    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROFILE-100-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "stage": "VETA / PRE-VALIDACION COMERCIAL",
-    "status": "BLOCKED_WORKANA_PROFILE_70_PERCENT_PENDING_ANALYSIS_AND_PROPOSALS_DISABLED",
+    "status": "BLOCKED_PENDING_EXPLICIT_WORKANA_APPROVAL",
     "authorized_price_eur": 300,
     "economic_priority": true,
-    "workana_moderation_visible_state": "ESTAMOS_ANALIZANDO_TU_PERFIL",
-    "workana_profile_completion_percent": 70,
-    "workana_missing_completion_item": "trabajos o proyectos completados en el pasado (+30%)",
+    "workana_profile_completion_percent_reported": 100,
+    "workana_moderation_state": "PENDING_EXPLICIT_APPROVAL",
+    "workana_approval_email_found": false,
     "workana_proposal_submission_available": false
   },
   "execution_capabilities": {
@@ -47,9 +46,6 @@
     "maximum_gap_minutes": 10,
     "auto_shutdown_deadline_minutes_after_end": 10,
     "main_worker_task_must_remain_disabled": true,
-    "stability_task_state_at_start": "Ready",
-    "cleanup_task_state_at_start": "Ready",
-    "main_task_state_at_start": "Disabled",
     "final_result": "PENDING"
   },
   "economics": {
@@ -62,28 +58,24 @@
     "stability_trial_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "WORKANA-PROFILE-STATUS-001: authenticated user video showed profile under analysis at 70%, proposals blocked, and exactly one missing +30% item for prior work/projects. The featured personal n8n project is visible but does not satisfy that completion item.",
-    "last_user_facing_handoff": "Workana gate is now known exactly; stability 24h continues independently.",
-    "human_action_required_now": true,
-    "pending_human_action": "Kael must either provide one truthful relevant professional/project-history entry for preparation, or enter such an entry directly in Workana. Do not fabricate employers, clients, paid work or results. After saving, recheck whether the profile reaches 100% and whether moderation/proposal status changes.",
-    "surface": "Workana authenticated profile on mobile or computer",
-    "device": "mobile_or_computer",
-    "why_kael": "Profile editing is an external account change and the factual work-history data belongs to Kael.",
-    "cost_exposure": "EUR0 if standard completion is used; do not buy fast moderation without separate authorization.",
-    "success_check": "Profile displays 100% completed while remaining truthful; moderation state is freshly read; proposal submission remains blocked until explicit approval.",
-    "return_to_nexia": "Provide the real role/project name, organization or 'personal project' label if truthful, start/end dates and responsibilities, or return a screenshot/video after saving. Final local-worker reconciliation remains due after 2026-10-14T20:22:39.3995480+02:00 plus up to 10 minutes.",
+    "last_completed_verified_action": "Kael reported Workana profile completion at 100%. Fresh Gmail recheck found no explicit approval message; latest Workana email remains 'Estás a un paso de ser aprobado en Workana' dated 2026-10-12. Completion gate cleared by user report; approval gate remains pending.",
+    "last_user_facing_handoff": "Workana profile is now 100%; do not submit Huescaventura until explicit approval is verified.",
+    "human_action_required_now": false,
+    "pending_human_action": "None until Workana approval appears. Do not buy priority moderation and do not submit a proposal before explicit approval.",
+    "surface": "None currently",
+    "device": "none",
+    "cost_exposure": "EUR0; no commercial action executed.",
+    "success_check": "Explicit Workana approval is verified by dashboard or email, then Huescaventura is freshly revalidated open with zero submission cost before the existing 300 EUR proposal may be submitted.",
+    "return_to_nexia": "If Workana sends an approval email or dashboard changes to Aprobado, report it. Final local-worker reconciliation remains due after 2026-10-14T20:22:39.3995480+02:00 plus up to 10 minutes.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
       "NEXIA_EVENT_INDEX_V3.json",
-      "events/EVT-2026-10-14-WORKANA-PROFILE-STATUS-001.json",
-      "events/EVT-2026-10-13-LOCALWORKER-009.json",
-      "NEXIA_LOCAL_WORKER_CONTROL.json",
-      "NEXIA_LOCAL_WORKER_QUEUE.json"
+      "events/EVT-2026-10-14-WORKANA-PROFILE-100-001.json",
+      "events/EVT-2026-10-13-LOCALWORKER-009.json"
     ],
-    "resume_from": "Advance truthful Workana profile completion to 100% without paid moderation or proposal submission; do not interfere with the running 24h stability trial."
+    "resume_from": "Workana profile completion gate cleared by user report; wait for explicit approval while preserving the running 24h local-worker stability trial."
   },
-  "next_action": "WORKANA_COMPLETE_TRUTHFUL_PLUS30_HISTORY_WHILE_STABILITY_TRIAL_CONTINUES"
+  "next_action": "WAIT_FOR_WORKANA_EXPLICIT_APPROVAL_AND_FINALIZE_LOCALWORKER_AFTER_WINDOW"
 }
