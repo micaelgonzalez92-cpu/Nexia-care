@@ -1,7 +1,7 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "updated_at": "2026-10-14",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA APPROVAL PENDING + HUESCAVENTURA PRIMARY OPEN + BACKUP BUYER PIPELINE READY + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED + PROJECT/GLOBAL INSTRUCTION UI VERIFICATION PENDING",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA EXPLICIT APPROVAL SIGNAL PENDING + HUESCAVENTURA PRIMARY OPEN + BACKUP BUYER PIPELINE READY + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED + PROJECT/GLOBAL INSTRUCTION UI VERIFICATION PENDING",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
@@ -17,23 +17,26 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V6.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V5.json",
-    "latest_verified_event_id": "EVT-2026-10-14-WORKANA-PIPELINE-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-WORKANA-PIPELINE-001.json",
-    "latest_verified_event_blob_sha": "3e0f5264faa300206d185a0912c2a8980393a3d2",
-    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PIPELINE-001"
+    "active_index": "NEXIA_EVENT_INDEX_V7.json",
+    "active_index_blob_sha": "805809fdc14b71bdbb4cb4fa41f8062c131664af",
+    "previous_index": "NEXIA_EVENT_INDEX_V6.json",
+    "latest_verified_event_id": "EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001.json",
+    "latest_verified_event_blob_sha": "c4bed5d4f8b0bea3d2cdec84cfff1a5a884b2653",
+    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
     "stage": "VETA / PRE-VALIDACION COMERCIAL",
-    "status": "BLOCKED_PENDING_EXPLICIT_WORKANA_APPROVAL",
+    "status": "BLOCKED_PENDING_EXPLICIT_WORKANA_APPROVAL_SIGNAL",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "economic_priority": true,
     "workana_profile_completion_percent_reported": 100,
-    "workana_moderation_state": "PENDING_EXPLICIT_APPROVAL",
+    "workana_profile_100_percent_is_approval": false,
+    "workana_approval_valid_signals": ["OFFICIAL_APPROVAL_EMAIL", "AUTHENTICATED_DASHBOARD_APPROVED_STATE"],
     "workana_approval_email_found": false,
+    "workana_dashboard_state_verified": false,
     "workana_proposal_submission_available": false,
     "huescaventura_public_status": "OPEN_EVALUATING_PROPOSALS",
     "huescaventura_visible_proposals": 1,
@@ -93,24 +96,27 @@
   "session_handoff": {
     "current_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
     "current_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
-    "last_completed_verified_action": "Checked Gmail with no new Workana approval email; researched current public Workana demand inside EXP-AUTO-001; preserved Huescaventura as the only active target and created a ranked research-only backup pipeline. Rank 2 is R.B. process automation with payment-verified buyer and 1 proposal but broad scope; Rank 3 is E.I. recurring n8n flow delivery with 1 proposal and client-side acquisition but no paid buyer history. No contact, proposal, spend or account change occurred.",
-    "human_action_required_now": false,
-    "pending_human_action": null,
+    "last_completed_verified_action": "Researched current official Workana moderation documentation and refined the commercial gate without weakening it: profile completion at 100% is not approval; explicit approval can be verified by either the official approval email or an APPROVED state in the authenticated Workana Control Panel. No approval signal has yet been verified. No contact, proposal, spend or account change occurred.",
+    "human_action_required_now": true,
+    "pending_human_action": "Open the authenticated Workana Control Panel and report the exact moderation state shown: Pending, Not Approved, or Approved. Do not submit a proposal yet.",
+    "surface": "Workana authenticated Control Panel",
+    "device": "mobile or computer",
+    "cost_exposure": "EUR0; read-only check.",
+    "success_check": "Exact dashboard moderation state captured. APPROVED clears only the moderation gate; Huescaventura open-state and zero-cost submission path must still be freshly rechecked before submission.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
       "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
-      "NEXIA_EVENT_INDEX_V6.json",
+      "NEXIA_EVENT_INDEX_V7.json",
+      "events/EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001.json",
       "events/EVT-2026-10-14-WORKANA-PIPELINE-001.json",
       "commercial/EXP-AUTO-001_WORKANA_PIPELINE_V1.md",
       "events/EVT-2026-10-14-WORKANA-REVALIDATION-002.json",
       "events/EVT-2026-10-14-LOCALWORKER-010.json",
-      "NEXIA_EXECUTION_CAPABILITIES.json",
-      "NEXIA_GROWTH_AUTONOMY_OPERATING_MODEL_2026-10-14.md",
-      "NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md"
+      "NEXIA_EXECUTION_CAPABILITIES.json"
     ],
-    "resume_from": "EXP-AUTO-001 remains primary. Huescaventura remains the only active target and is open/evaluating. Explicit Workana profile approval remains mandatory before submission. Backup buyers are research-only and should be freshly rechecked only if the primary target becomes unavailable or materially worse."
+    "resume_from": "EXP-AUTO-001 remains primary. Huescaventura remains the only active target and is open/evaluating. Workana moderation approval may be verified by official email OR dashboard APPROVED state; 100% profile completion alone is insufficient. Read the exact authenticated dashboard state before any submission decision."
   },
-  "next_action": "WAIT_FOR_EXPLICIT_WORKANA_APPROVAL; KEEP_HUESCAVENTURA_PRIMARY; USE_GREEN_TIME_FOR_RESEARCH_ONLY_AND_DO_NOT_SUBMIT_OR_CONTACT."
+  "next_action": "READ_AUTHENTICATED_WORKANA_DASHBOARD_MODERATION_STATE; DO_NOT_SUBMIT_OR_CONTACT UNTIL APPROVED IS VERIFIED AND THE PRIMARY OPPORTUNITY IS FRESHLY RECHECKED."
 }
