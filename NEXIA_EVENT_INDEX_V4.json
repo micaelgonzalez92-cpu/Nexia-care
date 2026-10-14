@@ -1,0 +1,24 @@
+{
+  "schema_version": 4,
+  "updated_at": "2026-10-14",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V3.json",
+    "verified_blob_sha": "f150e12eaf245d8ed07bb6e2bd3c0bc4b1853615",
+    "latest_event_id": "EVT-2026-10-14-GROWTH-AUTONOMY-001"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-14-LOCALWORKER-010",
+      "path": "events/EVT-2026-10-14-LOCALWORKER-010.json",
+      "verified_blob_sha": "486faec0d39fe371514a59f2abaa14d0a2b2e140"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-14-LOCALWORKER-010",
+  "latest_event_path": "events/EVT-2026-10-14-LOCALWORKER-010.json",
+  "latest_event_blob_sha": "486faec0d39fe371514a59f2abaa14d0a2b2e140",
+  "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PROPOSAL-REVIEW-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-13_LOCALWORKER_V0_1.json",
+  "rule": "Read STATE v71 as canonical base, then V3, then V4 deltas. Failed experiment events remain evidence and may be superseded only by explicit later events; do not retroactively change predeclared thresholds."
+}
