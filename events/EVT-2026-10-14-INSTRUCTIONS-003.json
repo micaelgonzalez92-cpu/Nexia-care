@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-INSTRUCTIONS-003",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "PROJECT_INSTRUCTIONS_ECONOMIC_OBJECTIVE_CLARIFIED",
+  "classification": "HECHO_VERIFICADO_INTERNAL",
+  "canonical_state_base_version": 71,
+  "trigger": "Kael explicitly clarified that >1000 EUR/month is the first major economic milestone, not Nexia's final objective or ceiling.",
+  "decision": {
+    "ultimate_direction": "maximize sustainable net profit after tax without a predefined economic ceiling",
+    "intermediate_results_below_1000_eur_month": "VALID_PROGRESS_WHEN_THEY_ADD_REAL_EVIDENCE_OF_DEMAND_ECONOMICS_OR_REPEATABILITY",
+    "o4_meaning": "FIRST_SCALABLE_ENGINE_DEMONSTRATED_NOT_MISSION_COMPLETE",
+    "post_o4": "CONTINUE_SCALING_WHILE_PROFITABILITY_SUSTAINABILITY_AND_RISK_CONTROL_REMAIN_ACCEPTABLE"
+  },
+  "artifacts": {
+    "project_ui_candidate": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V3_2026-10-14.md",
+    "candidate_exact_char_count": 7791,
+    "safe_generation_ceiling_chars": 7800,
+    "master_amendment": "NEXIA_MASTER_INSTRUCTIONS_V2_ECONOMIC_OBJECTIVE_AMENDMENT_2026-10-14.md",
+    "contract": "NEXIA_PROJECT_INSTRUCTION_CONTRACT.json"
+  },
+  "invariants_preserved": [
+    "budget_and_spend_authority",
+    "human_gates",
+    "external_contact_and_publication_authority",
+    "O1_O2_O3_thresholds",
+    "evidence_and_truthfulness_rules",
+    "continuity_and_security_rules"
+  ],
+  "candidate_installed_in_project_ui": false,
+  "economic_impact": "NONE_DIRECT",
+  "cash_spend_eur": 0,
+  "verification": "PASS_REPOSITORY_SIDE_PREPARED_NOT_UI_INSTALLED",
+  "next_gate": "KAEL_INSTALL_COMPACT_V3_IN_PROJECT_UI_AND_VERIFY_IN_FRESH_PROJECT_CHAT"
+}
