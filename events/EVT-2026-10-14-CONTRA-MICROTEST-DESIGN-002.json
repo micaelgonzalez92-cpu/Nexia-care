@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-CONTRA-MICROTEST-DESIGN-002",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "EXP_AUTO_001_CONTRA_MICROTEST_DESIGN_REFINEMENT",
+  "classification": "INTERNAL_PREEXECUTION_EXPERIMENT_DESIGN_REFINEMENT",
+  "canonical_state_base_version": 71,
+  "active_experiment": "EXP-AUTO-001",
+  "artifact": "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md",
+  "artifact_blob_sha": "4d1fbbbc1101cbe25c3c29b38ad8a68c1ec30b2b",
+  "status": "DESIGNED_NOT_AUTHORIZED",
+  "refinement": {
+    "total_acquisition_human_attention_ceiling_hours": 4,
+    "setup_reusable_ceiling_hours": 2,
+    "acquisition_variable_ceiling_hours": 2,
+    "max_applications": 6,
+    "average_variable_attention_ceiling_minutes_per_application": 20,
+    "buckets_interchangeable": false,
+    "four_hour_limit_is_permanent_nexia_rule": false,
+    "four_hour_limit_role": "BOUNDED_INFORMATION_ACQUISITION_COST_FOR_THIS_MICROTEST"
+  },
+  "new_metrics": [
+    "setup_reusable_hours",
+    "acquisition_variable_minutes_total",
+    "acquisition_variable_minutes_per_application",
+    "total_acquisition_human_attention_hours",
+    "human_attention_hours_per_qualified_response",
+    "human_attention_hours_per_paid_or_accepted_pilot",
+    "revenue_per_acquisition_human_attention_hour",
+    "contribution_per_acquisition_human_attention_hour"
+  ],
+  "interpretation_rules": {
+    "setup_cost_never_ignored_in_first_test": true,
+    "marginal_acquisition_attention_reported_separately_for_repeatability": true,
+    "thresholds_may_not_be_relaxed_post_hoc": true,
+    "early_stop_allowed_after_qualified_response": true,
+    "unknown_not_instrumented_never_equals_zero": true
+  },
+  "authority": {
+    "account_creation_authorized": false,
+    "profile_publication_authorized": false,
+    "identity_verification_authorized": false,
+    "wallet_setup_authorized": false,
+    "applications_authorized": false,
+    "cash_spend_eur": 0
+  },
+  "next_gate": "EXPLICIT_KAEL_APPROVAL_REQUIRED_BEFORE_ANY_CONTRA_ACCOUNT_OR EXTERNAL_ACTION"
+}
