@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001",
+  "date": "2026-10-15",
+  "project": "NEXIA CORE",
+  "type": "CROSS_PROJECT_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_ACTIVATED",
+  "classification": "ACTIVE_STANDARD",
+  "canonical_state_base_version": 71,
+  "artifact": {
+    "path": "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md",
+    "verified_blob_sha": "fcf6a51684d628c82708b03d30c48c24b7cf40b1"
+  },
+  "mandatory_material_task_loop": [
+    "VERIFY_POSTCONDITION",
+    "CRITIQUE_WEAKNESSES",
+    "COMPARE_TO_STRONG_REFERENCES_WHEN_RELEVANT",
+    "IMPLEMENT_HIGHEST_VALUE_GREEN_IMPROVEMENT",
+    "REVERIFY_NO_REGRESSION",
+    "CAPTURE_GENERALIZABLE_LEARNING",
+    "STOP_WHEN_MARGINAL_VALUE_IS_INFERIOR_TO_NEXT_BOTTLENECK"
+  ],
+  "quality_maturity": [
+    "FUNCTIONAL",
+    "VERIFIED",
+    "COMPETITIVE",
+    "TOP_TIER",
+    "DIFFERENTIATED"
+  ],
+  "default_gates": {
+    "internal_exploratory_experiment": "VERIFIED_CAN_BE_SUFFICIENT_IF_LEARNING_IS_OBJECTIVE",
+    "reusable_internal_infrastructure": "VERIFIED_PLUS_MAINTAINABILITY_RECOVERY",
+    "public_facing_commercial_asset": "COMPETITIVE_MINIMUM",
+    "strategic_flagship_asset_offer_profile": "TARGET_TOP_TIER_AND_DIFFERENTIATED_WHEN_ECONOMICALLY_JUSTIFIED"
+  },
+  "mandatory_question": "What would a top-tier competitor or expert improve here, and which improvements have positive expected value for Nexia now?",
+  "competitive_rule": {
+    "direct_references_min_when_available": 3,
+    "top_tier_adjacent_reference_min_when_quality_matters": 1,
+    "known_material_below_market_dimension_should_not_ship_without_explicit_timeboxed_learning_reason": true,
+    "claimed_superiority_is_hypothesis_until_external_evidence": true
+  },
+  "learning_compounding": {
+    "generalizable_learning_must_update_system": true,
+    "allowed_system_updates": [
+      "STANDARD",
+      "CHECKLIST",
+      "SCORECARD",
+      "TEMPLATE",
+      "AUTOMATED_TEST",
+      "INSTRUMENTATION",
+      "BENCHMARK_LIBRARY",
+      "GATE_OR_KILL_CRITERION"
+    ]
+  },
+  "anti_perfectionism": {
+    "quality_is_economic_investment_not_unbounded_polish": true,
+    "default_mandatory_review_passes": 1,
+    "second_pass_when_material_improvement_identified": true,
+    "additional_passes_require_positive_information_or_economic_value": true
+  },
+  "integration": {
+    "competitive_intelligence_standard": "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
+    "art_direction_standard": "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md",
+    "sequence_for_market_facing_material_work": "OBJECTIVE -> EVIDENCE -> BENCHMARK -> BUILD -> VERIFY -> CRITIQUE -> PARITY -> DIFFERENTIATE -> RE-VERIFY -> SHIP -> LEARN -> STANDARDIZE"
+  },
+  "authority": {
+    "new_external_contact_authorized": false,
+    "new_spend_authorized": false,
+    "existing_human_gates_unchanged": true
+  },
+  "economics": {
+    "cash_spend_eur": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "current_application": "EXP-AUTO-001 Contra portfolio quality gap was benchmarked, improved and generalized into cross-project policy",
+  "next_step": "APPLY_STANDARD_TO_CURRENT_V2_CONTRA_PORTFOLIO_AND_ALL_FUTURE_MATERIAL_NEXIA_WORK"
+}
