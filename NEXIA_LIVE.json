@@ -1,7 +1,7 @@
 {
-  "schema_version": 8,
+  "schema_version": 9,
   "updated_at": "2026-10-14",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA MODERATION PENDING + HUESCAVENTURA PRIMARY OPEN + BACKUP BUYER PIPELINE READY + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA MODERATION PENDING + HUESCAVENTURA PRIMARY OPEN + WORKANA BUYER PIPELINE READY + ALTERNATIVE CHANNEL ESCAPE HATCH RESEARCH READY + LOCAL WORKER 24H STRICT GAP FAIL RECONCILED + GROWTH/AUTONOMY INTEGRATED",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
@@ -17,11 +17,13 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V8.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V7.json",
-    "latest_verified_event_id": "EVT-2026-10-14-WORKANA-PENDING-001",
-    "latest_verified_event_path": "events/EVT-2026-10-14-WORKANA-PENDING-001.json",
-    "latest_material_business_event_id": "EVT-2026-10-14-WORKANA-PENDING-001"
+    "active_index": "NEXIA_EVENT_INDEX_V9.json",
+    "active_index_blob_sha": "38f0a63626e6e72e4b3ffe9707c4a6ff1e0431a6",
+    "previous_index": "NEXIA_EVENT_INDEX_V8.json",
+    "latest_verified_event_id": "EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001",
+    "latest_verified_event_path": "events/EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001.json",
+    "latest_verified_event_blob_sha": "04af56c5e0f0180d6a0ca5d22764486132ef92e5",
+    "latest_material_business_event_id": "EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
@@ -46,7 +48,12 @@
     "buyer_pipeline_artifact": "commercial/EXP-AUTO-001_WORKANA_PIPELINE_V1.md",
     "buyer_pipeline_status": "READY_RESEARCH_ONLY",
     "backup_rank_2": "WORKANA-RB-PROCESS-AUTOMATION-001",
-    "backup_rank_3": "WORKANA-EI-N8N-FLOWS-001"
+    "backup_rank_3": "WORKANA-EI-N8N-FLOWS-001",
+    "channel_escape_hatch_artifact": "commercial/EXP-AUTO-001_CHANNEL_ESCAPE_HATCH_V1.md",
+    "channel_escape_hatch_status": "READY_RESEARCH_ONLY",
+    "best_tactical_escape_channel": "FREELANCER_COM",
+    "best_strategic_escape_channel": "CONTRA",
+    "alternative_channel_activation_authorized": false
   },
   "growth_autonomy": {
     "status": "INTEGRATED_REPOSITORY_AND_ACTIVE_RADARS",
@@ -71,22 +78,26 @@
     "revenue_eur": 0,
     "settled_revenue_eur": 0,
     "profit_eur": 0,
-    "reconciled_net_profit_eur": 0
+    "reconciled_net_profit_eur": 0,
+    "workana_estimated_contribution_pre_overhead_tax_eur": 180,
+    "freelancer_com_hypothetical_eur300_contribution_pre_overhead_tax_eur": 210,
+    "contra_exact_contribution": "UNKNOWN_UNTIL_CONTRACT_TIME_FX_PAYOUT_FEES"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Kael read the authenticated Workana moderation state and reported PENDING. This does not clear the commercial gate. No proposal, contact, spend or account change occurred.",
+    "last_completed_verified_action": "Workana remains PENDING. Researched alternative acquisition channels for the same EXP-AUTO-001 without creating accounts or external effects. Freelancer.com is the best tactical speed-to-first-application candidate; Contra is the best strategic low-fee/attention-light candidate. Upwork, PeoplePerHour and Malt remain reserves. No account, publication, identity upload, payment method, proposal, contact or spend occurred.",
     "human_action_required_now": false,
     "pending_human_action": null,
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V8.json",
+      "NEXIA_EVENT_INDEX_V9.json",
+      "events/EVT-2026-10-14-CHANNEL-ESCAPE-HATCH-001.json",
+      "commercial/EXP-AUTO-001_CHANNEL_ESCAPE_HATCH_V1.md",
       "events/EVT-2026-10-14-WORKANA-PENDING-001.json",
-      "events/EVT-2026-10-14-WORKANA-GATE-CLARIFICATION-001.json",
       "commercial/EXP-AUTO-001_WORKANA_PIPELINE_V1.md"
     ],
-    "resume_from": "EXP-AUTO-001 remains primary. Workana moderation state is PENDING, so submission remains blocked. Huescaventura stays primary; backup buyers remain research-only."
+    "resume_from": "EXP-AUTO-001 remains primary and Workana moderation remains PENDING. Huescaventura remains the primary buyer. Alternative channels are research-only; activation requires explicit Kael approval for a new account and a precommitted zero-spend experiment."
   },
-  "next_action": "WAIT_FOR_OFFICIAL_WORKANA_APPROVAL_SIGNAL; USE_GREEN_TIME_ONLY_FOR_HIGH_VALUE_RESEARCH_OR FALSIFICATION; DO_NOT SUBMIT OR CONTACT."
+  "next_action": "WAIT_FOR_OFFICIAL_WORKANA_APPROVAL_SIGNAL; KEEP_ESCAPE_CHANNELS_READY; REQUEST_EXPLICIT_NEW_ACCOUNT_DECISION_ONLY_IF_WORKANA_DELAY_MATERIALLY_THREATENS_O1_VELOCITY."
 }
