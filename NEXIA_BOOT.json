@@ -26,7 +26,7 @@
   "event_storage": {
     "mode": "COMPOSITE_BASE_PLUS_DELTA",
     "active_index": "NEXIA_EVENT_INDEX_V3.json",
-    "active_index_blob_sha": "2265c646435c305fd5053022c53e7e1f2a498cfb",
+    "active_index_blob_sha": "f150e12eaf245d8ed07bb6e2bd3c0bc4b1853615",
     "latest_verified_event_id": "EVT-2026-10-14-GROWTH-AUTONOMY-001",
     "latest_verified_event_path": "events/EVT-2026-10-14-GROWTH-AUTONOMY-001.json",
     "latest_verified_event_blob_sha": "5642d05d0d3f060a08e0039250cc9ac957a70cc5",
@@ -67,6 +67,6 @@
     "local_worker_electricity_cost": "UNKNOWN_NOT_INSTRUMENTED"
   },
   "human_gate": "Commercial gate remains explicit Workana approval. Localworker stability result remains PENDING until final local reconciliation evidence is returned and checked against predeclared thresholds. Do not enable the indefinite main worker task.",
-  "sync_status": "STATE_V71_BASE_PLUS_INDEXED_POST_STATE_DELTAS_THROUGH_GROWTH_AUTONOMY_001",
+  "sync_status": "STATE_V71_BASE_PLUS_INDEXED_POST_STATE_DELTAS_THROUGH_GROWTH_AUTONOMY_001_INDEX_INTEGRITY_REPAIRED",
   "next_action": "Preserve EXP-AUTO-001 commercial gate; use LIVE for the detailed instruction-installation and local-worker final-reconciliation handoffs."
 }
