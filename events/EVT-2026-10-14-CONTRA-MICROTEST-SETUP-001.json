@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "EXP_AUTO_001_CONTRA_MICROTEST_SETUP_PREPARED",
+  "classification": "AUTHORIZED_EXECUTION_PREPARATION_NO_EXTERNAL_ACCOUNT_CREATED",
+  "canonical_state_base_version": 71,
+  "microtest": "EXP-AUTO-001_CONTRA_MICROTEST_V1",
+  "authorization_event": "EVT-2026-10-14-CONTRA-MICROTEST-AUTHORIZED-001",
+  "status": "AUTHORIZED_SETUP_BROWSER_PROFILE_PREPARED_WAITING_HUMAN_SIGNIN",
+  "verified_actions": {
+    "isolated_browser_context_profile_prepared": true,
+    "target_surface": "Contra",
+    "contra_account_created": false,
+    "contra_authenticated_session_verified": false,
+    "profile_published": false,
+    "identity_verification_completed": false,
+    "wallet_setup_completed": false,
+    "applications_submitted": 0,
+    "cash_spend_eur": 0
+  },
+  "privacy_controls": {
+    "browser_profile_identifier_persisted_to_github": false,
+    "setup_url_persisted_to_github": false,
+    "passwords_or_codes_requested_in_chat": false,
+    "identity_documents_requested_in_chat": false
+  },
+  "human_step": "Kael opens the isolated setup session, creates/signs into the Contra Independent account using official UI, then saves the browser profile. Do not buy Pro, boosts or any paid feature; do not send applications yet.",
+  "measurement_rule": "Human setup attention begins when Kael actively starts account setup; waiting time is not counted as human attention.",
+  "next_step": "AFTER_BROWSER_PROFILE_IS_SAVED, VERIFY_AUTHENTICATED_CONTRA_STATE_AND_CONTINUE_PROFILE_SETUP_WITHIN_PRECOMMITTED_LIMITS"
+}
