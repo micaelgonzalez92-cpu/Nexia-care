@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-14-WORKANA-PIPELINE-001",
+  "date": "2026-10-14",
+  "project": "NEXIA CORE",
+  "type": "EXP_AUTO_001_BUYER_PIPELINE_RESEARCH",
+  "classification": "HECHO_VERIFICADO_PUBLIC_READ_ONLY_PLUS_CONSERVATIVE_RECOMMENDATION",
+  "canonical_state_base_version": 71,
+  "active_experiment": "EXP-AUTO-001",
+  "artifact": "commercial/EXP-AUTO-001_WORKANA_PIPELINE_V1.md",
+  "artifact_blob_sha": "f2db9c8dd9a0709d09da5099426b4318a865fecd",
+  "commercial_gate": "EXPLICIT_WORKANA_APPROVAL_UNVERIFIED",
+  "external_actions": {
+    "proposals_submitted": 0,
+    "messages_sent": 0,
+    "cash_spend_eur": 0,
+    "accounts_created": 0
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "id": "WORKANA-HUESCAVENTURA-001",
+      "status": "PRIMARY_TARGET",
+      "public_state": "OPEN_EVALUATING_PROPOSALS",
+      "budget_eur_range": [200, 300],
+      "visible_proposals": 1,
+      "buyer_payment_verified": true,
+      "fit": "VERY_HIGH",
+      "economics_known": true,
+      "blocker": "EXPLICIT_WORKANA_APPROVAL"
+    },
+    {
+      "rank": 2,
+      "id": "WORKANA-RB-PROCESS-AUTOMATION-001",
+      "status": "BACKUP_RESEARCH_ONLY",
+      "public_state": "OPEN_EVALUATING_PROPOSALS",
+      "visible_proposals": 1,
+      "buyer_projects_published": 3,
+      "buyer_projects_paid": 1,
+      "buyer_payment_verified": true,
+      "fit": "HIGH_BUT_SCOPE_BROAD",
+      "economics": "UNKNOWN",
+      "main_risk": "SCOPE_CREEP_AND_GT4H_FULL_IMPLEMENTATION"
+    },
+    {
+      "rank": 3,
+      "id": "WORKANA-EI-N8N-FLOWS-001",
+      "status": "BACKUP_RESEARCH_ONLY",
+      "public_state": "OPEN_EVALUATING_PROPOSALS",
+      "visible_proposals": 1,
+      "visible_interested": 3,
+      "buyer_projects_paid": 0,
+      "fit": "HIGH_REPEATABLE_DELIVERY",
+      "economics": "UNKNOWN",
+      "main_risk": "PORTFOLIO_REQUIREMENT_AND_NO_PAID_PRODUCTION_HISTORY"
+    }
+  ],
+  "reserves": [
+    "WORKANA-AS-CLINICS-N8N-AIRTABLE-001",
+    "WORKANA-L-N8N-INTEGRATIONS-001"
+  ],
+  "deprioritized": [
+    {
+      "id": "WORKANA-CLINIC-LEADS-WHATSAPP-2026-09-22",
+      "reason": "91_VISIBLE_PROPOSALS_108_INTERESTED_BUYER_0_PAID"
+    },
+    {
+      "id": "WORKANA-SOCIAL-N8N-2026-06-15",
+      "reason": "WEAKER_ALIGNMENT_WITH_CURRENT_BOUNDED_LEAD_INTAKE_OFFER"
+    }
+  ],
+  "decision": "KEEP_HUESCAVENTURA_AS_ONLY_ACTIVE_TARGET. BACKUPS DO_NOT_CREATE_NEW_VEINS. AFTER_EXPLICIT_WORKANA_APPROVAL, FRESHLY_RECHECK_HUESCAVENTURA FIRST; IF UNAVAILABLE_OR_MATERIALLY_WORSE, RECHECK_RANK_2_AND_RANK_3_WITH_CURRENT_ECONOMICS_BEFORE_ANY_PROPOSAL.",
+  "truth_limits": [
+    "Public Workana states can change after this check.",
+    "Budgets for backup candidates are UNKNOWN unless explicitly published.",
+    "No claim of paid production experience is permitted.",
+    "This research does not authorize submission or contact."
+  ]
+}
