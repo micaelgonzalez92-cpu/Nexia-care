@@ -1,19 +1,19 @@
 {
-  "schema_version": 20,
+  "schema_version": 21,
   "updated_at": "2026-10-15",
-  "status": "ACTIVE / EXP-AUTO-001 WORKANA PENDING + CONTRA PROFILE 89% + V2 PREMIUM PORTFOLIO REDESIGN ACTIVE + COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING STANDARD ACTIVE + IDENTITY_AND_PAYOUT_PENDING",
+  "status": "ACTIVE / EXP-AUTO-001 WORKANA PENDING + CONTRA PROFILE 89% + V2 PREMIUM PORTFOLIO REDESIGN ACTIVE + COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING ACTIVE + CONTINUOUS_QUALITY_EVOLUTION ACTIVE + IDENTITY_AND_PAYOUT_PENDING",
   "state_version": 71,
   "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
   "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V20.json",
-    "active_index_blob_sha": "6662e481a50610367213312bb4ebf5cccc7a5a83",
-    "previous_index": "NEXIA_EVENT_INDEX_V19.json",
-    "latest_verified_event_id": "EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001.json",
-    "latest_verified_event_blob_sha": "c31c44b203f7dd2f17fe49b38907c5f56e8508f6",
-    "latest_material_business_event_id": "EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001"
+    "active_index": "NEXIA_EVENT_INDEX_V21.json",
+    "active_index_blob_sha": "ce637f2895b83907a23c26857aeaaa81dab5ada9",
+    "previous_index": "NEXIA_EVENT_INDEX_V20.json",
+    "latest_verified_event_id": "EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001.json",
+    "latest_verified_event_blob_sha": "de0fd1bcb53ca5b2ab704a6afb80a56fa449fe01",
+    "latest_material_business_event_id": "EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001"
   },
   "active_experiment": {
     "id": "EXP-AUTO-001",
@@ -62,6 +62,15 @@
       "artifact": "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md",
       "target": "PREMIUM_CASE_STUDY_SENIOR_CREATIVE_DIRECTION",
       "publication_score_target_min": 80
+    },
+    "continuous_quality_evolution": {
+      "status": "ACTIVE",
+      "artifact": "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md",
+      "mandatory_material_task_loop": "VERIFY_CRITIQUE_COMPARE_IMPROVE_REVERIFY_CAPTURE_STOP_RATIONALLY",
+      "public_commercial_minimum": "COMPETITIVE",
+      "strategic_flagship_target": "TOP_TIER",
+      "claimed_superiority_requires_external_evidence": true,
+      "anti_perfectionism_economic_stop_rule": true
     }
   },
   "tooling_radar": {
@@ -85,25 +94,26 @@
     "reconciled_net_profit_eur": 0
   },
   "session_handoff": {
-    "last_completed_verified_action": "Activated cross-project Competitive Intelligence + lawful Reverse Engineering standard and Premium Art Direction V2 after benchmarking strong Contra automation and top-tier creative portfolios. Contra remains at 89% with Instagram linked; identity and payout remain incomplete. V1 covers are demoted to supporting media and V2 outcome-first hero covers are required before applications, subject to the existing setup-attention ceiling.",
+    "last_completed_verified_action": "Activated Continuous Quality & Evolution as a cross-project standard. Every material task now requires verified postcondition, critique, relevant benchmark, highest-value GREEN improvement, re-verification and capture of generalizable learning. Competitive Intelligence and Premium Art Direction remain active. Contra remains at 89% with V2 portfolio redesign active; identity and payout remain incomplete.",
     "human_action_required_now": false,
-    "pending_human_action": "After Nexia generates and reviews four V2 hero covers, Kael can replace the current Contra cover media and later complete identity/payout directly in Contra. Do not share passwords, OTPs, identity documents or bank credentials in chat.",
+    "pending_human_action": "No action while Nexia applies the active quality standard to current V2 Contra portfolio work. Later Kael may replace Contra media and complete identity/payout directly in Contra.",
     "surface": "Nexia internal design/research now; Contra local browser after V2 assets are ready",
     "device": "mobile or computer",
     "cost_exposure": "EUR0 cash ceiling",
-    "success_check": "Four V2 covers reach the active art-direction standard without fabricated client/commercial claims; then profile media can be upgraded before acquisition applications.",
+    "success_check": "Current and future material work follows quality loop; public-facing assets are not treated as ready below competitive standard unless explicitly timeboxed for learning.",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V20.json",
+      "NEXIA_EVENT_INDEX_V21.json",
+      "events/EVT-2026-10-15-CONTINUOUS-QUALITY-EVOLUTION-001.json",
+      "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md",
       "events/EVT-2026-10-15-COMPETITIVE-REVERSE-ENGINEERING-001.json",
       "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
       "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md",
-      "commercial/EXP-AUTO-001_CONTRA_VISUAL_BENCHMARK_V2_2026-10-15.md",
       "commercial/EXP-AUTO-001_CONTRA_MICROTEST_V1.md"
     ],
-    "resume_from": "Competitive/reverse-engineering standard active; Contra 89%; V2 premium portfolio redesign is the current GREEN task before applications."
+    "resume_from": "Continuous Quality & Evolution standard active across Nexia; apply it to V2 Contra portfolio and all future material tasks."
   },
-  "next_action": "NEXIA_GENERATES_AND_REVIEWS_FOUR_CONTRA_V2_HERO_COVERS_AGAINST_ART_DIRECTION_STANDARD."
+  "next_action": "APPLY_CONTINUOUS_QUALITY_STANDARD_TO_CURRENT_V2_CONTRA_PORTFOLIO_THEN_CONTINUE_EXP_AUTO_001_WITHOUT_BYPASSING_HUMAN_GATES."
 }
