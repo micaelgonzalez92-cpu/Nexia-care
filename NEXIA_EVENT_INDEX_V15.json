@@ -1,0 +1,26 @@
+{
+  "schema_version": 15,
+  "updated_at": "2026-10-14",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V14.json",
+    "verified_blob_sha": "6f95a45356a06fca1c98804031b19e57fcba5c89",
+    "latest_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-AUTHORIZED-001",
+    "latest_event_blob_sha": "a2e7f5302d0f50d44836684e2087f474eda2c406"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001",
+      "path": "events/EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001.json",
+      "verified_blob_sha": "2b2a74c62791655410482654b0dea406e31dc153"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001",
+  "latest_event_path": "events/EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001.json",
+  "latest_event_blob_sha": "2b2a74c62791655410482654b0dea406e31dc153",
+  "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-SETUP-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "latest_session_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+  "rule": "Read STATE v71 as canonical base, then V3 through V15 in order. Contra microtest is explicitly authorized. An isolated browser setup surface has been prepared, but no Contra account/authenticated session/profile/KYC/wallet/application is yet verified. Kael must complete the official sign-up/sign-in step without sharing credentials or ID documents in chat."
+}
