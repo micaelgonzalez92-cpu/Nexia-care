@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-14",
+  "project": "NEXIA CORE",
+  "canonical_state_version": 71,
+  "focus": "LOCALWORKER_STABILITY_FINAL_RECONCILIATION",
+  "status": "FORMAL_FAIL_OPERATIONALLY_STRONG_EVIDENCE",
+  "trial_id": "LOCALWORKER-STABILITY-24H-001",
+  "formal_result": "FAIL",
+  "formal_failure_reason": "MAX_INTER_RECORD_GAP_10_001_MIN_EXCEEDS_PREDECLARED_10_000_MIN",
+  "verified_evidence": {
+    "records": 288,
+    "minimum_required_records": 285,
+    "cycles_pass": 288,
+    "cycles_fail": 0,
+    "non_pass_records": 0,
+    "external_effects_authorized_true_records": 0,
+    "max_gap_minutes_reported_rounded_3dp": 10.001,
+    "max_gap_threshold_minutes": 10.0,
+    "threshold_excess_seconds_approx": 0.06,
+    "stability_task_final_state": "Disabled",
+    "cleanup_task_final_state": "Disabled",
+    "main_task_final_state": "Disabled",
+    "status_result": "WINDOW_COMPLETE_AUTO_DISABLED",
+    "finalizer": "AUTO_SHUTDOWN"
+  },
+  "interpretation": {
+    "formal_gate": "FAIL",
+    "safety": "PASS",
+    "execution_reliability_signal": "STRONG_WITH_NEGLIGIBLE_TIMING_DEVIATION",
+    "threshold_changed_post_hoc": false,
+    "persistent_24x7_verified": false,
+    "persistent_24x7_authorized": false
+  },
+  "decision": "Do not rerun or relax the completed experiment retroactively. Treat the result as a formal FAIL with strong operational evidence. Any future scheduling experiment must preregister a realistic jitter tolerance before execution.",
+  "economic_priority": {
+    "active_experiment": "EXP-AUTO-001",
+    "workana_gate": "PENDING_EXPLICIT_APPROVAL",
+    "realized_revenue_eur": 0,
+    "realized_profit_eur": 0
+  },
+  "next_action": "RETURN_FOCUS_TO_EXP_AUTO_001_AND_KEEP_LOCALWORKER_PERSISTENT_24X7_DISABLED_UNLESS_A_NEW_EXPLICITLY_AUTHORIZED_EXPERIMENT_IS_JUSTIFIED_BY_ECONOMIC_VALUE",
+  "truth_limit": "Exact offending gap timestamps and root cause were not captured. The measured maximum was reported rounded to three decimals by Kael using the agreed read-only command."
+}
