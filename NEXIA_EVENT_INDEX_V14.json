@@ -1,0 +1,26 @@
+{
+  "schema_version": 14,
+  "updated_at": "2026-10-14",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 71,
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V13.json",
+    "verified_blob_sha": "825a3be89cfab20c0272d332bf76084ef8955ba5",
+    "latest_event_id": "EVT-2026-10-14-GITHUB-TOOLING-RADAR-001",
+    "latest_event_blob_sha": "01f4032bd2796afa928fc21861e6f3d4f4f701be"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-14-CONTRA-MICROTEST-AUTHORIZED-001",
+      "path": "events/EVT-2026-10-14-CONTRA-MICROTEST-AUTHORIZED-001.json",
+      "verified_blob_sha": "a2e7f5302d0f50d44836684e2087f474eda2c406"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-AUTHORIZED-001",
+  "latest_event_path": "events/EVT-2026-10-14-CONTRA-MICROTEST-AUTHORIZED-001.json",
+  "latest_event_blob_sha": "a2e7f5302d0f50d44836684e2087f474eda2c406",
+  "latest_material_business_event_id": "EVT-2026-10-14-CONTRA-MICROTEST-AUTHORIZED-001",
+  "latest_session_handoff": "NEXIA_HANDOFF_2026-10-14_LOCALWORKER_FINAL.json",
+  "latest_session_handoff_blob_sha": "2e58cae6f55dd6fc5c762bedea09fb548e9af4d1",
+  "rule": "Read STATE v71 as canonical base, then V3 through V14 in order. EXP-AUTO-001_CONTRA_MICROTEST_V1 is explicitly authorized but not yet executed. Preserve EUR0 cash ceiling, max 6 applications, 14-day window, non-interchangeable 2h setup plus 2h variable acquisition, truthful evidence only, and direct Kael handling of credentials/KYC/identity/payment-sensitive steps."
+}
