@@ -1,62 +1,43 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-10-13",
+  "schema_version": 2,
+  "updated_at": "2026-10-14",
   "project": "NEXIA CORE",
   "canonical_state_version": 71,
   "focus": "CAPABILITY_EVOLUTION_LOCAL_WORKER_BOUNDED_STABILITY",
-  "status": "STABILITY_24H_RUNNING_PENDING_FINAL_RECONCILIATION",
-  "verified_evidence": {
-    "latest_event": "events/EVT-2026-10-13-LOCALWORKER-009.json",
-    "latest_event_blob_sha": "9a7910f75a6acf53c5e961bb05a7641f92f4fc9f",
-    "safety_ladder_through_watchdog_windows": "VERIFIED",
-    "stability_safety_ci": "VERIFIED_SUCCESS",
-    "stability_ci_run_id": 38445633232,
-    "stability_ci_commit": "4bf653834ff832f22bda5e930371452b79477a11",
-    "main_windows_task_at_start": "DISABLED",
-    "recurring_24x7_runtime": "NOT_AUTHORIZED_NOT_VERIFIED"
-  },
-  "authorized_trial": {
-    "gate_id": "LOCALWORKER-STABILITY-24H-001",
-    "status": "RUNNING",
-    "scope": "24h temporary recurrence, GREEN_INTERNAL only, no external effects, automatic shutdown at end.",
+  "status": "STABILITY_24H_FINAL_RECONCILED_FAIL_STRICT_GAP_THRESHOLD",
+  "final_event": "events/EVT-2026-10-14-LOCALWORKER-010.json",
+  "final_event_blob_sha": "486faec0d39fe371514a59f2abaa14d0a2b2e140",
+  "trial": {
+    "id": "LOCALWORKER-STABILITY-24H-001",
     "start_at": "2026-10-13T20:22:39.3995480+02:00",
     "end_at": "2026-10-14T20:22:39.3995480+02:00",
-    "duration_hours": 24,
-    "interval_minutes": 5,
-    "stability_task_state_at_start": "Ready",
-    "cleanup_task_state_at_start": "Ready",
-    "main_task_state_at_start": "Disabled",
-    "software_api_cost_eur": 0,
-    "electricity_cost": "UNKNOWN_NOT_INSTRUMENTED",
-    "reversible": true,
-    "final_result": "PENDING"
-  },
-  "fixed_success_thresholds": {
-    "minimum_total_cycle_records": 285,
-    "maximum_cycle_failures": 0,
-    "maximum_inter_record_gap_minutes": 10,
-    "ready_pending_tasks_executed": 0,
-    "external_effects": 0,
-    "automatic_shutdown_deadline_minutes_after_window_end": 10,
-    "finalizer_file_required": true,
+    "final_result": "FAIL",
+    "failure_reason": "PREDECLARED_MAX_INTER_RECORD_GAP_EXCEEDED",
+    "records": 288,
+    "passes": 288,
+    "failures": 0,
+    "max_gap_minutes_reported_rounded_3dp": 10.001,
+    "max_allowed_gap_minutes": 10,
+    "non_pass_records": 0,
+    "external_effects_authorized_true_records": 0,
     "stability_task_final_state": "Disabled",
     "cleanup_task_final_state": "Disabled",
-    "main_task_final_state": "Disabled"
+    "main_task_final_state": "Disabled",
+    "auto_shutdown_verified": true
   },
-  "human_gate": {
-    "gate_id": "LOCALWORKER-STABILITY-24H-001-FINAL-RECONCILIATION",
-    "status": "WAIT_UNTIL_WINDOW_END_THEN_KAEL_RETURNS_LOCAL_STATUS",
-    "scope": "Do not restart or duplicate the stability trial. Do not enable the main worker task. After the window and auto-shutdown, return the final manager status/reconciliation output.",
-    "external_actions_authorized": false,
-    "commercial_actions_authorized": false,
-    "persistent_24x7_authorized": false
+  "interpretation": {
+    "safety_failure": false,
+    "external_effects": 0,
+    "persistent_24x7_authorized": false,
+    "main_worker_must_remain_disabled": true,
+    "threshold_changed_post_hoc": false
   },
-  "return_to_nexia": "After 2026-10-14T20:22:39.3995480+02:00 and once cleanup has had up to 10 minutes, return the local final reconciliation/status output. Nexia must compare it against the predeclared thresholds before declaring PASS, FAIL or INCONCLUSIVE.",
+  "next_gate": "DIAGNOSE_EXACT_MAX_GAP_TIMESTAMP_AND_CAUSE_BEFORE_ANY_RERUN",
   "economic_priority_preserved": {
     "active_experiment": "EXP-AUTO-001",
-    "workana_profile_gate_still_pending": true,
+    "workana_gate": "PENDING_EXPLICIT_APPROVAL",
     "realized_revenue_eur": 0,
     "realized_profit_eur": 0
   },
-  "truth_limit": "The trial start is verified from Kael's Windows output. Twenty-four-hour continuity, cycle count, gap limits, final auto-shutdown and production-grade 24x7 durability are not yet verified."
+  "truth_limit": "The bounded 24h trial is closed as strict FAIL because 10.001 minutes exceeds the predeclared <=10 minute max-gap gate. This does not imply a safety breach or production 24x7 failure; production persistence remains NOT_AUTHORIZED_NOT_VERIFIED."
 }
