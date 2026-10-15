@@ -1,7 +1,7 @@
 # NEXIA — SYSTEM EXCELLENCE + EXTERNAL REALITY DASHBOARD
 
 Status: ACTIVE / EVIDENCE-GATED
-Version: 4.1
+Version: 4.2
 Updated: 2026-10-15
 Canonical source: `NEXIA_STATE.json` v72 plus `NEXIA_LIVE.json` and indexed post-STATE deltas.
 Purpose: show whether Nexia is becoming a stronger system while staying connected to external reality. This file is a reporting view, never an independent source of truth.
@@ -23,13 +23,13 @@ Purpose: show whether Nexia is becoming a stronger system while staying connecte
 | North Star | top-tier continuously improving decision/execution system connected to reality | ACTIVE |
 | Economy-first mission | superseded prospectively | VERIFIED |
 | Historical economic evidence | preserved | VERIFIED |
-| Core recovery chain through V26 | STATE/LIVE/BOOT/index reconciled to Model C | VERIFIED |
-| Project instruction UI | old installed baseline; V4 prepared at 7,035 chars | PENDING HUMAN GATE |
+| Core recovery chain through V28 | STATE v72 + V28 errata/instruction checkpoint; historical V27 event preserved | DOCUMENTARY RECONCILIATION |
+| Project instruction UI | V4: 7,035 chars; Kael confirms saved; current project content/context checked | USER CONFIRMED / CONTEXT VERIFIED; NO DIRECT UI INSPECTION |
 
 ## B. System readiness
 | Dimension | Current state | Status |
 |---|---|---|
-| TRUTH | STATE v72 + Model C constitution + LIVE/BOOT/index reconciled; ongoing drift checks remain | VERIFIED CORE / CONTINUOUS |
+| TRUTH | STATE v72 + Model C; six V27 reference errors corrected by V28 erratum; checker repair and ongoing drift checks remain | CORE RECONCILED / CONTROL GAP DOCUMENTED |
 | RELIABILITY | strong bounded technical evidence; not project-wide | PARTIAL |
 | RECOVERY | verified in several bounded flows; not universal | PARTIAL |
 | OBSERVABILITY | partial telemetry/evidence chain | PARTIAL |
@@ -123,11 +123,11 @@ Completed / verified in the constitutional-critical layer:
 - canonical STATE v72;
 - Growth/Autonomy model;
 - Operating Day;
-- Dashboard v4.1;
+- Dashboard v4.2;
 - Bounded Autonomy standard;
 - Master Instructions Model C amendment;
 - Project Instruction Contract + Evolution Protocol;
-- Project instruction V4 candidate: 7,035 chars / PREPARED_NOT_INSTALLED;
+- Project instruction V4: 7,035 chars / INSTALLED_USER_CONFIRMED_CONTEXT_VERIFIED; no direct settings UI inspection;
 - Opportunity & Capability Scorecard V3; V2 superseded;
 - Operational Rules;
 - Master Operating Order;
@@ -138,19 +138,24 @@ Completed / verified in the constitutional-critical layer:
 - old Parallel Revenue Radar superseded for current ranking;
 - Professional Quality Gate reviewed and compatible without material rewrite.
 
+Documentary reconciliation:
+- prior V27 migration checkpoint already exists; do not repeat it;
+- `events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json` corrects six original event references without rewriting history;
+- Project Instructions V4 installation gate closed on Kael's explicit save confirmation plus current project content/context verification;
+- BOOT v83 / LIVE schema 28 / active index V28 carry this checkpoint.
+
 Still required:
-- final migration event/index/LIVE/BOOT checkpoint for the completed drift-audit batch;
-- Kael applies Project Instructions V4 in the Project UI and fresh-chat verification closes that Human Gate;
-- continue project-wide item-by-item retrofit as active/reusable artifacts are touched or surfaced.
+- repair `tools/nexia_integrity_check.py`: current code does not validate indexed event/artifact references and expects LIVE fields absent from schema 27; this is a code-reading finding, not an executed test;
+- continue project-wide item-by-item retrofit as active/reusable artifacts are touched or surfaced;
+- reconcile old Project UI gate wording in other derived documents when touched; the current V28 event and LIVE supersede it.
 
 Repository-wide compliance remains **NOT YET VERIFIED ITEM BY ITEM**.
 
 ## J. Current dynamic priorities
 After hard precedence:
-1. close the Model C migration checkpoint and Project UI V4 Human Gate;
-2. resume Contra Portfolio V2 as a quality + external-reality sensor;
-3. continue active/reusable retrofit opportunistically rather than polishing archives;
-4. gather Kael attention baseline when real human actions occur, without adding recording friction.
+1. repair/reverify the integrity checker for current schemas and indexed evidence references;
+2. resume Contra Portfolio V2 as a quality + external-reality sensor within existing authority;
+3. continue active/reusable retrofit and gather Kael attention baseline when real human actions occur, without adding recording friction.
 
 This order may change with new evidence.
 

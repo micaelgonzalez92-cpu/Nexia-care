@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-MODEL-C-RECONCILIATION-001",
+  "date": "2026-10-15",
+  "type": "HISTORICAL_CHECKPOINT_REFERENCE_ERRATA_AND_PROJECT_INSTRUCTION_VERIFICATION",
+  "canonical_state_version": 72,
+  "canonical_state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+  "audited_commit": "78553e56f9849cb524099f33a130d4e940ed7f92",
+  "supersedes_reference_claims_in": "events/EVT-2026-10-15-MODEL-C-RETROFIT-001.json",
+  "historical_event_preserved": true,
+  "corrected_references": [
+    {
+      "path": "NEXIA_OPERATIONAL_RULES.md",
+      "declared_blob_sha": "01042101012eb0ffe423d6c5bb3d240a48c66642",
+      "verified_blob_sha": "bc65a3af63bc806a8a1b9979b2f2053963d1df7d",
+      "result": "INCORRECT_REFERENCE_PRESENT_AT_EVENT_CREATION_ARTIFACT_UNCHANGED",
+      "original_migration_commit": "2766057aa2830f6cfd9615d413dc071645cf7f46"
+    },
+    {
+      "path": "NEXIA_MASTER_OPERATING_ORDER.md",
+      "declared_blob_sha": "1afdb7c5453e51231b8dac80aac0296ba02f44d2",
+      "verified_blob_sha": "2dc84e5da37469267d3dcf65bd0d07108b983c8a",
+      "result": "INCORRECT_REFERENCE_PRESENT_AT_EVENT_CREATION_ARTIFACT_UNCHANGED",
+      "original_migration_commit": "120392278163639f7c8f1baf0f6726bb2abad629"
+    },
+    {
+      "path": "NEXIA_AUTONOMOUS_QUEUE.md",
+      "declared_blob_sha": "693405380fa726581410c406081538b61de2f8f1",
+      "verified_blob_sha": "5ecdefd3c4c6fa33d9f34162b8eb2639f96c0be1",
+      "result": "INCORRECT_REFERENCE_PRESENT_AT_EVENT_CREATION_ARTIFACT_UNCHANGED",
+      "original_migration_commit": "419811ac4c0ef13dfe984804922e8ede35b11bbd"
+    },
+    {
+      "path": "NEXIA_OPPORTUNITY_SCORECARD_V3_2026-10-15.md",
+      "declared_blob_sha": "7f241075b29ac302d16b095d25bd0b5225eaa70e",
+      "verified_blob_sha": "32b2cc3c510d490e49ca21e8b076e4a3046c8cc7",
+      "result": "INCORRECT_REFERENCE_PRESENT_AT_EVENT_CREATION_ARTIFACT_UNCHANGED",
+      "original_migration_commit": "d35c8d45c9e9b98eead6b08a2c372ee15abe9a05"
+    },
+    {
+      "path": "NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md",
+      "declared_blob_sha": "81bf482433217699318b019d9618937fac162ead",
+      "verified_blob_sha": "e13d9b461cd9a6b56f5b3a79f6aabfd5ae3f4f92",
+      "result": "INCORRECT_REFERENCE_PRESENT_AT_EVENT_CREATION_ARTIFACT_UNCHANGED",
+      "original_migration_commit": "6a063b76ed7f95ec73f234473b16190d1df122bb"
+    },
+    {
+      "path": "TIMEOS.md",
+      "declared_blob_sha": "faea4b427c630f5b99694091958093044be298da",
+      "verified_blob_sha": "34057b6c10235610cc771bb6114a5ea1f94795ec",
+      "result": "INCORRECT_REFERENCE_PRESENT_AT_EVENT_CREATION_ARTIFACT_UNCHANGED",
+      "original_migration_commit": "e5dbc449fb59cff9989167098771c17d8fc4c2bc"
+    }
+  ],
+  "root_cause_of_incorrect_hash_generation": "UNKNOWN",
+  "project_instruction_verification": {
+    "candidate": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
+    "candidate_blob_sha": "ce14c0c5b5dc27857b99398d96fbed0d29d3c136",
+    "character_count": 7035,
+    "kael_confirmation": "confirmo que las instruciones del proyecto estan actualizadas y guardadas. continua",
+    "evidence": "DIRECT_CURRENT_CHAT_USER_CONFIRMATION_PLUS_CURRENT_PROJECT_CONTEXT_AND_LOCAL_AGENTS_TEXT_MATCH",
+    "verification_scope": "PROJECT_INSTRUCTION_CONTENT_AND_MODEL_C_RECOVERY_IN_CURRENT_ENVIRONMENT",
+    "direct_project_settings_ui_inspection": false,
+    "result": "USER_CONFIRMED_SAVED_AND_CURRENT_PROJECT_CONTEXT_VERIFIED",
+    "status": "INSTALLED_USER_CONFIRMED_CONTEXT_VERIFIED",
+    "checked_invariants": [
+      "MODEL_C_MISSION",
+      "HARD_PRECEDENCE",
+      "DUAL_LOOPS",
+      "CAPITAL_100_EUR_WEEK_DEFAULT_ZERO",
+      "AUTHORITY_BOUNDARIES",
+      "CURRENT_CANONICAL_RECOVERY_ORDER"
+    ]
+  },
+  "authority_effect": "NONE_EXTERNAL_PERMISSIONS_UNCHANGED",
+  "cash_spend_eur": 0,
+  "verification_control_gap": "EXISTING_CHECKER_DOES_NOT_VALIDATE_EVENT_ARTIFACT_REFERENCES; SCHEMA_COMPATIBILITY_REPAIR_PENDING",
+  "recorded_at": "2026-10-15T00:37:48Z",
+  "repository_write_authorization": {
+    "source": "DIRECT_CURRENT_CHAT_USER_INSTRUCTION",
+    "text": "autorizo la reconciliación documental en GitHub.",
+    "scope": "DOCUMENTARY_RECONCILIATION_ONLY"
+  },
+  "corrects_event_blob_sha": "4a071c183bf5929d19f267cbea65cdaacf7a6446",
+  "evidence_chat_id": "01a13cf4-c492-7ff0-9ff6-ba1657950663",
+  "reference_interpretation": "Corrected hashes describe artifact blobs at audited_commit and their original migration commits; future valid edits may create new hashes. Preserve and read this erratum alongside the original V27 event.",
+  "remaining_work": [
+    "Repair integrity checker for current schema and event/artifact reference validation; no code changed in this documentary reconciliation.",
+    "Continue item-by-item active/reusable audit; Autonomous Queue's old Project UI gate is superseded by this event and LIVE, but its source is preserved in this batch."
+  ],
+  "publication_verification_rule": "Verify the published commit and branch head by readback; this event's existence alone is not proof of successful publication.",
+  "reconciled_document_blobs": [
+    {
+      "path": "NEXIA_PROJECT_INSTRUCTION_CONTRACT.json",
+      "blob_sha": "2c98b568ad94b41a04cfb982ef40f4a9c43704a0"
+    },
+    {
+      "path": "NEXIA_INSTRUCTION_EVOLUTION.md",
+      "blob_sha": "25b842db783f1047ea3252541681c26c6e68a68f"
+    },
+    {
+      "path": "NEXIA_PROGRESS_DASHBOARD.md",
+      "blob_sha": "5dad7f86d99760eb41f58ad022f3d14c24646002"
+    }
+  ]
+}

@@ -77,10 +77,11 @@ Do not declare system-wide compliance merely because one policy document changed
 Current facts:
 - empirical Nexia Project UI operating limit: 8,000 characters;
 - safe generation ceiling: 7,800 characters;
-- active installed baseline: `NEXIA_PROJECT_INSTRUCTIONS_COMPACT.md`, verified installed 2026-10-12 but now mission-stale after Model C approval;
+- active installed baseline: `NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md`; Kael confirmed saved and current project content/context verified on 2026-10-15;
+- previous baseline: `NEXIA_PROJECT_INSTRUCTIONS_COMPACT.md`, historically verified 2026-10-12 and now superseded;
 - current candidate: `NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md`;
 - exact candidate character count: **7,035**;
-- candidate status: `PREPARED_NOT_INSTALLED_IN_PROJECT_UI`;
+- V4 status: `INSTALLED_USER_CONFIRMED_CONTEXT_VERIFIED`; direct settings UI inspection was not performed;
 - V3 candidate (7,791 chars) is superseded before installation;
 - full-spec superseding amendment: `NEXIA_MASTER_INSTRUCTIONS_V2_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_AMENDMENT_2026-10-15.md`.
 
@@ -99,7 +100,9 @@ Mandatory preflight:
 - Canonical STATE migrated from v71 economy-first mission to v72 Model C.
 - Active constitution: `governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md`.
 - Growth/Autonomy, Operating Day, dashboard and bounded-autonomy standard migrated.
-- Project instruction V4 candidate prepared at 7,035 characters.
+- Project instruction V4 saved according to Kael's explicit confirmation; current project instruction content matches the canonical 7,035-character V4 after newline normalization, and Model C recovery behavior was verified.
+- Installation evidence and historical reference errata: `events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json`.
+- Six incorrect hashes were present at creation of the prior retrofit event; the historical event is preserved, with corrected snapshot-specific references supplied by the reconciliation event. How those incorrect strings were generated remains UNKNOWN.
 - Economics remains critical but is now one decision dimension and an external validation/resource/outcome, not the universal objective.
 - EXP-AUTO-001 remains a bounded Reality Loop probe and potential engine; its historical/precommitted thresholds remain intact.
 - Repository-wide compliance remains unverified item by item; further retrofit continues.

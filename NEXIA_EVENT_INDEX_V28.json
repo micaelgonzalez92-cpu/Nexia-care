@@ -1,0 +1,33 @@
+{
+  "schema_version": 28,
+  "updated_at": "2026-10-15",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 72,
+  "canonical_state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V27.json",
+    "verified_blob_sha": "09b32be0e7534ace0ae44cc42fab6963b0f240f6"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-15-MODEL-C-RECONCILIATION-001",
+      "path": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
+      "verified_blob_sha": "511573ef740393979cdd5f80fa4a0755a4ce4c79"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-15-MODEL-C-RECONCILIATION-001",
+  "latest_event_path": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
+  "latest_event_blob_sha": "511573ef740393979cdd5f80fa4a0755a4ce4c79",
+  "latest_material_business_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001",
+  "latest_material_governance_event_id": "EVT-2026-10-15-MODEL-C-RECONCILIATION-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "migration_status": "CORE_DOCUMENTARY_RECONCILIATION_AND_V4_USER_CONFIRMED_CONTEXT_VERIFIED",
+  "historical_reference_errata": {
+    "original_event": "events/EVT-2026-10-15-MODEL-C-RETROFIT-001.json",
+    "original_event_blob_sha": "4a071c183bf5929d19f267cbea65cdaacf7a6446",
+    "corrective_event": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
+    "audited_commit": "78553e56f9849cb524099f33a130d4e940ed7f92",
+    "scope": "SIX_HISTORICAL_ARTIFACT_REFERENCE_CLAIMS_ONLY"
+  },
+  "rule": "Use STATE v72 + Model C + this reconciliation event. Preserve original V27 event and apply six snapshot-specific hash errata. V4 is user-confirmed saved and context-verified, without direct settings UI inspection. Repository-wide compliance and automated checker repair are not claimed."
+}
