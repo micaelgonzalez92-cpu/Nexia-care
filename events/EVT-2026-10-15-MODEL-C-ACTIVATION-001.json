@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-MODEL-C-ACTIVATION-001",
+  "timestamp": "2026-10-15T02:14:00+02:00",
+  "project": "NEXIA CORE",
+  "type": "CONSTITUTIONAL_MISSION_MODEL_ACTIVATED",
+  "classification": "KAEL_EXPLICIT_APPROVAL",
+  "source": "PROJECT_CHAT_EXPLICIT_APPROVAL",
+  "approval_text": "Apruebo el modelo C, System Excellence más External Reality.",
+  "model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "constitution": "governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md",
+  "supersedes_forward_interpretation": [
+    "ECONOMY_FIRST_AS_CONSTITUTIONAL_OBJECTIVE",
+    "REVENUE_PROXIMITY_AS_DEFAULT_GLOBAL_PRIORITY"
+  ],
+  "preserves": [
+    "SAFETY_LEGAL_SECURITY_PRIVACY_CONSTRAINTS",
+    "TRUTH_AND_EVIDENCE_INTEGRITY",
+    "AUTHORITY_AND_HUMAN_GATES",
+    "HISTORICAL_EXPERIMENT_RESULTS_AND_THRESHOLDS",
+    "CURRENT_100_EUR_WEEKLY_BUDGET_CAP_UNTIL_SEPARATELY_CHANGED",
+    "EXPLICIT_EXTERNAL_ACTION_PERMISSIONS"
+  ],
+  "new_north_star": "Build Nexia into a top-tier continuously improving decision-and-execution system that learns from reality, compounds capability, minimizes unnecessary human dependence and repeatedly creates useful sustainable outcomes.",
+  "dual_mandate": ["INTERNAL_EXCELLENCE", "EXTERNAL_REALITY"],
+  "economic_role": "CRITICAL_EXTERNAL_VALIDATION_RESOURCE_AND_SUSTAINABILITY_OUTCOME_NOT_SOLE_TOP_LEVEL_PURPOSE",
+  "exp_auto_001_role": "ACTIVE_BOUNDED_REALITY_LOOP_PROBE_NOT_PROJECT_PURPOSE",
+  "automatic_effect": "TRIGGER_PROJECT_WIDE_CONSTITUTIONAL_RETROFIT_ACTIVE_AND_REUSABLE_ASSETS",
+  "project_ui_instructions": "NEW_COMPACT_CANDIDATE_REQUIRED_AND_KAEL_INSTALLATION_REQUIRED_BEFORE_UI_LAYER_IS_VERIFIED_CURRENT",
+  "financial_impact_eur": 0,
+  "authority_change": "MISSION_AND_PRIORITY_MODEL_ONLY_NO_NEW_EXTERNAL_ACTION_AUTHORITY",
+  "result": "APPROVED_ACTIVE",
+  "next_step": "RECONCILE_STATE_LIVE_BOOT_DASHBOARD_OPERATING_MODEL_RESOURCE_MODEL_AND_PROJECT_INSTRUCTION_CANDIDATE"
+}
