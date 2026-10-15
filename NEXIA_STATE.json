@@ -1,6 +1,6 @@
 {
   "schema_version": 4,
-  "version": 72,
+  "version": 73,
   "updated_at": "2026-10-15",
   "project": "NEXIA CORE",
   "constitutional_model": {
@@ -13,14 +13,14 @@
   },
   "mission_definition": "Construir Nexia como un sistema de decisión y ejecución de primer nivel, continuamente mejorable, fiable, recuperable, verificable, adaptable y progresivamente autónomo, capaz de aprender de la realidad, acumular capacidades y transformar problemas reales en resultados útiles y sostenibles.",
   "north_star": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONSTITUTIONAL RETROFIT ACTIVE; EXP-AUTO-001 REALITY PROBE ACTIVE",
-  "progress_stage": "CONSTITUTIONAL_RETROFIT_AND_REALITY_VALIDATION",
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONTRA V4 INTERNAL READY; KAEL PUBLIC-EDIT GATE; EXP-AUTO-001 REALITY PROBE ACTIVE",
+  "progress_stage": "CONTRA_V4_READY_EXTERNAL_REALITY_GATE",
   "current_mission": {
     "id": "MISSION-SYSTEM-EXCELLENCE-REALITY-001",
     "name": "Build Nexia into a top-tier continuously improving system that learns from external reality and repeatedly creates useful sustainable outcomes",
     "priority": "MAX",
     "status": "ACTIVE",
-    "human_action_required_now": false
+    "human_action_required_now": true
   },
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
@@ -53,7 +53,7 @@
     "quality": "PROJECT_WIDE_RETROFIT_ACTIVE_NOT_ALL_ITEMS_VERIFIED",
     "autonomy": "PROACTIVE_TO_AUTONOMOUS_SUPERVISED_IN_BOUNDED_PATHS",
     "security_authority": "ACTIVE_GATED",
-    "reality_validation": "ACTIVE_VIA_EXP_AUTO_001_AND_MARKET_BENCHMARKS",
+    "reality_validation": "ACTIVE_CONTRA_V4_INTERNAL_READY_EXTERNAL_RESPONSE_NOT_YET_MEASURED",
     "economic_readiness": "NOT_YET_VALIDATED_FOR_SCALING"
   },
   "perfection_doctrine": {
@@ -102,7 +102,7 @@
     "name": "Lead Intake Reliability Sprint",
     "role": "BOUNDED_REALITY_LOOP_PROBE_AND_POTENTIAL_REVENUE_ENGINE",
     "stage": "VETA / PRE-VALIDACION COMERCIAL",
-    "status": "CONTRA_MICROTEST_AUTHORIZED_PROFILE_89_V2_REDESIGN_ACTIVE_WORKANA_PENDING",
+    "status": "CONTRA_V4_INTERNAL_READY_KAEL_IMPLEMENTATION_GATE_WORKANA_PENDING",
     "hypothesis": "A buyer with an existing inbound lead flow will pay for a bounded semiautomatic reliability sprint that validates, classifies, deduplicates, summarizes and prepares replies while keeping sensitive sending under human review.",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
@@ -110,18 +110,24 @@
     "contra": {
       "account_created_verified": true,
       "authenticated_session_verified": true,
-      "profile_completion_percent_visible": 89,
-      "instagram_social_link_shared": true,
-      "portfolio_v1_status": "SUPPORTING_MEDIA_ONLY",
-      "portfolio_v2_status": "PREMIUM_REDESIGN_ACTIVE",
+      "profile_completion_percent_last_visible": 89,
+      "personal_instagram_link_last_observed_present": true,
+      "personal_instagram_removal_required": true,
+      "portfolio_v1_status": "HISTORICAL_SUPPORTING_MEDIA",
+      "portfolio_v2_status": "SUPERSEDED_BY_V4_FOR_CURRENT_IMPLEMENTATION",
+      "portfolio_v3_status": "SUPERSEDED_BY_V4_FOR_CURRENT_IMPLEMENTATION",
+      "portfolio_v4_status": "READY_FOR_CURRENT_PURPOSE_INTERNAL_APPROVED_NOT_APPLIED",
+      "visual_system_artifact": "commercial/EXP-AUTO-001_CONTRA_VISUAL_SYSTEM_V4_FINAL_2026-10-15.md",
+      "implementation_runbook": "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md",
       "identity_verified": false,
       "payout_method_completed": false,
       "applications_submitted": 0,
+      "paid_pilots_verified": 0,
       "microtest_max_applications": 6,
       "microtest_window_days": 14,
       "setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED",
       "rate_status": "USER_GUIDED_50_75_USD_PER_HOUR_NOT_POSTCONDITION_VERIFIED",
-      "work_pieces_published_verified": "UNKNOWN_NOT_RECONCILED_AFTER_PROFILE_EDIT_FLOW"
+      "work_pieces_published_verified": "FOUR_WORK_ITEMS_VISIBLE_WITH_OLDER_COVERS_IN_LATEST_RECORDING_V4_NOT_APPLIED"
     },
     "workana": {
       "dashboard_state": "PENDING",
@@ -153,7 +159,9 @@
     "art_direction_v2": "ACTIVE",
     "project_wide_quality_retrofit": "ACTIVE",
     "mandatory_material_task_loop": "VERIFY->CRITIQUE->COMPARE->IMPROVE->REVERIFY->CAPTURE->STOP_RATIONALLY",
-    "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM"
+    "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM",
+    "external_ai_intelligence_round": "READY_FOR_CURRENT_PURPOSE_INTAKE_CLOSED",
+    "external_ai_intelligence_synthesis": "research/NEXIA_EXTERNAL_AI_INTELLIGENCE_SYNTHESIS_V1_2026-10-15.md"
   },
   "portfolio_wip": {
     "policy": "BOUNDED_ADAPTIVE_WIP",
@@ -182,20 +190,22 @@
     "generic_continue_does_not_expand_permissions": true
   },
   "human_gate": {
-    "status": "NO_IMMEDIATE_ACTION_REQUIRED_FOR_INTERNAL_CONSTITUTIONAL_RETROFIT",
+    "status": "KAEL_ACTION_REQUIRED_CONTRA_V4_PUBLIC_EDIT",
+    "current_gate": "KAEL_APPLY_FINAL_CONTRA_V4_PROFILE_MEDIA_COPY_AND_REMOVE_PERSONAL_INSTAGRAM",
+    "surface": "CONTRA_DESKTOP_RECOMMENDED",
     "contra_identity_and_payout": "KAEL_ONLY_WHEN_RESUMED",
-    "project_instruction_ui_update": "KAEL_ONLY_AFTER_V4_CANDIDATE_PREPARED_AND_VALIDATED",
+    "project_instruction_ui_update": "CLOSED_USER_CONFIRMED_CONTEXT_VERIFIED",
     "external_contact_publication_spend": "REMAINS_SEPARATELY_GATED"
   },
   "system": {
     "canonical_source": "NEXIA_STATE.json",
-    "previous_state_version": 71,
-    "previous_state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
+    "previous_state_version": 72,
+    "previous_state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
     "previous_state_preserved_in_git_history": true,
     "boot_index": "NEXIA_BOOT.json",
     "live_state": "NEXIA_LIVE.json",
     "event_storage_mode": "COMPOSITE_INDEX_CHAIN",
-    "current_event_index_before_v72_reconciliation": "NEXIA_EVENT_INDEX_V25.json",
+    "current_event_index_before_v73_reconciliation": "NEXIA_EVENT_INDEX_V30.json",
     "memory_status": "DERIVED_NOT_CANONICAL",
     "public_hq": "NOT_DEPLOYED_CURRENTLY",
     "background_execution_truth": "ONLY_WHEN_AN_ACTUAL_AUTHORIZED_AUTOMATION_OR_EXECUTION_ENVIRONMENT_RUNS"
@@ -207,6 +217,7 @@
     "continuous_quality": "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md",
     "project_wide_retrofit": "quality/NEXIA_PROJECT_WIDE_QUALITY_RETROFIT_2026-10-15.md",
     "competitive_intelligence": "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
+    "external_ai_intelligence_synthesis": "research/NEXIA_EXTERNAL_AI_INTELLIGENCE_SYNTHESIS_V1_2026-10-15.md",
     "art_direction": "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md"
   },
   "historical_integrity": {
@@ -214,18 +225,18 @@
     "preserve_fail_results": true,
     "preserve_old_events": true,
     "do_not_relabel_activity_as_outcome": true,
-    "state_v71_superseded_not_deleted": true
+    "state_v72_superseded_not_deleted": true
   },
-  "next_useful_action": "Continue constitutional retrofit across Operating Day, Growth/Autonomy, dashboard, instruction candidate and recovery surfaces; execute GREEN improvements automatically. Keep EXP-AUTO-001 as bounded Reality Loop probe rather than project-wide economic master priority.",
+  "next_useful_action": "Kael applies the prepared Contra V4 public profile/media changes, removes the personal Instagram link and returns visual evidence. Nexia then verifies the 15-point public postcondition before service exposure or measured acquisition. Broad tool research remains stopped unless a measured capability gap or new evidence creates a named decision.",
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-15-MODEL-C-001",
-    "previous_checkpoint_id": "CP-2026-10-13-COMMERCIAL-001",
-    "previous_state_version": 71,
-    "previous_state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
-    "current_state_version": 72,
-    "checkpoint_status": "MODEL_C_CANONICAL_MISSION_MIGRATION",
+    "checkpoint_id": "CP-2026-10-15-INTELLIGENCE-SYNTHESIS-001",
+    "previous_checkpoint_id": "CP-2026-10-15-MODEL-C-001",
+    "previous_state_version": 72,
+    "previous_state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+    "current_state_version": 73,
+    "checkpoint_status": "EXTERNAL_INTELLIGENCE_INTAKE_CLOSED_CONTRA_V4_HUMAN_GATE_ACTIVE",
     "financial_impact_eur": 0,
-    "authority_change": "MISSION_AND_PRIORITY_MODEL_CHANGED; EXTERNAL_ACTION_GATES_UNCHANGED",
-    "note": "Explicit Kael approval activates System Excellence + External Reality. Economics remains critical but no longer governs every task. Historical experiment evidence and authority gates remain intact."
+    "authority_change": "NONE; EXISTING EXTERNAL_ACTION_GATES PRESERVED",
+    "note": "External AI/tool intelligence Batches 01-07 are synthesized and READY_FOR_CURRENT_PURPOSE. Tool accumulation is not the current bottleneck. Contra V4 public implementation is the active Reality Loop human gate; no public implementation, demand, payment or profit is claimed."
   }
 }
