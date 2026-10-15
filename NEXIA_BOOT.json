@@ -1,11 +1,11 @@
 {
   "schema_version": 30,
-  "boot_version": 85,
+  "boot_version": 86,
   "generated_at": "2026-10-15",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
-  "state_version": 72,
-  "state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+  "state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
   "mission": {
     "id": "MISSION-SYSTEM-EXCELLENCE-REALITY-001",
@@ -25,7 +25,8 @@
     "read V29 verifier repair event and exact historical index reference errata",
     "read V28 reconciliation event for V27 historical hash errata and Project Instructions V4 installation evidence",
     "follow V30 base through V29/V28/V27/V26/V25 to V3 as needed",
-    "read post-STATE v72 events if any",
+    "read post-STATE v73 events if any",
+    "research/NEXIA_EXTERNAL_AI_INTELLIGENCE_SYNTHESIS_V1_2026-10-15.md when tool/intelligence prioritization is material",
     "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md when Contra execution/verification is material",
     "commercial/EXP-AUTO-001_CONTRA_VISUAL_SYSTEM_V4_FINAL_2026-10-15.md when Contra media is material",
     "NEXIA_EXECUTION_CAPABILITIES.json when execution truth is material",
@@ -109,7 +110,7 @@
     }
   },
   "human_gate": "Kael must apply the final Contra V4 public profile/media changes and remove the personal Instagram link. Publication, service exposure, KYC/payout and new external accounts remain separately gated. Return with visual evidence for Nexia verification.",
-  "sync_status": "STATE_V72_PLUS_EVENT_INDEX_V30_PLUS_LIVE_SCHEMA_30_CONTRA_V4_READY_GATE",
+  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V30_PLUS_LIVE_SCHEMA_30_CONTRA_V4_READY_GATE",
   "next_action": "KAEL_APPLY_CONTRA_V4_THEN_NEXIA_VERIFY_PUBLIC_POSTCONDITION",
   "integrity_verifier": {
     "event": "events/EVT-2026-10-15-INTEGRITY-REPAIR-001.json",
