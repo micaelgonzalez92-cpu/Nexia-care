@@ -1,24 +1,54 @@
 {
-  "schema_version": 25,
+  "schema_version": 26,
   "updated_at": "2026-10-15",
-  "status": "ACTIVE / EXP-AUTO-001 + CONTRA PROFILE 89% + V2 PREMIUM PORTFOLIO REDESIGN + PROJECT_WIDE_QUALITY_RETROFIT_MULTI_AXIS + IDENTITY_AND_PAYOUT_PENDING",
-  "state_version": 71,
-  "state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
-  "state_status": "CANONICAL_BASE_PLUS_POST_STATE_DELTAS",
+  "status": "ACTIVE / MODEL C SYSTEM EXCELLENCE + EXTERNAL REALITY / CONSTITUTIONAL RETROFIT ACTIVE / EXP-AUTO-001 REALITY PROBE / CONTRA PROFILE 89% / PROJECT UI V4 PENDING",
+  "state_version": 72,
+  "state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+  "state_status": "CANONICAL_MODEL_C",
+  "constitutional_model": {
+    "id": "MODEL-C-SYSTEM-EXCELLENCE-EXTERNAL-REALITY",
+    "status": "ACTIVE_APPROVED_BY_KAEL",
+    "constitution": "governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md",
+    "constitution_blob_sha": "53435e8ecbdd0e45ee17bac250aa6f3df1feec1c",
+    "north_star": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+    "economy_first_superseded": true
+  },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V25.json",
-    "active_index_blob_sha": "07233fc57dfdbde65d1003a264753d329aee0b2f",
-    "previous_index": "NEXIA_EVENT_INDEX_V24.json",
-    "latest_verified_event_id": "EVT-2026-10-15-QUALITY-RETROFIT-PRIORITY-MODEL-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-QUALITY-RETROFIT-PRIORITY-MODEL-001.json",
-    "latest_verified_event_blob_sha": "ddf05357cdac5621b48fa8c5bdbc0326ab810a21",
-    "latest_material_business_event_id": "EVT-2026-10-15-PROJECT-WIDE-QUALITY-RETROFIT-001"
+    "active_index": "NEXIA_EVENT_INDEX_V26.json",
+    "active_index_blob_sha": "1c5eb25762b22dfc9c8485ba4ba0aa15289f4d84",
+    "previous_index": "NEXIA_EVENT_INDEX_V25.json",
+    "latest_verified_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001",
+    "latest_verified_event_path": "events/EVT-2026-10-15-MODEL-C-ACTIVATED-001.json",
+    "latest_verified_event_blob_sha": "ebfda045b28ec7fbbd8f4ef93e6a22797fd493f8",
+    "latest_material_business_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001"
   },
-  "active_experiment": {
+  "hard_precedence": [
+    "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
+    "TRUTH_EVIDENCE_INTEGRITY",
+    "AUTHORITY_HUMAN_GATE_INTEGRITY",
+    "CONTINUITY_RECOVERABILITY_CORRUPTION_PREVENTION"
+  ],
+  "dual_loop": {
+    "system_loop": "OBSERVE_ARCHITECT_BUILD_VERIFY_STRESS_RECOVER_INSTRUMENT_IMPROVE_STANDARDIZE_AUTOMATE",
+    "reality_loop": "OBSERVE_REAL_PROBLEM_HYPOTHESIS_MINIMUM_CAPABILITY_REAL_RESPONSE_MEASURE_LEARN_UPDATE_SYSTEM"
+  },
+  "readiness": {
+    "truth": "ACTIVE_RECONCILIATION",
+    "reliability": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
+    "recovery": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
+    "observability": "PARTIAL",
+    "quality": "PROJECT_WIDE_RETROFIT_ACTIVE_NOT_ALL_ITEMS_VERIFIED",
+    "autonomy": "PROACTIVE_TO_BOUNDED_AUTONOMOUS_SUPERVISED",
+    "security_authority": "ACTIVE_GATED",
+    "reality_validation": "ACTIVE",
+    "economic_readiness": "NOT_YET_VALIDATED_FOR_SCALING"
+  },
+  "active_reality_probe": {
     "id": "EXP-AUTO-001",
+    "role": "BOUNDED_REALITY_LOOP_PROBE_AND_POTENTIAL_REVENUE_ENGINE",
     "stage": "VETA / PRE-VALIDACION COMERCIAL",
-    "status": "WORKANA_PENDING_CONTRA_MICROTEST_AUTHORIZED_PROFILE_89_V2_REDESIGN_ACTIVE",
+    "status": "CONTRA_MICROTEST_AUTHORIZED_PROFILE_89_V2_REDESIGN_ACTIVE_WORKANA_PENDING",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
     "contra_microtest_cash_spend_ceiling_eur": 0,
@@ -27,73 +57,88 @@
     "contra_profile_completion_percent_visible": 89,
     "contra_instagram_social_link_shared": true,
     "contra_portfolio_v1_status": "SUPPORTING_MEDIA_ONLY",
-    "contra_portfolio_v2_status": "REDESIGN_REQUIRED_BEFORE_APPLICATIONS",
+    "contra_portfolio_v2_status": "PREMIUM_REDESIGN_ACTIVE",
     "contra_identity_verified": false,
     "contra_payout_method_completed": false,
     "contra_applications_submitted": 0,
+    "contra_setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED",
+    "contra_rate_status": "USER_GUIDED_50_75_USD_PER_HOUR_NOT_POSTCONDITION_VERIFIED",
+    "contra_work_pieces_published_verified": "UNKNOWN_NOT_RECONCILED_AFTER_PROFILE_EDIT_FLOW",
     "workana_dashboard_state": "PENDING"
   },
-  "strategic_standards": {
-    "competitive_intelligence_reverse_engineering": "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
-    "art_direction_v2": "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md",
-    "continuous_quality_evolution": "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md",
-    "bounded_autonomy_urgency": "governance/NEXIA_BOUNDED_AUTONOMY_URGENCY_STANDARD_2026-10-15.md",
-    "project_wide_quality_retrofit": "quality/NEXIA_PROJECT_WIDE_QUALITY_RETROFIT_2026-10-15.md"
+  "resources": {
+    "capital_weekly_hard_cap_eur": 100,
+    "default_spend_eur": 0,
+    "capital_spent_eur": 0,
+    "allocation_model": "EVIDENCE_WEIGHTED_SYSTEM_PLUS_REALITY_VALUE",
+    "kael_weekly_available_hours": "NOT_INSTRUMENTED",
+    "kael_attention_objective": "MAXIMIZE_HUMAN_LEVERAGE_NOT_SACRIFICE",
+    "attention_baseline": "PENDING_REPRESENTATIVE_7_DAY_MEASUREMENT"
   },
-  "quality_retrofit": {
-    "status": "ACTIVE",
-    "project_wide_not_economy_first": true,
-    "hard_precedence": [
-      "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
-      "TRUTH_EVIDENCE_INTEGRITY",
-      "AUTHORITY_HUMAN_GATE_INTEGRITY",
-      "CONTINUITY_RECOVERABILITY_CORRUPTION_RISK"
-    ],
-    "multi_axis_dimensions": [
-      "SYSTEM_CRITICALITY",
-      "DEPENDENCY_CENTRALITY",
-      "ECONOMIC_IMPACT",
-      "CUSTOMER_USER_IMPACT",
-      "STRATEGIC_LEVERAGE",
-      "URGENCY_TIME_SENSITIVITY",
-      "COMPETITIVE_GAP",
-      "INFORMATION_VALUE",
-      "HUMAN_ATTENTION_EFFECT",
-      "COST_REVERSIBILITY_RISK"
-    ],
-    "audit_domains_not_priority_waves": true,
-    "global_triage_required": true,
-    "dynamic_queue": [
-      "PROJECT_TRUTH_RECOVERY_REPORTING_LAYER",
-      "EXP_AUTO_001_MARKET_SURFACE",
-      "ACQUISITION_COMMERCIAL_CONTROL_LAYER"
-    ],
-    "dashboard": {
-      "path": "NEXIA_PROGRESS_DASHBOARD.md",
-      "version": "3.0",
-      "status": "IMPROVED_AND_REVERIFIED",
-      "blob_sha": "7fd502d1b0e035b29e22151f452986b91d152257"
-    },
+  "economics": {
+    "constitutional_role": "CRITICAL_EXTERNAL_VALIDATION_RESOURCE_AND_SUSTAINABILITY_OUTCOME_NOT_SOLE_TOP_LEVEL_OBJECTIVE",
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "profit_eur": 0,
+    "reconciled_net_profit_eur": 0,
+    "o4_first_scalable_engine_milestone": ">1000_EUR_PER_MONTH_SUSTAINABLE_AFTER_TAX_NET"
+  },
+  "quality_system": {
+    "continuous_quality_evolution": "ACTIVE",
+    "competitive_intelligence_reverse_engineering": "ACTIVE",
+    "art_direction_v2": "ACTIVE",
+    "project_wide_quality_retrofit": "ACTIVE",
+    "bounded_autonomy_model_c_aligned": "ACTIVE",
     "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM"
+  },
+  "instruction_migration": {
+    "installed_project_ui_baseline": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT.md",
+    "installed_baseline_status": "VERIFIED_INSTALLED_BUT_MISSION_STALE_AFTER_MODEL_C",
+    "candidate": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
+    "candidate_blob_sha": "ce14c0c5b5dc27857b99398d96fbed0d29d3c136",
+    "candidate_exact_character_count": 7035,
+    "safe_ceiling_characters": 7800,
+    "candidate_status": "PREPARED_NOT_INSTALLED_IN_PROJECT_UI",
+    "requires_kael_action_and_fresh_chat_verification": true
   },
   "execution_capabilities": {
     "snapshot": "NEXIA_EXECUTION_CAPABILITIES.json",
     "local_worker_24h_formal_result": "FAIL_MAX_GAP_ONLY",
     "local_worker_24h_operational_evidence": "288_288_PASS_ZERO_FUNCTIONAL_FAILURES_AUTO_SHUTDOWN_VERIFIED",
-    "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED"
+    "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
+    "client_production_deployment": "NOT_EXECUTED"
   },
-  "economics": {
-    "capital_spent_eur": 0,
-    "revenue_eur": 0,
-    "settled_revenue_eur": 0,
-    "profit_eur": 0,
-    "reconciled_net_profit_eur": 0
+  "constitutional_retrofit": {
+    "status": "ACTIVE",
+    "completed_verified": [
+      "MODEL_C_CONSTITUTION",
+      "STATE_V72",
+      "GROWTH_AUTONOMY_MODEL",
+      "OPERATING_DAY",
+      "DASHBOARD_V4",
+      "BOUNDED_AUTONOMY_STANDARD",
+      "MASTER_INSTRUCTION_AMENDMENT",
+      "PROJECT_INSTRUCTION_CONTRACT",
+      "INSTRUCTION_EVOLUTION_PROTOCOL",
+      "PROJECT_INSTRUCTION_V4_CANDIDATE",
+      "MODEL_C_ACTIVATION_EVENT",
+      "EVENT_INDEX_V26"
+    ],
+    "pending_internal_audit": [
+      "OPPORTUNITY_SCORECARD",
+      "OPERATIONAL_RULES",
+      "MASTER_OPERATING_ORDER",
+      "AUTONOMOUS_QUEUE",
+      "TIMEOS",
+      "ACTIVE_AUTOMATION_PROMPTS"
+    ],
+    "historical_evidence_rewrite": false
   },
   "session_handoff": {
-    "last_completed_verified_action": "Revised project-wide retrofit from economy-first waves to global triage with hard precedence plus multi-axis prioritization. Audit domains are coverage domains, not a fixed execution sequence. Dynamic queue can reorder with evidence.",
+    "last_completed_verified_action": "Activated Model C canonically in STATE v72 and reconciled constitutional event/index; continuing active/reusable drift audit before Project UI installation gate.",
     "human_action_required_now": false,
-    "pending_human_action": "None while Nexia continues GREEN global triage and remediation. Contra identity/payout remain Kael-only when reached.",
-    "resume_from": "Project-wide retrofit active under multi-axis priority model; dashboard v3 complete; continue global triage and Contra V2 without assuming revenue-first ordering."
+    "pending_human_action": "Project UI V4 instruction replacement will be required after internal GREEN consistency audit; Contra identity/payout remain Kael-only when Reality Loop execution resumes.",
+    "resume_from": "Model C active; finish constitutional drift audit, then present one Project UI installation Human Gate; continue Contra V2 as Reality Loop work afterwards."
   },
-  "next_action": "CONTINUE_GLOBAL_TRIAGE_ACROSS_ACTIVE_REUSABLE_NEXIA_AND_EXECUTE_GREEN_REMEDIATION_BY_HARD_PRECEDENCE_PLUS_MULTI_AXIS_PRIORITY."
+  "next_action": "AUDIT_AND_REMEDIATE_ACTIVE_ECONOMY_FIRST_DRIFT_IN_SCORECARDS_OPERATIONAL_RULES_MASTER_ORDER_QUEUE_TIMEOS_AND_AUTOMATION_PROMPTS; THEN_FINALIZE_BOOT_AND_PROJECT_UI_HUMAN_GATE."
 }
