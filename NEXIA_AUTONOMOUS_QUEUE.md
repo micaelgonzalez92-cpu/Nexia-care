@@ -1,103 +1,88 @@
 # NEXIA AUTONOMOUS QUEUE
 
-Updated: 2026-10-05
+Status: ACTIVE / MODEL C ALIGNED
+Updated: 2026-10-15
+Purpose: bounded queue for useful GREEN work when no Human Gate is currently actionable. This queue does not imply background execution outside an actual authorized session/automation.
 
-## Purpose
-Cola operativa para que NEXIA continúe trabajando cuando una misión está bloqueada por un Human Gate. Solo entran tareas seguras, reversibles, sin gasto y sin contacto externo no autorizado.
+## Priority rule
+Apply hard precedence first:
+1. safety/legal/security/privacy/platform constraints;
+2. truth/evidence integrity;
+3. authority/Human Gate integrity;
+4. continuity/recovery/corruption prevention.
 
-## Priority engine
-1. Reducir el cuello de botella actual.
-2. Aumentar evidencia y capacidad de validación.
-3. Mejorar producto y regresión.
-4. Mejorar economía y falsación.
-5. Mejorar observabilidad, resiliencia y continuidad.
-6. Preparar automatización reproducible.
-7. Preparar extracción solo cuando exista evidencia suficiente.
+Then choose by multi-axis system/reality value: criticality, dependencies, user impact, strategic leverage, urgency, competitive gap, information value, human attention, sustainable economics, cost/reversibility/risk.
 
-## Active queue
+No fixed economy-first order.
 
-### Q01 — Human Gate escape
-Status: ACTIVE / BLOCKED ONLY ON EXTERNAL AUTHORIZATION
-Action: mantener candidatos públicos, verificar compatibilidad, preparar mensajes individualizados y documentar la ruta de autorización.
-Cost: 0 €
-Success: disponer de una vía autorizada y verificable para una prueba real.
-Forbidden: spam, suplantación, contacto sin autorización.
+## Current bounded queue
 
-### Q02 — EXP-001B test readiness
+### Q01 — Canonical truth / constitutional consistency
 Status: ACTIVE
-Action: mantener protocolo, criterios de éxito/fracaso, captura before/after, seguridad y esquema de observación listos para ejecución inmediata.
-Cost: 0 €
-Success: cualquier participante puede iniciar el test sin rediseño previo.
+Action: reconcile STATE/LIVE/BOOT/event chain and remove stale economy-first assumptions from active/reusable governance or automation artifacts.
+Cost: EUR0
+Success: fresh recovery yields Model C without contradictory active rules.
 
-### Q03 — NEXIA Care regression
+### Q02 — Quality retrofit / competitive benchmark
 Status: ACTIVE
-Action: conservar y ampliar checks de los flujos existentes; priorizar síntomas con señales públicas repetidas.
-Cost: 0 €
-Success: cada cambio mantiene los flujos válidos y no introduce regresiones conocidas.
+Action: apply Continuous Quality + Competitive Intelligence + lawful Reverse Engineering to material current assets.
+Current concrete target: Contra Portfolio V2.
+Cost: EUR0
+Success: active public/reusable work reaches its current readiness/quality gate without unsupported claims.
 
-### Q04 — Evidence ledger
+### Q03 — Reality Loop: EXP-AUTO-001
+Status: ACTIVE / BOUNDED
+Action: prepare/continue all GREEN work that improves the Contra/Workana reality probe; stop at identity, payout, publication, proposal/contact or other Human Gates unless specifically authorized.
+Cost: EUR0 under current microtest.
+Success: higher-quality external learning and eventually qualified response/pilot evidence under preserved experiment limits.
+
+### Q04 — Reliability / recovery / observability
 Status: ACTIVE
-Action: separar hechos verificados, estimaciones, hipótesis y recomendaciones; registrar origen y fecha.
-Cost: 0 €
-Success: ninguna señal pública se presenta como evidencia de usuario real.
+Action: audit central execution/recovery paths for stale assumptions, missing failure detection, weak rollback, unverifiable automation or excessive blast radius.
+Cost: EUR0 for internal audit/testing.
+Success: material gaps are fixed/reverified or recorded as bounded quality debt.
 
-### Q05 — Opportunity falsification
+### Q05 — Human-attention burn-down
+Status: ACTIVE PREPARATION
+Action: prepare low-friction 7-day Kael attention baseline and classify human actions A–F without inventing hours.
+Cost: EUR0
+Success: representative baseline enables future attention budget and automation choices.
+
+### Q06 — Research / strategic optionality
+Status: ACTIVE WHEN WIP ALLOWS
+Action: maintain only research veins that can change a decision, reveal external reality or build strategically reusable knowledge/capability.
+Current candidates: VETA-AI-UGC-001 and VETA-AUTO-PRODUCT-001.
+Cost: EUR0 unless separately approved.
+Success: useful evidence, falsification or justified pruning; no uncontrolled venture sprawl.
+
+### Q07 — Evidence ledger / reproducibility
 Status: ACTIVE
-Action: investigar problemas B2C con demanda observable y calcular economía unitaria antes de recomendar inversión.
-Cost: 0 €
-Success: descartar rápido oportunidades sin margen, demanda o ruta de validación.
+Action: keep facts, estimates, hypotheses, recommendations and verification boundaries explicit; distinguish isolated technical proof from repeatable external capability.
+Cost: EUR0
+Success: no unsupported stage promotion or false claims.
 
-### Q06 — Economics engine
-Status: ACTIVE
-Action: mantener plantillas de precio, coste, envío, IVA, comisiones, adquisición, devoluciones y beneficio neto.
-Cost: 0 €
-Success: toda oportunidad priorizada tiene economía explícita o una razón documentada para no poder calcularla todavía.
+## WIP control
+Default material WIP max: 3.
+Prefer when useful:
+- one critical System Loop stream;
+- one Reality Loop stream;
+- one research/strategic-option stream.
 
-### Q07 — NEXIA HQ observability
-Status: ACTIVE
-Action: mantener HQ conectado al estado persistente y mostrar misión, gate, economía, capacidades, cola y siguiente acción sin inventar métricas.
-Cost: 0 €
-Success: HQ refleja el estado persistente y diferencia datos reales de indicadores internos.
+Queue entries can exist without all being executed simultaneously. Promote only the highest-value bounded work under current evidence.
 
-### Q08 — Resilience
-Status: ACTIVE
-Action: comprobar integridad de estado, memoria, documentación y trazabilidad de commits; conservar rutas de recuperación.
-Cost: 0 €
-Success: una pérdida de chat no obliga a reconstruir el proyecto manualmente.
+## No invented schedule
+The old fixed “8-hour equivalent workstream” is retired. Kael weekly/daily availability is NOT_INSTRUMENTED. Do not convert queue capacity into fabricated human hours.
 
-### Q09 — Automation discipline
-Status: ACTIVE
-Action: usar la arquitectura existente de 3 slots; no multiplicar automatizaciones salvo que exista una capacidad claramente nueva que lo justifique.
-Cost: 0 €
-Success: menos tareas duplicadas y mayor señal por ejecución.
+When a session/automation actually runs, batch independent GREEN work until a real blocker, Human Gate, runtime/tool limit or rational stopping point.
 
-### Q10 — Reproducibility gate
-Status: ACTIVE
-Action: definir qué tendría que repetirse para que una extracción o mejora pase de aislada a reproducible.
-Cost: 0 €
-Success: no declarar escalabilidad por un único resultado.
+## Human Gates currently known
+- Project UI instruction V4 replacement + fresh-chat verification after internal constitutional drift audit.
+- Contra identity verification and payout setup when that Reality Loop step resumes.
+- Any new spend, external publication/contact/proposal, account creation or production activation not already explicitly authorized.
 
-## Human Gate
-Only currently indispensable action:
-- Authorize/connect a suitable external browser or service integration for participant recruitment.
-
-## Daily 8-hour equivalent workstream
-This is an internal capacity plan, not a request for Kael to perform eight hours manually.
-
-Block A — State & integrity: 45 min
-Block B — Product/regression: 90 min
-Block C — Public demand research: 90 min
-Block D — Opportunity/economics falsification: 90 min
-Block E — Acquisition preparation: 60 min
-Block F — HQ/observability: 60 min
-Block G — Resilience/automation: 45 min
-Block H — Post-mortem + next missions: 30 min
-
-The queue is continuous. Completed work must produce evidence, a change, a discard, or a new mission; activity alone does not count as progress.
-
-## Non-negotiable gates
-- €0 spending unless Kael explicitly approves.
-- No external contact without authorized execution path.
-- No irreversible action without the relevant Human Gate.
-- No invented evidence.
-- No claim of background execution unless an actual automation exists.
+## Non-negotiables
+- No spending without applicable Kael approval.
+- No unauthorized external effect.
+- No invented evidence/results.
+- No historical threshold rewriting.
+- No claimed background/24x7 execution without verified infrastructure.
