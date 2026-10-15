@@ -1,6 +1,6 @@
 {
   "schema_version": 30,
-  "boot_version": 86,
+  "boot_version": 87,
   "generated_at": "2026-10-15",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -34,7 +34,7 @@
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "e7cbc9e451c352d6b88770ebc88917759c03c1f2",
+  "live_state_blob_sha": "e21cd60295a6648bf50c2a04f39301dec1b655e5",
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
