@@ -1,7 +1,7 @@
 {
-  "schema_version": 26,
+  "schema_version": 27,
   "updated_at": "2026-10-15",
-  "status": "ACTIVE / MODEL C SYSTEM EXCELLENCE + EXTERNAL REALITY / CONSTITUTIONAL RETROFIT ACTIVE / EXP-AUTO-001 REALITY PROBE / CONTRA PROFILE 89% / PROJECT UI V4 PENDING",
+  "status": "ACTIVE / MODEL C SYSTEM EXCELLENCE + EXTERNAL REALITY / CORE CONSTITUTIONAL SURFACES ALIGNED / PROJECT UI V4 PENDING / EXP-AUTO-001 REALITY PROBE",
   "state_version": 72,
   "state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
   "state_status": "CANONICAL_MODEL_C",
@@ -15,13 +15,14 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V26.json",
-    "active_index_blob_sha": "1c5eb25762b22dfc9c8485ba4ba0aa15289f4d84",
-    "previous_index": "NEXIA_EVENT_INDEX_V25.json",
-    "latest_verified_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-MODEL-C-ACTIVATED-001.json",
-    "latest_verified_event_blob_sha": "ebfda045b28ec7fbbd8f4ef93e6a22797fd493f8",
-    "latest_material_business_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001"
+    "active_index": "NEXIA_EVENT_INDEX_V27.json",
+    "active_index_blob_sha": "09b32be0e7534ace0ae44cc42fab6963b0f240f6",
+    "previous_index": "NEXIA_EVENT_INDEX_V26.json",
+    "latest_verified_event_id": "EVT-2026-10-15-MODEL-C-RETROFIT-001",
+    "latest_verified_event_path": "events/EVT-2026-10-15-MODEL-C-RETROFIT-001.json",
+    "latest_verified_event_blob_sha": "4a071c183bf5929d19f267cbea65cdaacf7a6446",
+    "latest_material_business_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001",
+    "latest_material_governance_event_id": "EVT-2026-10-15-MODEL-C-RETROFIT-001"
   },
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
@@ -29,16 +30,12 @@
     "AUTHORITY_HUMAN_GATE_INTEGRITY",
     "CONTINUITY_RECOVERABILITY_CORRUPTION_PREVENTION"
   ],
-  "dual_loop": {
-    "system_loop": "OBSERVE_ARCHITECT_BUILD_VERIFY_STRESS_RECOVER_INSTRUMENT_IMPROVE_STANDARDIZE_AUTOMATE",
-    "reality_loop": "OBSERVE_REAL_PROBLEM_HYPOTHESIS_MINIMUM_CAPABILITY_REAL_RESPONSE_MEASURE_LEARN_UPDATE_SYSTEM"
-  },
   "readiness": {
-    "truth": "ACTIVE_RECONCILIATION",
+    "truth": "VERIFIED_CORE_CONTINUOUS_DRIFT_MONITORING",
     "reliability": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
     "recovery": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
     "observability": "PARTIAL",
-    "quality": "PROJECT_WIDE_RETROFIT_ACTIVE_NOT_ALL_ITEMS_VERIFIED",
+    "quality": "CORE_CONSTITUTIONAL_SURFACES_ALIGNED_PROJECT_WIDE_ITEM_BY_ITEM_RETROFIT_CONTINUES",
     "autonomy": "PROACTIVE_TO_BOUNDED_AUTONOMOUS_SUPERVISED",
     "security_authority": "ACTIVE_GATED",
     "reality_validation": "ACTIVE",
@@ -56,7 +53,6 @@
     "contra_microtest_window_days": 14,
     "contra_profile_completion_percent_visible": 89,
     "contra_instagram_social_link_shared": true,
-    "contra_portfolio_v1_status": "SUPPORTING_MEDIA_ONLY",
     "contra_portfolio_v2_status": "PREMIUM_REDESIGN_ACTIVE",
     "contra_identity_verified": false,
     "contra_payout_method_completed": false,
@@ -73,7 +69,7 @@
     "allocation_model": "EVIDENCE_WEIGHTED_SYSTEM_PLUS_REALITY_VALUE",
     "kael_weekly_available_hours": "NOT_INSTRUMENTED",
     "kael_attention_objective": "MAXIMIZE_HUMAN_LEVERAGE_NOT_SACRIFICE",
-    "attention_baseline": "PENDING_REPRESENTATIVE_7_DAY_MEASUREMENT"
+    "attention_baseline": "TIMEOS_7_DAY_PROTOCOL_PREPARED_NOT_YET_MEASURED"
   },
   "economics": {
     "constitutional_role": "CRITICAL_EXTERNAL_VALIDATION_RESOURCE_AND_SUSTAINABILITY_OUTCOME_NOT_SOLE_TOP_LEVEL_OBJECTIVE",
@@ -83,13 +79,21 @@
     "reconciled_net_profit_eur": 0,
     "o4_first_scalable_engine_milestone": ">1000_EUR_PER_MONTH_SUSTAINABLE_AFTER_TAX_NET"
   },
-  "quality_system": {
-    "continuous_quality_evolution": "ACTIVE",
-    "competitive_intelligence_reverse_engineering": "ACTIVE",
-    "art_direction_v2": "ACTIVE",
-    "project_wide_quality_retrofit": "ACTIVE",
-    "bounded_autonomy_model_c_aligned": "ACTIVE",
-    "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM"
+  "constitutional_retrofit": {
+    "status": "CORE_CONSTITUTIONAL_ACTIVE_SURFACES_SUBSTANTIALLY_ALIGNED",
+    "dashboard": "NEXIA_PROGRESS_DASHBOARD.md_V4_1",
+    "scorecard": "NEXIA_OPPORTUNITY_SCORECARD_V3_2026-10-15.md",
+    "operational_rules": "MODEL_C_ALIGNED",
+    "master_operating_order": "MODEL_C_ALIGNED",
+    "autonomous_queue": "MODEL_C_ALIGNED",
+    "timeos": "MODEL_C_ALIGNED_7_DAY_BASELINE_PROTOCOL_PREPARED",
+    "active_automations_model_c_aligned": 4,
+    "legacy_revenue_engine": "DEPRECATED_ARCHIVE",
+    "legacy_parallel_revenue_radar": "SUPERSEDED_FOR_CURRENT_RANKING",
+    "professional_quality_gate": "REVIEWED_COMPATIBLE_NO_MATERIAL_REWRITE",
+    "commands_registry": "REVIEWED_COMPATIBLE_NO_MATERIAL_REWRITE",
+    "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM",
+    "future_rule": "AUDIT_ACTIVE_REUSABLE_ITEMS_WHEN_TOUCHED_OR_SURFACED; DO_NOT_POLISH_DEAD_ARCHIVES"
   },
   "instruction_migration": {
     "installed_project_ui_baseline": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT.md",
@@ -99,7 +103,7 @@
     "candidate_exact_character_count": 7035,
     "safe_ceiling_characters": 7800,
     "candidate_status": "PREPARED_NOT_INSTALLED_IN_PROJECT_UI",
-    "requires_kael_action_and_fresh_chat_verification": true
+    "human_gate_status": "READY_FOR_KAEL_INSTALLATION_AND_FRESH_CHAT_VERIFICATION"
   },
   "execution_capabilities": {
     "snapshot": "NEXIA_EXECUTION_CAPABILITIES.json",
@@ -108,37 +112,14 @@
     "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
     "client_production_deployment": "NOT_EXECUTED"
   },
-  "constitutional_retrofit": {
-    "status": "ACTIVE",
-    "completed_verified": [
-      "MODEL_C_CONSTITUTION",
-      "STATE_V72",
-      "GROWTH_AUTONOMY_MODEL",
-      "OPERATING_DAY",
-      "DASHBOARD_V4",
-      "BOUNDED_AUTONOMY_STANDARD",
-      "MASTER_INSTRUCTION_AMENDMENT",
-      "PROJECT_INSTRUCTION_CONTRACT",
-      "INSTRUCTION_EVOLUTION_PROTOCOL",
-      "PROJECT_INSTRUCTION_V4_CANDIDATE",
-      "MODEL_C_ACTIVATION_EVENT",
-      "EVENT_INDEX_V26"
-    ],
-    "pending_internal_audit": [
-      "OPPORTUNITY_SCORECARD",
-      "OPERATIONAL_RULES",
-      "MASTER_OPERATING_ORDER",
-      "AUTONOMOUS_QUEUE",
-      "TIMEOS",
-      "ACTIVE_AUTOMATION_PROMPTS"
-    ],
-    "historical_evidence_rewrite": false
-  },
   "session_handoff": {
-    "last_completed_verified_action": "Activated Model C canonically in STATE v72 and reconciled constitutional event/index; continuing active/reusable drift audit before Project UI installation gate.",
-    "human_action_required_now": false,
-    "pending_human_action": "Project UI V4 instruction replacement will be required after internal GREEN consistency audit; Contra identity/payout remain Kael-only when Reality Loop execution resumes.",
-    "resume_from": "Model C active; finish constitutional drift audit, then present one Project UI installation Human Gate; continue Contra V2 as Reality Loop work afterwards."
+    "last_completed_verified_action": "Model C constitutional drift audit/remediation completed across critical active surfaces and active automations; V27 checkpoint created. Project UI V4 installation is now the next irreducible Human Gate.",
+    "human_action_required_now": true,
+    "pending_human_action": "Kael replaces Project UI instructions with NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md, then opens/uses a fresh project chat so Model C behavior can be verified before installation is marked complete.",
+    "surface": "ChatGPT Project settings / Project instructions",
+    "cost_exposure": "EUR0",
+    "success_check": "Fresh project chat recovers Model C mission, hard precedence, dual loops, capital/human-attention doctrine, authority boundaries and current recovery order without economy-first contradiction.",
+    "resume_from": "After V4 Project UI verification, resume Contra Portfolio V2 as quality + Reality Loop work and continue project-wide retrofit opportunistically."
   },
-  "next_action": "AUDIT_AND_REMEDIATE_ACTIVE_ECONOMY_FIRST_DRIFT_IN_SCORECARDS_OPERATIONAL_RULES_MASTER_ORDER_QUEUE_TIMEOS_AND_AUTOMATION_PROMPTS; THEN_FINALIZE_BOOT_AND_PROJECT_UI_HUMAN_GATE."
+  "next_action": "KAEL_INSTALL_PROJECT_INSTRUCTIONS_V4_AND_RUN_FRESH_PROJECT_CHAT_VERIFICATION; THEN_RESUME_CONTRA_V2_REALITY_LOOP."
 }
