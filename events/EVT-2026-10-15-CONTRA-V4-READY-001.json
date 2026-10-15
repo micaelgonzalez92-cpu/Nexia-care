@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
+  "date": "2026-10-15",
+  "type": "CONTRA_V4_INTERNAL_READY_HUMAN_GATE",
+  "state_version": 72,
+  "experiment": "EXP-AUTO-001",
+  "status": "READY_FOR_KAEL_EXECUTION_NOT_PUBLICLY_APPLIED",
+  "verified_internal_facts": {
+    "visual_system_v4": {
+      "path": "commercial/EXP-AUTO-001_CONTRA_VISUAL_SYSTEM_V4_FINAL_2026-10-15.md",
+      "commit": "19306d605f7097f265d82db0e1094c6c48ad4df7",
+      "status": "READY_FOR_CURRENT_PURPOSE_INTERNAL_APPROVED_NOT_APPLIED_TO_CONTRA"
+    },
+    "profile_growth_plan": {
+      "path": "commercial/EXP-AUTO-001_CONTRA_PROFILE_ORGANIC_GROWTH_V1_2026-10-15.md",
+      "commit": "b0859b57248d8e00d65b6df7083e5ec23fe28b85",
+      "status": "V4_VISUAL_RETROFIT_APPLIED_INTERNAL"
+    },
+    "implementation_runbook": {
+      "path": "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md",
+      "commit": "0f1ec86eb1b581a9ab861c92c29222e2091f09d1",
+      "status": "READY_FOR_KAEL_EXECUTION_NOT_EXECUTED"
+    },
+    "client_communication_pack": {
+      "path": "commercial/EXP-AUTO-001_CLIENT_COMMUNICATION_PACK_V1_2026-10-15.md",
+      "commit": "0286e5d12e86780bbb60c4ae78d9afd9e98635f0",
+      "status": "PREPARED_INTERNAL_TRUTH_SAFE_NOT_USED_EXTERNALLY"
+    },
+    "nexia_project_story": {
+      "path": "docs/NEXIA_PROJECT_STORY_2026-10-15.md",
+      "commit": "e3891ba792304dfccf98e0be23bda1cefc3d1a82",
+      "status": "PERSISTED_READBACK_VERIFIED"
+    },
+    "public_communication_pack": {
+      "path": "docs/NEXIA_PUBLIC_COMMUNICATION_PACK_2026-10-15.md",
+      "commit": "1cfc7ade0ecd40304c1f688b1474e0f2867042ab",
+      "status": "PREPARED_INTERNAL_TRUTH_SAFE_REUSABLE"
+    }
+  },
+  "contra_truth": {
+    "v4_applied_publicly": false,
+    "personal_instagram_link_last_observed_present": true,
+    "personal_instagram_must_be_removed": true,
+    "applications_submitted": 0,
+    "paid_pilots_verified": 0,
+    "settled_revenue_eur": 0,
+    "profit_eur": 0,
+    "identity_verified": false,
+    "payout_method_completed": false
+  },
+  "authority": {
+    "public_profile_edits": "RED_KAEL_CONTROLLED",
+    "service_publication": "RED_KAEL_CONTROLLED",
+    "new_professional_instagram_account": "RED_KAEL_CONTROLLED",
+    "generic_next_does_not_expand_permissions": true
+  },
+  "human_gate": {
+    "action": "KAEL_APPLY_FINAL_CONTRA_V4_PROFILE_MEDIA_AND_REMOVE_PERSONAL_INSTAGRAM",
+    "device": "DESKTOP_RECOMMENDED",
+    "cost_eur": 0,
+    "return_evidence": "SCREEN_RECORDING_OR_SCREENSHOTS_OF_RESULTING_PUBLIC_PROFILE"
+  },
+  "postcondition_required": "CONTRA_V4_IMPLEMENTED_AND_PUBLICLY_VERIFIED",
+  "financial_impact_eur": 0,
+  "external_effect_executed_by_this_event": false,
+  "truth_limit": "Internal preparation, portfolio assets and commits do not prove public implementation, buyer demand, client acceptance, payment or profit."
+}
