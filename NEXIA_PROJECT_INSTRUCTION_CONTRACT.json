@@ -1,29 +1,33 @@
 {
-  "schema_version": 1,
-  "updated_at": "2026-10-14",
-  "purpose": "Prevent Project-instruction regressions and loss of UI constraints.",
+  "schema_version": 2,
+  "updated_at": "2026-10-15",
+  "purpose": "Prevent Project-instruction regressions and preserve the verified UI-size constraint during Model C migration.",
   "project_instruction_ui": {
     "operational_limit_chars": 8000,
     "limit_status": "VERIFIED_BY_KAEL_PROJECT_UI_APPLICATION_2026-10-12_NOT_OFFICIAL_OPENAI_PUBLISHED_SPEC",
     "safe_generation_ceiling_chars": 7800,
     "active_installed_baseline": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT.md",
-    "active_baseline_size_bytes": 6951,
-    "previous_candidate_compact_v2": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V2_2026-10-14.md",
-    "previous_candidate_compact_v2_exact_char_count": 7739,
-    "candidate_compact_current": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V3_2026-10-14.md",
-    "candidate_compact_exact_char_count": 7791,
+    "active_installed_baseline_status": "VERIFIED_INSTALLED_2026-10-12_BUT_MISSION_NOW_STALE_AFTER_MODEL_C_APPROVAL",
+    "candidate_compact_current": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
+    "candidate_compact_exact_char_count": 7035,
     "candidate_status": "PREPARED_NOT_INSTALLED_IN_PROJECT_UI",
+    "candidate_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+    "previous_candidate_compact_v3": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V3_2026-10-14.md",
+    "previous_candidate_compact_v3_exact_char_count": 7791,
+    "previous_candidate_compact_v3_status": "SUPERSEDED_BEFORE_INSTALLATION_BY_MODEL_C",
     "full_specification": "NEXIA_MASTER_INSTRUCTIONS_V2_2026-10-14.md",
-    "full_specification_amendment": "NEXIA_MASTER_INSTRUCTIONS_V2_ECONOMIC_OBJECTIVE_AMENDMENT_2026-10-14.md",
-    "full_specification_role": "REPOSITORY_SPEC_BASE_PLUS_SUPERSEDING_AMENDMENT_NEVER_PASTE_DIRECTLY_TO_PROJECT_UI",
-    "full_specification_size_bytes": 15246
+    "previous_full_specification_amendment": "NEXIA_MASTER_INSTRUCTIONS_V2_ECONOMIC_OBJECTIVE_AMENDMENT_2026-10-14.md",
+    "current_superseding_amendment": "NEXIA_MASTER_INSTRUCTIONS_V2_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_AMENDMENT_2026-10-15.md",
+    "constitution": "governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md",
+    "full_specification_role": "REPOSITORY_SPEC_BASE_PLUS_LATEST_SUPERSEDING_AMENDMENT_NEVER_PASTE_DIRECTLY_TO_PROJECT_UI"
   },
   "mandatory_preflight_for_instruction_changes": [
     "read NEXIA_PROJECT_INSTRUCTION_CONTRACT.json",
-    "read NEXIA_PROJECT_INSTRUCTIONS_COMPACT.md or current installed compact baseline",
+    "read current installed compact baseline and current candidate as applicable",
     "read NEXIA_INSTRUCTION_EVOLUTION.md",
     "read latest material INSTR event",
-    "preserve mission authority evidence economics continuity and human-gate invariants",
+    "preserve safety authority evidence continuity historical-integrity and Human-Gate invariants",
+    "preserve active constitutional mission unless Kael explicitly changes it",
     "count exact characters of paste-ready text",
     "BLOCK if character count exceeds 7800 safe generation ceiling",
     "keep long specification in GitHub and only compact invariants into Project UI",
@@ -31,10 +35,18 @@
   ],
   "superseding_evidence": {
     "verified_install_event": "events/EVT-2026-10-12-INSTR-001.json",
-    "verified_install_event_result": "PASS",
+    "verified_install_event_result": "PASS_FOR_OLD_BASELINE",
     "verified_operational_limit_chars": 8000,
-    "economic_objective_clarification": "2026-10-14: >1000 EUR/month is first scale milestone, not final objective or ceiling"
+    "model_c_approval": "2026-10-15 explicit Kael approval in project chat",
+    "canonical_state": "NEXIA_STATE.json v72",
+    "model_c_effect": "Economy-first mission interpretation superseded; economics remains critical validation/resource/outcome, not sole top-level objective."
   },
-  "official_documentation_boundary": "Current OpenAI Project help does not publish the numeric Project-instruction limit; global Custom Instructions limits are a different surface and must not override this measured Nexia operational constraint.",
-  "failure_policy": "If contract or exact character count is unavailable, do not instruct Kael to replace live Project instructions. Mark INSTRUCTION_PREFLIGHT_BLOCKED."
+  "installation_gate": {
+    "requires_kael_action": true,
+    "action": "Replace Project UI instructions with NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
+    "verification": "Open a fresh project chat and verify Model C mission, authority rules, continuity order and exact behavior before marking installed.",
+    "status": "PENDING"
+  },
+  "official_documentation_boundary": "Current OpenAI Project help does not publish the numeric Project-instruction limit; the 8000-character operating limit is an empirical Nexia constraint verified by Kael and must not be represented as an official published specification.",
+  "failure_policy": "If contract, exact count or fresh-chat verification is unavailable, do not mark the new Project instructions installed."
 }
