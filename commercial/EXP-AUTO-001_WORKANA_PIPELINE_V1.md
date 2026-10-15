@@ -1,50 +1,79 @@
 # EXP-AUTO-001 — Workana Buyer Pipeline V1
 
-Date: 2026-10-14
-Purpose: maintain a ranked backup pipeline inside the same EXP-AUTO-001 experiment. This file does not authorize proposals, contact, spend, account changes, or external effects.
+Date: 2026-10-15
+Status: ACTIVE_SUPPORT / PENDING_REVALIDATION
+Purpose: maintain historical and reusable Workana opportunity intelligence inside EXP-AUTO-001 without allowing stale observations to authorize present action.
 
-## Ranking rule
-Conservative evidence-weighted ranking using current public Workana information. UNKNOWN fields are not treated as zero. Priority considers: scope fit with the bounded semiautomatic reliability sprint, buyer evidence, competition, recency, repeatability potential, likely human effort, and reversibility. Exact price/economics remain UNKNOWN unless public.
+## Retrofit truth boundary
 
-## Top 1 — Huescaventura
-Status: PRIMARY TARGET / WAITING EXPLICIT WORKANA APPROVAL
-Public state: open / evaluating proposals.
-Public evidence: EUR200–300 orientation; 1 visible proposal; 1 interested freelancer; buyer payment verified; n8n self-hosted already available; human review explicitly required before customer messaging; first phase strongly matches classification, summary, suggested reply, notification, follow-up, deduplication and documentation.
-Internal offer: EUR300, max delivery 4h, prepared proposal already reviewed.
-Why #1: highest verified fit, known price range, low visible competition, paid-buyer signal, scope compatible with existing tested capability.
-Blocker: explicit Workana profile approval remains unverified. No submission authorized.
+This file contains opportunity observations gathered on or before 2026-10-14. They are **historical market evidence**, not current project availability.
 
-## Top 2 — R.B. / Process Automation & Optimization for Business Scalability
-Public state: open / evaluating proposals.
-Public evidence: published 2026-02-06; buyer has 3 projects published, 1 paid, payment verified; 1 visible proposal and 1 interested freelancer. Scope includes process mapping, forms→CRM/sheets, email/WhatsApp, n8n/Make/Zapier, reports, documentation and maintenance.
-Fit: HIGH for process/reliability work, but advertised scope is large and broader than EXP-AUTO-001.
-Economics: UNKNOWN. Do not assume EUR300 fit.
-Risk: scope creep and likely >4h if treated as full implementation.
-Minimum viable commercial angle if later authorized: bounded paid diagnostic / first workflow only, with explicit exclusions and fresh price check. Do not promise full-company automation inside current O1 constraints.
+Canonical current truth is `NEXIA_STATE.json`, `NEXIA_LIVE.json`, `NEXIA_ACQUISITION_RADAR.md` and `NEXIA_COMMERCIAL_PIPELINE.json`.
 
-## Top 3 — E.I. / n8n Flows by Project
-Public state: open / evaluating proposals.
-Public evidence: published 2026-05-01; 1 visible proposal, 3 interested freelancers; client handles acquisition and requests freelancer delivery of specific n8n flows from closed requirements; payment per flow after client acceptance; potential long-term collaboration.
-Fit: HIGH for repeatable productized delivery and future O2/O3, with client-side acquisition reducing Nexia sales attention.
-Economics: UNKNOWN. Buyer has 0 paid projects on Workana.
-Risk: asks for portfolio demonstrating prior n8n work and example rates; no paid-production history can be claimed. Technical test evidence may be used only if truthful and accepted by the platform/buyer.
+No entry below is currently authorized for immediate submission solely because it appears in this ranking. Before any proposal action, reverify:
+1. Workana profile/moderation state;
+2. project still open and accepting proposals;
+3. exact current scope and buyer conditions;
+4. submission cost = EUR0;
+5. current fit with EXP-AUTO-001;
+6. exact Kael authority for that external action.
 
-## Reserve 4 — A.S. / Clinic Automation with n8n + Airtable
-Public state: open / evaluating proposals.
-Public evidence: published 2026-05-18; 10 proposals, 16 interested; buyer states two clients already contracted and wants recurring automation delivery; n8n/Airtable; sales and post-sale handled by buyer; Spain preferred and Valencia proximity valued but not mandatory.
-Fit: HIGH strategic recurrence potential.
-Economics: UNKNOWN; buyer has 0 paid projects on Workana.
-Risk: broader clinic automation scope, 10 competitors, domain workflows could exceed O1 delivery constraint.
+UNKNOWN fields remain UNKNOWN and stale public status must never be promoted to current truth.
 
-## Reserve 5 — L. / Slack + ClickUp + WhatsApp + n8n + Email
-Public state: open / evaluating proposals.
-Public evidence: published 2026-07-29; 2 visible proposals, 2 interested; buyer has 4 projects published and 0 paid. Scope centers on n8n orchestration, notifications, task creation, synchronization and automated responses.
-Fit: MEDIUM-HIGH technically; weaker alignment with current lead-intake offer than Top 3.
+## Historical ranking — requires fresh verification before reuse
+
+### 1. Huescaventura
+Classification: HISTORICAL_TOP_MATCH / PENDING_REVALIDATION.
+Historical observation: project was open/evaluating proposals with EUR200–300 orientation, low visible competition, verified buyer payment, self-hosted n8n and explicit human review before customer messaging.
+Internal reference offer: EUR300, bounded first phase, max delivery target 4h.
+Why it remains strategically relevant: unusually close match to the tested lead-intake reliability capability.
+Current project status: UNKNOWN / REVALIDATION REQUIRED.
+Current external-action authority: NO immediate execution. The earlier one-off authorization was conditional on verified profile approval, project still open and EUR0 submission; those preconditions must be freshly re-established.
+
+### 2. R.B. / Process Automation & Optimization for Business Scalability
+Classification: RESEARCH_ONLY / REVALIDATE_BEFORE_USE.
+Historical fit: HIGH for process/reliability work, but scope was materially broader than EXP-AUTO-001.
+Economics: UNKNOWN.
+Main risk: scope creep and delivery >4h if treated as a full implementation.
+Reusable angle: only a bounded diagnostic or first workflow after fresh scope/economics verification and exact authority.
+
+### 3. E.I. / n8n Flows by Project
+Classification: RESEARCH_ONLY / REVALIDATE_BEFORE_USE.
+Historical fit: HIGH for repeatable productized n8n delivery and possible recurrence.
+Economics: UNKNOWN.
+Main credibility boundary: no paid-production experience may be claimed; technical test evidence can be used only as technical proof.
+
+### Reserve — A.S. / Clinic Automation with n8n + Airtable
+Classification: RESEARCH_ONLY / REVALIDATE_BEFORE_USE.
+Historical fit: strategically interesting recurring delivery, but broader domain scope and materially higher visible competition.
 Economics: UNKNOWN.
 
-## Rejected / deprioritized examples
-- Clinic leads + n8n + WhatsApp Business API, published 2026-09-22: strong scope/recency but 91 visible proposals and 108 interested; buyer has 0 paid projects. High competition reduces expected value despite technical fit.
-- Social-media response automation with n8n: 0 proposals but weaker alignment with current bounded lead-intake offer and larger channel/API maintenance risk.
+### Reserve — L. / Slack + ClickUp + WhatsApp + n8n + Email
+Classification: RESEARCH_ONLY / REVALIDATE_BEFORE_USE.
+Historical fit: technically compatible, weaker alignment with the bounded lead-intake offer.
+Economics: UNKNOWN.
 
-## Operating rule
-Huescaventura remains the only active target. Backup entries are research-only inside EXP-AUTO-001 and do not create new material veins. When explicit Workana approval is verified, recheck in this order: (1) Huescaventura still open + zero-cost submission, (2) if unavailable or materially worse, evaluate Top 2 and Top 3 with fresh public state and economics. No contact or proposal submission without the required authority gate.
+## Deprioritized historical examples
+
+- Clinic leads + n8n + WhatsApp Business API: strong technical fit but very high observed competition and greater API/channel risk.
+- Social-media response automation with n8n: lower alignment with current bounded lead-intake reliability sprint and higher channel-maintenance burden.
+
+These are historical comparative signals, not current rejection/selection decisions.
+
+## Current operating rule
+
+Workana is a **secondary opportunity sensor**, not the primary active acquisition route. Contra currently carries the primary EXP-AUTO-001 market-surface work.
+
+For Workana:
+- retain useful buyer-language, scope and competition evidence;
+- do not treat any historical `open/evaluating` label as fresh;
+- revalidate before ranking or action;
+- do not send contact/proposals from `/next`, `continue` or generic execution commands;
+- do not spend money, buy credits or expand scope without exact approval;
+- preserve historical observations rather than rewriting them as present facts.
+
+## Reuse gate
+
+Before this artifact can drive a real proposal decision, its candidate must be upgraded from `HISTORICAL/RESEARCH_ONLY` to `CURRENTLY_REVERIFIED` with timestamped evidence and then passed through the current authority matrix.
+
+Until then: **PREPARE/RESEARCH ONLY — NO EXTERNAL EFFECT.**
