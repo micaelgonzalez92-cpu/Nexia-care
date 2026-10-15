@@ -4,7 +4,7 @@ Date: 2026-10-15
 Status: PREPARED_INTERNAL / NOT_PUBLISHED / ZERO_SPEND
 
 ## Evidence source
-Kael screen recording inspected 2026-10-15 plus current Contra Help Center guidance.
+Kael screen recording inspected 2026-10-15 plus current Contra Help Center guidance and Kael clarification 2026-10-15 that the currently linked Instagram is personal.
 
 ## Verified current Contra observations
 - Profile visible and marked Available.
@@ -17,7 +17,7 @@ Kael screen recording inspected 2026-10-15 plus current Contra Help Center guida
 - Location displayed: Gandia, Spain.
 - Timezone is not added.
 - Languages are not added.
-- Instagram is linked.
+- Instagram is linked, but Kael has confirmed that this is his personal Instagram and it must not remain as the commercial/project social link.
 - Identity verification is incomplete.
 - Expert badge is not earned.
 - Public counters visible in the recording: $0 earned, 0x hired, no rating, 0 followers.
@@ -47,6 +47,19 @@ Recommended skills/tools priority:
 - Process Automation
 
 Keep current `$50–$75/hr` range unchanged until market response justifies repricing.
+
+## Social-link correction — Instagram
+- The currently linked Instagram is PERSONAL and is not an approved Nexia/EXP-AUTO-001 commercial surface.
+- It should be removed from Contra during the next authorized public profile-edit session.
+- Do not reuse or repurpose Kael's personal Instagram as the project's acquisition channel.
+- The target replacement is a dedicated professional Instagram account for Nexia / the Contra-facing automation practice, with coherent branding, portfolio proof, educational reliability content and no personal/private-content dependency.
+- Until that professional account exists and is populated to a minimum credible standard, Contra may temporarily have no Instagram link rather than point buyers to the personal account.
+- Creating the new Instagram account, selecting the final handle, publishing the initial content and linking it publicly are external Human Gates.
+
+Recommended professional-account positioning:
+`Reliable automation • Lead intake • CRM data quality • n8n • QA-first workflows`
+
+The account should reuse the V3 visual system and repurpose the six prepared truth-safe content themes rather than create a parallel content strategy.
 
 ## Cover and profile photo
 - Replace current profile cover with the approved V3 outcome-first cover prepared in the current session.
@@ -82,7 +95,7 @@ A zero-dependency static portfolio site was prepared locally in the current sess
 - truth-safe technical proof strip;
 - reliability process;
 - Lead Intake Reliability Sprint section;
-- hidden external CTAs until exact Contra/LinkedIn/Instagram URLs are supplied.
+- hidden external CTAs until exact Contra/LinkedIn/professional-Instagram URLs are supplied.
 
 Status: `READY_FOR_LOCAL_REVIEW / NOT_PUBLISHED`.
 Publication to any public host remains a separate Human Gate.
@@ -93,7 +106,7 @@ Primary:
 2. Contra Community — native distribution inside the hiring ecosystem.
 
 Supporting:
-3. Existing Instagram — visual credibility and repurposed case-study content.
+3. Dedicated professional Instagram for Nexia / Contra automation practice — visual credibility and repurposed case-study/educational content. The personal Instagram is explicitly excluded from this role.
 
 Deferred:
 4. YouTube/Shorts after one repeatable demo-video format exists.
@@ -110,6 +123,8 @@ Six truth-safe posts have been drafted for:
 - buyer education checklist;
 - bounded Lead Intake Reliability Sprint offer.
 
+These themes should serve LinkedIn, Contra Community and the future professional Instagram through format adaptation, not separate strategies.
+
 Measurement must distinguish impressions/profile visits (signal), inquiries (intent), qualified buyer conversation, accepted paid pilot, settled cash, contribution and profit.
 
 ## Contra platform evidence incorporated
@@ -117,19 +132,20 @@ Current Contra guidance supports:
 - high-quality profile cover or video;
 - four strong work items;
 - clear one-liner;
-- social links, ideally LinkedIn or portfolio website;
+- relevant professional social links, ideally LinkedIn or portfolio website;
 - services with clear title, cover, tags, process/deliverables and buyer requirements;
 - case studies with high-quality visuals and specific descriptions;
 - community/feed posting as a route to profile work;
 - discovery score factors including profile quality, availability, community contribution, recommendations/ratings, earnings, response time and expert badges.
 
 ## Human Gates remaining
-Public profile edits, service publication, new account creation, social posting, portfolio-site deployment, identity verification/wallet setup, expert-program application, reviews outreach and any external client contact remain gated unless separately authorized.
+Public profile edits (including removal/replacement of the personal Instagram link), service publication, new professional Instagram account creation, social posting, portfolio-site deployment, identity verification/wallet setup, expert-program application, reviews outreach and any external client contact remain gated unless separately authorized.
 
 ## Next optimal sequence
-1. Kael applies the prepared Contra profile/media changes in one session.
+1. Kael applies the prepared Contra profile/media changes in one session, including removing the personal Instagram link.
 2. Nexia verifies the public result.
 3. Add the flagship service if Contra fields match the prepared scope.
-4. Publish the portfolio site only after exact URLs are wired and Kael authorizes public deployment.
-5. Activate LinkedIn + Contra Community content first; reuse to Instagram.
-6. Measure inbound response before opening more channels or creating products.
+4. Create the dedicated professional Instagram only under explicit Kael authorization; populate it with a minimum coherent content set before linking it back to Contra.
+5. Publish the portfolio site only after exact URLs are wired and Kael authorizes public deployment.
+6. Activate LinkedIn + Contra Community first; then reuse the same content system on the professional Instagram.
+7. Measure inbound response before opening more channels or creating products.
