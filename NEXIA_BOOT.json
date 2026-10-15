@@ -1,6 +1,6 @@
 {
-  "schema_version": 26,
-  "boot_version": 81,
+  "schema_version": 27,
+  "boot_version": 82,
   "generated_at": "2026-10-15",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -20,27 +20,28 @@
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
     "governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md",
-    "NEXIA_EVENT_INDEX_V26.json",
-    "follow V26 base through V25 to V3",
+    "NEXIA_EVENT_INDEX_V27.json",
+    "follow V27 base through V26/V25 to V3 as needed",
     "read post-STATE v72 events if any",
     "NEXIA_EXECUTION_CAPABILITIES.json when execution truth is material",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "7960117776411d3410bd999b4a48e248e2a3ce7b",
+  "live_state_blob_sha": "1ba8abfc1eeda4ce616331eec76f7d63453cccff",
   "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V26.json",
-    "active_index_blob_sha": "1c5eb25762b22dfc9c8485ba4ba0aa15289f4d84",
-    "base_index": "NEXIA_EVENT_INDEX_V25.json",
-    "latest_verified_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-MODEL-C-ACTIVATED-001.json",
-    "latest_verified_event_blob_sha": "ebfda045b28ec7fbbd8f4ef93e6a22797fd493f8",
-    "latest_material_business_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001"
+    "active_index": "NEXIA_EVENT_INDEX_V27.json",
+    "active_index_blob_sha": "09b32be0e7534ace0ae44cc42fab6963b0f240f6",
+    "base_index": "NEXIA_EVENT_INDEX_V26.json",
+    "latest_verified_event_id": "EVT-2026-10-15-MODEL-C-RETROFIT-001",
+    "latest_verified_event_path": "events/EVT-2026-10-15-MODEL-C-RETROFIT-001.json",
+    "latest_verified_event_blob_sha": "4a071c183bf5929d19f267cbea65cdaacf7a6446",
+    "latest_material_business_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001",
+    "latest_material_governance_event_id": "EVT-2026-10-15-MODEL-C-RETROFIT-001"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONSTITUTIONAL RETROFIT ACTIVE; EXP-AUTO-001 REALITY PROBE; PROJECT UI V4 PENDING",
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CORE CONSTITUTIONAL SURFACES ALIGNED; PROJECT UI V4 PENDING; EXP-AUTO-001 REALITY PROBE ACTIVE",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -49,6 +50,7 @@
   ],
   "active_reality_probe": {
     "id": "EXP-AUTO-001",
+    "role": "BOUNDED_REALITY_LOOP_PROBE_AND_POTENTIAL_REVENUE_ENGINE",
     "status": "CONTRA_MICROTEST_AUTHORIZED_PROFILE_89_V2_REDESIGN_ACTIVE_WORKANA_PENDING",
     "contra_profile_completion_percent_visible": 89,
     "contra_identity_verified": false,
@@ -59,7 +61,8 @@
   "resources": {
     "weekly_hard_cap_eur": 100,
     "default_spend_eur": 0,
-    "kael_weekly_available_hours": "NOT_INSTRUMENTED"
+    "kael_weekly_available_hours": "NOT_INSTRUMENTED",
+    "attention_baseline": "TIMEOS_7_DAY_PROTOCOL_PREPARED_NOT_YET_MEASURED"
   },
   "economics": {
     "role": "CRITICAL_VALIDATION_RESOURCE_AND_SUSTAINABILITY_OUTCOME_NOT_SOLE_PROJECT_OBJECTIVE",
@@ -68,27 +71,25 @@
     "settled_revenue_eur": 0,
     "reconciled_net_profit_eur": 0
   },
+  "constitutional_retrofit": {
+    "core_active_surfaces": "SUBSTANTIALLY_ALIGNED",
+    "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM",
+    "dashboard": "NEXIA_PROGRESS_DASHBOARD.md_V4_1",
+    "scorecard": "NEXIA_OPPORTUNITY_SCORECARD_V3_2026-10-15.md",
+    "active_automations_model_c_aligned": 4,
+    "rule": "Continue item-by-item audit when active/reusable artifacts are touched; do not polish dead archives."
+  },
   "project_instruction_migration": {
     "installed_baseline": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT.md",
     "installed_baseline_status": "MISSION_STALE_AFTER_MODEL_C",
     "candidate": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
     "candidate_blob_sha": "ce14c0c5b5dc27857b99398d96fbed0d29d3c136",
     "candidate_exact_character_count": 7035,
+    "candidate_safe_ceiling": 7800,
     "candidate_status": "PREPARED_NOT_INSTALLED_IN_PROJECT_UI",
-    "requires_kael_action_and_fresh_chat_verification": true
+    "human_gate": "KAEL_INSTALL_AND_FRESH_CHAT_VERIFY"
   },
-  "retrofit": {
-    "status": "ACTIVE_NOT_COMPLETE_ITEM_BY_ITEM",
-    "next_internal_audit": [
-      "NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md",
-      "NEXIA_OPERATIONAL_RULES.md",
-      "NEXIA_MASTER_OPERATING_ORDER.md",
-      "NEXIA_AUTONOMOUS_QUEUE.md",
-      "TIMEOS.md",
-      "ACTIVE_AUTOMATION_PROMPTS"
-    ]
-  },
-  "human_gate": "No immediate human action while the GREEN constitutional drift audit continues. After that, Kael must replace Project UI instructions with V4 and verify in a fresh project chat. Contra identity/payout remain Kael-only when resumed.",
-  "sync_status": "STATE_V72_MODEL_C_PLUS_EVENT_INDEX_V26_PLUS_LIVE_SCHEMA_26",
-  "next_action": "CONTINUE_GREEN_MODEL_C_DRIFT_AUDIT_AND_REMEDIATION; THEN_PRESENT_SINGLE_PROJECT_UI_V4_HUMAN_GATE."
+  "human_gate": "Kael must replace the Project UI instructions with NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md and then verify Model C in a fresh project chat. Cost EUR0; reversible. Contra identity/payout remain separate Kael-only gates when resumed.",
+  "sync_status": "STATE_V72_MODEL_C_PLUS_EVENT_INDEX_V27_PLUS_LIVE_SCHEMA_27",
+  "next_action": "KAEL_INSTALL_PROJECT_INSTRUCTIONS_V4_AND_FRESH_CHAT_VERIFY; THEN_RESUME_CONTRA_V2_REALITY_LOOP_AND_CONTINUE_OPPORTUNISTIC_RETROFIT."
 }
