@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-MODEL-C-RETROFIT-001",
+  "date": "2026-10-15",
+  "project": "NEXIA CORE",
+  "type": "MODEL_C_CONSTITUTIONAL_DRIFT_AUDIT_AND_REMEDIATION",
+  "classification": "ACTIVE_STANDARD_MIGRATION_CHECKPOINT",
+  "canonical_state_version": 72,
+  "canonical_state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+  "base_activation_event": "EVT-2026-10-15-MODEL-C-ACTIVATED-001",
+  "verified_internal_remediation": [
+    {"path":"NEXIA_OPPORTUNITY_SCORECARD_V3_2026-10-15.md","blob_sha":"7f241075b29ac302d16b095d25bd0b5225eaa70e","result":"ACTIVE_MODEL_C_SCORECARD"},
+    {"path":"NEXIA_OPPORTUNITY_SCORECARD_V2_2026-10-14.md","blob_sha":"81bf482433217699318b019d9618937fac162ead","result":"SUPERSEDED_FOR_FUTURE_RANKING"},
+    {"path":"NEXIA_OPERATIONAL_RULES.md","blob_sha":"01042101012eb0ffe423d6c5bb3d240a48c66642","result":"MODEL_C_ALIGNED"},
+    {"path":"NEXIA_MASTER_OPERATING_ORDER.md","blob_sha":"1afdb7c5453e51231b8dac80aac0296ba02f44d2","result":"MODEL_C_ALIGNED"},
+    {"path":"NEXIA_AUTONOMOUS_QUEUE.md","blob_sha":"693405380fa726581410c406081538b61de2f8f1","result":"MODEL_C_ALIGNED_NO_INVENTED_8H_WORKSTREAM"},
+    {"path":"TIMEOS.md","blob_sha":"faea4b427c630f5b99694091958093044be298da","result":"MODEL_C_HUMAN_LEVERAGE_7_DAY_BASELINE_PREPARED"},
+    {"path":"NEXIA_REVENUE_ENGINE.md","blob_sha":"5685db5a02223fb44836db9505334caaefb2225e","result":"DEPRECATED_ARCHIVE"},
+    {"path":"NEXIA_PARALLEL_REVENUE_RADAR.md","blob_sha":"b4a05ad08a6e4550e4817a9ea2e2d71ca8d110e5","result":"HISTORICAL_SUPERSEDED_FOR_CURRENT_RANKING"},
+    {"path":"NEXIA_PROGRESS_DASHBOARD.md","blob_sha":"227e605e9e1c034abd22a924aa26ef9bb7f0e07c","result":"DASHBOARD_V4_1_RECONCILED"}
+  ],
+  "reviewed_no_material_rewrite_required": [
+    "NEXIA_PROFESSIONAL_QUALITY_GATE.md",
+    "NEXIA_COMMANDS.md"
+  ],
+  "active_automations_migrated": [
+    {"id":"6ac04886955c819196791e606a909863","title":"NEXIA System Evolution","cadence_changed":false,"authority_expanded":false},
+    {"id":"6ac26e2c6b4c81918d304c4dadcd0a7c","title":"NEXIA Reality & Venture Radar","cadence_changed":false,"authority_expanded":false},
+    {"id":"6acb935bdb008191b728010abf6443c0","title":"EXP-AUTO-001 Reality Probe","cadence_changed":false,"authority_expanded":false},
+    {"id":"6ac0c0d610a0819192b9c4d5f5cbdc0a","title":"NEXIA Control Tower","cadence_changed":false,"authority_expanded":false}
+  ],
+  "project_instruction_gate": {
+    "candidate":"NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
+    "blob_sha":"ce14c0c5b5dc27857b99398d96fbed0d29d3c136",
+    "exact_character_count":7035,
+    "safe_ceiling":7800,
+    "status":"PREPARED_NOT_INSTALLED_IN_PROJECT_UI",
+    "requires_kael_action":true,
+    "requires_fresh_chat_verification":true
+  },
+  "economics": {
+    "cash_spend_eur":0,
+    "revenue_eur":0,
+    "settled_revenue_eur":0,
+    "reconciled_net_profit_eur":0
+  },
+  "authority_effect":"NONE_ON_EXTERNAL_ACTION_PERMISSIONS",
+  "history_integrity": {
+    "historical_results_rewritten":false,
+    "precommitted_thresholds_changed":false
+  },
+  "compliance_boundary":"CONSTITUTIONAL_CRITICAL_ACTIVE_SURFACES_SUBSTANTIALLY_ALIGNED; REPOSITORY_WIDE_ITEM_BY_ITEM_COMPLIANCE_NOT_CLAIMED",
+  "next_step":"RECONCILE_V27_LIVE_BOOT_THEN_PRESENT_SINGLE_PROJECT_UI_V4_HUMAN_GATE"
+}
