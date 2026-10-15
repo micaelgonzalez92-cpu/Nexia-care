@@ -1,47 +1,53 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "experiment_id": "EXP-AUTO-001_CONTRA_MICROTEST_V1",
-  "status": "TEMPLATE_NOT_EXECUTED",
-  "created_at": "2026-10-14",
+  "status": "REUSABLE_TEMPLATE_CURRENT_AUTHORITY_BOUNDARY",
+  "updated_at": "2026-10-15",
+  "purpose": "Record only observed Contra microtest facts. This template is not the current experiment state and never grants authority.",
+  "canonical_truth_source": [
+    "NEXIA_STATE.json",
+    "NEXIA_LIVE.json"
+  ],
   "cash_spend_ceiling_eur": 0,
-  "attention_budget": {
+  "precommitted_limits": {
     "setup_reusable_ceiling_minutes": 120,
     "acquisition_variable_ceiling_minutes": 120,
     "total_ceiling_minutes": 240,
     "max_applications": 6,
     "variable_average_ceiling_minutes_per_application": 20,
-    "buckets_interchangeable": false
+    "acquisition_window_calendar_days": 14,
+    "buckets_interchangeable": false,
+    "retroactive_threshold_change_allowed": false
   },
-  "setup": {
-    "started_at": null,
-    "operational_at": null,
-    "minutes_total": null,
-    "profile_operational": false,
-    "samples_published_count": 0,
-    "identity_verification_completed": false,
-    "wallet_setup_completed": false,
-    "cash_spend_eur": 0,
-    "notes": null
-  },
-  "acquisition_window": {
-    "starts_at": null,
-    "ends_at": null,
-    "calendar_days": 14
-  },
-  "applications": [],
-  "aggregate": {
-    "matched_jobs_found": 0,
+  "baseline_snapshot": {
+    "profile_completion_percent_last_visible": 89,
     "applications_submitted": 0,
-    "variable_minutes_total": 0,
-    "variable_minutes_per_application": null,
+    "identity_verification_completed": false,
+    "payout_setup_completed": false,
+    "published_work_pieces_verified": "UNKNOWN_NOT_RECONCILED_AFTER_PROFILE_EDIT_FLOW",
+    "setup_attention_consumed_minutes": "UNKNOWN_NOT_INSTRUMENTED",
+    "acquisition_window_started": false,
+    "qualified_responses": 0,
+    "settled_revenue_eur": 0,
+    "reconciled_net_profit_eur": 0,
+    "snapshot_note": "Derived from current canonical state at template retrofit time; re-read canonical state before using this template as a live ledger."
+  },
+  "live_measurement": {
+    "setup_started_at": null,
+    "profile_operational_at": null,
+    "prospectively_measured_setup_minutes": null,
+    "acquisition_window_starts_at": null,
+    "acquisition_window_ends_at": null,
+    "applications": [],
+    "matched_jobs_found": null,
+    "applications_submitted": 0,
+    "acquisition_variable_minutes_total": 0,
+    "acquisition_variable_minutes_per_application": null,
     "qualified_responses": 0,
     "requests_for_call_or_details": 0,
     "paid_or_accepted_pilots": 0,
     "settled_revenue_eur": 0,
     "contribution_eur": null,
-    "setup_reusable_hours": null,
-    "acquisition_variable_hours": null,
-    "total_acquisition_human_attention_hours": null,
     "human_attention_hours_per_qualified_response": null,
     "human_attention_hours_per_paid_or_accepted_pilot": null,
     "revenue_per_acquisition_human_attention_hour": null,
@@ -49,28 +55,43 @@
   },
   "application_record_schema": {
     "application_number": "1..6",
-    "job_id_or_url": "public identifier only; no secrets",
+    "job_id_or_url": "public identifier only; no secrets/private data",
     "job_title": "string",
+    "job_freshly_verified_at": "ISO8601",
     "matched_scope": "true|false",
-    "buyer_initiated": "true|false",
+    "buyer_initiated": "true|false|UNKNOWN",
+    "submission_cost_eur": "number/UNKNOWN",
     "estimated_ticket_or_budget": "number/range/UNKNOWN",
-    "submitted_at": "ISO8601",
-    "human_attention_minutes": "number",
-    "response_received": "true|false",
-    "qualified_response": "true|false",
-    "qualification_basis": "scope|price|timing|next_step|none",
-    "paid_or_accepted_pilot": "true|false",
+    "application_authority_basis": "specific bounded authorization/precondition evidence",
+    "submitted_at": "ISO8601|null",
+    "human_attention_minutes": "number|null",
+    "response_received": "true|false|UNKNOWN",
+    "qualified_response": "true|false|UNKNOWN",
+    "qualification_basis": "scope|price|timing|next_step|none|UNKNOWN",
+    "paid_or_accepted_pilot": "true|false|UNKNOWN",
     "pilot_value_eur_equivalent": "number/UNKNOWN",
     "cash_spend_eur": "number",
-    "notes": "no secrets or raw personal data"
+    "notes": "no secrets, raw identity data or confidential buyer data"
   },
+  "execution_preconditions": [
+    "PROFILE_OR_APPLICATION_SURFACE_OPERATIONAL",
+    "CURRENT_JOB_FRESHLY_VERIFIED_MATCHED",
+    "SUBMISSION_COST_EUR0",
+    "NO_FALSE_CLIENT_OR_PRODUCTION_CLAIMS",
+    "IDENTITY_PAYOUT_STEPS_KAEL_ONLY_IF_REQUIRED",
+    "EXACT_ACTION_WITHIN_CURRENT_BOUNDED_AUTHORITY"
+  ],
   "stop_reason": null,
-  "final_result": "NOT_EXECUTED",
+  "final_result": "NOT_YET_MEASURED",
   "truth_rules": [
+    "THIS_TEMPLATE_IS_NOT_CANONICAL_CURRENT_STATE",
     "UNKNOWN_NOT_INSTRUMENTED_NEVER_EQUALS_ZERO",
+    "DO_NOT_RESET_UNKNOWN_PAST_SETUP_ATTENTION_TO_ZERO",
     "NO_RETROACTIVE_THRESHOLD_CHANGES",
     "SETUP_AND_VARIABLE_ATTENTION_REPORTED_SEPARATELY",
+    "PROFILE_OR_APPLICATION_ACTIVITY_IS_NOT_BUYER_ACCEPTANCE",
     "ONLY_SETTLED_REVENUE_COUNTS_AS_SETTLED_REVENUE",
-    "NO_PAID_CLIENT_EXPERIENCE_CLAIMS_WITHOUT_EVIDENCE"
+    "NO_PAID_CLIENT_EXPERIENCE_CLAIMS_WITHOUT_EVIDENCE",
+    "GENERIC_CONTINUE_OR_NEXT_DOES_NOT_EXPAND_EXTERNAL_AUTHORITY"
   ]
 }
