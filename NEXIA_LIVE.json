@@ -1,9 +1,9 @@
 {
   "schema_version": 30,
   "updated_at": "2026-10-15",
-  "status": "ACTIVE / MODEL C / INTEGRITY VERIFIER REPAIRED / V30 CONTRA V4 INTERNAL READY / KAEL PUBLIC-EDIT GATE",
-  "state_version": 72,
-  "state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+  "status": "ACTIVE / MODEL C / INTAKE CLOSED / CONTRA V4 INTERNAL READY / KAEL PUBLIC-EDIT GATE",
+  "state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
   "constitutional_model": {
     "id": "MODEL-C-SYSTEM-EXCELLENCE-EXTERNAL-REALITY",
@@ -101,7 +101,9 @@
     "future_rule": "AUDIT_ACTIVE_REUSABLE_ITEMS_WHEN_TOUCHED_OR_SURFACED; DO_NOT_POLISH_DEAD_ARCHIVES",
     "historical_reference_errata": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
     "integrity_checker": "VERIFIED_36_LOCAL_REGRESSIONS_AND_COHERENT_CANDIDATE_SNAPSHOT_BOUNDED_SCOPE",
-    "active_repository_mission": "MODEL_C_ALIGNED"
+    "active_repository_mission": "MODEL_C_ALIGNED",
+    "external_ai_intelligence_round": "READY_FOR_CURRENT_PURPOSE_INTAKE_CLOSED",
+    "external_ai_intelligence_synthesis": "research/NEXIA_EXTERNAL_AI_INTELLIGENCE_SYNTHESIS_V1_2026-10-15.md"
   },
   "instruction_migration": {
     "installed_project_ui_baseline": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
@@ -128,8 +130,8 @@
     "client_production_deployment": "NOT_EXECUTED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Contra V4 visual system finalized; profile/growth plan retrofitted to V4; implementation runbook, client communication pack, Nexia project story and public communication pack persisted and read back; V30 readiness event indexed.",
-    "last_user_facing_handoff": "Internal Contra preparation is complete. Public Contra changes are the current gate and require Kael; no public implementation is claimed yet.",
+    "last_completed_verified_action": "External AI/tool intelligence Batches 01-07 were closed and synthesized; canonical NEXIA_STATE was reconciled to v73; Contra V4 remains internally ready and not publicly applied.",
+    "last_user_facing_handoff": "The intelligence round is READY_FOR_CURRENT_PURPOSE. Public Contra changes are the current real gate and require Kael; no public implementation is claimed yet.",
     "human_action_required_now": true,
     "pending_human_action": "KAEL_APPLY_FINAL_CONTRA_V4_PROFILE_MEDIA_COPY_AND_REMOVE_PERSONAL_INSTAGRAM",
     "surface": "Contra / desktop recommended",
@@ -139,6 +141,7 @@
       "NEXIA_LIVE.json",
       "NEXIA_EVENT_INDEX_V30.json",
       "events/EVT-2026-10-15-CONTRA-V4-READY-001.json",
+      "research/NEXIA_EXTERNAL_AI_INTELLIGENCE_SYNTHESIS_V1_2026-10-15.md",
       "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md",
       "commercial/EXP-AUTO-001_CONTRA_VISUAL_SYSTEM_V4_FINAL_2026-10-15.md"
     ],
