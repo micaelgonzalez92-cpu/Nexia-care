@@ -1,429 +1,231 @@
 {
-  "schema_version": 3,
-  "version": 71,
-  "updated_at": "2026-10-13",
+  "schema_version": 4,
+  "version": 72,
+  "updated_at": "2026-10-15",
   "project": "NEXIA CORE",
-  "mission_definition": "Construir un motor de negocio repetible que descubra, valide, monetice, aprenda y repita oportunidades rentables hasta superar 1000 EUR/mes de beneficio neto sostenible después de impuestos.",
-  "phase": "VETA / PRE-VALIDACION COMERCIAL — EXP-AUTO-001",
-  "progress_stage": "EVIDENCE_TO_VALIDATION",
-  "capital_eur": 0,
-  "inventory_eur": 0,
-  "debt_eur": 0,
-  "revenue_eur": 0,
-  "profit_eur": 0,
-  "settled_revenue_eur": 0,
-  "reconciled_net_profit_eur": 0,
-  "extraction_count": 0,
-  "reproducibility_count": 0,
+  "constitutional_model": {
+    "id": "MODEL-C-SYSTEM-EXCELLENCE-EXTERNAL-REALITY",
+    "status": "ACTIVE_APPROVED_BY_KAEL",
+    "artifact": "governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md",
+    "approved_at_local": "2026-10-15T02:03:00+02:00",
+    "supersedes": "ECONOMY_FIRST_MISSION_INTERPRETATION",
+    "historical_evidence_rewrite": false
+  },
+  "mission_definition": "Construir Nexia como un sistema de decisión y ejecución de primer nivel, continuamente mejorable, fiable, recuperable, verificable, adaptable y progresivamente autónomo, capaz de aprender de la realidad, acumular capacidades y transformar problemas reales en resultados útiles y sostenibles.",
+  "north_star": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONSTITUTIONAL RETROFIT ACTIVE; EXP-AUTO-001 REALITY PROBE ACTIVE",
+  "progress_stage": "CONSTITUTIONAL_RETROFIT_AND_REALITY_VALIDATION",
   "current_mission": {
-    "id": "MISSION-OPPORTUNITY-ENGINE-001",
-    "name": "Construir y validar un motor repetible que descubra, pruebe y monetice la oportunidad de negocio con mayor potencial de beneficio neto sostenible",
+    "id": "MISSION-SYSTEM-EXCELLENCE-REALITY-001",
+    "name": "Build Nexia into a top-tier continuously improving system that learns from external reality and repeatedly creates useful sustainable outcomes",
     "priority": "MAX",
     "status": "ACTIVE",
     "human_action_required_now": false
   },
-  "active_experiment": {
-    "id": "EXP-AUTO-001",
-    "name": "Lead Intake Reliability Sprint",
-    "stage": "VETA",
-    "status": "PROPOSAL_INTERNALLY_READY_WAITING_FOR_WORKANA_PROFILE_APPROVAL",
-    "hypothesis": "A buyer with an existing inbound lead flow will pay 300 EUR for a bounded semiautomatic reliability sprint that validates, classifies, deduplicates, summarizes and prepares replies while keeping sensitive sending under human review.",
-    "cost_eur": 0,
-    "authorized_price_eur": 300,
-    "max_delivery_hours": 4,
-    "labor_rate_assumption_eur_per_hour": 15,
-    "success_criteria": [
-      "At least 2 qualified responses/conversations from at most 20 matched buyer-initiated applications/contacts when separately authorized",
-      "At least 1 paid pilot at >=249 EUR economic equivalent",
-      "Measured delivery <=4 hours including review, correction and handover",
-      "Zero critical data-loss, duplicate-send, unauthorized-send or credential failures",
-      "Buyer accepts deliverable after at most one bounded correction"
-    ],
-    "failure_criteria": [
-      "0 paid pilots after 20 authorized matched applications/contacts",
-      "Market price breaks contribution economics",
-      "Measured delivery exceeds 4 hours",
-      "Tooling/support erases margin",
-      "Reliability fails or acquisition requires misleading experience claims"
-    ]
+  "hard_precedence": [
+    "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
+    "TRUTH_EVIDENCE_INTEGRITY",
+    "AUTHORITY_HUMAN_GATE_INTEGRITY",
+    "CONTINUITY_RECOVERABILITY_CORRUPTION_PREVENTION"
+  ],
+  "decision_dimensions": [
+    "SYSTEM_CRITICALITY",
+    "DEPENDENCY_CENTRALITY",
+    "USER_CUSTOMER_IMPACT",
+    "STRATEGIC_LEVERAGE",
+    "URGENCY_TIME_SENSITIVITY",
+    "COMPETITIVE_GAP",
+    "INFORMATION_VALUE",
+    "HUMAN_ATTENTION_EFFECT",
+    "ECONOMIC_SUSTAINABILITY",
+    "COST_REVERSIBILITY_RISK"
+  ],
+  "dual_loop": {
+    "system_loop": "OBSERVE->ARCHITECT->BUILD->VERIFY->STRESS->RECOVER->INSTRUMENT->IMPROVE->STANDARDIZE->AUTOMATE",
+    "reality_loop": "OBSERVE_REAL_PROBLEM->FORM_HYPOTHESIS->EXPOSE_MINIMUM_CAPABILITY->MEASURE_REAL_RESPONSE->LEARN->UPDATE_SYSTEM",
+    "rule": "Neither internal excellence nor external traction may permanently dominate the other."
   },
-  "parallel_radar": {
-    "id": "EXP-OPPORTUNITY-001",
-    "status": "ACTIVE_PARALLEL_FALSIFICATION",
-    "max_parallel_research_paths": 2,
-    "selected_primary": "EXP-AUTO-001",
-    "active_research_veins": [
-      "VETA-AI-UGC-001",
-      "VETA-AUTO-PRODUCT-001"
-    ],
-    "vein_statuses": {
-      "VETA-AI-UGC-001": "VIDEO_TECHNICAL_PASS_PROFESSIONAL_FAIL_CAPABILITY_NOT_PROMOTED",
-      "VETA-AUTO-PRODUCT-001": "PREPARED_INTERNAL_SKU_TEMPLATE_01_REJECTED_TEMPLATE_02_NOT_READY"
+  "readiness_model": {
+    "truth": "ACTIVE_REQUIRES_CONTINUOUS_RECONCILIATION",
+    "reliability": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
+    "recovery": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
+    "observability": "PARTIAL",
+    "quality": "PROJECT_WIDE_RETROFIT_ACTIVE_NOT_ALL_ITEMS_VERIFIED",
+    "autonomy": "PROACTIVE_TO_AUTONOMOUS_SUPERVISED_IN_BOUNDED_PATHS",
+    "security_authority": "ACTIVE_GATED",
+    "reality_validation": "ACTIVE_VIA_EXP_AUTO_001_AND_MARKET_BENCHMARKS",
+    "economic_readiness": "NOT_YET_VALIDATED_FOR_SCALING"
+  },
+  "perfection_doctrine": {
+    "aspiration": "TOP_TIER_CONTINUOUS_IMPROVEMENT",
+    "completion_gate": "READY_FOR_CURRENT_PURPOSE",
+    "rule": "Prefer correct durable work over artificial speed, but stop polishing when the next bottleneck has higher expected system value."
+  },
+  "resources": {
+    "capital": {
+      "weekly_hard_cap_eur": 100,
+      "current_spend_eur": 0,
+      "reserved_eur": 0,
+      "default_spend": "EUR0",
+      "allocation_model": "EVIDENCE_WEIGHTED_CAPITAL_ENVELOPE_WITHIN_CURRENT_HARD_CAP",
+      "spending_requires_kael_approval": true,
+      "rule": "Capital may support system capability, reliability, validation, research, security, tooling, distribution or acquisition; revenue proximity alone does not determine priority."
     },
-    "artifact": "NEXIA_PARALLEL_VEINS_2026-10-12.md",
-    "ai_ugc_falsification": "NEXIA_VETA_AI_UGC_FALSIFICATION_2026-10-12.md",
-    "auto_product_market_report": "NEXIA_VETA_AUTO_PRODUCT_MARKET_FALSIFICATION_2026-10-12.md",
-    "auto_product_validation_experiment": "NEXIA_VETA_AUTO_PRODUCT_VALIDATION_EXPERIMENT_2026-10-12.md",
-    "generic_etsy_template_path": "NO_GO_GENERIC"
-  },
-  "selected_offer": {
-    "name": "Lead Intake Reliability Sprint",
-    "bounded_scope": true,
-    "core_functions": [
-      "required-field validation",
-      "conservative duplicate handling",
-      "classification",
-      "internal summary",
-      "draft reply with human review",
-      "one internal notification",
-      "next-step/follow-up state",
-      "synthetic/sample tests",
-      "short handover and one bounded correction"
-    ],
-    "excluded": [
-      "autonomous WhatsApp sending",
-      "WhatsApp Business setup",
-      "CRM migration",
-      "multi-channel rollout",
-      "paid API/subscription purchase by Nexia",
-      "mass historic cleanup",
-      "open-ended support"
-    ]
-  },
-  "qualified_opportunity": {
-    "id": "WORKANA-HUESCAVENTURA-001",
-    "buyer": "Huescaventura",
-    "platform": "Workana",
-    "buyer_initiated": true,
-    "public_status": "OPEN / EVALUATING PROPOSALS",
-    "public_status_verified_date": "2026-10-13",
-    "public_status_stale_after_hours": 24,
-    "public_budget_eur": "200-300",
-    "visible_proposals_last_verified": 1,
-    "proposal_status": "AUTHORIZED_NOT_SUBMITTED_INTERNAL_READY",
-    "proposal_artifact": "commercial/EXP-AUTO-001_HUESCAVENTURA_PROPOSAL_READY_V1.md",
-    "proposal_professional_gate": "PASS_INTERNAL_READY",
-    "authorized_gross_price_eur": 300,
-    "workana_profile": "APPROVAL_NOT_VERIFIED_AUTHENTICATED_READ_ONLY",
-    "workana_profile_email_check": "2026-10-13_NO_NEW_WORKANA_EMAIL_AFTER_DAILY_CHECK",
-    "execution_blocker": "Workana profile approval not yet verified",
-    "own_willingness_to_pay_evidence": false,
-    "external_contact_occurred": false,
-    "workana_dashboard_moderation_status": "UNKNOWN_NO_EXPLICIT_MARKER",
-    "priority_moderation_price_usd": 9.9,
-    "priority_moderation_decision": "DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND"
-  },
-  "commercial_pipeline": {
-    "artifact": "NEXIA_COMMERCIAL_PIPELINE.json",
-    "current_stage": "PROPOSAL_INTERNALLY_READY",
-    "next_event": "WORKANA_PROFILE_APPROVAL_VERIFIED",
-    "proposal_sent": false,
-    "qualified_responses": 0,
-    "paid_pilots": 0,
-    "settled_payments": 0,
-    "repeatable_transactions": 0
-  },
-  "acquisition_state": {
-    "latest_scan": "NEXIA_EXP_AUTO_001_ACQUISITION_SCAN_2026-10-12_01.md",
-    "commercial_reserve": "NEXIA_EXP_AUTO_001_COMMERCIAL_RESERVE_2026-10-12.md",
-    "commercial_evidence_pack": "NEXIA_EXP_AUTO_001_COMMERCIAL_EVIDENCE_PACK_2026-10-12.md",
-    "channel_matrix": "NEXIA_EXP_AUTO_001_ACQUISITION_CHANNEL_MATRIX_2026-10-12.md",
-    "primary_channel": "WORKANA",
-    "best_current_opportunity": "WORKANA-HUESCAVENTURA-001",
-    "fresh_non_workana_go_candidates": 0,
-    "freshness_rule": "CURRENT requires direct accessible project evidence or evidence <=24h not contradicted by a direct check",
-    "result": "HUESCAVENTURA_REMAINS_DOMINANT_NO_ALTERNATIVE_PROMOTED"
+    "human_attention": {
+      "kael_weekly_available_hours": "NOT_INSTRUMENTED",
+      "measurement_status": "BASELINE_REQUIRED_BEFORE_FIXED_ATTENTION_BUDGET",
+      "objective": "MAXIMIZE_HUMAN_LEVERAGE_NOT_SACRIFICE",
+      "categories": [
+        "IDENTITY_LEGAL_PHYSICAL",
+        "AUTHORITY_APPROVAL",
+        "STRATEGIC_JUDGMENT",
+        "EXCEPTION_HANDLING",
+        "AUTOMATABLE_FRICTION",
+        "UNNECESSARY_FRICTION"
+      ]
+    }
   },
   "economics": {
-    "gross_offer_eur": 300,
-    "workana_initial_commission_assumption_pct": 20,
-    "estimated_after_platform_eur": 240,
-    "labor_assumption_eur": 60,
-    "extra_variable_tooling_target_eur": 0,
-    "estimated_contribution_before_overhead_tax_eur": 180,
-    "tax_eur": "UNKNOWN",
-    "after_tax_profit_eur": "UNKNOWN",
-    "classification": "ESTIMATE_NOT_REALIZED"
+    "constitutional_role": "CRITICAL_EXTERNAL_VALIDATION_RESOURCE_AND_SUSTAINABILITY_OUTCOME_NOT_SOLE_TOP_LEVEL_OBJECTIVE",
+    "capital_eur": 0,
+    "inventory_eur": 0,
+    "debt_eur": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "profit_eur": 0,
+    "reconciled_net_profit_eur": 0,
+    "milestone_o4": ">1000 EUR/month sustainable after-tax net profit reconciled and repeatable = first scalable business engine demonstrated",
+    "o4_is_project_end": false
   },
-  "capability_evidence": {
-    "generic_logic_suite": "9/9 SYNTHETIC PASS",
-    "local_http_integration": "12/12 PASS",
-    "node_red_flow_structure": "6/6 STRUCTURAL PASS",
-    "huescaventura_domain_demo": "13/13 SYNTHETIC PASS",
-    "n8n_import_skeleton": "12/12 LOCAL STRUCTURAL_AND_EMBEDDED_CODE PASS",
-    "n8n_runtime_import_execution": "VERIFIED_PASS",
-    "n8n_runtime_execution": {
-      "status": "VERIFIED_PASS",
-      "version": "2.42.6",
-      "github_actions_run": 38178359319,
-      "asserted_synthetic_cases": 6,
-      "runtime": "n8n-code-node",
-      "autonomous_send": false
+  "active_reality_probe": {
+    "id": "EXP-AUTO-001",
+    "name": "Lead Intake Reliability Sprint",
+    "role": "BOUNDED_REALITY_LOOP_PROBE_AND_POTENTIAL_REVENUE_ENGINE",
+    "stage": "VETA / PRE-VALIDACION COMERCIAL",
+    "status": "CONTRA_MICROTEST_AUTHORIZED_PROFILE_89_V2_REDESIGN_ACTIVE_WORKANA_PENDING",
+    "hypothesis": "A buyer with an existing inbound lead flow will pay for a bounded semiautomatic reliability sprint that validates, classifies, deduplicates, summarizes and prepares replies while keeping sensitive sending under human review.",
+    "authorized_price_eur": 300,
+    "max_delivery_hours": 4,
+    "cash_spend_ceiling_eur": 0,
+    "contra": {
+      "account_created_verified": true,
+      "authenticated_session_verified": true,
+      "profile_completion_percent_visible": 89,
+      "instagram_social_link_shared": true,
+      "portfolio_v1_status": "SUPPORTING_MEDIA_ONLY",
+      "portfolio_v2_status": "PREMIUM_REDESIGN_ACTIVE",
+      "identity_verified": false,
+      "payout_method_completed": false,
+      "applications_submitted": 0,
+      "microtest_max_applications": 6,
+      "microtest_window_days": 14,
+      "setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED",
+      "rate_status": "USER_GUIDED_50_75_USD_PER_HOUR_NOT_POSTCONDITION_VERIFIED",
+      "work_pieces_published_verified": "UNKNOWN_NOT_RECONCILED_AFTER_PROFILE_EDIT_FLOW"
     },
-    "n8n_persistent_dedup_idempotency": {
-      "status": "VERIFIED_PASS_NATIVE_DATA_TABLE",
-      "version": "2.42.6",
-      "github_actions_run": 38180738447,
-      "commit": "0051aa4c44f7de9f4f24de16de51759be64e1f25",
-      "execution_model": "FULL_N8N_SERVER_RUNTIME",
-      "storage": "NATIVE_N8N_DATA_TABLE",
-      "five_requests_unique_rows": 2,
-      "after_process_restart_and_sixth_duplicate_unique_rows": 2,
-      "autonomous_send": false,
-      "evidence_report": "NEXIA_EXP_AUTO_001_N8N_PERSISTENT_DEDUP_2026-10-12.md",
-      "evidence_report_blob_sha": "70ef60e51f5b8f7fda946216f39d2db42ecf2ced",
-      "static_data_persistence_attempt": "FAILED_NOT_USED",
-      "isolated_cli_datatable_attempt": "MODULE_HELPERS_UNAVAILABLE_NOT_USED_FOR_PASS"
+    "workana": {
+      "dashboard_state": "PENDING",
+      "huescaventura_route": "HISTORICALLY_PREPARED_PENDING_APPROVAL_REVALIDATION",
+      "proposal_submission_executed": false
     },
-    "auto_product_internal_sku": {
-      "vein_id": "VETA-AUTO-PRODUCT-001",
-      "product": "Lead Intake Reliability Kit for n8n",
-      "status": "PREPARED_INTERNAL_SKU",
-      "runtime": "VERIFIED_PASS_FULL_N8N_SERVER",
-      "n8n_version": "2.42.6",
-      "github_actions_run": 38235228044,
-      "github_actions_job": 114764135662,
-      "tested_commit": "ca54ddbc626520a13450aecda6c550d165a42300",
-      "workflows_import_export": "PASS_4_OF_4_INACTIVE_BY_DEFAULT",
-      "production_webhooks_registered": 4,
-      "valid_input_runtime": "PASS",
-      "invalid_input_runtime": "PASS",
-      "duplicate_identity_rows_after_two_events": 1,
-      "rows_after_process_restart_and_unique_identity": 2,
-      "storage": "NATIVE_N8N_DATA_TABLE",
-      "autonomous_send": false,
-      "external_users": 0,
-      "paid_sales": 0,
-      "revenue_eur": 0,
-      "profit_eur": 0,
-      "truth_rule": "Internal product runtime proof is not willingness-to-pay, external-user installation success, sales or profit.",
-      "previous_green_runtime_run": 38233861773,
-      "previous_restart_claim": "SUPERSEDED_INSUFFICIENT_PROCESS_TERMINATION_PROOF",
-      "restart_verified": true,
-      "previous_direct_process_pid": 3443,
-      "new_direct_process_pid": 3540,
-      "process_and_port_down_between_starts": true,
-      "persisted_rows_immediately_after_restart_before_new_write": 1,
-      "final_server_shutdown": "VERIFIED_PID_EXIT_HEALTH_AND_TCP_PORT_DOWN",
-      "audit_404_retries": 0,
-      "orphan_n8n_start_processes_in_final_cleanup": 0,
-      "runtime_evidence_report": "NEXIA_VETA_AUTO_PRODUCT_RUNTIME_REVERIFICATION_2026-10-12.md",
-      "runtime_evidence_report_blob_sha": "bd7d26a21f448fe28f705034eeeb511a8dfadc6d",
-      "limitation": "Isolated synthetic sequential CI proof; external-user installation, concurrency/crash recovery, demand and economics remain unverified."
-    },
-    "local_browser": {
-      "status": "VERIFIED_WORKANA_AUTHENTICATED_READ_ONLY_PERSISTENT_SESSION",
-      "latest_event": "EVT-2026-10-13-LOCALBROWSER-004"
-    },
-    "local_execution_bridge": {
-      "status": "VERIFIED_AUTHENTICATED_READ_ONLY_WITH_AUTOMATIC_SANITIZED_RESULT_RETURN",
-      "integrated_event": "EVT-2026-10-13-LOCALBRIDGE-008",
-      "one_shot_scheduler_event": "EVT-2026-10-13-LOCALBRIDGE-011",
-      "one_shot_automatic_start": true,
-      "manual_worker_launch_required_for_verified_one_shot_route": false,
-      "recurrence_polling_persistent_service": "NOT_AUTHORIZED_NOT_VERIFIED",
-      "authenticated_external_write_actions": "NOT_AUTHORIZED_NOT_VERIFIED"
-    },
-    "airtable_real_integration": "NOT_EXECUTED",
-    "google_sheets_real_integration": "NOT_EXECUTED",
-    "client_crm_real_integration": "NOT_EXECUTED",
+    "success_criteria_preserved": [
+      "At least 1 paid/accepted pilot at >=249 EUR economic equivalent",
+      "Measured delivery <=4 hours including review, correction and handover",
+      "Positive contribution",
+      "Zero critical data-loss, duplicate-send, unauthorized-send or credential failures"
+    ],
+    "truth_boundary": "Technical demos, portfolio work and profile completion are not demand, payment, client acceptance or profit."
+  },
+  "system_capability_evidence": {
+    "n8n_runtime_execution": "VERIFIED_PASS_2_42_6_6_SYNTHETIC_ASSERTED_CASES_AUTONOMOUS_SEND_FALSE",
+    "persistent_dedup": "VERIFIED_NATIVE_DATA_TABLE_ACROSS_WEBHOOK_EXECUTIONS_AND_PROCESS_RESTART",
+    "node_reference_engine": "9_OF_9_SYNTHETIC_REGRESSION_PASS_AFTER_PHONE_NORMALIZATION_FIX",
+    "local_bridge": "VERIFIED_BOUNDED_READ_ONLY_WITH_SANITIZED_RESULT_RETURN",
+    "local_worker_24h_formal_result": "FAIL_MAX_GAP_ONLY_10_001_GT_10_000_MIN",
+    "local_worker_24h_operational_evidence": "288_OF_288_PASS_ZERO_FUNCTIONAL_FAILURES_AUTO_SHUTDOWN_VERIFIED",
+    "persistent_24x7_worker": "NOT_AUTHORIZED_NOT_VERIFIED",
     "client_production_deployment": "NOT_EXECUTED",
-    "client_production_experience": "NONE_VERIFIED",
-    "truth_rule": "Synthetic/local/CI technical evidence is not prior client production work and does not prove demand, payment or profit."
+    "client_production_experience": "NONE_VERIFIED"
   },
-  "human_gate": {
-    "status": "NO_IMMEDIATE_ACTION_REQUIRED",
-    "workana_proposal_authorized": true,
-    "authorized_scope": "One Huescaventura proposal at 300 EUR with professionally gated bounded scope and zero submission spend after Workana approval is explicitly verified.",
-    "proposal_executed": false,
-    "paid_moderation_authorized": false,
-    "paid_plans_or_credits_authorized": false,
-    "other_external_contacts_authorized": false,
-    "next_human_action": "Wait for standard Workana moderation. If explicitly approved, recheck Huescaventura and submit the already-authorized proposal only if still open and no additional spend is required.",
-    "parallel_research_authorized": true,
-    "parallel_research_scope": "Zero-cost research/falsification of VETA-AI-UGC-001 and VETA-AUTO-PRODUCT-001 only; no accounts, publication, contact or spend.",
-    "auto_product_distribution_gate": "NOT_AUTHORIZED_PUBLICATION; Template 02 remains NOT_READY_NOT_SUBMITTED under professional quality gate."
+  "quality_system": {
+    "continuous_quality_evolution": "ACTIVE",
+    "competitive_intelligence_reverse_engineering": "ACTIVE",
+    "art_direction_v2": "ACTIVE",
+    "project_wide_quality_retrofit": "ACTIVE",
+    "mandatory_material_task_loop": "VERIFY->CRITIQUE->COMPARE->IMPROVE->REVERIFY->CAPTURE->STOP_RATIONALLY",
+    "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM"
   },
-  "channel_policy": {
-    "spain_unsolicited_commercial_email": "NO_GO",
-    "preferred_acquisition": "buyer-initiated public briefs/RFPs or inbound/opt-in",
-    "workana_submission_authorized": true,
-    "workana_submission_executed": false,
-    "workana_priority_moderation": "DECLINED_WAIT_STANDARD_MODERATION_NO_SPEND",
-    "off_platform_buyer_contact": "NOT_AUTHORIZED"
-  },
-  "external_ops": {
-    "github": "CONNECTED_READ_WRITE_VERIFIED",
-    "gmail": "CONNECTED_FOR_SEARCH_READ",
-    "workana_connector": "NOT_AVAILABLE",
-    "workana_authenticated_read_only_via_local_bridge": "VERIFIED_BOUNDED",
-    "native_workana_authenticated_submission": "NOT_VERIFIED_NOT_AVAILABLE_FROM_CHAT",
-    "n8n_creator_account": "ACTIVE_TEMPLATE_01_REJECTED_TEMPLATE_02_NOT_SUBMITTED",
-    "digital_storefront": "NOT_CREATED_NOT_AUTHORIZED",
-    "tinyfish_dynamic_browser": "AVAILABLE_BUT_METERED_NOT_AUTHORIZED",
-    "crm": "NOT_CONNECTED",
-    "payments": "NOT_CONNECTED",
-    "analytics": "NOT_CONNECTED"
-  },
-  "automation_inventory": {
-    "active": 4,
-    "paused": 5,
-    "completed": 1,
-    "architecture": "CONTROL_TOWER_DAILY + EXP_AUTO_DAILY_WORK + VENTURE_RADAR_DAILY + CAPABILITY_EVOLUTION_WEEKLY",
-    "active_automations": [
-      {
-        "name": "NEXIA Control Tower",
-        "cadence": "DAILY",
-        "status": "ACTIVE",
-        "notifications": "ENABLED",
-        "role": "canonical recovery + daily Workana/n8n Creator material email sensing + integrity/prioritization"
-      },
-      {
-        "name": "EXP-AUTO-001 Daily Work",
-        "cadence": "DAILY",
-        "status": "ACTIVE_OPTIMIZED_FROM_EVERY_6_HOURS_2026-10-13",
-        "notifications": "DISABLED",
-        "role": "one safe zero-cost daily acquisition/evidence delta scan; no Gmail duplication"
-      },
-      {
-        "name": "NEXIA Venture Radar",
-        "cadence": "DAILY_AROUND_15",
-        "status": "ACTIVE_WIP_STRICT_TWO_PARALLEL_VEINS",
-        "notifications": "ENABLED",
-        "role": "falsify VETA-AUTO-PRODUCT-001 and VETA-AI-UGC-001 only"
-      },
-      {
-        "name": "NEXIA Capability Evolution",
-        "cadence": "WEEKLY_WEDNESDAY_AROUND_10",
-        "status": "ACTIVE",
-        "notifications": "ENABLED",
-        "role": "global capability radar with license/cost/security gates"
-      }
-    ],
-    "paused_redundant_or_inactive": [
-      "Workana Response Watch",
-      "NEXIA Memory Review",
-      "NEXIA Brainstorm",
-      "Radar y revisión de oportunidades",
-      "Revisión de oportunidades"
-    ],
-    "workana_sensor_consolidation": "CONTROL_TOWER_ONLY_DAILY",
-    "polling_reduction": "EXP_AUTO_REDUCED_FROM_EVERY_6_HOURS_TO_DAILY_2026-10-13"
-  },
-  "wip_policy": {
-    "max_active_monetization_experiments": 1,
-    "max_parallel_research_paths": 2,
-    "current_active_monetization_experiments": 1,
-    "current_primary_experiment": "EXP-AUTO-001",
-    "current_parallel_research_paths": 2,
-    "active_parallel_research_veins": [
+  "portfolio_wip": {
+    "policy": "BOUNDED_ADAPTIVE_WIP",
+    "default_material_workstreams_max": 3,
+    "allocation_guideline": "Prefer one critical System Loop stream, one Reality Loop stream, and at most one additional research/strategic-option stream when evidence justifies it; reallocate dynamically when hard precedence or new evidence changes priority.",
+    "current_reality_probe": "EXP-AUTO-001",
+    "current_research_veins": [
       "VETA-AI-UGC-001",
       "VETA-AUTO-PRODUCT-001"
-    ]
+    ],
+    "rule": "No workstream is privileged merely because it is closest to revenue. Avoid uncontrolled WIP and hidden maintenance burden."
   },
-  "evidence_freshness_policy": {
-    "public_project_status_hours": 24,
-    "marketplace_fee_or_policy_days": 7,
-    "competitor_price_days": 7,
-    "legal_or_regulatory_source_days": 30,
-    "material_action_rule": "Reverify even non-expired evidence before material external action when practical.",
-    "stale_state": "STALE_RECHECK_REQUIRED"
+  "authority": {
+    "green_default": "EXECUTE_SAFE_REVERSIBLE_ZERO_COST_INTERNAL_AUTHORIZED_WORK",
+    "yellow_default": "RESEARCH_PREPARE_SIMULATE_TEST_UNTIL_REAL_DECISION_BOUNDARY",
+    "red_default": "KAEL_CONTROLLED_UNLESS_EXPLICITLY_AUTHORIZED",
+    "red_examples": [
+      "SPEND_OR_PURCHASE",
+      "NEW_EXTERNAL_ACCOUNT",
+      "PUBLICATION",
+      "EXTERNAL_CONTACT_OR_PROPOSAL",
+      "PAYMENT_KYC_BANKING",
+      "PRODUCTION_ACTIVATION",
+      "MATERIAL_IRREVERSIBLE_RISK"
+    ],
+    "generic_continue_does_not_expand_permissions": true
   },
-  "nexia_score": {
-    "primary_metric": "Sustainable net profit after tax over a defined reconciled period",
-    "evidence_users": 0,
-    "validated_economics": 0,
-    "transactions": 0,
-    "repeatable_transactions": 0,
-    "reconciled_after_tax_profit_eur": 0,
-    "rule": "Files, commits, messages, tests and automation counts are diagnostic activity, not economic progress by themselves."
-  },
-  "guardrails": {
-    "weekly_budget_eur": 100,
-    "current_spend_eur": 0,
-    "reserved_eur": 0,
-    "spending_requires_kael_approval": true,
-    "external_contact_requires_specific_authorization": true,
-    "material_publication_requires_authorization": true,
-    "irreversible_action_requires_authorization": true,
-    "zero_cost_first": true
-  },
-  "revenue_objective": {
-    "primary_target_eur_net_monthly": 1000,
-    "target_definition": ">=1000 EUR de beneficio neto mensual sostenible después de impuestos",
-    "status": "ACTIVE",
-    "rolling_30_day_profit": "NOT_INSTRUMENTED_UNTIL_TRANSACTIONS_EXIST",
-    "calendar_month_reconciled_profit": "NOT_INSTRUMENTED_UNTIL_TRANSACTIONS_EXIST"
+  "human_gate": {
+    "status": "NO_IMMEDIATE_ACTION_REQUIRED_FOR_INTERNAL_CONSTITUTIONAL_RETROFIT",
+    "contra_identity_and_payout": "KAEL_ONLY_WHEN_RESUMED",
+    "project_instruction_ui_update": "KAEL_ONLY_AFTER_V4_CANDIDATE_PREPARED_AND_VALIDATED",
+    "external_contact_publication_spend": "REMAINS_SEPARATELY_GATED"
   },
   "system": {
-    "persistent_state": "STATE_V71_ABSORBS_POST_V70_LOCAL_BROWSER_LOCAL_BRIDGE_WORKANA_AND_COMMERCIAL_DELTA",
     "canonical_source": "NEXIA_STATE.json",
+    "previous_state_version": 71,
+    "previous_state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
+    "previous_state_preserved_in_git_history": true,
     "boot_index": "NEXIA_BOOT.json",
     "live_state": "NEXIA_LIVE.json",
-    "current_handoff": "NEXIA_HANDOFF_2026-10-13_LOCALBRIDGE_WORKANA.json",
-    "memory": "NEXIA_MEMORY.md",
-    "memory_status": "DERIVED_STALE_DO_NOT_USE_AS_CANONICAL_STATE",
-    "backup": "NEXIA_MASTER_BACKUP.md",
-    "persistence_protocol": "NEXIA_PERSISTENCE_PROTOCOL.md",
-    "persistence_protocol_version": "2.0",
-    "event_storage": {
-      "mode": "COMPOSITE_BASE_PLUS_DELTA",
-      "directory": "events/",
-      "base_index": "NEXIA_EVENT_INDEX.json",
-      "active_index": "NEXIA_EVENT_INDEX_V3.json",
-      "latest_absorbed_material_event_id": "EVT-2026-10-13-COMMERCIAL-001",
-      "legacy_jsonl": "NEXIA_EVENT_LOG.jsonl",
-      "legacy_jsonl_mode": "READ_ONLY",
-      "legacy_jsonl_boundary_sha": "84db0ce6ccd1878be9ff48a770bb8b6f1e433d72"
-    },
-    "continuity_layer": "ACTIVE",
+    "event_storage_mode": "COMPOSITE_INDEX_CHAIN",
+    "current_event_index_before_v72_reconciliation": "NEXIA_EVENT_INDEX_V25.json",
+    "memory_status": "DERIVED_NOT_CANONICAL",
     "public_hq": "NOT_DEPLOYED_CURRENTLY",
-    "telemetry": "PARTIAL_AUTOMATION_STATE_ONLY",
-    "notifications": "CONTROL_TOWER_AND_RADARS_ENABLED",
-    "autonomous_execution": "PARTIAL_VIA_SCHEDULED_AUTOMATIONS_AND_SAFE_REPOSITORY_WORK",
-    "independent_24_7_worker": "NOT_DEPLOYED"
+    "background_execution_truth": "ONLY_WHEN_AN_ACTUAL_AUTHORIZED_AUTOMATION_OR_EXECUTION_ENVIRONMENT_RUNS"
   },
-  "operational_rules": {
-    "canonical_artifact": "NEXIA_OPERATIONAL_RULES.md",
-    "command_registry": "NEXIA_COMMANDS.md",
-    "command_registry_version": "2.2",
-    "persistence_protocol_version": "2.0",
-    "professional_quality_gate": "NEXIA_PROFESSIONAL_QUALITY_GATE.md",
-    "principles": [
-      "recovery before action",
-      "useful action over activity",
-      "end-to-end evidence",
-      "economics and falsification",
-      "explicit limited autonomy",
-      "one monetization WIP plus at most two research paths",
-      "external evidence freshness and stale-state handling",
-      "immutable event files instead of unsafe full-ledger rewrites",
-      "technical completion is not professional completion"
-    ]
+  "strategic_standards": {
+    "constitution": "governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md",
+    "mission_resource_review": "governance/NEXIA_MISSION_RESOURCE_MODEL_REVIEW_2026-10-15.md",
+    "bounded_autonomy": "governance/NEXIA_BOUNDED_AUTONOMY_URGENCY_STANDARD_2026-10-15.md",
+    "continuous_quality": "quality/NEXIA_CONTINUOUS_QUALITY_EVOLUTION_STANDARD_2026-10-15.md",
+    "project_wide_retrofit": "quality/NEXIA_PROJECT_WIDE_QUALITY_RETROFIT_2026-10-15.md",
+    "competitive_intelligence": "research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md",
+    "art_direction": "design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md"
   },
-  "paused_paths": {
-    "resale": "PAUSED_NOT_DELETED",
-    "nexia_care_legacy": "PAUSED",
-    "delonghi_affiliate": "PAUSED",
-    "ai_influencer": "PAUSED_NOT_DELETED"
+  "historical_integrity": {
+    "preserve_precommitted_experiment_thresholds": true,
+    "preserve_fail_results": true,
+    "preserve_old_events": true,
+    "do_not_relabel_activity_as_outcome": true,
+    "state_v71_superseded_not_deleted": true
   },
-  "last_verified_evolution": {
-    "event": "events/EVT-2026-10-13-COMMERCIAL-001.json",
-    "result": "HUESCAVENTURA_PROPOSAL_PROFESSIONALLY_GATED_INTERNAL_READY_WITHOUT_EXTERNAL_SUBMISSION"
-  },
-  "next_useful_action": "Do not redo bridge benchmarks, generic moderation probes or Huescaventura proposal drafting. Use the existing daily Gmail sensor for explicit Workana approval/rejection. On explicit approval, freshly revalidate Huescaventura and submit only the already-authorized EUR300 proposal if still open and submission remains EUR0. Otherwise continue only non-redundant zero-cost falsification of the two approved parallel veins.",
+  "next_useful_action": "Continue constitutional retrofit across Operating Day, Growth/Autonomy, dashboard, instruction candidate and recovery surfaces; execute GREEN improvements automatically. Keep EXP-AUTO-001 as bounded Reality Loop probe rather than project-wide economic master priority.",
   "persistence_checkpoint": {
-    "checkpoint_id": "CP-2026-10-13-COMMERCIAL-001",
-    "previous_checkpoint_id": "CP-2026-10-12-AUTOPROD-002",
-    "previous_state_version": 70,
-    "previous_state_blob_sha": "e8d2e158cfb086c5f5c15fb9bd6ade5b58fe2e0a",
-    "current_state_version": 71,
-    "checkpoint_status": "ATOMIC_CHECKPOINT_PREPARED_FOR_SINGLE_TREE_COMMIT",
-    "event_storage_status": "COMPOSITE_BASE_PLUS_DELTA_OPERATIONAL",
-    "latest_absorbed_material_event_id": "EVT-2026-10-13-COMMERCIAL-001",
-    "memory_sync_status": "DERIVED_STALE_NOT_CANONICAL",
+    "checkpoint_id": "CP-2026-10-15-MODEL-C-001",
+    "previous_checkpoint_id": "CP-2026-10-13-COMMERCIAL-001",
+    "previous_state_version": 71,
+    "previous_state_blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
+    "current_state_version": 72,
+    "checkpoint_status": "MODEL_C_CANONICAL_MISSION_MIGRATION",
     "financial_impact_eur": 0,
-    "authority_change": "NONE",
-    "note": "This checkpoint absorbs verified post-v70 local browser, local bridge, one-shot scheduler, Workana moderation-probe, continuity and commercially-ready proposal evidence. It also records automation optimization. No proposal submission, buyer response, sale, payment or realized profit is claimed."
+    "authority_change": "MISSION_AND_PRIORITY_MODEL_CHANGED; EXTERNAL_ACTION_GATES_UNCHANGED",
+    "note": "Explicit Kael approval activates System Excellence + External Reality. Economics remains critical but no longer governs every task. Historical experiment evidence and authority gates remain intact."
   }
 }
