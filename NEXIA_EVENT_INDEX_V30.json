@@ -1,0 +1,25 @@
+{
+  "schema_version": 30,
+  "updated_at": "2026-10-15",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 72,
+  "canonical_state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V29.json",
+    "verified_blob_sha": "2872b12001d6f47327e3ca68051d36c2de13cd2f"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
+      "path": "events/EVT-2026-10-15-CONTRA-V4-READY-001.json",
+      "verified_blob_sha": "604e580390625e92e33befa424f0023ff967cd0c"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
+  "latest_event_path": "events/EVT-2026-10-15-CONTRA-V4-READY-001.json",
+  "latest_event_blob_sha": "604e580390625e92e33befa424f0023ff967cd0c",
+  "latest_material_business_event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
+  "latest_material_governance_event_id": "EVT-2026-10-15-INTEGRITY-REPAIR-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V30 records internal Contra V4 readiness and the explicit Kael public-edit gate. It does not claim public implementation, client demand, payment or profit. Historical V29/V28 errata and all prior thresholds remain in force."
+}
