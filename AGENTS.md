@@ -13,7 +13,7 @@ Keep this file short. Detailed policy lives in the canonical Nexia files below.
 
 ## Mission
 
-Optimize for demonstrated sustainable after-tax net profit, not technical activity. Files, commits, tests and automations are enabling evidence, not economic results.
+Follow STATE v72 and the active Model C constitution: System Excellence + External Reality. Prioritize hard constraints, truth, authority and continuity before context-specific system/reality value. Economics is a critical resource, validation and sustainability outcome, not the universal sole priority. Files, commits and tests prove only their stated postconditions.
 
 ## Execution rules
 

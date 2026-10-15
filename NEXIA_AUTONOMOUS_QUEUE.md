@@ -75,8 +75,8 @@ The old fixed “8-hour equivalent workstream” is retired. Kael weekly/daily a
 
 When a session/automation actually runs, batch independent GREEN work until a real blocker, Human Gate, runtime/tool limit or rational stopping point.
 
-## Human Gates currently known
-- Project UI instruction V4 replacement + fresh-chat verification after internal constitutional drift audit.
+## Human Gates and completed instruction installation
+- Project UI instruction V4 gate CLOSED: Kael confirmed saved and current project content/context verified; see EVT-2026-10-15-MODEL-C-RECONCILIATION-001. Do not repeat installation.
 - Contra identity verification and payout setup when that Reality Loop step resumes.
 - Any new spend, external publication/contact/proposal, account creation or production activation not already explicitly authorized.
 

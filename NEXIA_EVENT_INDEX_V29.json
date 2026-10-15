@@ -1,0 +1,45 @@
+{
+  "schema_version": 29,
+  "updated_at": "2026-10-15",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 72,
+  "canonical_state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V28.json",
+    "verified_blob_sha": "a26aa02529158235ded804259247407b0abb0f59"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-15-INTEGRITY-REPAIR-001",
+      "path": "events/EVT-2026-10-15-INTEGRITY-REPAIR-001.json",
+      "verified_blob_sha": "edddd3fc2fdad1dd756d05bb78576cc7b9d7052c"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-15-INTEGRITY-REPAIR-001",
+  "latest_event_path": "events/EVT-2026-10-15-INTEGRITY-REPAIR-001.json",
+  "latest_event_blob_sha": "edddd3fc2fdad1dd756d05bb78576cc7b9d7052c",
+  "latest_material_business_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001",
+  "latest_material_governance_event_id": "EVT-2026-10-15-INTEGRITY-REPAIR-001",
+  "event_reference_errata": [
+    {
+      "source_index": "NEXIA_EVENT_INDEX.json",
+      "source_index_blob_sha": "3349fd64509fa05bb8f44a2920322b782dc92600",
+      "event_id": "EVT-2026-10-11-CI-001",
+      "path": "events/EVT-2026-10-11-CI-001.json",
+      "declared_blob_sha": "8b83eb8495f63cf9f3d8a27a28944b94ceacf106",
+      "verified_blob_sha": "8a6cc25993cd987e827e44aed8128c541e5be27b",
+      "evidence_original_commit": "4c7a016461d547299a6d9d2dd384907ceec71443"
+    },
+    {
+      "source_index": "NEXIA_EVENT_INDEX_V8.json",
+      "source_index_blob_sha": "8a43887c78334a4607fa78ba033a547548915ff9",
+      "event_id": "EVT-2026-10-14-WORKANA-PENDING-001",
+      "path": "events/EVT-2026-10-14-WORKANA-PENDING-001.json",
+      "declared_blob_sha": null,
+      "verified_blob_sha": "51087ca0714cfa84f9ec195036e7beae4338f8fa",
+      "evidence": "CURRENT_PINNED_COMMIT_READBACK_AND_LATER_V9_BASE_POINTER"
+    }
+  ],
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "Apply exact older index claim corrections only when source index hash, path and declared hash match. V28 artifact errata remain in force. All historical files are preserved; no thresholds or external permissions change."
+}

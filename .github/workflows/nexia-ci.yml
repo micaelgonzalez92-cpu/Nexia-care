@@ -10,7 +10,7 @@ on:
       - 'NEXIA_STATE.json'
       - 'NEXIA_BOOT.json'
       - 'NEXIA_LIVE.json'
-      - 'NEXIA_EVENT_INDEX.json'
+      - 'NEXIA_EVENT_INDEX*.json'
       - 'NEXIA_LOCAL_WORKER_*.json'
       - 'NEXIA_MASTER_BACKUP.md'
       - 'events/**'
@@ -24,7 +24,7 @@ on:
       - 'NEXIA_STATE.json'
       - 'NEXIA_BOOT.json'
       - 'NEXIA_LIVE.json'
-      - 'NEXIA_EVENT_INDEX.json'
+      - 'NEXIA_EVENT_INDEX*.json'
       - 'NEXIA_LOCAL_WORKER_*.json'
       - 'NEXIA_MASTER_BACKUP.md'
       - 'events/**'
@@ -45,6 +45,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js 22
         uses: actions/setup-node@v4

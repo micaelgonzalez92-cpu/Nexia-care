@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-INTEGRITY-REPAIR-001",
+  "date": "2026-10-15",
+  "type": "INTEGRITY_VERIFIER_REPAIR_AND_EXACT_INDEX_REFERENCE_RECONCILIATION",
+  "canonical_state_version": 72,
+  "canonical_state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+  "audited_commit": "e52cc90374b5c139354021ce3e07b2cc19537f11",
+  "action": "Repair schema bindings, audit indexed event bytes/IDs and scoped historical artifact blobs, validate exact errata, integrate offline history into existing CI and align touched active governance.",
+  "authority": {
+    "classification": "GREEN_SAFE_REVERSIBLE_INTERNAL_ZERO_COST",
+    "source": "NEXIA_AUTHORITY_MATRIX.md",
+    "source_blob_sha": "2d0f110eeced0024c9d15e4d21b97ac9d94c7897",
+    "command": "/next",
+    "business_permissions_expanded": false
+  },
+  "verification": {
+    "local_regression_tests": {
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0
+    },
+    "old_checker_baseline": {
+      "status": "FAIL",
+      "errors": 2,
+      "warnings": 0,
+      "reason": "Obsolete LIVE-to-BOOT fields required by old code"
+    },
+    "new_checker_on_uncorrected_snapshot": {
+      "status": "FAIL",
+      "errors": 1,
+      "warnings": 1,
+      "indexes": 27,
+      "indexed_events": 101,
+      "artifact_references": 29,
+      "historical_artifact_blobs": 4,
+      "prior_artifact_errata_applied": 6
+    },
+    "candidate_checkpoint": {
+      "status": "PASS_LOCAL",
+      "errors": 0,
+      "warnings": 0,
+      "indexes_checked": 28,
+      "events_checked": 102,
+      "artifact_references_checked": 39,
+      "historical_artifact_blob_checks": 7,
+      "corrected_historical_references": 8,
+      "publication_condition": "Reverify the final serialized checkpoint before branch update"
+    },
+    "ci_truth_boundary": "Inspect the actual workflow run separately; this immutable event does not certify remote CI result."
+  },
+  "event_reference_errata": [
+    {
+      "source_index": "NEXIA_EVENT_INDEX.json",
+      "source_index_blob_sha": "3349fd64509fa05bb8f44a2920322b782dc92600",
+      "event_id": "EVT-2026-10-11-CI-001",
+      "path": "events/EVT-2026-10-11-CI-001.json",
+      "declared_blob_sha": "8b83eb8495f63cf9f3d8a27a28944b94ceacf106",
+      "verified_blob_sha": "8a6cc25993cd987e827e44aed8128c541e5be27b",
+      "evidence_original_commit": "4c7a016461d547299a6d9d2dd384907ceec71443"
+    },
+    {
+      "source_index": "NEXIA_EVENT_INDEX_V8.json",
+      "source_index_blob_sha": "8a43887c78334a4607fa78ba033a547548915ff9",
+      "event_id": "EVT-2026-10-14-WORKANA-PENDING-001",
+      "path": "events/EVT-2026-10-14-WORKANA-PENDING-001.json",
+      "declared_blob_sha": null,
+      "verified_blob_sha": "51087ca0714cfa84f9ec195036e7beae4338f8fa",
+      "evidence": "CURRENT_PINNED_COMMIT_READBACK_AND_LATER_V9_BASE_POINTER"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "tools/nexia_integrity_check.py",
+      "blob_sha": "64eb9a85aeba809566ceaea01a6691eb6c09144d"
+    },
+    {
+      "path": "tools/test_nexia_integrity_check.py",
+      "blob_sha": "cdc27187f31320d70d37c36fb995b2009c49a6c6"
+    },
+    {
+      "path": ".github/workflows/nexia-ci.yml",
+      "blob_sha": "e4e21f32a0bf55603c40d832a4093d4bd408b023"
+    },
+    {
+      "path": "AGENTS.md",
+      "blob_sha": "9489c770c781956a1fc630bc78d8405f03126679"
+    },
+    {
+      "path": "NEXIA_AUTONOMOUS_QUEUE.md",
+      "blob_sha": "d2f3ee86d775f1b89919f45af2d1321dd08082f3"
+    },
+    {
+      "path": "quality/NEXIA_INTEGRITY_VERIFIER_REPAIR_2026-10-15.md",
+      "blob_sha": "5dfb74d80e8240fba5d18a426ee54ef7869169c4"
+    },
+    {
+      "path": "NEXIA_PROGRESS_DASHBOARD.md",
+      "blob_sha": "33d7b907ec3b0bcb2c780883dd483ab7979acc96"
+    }
+  ],
+  "previous_checkpoint": {
+    "path": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
+    "blob_sha": "511573ef740393979cdd5f80fa4a0755a4ce4c79"
+  },
+  "historical_integrity": {
+    "old_events_rewritten": false,
+    "old_indexes_rewritten": false,
+    "thresholds_relaxed": false,
+    "original_fail_results_preserved": true
+  },
+  "economics": {
+    "cash_spend_eur": 0,
+    "revenue_change_eur": 0,
+    "settled_revenue_change_eur": 0,
+    "profit_change_eur": 0
+  },
+  "truth_limit": "Offline byte/reference validation only. Historical path ownership, prose truth, all pre-STATE payloads, global repository compliance and production/commercial outcomes are not proved.",
+  "next_action": "RESUME_CONTRA_PORTFOLIO_V2_QUALITY_REALITY_LOOP_WITHIN_EXISTING_AUTHORITY"
+}

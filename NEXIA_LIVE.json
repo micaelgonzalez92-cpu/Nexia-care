@@ -1,7 +1,7 @@
 {
-  "schema_version": 28,
+  "schema_version": 29,
   "updated_at": "2026-10-15",
-  "status": "ACTIVE / MODEL C SYSTEM EXCELLENCE + EXTERNAL REALITY / DOCUMENTARY RECONCILIATION V28 / PROJECT INSTRUCTIONS V4 USER CONFIRMED AND CONTEXT VERIFIED / EXP-AUTO-001 REALITY PROBE",
+  "status": "ACTIVE / MODEL C / INTEGRITY VERIFIER REPAIRED AND LOCALLY VERIFIED / V29 EXACT INDEX ERRATA / V4 INSTALLATION GATE CLOSED / EXP-AUTO-001 REALITY PROBE",
   "state_version": 72,
   "state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
   "state_status": "CANONICAL_MODEL_C",
@@ -15,14 +15,14 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V28.json",
-    "active_index_blob_sha": "a26aa02529158235ded804259247407b0abb0f59",
-    "previous_index": "NEXIA_EVENT_INDEX_V27.json",
-    "latest_verified_event_id": "EVT-2026-10-15-MODEL-C-RECONCILIATION-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
-    "latest_verified_event_blob_sha": "511573ef740393979cdd5f80fa4a0755a4ce4c79",
+    "active_index": "NEXIA_EVENT_INDEX_V29.json",
+    "active_index_blob_sha": "2872b12001d6f47327e3ca68051d36c2de13cd2f",
+    "previous_index": "NEXIA_EVENT_INDEX_V28.json",
+    "latest_verified_event_id": "EVT-2026-10-15-INTEGRITY-REPAIR-001",
+    "latest_verified_event_path": "events/EVT-2026-10-15-INTEGRITY-REPAIR-001.json",
+    "latest_verified_event_blob_sha": "edddd3fc2fdad1dd756d05bb78576cc7b9d7052c",
     "latest_material_business_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001",
-    "latest_material_governance_event_id": "EVT-2026-10-15-MODEL-C-RECONCILIATION-001"
+    "latest_material_governance_event_id": "EVT-2026-10-15-INTEGRITY-REPAIR-001"
   },
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
@@ -31,7 +31,7 @@
     "CONTINUITY_RECOVERABILITY_CORRUPTION_PREVENTION"
   ],
   "readiness": {
-    "truth": "CORE_DOCUMENTARY_RECONCILIATION_VERIFIED_SOURCE_REFERENCES_CHECKER_REPAIR_PENDING",
+    "truth": "VERIFIED_BOUND_CURRENT_BINDINGS_INDEXED_EVENTS_AND_SCOPED_ARTIFACT_BLOBS_NOT_GLOBAL_COMPLIANCE",
     "reliability": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
     "recovery": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
     "observability": "PARTIAL",
@@ -81,7 +81,7 @@
   },
   "constitutional_retrofit": {
     "status": "CORE_CONSTITUTIONAL_ACTIVE_SURFACES_SUBSTANTIALLY_ALIGNED",
-    "dashboard": "NEXIA_PROGRESS_DASHBOARD.md_V4_2",
+    "dashboard": "NEXIA_PROGRESS_DASHBOARD.md_V4_3",
     "scorecard": "NEXIA_OPPORTUNITY_SCORECARD_V3_2026-10-15.md",
     "operational_rules": "MODEL_C_ALIGNED",
     "master_operating_order": "MODEL_C_ALIGNED",
@@ -95,7 +95,8 @@
     "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM",
     "future_rule": "AUDIT_ACTIVE_REUSABLE_ITEMS_WHEN_TOUCHED_OR_SURFACED; DO_NOT_POLISH_DEAD_ARCHIVES",
     "historical_reference_errata": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
-    "integrity_checker": "CONTROL_GAP_DOCUMENTED_NOT_REPAIRED"
+    "integrity_checker": "VERIFIED_36_LOCAL_REGRESSIONS_AND_COHERENT_CANDIDATE_SNAPSHOT_BOUNDED_SCOPE",
+    "active_repository_mission": "MODEL_C_ALIGNED"
   },
   "instruction_migration": {
     "installed_project_ui_baseline": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
@@ -122,21 +123,50 @@
     "client_production_deployment": "NOT_EXECUTED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Source audit verified six incorrect references were already present at V27 event creation; Kael confirms V4 instructions saved and current project content/context matches V4. Documentary reconciliation is recorded by the V28 checkpoint; publication must be checked by independent commit readback.",
+    "last_completed_verified_action": "Integrity verifier repaired; 36 local regressions pass. Coherent candidate checkpoint PASS: zero errors/warnings, 28 indexes, 102 indexed events, 39 scoped artifact references and 8 exact corrections. Remote CI requires independent observed evidence.",
+    "last_user_facing_handoff": "Verifier repair and bounded checkpoint verification complete; no new Kael action is required. Resume Contra Portfolio V2 within existing authority.",
     "human_action_required_now": false,
-    "pending_human_action": "NONE_FOR_THIS_DOCUMENTARY_RECONCILIATION; CONTRA_IDENTITY_AND_PAYOUT_REMAIN_KAEL_ONLY_WHEN_RESUMED",
+    "pending_human_action": null,
     "surface": "GitHub / Nexia-care",
-    "cost_exposure": "EUR0",
-    "success_check": "Read published commit and branch; verify V28->V27, LIVE/BOOT links, six corrected snapshot references, installation evidence and preservation of STATE v72 plus historical event.",
-    "resume_from": "Integrity checker repair/reverification is recommended next; then resume Contra Portfolio V2 under existing bounded authority. Do not repeat V4 installation."
+    "resume_required_reads": [
+      "NEXIA_BOOT.json",
+      "NEXIA_STATE.json",
+      "NEXIA_LIVE.json",
+      "NEXIA_EVENT_INDEX_V29.json",
+      "events/EVT-2026-10-15-INTEGRITY-REPAIR-001.json",
+      "quality/NEXIA_INTEGRITY_VERIFIER_REPAIR_2026-10-15.md"
+    ],
+    "resume_from": "Resume Contra Portfolio V2 quality/reality work under preserved microtest limits. Identity/payout remain Kael-only when reached.",
+    "truth_limit": "No claim of global compliance, legacy payload truth, production deployment, persistent 24x7 operation or commercial results.",
+    "success_check": "Read back published files and inspect the actual CI run; do not treat commit creation as runtime or economic proof.",
+    "return_to_nexia": "No human action for this internal batch; use the current resume anchor."
   },
-  "next_action": "REPAIR_AND_REVERIFY_CURRENT_SCHEMA_EVENT_REFERENCE_INTEGRITY_CHECKER_WITHIN_AUTHORIZED_SCOPE; THEN_RESUME_CONTRA_V2_REALITY_LOOP",
+  "next_action": "RESUME_CONTRA_PORTFOLIO_V2_QUALITY_REALITY_LOOP_WITHIN_EXISTING_AUTHORITY",
   "documentary_reconciliation": {
     "event": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
     "audited_commit": "78553e56f9849cb524099f33a130d4e940ed7f92",
     "incorrect_historical_references_corrected": 6,
     "original_event_preserved": true,
-    "remaining_control_gap": "INTEGRITY_CHECKER_SCHEMA_AND_EVENT_REFERENCE_VALIDATION_NOT_REPAIRED",
-    "other_derived_gate_wording": "QUEUE_PROJECT_UI_GATE_SUPERSEDED_BY_THIS_EVENT_NOT_EDITED_IN_THIS_BATCH"
+    "remaining_control_gap": "REPAIRED_BY_EVT-2026-10-15-INTEGRITY-REPAIR-001_WITH_BOUNDED_VERIFICATION_SCOPE",
+    "other_derived_gate_wording": "QUEUE_STALE_V4_INSTALLATION_TASK_REMOVED"
+  },
+  "integrity_verifier": {
+    "event": "events/EVT-2026-10-15-INTEGRITY-REPAIR-001.json",
+    "report": "quality/NEXIA_INTEGRITY_VERIFIER_REPAIR_2026-10-15.md",
+    "local_regressions_passed": 36,
+    "exact_index_errata": 2,
+    "prior_artifact_errata_preserved": 6,
+    "payload_scope": "PATH_SHA_PAIRS_IN_INDEXED_EVENTS_AT_OR_AFTER_STATE_V72",
+    "offline_history": "FULL_GIT_HISTORY_OR_VERIFIED_BLOB_CACHE",
+    "remote_ci": "INSPECT_ACTUAL_RUN_DO_NOT_INFER_FROM_COMMIT",
+    "candidate_snapshot": {
+      "status": "PASS_LOCAL",
+      "errors": 0,
+      "warnings": 0,
+      "indexes_checked": 28,
+      "events_checked": 102,
+      "artifact_references_checked": 39,
+      "corrected_historical_references": 8
+    }
   }
 }
