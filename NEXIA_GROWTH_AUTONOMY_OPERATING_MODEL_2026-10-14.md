@@ -1,159 +1,161 @@
-# NEXIA — GROWTH & AUTONOMY OPERATING MODEL
+# NEXIA — GROWTH, AUTONOMY & SYSTEM EXCELLENCE OPERATING MODEL
 
-Status: ACTIVE ROUTING OVERLAY / ZERO-COST / DOES NOT REPLACE STATE OR PROJECT INSTRUCTIONS
-Date: 2026-10-14
-Canonical authority remains NEXIA_STATE.json + current Project rules + LIVE/indexed deltas.
+Status: ACTIVE ROUTING OVERLAY / MODEL C ALIGNED
+Updated: 2026-10-15
+Canonical authority: `NEXIA_STATE.json` + current Project rules + LIVE/indexed deltas.
+Constitution: `governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md`.
 
 ## Purpose
-Integrate Kael's business-growth prompts into Nexia without duplicating the live instruction layer. Use existing modules first; this file routes when to apply them and adds model-specific gates where useful.
+Route growth, capability, research, automation and business work under Model C: **System Excellence + External Reality**.
+
+Nexia no longer treats sustainable profit as the single top-level optimizer. Profit remains a critical proof of external value and sustainability, but the system also optimizes reliability, truth, recovery, observability, quality, adaptability, autonomy, human leverage, strategic optionality and customer usefulness.
 
 ## Core interpretation
-Nexia does not optimize for the marketing label “passive income”. It optimizes for sustainable after-tax net profit, repeatability, resilience and decreasing verified human attention per unit of economic value.
+Preferred target: **ROBUST VALUE ENGINE** — a validated capability or business engine that solves a real problem, works reliably, is observable/recoverable, has bounded risk, requires decreasing unnecessary human attention and, when commercialized, has sustainable economics.
 
-Preferred target class: **ATTENTION-LIGHT REVENUE ENGINE** — a validated business engine whose ongoing human attention, maintenance, error burden and platform dependency are low relative to realized contribution/profit.
+The governing question is not “what makes money fastest?” but:
+**“What improves Nexia most while remaining connected to external reality and avoiding fragile or directionally wrong optimization?”**
 
-## Prompt-to-system routing
+## Two operating loops
+### SYSTEM LOOP
+`OBSERVE -> ARCHITECT -> BUILD -> VERIFY -> STRESS -> RECOVER -> INSTRUMENT -> IMPROVE -> STANDARDIZE -> AUTOMATE`
 
-1. Passive / semipassive income OS → Revenue Engine + Venture Radar + Opportunity Scorecard V2.
-2. 30-opportunity finder → longlist funnel in Opportunity Scorecard V2; no 30-way execution.
-3. Digital asset builder → VETA-AUTO-PRODUCT-001 or future asset vein only after Asset Gate.
-4. Content/audience monetization → Content Distribution Gate; followers are never counted as economic success.
-5. Business automation → Capability Evolution + Local Worker/bridge + Automation Value Gate.
-6. Diversified income portfolio → WIP rule + concentration measurement after real revenue exists.
-7. BI dashboard → NEXIA_PROGRESS_DASHBOARD.md v2 and model-conditional KPIs.
-8. 36-month wealth roadmap → rolling horizons: 0–90 execution, 3–12 goals, 12–36 Bear/Base/Bull.
-9. Daily organization → NEXIA_OPERATING_DAY.md / TIMEOS; enrich with live Calendar/task data only when connected.
-10. Strategic thinking → existing reasoning/decision rules.
-11. Professional research → current verifiable sources + counter-evidence + freshness.
-12. Learning → simple explanation + principles + Nexia example + errors + memorable rule.
-13. Decision support → alternatives compared by economics, risk, reversibility and long-term effects.
-14. Complex problem solving → symptom → evidence → immediate cause → root cause → minimal test → solution.
-15. Text improvement → standard editing capability; no extra persistent subsystem required.
-16. Competitive intelligence / benchmark → `research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md` before material public-facing assets or offers.
-17. Public-facing visual/creative work → `design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md` and benchmark current top references before publication.
-18. Reverse engineering request → lawful observe/decompose/parity/differentiate loop; never bypass security/access controls or copy protected proprietary implementation without right.
+### REALITY LOOP
+`OBSERVE REAL PROBLEM -> HYPOTHESIS -> MINIMUM CAPABILITY -> REAL RESPONSE -> MEASURE -> LEARN -> UPDATE SYSTEM`
+
+Keep both active. Commercial tests are one type of Reality Loop, not the only one.
+
+## Decision routing
+After hard precedence (safety/legal/security/privacy -> truth/evidence -> authority -> continuity/recovery), rank work across:
+- system criticality;
+- dependency centrality;
+- user/customer impact;
+- strategic leverage/reuse;
+- urgency;
+- competitive gap;
+- information value;
+- human attention;
+- economic sustainability;
+- cost/reversibility/risk.
+
+No dimension automatically dominates every task.
 
 ## Digital Asset Gate
-Before substantial creation of a course, e-book, template, prompt pack, workflow, software, membership, printable, stock asset or license, require:
-1. problem and target buyer;
-2. evidence of demand / payment intent;
-3. acquisition/distribution channel;
-4. price hypothesis and full economics;
-5. creation + update + support burden;
-6. IP/license/platform constraints;
-7. delivery mechanism;
-8. smallest external validation test;
-9. success/failure/kill criterion;
-10. evidence that building is cheaper/more informative than testing demand another way.
+Before substantial creation of a product, template, workflow, software, course, membership or other asset require:
+1. intended user/problem;
+2. evidence the problem is real;
+3. strategic/system value even if monetization is not immediate;
+4. smallest external validation route;
+5. creation/update/support burden;
+6. reliability/recovery requirements;
+7. IP/license/platform constraints;
+8. distribution/delivery path where relevant;
+9. success/failure/learning criteria;
+10. stop rule when further build has lower value than another bottleneck.
 
-Sequence: validate problem/buyer/channel → minimum useful asset → external usability/payment test → measure support → standardize → automate delivery → scale.
+Do not require payment intent before every internal/reusable capability investment; do require an external-reality argument before major build-out.
 
-VETA-AUTO-PRODUCT-001 is the current concrete digital-asset path. Its internal runtime proof is feasibility evidence, not demand or sales evidence.
-
-## Content Distribution Gate
-Content is initially a distribution system, not automatically a business.
-
-For any material content engine define:
-- commercial objective;
+## Content / distribution gate
+Content may serve distribution, learning, trust, research or direct monetization.
+Define:
 - target audience/problem;
-- source-content format and repurposing workflow;
-- CTA / lead capture / offer bridge;
-- channel-specific policy/eligibility dependencies;
-- production and review attention;
-- reach → lead → buyer → settled revenue → contribution metrics;
-- platform concentration risk;
-- kill criterion.
+- intended outcome;
+- CTA or feedback path where relevant;
+- production/review burden;
+- quality benchmark;
+- platform dependencies;
+- measurable signal of usefulness;
+- stop/iterate rule.
 
-Repurpose one strong source asset into platform-native derivatives when that reduces attention without degrading quality. Do not publish everywhere merely to maximize activity; channel expansion must have a measurable acquisition, revenue or learning rationale.
-
-Creator-platform payouts, sponsorships and affiliate programs are optional revenue layers, not assumptions. Platform eligibility, KYC, branded-content disclosures and changing program rules must be rechecked before execution.
-
-VETA-AI-UGC-001 remains a research vein, not a promoted commercial capability, until professional quality and economic gates are passed.
+Followers alone are not proof of value or business success.
 
 ## Automation Value Gate
-Automation is justified only if expected verified value exceeds build + maintenance + failure/risk cost.
+Automation is justified when expected verified system value exceeds build + maintenance + failure/risk cost.
 
-Before automating:
-1. map the manual/assisted process;
-2. instrument baseline time/errors/cost;
-3. standardize inputs/outputs and exceptions;
-4. test deterministic core;
-5. add automation with idempotency/retry/observability;
-6. retain human approval for sensitive external effects until the exact path is authorized and verified;
-7. measure post-automation time, exceptions, failures and maintenance;
-8. roll back/pause if value is negative.
+Value may include:
+- human time saved;
+- reliability/error reduction;
+- continuity/recovery;
+- evidence quality;
+- speed/cycle-time reduction;
+- lower operating cost;
+- increased customer value;
+- reusable strategic capability;
+- economic gain.
 
-Track when possible:
-- Human Attention Hours/week;
-- Human Actions/transaction;
-- automated verified executions;
-- exception/escalation rate;
-- minutes saved net of maintenance;
-- error/failure cost avoided;
-- Revenue/Contribution per Human Attention Hour.
+Sequence:
+`MAP MANUAL/ASSISTED -> INSTRUMENT -> STANDARDIZE -> TEST -> AUTOMATE -> OBSERVE -> RECOVER -> MEASURE NET VALUE`.
 
-Do not automate a broken, unmeasured or economically irrelevant process.
+Do not automate a broken or unobservable process.
 
 ## Competitive Intelligence & Reverse Engineering Gate
-Before a material public-facing product, service, offer, portfolio asset, landing page or customer experience is treated as ready:
-1. benchmark at least 3 direct references when available plus 1 top-tier adjacent reference when visual/UX quality matters;
-2. decompose buyer promise, proof, packaging/pricing, friction, trust, visual/UX standard, distribution and weaknesses;
-3. classify Nexia position as `PARITY / SUPERIOR / NOT RELEVANT` on customer-relevant dimensions;
-4. define the smallest improvement hypothesis that can be tested;
-5. preserve IP/license/ToS/privacy/security boundaries;
-6. do not ship solely because Nexia's internal asset is complete if market evidence shows a clearly inferior standard.
+Before material public/reusable work is treated as ready:
+1. benchmark strong direct references when available;
+2. include top-tier adjacent references where design/UX/trust matters;
+3. decompose principles, workflow, proof, packaging, friction, reliability and weaknesses;
+4. classify Nexia as BELOW / PARITY / SUPERIOR / NOT RELEVANT per dimension;
+5. implement the highest-value lawful improvement;
+6. reverify.
 
-Use `research/NEXIA_COMPETITIVE_INTELLIGENCE_REVERSE_ENGINEERING_STANDARD_2026-10-15.md` as the active standard.
-
-Reverse engineering is a means to improve economic outcomes, reliability, speed and defensibility. It does not authorize bypassing authentication, CAPTCHA, DRM, paywalls, access controls, extracting secrets/private data, violating licenses, or copying proprietary code/creative expression without right.
+Never bypass access controls, security, DRM, CAPTCHA, paywalls, licenses or copy protected proprietary code/creative expression without right.
 
 ## Creative Quality Gate
-Public-facing visuals must benchmark current strong competitors/references and apply `design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md`.
-
+Public-facing visuals follow `design/NEXIA_ART_DIRECTION_STANDARD_V2_2026-10-15.md`.
 Preferred hierarchy:
-`BUYER OUTCOME -> VISUAL IDEA -> EVIDENCE -> TECHNOLOGY`.
+`OUTCOME -> VISUAL IDEA -> EXPLANATION/EVIDENCE -> TECHNOLOGY`.
 
-A cover/hero is not approved merely because it is technically accurate. It must also achieve competitive commercial credibility, thumbnail/mobile legibility and proof integrity. Premium case-study quality is the target; generic AI/SaaS infographic output is not the default.
+Flagship work targets TOP-TIER professional quality. “Technically correct” is not sufficient.
 
-## Portfolio doctrine
-Maintain one primary monetization engine and at most two material research veins.
+## Portfolio / WIP doctrine
+Use **bounded adaptive WIP**, not an economy-first hierarchy.
 
-Diversify only after a motor has evidence of demand/economics or when portfolio-risk reduction has higher expected value than deepening the current motor.
+Default maximum: 3 material workstreams.
+Preferred allocation when applicable:
+- one critical System Loop stream;
+- one Reality Loop stream;
+- at most one research/strategic-option stream.
 
-Once revenue exists, monitor concentration by customer, product, platform, channel, supplier and geography. Before revenue exists, describe dependencies qualitatively; do not fabricate concentration percentages.
+This is a default, not a permanent quota. Hard-precedence defects or strong evidence may reorder allocation. Do not create uncontrolled parallel ventures or hidden maintenance burden.
+
+EXP-AUTO-001 remains the current Reality Loop probe and potential revenue engine. It does not monopolize Nexia priorities.
 
 ## Recurring revenue doctrine
-Recurring revenue is valuable for predictability only when continuing customer value is real. Do not force subscription pricing onto a one-time problem.
+Recurring revenue is useful only when continuing customer value is real. Use MRR/ARR/churn/retention only when corresponding paying cohorts exist. Until then use NOT APPLICABLE / NOT COMPUTABLE.
 
-Activate MRR/ARR, churn, retention, NRR and LTV/CAC only when the relevant paying cohorts/data exist. Until then use NOT APPLICABLE or NOT COMPUTABLE rather than zeros or forecasts presented as facts.
+## Capital doctrine
+Current hard cap remains EUR100/week until explicitly revised by Kael; default remains EUR0.
 
-## Rolling 36-month planning
-- 0–90 days: concrete experiments, gates, revenue evidence, instrumentation and bottlenecks.
-- 3–12 months: validated engines, repeatability, productization, channel ownership, automation, capital recycling.
-- 12–36 months: Bear/Base/Bull scenarios, portfolio resilience, platform independence, defensibility and capital allocation.
+Allocate capital by expected **system + external reality value**, including capability, reliability, research, validation, security, tooling, distribution and acquisition. Revenue proximity is one factor, not the sovereign one.
 
-Quarterly evidence may invalidate the roadmap. Change the roadmap, not the evidence.
+Every spend requires objective, evidence, alternatives, cost, downside, reversibility, success/failure and information/system value.
 
-## Tool / connector activation policy
-Connect/install only when a current workflow justifies the maintenance and dependency.
+## Human attention doctrine
+Kael's weekly availability is `NOT_INSTRUMENTED` until measured.
 
-- Calendar/task connector: activate when Kael wants real daily scheduling/deadline integration.
-- Stripe/payment tooling: after a direct payment/subscription path is selected and approved.
-- CRM: after real lead/customer volume creates repeated tracking pain not adequately handled by the current canonical pipeline.
-- Metricool/social analytics: after Content Engine becomes material.
-- Klaviyo/email automation: after owned email/e-commerce lifecycle exists.
-- Airtable/Notion: may support workflows but must not replace GitHub/STATE as canonical Nexia state.
+Optimize human leverage, not sacrifice. Classify human work:
+A identity/legal/physical;
+B authority/approval;
+C strategic judgment;
+D exception handling;
+E automatable friction;
+F unnecessary friction.
 
-Never install/connect merely because a tool is available.
+Reduce F first, then E when net-positive. Instrument before setting fixed time budgets.
 
-## Research basis — current as of 2026-10-14
-- Stripe 2026 guidance treats recurring revenue as predictable repeatable revenue and uses MRR/ARR, churn, retention/expansion and LTV/CAC only in the relevant recurring-business context.
-- Shopify 2026 business-model guidance distinguishes one-time, recurring and usage-based models; model/pricing should match customer value and willingness to pay rather than ideology.
-- Shopify's digital-product guidance confirms low-friction digital delivery paths but marketplace distribution trades control/customer data for reach and fees; distribution still matters.
-- TikTok's current Creator Rewards and affiliate rules show platform monetization is eligibility/policy/KYC dependent, reinforcing that audience payout cannot be assumed as immediate passive income.
-- n8n 2026 reliability guidance emphasizes human-in-the-loop, audit traces, circuit breakers, idempotency and replay/debuggability for reliable automation and sensitive actions.
+## Planning horizons
+- 0–90 days: readiness gaps, experiments, system verification, external reality probes and critical blockers.
+- 3–12 months: stronger reusable capabilities, validated engines, automation, channels, recovery/observability and human-attention reduction.
+- 12–36 months: scenario planning, portfolio resilience, defensibility, independence, capital allocation and multi-engine scale.
 
-These public sources are research inputs, not Nexia commercial results.
+Roadmaps change when evidence changes.
 
-## Current priority boundary
-This operating model does not displace EXP-AUTO-001. Current economic bottleneck remains explicit Workana approval, followed by real paid-pilot evidence. No new account, publication, external contact, spend, persistent worker or production deployment is authorized by this document.
+## Tool / connector policy
+Connect/install only when a current system or Reality Loop need justifies maintenance/dependency. Tool availability is not a reason to adopt it.
+
+## Current boundary
+- Model C is active.
+- EXP-AUTO-001 continues as bounded Reality Loop probe.
+- Contra V2 remains a quality/market benchmark task.
+- Workana remains pending.
+- Current commercial truth remains revenue EUR0, settled revenue EUR0, reconciled profit EUR0.
+- No new account, publication, external contact, spend, production activation or payment/KYC action is authorized by this model itself.
