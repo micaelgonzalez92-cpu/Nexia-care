@@ -1,28 +1,46 @@
 # WORKANA PROFILE 100% PACK V1
 
-Status: PREPARED / NOT PUBLISHED
-Date: 2026-10-13
-Purpose: provide a truthful, copy-ready profile completion pack for Workana without claiming paid client experience, production delivery, revenue, or autonomous external messaging.
+Status: REUSABLE PROFILE DRAFT / NOT PUBLISHED / WORKANA STATE PENDING REVALIDATION
+Date: 2026-10-15
+Purpose: provide truthful reusable Workana profile copy without claiming paid client experience, production delivery, revenue or autonomous external messaging.
+
+## Retrofit truth boundary
+
+This pack may be reused for profile preparation, but it does **not** establish that the current Workana profile is approved, 100% complete, publishable, or ready for proposal execution.
+
+Canonical current Workana state is derived from `NEXIA_STATE.json`, `NEXIA_LIVE.json`, `NEXIA_ACQUISITION_RADAR.md` and `NEXIA_COMMERCIAL_PIPELINE.json`. Latest canonical state remains `PENDING` unless fresher authenticated evidence supersedes it.
+
+Any Workana UI requirement, allowed skill tag, currency field, moderation rule or candidate opportunity must be rechecked if material before execution. Historical observations must not be presented as current platform facts.
 
 ## Evidence boundary
-HECHO VERIFICADO: Workana currently requires a 100% complete profile to enter/complete moderation and requires an hourly value during moderation. Workana also recommends complete professional history, skills, portfolio material and truthful information.
 
-RECOMENDACION: use this pack only for fields that match Kael's real background. Any field that requires personal employment history, education, language level or certification must be completed with real data only.
+HECHO VERIFICADO:
+- Nexia has internal/synthetic n8n lead-intake, validation, normalization, deduplication and QA evidence.
+- No paid client production experience is verified.
+- No Workana proposal has been submitted for EXP-AUTO-001.
+- No paid pilot, settled Workana payment or realized Workana profit is verified.
 
-## Recommended positioning
-Category: Programación y Tecnología
-Headline: Automatización de procesos con n8n | APIs, Webhooks y fiabilidad de leads
+RECOMENDACION:
+Use profile copy only where it matches Kael's real background. Personal employment history, education, language level, certifications and identity/profile-photo fields require real user-provided data and must never be inferred or fabricated.
 
-Rationale: active Workana projects involving n8n are categorized under Programación y Tecnología, commonly in Inteligencia Artificial or Programación Web depending scope.
+## Recommended positioning — revalidate exact selector labels before use
+
+Category hypothesis: Programación y Tecnología
+Headline:
+Automatización de procesos con n8n | APIs, Webhooks y fiabilidad de leads
+
+This positioning reflects demonstrated technical work. It is not a claim of paid-client delivery.
 
 ## Hourly reference
-RECOMENDACION: 30 EUR/h as an initial profile reference, if Workana allows EUR for the account.
 
-Why: one current public Spanish Workana profile explicitly positioned as “Full Stack y Automatización con n8n” lists 30 EUR/h. This is a weak single-point market signal, not a validated market median and not the pricing rule for fixed-price pilots.
+Historical recommendation: EUR30/h as an initial profile reference if the current Workana account/UI supports that currency and field.
 
-Do not change the authorized fixed-price Huescaventura offer: 300 EUR remains the prepared pilot price if/when the profile gate is cleared and the project remains open with zero submission cost.
+Evidence quality: weak market reference, not a validated market median and not a pricing rule for fixed-price work.
 
-## Sobre mí — copy-ready
+Do **not** infer that the historical Huescaventura EUR300 draft is currently executable. That opportunity and its prior one-off authorization require fresh precondition verification before reuse.
+
+## Sobre mí — reusable draft
+
 Me especializo en automatización de procesos con n8n, integraciones mediante APIs y webhooks, validación de datos y diseño de flujos fiables para la recepción y clasificación de leads.
 
 He desarrollado y probado proyectos personales de automatización orientados a reducir errores operativos: validación de campos obligatorios, clasificación, detección conservadora de duplicados, persistencia de estado, manejo de errores, generación de resúmenes internos y preparación de respuestas para revisión humana antes de cualquier envío.
@@ -30,9 +48,10 @@ He desarrollado y probado proyectos personales de automatización orientados a r
 Trabajo con un enfoque práctico: definir el alcance, probar casos válidos e inválidos, documentar el flujo y mantener control humano en los puntos sensibles. Mi prioridad es entregar automatizaciones simples de operar, trazables y fáciles de mantener.
 
 ## Skills / habilidades sugeridas
-Use only tags that Workana actually offers in the profile selector.
 
-Priority:
+Use only tags that the current Workana selector actually offers and only at truthful proficiency levels.
+
+Candidates:
 - n8n
 - API
 - Web Services
@@ -40,12 +59,13 @@ Priority:
 - Automatización de procesos
 - Webhooks
 - Testing / QA Automation
-- Python — only if the profile wording remains consistent with actual demonstrated use
-- JavaScript — only if the profile wording remains consistent with actual demonstrated use
+- Python — only if wording remains consistent with demonstrated use
+- JavaScript — only if wording remains consistent with demonstrated use
 
-Do not claim advanced level in skills that have not been demonstrated.
+Do not claim advanced proficiency that is not evidenced.
 
-## Portfolio / project entry
+## Portfolio / project entry — reusable draft
+
 Title:
 Sistema de recepción y clasificación de leads con n8n — proyecto personal
 
@@ -62,47 +82,60 @@ Short version:
 Proyecto personal en n8n para recepción y clasificación de leads: validación de campos, clasificación, deduplicación persistente, resumen interno, borrador de respuesta con revisión humana, manejo de errores y pruebas con casos válidos, inválidos y duplicados.
 
 ## Historial profesional
+
 BLOQUEADO POR DATOS PERSONALES REALES.
 
-Do not invent employers, freelance clients, job dates, paid projects or commercial results.
-
-If Workana requires this section for 100% completion, Kael must enter only real employment/self-employment/project history. The n8n personal project may be used only if the interface explicitly accepts projects/personal work in this section and it is clearly labeled “proyecto personal”.
+Do not invent employers, freelance clients, dates, paid projects or commercial results. If the current interface accepts personal projects in this section, label them clearly as `proyecto personal`.
 
 ## Idiomas
+
 BLOQUEADO POR DATO REAL DE KAEL.
 
-Enter only real language proficiency. Do not infer proficiency from chat usage.
+Enter only real proficiency. Do not infer proficiency from chat usage.
 
 ## Certifications
-RECOMMENDED BOOST, NOT TO BE FABRICATED.
 
-Workana currently offers skill certification tests. Complete only a test Kael can take personally. Never outsource the test, request answers, or falsify results.
+OPTIONAL / NEVER FABRICATE.
 
-## Photo
-Use a clear, recent, professional-looking photo of Kael where the face is identifiable. Do not use an AI-generated person as the profile identity.
+Complete only tests or certifications actually taken by Kael under the platform's rules. Do not outsource tests or fabricate results.
 
-## Portfolio evidence that can be prepared later
-Safe examples from current Nexia evidence:
-- screenshot of an n8n workflow with credentials/secrets removed
-- simplified architecture diagram of lead intake flow
-- synthetic test matrix showing valid / invalid / duplicate cases
-- short README explaining validation, deduplication and human-review safeguards
+## Photo / identity
 
-Do not publish repository secrets, tokens, personal data, internal account identifiers, client-like claims, or screenshots that expose private information.
+Use only a real image/identity appropriate to the platform and chosen by Kael. Do not use an AI-generated person as Kael's profile identity.
+
+## Portfolio evidence safe to prepare internally
+
+- screenshot of n8n workflow with credentials/secrets removed;
+- simplified architecture diagram of lead intake flow;
+- synthetic test matrix covering valid / invalid / duplicate cases;
+- short README explaining validation, deduplication and human-review safeguards.
+
+Do not expose secrets, tokens, personal data, internal account identifiers, confidential buyer data or fake client claims.
 
 ## Do not claim
-- paid client delivery
-- production deployment for a client
-- revenue generated for a client
-- client testimonial
-- years of client experience not evidenced
-- autonomous WhatsApp sending
-- production CRM migration
-- 24/7 production support
-- any certification not actually passed by Kael
 
-## Remaining Human Gate
-Kael must read the authenticated Workana dashboard and return:
-ESTADO: <Pendiente | No aprobado | Aprobado> | PERFIL: <xx>% | FALTA: <exact pending items>
+- paid client delivery;
+- production deployment for a client;
+- client revenue uplift/ROI;
+- client testimonial;
+- years of client experience not evidenced;
+- autonomous WhatsApp sending;
+- production CRM migration;
+- 24/7 production support;
+- certification not actually earned;
+- current Workana approval or profile completion unless freshly verified.
 
-Only after fresh verification of 100% completion and explicit approval may Nexia revalidate Huescaventura and consider the already prepared 300 EUR proposal under the existing zero-cost conditional authorization.
+## Reuse / Human Gate
+
+Before any profile mutation/publication or proposal action:
+1. obtain fresh authenticated Workana state;
+2. identify exact pending profile/moderation requirements;
+3. use real personal data only where required;
+4. verify any related opportunity separately;
+5. stop before publication/contact/submission unless exact authority allows it.
+
+This pack is `PREPARE_ONLY` until those conditions are satisfied.
+
+## Current strategic role
+
+Workana is secondary to the active Contra acquisition surface and remains useful as an opportunity/competition sensor. Do not spend human attention forcing Workana completion if its expected information/value is lower than the current Contra/Portfolio V2 bottleneck.
