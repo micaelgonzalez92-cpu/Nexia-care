@@ -1,29 +1,45 @@
 # EXP-AUTO-001 — HUESCAVENTURA PROPOSAL READY V1
 
-Date: 2026-10-13
-Status: INTERNAL READY / NOT SUBMITTED
+Date: 2026-10-15
+Status: REUSABLE DRAFT / HISTORICAL OPPORTUNITY SNAPSHOT / PENDING REVALIDATION / NOT SUBMITTED
 Opportunity: WORKANA-HUESCAVENTURA-001
-Authorized gross price: EUR 300
-Submission authority: CONDITIONAL — only after Workana profile approval is explicitly verified, the project is freshly rechecked open, and submission requires EUR0 additional spend.
+Historical prepared gross price: EUR 300
+Current submission authority: **NOT IMMEDIATELY EXECUTABLE**. The earlier one-off authorization was conditional on Workana profile approval being explicitly verified, the project being freshly rechecked open, submission costing EUR0, and the opportunity still fitting EXP-AUTO-001. Those conditions must be re-established immediately before any submission.
 External contact performed: NO
 Cash spend: EUR0
 
-## Current public brief snapshot
+## Retrofit truth boundary
 
-Revalidated on 2026-10-13 from the public Workana project page:
-- project remains Abierto / Evaluando propuestas;
+The proposal body below remains a reusable draft because its technical scope and evidence boundaries are still useful. The Workana opportunity facts were observed on 2026-10-13 and are now **historical evidence**, not a current claim that the project remains open, has the same budget/competition, or can be submitted to.
+
+Current authority and channel truth must be taken from `NEXIA_STATE.json`, `NEXIA_LIVE.json`, `NEXIA_ACQUISITION_RADAR.md` and `NEXIA_COMMERCIAL_PIPELINE.json`.
+
+Before reuse, verify all of the following:
+1. Workana profile/moderation status;
+2. project still exists and accepts proposals;
+3. scope and buyer requirements have not materially changed;
+4. current proposal/submission cost is EUR0;
+5. EUR300 and <=4h remain rational under current scope;
+6. exact external-action authorization still applies.
+
+If any condition fails or is UNKNOWN, this artifact stays `PREPARE_ONLY`.
+
+## Historical public brief snapshot — observed 2026-10-13
+
+At that time the public Workana project page showed:
+- project `Abierto / Evaluando propuestas`;
 - approximate budget EUR 200–300 fixed price;
 - 1 visible proposal;
 - buyer payment verified;
 - n8n already self-hosted;
-- desired phase is explicitly semiautomatic with human review before WhatsApp/email sending;
-- requested functions include lead detection, field review, classification, missing-data detection, internal summary, suggested response, internal notification, lead state/next step, duplicate detection, basic follow-up, documentation and exportable n8n workflow;
-- buyer asks applicants to answer 10 concrete implementation questions.
+- desired phase explicitly semiautomatic with human review before WhatsApp/email sending;
+- requested functions covering lead detection, field review, classification, missing-data detection, internal summary, suggested response, notification, lead state/next step, duplicate detection, basic follow-up, documentation and exportable n8n workflow;
+- 10 implementation questions for applicants.
 
-Public source:
+Historical public source:
 https://www.workana.com/es/job/automatizar-recepcion-y-clasificacion-de-leads-desde-formulario-con-airtable-y-n8n
 
-## Submission draft
+## Submission draft — reuse only after gate revalidation
 
 Hola,
 
@@ -110,54 +126,49 @@ Excluded unless separately approved and repriced:
 Resolution:
 - Do not hide or exaggerate this gap.
 - Answer question 9 with a specific executed technical proof: n8n 2.42.6, separate webhook cases, persistent deduplication and process restart.
-- The buyer asks whether the applicant has created lead/commercial-response automations and requests an example; it does not state that paid-client production history is mandatory.
-- Remaining risk is commercial credibility, not technical truth. The proposal offsets it with specific architecture, acceptance tests and a tightly bounded first milestone.
+- The historical buyer brief asked whether the applicant had created lead/commercial-response automations and requested an example; it did not establish paid-client production history as mandatory in the observed snapshot.
+- Remaining risk is commercial credibility, not technical truth.
 
 ### Second strongest rejection reason
 "EUR300 could become an underpriced broad build if every listed tool/channel is interpreted as included."
 
 Resolution:
-- Explicitly lock phase 1 to Airtable OR Sheets and Telegram OR email.
-- Keep WhatsApp sending human-reviewed and exclude WhatsApp Business/API setup.
-- Treat additional channels/integrations as later phases.
+- lock phase 1 to Airtable OR Sheets and Telegram OR email;
+- keep WhatsApp sending human-reviewed and exclude WhatsApp Business/API setup;
+- treat additional channels/integrations as later phases.
 
 ### Obvious amateur signal to avoid
 Generic statements such as "I can automate this with AI and n8n" without explaining identity, missing-data policy, error handling, follow-up state or acceptance criteria.
 
-Resolution:
-- Proposal specifies normalized identifiers, deterministic validation, REVIEW fallback, explicit error path, state fields and concrete acceptance cases.
+Resolution: retain normalized identifiers, deterministic validation, REVIEW fallback, explicit error path, state fields and concrete acceptance cases.
 
 ### Missing edge case
 Replayed events or the same person arriving with incomplete/changed data could create duplicate records or overwrite useful information.
 
 Resolution:
-- Use source/event ID when available plus normalized phone/email identity;
+- use source/event ID when available plus normalized phone/email identity;
 - apply conservative merge/update policy only after agreed rules;
 - route ambiguity to human review rather than destructive merging.
 
-### Missing differentiation
-Many applicants can connect nodes; the buyer explicitly values maintainability, errors, duplicates and non-generic responses.
-
-Resolution:
-- Differentiate on reliability: deterministic checks around the AI, persistent identity state, observable errors, human approval and acceptance tests.
-
 ## Professional readiness adjudication
 
-TECHNICAL GATE: PASS — underlying n8n capability evidence already executed.
-DOMAIN GATE: PASS — proposal maps directly to the buyer's lead process and requested categories/actions.
-DEFECT GATE: PASS WITH SCOPE LOCK — major overrun risks are excluded explicitly.
-PROFESSIONAL BENCHMARK GATE: PASS — proposal answers all 10 buyer questions with implementation-specific detail and avoids generic AI-sales language.
-ADVERSARIAL REVIEW GATE: PASS — principal credibility and scope objections are disclosed and bounded rather than hidden.
-ECONOMIC/EXPOSURE GATE: BLOCKED UNTIL EXISTING CONDITIONS — profile approval not verified; project must remain open; submission cost must remain EUR0.
+TECHNICAL GATE: PASS for the underlying internal/synthetic technical proof only.
+DOMAIN GATE: PASS against the historical 2026-10-13 brief snapshot only.
+DEFECT GATE: PASS WITH SCOPE LOCK for the reusable draft.
+PROFESSIONAL BENCHMARK GATE: REVALIDATE if the live buyer brief has changed.
+ADVERSARIAL REVIEW GATE: PASS for truth/scope framing.
+ECONOMIC/EXPOSURE GATE: BLOCKED PENDING FRESH PRECONDITIONS AND CURRENT AUTHORITY.
 
-READY STATUS: INTERNALLY READY FOR SUBMISSION ONLY WHEN THE EXISTING COMMERCIAL GATE CLEARS.
+READY STATUS: **REUSABLE DRAFT, NOT CURRENTLY READY FOR SUBMISSION.**
 
-## Internal economics
+## Internal economics — estimate only
 
-Gross: EUR300
+Historical gross offer: EUR300
 Platform fee assumption: 20% = EUR60
 Estimated after platform: EUR240
 Human labor target: <=4h at EUR15/h = <=EUR60
-Estimated contribution before overhead/tax if target met: EUR180
+Estimated contribution before overhead/tax if all assumptions hold: EUR180
 Tax: UNKNOWN
 Realized revenue/profit: EUR0 until paid and reconciled.
+
+These numbers are estimates/historical planning inputs, not a current offer acceptance, invoice, payment or profit.
