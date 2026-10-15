@@ -1,140 +1,160 @@
-# NEXIA — REAL PROGRESS DASHBOARD
+# NEXIA — SYSTEM EXCELLENCE + EXTERNAL REALITY DASHBOARD
 
 Status: ACTIVE / EVIDENCE-GATED
-Version: 3.0
+Version: 4.0
 Updated: 2026-10-15
-Canonical operational source: `NEXIA_STATE.json` v71 plus `NEXIA_LIVE.json` and indexed post-STATE deltas.
-Purpose: separate activity from verified economic progress and expose current bottlenecks, quality gaps, economics and human dependency. This file is a reporting view, never an independent source of truth.
+Canonical source: `NEXIA_STATE.json` v72 plus `NEXIA_LIVE.json` and indexed post-STATE deltas.
+Purpose: show whether Nexia is becoming a stronger system while staying connected to external reality. This file is a reporting view, never an independent source of truth.
 
 ## Reading rules
-- VERIFIED = backed by current observable evidence.
+- VERIFIED = backed by observable evidence.
+- PARTIAL = some evidence exists but the capability/readiness dimension is incomplete.
 - PENDING = known gate incomplete.
-- NOT INSTRUMENTED / UNKNOWN != 0.
-- A commit proves persistence only. Technical PASS does not prove demand, sale, settled payment, buyer acceptance or profit.
-- Historical experiment results are immutable; later engineering acceptance never rewrites a precommitted gate.
+- UNKNOWN / NOT INSTRUMENTED != 0.
+- Technical/creative activity is not automatically system progress; system progress requires verified improvement in capability, quality, truth, recovery, autonomy, learning or external usefulness.
+- Economic activity is one output class, not the sole definition of progress.
+- Historical experiment thresholds/results remain immutable.
 
-## A. Current business position
+## A. Constitutional state
 | Indicator | Current reading | Status |
-|---|---:|---|
-| Canonical STATE | v71 | VERIFIED |
-| Active experiment | EXP-AUTO-001 — Lead Intake Reliability Sprint | VERIFIED |
-| Stage | VETA / pre-validación comercial | VERIFIED |
-| Authorized gross pilot price | €300 | VERIFIED |
-| Primary current zero-cash acquisition path | Contra microtest + Workana fallback/pending route | VERIFIED CURRENT ROUTING |
-| Contra account/session | Active/authenticated | VERIFIED |
-| Contra profile completion | 89% | VERIFIED FROM CURRENT USER/SCREEN EVIDENCE |
-| Contra Instagram link | Shared | VERIFIED |
-| Contra identity verification | Not completed | PENDING HUMAN GATE |
-| Contra payout method | Not completed | PENDING HUMAN GATE |
-| Contra applications submitted | 0 | VERIFIED |
-| Contra portfolio V1 | Supporting media only | DEMOTED |
-| Contra portfolio V2 | Premium redesign active | IN PROGRESS |
-| Workana approval/dashboard | Pending / unresolved | PENDING |
-| Capital spent | €0 | VERIFIED |
-| Revenue | €0 | VERIFIED |
-| Settled revenue | €0 | VERIFIED |
-| Reconciled net profit | €0 | VERIFIED |
-| O1 | Not achieved | VERIFIED |
+|---|---|---|
+| Canonical STATE | v72 | VERIFIED |
+| Model | System Excellence + External Reality | ACTIVE / VERIFIED |
+| North Star | top-tier continuously improving decision/execution system connected to reality | ACTIVE |
+| Economy-first mission | superseded prospectively | VERIFIED |
+| Historical economic evidence | preserved | VERIFIED |
+| Project instruction UI | old installed baseline until V4 candidate is manually applied/verified | PENDING HUMAN GATE |
 
-## B. Current economics
-Current offer economics remain estimates until a real transaction exists:
-- Gross offer: €300.
-- Workana historical initial-fee assumption used for that channel: 20%; recheck if route becomes active before economic use.
-- Delivery ceiling: <=4 measured human hours.
-- Labor assumption: €15/h where used for internal contribution modeling.
-- Realized revenue/payment/profit: €0.
-- Tax/after-tax profit: UNKNOWN until actual transaction/accounting treatment exists.
+## B. System readiness
+| Dimension | Current state | Status |
+|---|---|---|
+| TRUTH | STATE v72 active; LIVE/BOOT/index reconciliation still required after migration | PARTIAL |
+| RELIABILITY | strong bounded technical evidence; not project-wide | PARTIAL |
+| RECOVERY | verified in several bounded flows; not universal | PARTIAL |
+| OBSERVABILITY | partial telemetry / evidence chain | PARTIAL |
+| QUALITY | project-wide retrofit active; not all artifacts audited | PARTIAL |
+| AUTONOMY | proactive / bounded supervised automation; no verified universal 24x7 autonomy | PARTIAL |
+| SECURITY / AUTHORITY | explicit GREEN/YELLOW/RED gates active | VERIFIED POLICY / PARTIAL IMPLEMENTATION |
+| REALITY VALIDATION | EXP-AUTO-001 + competitive benchmarks active | ACTIVE |
+| ECONOMIC READINESS | no validated scalable engine yet | NOT READY |
 
-O1 still requires >=1 accepted/paid pilot with economic equivalent >=€249, <=4h measured human delivery and positive contribution.
+## C. Current Reality Loop probe — EXP-AUTO-001
+- Role: bounded external sensor + potential revenue engine, **not the purpose of Nexia**.
+- Stage: VETA / pre-validación comercial.
+- Contra profile: 89% user-confirmed.
+- Instagram social link: shared.
+- Portfolio V2: premium redesign active.
+- Identity verification: pending Kael-only gate.
+- Payout method: pending Kael-only gate.
+- Applications submitted: 0.
+- Workana: pending secondary route.
+- Authorized pilot price: €300.
+- Current Contra microtest cash ceiling: €0.
+- Success/failure thresholds already committed remain unchanged.
 
-## C. Current strategic standards
-ACTIVE cross-project standards:
-1. Competitive Intelligence + lawful Reverse Engineering.
-2. Premium Art Direction V2 for material public-facing creative work.
-3. Continuous Quality & Evolution: VERIFY -> CRITIQUE -> COMPARE -> IMPROVE -> RE-VERIFY -> CAPTURE -> STOP RATIONALLY.
-4. Bounded Autonomy & Urgency: maximum GREEN execution, YELLOW preparation, only irreducible RED Human Gates escalated.
-5. Project-Wide Quality Retrofit: new material standards automatically triage affected ACTIVE/REUSABLE Nexia assets.
+Reality information sought:
+- customer response;
+- competitive standard;
+- offer clarity;
+- pricing/positioning signals;
+- workflow/quality requirements;
+- eventually payment and delivery evidence.
 
-Public/commercial minimum: COMPETITIVE. Strategic flagship target: TOP-TIER when economically justified. Claimed superiority remains a hypothesis until external evidence.
-
-## D. Acquisition / commercial state
-### Contra
-- Microtest authorized at €0 cash spend ceiling.
-- Max applications: 6.
-- Window: 14 days under current microtest design.
-- Profile at 89%; Instagram linked.
-- V2 portfolio redesign is the current GREEN quality task before applications.
-- Identity and payout setup remain Kael-only gates.
-
-### Workana
-- Huescaventura/proposal path remains historically prepared but approval/submission gate unresolved.
-- Workana is no longer the only route; do not let its pending state freeze EXP-AUTO-001.
-
-Current acquisition goal: reach qualified buyer response and paid-pilot evidence, not merely complete profiles.
-
-## E. Execution capability
-- GitHub Actions: VERIFIED bounded execution capability.
-- Local scripts: available when local surface is granted.
-- Local GPU image generation: VERIFIED bounded capability.
-- Local AI code assist: VERIFIED within bounded scope.
-- Local authenticated Workana browser: VERIFIED READ-ONLY within bounded scope.
-- One-shot local execution bridge + sanitized result return: VERIFIED bounded scope.
-- Local Worker 24h trial: **FORMAL FAIL** solely because max inter-record gap 10.001 min exceeded preregistered 10.000 min threshold by ~0.06 sec.
-- Same 24h trial operational evidence: 288/288 pass records, 0 functional failures, no external-effect authorization and verified automatic shutdown.
-- Safety assessment for the 24h trial: PASS.
+## D. Technical capability evidence
+- n8n 2.42.6 runtime proof: VERIFIED, six asserted synthetic cases, `autonomous_send=false`.
+- Persistent native Data Table dedup/idempotency across separate webhook executions and restart: VERIFIED in isolated synthetic environment.
+- Node.js fail-safe reference engine: final 9/9 synthetic regression PASS after phone-normalization correction.
+- Local execution bridge: VERIFIED bounded read-only/sanitized result return.
+- 24h Local Worker historical formal result: **FAIL** because 10.001 min > predeclared 10.000 min max gap.
+- Same worker operational evidence: 288/288 records passed, 0 functional failures, automatic shutdown verified.
 - Persistent 24x7 worker: NOT AUTHORIZED / NOT VERIFIED.
-- Client production deployment: NOT EXECUTED.
+- Client production deployment/experience: NOT EXECUTED / NONE VERIFIED.
 
-Do not relabel the historical stability experiment PASS. If a future scheduler-jitter tolerance is tested, preregister it before execution.
+## E. Quality / competition system
+ACTIVE:
+1. Continuous Quality & Evolution.
+2. Competitive Intelligence + lawful Reverse Engineering.
+3. Premium Art Direction V2.
+4. Project-Wide Quality Retrofit.
+5. Bounded Autonomy & Urgency.
+6. Model C Constitution.
 
-## F. Human dependency / attention
+Material-task loop:
+`VERIFY -> CRITIQUE -> COMPARE -> IMPROVE -> RE-VERIFY -> CAPTURE -> STOP RATIONALLY`.
+
+Public/reusable work must be benchmarked when meaningful. Claimed superiority remains a hypothesis until evidenced.
+
+## F. Human attention
 | Metric | Current reading | Status |
-|---|---:|---|
-| EXP-AUTO delivery ceiling | <=4h | PRECOMMITTED |
+|---|---|---|
+| Kael weekly available hours | Unknown | NOT INSTRUMENTED |
+| Fixed Kael Attention Budget | not set | WAITING FOR BASELINE |
 | Contra setup attention elapsed | Unknown | NOT INSTRUMENTED |
-| Revenue per Human Attention Hour | Not computable | NO SETTLED REVENUE |
-| Human actions per transaction | Not computable | NO REAL TRANSACTION |
-| Persistent autonomous 24x7 execution | No | NOT AUTHORIZED / NOT VERIFIED |
+| Human dependency categories | A–F defined | ACTIVE |
+| 7-day representative baseline | not yet measured | PENDING |
 
-Human actions should be classified as identity/legal, authorization, strategic decision, exception handling, automatable friction or unnecessary friction. Reduce only the last two automatically.
+Objective: maximize Kael's leverage, not sacrifice. Reduce unnecessary friction first, then automatable friction where value-positive.
 
-## G. Quality retrofit status
-Current automatic retrofit waves:
-- **Wave A — Revenue/market surface:** EXP-AUTO-001 offer, Contra V2, profile, acquisition positioning, Workana fallback, commercial templates.
-- **Wave B — Execution/reliability:** execution capabilities, CI, bridge/worker, automation contracts, recovery.
-- **Wave C — Governance/strategic OS:** authority, operating model, scorecards, dashboard, commands, fiscal/legal system, radars.
-- **Wave D — Research/reusable assets:** product/UGC veins, prototypes and reusable research.
-- **Wave E — History/archive:** preserve; no polishing unless reactivated.
+## G. Capital / economics
+Current hard cap remains **€100/week**, default €0, until Kael explicitly changes it.
 
-This dashboard was the first identified high-priority quality debt because v2 still described Workana as the sole primary route and the Local Worker trial as pending. Version 3.0 reconciles those two stale areas with current LIVE/execution evidence.
+Capital model: evidence-weighted allocation across system capability, reliability, validation, research, security, tooling, distribution and acquisition. Revenue proximity alone does not determine priority.
 
-## H. Current bottlenecks — ordered
-1. **Economic evidence:** zero paid pilots, zero settled revenue, zero realized contribution. This remains the decisive bottleneck.
-2. **Acquisition readiness/quality:** finish Contra V2 market-facing quality to competitive/top-tier standard, then start bounded applications; Workana remains secondary pending route.
-3. **Contra Human Gates:** identity verification and payout configuration remain incomplete; execute directly in Contra when needed without sharing credentials/documents in chat.
-4. **Measurement:** setup/acquisition human attention remains partially NOT INSTRUMENTED.
+Verified current economics:
+- capital spent: €0;
+- revenue: €0;
+- settled revenue: €0;
+- reconciled net profit: €0.
 
-## I. Immediate Top 3
-1. Complete and QA the four Contra V2 case-study covers and related profile presentation against competitive references.
-2. Retrofit acquisition/commercial control artifacts so Contra + Workana routing, economics and truth boundaries are current.
-3. Continue project-wide truth/recovery/reporting retrofit where stale information can produce wrong decisions.
+`>€1,000/month` sustainable after-tax net remains the first demonstrated scalable-business-engine milestone, not Nexia's constitutional purpose or final ceiling.
 
-## J. Progress ladder
-RUMOR -> SEÑAL -> VETA -> VALIDADA -> EXTRACCIÓN -> REFINADA -> ESCALABLE.
+## H. Portfolio / WIP
+Policy: **BOUNDED ADAPTIVE WIP**.
 
-Current economic position: **VETA / PRE-VALIDACION COMERCIAL**.
-Technical capability and quality-system maturity have advanced, but no technical or creative improvement alone advances Nexia to VALIDADA. That requires real market/payment evidence.
+Default max: 3 material workstreams.
+Preferred allocation when useful:
+- one critical System Loop stream;
+- one Reality Loop stream;
+- one optional research/strategic-option stream.
 
-## K. Measurement contract
-Every material metric should record purpose, formula/unit, period, source/date, status, uncertainty and exclusions.
+Current:
+- Reality Loop: EXP-AUTO-001.
+- Research veins: VETA-AI-UGC-001 and VETA-AUTO-PRODUCT-001, subject to dynamic pruning/reallocation.
 
-Core formulas:
-- Contribution = realized net proceeds - platform/payment fees - variable tooling - delivery/support labor - other attributable variable costs.
-- After-tax net profit = recognized revenue - attributable/fixed deductible costs - applicable taxes, reconciled to actual treatment.
-- Revenue per Human Attention Hour = realized contribution or net revenue (state which) / measured human attention hours for the same scope/period.
-- Automation success rate = verified successful executions / attempted executions over a defined period.
+No stream receives priority merely because it is closest to revenue.
 
-## L. Decision policy
-Choose next work by: safety/authority -> current economic bottleneck -> expected impact/information value -> cost/downside -> human attention -> repeatability -> scalability.
+## I. Constitutional retrofit status
+Completed / verified:
+- Model C constitution activated;
+- canonical STATE migrated to v72;
+- Growth/Autonomy operating model migrated;
+- Operating Day migrated;
+- Dashboard migrated to v4.
 
-Current verified economic truth: **capital €0, revenue €0, settled revenue €0, reconciled net profit €0.** Current quality truth: Nexia has activated project-wide competitive/quality/autonomy standards, but individual artifacts are compliant only after audit and re-verification.
+Still required:
+- LIVE/BOOT/event index reconciliation;
+- Project instruction candidate V4 <=7,800 chars;
+- instruction contract/evolution update;
+- audit opportunity scorecard / commands / automation prompts for economy-first drift;
+- baseline Kael attention measurement design;
+- further active/reusable artifact triage.
+
+Repository-wide compliance remains **NOT YET VERIFIED ITEM BY ITEM**.
+
+## J. Current dynamic priorities
+After hard precedence, current queue is:
+1. finish constitutional consistency across truth/recovery surfaces and Project instruction candidate;
+2. continue Contra Portfolio V2 quality work as an active Reality Loop sensor;
+3. audit active automation/prompts and scorecards for stale economy-first assumptions;
+4. instrument human attention when enough real usage data exists.
+
+This order may change with new evidence.
+
+## K. Decision policy
+Choose work by:
+`safety/legal/security -> truth -> authority -> continuity/recovery -> multi-axis system/reality value`.
+
+Multi-axis value includes system criticality, dependencies, user impact, strategic leverage, urgency, competitive gap, information, human attention, economics, cost, reversibility and risk.
+
+## L. Current truth boundary
+Model C is active and STATE v72 is canonical. That does **not** mean all Nexia components already comply. Each active/reusable artifact must be audited and reverified before being marked compliant.
