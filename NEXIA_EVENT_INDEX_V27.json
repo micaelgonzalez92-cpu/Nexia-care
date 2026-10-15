@@ -1,0 +1,26 @@
+{
+  "schema_version": 27,
+  "updated_at": "2026-10-15",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 72,
+  "canonical_state_blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V26.json",
+    "verified_blob_sha": "1c5eb25762b22dfc9c8485ba4ba0aa15289f4d84"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-15-MODEL-C-RETROFIT-001",
+      "path": "events/EVT-2026-10-15-MODEL-C-RETROFIT-001.json",
+      "verified_blob_sha": "4a071c183bf5929d19f267cbea65cdaacf7a6446"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-15-MODEL-C-RETROFIT-001",
+  "latest_event_path": "events/EVT-2026-10-15-MODEL-C-RETROFIT-001.json",
+  "latest_event_blob_sha": "4a071c183bf5929d19f267cbea65cdaacf7a6446",
+  "latest_material_business_event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001",
+  "latest_material_governance_event_id": "EVT-2026-10-15-MODEL-C-RETROFIT-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "migration_status": "CONSTITUTIONAL_CRITICAL_ACTIVE_SURFACES_SUBSTANTIALLY_ALIGNED_PROJECT_UI_INSTALLATION_PENDING",
+  "rule": "Use STATE v72 + Model C. V4 Project instructions are prepared but not installed until Kael applies them and fresh-chat verification passes. Repository-wide item-by-item compliance is not claimed."
+}
