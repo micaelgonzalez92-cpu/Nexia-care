@@ -43,6 +43,7 @@ Every public-facing piece must visibly retain `Internal demo` or `Technical proo
 ## 3. Competitive benchmark — 2026-10-15
 
 ### Sources reviewed
+Direct / channel references:
 - Contra Help Center — `How to optimize your case studies on Contra` (2026-01-15).
 - Contra Help Center — `How we feature work on Contra’s homepage` (2026-01-15).
 - Contra Help Center — `How to build a case study from scratch` (2026-01-14).
@@ -50,6 +51,9 @@ Every public-facing piece must visibly retain `Internal demo` or `Technical proo
 - Manuel Navarro — Top Independent AI automation / SaaS profile on Contra.
 - Gabriele Mannino — Automation Architect / n8n & Make case-study work.
 - Pavlo Hozhynskyi — AI Automation / n8n, APIs, Python portfolio work.
+
+Top-tier adjacent visual reference:
+- Contra current featured project grid / top Product Designer and Brand + Web work, observed 2026-10-15. The strongest adjacent work uses large cover-led presentation, minimal hero copy, coherent art direction, motion or premium imagery, and immediate project recognition at grid size.
 
 ### Transferable principles
 1. Lead with the buyer problem or outcome, not the stack.
@@ -59,21 +63,23 @@ Every public-facing piece must visibly retain `Internal demo` or `Technical proo
 5. Show role, implementation logic and evidence without forcing the buyer to infer relevance.
 6. Quality beats quantity; four strong pieces are sufficient for this bounded test.
 7. Verified earnings, reviews and client proof materially increase trust — Nexia currently does not possess these signals and must not simulate them.
+8. Adjacent top-tier creative work sets a higher visual bar than technically correct automation diagrams; V2 must be legible and credible at thumbnail size before technical depth is revealed.
 
 ### Parity matrix
 
 | Dimension | V1 current | V2 target | Decision |
 |---|---|---|---|
 | Buyer-outcome clarity | BELOW | PARITY | Rewrite opening and cover copy around buyer tension/outcome. |
-| Technical specificity | PARITY | PARITY+ | Preserve verified implementation detail; simplify presentation. |
-| Evidence integrity | STRONG | STRONG | Keep explicit internal-demo boundaries and test evidence. |
-| Visual case-study quality | BELOW | COMPETITIVE target | Build 1600×1200 outcome-first hero media and supporting frames. |
-| Mobile/thumbnail impact | BELOW | COMPETITIVE target | One message, large type, strong focal idea, minimal detail. |
-| Social proof / reviews / earnings | BELOW | BELOW | Cannot be solved internally; accept honestly until Reality Loop produces evidence. |
-| Reliability / safe-failure story | UNDEREXPOSED | DIFFERENTIATION HYPOTHESIS | Make QA, dedup, human review and fail-safe behavior visible. |
+| Technical specificity | PARITY | PARITY | Preserve verified implementation detail; simplify presentation. |
+| Evidence integrity | PARITY | PARITY | Keep explicit internal-demo boundaries and test evidence. |
+| Visual case-study quality | BELOW | PARITY | Build 1600×1200 outcome-first hero media and supporting frames. |
+| Mobile/thumbnail impact | BELOW | PARITY | One message, large type, strong focal idea, minimal detail. |
+| Social proof / reviews / earnings | BELOW | BELOW | External evidence gap; accept honestly until Reality Loop produces proof. |
+| Reliability / safe-failure story | BELOW | PARITY | Make QA, dedup, human review and fail-safe behavior visible. |
 | Case-study narrative | BELOW | PARITY | Problem → system → proof → boundary → relevance. |
 
-`DIFFERENTIATION HYPOTHESIS` is not a measured superiority claim. It must be tested through real market response.
+### Differentiation hypothesis
+Nexia may differentiate by making reliability evidence unusually explicit for a small automation portfolio: human-review boundaries, persistent deduplication, negative regression discovery, restart persistence and runtime QA. This is a `HIPÓTESIS`, not a superiority claim, until real buyers respond more strongly to this framing.
 
 ## 4. Portfolio system
 
@@ -274,7 +280,8 @@ Do not assign a pass score before the actual media exists and is visually review
 ## 7. Current readiness
 
 ### HECHO VERIFICADO
-- V2 source copy and media storyboards are now defined in this artifact.
+- V2 source copy and media storyboards are defined in this artifact.
+- The benchmark now includes direct channel references and a top-tier adjacent visual reference class.
 - Underlying technical evidence remains the V1 evidence set; no evidence was upgraded by rewriting copy.
 
 ### NOT YET VERIFIED
