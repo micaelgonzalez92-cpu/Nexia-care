@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-MODEL-C-ACTIVATED-001",
+  "timestamp": "2026-10-15T02:03:00+02:00",
+  "project": "NEXIA CORE",
+  "type": "CONSTITUTIONAL_MODEL_C_ACTIVATED",
+  "classification": "CANONICAL_MISSION_CHANGE",
+  "source": "EXPLICIT_KAEL_APPROVAL_IN_PROJECT_CHAT",
+  "approval_text": "Apruebo el modelo C, System Excellence más External Reality.",
+  "previous_state": {
+    "version": 71,
+    "blob_sha": "a3ebf211198910224d6bbc47fbe58c746170eeaf",
+    "mission_family": "ECONOMY_FIRST_OPPORTUNITY_ENGINE"
+  },
+  "new_state": {
+    "version": 72,
+    "blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+    "mission_id": "MISSION-SYSTEM-EXCELLENCE-REALITY-001",
+    "model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY"
+  },
+  "constitution": {
+    "path": "governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md",
+    "blob_sha": "53435e8ecbdd0e45ee17bac250aa6f3df1feec1c",
+    "status": "ACTIVE_APPROVED_BY_KAEL"
+  },
+  "migrated_artifacts": [
+    {
+      "path": "NEXIA_GROWTH_AUTONOMY_OPERATING_MODEL_2026-10-14.md",
+      "blob_sha": "3feb71f192f4677c83219780b1ef9425dcde531c"
+    },
+    {
+      "path": "NEXIA_OPERATING_DAY.md",
+      "blob_sha": "ae01371052161289afd114b9996d58e635d6b0ef"
+    },
+    {
+      "path": "NEXIA_PROGRESS_DASHBOARD.md",
+      "blob_sha": "d88707e03c5c8622f0d0c67543ca3145fcfb435a"
+    },
+    {
+      "path": "governance/NEXIA_BOUNDED_AUTONOMY_URGENCY_STANDARD_2026-10-15.md",
+      "blob_sha": "888f6e762a9715ba38b56851dd85aa41ac0d3058"
+    },
+    {
+      "path": "NEXIA_MASTER_INSTRUCTIONS_V2_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_AMENDMENT_2026-10-15.md",
+      "blob_sha": "afab9efebafa77e2776b789c2f834f0197210b72"
+    },
+    {
+      "path": "NEXIA_PROJECT_INSTRUCTION_CONTRACT.json",
+      "blob_sha": "cb521b95091eff575257f54068b2cdf9d9201a27"
+    },
+    {
+      "path": "NEXIA_INSTRUCTION_EVOLUTION.md",
+      "blob_sha": "f2563287916fe904fc41181478c884bc1bdc771e"
+    }
+  ],
+  "project_instruction_candidate": {
+    "path": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
+    "blob_sha": "ce14c0c5b5dc27857b99398d96fbed0d29d3c136",
+    "exact_character_count": 7035,
+    "safe_ceiling_characters": 7800,
+    "status": "PREPARED_NOT_INSTALLED_IN_PROJECT_UI",
+    "human_gate_required": true
+  },
+  "economic_truth": {
+    "capital_spent_eur": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "reconciled_net_profit_eur": 0,
+    "role_change": "Economics remains critical external validation/resource/sustainability outcome but is no longer the sole top-level project objective."
+  },
+  "authority_effect": {
+    "external_action_gates_changed": false,
+    "spend_cap_changed": false,
+    "weekly_hard_cap_eur": 100,
+    "generic_continue_expands_permissions": false
+  },
+  "experiment_integrity": {
+    "historical_events_rewritten": false,
+    "precommitted_thresholds_changed": false,
+    "exp_auto_001_role": "BOUNDED_REALITY_LOOP_PROBE_AND_POTENTIAL_REVENUE_ENGINE"
+  },
+  "migration_status": "ACTIVE_NOT_COMPLETE_ITEM_BY_ITEM",
+  "next_step": "RECONCILE_EVENT_INDEX_LIVE_BOOT_AND_CONTINUE_ACTIVE_REUSABLE_ARTIFACT_DRIFT_AUDIT"
+}
