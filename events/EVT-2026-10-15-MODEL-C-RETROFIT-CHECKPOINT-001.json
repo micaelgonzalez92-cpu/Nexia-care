@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-15-MODEL-C-RETROFIT-CHECKPOINT-001",
+  "timestamp": "2026-10-15T02:14:00+02:00",
+  "project": "NEXIA CORE",
+  "type": "MODEL_C_CONSTITUTIONAL_CRITICAL_RETROFIT_CHECKPOINT",
+  "classification": "VERIFIED_INTERNAL_MIGRATION_CHECKPOINT",
+  "canonical_state": {
+    "version": 72,
+    "blob_sha": "3987273205403066091f71e673e0b8102035aa22",
+    "model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY"
+  },
+  "verified_aligned_surfaces": [
+    "governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md",
+    "NEXIA_OPPORTUNITY_SCORECARD_V3_2026-10-15.md",
+    "NEXIA_OPERATIONAL_RULES.md",
+    "NEXIA_MASTER_OPERATING_ORDER.md",
+    "NEXIA_AUTONOMOUS_QUEUE.md",
+    "TIMEOS.md",
+    "NEXIA_PROGRESS_DASHBOARD.md",
+    "NEXIA_PROJECT_INSTRUCTION_CONTRACT.json",
+    "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md"
+  ],
+  "active_automations_audit": {
+    "status": "VERIFIED_MODEL_C_ALIGNED",
+    "active_count": 4,
+    "cadence_or_authority_expansion": false,
+    "titles": [
+      "NEXIA Control Tower",
+      "EXP-AUTO-001 Reality Probe",
+      "NEXIA Reality & Venture Radar",
+      "NEXIA System Evolution"
+    ]
+  },
+  "project_instruction_candidate": {
+    "path": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
+    "blob_sha": "ce14c0c5b5dc27857b99398d96fbed0d29d3c136",
+    "exact_character_count": 7035,
+    "safe_ceiling_characters": 7800,
+    "status": "PREPARED_NOT_INSTALLED_IN_PROJECT_UI"
+  },
+  "remaining_human_gate": "KAEL_REPLACE_PROJECT_UI_INSTRUCTIONS_WITH_V4_AND_VERIFY_IN_FRESH_PROJECT_CHAT",
+  "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM",
+  "history_integrity": {
+    "historical_events_rewritten": false,
+    "precommitted_experiment_thresholds_changed": false
+  },
+  "economics": {
+    "capital_spent_eur": 0,
+    "revenue_eur": 0,
+    "settled_revenue_eur": 0,
+    "reconciled_net_profit_eur": 0
+  },
+  "result": "CONSTITUTIONAL_CRITICAL_INTERNAL_RETROFIT_VERIFIED_PROJECT_UI_GATE_REMAINS",
+  "next_step": "CREATE_V27_INDEX_UPDATE_LIVE_BOOT_THEN_ESCALATE_SINGLE_PROJECT_UI_HUMAN_GATE"
+}
