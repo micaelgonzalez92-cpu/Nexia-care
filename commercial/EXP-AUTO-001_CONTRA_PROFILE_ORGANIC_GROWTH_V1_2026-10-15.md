@@ -1,7 +1,7 @@
 # EXP-AUTO-001 — CONTRA PROFILE + ORGANIC GROWTH V1
 
 Date: 2026-10-15
-Status: PREPARED_INTERNAL / NOT_PUBLISHED / ZERO_SPEND
+Status: PREPARED_INTERNAL / NOT_PUBLISHED / ZERO_SPEND / V4_VISUAL_RETROFIT_APPLIED
 
 ## Evidence source
 Kael screen recording inspected 2026-10-15 plus current Contra Help Center guidance and Kael clarification 2026-10-15 that the currently linked Instagram is personal.
@@ -10,7 +10,7 @@ Kael screen recording inspected 2026-10-15 plus current Contra Help Center guida
 - Profile visible and marked Available.
 - Current one-liner visible: `Automation Specialist | n8n, Airtable & Lead Ops`.
 - Visible rate: `$50–$75/hr`.
-- Four work items are published using the older dark technical covers.
+- Four work items are published using the older covers.
 - Products tab is empty.
 - Reviews tab is empty.
 - Services tab is empty.
@@ -28,7 +28,7 @@ Posts status was not conclusively verified from the recording and remains UNKNOW
 Recommended one-liner:
 `Reliable Lead Intake & CRM Data Quality Automation`
 
-Recommended bio (under Contra's 400-character limit):
+Recommended bio:
 `I build reliable lead-intake and CRM data-quality automations with n8n and JavaScript. My workflows validate, normalize and deduplicate inbound data, route uncertain cases to human review, and add QA checks before sensitive actions. My portfolio shows internal technical proofs for persistent deduplication, fail-safe processing and workflow regression testing.`
 
 Recommended timezone: `Europe/Madrid`.
@@ -52,19 +52,26 @@ Keep current `$50–$75/hr` range unchanged until market response justifies repr
 - The currently linked Instagram is PERSONAL and is not an approved Nexia/EXP-AUTO-001 commercial surface.
 - It should be removed from Contra during the next authorized public profile-edit session.
 - Do not reuse or repurpose Kael's personal Instagram as the project's acquisition channel.
-- The target replacement is a dedicated professional Instagram account for Nexia / the Contra-facing automation practice, with coherent branding, portfolio proof, educational reliability content and no personal/private-content dependency.
-- Until that professional account exists and is populated to a minimum credible standard, Contra may temporarily have no Instagram link rather than point buyers to the personal account.
-- Creating the new Instagram account, selecting the final handle, publishing the initial content and linking it publicly are external Human Gates.
+- The target replacement is a dedicated professional Instagram account for Nexia / the Contra-facing automation practice.
+- Until that professional account exists and is populated to a minimum credible standard, Contra may temporarily have no Instagram link.
+- Creating the new Instagram account, selecting the final handle, publishing content and linking it publicly are external Human Gates.
 
 Recommended professional-account positioning:
 `Reliable automation • Lead intake • CRM data quality • n8n • QA-first workflows`
 
-The account should reuse the V3 visual system and repurpose the six prepared truth-safe content themes rather than create a parallel content strategy.
+The account should reuse the FINAL V4 visual system and the six prepared truth-safe content themes rather than create a parallel content strategy.
 
-## Cover and profile photo
-- Replace current profile cover with the approved V3 outcome-first cover prepared in the current session.
-- Keep the existing real profile photo temporarily. Do not replace a personal freelancer portrait with a logo.
-- A top-tier portrait refresh requires a high-resolution source photo from Kael; no facial likeness should be regenerated from the low-resolution screen recording.
+## Cover and profile photo — current final standard
+Use the approved `NEXIA Contra Visual System V4 Final` only.
+
+- `profile_cover.png` — final Contra profile cover; no person; Nexia umbrella positioning.
+- `profile_photo.png` — final professional personal portrait; human identity surface, not a logo.
+- `01_lead_intake.png` — Work 1.
+- `02_persistent_dedup.png` — Work 2.
+- `03_fail_safe.png` — Work 3, rebuilt to the V4 light visual grammar.
+- `04_workflow_qa.png` — Work 4.
+
+Do not use earlier V1/V2/V3 visual variants unless V4 is unavailable for recovery purposes.
 
 ## Flagship service prepared
 Name: `Lead Intake Reliability Sprint`
@@ -84,14 +91,14 @@ Proposed bounded deliverables:
 Canonical commercial experiment boundary remains EUR300 authorized pilot price, <=4 measured delivery-hour target, EUR0 cash-spend ceiling. This is not market-validated pricing or a public performance guarantee.
 
 ## Products / Reviews / Expert badge
-- Do not create a paid digital product just to fill the Products tab. It is a separate business hypothesis and would increase WIP before service demand is validated.
+- Do not create a paid digital product just to fill the Products tab.
 - Reviews must come only from real prior work. No fabricated social proof.
-- A relevant Contra Expert Program could improve visibility, but application is an external Human Gate and eligibility must be checked first.
+- A relevant Contra Expert Program could improve visibility, but application remains an external Human Gate and eligibility must be checked first.
 
 ## Portfolio website
-A zero-dependency static portfolio site was prepared locally in the current session. It contains:
+A zero-dependency static portfolio site has been prepared internally. It contains:
 - buyer-outcome-first hero;
-- four V3 case-study visuals;
+- four case-study visuals aligned to the Contra system;
 - truth-safe technical proof strip;
 - reliability process;
 - Lead Intake Reliability Sprint section;
@@ -106,7 +113,7 @@ Primary:
 2. Contra Community — native distribution inside the hiring ecosystem.
 
 Supporting:
-3. Dedicated professional Instagram for Nexia / Contra automation practice — visual credibility and repurposed case-study/educational content. The personal Instagram is explicitly excluded from this role.
+3. Dedicated professional Instagram for Nexia / Contra automation practice. The personal Instagram is explicitly excluded.
 
 Deferred:
 4. YouTube/Shorts after one repeatable demo-video format exists.
@@ -115,7 +122,7 @@ Deferred:
 Do not open every social network simultaneously; avoid distribution WIP without evidence.
 
 ## Prepared initial content sequence
-Six truth-safe posts have been drafted for:
+Six truth-safe content themes are prepared for:
 - positioning around reliable automation;
 - persistent deduplication;
 - regression/failure lesson;
@@ -123,29 +130,18 @@ Six truth-safe posts have been drafted for:
 - buyer education checklist;
 - bounded Lead Intake Reliability Sprint offer.
 
-These themes should serve LinkedIn, Contra Community and the future professional Instagram through format adaptation, not separate strategies.
+Use the same content system across LinkedIn, Contra Community and the future professional Instagram through format adaptation.
 
 Measurement must distinguish impressions/profile visits (signal), inquiries (intent), qualified buyer conversation, accepted paid pilot, settled cash, contribution and profit.
 
-## Contra platform evidence incorporated
-Current Contra guidance supports:
-- high-quality profile cover or video;
-- four strong work items;
-- clear one-liner;
-- relevant professional social links, ideally LinkedIn or portfolio website;
-- services with clear title, cover, tags, process/deliverables and buyer requirements;
-- case studies with high-quality visuals and specific descriptions;
-- community/feed posting as a route to profile work;
-- discovery score factors including profile quality, availability, community contribution, recommendations/ratings, earnings, response time and expert badges.
-
 ## Human Gates remaining
-Public profile edits (including removal/replacement of the personal Instagram link), service publication, new professional Instagram account creation, social posting, portfolio-site deployment, identity verification/wallet setup, expert-program application, reviews outreach and any external client contact remain gated unless separately authorized.
+Public profile edits, removal/replacement of the personal Instagram link, service publication, new professional Instagram account creation, social posting, portfolio-site deployment, identity verification/wallet setup, expert-program application, reviews outreach and any external client contact remain gated unless separately authorized.
 
 ## Next optimal sequence
-1. Kael applies the prepared Contra profile/media changes in one session, including removing the personal Instagram link.
+1. Kael applies the FINAL V4 profile/media changes in one session, including removing the personal Instagram link.
 2. Nexia verifies the public result.
-3. Add the flagship service if Contra fields match the prepared scope.
-4. Create the dedicated professional Instagram only under explicit Kael authorization; populate it with a minimum coherent content set before linking it back to Contra.
+3. Add/publish the flagship service if Contra fields match the prepared scope and Kael authorizes publication.
+4. Create the dedicated professional Instagram only under explicit Kael authorization; populate it before linking it back to Contra.
 5. Publish the portfolio site only after exact URLs are wired and Kael authorizes public deployment.
-6. Activate LinkedIn + Contra Community first; then reuse the same content system on the professional Instagram.
-7. Measure inbound response before opening more channels or creating products.
+6. Activate LinkedIn + Contra Community first; then reuse the content system on professional Instagram.
+7. Measure inbound response before opening more channels or products.
