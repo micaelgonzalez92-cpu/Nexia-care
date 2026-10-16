@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-LOW-FOOTPRINT-I2V-001",
+  "timestamp": "2026-10-16",
+  "type": "LOW_FOOTPRINT_I2V_ARCHITECTURE_SELECTION",
+  "state_version": 73,
+  "status": "CANDIDATE_SELECTED_READ_ONLY_COMPATIBILITY_GATE",
+  "artifact": "research/NEXIA_LOW_FOOTPRINT_I2V_COMPARISON_V1_2026-10-16.md",
+  "selected_candidate": {
+    "name": "LTX-Video 2B v0.9.8 distilled FP8",
+    "file": "ltxv-2b-0.9.8-distilled-fp8.safetensors",
+    "remote_size_gb": 4.46,
+    "downloaded": false,
+    "installed": false,
+    "local_runtime_verified": false
+  },
+  "selection_reasons": [
+    "smallest strong candidate among reviewed existing-ComfyUI I2V routes",
+    "official 0.9.8 release reports improved prompt understanding and detail generation",
+    "ComfyUI-Manager lists the FP8 2B checkpoint",
+    "stock ComfyUI supports LTXV FP8 formats",
+    "existing t5xxl_fp16 dependency can be retained",
+    "avoids FramePack system-change/pagefile path until necessary"
+  ],
+  "rejected_or_deferred": {
+    "stable_video_diffusion": "REJECT_CURRENT_OBJECTIVE_CHECKPOINT_LARGER_AND_WEAKER_DIRECTED_ACTION_CONTROL",
+    "hunyuan_cosmos": "REJECT_LOW_FOOTPRINT_PATH_LARGER_MODEL_DEPENDENCY_FOOTPRINT",
+    "framepack": "DEFERRED_OPERATIONAL_FIT_WEAK_ON_16GB_RAM_AND_9_5GB_PAGEFILE"
+  },
+  "cleanup_policy": {
+    "keep_t5xxl_fp16": true,
+    "old_ltx_0_9_5_checkpoint": "CANDIDATE_DELETE_BEFORE_REPLACEMENT_DOWNLOAD_AFTER_EXPLICIT_KAEL_AUTHORIZATION_AND_PATH_RECONFIRMATION",
+    "preserve_v1_v2_v3_evidence": true
+  },
+  "next_gate": "READ_LOCAL_COMFYUI_VERSION_AND_NATIVE_LTXV_NODE_SUPPORT",
+  "authority": "NO_DOWNLOAD_NO_DELETE_NO_INSTALL_NO_SYSTEM_CHANGE",
+  "truth_boundary": "Selection is research-based. Successful local 0.9.8 FP8 load, speed, VRAM/RAM usage, anatomy quality and professional score remain unverified."
+}
