@@ -79,8 +79,8 @@ $newCdpConnect = @'
     $null = $script:CdpSocket.ConnectAsync([System.Uri]$target[0].webSocketDebuggerUrl, [System.Threading.CancellationToken]::None).GetAwaiter().GetResult()
 '@
 
-$oldRawPath = "$RawResultRepoPath = 'runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_001.json'"
-$newRawPath = "$RawResultRepoPath = 'runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_002.json'"
+$oldRawPath = '$RawResultRepoPath = ''runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_001.json'''
+$newRawPath = '$RawResultRepoPath = ''runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_002.json'''
 
 function Assert-UniqueLiteral {
     param([string]$Source, [string]$Needle, [string]$Label)
@@ -117,7 +117,7 @@ try {
     if ($patched.IndexOf('function Test-GhRemoteResultExists', [System.StringComparison]::Ordinal) -lt 0) { throw '404-safe helper missing after patch.' }
     if ($patched.IndexOf('[System.Text.UTF8Encoding]::new($false)', [System.StringComparison]::Ordinal) -lt 0) { throw 'UTF-8 no-BOM payload writer missing after patch.' }
     if ($patched.IndexOf('FAIL_GH_PAYLOAD_BOM_SELFTEST', [System.StringComparison]::Ordinal) -lt 0) { throw 'Payload BOM self-test missing after patch.' }
-    if ($patched.IndexOf("$RawResultRepoPath = 'runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_002.json'", [System.StringComparison]::Ordinal) -lt 0) { throw 'New raw-result path missing after patch.' }
+    if ($patched.IndexOf($newRawPath, [System.StringComparison]::Ordinal) -lt 0) { throw 'New raw-result path missing after patch.' }
 
     foreach ($invariant in @(
         '$Seed = 20261016',
