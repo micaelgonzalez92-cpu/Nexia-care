@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-PRECHECK-404-REPAIR-001",
+  "timestamp": "2026-10-16",
+  "type": "FLUX_ONE_SHOT_PRECHECK_FAIL_CLOSED_AND_RUNNER_REPAIR",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_CONSOLE_OUTPUT_PLUS_GITHUB_RUNNER_INSPECTION",
+  "observed": {
+    "attempted_task_id": "FLUX-EDIT-BRIDGE-ONESHOT-001",
+    "failure_stage": "PRECHECK",
+    "failure": "gh: Not Found (HTTP 404)",
+    "generation_count": 0,
+    "final_status": "STOPPED_FAIL_CLOSED",
+    "local_result_path": "C:/Users/User/.codex/.chatgpt-projects/g-p-6ac02e5d5b84819190b29f630d0ff0e5/outputs/flux-edit-base-b1-b2-2026-10-16/RAW_RESULT.json",
+    "writeback": "FAIL_EXCEPTION_GH_NOT_FOUND_HTTP_404",
+    "cost_eur": 0
+  },
+  "root_cause": {
+    "classification": "RUNNER_CONTROL_PLANE_BUG_NOT_COMFYUI_OR_FLUX_FAILURE",
+    "detail": "The v0.1 runner executed `gh api` under ErrorActionPreference=Stop while probing whether the remote raw-result path existed. The expected HTTP 404 for an absent file surfaced as a terminating error before the explicit LASTEXITCODE handling could interpret absence.",
+    "experimental_outputs_observed": false,
+    "authorization_consumed_by_generation": false
+  },
+  "repair": {
+    "runner": "tools/nexia_local_flux_edit_gate_v0_2.ps1",
+    "runner_blob_sha": "97276306b60cd6e05572a91a32aac6ff89368ca8",
+    "runner_commit": "a548fc49824104349df62f46017b5388b22892df",
+    "strategy": "Pinned v0.1 is patched in-memory only at the two GitHub existence probes. The probe is isolated through Start-Process and interprets HTTP 404/Not Found as ABSENT while treating other nonzero failures as fatal.",
+    "experimental_contract_changed": false,
+    "prompts_changed": false,
+    "seed_changed": false,
+    "workflow_refs_changed": false,
+    "generation_cap_changed": false,
+    "qa_changed": false
+  },
+  "upstream_revalidation": {
+    "pinned_workflow_commit": "04a508b31bec1818e48122ca0761c1de4140a234",
+    "t2i_template_present": true,
+    "t2i_blob_sha": "f181a4c2863074cfaecb5ab0cafe981b66d720fa",
+    "edit_template_present": true,
+    "edit_blob_sha": "e485dca623fdf688e10dbc5c3304f4c2a75de76d"
+  },
+  "truth_boundary": "No FLUX generation occurred. Local image editing remains NOT_VERIFIED_RUNTIME. The explicit one-shot scope remains bounded to the same Base/B1/B2 benchmark; recurrence, persistence, installs, downloads, paid APIs and additional generations remain unauthorized.",
+  "next_action": "KAEL_RUN_PINNED_V0_2_BOOTSTRAP_ON_LOCAL_PC"
+}
