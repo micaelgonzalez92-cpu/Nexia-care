@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001",
+  "timestamp": "2026-10-16",
+  "type": "LTX098_BOUNDED_I2V_TEST_FAIL_AND_CLEANUP_CLOSE",
+  "state_version": 73,
+  "status": "TECHNICAL_RUNTIME_PASS_VISUAL_FAIL_ROUTE_STOPPED_CHECKPOINTS_CLEANED",
+  "authority": "KAEL_REPORTED_WORK_EXECUTION_RESULT",
+  "artifact": "research/NEXIA_LOCAL_UGC_VIDEO_CAPABILITY_BOUNDARY_V1_2026-10-16.md",
+  "replacement": {
+    "old_checkpoint": {
+      "file": "ltx-video-2b-v0.9.5.safetensors",
+      "bytes_before_delete": 6340729500,
+      "gib_before_delete": 5.905,
+      "deleted": true,
+      "final_absent": true
+    },
+    "new_checkpoint": {
+      "file": "ltxv-2b-0.9.8-distilled-fp8.safetensors",
+      "source": "Lightricks/Hugging Face official",
+      "bytes": 4461695684,
+      "sha256": "d6d8fa8ed3a98346787c2503ac80fb5d7cebcf80e356b79a2ba361fbadf97e15",
+      "download_verified_during_and_after_readback": true,
+      "removed_after_visual_fail": true,
+      "final_absent": true
+    },
+    "both_ltx_checkpoints_absent_at_close": true,
+    "t5xxl_same_hash_as_pretest": true,
+    "comfyui_preserved": true,
+    "flux_preserved": true,
+    "ollama_modified": false,
+    "ollama_stopped": false,
+    "v1_v2_v3_and_reports_hashes_preserved": true,
+    "pagefile_mib_before": 9728,
+    "pagefile_mib_after": 9728,
+    "pagefile_configuration_changed": false
+  },
+  "test": {
+    "input": "accepted Phase A still A2",
+    "input_hash_identical_to_original": true,
+    "generation_submissions": 1,
+    "retries": 0,
+    "output_resolution": "448x800",
+    "frames": 97,
+    "fps": 24,
+    "duration_seconds": 4.042,
+    "generation_wall_seconds": 53.922,
+    "start_test_shutdown_seconds": 154.672,
+    "process_ram_peak_mib_sampled": 5767,
+    "system_ram_peak_mib_sampled": 14295,
+    "whole_gpu_vram_peak_mib_sampled": 11537,
+    "oom_recorded": false,
+    "runtime_errors_recorded": false,
+    "configuration": "NATIVE_SINGLE_STAGE_NO_ADDITIONAL_UPSCALER"
+  },
+  "visual_qa": {
+    "result": "FAIL_SEVERE",
+    "sampled_frames": 13,
+    "normal_speed_playback_completed": false,
+    "product_integrity": "FAIL_SEVERE_ADDITIONAL_BOXES_AND_CONTENT_MUTATION_FROM_APPROX_1_67S",
+    "continuity_physics": "FAIL_SEVERE_FLOATING_BOX_APPROX_2_67_TO_3_67S",
+    "action_intelligibility": "PARTIAL_GENERIC_LIFT_REPOSITION_NOT_REQUESTED_SLIDE_OUT_AND_BACK",
+    "anatomy": "NOT_VERIFIED_PASS",
+    "stop_justification": "PRODUCT_AND_CONTINUITY_HARD_FAILURES_SUFFICIENT"
+  },
+  "economics": {
+    "cash_spend_eur": 0,
+    "paid_api": false,
+    "publication": false
+  },
+  "decision": "STOP_CURRENT_LOCAL_LTX_I2V_ROUTE_AND_PAUSE_ADDITIONAL_LOCAL_UGC_MODEL_HOPPING",
+  "framepack": "DEFERRED_NOT_INSTALLED",
+  "truth_boundary": "Runtime success is verified only for this bounded sample. Professional capability is not established. Normal-speed temporal review and anatomy PASS were not verified. Local evidence is reported from the authorized Work execution and is not independently re-mounted in this chat.",
+  "next_action": "REPRIORITIZE_MATERIAL_WIP_TO_EXP_AUTO_REALITY_LOOP_AND_AUTO_PRODUCT_RUNTIME_VALIDATION"
+}
