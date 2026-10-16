@@ -1,7 +1,7 @@
 {
-  "schema_version": 51,
+  "schema_version": 52,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC ROUTE A STOPPED / LTX 0.9.8 RUNTIME PASS VISUAL FAIL / LOCAL UGC MODEL HOPPING PAUSED / EXP-AUTO REALITY LOOP PRIORITY / AUTO-PRODUCT RUNTIME VALIDATION NEXT / FRAMEPACK DEFERRED",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / LTX 0.9.8 VISUAL FAIL PRESERVED / VIDEO MODEL HOPPING PAUSED / UGC PROMPT-TASK DECOMPOSITION REOPENED WITH EXISTING FLUX / EXP-AUTO REALITY LOOP PRIORITY / AUTO-PRODUCT RUNTIME VALIDATION ACTIVE / FRAMEPACK DEFERRED",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -17,7 +17,7 @@
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_EXTERNAL_VALIDATION_PRIORITY",
-    "lane_2": "VETA-AI-UGC-001_PAUSED_CURRENT_LOCAL_VIDEO_ARCHITECTURE_BOUNDARY_REACHED",
+    "lane_2": "VETA-AI-UGC-001_PROMPT_TASK_DECOMPOSITION_EXISTING_FLUX_IMAGE_EDIT_GATE_NO_NEW_DOWNLOAD",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_VALIDATION_NEXT",
     "rule": "Do not activate a fourth material lane unless one lane is promoted, paused, falsified, or displaced by hard precedence."
   },
@@ -33,19 +33,8 @@
     "ltx_0_9_8_gate": {
       "status": "TECHNICAL_RUNTIME_PASS_VISUAL_FAIL_CLOSED",
       "event": "events/EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001.json",
-      "artifact": "research/NEXIA_LOCAL_UGC_VIDEO_CAPABILITY_BOUNDARY_V1_2026-10-16.md",
-      "input": "accepted Phase A still A2",
-      "generation_submissions": 1,
-      "retries": 0,
-      "output_resolution": "448x800",
-      "frames": 97,
-      "fps": 24,
       "duration_seconds": 4.042,
       "generation_wall_seconds": 53.922,
-      "start_test_shutdown_seconds": 154.672,
-      "process_ram_peak_mib_sampled": 5767,
-      "system_ram_peak_mib_sampled": 14295,
-      "whole_gpu_vram_peak_mib_sampled": 11537,
       "oom_recorded": false,
       "runtime_errors_recorded": false,
       "visual_result": "FAIL_SEVERE_PRODUCT_INTEGRITY_AND_CONTINUITY_PHYSICS",
@@ -65,14 +54,28 @@
       "pagefile_mib": 9728,
       "pagefile_changed": false
     },
-    "local_capability_boundary": "Current machine can run tested LTX 2B FP8 without OOM, but bounded output failed product integrity and physical continuity. Do not infer professional UGC capability from runtime feasibility.",
-    "decision": "PAUSE_ADDITIONAL_LOCAL_UGC_VIDEO_MODEL_HOPPING",
-    "reopen_conditions": [
-      "external buyer demand justifies stronger video capability investment",
-      "hardware capacity materially improves",
-      "materially stronger low-footprint model appears with credible product-consistency evidence",
-      "bounded cloud video route becomes available at acceptable cost and authority"
-    ]
+    "model_hopping": "PAUSED",
+    "experimental_design_reassessment": {
+      "status": "ACTIVE_BOUNDED_RESEARCH",
+      "artifact": "research/NEXIA_UGC_PROMPT_TASK_COMPLEXITY_REASSESSMENT_V1_2026-10-16.md",
+      "event": "events/EVT-2026-10-16-UGC-PROMPT-TASK-REASSESS-001.json",
+      "exact_ltx098_test_prompt_in_canonical_artifacts": false,
+      "hypothesis": "PROMPT_AND_TASK_COMPLEXITY_MAY_HAVE_MATERIALLY_CONTRIBUTED_TO_FAIL_ROOT_CAUSE_NOT_ISOLATED",
+      "complexity_factors": [
+        "transparent/refractive plastic",
+        "repeated similar boxes",
+        "object-count and geometry preservation",
+        "interaction/occlusion",
+        "reversible motion",
+        "temporal physical continuity"
+      ],
+      "existing_image_engine": "ComfyUI + FLUX.2 Klein 4B FP8",
+      "canonical_local_image_status": "VERIFIED_BOUNDED_IMAGE_GENERATION",
+      "official_flux_image_edit_support": true,
+      "local_image_edit_status": "NOT_VERIFIED",
+      "next_gate": "VERIFY_EXISTING_FLUX_IMAGE_EDIT_WORKFLOW_WITHOUT_INSTALLING_ANYTHING",
+      "video_reopen_rule": "ONLY_AFTER_SIMPLER_IMAGE_AND_PROMPT_CONTROLS_PROVIDE_NEW_EVIDENCE"
+    }
   },
   "framepack_capacity": {
     "installation_status": "NOT_INSTALLED_NOT_AUTHORIZED",
@@ -87,8 +90,7 @@
     "status": "ACTIVE_RESEARCH_LANE_NEXT_RUNTIME_GATE",
     "reference_result": "PASS_NODE_REFERENCE_ONLY_NOT_N8N",
     "n8n_runtime": "NOT_EXECUTED",
-    "publication": false,
-    "next_action": "RUN_BOUNDED_N8N_RUNTIME_VALIDATION_IF_GREEN_OR_PREPARE_GATE"
+    "publication": false
   },
   "exp_auto_001": {
     "status": "ALIVE_EXTERNAL_VALIDATION_PRIORITY",
@@ -101,11 +103,11 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V51.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V50.json",
-    "latest_verified_event_id": "EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001.json",
-    "latest_verified_event_blob_sha": "7cc3b5f3df9cf71577990e1bedbd77bc8f139f89"
+    "active_index": "NEXIA_EVENT_INDEX_V52.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V51.json",
+    "latest_verified_event_id": "EVT-2026-10-16-UGC-PROMPT-TASK-REASSESS-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-UGC-PROMPT-TASK-REASSESS-001.json",
+    "latest_verified_event_blob_sha": "ae85649074205c4a82595cde8c2ded667c822ea9"
   },
   "economics": {
     "revenue_eur": 0,
@@ -114,18 +116,19 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "ugc_local_video_additional_model_or_download": "NOT_JUSTIFIED_REQUIRES_NEW_EVIDENCE_AND_EXPLICIT_KAEL_GATE",
+    "ugc_existing_flux_read_only_workflow_check": "GREEN_YELLOW_PREPARE_WITHOUT_INSTALL",
+    "ugc_new_video_model_or_download": "NOT_AUTHORIZED",
     "framepack_or_pagefile_change": "NOT_AUTHORIZED",
     "contra_v4_public_edit": "KAEL_REQUIRED_SEPARATE_GATE",
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Authorized LTX 0.9.8 bounded test completed according to Work result: runtime completed without OOM, but severe product mutation and floating-object continuity failures caused visual FAIL. The test checkpoint was removed; both LTX checkpoints are absent; shared dependencies and evidence were preserved.",
+    "last_completed_verified_action": "UGC root-cause attribution was reassessed after Kael identified prompt engineering and scene complexity as unisolated variables. The prior LTX visual FAIL remains valid, but a bounded existing-FLUX image-edit/prompt benchmark is reopened without new downloads or video model hopping.",
     "human_action_required_now": false,
     "pending_human_action": "NONE",
-    "surface": "Chat / internal prioritization",
-    "resume_from": "Do not continue local UGC model hopping. Reprioritize WIP toward EXP-AUTO-001 external validation and VETA-AUTO-PRODUCT-001 n8n runtime validation. Reopen UGC only on new material evidence or capacity change.",
-    "truth_limit": "Do not claim professional UGC capability, anatomy PASS, normal-speed temporal PASS, buyer demand, sale, payment or profit without direct evidence."
+    "surface": "Chat / internal research and preparation",
+    "resume_from": "Verify whether the existing ComfyUI + FLUX.2 Klein 4B FP8 installation already exposes an image-edit workflow. If yes, design a low-complexity single-reference edit benchmark and an A/B prompt test before any new video model is considered.",
+    "truth_limit": "Do not erase the LTX visual FAIL. Do not claim local FLUX image editing or professional UGC capability until tested."
   },
-  "next_action": "NEXIA_REPRIORITIZE_TO_EXP_AUTO_EXTERNAL_VALIDATION_AND_AUTO_PRODUCT_RUNTIME"
+  "next_action": "NEXIA_VERIFY_EXISTING_FLUX_IMAGE_EDIT_WORKFLOW_NO_INSTALL"
 }
