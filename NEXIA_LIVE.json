@@ -1,7 +1,7 @@
 {
-  "schema_version": 47,
+  "schema_version": 48,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC ROUTE A STOPPED / STORAGE AUDIT COMPLETE / FRAMEPACK TECHNICALLY PLAUSIBLE BUT OPERATIONALLY WEAK ON 16GB RAM / LOWER-FOOTPRINT I2V COMPARISON / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC ROUTE A STOPPED / FRAMEPACK DEFERRED / LTX 2B 0.9.8 FP8 SELECTED / LOCAL COMFYUI COMPATIBILITY GATE / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -17,7 +17,7 @@
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_CONTRA_WORKANA_AS_CHANNELS",
-    "lane_2": "VETA-AI-UGC-001_ROUTE_A_STOPPED_LOWER_FOOTPRINT_I2V_COMPARISON",
+    "lane_2": "VETA-AI-UGC-001_LTX_2B_0_9_8_FP8_LOCAL_COMPATIBILITY_GATE",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED",
     "rule": "Do not activate a fourth material lane unless one lane is promoted, paused, falsified, or displaced by hard precedence."
   },
@@ -36,44 +36,35 @@
     "C_free_gib": 260.91,
     "D_free_gib": 877.45,
     "total_free_gib": 1138.36,
-    "immediate_storage_blocker": false,
-    "estimated_candidate_cleanup_gib": 18.44,
     "C_drive": {"model": "CT480BX500SSD1", "media": "SSD", "bus": "SATA"},
     "D_drive": {"model": "ST1000DM010-2EP102", "media": "HDD", "bus": "SATA"},
-    "ltx_weights": {
-      "status": "CANDIDATE_DELETE_NOT_AUTHORIZED",
-      "estimated_gib": 15.02,
-      "dependency_risk": "t5xxl_fp16 may serve other workflows; verify before deletion"
-    }
+    "immediate_storage_blocker": false
   },
   "framepack_capacity": {
-    "candidate": "OFFICIAL_FRAMEPACK",
     "installation_status": "NOT_INSTALLED_NOT_AUTHORIZED",
     "gpu": "NVIDIA GeForce RTX 3060",
     "vram_total_mib": 12288,
-    "vram_free_mib": 11404,
-    "official_min_vram_nominal_fit": true,
     "ram_total_gib": 15.96,
-    "ram_free_gib": 6.33,
-    "virtual_total_gib": 25.46,
-    "virtual_free_gib": 12.93,
-    "pagefile_path": "C:\\pagefile.sys",
-    "pagefile_allocated_mib": 9728,
     "pagefile_allocated_gib": 9.50,
-    "pagefile_current_usage_mib": 121,
-    "pagefile_peak_usage_mib": 124,
-    "runtime_drive_preference": "C_SSD_ONLY_IF_PURSued",
     "operational_fit": "WEAK_HIGH_THRASH_AND_LATENCY_RISK_ON_16GB_RAM",
-    "decision": "DO_NOT_CHANGE_PAGEFILE_OR_INSTALL_FRAMEPACK_YET",
-    "truth_limit": "Nominal VRAM fit does not prove successful or performant FramePack runtime. Community reports are not guarantees for this machine."
+    "decision": "DEFER_WHILE_LOWER_FOOTPRINT_LTX_ROUTE_IS_TESTED"
   },
   "next_video_architecture_research": {
-    "priority": "LOWER_FOOTPRINT_EXISTING_COMFYUI_I2V_BEFORE_SYSTEM_CHANGE",
-    "candidate_1": "LTX_VIDEO_2B_0_9_8_DISTILLED_FP8_MODEL_SWAP",
-    "candidate_1_remote_weight_size_gb": 4.46,
-    "candidate_1_status": "RESEARCH_ONLY_NOT_DOWNLOADED",
-    "candidate_1_reason": "Official 2B distilled FP8 model is smaller than the installed old 0.9.5 2B checkpoint and reuses the existing ComfyUI/LTX family rather than adding a new >30GB stack; professional quality improvement over old LTX remains unverified.",
-    "rule": "Do not delete old LTX weights until the replacement route is validated and dependencies are mapped."
+    "artifact": "research/NEXIA_LOW_FOOTPRINT_I2V_COMPARISON_V1_2026-10-16.md",
+    "status": "CANDIDATE_SELECTED_READ_ONLY_COMPATIBILITY_GATE",
+    "selected_candidate": "LTX_VIDEO_2B_0_9_8_DISTILLED_FP8",
+    "selected_file": "ltxv-2b-0.9.8-distilled-fp8.safetensors",
+    "remote_size_gb": 4.46,
+    "downloaded": false,
+    "installed": false,
+    "runtime_verified": false,
+    "dependency_reuse": ["t5xxl_fp16.safetensors", "existing ComfyUI LTXV core support if local build is sufficiently current"],
+    "keep_t5xxl_fp16": true,
+    "old_ltx_0_9_5": "CANDIDATE_DELETE_BEFORE_REPLACEMENT_DOWNLOAD_AFTER_EXPLICIT_KAEL_AUTHORIZATION_AND_PATH_RECONFIRMATION",
+    "rejected": ["SVD_CURRENT_OBJECTIVE", "HUNYUAN_COSMOS_LOW_FOOTPRINT_PATH"],
+    "deferred": ["FRAMEPACK"],
+    "next_gate": "READ_LOCAL_COMFYUI_VERSION_AND_NATIVE_LTXV_NODE_SUPPORT",
+    "truth_limit": "Research selection does not prove local 0.9.8 FP8 load, performance or professional quality."
   },
   "auto_product": {
     "reference_result": "PASS_NODE_REFERENCE_ONLY_NOT_N8N",
@@ -87,11 +78,11 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V47.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V46.json",
-    "latest_verified_event_id": "EVT-2026-10-16-FRAMEPACK-PAGEFILE-MEDIA-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-FRAMEPACK-PAGEFILE-MEDIA-001.json",
-    "latest_verified_event_blob_sha": "dccb3d552a4ca01e813b629569270447b94c2b9a"
+    "active_index": "NEXIA_EVENT_INDEX_V48.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V47.json",
+    "latest_verified_event_id": "EVT-2026-10-16-LOW-FOOTPRINT-I2V-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-LOW-FOOTPRINT-I2V-001.json",
+    "latest_verified_event_blob_sha": "f7fce63fc84d19cb4c818280293e54612e65f30c"
   },
   "economics": {
     "revenue_eur": 0,
@@ -100,19 +91,20 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
+    "local_read_only_compatibility_check": "KAEL_WINDOWS_PC_REQUIRED_NOW",
     "local_deletion": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_BEFORE_ANY_MATERIAL_DELETE",
-    "pagefile_or_system_configuration_change": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_IF_RECOMMENDED_LATER",
-    "new_model_or_large_download": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_AFTER_LOWER_FOOTPRINT_COMPARISON",
+    "new_model_download": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_AFTER_COMPATIBILITY_GATE",
+    "pagefile_or_system_configuration_change": "NOT_RECOMMENDED_NOW_SEPARATE_GATE_IF_REOPENED",
     "contra_v4_public_edit": "KAEL_REQUIRED_SEPARATE_GATE",
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Exact pagefile is 9728 MiB on C SSD; D is a Seagate BarraCuda HDD. FramePack remains technically plausible by VRAM but operationally weak on 16GB RAM, so no pagefile change or install is justified before comparing lower-footprint existing-ComfyUI I2V routes.",
-    "human_action_required_now": false,
-    "pending_human_action": "NONE",
-    "surface": "Chat / internal research",
-    "resume_from": "Compare LTX-Video 2B 0.9.8 distilled FP8 and other low-footprint I2V options that can reuse the existing ComfyUI stack. Quantify download size, dependency reuse, expected VRAM/RAM fit, quality upside over old LTX 0.9.5, and replacement cleanup plan before any authorization gate.",
-    "truth_limit": "Do not claim FramePack or replacement I2V runtime quality, successful install, cleanup, buyer demand, sale or profit without direct evidence."
+    "last_completed_verified_action": "Low-footprint I2V comparison selected official LTX-Video 2B v0.9.8 distilled FP8 (4.46 GB) for a local compatibility gate. SVD is larger and less directionally suitable; Hunyuan/Cosmos are not low-footprint; FramePack remains deferred. No download, deletion or install occurred.",
+    "human_action_required_now": true,
+    "pending_human_action": "READ_LOCAL_COMFYUI_VERSION_AND_NATIVE_LTXV_NODE_SUPPORT",
+    "surface": "Windows PC / PowerShell",
+    "resume_from": "Read ComfyUI version and confirm native LTXV core node symbols in the current portable install. If compatible, issue a separate RED replacement gate: reconfirm old 0.9.5 checkpoint path, delete only that obsolete checkpoint, then download the official 4.46 GB 0.9.8 distilled FP8 replacement for one bounded 3-5s I2V test.",
+    "truth_limit": "Do not claim replacement runtime compatibility, successful generation, cleanup, professional UGC capability, buyer demand, sale, payment or profit without direct evidence."
   },
-  "next_action": "NEXIA_COMPARE_LOW_FOOTPRINT_EXISTING_COMFYUI_I2V"
+  "next_action": "KAEL_READ_LOCAL_COMFYUI_COMPATIBILITY"
 }
