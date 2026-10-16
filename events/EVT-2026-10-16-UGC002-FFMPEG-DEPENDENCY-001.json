@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001",
+  "timestamp": "2026-10-16",
+  "timestamp_precision": "date_only",
+  "type": "UGC002_LOCAL_DEPENDENCY_GATE",
+  "state_version": 73,
+  "status": "VERIFIED_BLOCKED_NOT_INSTALLED",
+  "authority": "USER_REPORTED_LOCAL_DRY_RUN_PLUS_WORK_INSPECTION_NO_INSTALL",
+  "experiment": "UGC-VIDEO-002",
+  "route": "A_ANATOMY_MINIMIZED_DETERMINISTIC",
+  "evidence": {
+    "runner_status": "FAIL",
+    "runner_error": "RuntimeError: FFMPEG_NOT_AVAILABLE; no installation attempted.",
+    "ffprobe_reusable_copy_located": false,
+    "ffmpeg_reusable_copy_located": false,
+    "absence_scope_limit": "No reusable copy was located in accessible search scope; this does not assert absolute absence from inaccessible folders or archives."
+  },
+  "classification": "BLOCKED_NOT_INSTALLED_NOT_EXPERIMENT_FAIL",
+  "recommended_dependency": {
+    "package_id": "Gyan.FFmpeg",
+    "installer": "winget",
+    "proposed_command": "winget install --id Gyan.FFmpeg --exact --source winget",
+    "expected_cash_cost_eur": 0,
+    "installation_executed": false
+  },
+  "human_gate": {
+    "class": "RED",
+    "reason": "Installing software modifies the local machine and therefore requires explicit Kael authorization.",
+    "next_action": "KAEL_EXPLICITLY_AUTHORIZE_OR_REJECT_FFMPEG_INSTALL"
+  },
+  "unchanged_truth": {
+    "ugc_video_002_professional_pass": false,
+    "ugc_video_002_render_executed": false,
+    "buyer_demand_verified": false,
+    "sale_verified": false,
+    "settled_payment_verified": false,
+    "profit_verified": false
+  }
+}
