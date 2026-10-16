@@ -71,10 +71,11 @@ def find_output(explicit=None):
 
 def vf(mode, frames):
     pre = "scale=1200:2134:force_original_aspect_ratio=increase,crop=1200:2134"
+    denom = max(frames - 1, 1)
     if mode == "pan_left":
-        z = "zoompan=z='1.06':x='(iw-iw/zoom)*(1-on/(d-1))':y='(ih-ih/zoom)/2'"
+        z = f"zoompan=z='1.06':x='(iw-iw/zoom)*(1-on/{denom})':y='(ih-ih/zoom)/2'"
     elif mode == "pan_right":
-        z = "zoompan=z='1.06':x='(iw-iw/zoom)*(on/(d-1))':y='(ih-ih/zoom)/2'"
+        z = f"zoompan=z='1.06':x='(iw-iw/zoom)*(on/{denom})':y='(ih-ih/zoom)/2'"
     else:
         z = "zoompan=z='min(1+on*0.0008,1.08)':x='(iw-iw/zoom)/2':y='(ih-ih/zoom)/2'"
     return f"{pre},{z}:d={frames}:s=1080x1920:fps=30,format=yuv420p"
