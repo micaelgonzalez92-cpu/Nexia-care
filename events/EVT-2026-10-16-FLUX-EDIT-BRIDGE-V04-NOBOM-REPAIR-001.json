@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-NOBOM-REPAIR-001",
+  "timestamp": "2026-10-16",
+  "type": "FLUX_ONE_SHOT_WRAPPER_V04_GITHUB_PAYLOAD_NOBOM_REPAIR",
+  "state_version": 73,
+  "evidence_source": "VERIFIED_DIAGNOSTIC_PLUS_GITHUB_SCRIPT_READBACK",
+  "observed": {
+    "powershell_version": "5.1.19041.6456",
+    "failed_payload_bom_bytes_decimal": [239,187,191],
+    "failed_payload_bom_verified": true,
+    "isolated_sqlite_import_pass": true,
+    "isolated_comfy_db_import_pass": true,
+    "full_comfy_server_startup_pass": true,
+    "full_comfy_server_ready_seconds": 49.646,
+    "benchmark_generations_executed": 0
+  },
+  "repair": {
+    "runner": "tools/nexia_local_flux_edit_gate_v0_4.ps1",
+    "runner_blob_sha": "38676b620ec0895c86cd6d6746a5f253b3212d6e",
+    "runner_commit": "7aadfea975a70a25aaedfbb9918833f047ac6427",
+    "strategy": "Preserve v0.3 404-safe probes and replace only github-writeback-payload.json serialization with explicit UTF8Encoding(false), plus fail-closed BOM byte self-test before gh api PUT.",
+    "experimental_contract_changed": false,
+    "prompts_changed": false,
+    "seed_changed": false,
+    "workflow_refs_changed": false,
+    "generation_cap_changed": false,
+    "qa_changed": false,
+    "comfy_startup_args_changed": false
+  },
+  "truth_boundary": "The no-BOM repair is prepared and read back but not yet locally executed. GitHub HTTP 400 exact causality remains high-confidence until a no-BOM local writeback succeeds. No BASE/B1/B2 generation has yet occurred.",
+  "next_action": "KAEL_RUN_PINNED_V0_4_SAME_FROZEN_ONESHOT_BENCHMARK"
+}
