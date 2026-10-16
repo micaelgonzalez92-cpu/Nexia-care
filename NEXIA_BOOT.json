@@ -1,6 +1,6 @@
 {
-  "schema_version": 49,
-  "boot_version": 104,
+  "schema_version": 50,
+  "boot_version": 105,
   "generated_at": "2026-10-16",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,7 +15,8 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "NEXIA_EVENT_INDEX_V49.json",
+    "NEXIA_EVENT_INDEX_V50.json",
+    "events/EVT-2026-10-16-LTX098-REPLACEMENT-AUTH-001.json",
     "events/EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001.json",
     "events/EVT-2026-10-16-LOW-FOOTPRINT-I2V-001.json",
     "research/NEXIA_LOW_FOOTPRINT_I2V_COMPARISON_V1_2026-10-16.md",
@@ -25,25 +26,24 @@
     "NEXIA_EXECUTION_CAPABILITIES.json when execution routing is material",
     "experiments/UGC-VIDEO-002.md",
     "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md when Contra execution is material",
-    "read V49 base V48/V47/V46 and earlier indexes/events as needed",
+    "read V50 base V49/V48/V47 and earlier indexes/events as needed",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "fd233589b5741076215c184636a18daf29db7889",
+  "live_state_blob_sha": "cb2919ba12e0caa6c3ddde71c4b05fdbeccad82b",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V49.json",
-    "active_index_blob_sha": "78de07ecc494fcf72249b8e38c3978c54927eb26",
-    "latest_verified_event_id": "EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001.json",
-    "latest_verified_event_blob_sha": "62e7876900a6d1efd5b0e0fa7d5376ebc0bcd04d",
-    "base_index": "NEXIA_EVENT_INDEX_V48.json"
+    "active_index": "NEXIA_EVENT_INDEX_V50.json",
+    "latest_verified_event_id": "EVT-2026-10-16-LTX098-REPLACEMENT-AUTH-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-LTX098-REPLACEMENT-AUTH-001.json",
+    "latest_verified_event_blob_sha": "d4637e385626b9017e3e78ee656f03fd163cc892",
+    "base_index": "NEXIA_EVENT_INDEX_V49.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ALIVE",
-    "lane_2": "UGC_LTX_2B_0_9_8_FP8_REPLACEMENT_AUTHORIZATION_GATE",
+    "lane_2": "UGC_LTX_2B_0_9_8_FP8_REPLACEMENT_AUTHORIZED_WORK_PENDING",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED"
   },
   "capacity_checkpoint": {
@@ -54,13 +54,12 @@
     "framepack_operational_fit": "WEAK_DEFERRED",
     "selected_low_footprint_candidate": "LTX_VIDEO_2B_0_9_8_DISTILLED_FP8_4_46GB",
     "local_compatibility": "PASS_COMFYUI_0_39_0_NATIVE_LTXV_NODES_PRESENT",
-    "old_checkpoint_size_gib": 5.905,
-    "t5xxl_shared_size_gib": 9.116,
-    "candidate_downloaded": false,
-    "old_ltx_deleted": false
+    "replacement_authorized": true,
+    "candidate_downloaded": "NOT_VERIFIED",
+    "old_ltx_deleted": "NOT_VERIFIED"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — ROUTE A STOPPED; LTX 0.9.8 FP8 LOCAL COMPATIBILITY PASS; REPLACEMENT TEST AUTHORIZATION GATE",
-  "human_gate": "Explicit Kael authorization is now required before deleting the verified old 0.9.5 checkpoint and downloading the official 4.46GB 0.9.8 distilled FP8 replacement. Keep t5xxl_fp16. No other deletion, installation, spend or publication is authorized.",
-  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V49_PLUS_LIVE_SCHEMA_49_LTX098_COMPATIBILITY_PASS",
-  "next_action": "KAEL_AUTHORIZE_LTX098_REPLACEMENT_TEST"
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — LTX 0.9.8 REPLACEMENT AUTHORIZED; WORK LOCAL EXECUTION PENDING VERIFICATION",
+  "human_gate": "No additional Kael action is required in this chat. Work has the exact authorized scope: delete only old LTX 0.9.5, keep t5xxl, download official LTX 0.9.8 distilled FP8, and run exactly one bounded 3-5 second local I2V test. Do not claim completion until postconditions are verified.",
+  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V50_PLUS_LIVE_SCHEMA_50_LTX098_AUTHORIZED_WORK_PENDING",
+  "next_action": "AWAIT_WORK_LTX098_REPLACEMENT_TEST_RESULT_AND_VERIFY"
 }
