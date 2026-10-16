@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001",
+  "timestamp": "2026-10-16",
+  "type": "LTX098_LOCAL_COMPATIBILITY_CHECK",
+  "state_version": 73,
+  "status": "LOCAL_COMPATIBILITY_GATE_PASS_REPLACEMENT_AUTHORIZATION_REQUIRED",
+  "candidate": "LTX-Video 2B v0.9.8 distilled FP8",
+  "observed": {
+    "comfyui_version": "0.39.0",
+    "ltx_core_file": "comfy_extras/nodes_lt.py",
+    "ltx_core_file_found": true,
+    "ltxv_img_to_video_found": true,
+    "ltxv_img_to_video_inplace_found": true,
+    "ltxv_conditioning_found": true,
+    "model_sampling_ltxv_found": true,
+    "old_checkpoint_path": "C:/Users/User/.codex/.chatgpt-projects/g-p-6ac02e5d5b84819190b29f630d0ff0e5/outputs/creative-benchmark-2026-10-12/ComfyUI_windows_portable/ComfyUI/models/checkpoints/ltx-video-2b-v0.9.5.safetensors",
+    "old_checkpoint_size_gib": 5.905,
+    "t5xxl_path": "C:/Users/User/.codex/.chatgpt-projects/g-p-6ac02e5d5b84819190b29f630d0ff0e5/outputs/creative-benchmark-2026-10-12/ComfyUI_windows_portable/ComfyUI/models/text_encoders/t5xxl_fp16.safetensors",
+    "t5xxl_size_gib": 9.116
+  },
+  "decision": "COMPATIBILITY_GATE_PASS",
+  "cleanup_boundary": {
+    "keep_t5xxl_fp16": true,
+    "old_ltx_0_9_5_checkpoint": "CANDIDATE_DELETE_ONLY_AFTER_EXPLICIT_KAEL_AUTHORIZATION",
+    "new_ltx_0_9_8_checkpoint": "NOT_DOWNLOADED_NOT_INSTALLED"
+  },
+  "bounded_test_contract": {
+    "input": "one accepted Phase A still",
+    "target_duration_seconds": "3-5",
+    "cash_eur": 0,
+    "publication": false,
+    "measure": ["load_success", "wall_time", "VRAM_peak", "RAM_peak", "output_duration", "anatomy_or_product_geometry_hard_fail", "temporal_coherence", "product_action_intelligibility"]
+  },
+  "authority": "NO_DELETE_NO_DOWNLOAD_NO_INSTALL_WITHOUT_EXPLICIT_KAEL_APPROVAL",
+  "next_action": "KAEL_AUTHORIZE_LTX098_REPLACEMENT_TEST"
+}
