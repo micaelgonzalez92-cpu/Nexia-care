@@ -1,0 +1,44 @@
+{
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-ONESHOT-AUTH-001",
+  "date": "2026-10-16",
+  "type": "LOCAL_EXECUTION_AUTHORIZATION_AND_PREPARATION",
+  "status": "AUTHORIZED_PREPARED_NOT_EXECUTED",
+  "authority": "EXPLICIT_KAEL_ONE_SHOT",
+  "request": "Use a bridge local executor one shot for this benchmark instead of Work.",
+  "scope": {
+    "task": "NEXIA_LOCAL_FLUX_EDIT_ONE_SHOT_TASK.json",
+    "task_blob_sha": "fc3f0a8e6180e5830cd2d97b2493dd1657b5928e",
+    "runner": "tools/nexia_local_flux_edit_gate_v0_1.ps1",
+    "runner_blob_sha": "c0efc91c5285ec634ba6f1c53aa5aa08d18cb5ba",
+    "prereg": "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md",
+    "prereg_blob_sha": "8276613aff9ba9aca0eec840fc8e0c2f36bca622",
+    "max_generations": 3,
+    "seed": 20261016,
+    "base_resolution": "1024x1024",
+    "no_retries": true
+  },
+  "runner_design": {
+    "execution": "one foreground PowerShell process; no persistent listener/service",
+    "local_engine": "existing ComfyUI 0.39.0 + FLUX.2 Klein 4B FP8",
+    "control": "existing Chrome/Edge CDP + ComfyUI localhost API; no Playwright/Selenium install",
+    "workflow_sources": "official Comfy-Org workflow templates pinned to commit 04a508b31bec1818e48122ca0761c1de4140a234",
+    "preflight": "fail closed if effective sampler/scheduler/CFG/model/resolution differ from preregistered contract",
+    "base_gate": "show BASE locally and require Kael SI confirmation before B1/B2",
+    "result_return": "sanitized JSON via existing authenticated GitHub CLI content API with readback; no images uploaded"
+  },
+  "forbidden": [
+    "Work/Codex execution",
+    "software/model/runtime installation or update",
+    "paid API",
+    "new account",
+    "pagefile/system configuration change",
+    "publication/external contact",
+    "recurring scheduler/polling/persistent worker",
+    "retry/replacement BASE",
+    "generation count above 3"
+  ],
+  "bootstrap_requirement": "Because no persistent listener/scheduler remains active, Kael must start the prepared one-shot runner once from the local computer. GitHub writes alone cannot wake the PC.",
+  "cost_eur": 0,
+  "truth_boundary": "Authorization and runner preparation are verified. No Base/B1/B2 generation has yet been observed and no runtime PASS is claimed.",
+  "next_action": "KAEL_RUN_SINGLE_BOOTSTRAP_COMMAND_THEN_NEXIA_VERIFY_REMOTE_RAW_RESULT"
+}
