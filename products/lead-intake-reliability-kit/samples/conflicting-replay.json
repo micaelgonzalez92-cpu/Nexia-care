@@ -1,0 +1,11 @@
+{
+  "event_id": "sample-001",
+  "name": "Alex Example",
+  "email": "changed@example.com",
+  "phone": "+34 600 123 456",
+  "source": "website-form",
+  "service": "consultation",
+  "desired_date": "2026-11-05",
+  "budget": "500",
+  "message": "Changed material request for the same event identifier."
+}
