@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-UGC-PROMPT-TASK-REASSESS-001",
+  "timestamp": "2026-10-16",
+  "type": "UGC_PROMPT_AND_TASK_COMPLEXITY_REASSESSMENT",
+  "state_version": 73,
+  "status": "UGC_RD_REOPENED_FOR_EXISTING_FLUX_IMAGE_EDIT_PROMPT_BENCHMARK_VIDEO_MODEL_HOPPING_REMAINS_PAUSED",
+  "trigger": "Kael challenged the attribution of prior video failures and identified prompt engineering and scene complexity as unisolated variables.",
+  "artifact": "research/NEXIA_UGC_PROMPT_TASK_COMPLEXITY_REASSESSMENT_V1_2026-10-16.md",
+  "verified": {
+    "ltx098_runtime_pass_visual_fail_preserved": true,
+    "both_ltx_checkpoints_absent": true,
+    "existing_flux2_klein_4b_fp8_preserved": true,
+    "canonical_exact_ltx098_test_prompt_available": false,
+    "official_flux2_klein_4b_supports_image_editing": true,
+    "local_flux_image_editing_verified": false
+  },
+  "hypothesis": "The prior benchmark may have been over-complex for a first diagnostic and prompt/task design may have materially contributed to failure; root-cause attribution is not isolated.",
+  "complexity_factors": [
+    "transparent/refractive plastic",
+    "repeated similar boxes",
+    "strict object-count and product-geometry preservation",
+    "interaction/occlusion",
+    "reversible motion",
+    "temporal physical continuity"
+  ],
+  "decision": "REOPEN_ONLY_BOUNDED_PROMPT_TASK_DECOMPOSITION_USING_EXISTING_FLUX_FIRST",
+  "video_model_hopping": "PAUSED",
+  "new_download_authorized": false,
+  "framepack_authorized": false,
+  "ltx_reinstall_authorized": false,
+  "pagefile_change_authorized": false,
+  "next_action": "VERIFY_LOCAL_FLUX2_KLEIN_IMAGE_EDIT_WORKFLOW_WITHOUT_INSTALLING_ANYTHING",
+  "truth_boundary": "This reopens experimental design investigation, not professional UGC capability. The LTX visual FAIL remains valid for the exact tested setup."
+}
