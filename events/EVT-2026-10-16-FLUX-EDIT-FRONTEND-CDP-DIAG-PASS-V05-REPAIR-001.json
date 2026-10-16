@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-FRONTEND-CDP-DIAG-PASS-V05-REPAIR-001",
+  "timestamp": "2026-10-16",
+  "type": "FLUX_FRONTEND_CDP_DIAG_PASS_AND_V05_REPAIR",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_FRONTEND_DIAG_V02_PLUS_PINNED_RUNNER_SOURCE_REVIEW",
+  "observed": {
+    "frontend_ready_methods": true,
+    "frontend_first_app_seconds": 1.278,
+    "frontend_first_methods_seconds": 1.287,
+    "frontend_observe_seconds": 1.289,
+    "document_ready": "complete",
+    "window_app": true,
+    "loadGraphData": true,
+    "graphToPrompt": true,
+    "graph": true,
+    "rootGraph": true,
+    "isGraphReady": true,
+    "workflow_loaded_by_diag": false,
+    "prompt_submitted_by_diag": false,
+    "generations_executed_by_diag": 0
+  },
+  "root_cause": {
+    "v04_frontend_failure_cause": "POWERSHELL_OUTPUT_CONTAMINATION_FROM_CLIENTWEBSOCKET_CONNECTASYNC_VOIDTASKRESULT",
+    "basis": "Pinned v0.1 runner calls ClientWebSocket.ConnectAsync(...).GetResult() without assigning its return to $null. Windows PowerShell emits System.Threading.Tasks.VoidTaskResult into the function pipeline; Invoke-Js then returns a contaminated collection, causing ConvertFrom-Json in the readiness loop to fail and be swallowed by catch.",
+    "frontend_timeout_hypothesis": false,
+    "frontend_api_removal_hypothesis": false
+  },
+  "repair": {
+    "runner": "tools/nexia_local_flux_edit_gate_v0_5.ps1",
+    "runner_blob_sha": "766262b5e79bb16d711aec517057489eb259bec5",
+    "runner_commit": "fa665d1aee747152ed5cb95f81427e9dbb663165",
+    "cdp_fix": "Assign ConnectAsync GetResult to $null",
+    "github_404_fix_preserved": true,
+    "github_no_bom_fix_preserved": true,
+    "prior_raw_result_preserved": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_001.json",
+    "next_raw_result": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_002.json",
+    "experimental_contract_changed": false,
+    "prompts_changed": false,
+    "seed_changed": false,
+    "workflow_refs_changed": false,
+    "generation_cap_changed": false,
+    "qa_changed": false
+  },
+  "truth_boundary": "Frontend readiness is verified, but BASE/B1/B2 generation and FLUX image editing remain unverified. Zero benchmark generations have occurred across the failed infrastructure attempts. v0.5 is prepared and read back, not yet executed.",
+  "next_action": "KAEL_RUN_PINNED_V0_5_SAME_FROZEN_ONESHOT_BENCHMARK"
+}
