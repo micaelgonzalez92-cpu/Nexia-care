@@ -1,0 +1,25 @@
+{
+  "schema_version": 64,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V63.json",
+    "verified_blob_sha": "24a331c707fdc82422ce6960ef2d753119b4c082"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V05-TARGET-RACE-V06-REPAIR-001",
+      "path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V05-TARGET-RACE-V06-REPAIR-001.json",
+      "verified_blob_sha": "b48baf70734201a17cd6dc603d420c4a8d9da72e"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V05-TARGET-RACE-V06-REPAIR-001",
+  "latest_event_path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V05-TARGET-RACE-V06-REPAIR-001.json",
+  "latest_event_blob_sha": "b48baf70734201a17cd6dc603d420c4a8d9da72e",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V05-TARGET-RACE-V06-REPAIR-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V64 preserves v0.5 as a zero-generation fail-closed attempt with remote raw result _002, records the high-confidence CDP target-selection race derived from comparison with the successful v0.2 diagnostic, and prepares v0.6 to wait specifically for the ComfyUI page target while preserving the frozen experiment and prior raw results."
+}
