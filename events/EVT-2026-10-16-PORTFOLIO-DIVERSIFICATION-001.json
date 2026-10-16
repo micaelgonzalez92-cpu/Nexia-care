@@ -1,0 +1,31 @@
+{
+  "event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
+  "date": "2026-10-16",
+  "type": "PORTFOLIO_STRATEGY_AND_EXPERIMENT_PREPARATION",
+  "status": "VERIFIED_PERSISTED",
+  "authority": "USER_EXPLICIT_DIRECTION_PLUS_GREEN_INTERNAL_PREPARATION",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "decision": "Use a bounded three-lane portfolio rather than treating Contra/Workana as Nexia's only path.",
+  "portfolio": {
+    "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_CONTRA_WORKANA_AS_CHANNELS",
+    "lane_2": "VETA-AI-UGC-001_REACTIVATED_BOUNDED_UGC_VIDEO_002_PREPARED",
+    "lane_3": "VETA-AUTO-PRODUCT-001_ACTIVE_RESEARCH_OPTION"
+  },
+  "artifacts": [
+    {
+      "path": "research/NEXIA_EXPERIMENT_PORTFOLIO_STRATEGY_V1_2026-10-16.md",
+      "verified_blob_sha": "09daded680d9e8473b2a7b644715f7410a6d6d92"
+    },
+    {
+      "path": "experiments/UGC-VIDEO-002.md",
+      "verified_blob_sha": "4fe0df75f59b0c7b7c8c869b306f39edffb3d3e4"
+    }
+  ],
+  "historical_integrity": "UGC-VIDEO-001 remains FINAL FAIL; thresholds/results are not rewritten.",
+  "financial_impact_eur": 0,
+  "external_action_executed": false,
+  "new_account_created": false,
+  "publication_executed": false,
+  "truth_boundary": "Preparation/reactivation does not prove UGC professional capability, demand, business validation, sale, payment or profit. Any local/remote execution must use an authorized surface and respect install/download/spend/account gates."
+}
