@@ -1,7 +1,7 @@
 {
-  "schema_version": 35,
+  "schema_version": 36,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / LIVE HUD / R&D INTELLIGENCE / BOUNDED PORTFOLIO / UGC-VIDEO-002 PREPARED / CONTRA V4 KAEL GATE",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC-VIDEO-002 ROUTE A READY FOR LOCAL DRY RUN / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -24,17 +24,41 @@
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "artifact": "research/NEXIA_EXPERIMENT_PORTFOLIO_STRATEGY_V1_2026-10-16.md",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_CONTRA_WORKANA_AS_CHANNELS",
-    "lane_2": "VETA-AI-UGC-001_REACTIVATED_BOUNDED_UGC_VIDEO_002_PREPARED_NOT_EXECUTED",
-    "lane_3": "VETA-AUTO-PRODUCT-001_ACTIVE_RESEARCH_OPTION_NOT_PUBLIC",
+    "lane_2": "VETA-AI-UGC-001_UGC_VIDEO_002_ROUTE_A_READY_FOR_LOCAL_DRY_RUN",
+    "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED",
     "rule": "Do not activate a fourth material lane unless one lane is promoted, paused, falsified, or displaced by hard precedence."
   },
   "ugc_video_002": {
     "artifact": "experiments/UGC-VIDEO-002.md",
-    "status": "PREPARED_NOT_EXECUTED",
+    "route_a_preexecution": "experiments/UGC-VIDEO-002_ROUTE_A_PREEXECUTION_V1.md",
+    "runner": "tools/run_ugc_video_002_route_a.py",
+    "ledger": "experiments/UGC-VIDEO-002_LEDGER_TEMPLATE.json",
+    "local_handoff": "NEXIA_UGC_VIDEO_002_LOCAL_HANDOFF_2026-10-16.json",
+    "status": "READY_FOR_LOCAL_DRY_RUN_NOT_EXECUTED",
     "cash_budget_eur": 0,
-    "architecture": "HYBRID_STABLE_ASSETS_PLUS_BOUNDED_GENERATIVE_MOTION_PLUS_DETERMINISTIC_EDIT_PLUS_ADVERSARIAL_QA",
-    "first_route": "ANATOMY_MINIMIZED_PRODUCT_FIRST_HYBRID",
-    "historical_integrity": "UGC-VIDEO-001_REMAINS_FINAL_FAIL"
+    "source_assets": ["NEXIA_BENCHMARK_00002_.png", "NEXIA_BENCHMARK_00003_.png"],
+    "route_a_architecture": "ACCEPTED_STILLS_PLUS_DETERMINISTIC_PAN_ZOOM_CUTS_CAPTIONS_NO_NEW_GENERATIVE_MOTION",
+    "route_b_decision": "NO_NATIVE_CURRENT_MODEL_INSTALL_YET",
+    "hardware_context": "RTX_3060_12GB_APPROX_16GB_RAM",
+    "historical_integrity": "UGC-VIDEO-001_REMAINS_FINAL_FAIL",
+    "professional_pass": false
+  },
+  "auto_product": {
+    "competitive_refresh": "research/NEXIA_AUTO_PRODUCT_001_COMPETITIVE_REFRESH_2026-10-16.md",
+    "test_artifact": "research/NEXIA_AUTO_PRODUCT_TEST_001_2026-10-16.md",
+    "v01_gap": "NO_EXPLICIT_EXACT_REPLAY_VS_CONFLICTING_REPLAY_CLASSIFICATION",
+    "v02_design": "products/lead-intake-reliability-kit/REPLAY_CONFLICT_V02_DESIGN.md",
+    "reference_test": "products/lead-intake-reliability-kit/test_replay_contract_v02.js",
+    "reference_result": "PASS_NODE_REFERENCE_ONLY_NOT_N8N",
+    "n8n_runtime": "NOT_EXECUTED",
+    "clean_install_time": "NOT_INSTRUMENTED",
+    "publication": false
+  },
+  "exp_auto_001": {
+    "status": "ALIVE_UNCHANGED",
+    "contra_v4": "INTERNAL_READY_PUBLIC_NOT_APPLIED",
+    "workana": "PENDING",
+    "additional_internal_polish": "CAPPED_PENDING_EXTERNAL_EVIDENCE"
   },
   "active_automations": {
     "verified_enabled_count": 5,
@@ -43,12 +67,12 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V35.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V34.json",
-    "latest_verified_event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001.json",
-    "latest_verified_event_blob_sha": "f99f763be0c14993205189e80251fad9faa3d7d1",
-    "latest_material_business_event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
+    "active_index": "NEXIA_EVENT_INDEX_V36.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V35.json",
+    "latest_verified_event_id": "EVT-2026-10-16-UGC002-PREEXEC-AUTOPRODUCT-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-PREEXEC-AUTOPRODUCT-001.json",
+    "latest_verified_event_blob_sha": "9bd53c99e2b636acc87e046b4c8bdb17fd7c2028",
+    "latest_material_business_event_id": "EVT-2026-10-16-UGC002-PREEXEC-AUTOPRODUCT-001",
     "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
     "latest_material_automation_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001"
   },
@@ -59,12 +83,13 @@
     "observability": "PARTIAL",
     "quality": "PROFESSIONAL_GATE_ACTIVE_UGC_VIDEO_001_FAIL_PRESERVED",
     "security_authority": "ACTIVE_GATED",
-    "reality_validation": "MULTI_LANE_BOUNDED_CONTRA_GATE_PLUS_UGC_CAPABILITY_OPTION",
+    "reality_validation": "MULTI_LANE_BOUNDED",
     "economic_readiness": "NOT_YET_VALIDATED_FOR_SCALING"
   },
   "execution_truth": {
     "local_gpu_image": "VERIFIED_BOUNDED_COMFYUI_FLUX2_KLEIN_4B_FP8",
     "local_video_old_route": "UGC_VIDEO_001_TECHNICAL_PASS_PROFESSIONAL_FAIL",
+    "ugc_video_002_route_a": "PREPARED_NOT_EXECUTED",
     "local_execution_bridge": "VERIFIED_ONE_SHOT_BOUNDED_PRIOR_AUTHORIZATION_CONSUMED",
     "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
     "client_production_deployment": "NOT_EXECUTED"
@@ -76,27 +101,30 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "contra_v4_public_edit": "KAEL_REQUIRED",
+    "ugc_route_a_local_dry_run": "KAEL_WINDOWS_PC_REQUIRED_NOW",
+    "contra_v4_public_edit": "KAEL_REQUIRED_SEPARATE_GATE",
     "ugc_new_install_or_large_model_download": "STOP_AND_REVIEW_WHEN_REACHED",
     "ugc_paid_api_account_credits_subscription": "RED_KAEL_REQUIRED",
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Bounded three-lane portfolio strategy persisted; UGC-VIDEO-002 preregistered and read back; historical UGC-VIDEO-001 FINAL FAIL preserved.",
-    "human_action_required_now": false,
+    "last_completed_verified_action": "UGC-VIDEO-002 Route A runner/preexecution/ledger persisted and read back; current video-model hardware fit screened; Auto-Product competitive refresh completed; replay-conflict reference contract executed PASS in Node reference only and persisted; no external action or spend.",
+    "human_action_required_now": true,
+    "pending_human_action": "KAEL_RUN_UGC_VIDEO_002_ROUTE_A_DRY_RUN_ONLY",
+    "surface": "Windows PC / PowerShell or terminal in current Nexia repo",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V35.json",
-      "events/EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001.json",
-      "research/NEXIA_EXPERIMENT_PORTFOLIO_STRATEGY_V1_2026-10-16.md",
-      "experiments/UGC-VIDEO-002.md",
-      "experiments/UGC-VIDEO-001.md",
-      "NEXIA_EXECUTION_CAPABILITIES.json"
+      "NEXIA_EVENT_INDEX_V36.json",
+      "events/EVT-2026-10-16-UGC002-PREEXEC-AUTOPRODUCT-001.json",
+      "NEXIA_UGC_VIDEO_002_LOCAL_HANDOFF_2026-10-16.json",
+      "experiments/UGC-VIDEO-002_ROUTE_A_PREEXECUTION_V1.md",
+      "tools/run_ugc_video_002_route_a.py",
+      "research/NEXIA_AUTO_PRODUCT_TEST_001_2026-10-16.md"
     ],
-    "resume_from": "Continue GREEN/YELLOW UGC-VIDEO-002 pre-execution work: audit assets/scripts, hardware-fit research, Route A storyboard/edit spec and measurement ledger. Contra V4 remains a separate RED gate, not the sole project blocker.",
-    "truth_limit": "Do not claim UGC-VIDEO-002 executed or passed, professional UGC capability, public Contra implementation, buyer demand, client acceptance, payment or profit without direct evidence."
+    "resume_from": "Run UGC-VIDEO-002 Route A dry-run only. If DRY_RUN_PASS, classify and then decide/execute deterministic assembly under the existing experiment. If dependency/source failure, do not install; return evidence for next decision. EXP-AUTO-001 stays alive and Contra remains a separate public RED gate.",
+    "truth_limit": "Do not claim UGC Route A executed/passed, professional UGC capability, n8n v0.2 runtime PASS, public Contra implementation, buyer demand, client acceptance, payment or profit without direct evidence."
   },
-  "next_action": "CONTINUE_UGC_VIDEO_002_GREEN_YELLOW_PREEXECUTION_AND_MAINTAIN_BOUNDED_PORTFOLIO"
+  "next_action": "KAEL_RUN_UGC_VIDEO_002_ROUTE_A_DRY_RUN_ONLY"
 }
