@@ -1,0 +1,27 @@
+{
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-PREREG-REPAIR-001",
+  "date": "2026-10-16",
+  "type": "EXPERIMENT_SPECIFICATION_REPAIR",
+  "status": "VERIFIED_PREREG_CREATED_NOT_EXECUTED",
+  "authority": "GREEN_INTERNAL",
+  "trigger": "Work preflight found that canonical artifacts referred to a preregistered FLUX Base/B1/B2 benchmark but no executable artifact contained all literal prompts, input contract, seed and runtime constraints.",
+  "truth": {
+    "base_b1_b2_generations_executed": 0,
+    "work_preflight_generated_images": false,
+    "new_installations": false,
+    "new_downloads": false,
+    "pagefile_changed": false,
+    "state_v73_changed": false,
+    "complete_original_prereg_artifact_existed": false,
+    "literal_prompts_preexisted_in_chat": true,
+    "runtime_seed_and_full_execution_contract_frozen_now_before_outputs": true
+  },
+  "artifact": "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md",
+  "frozen_seed": 20261016,
+  "base_resolution": "1024x1024",
+  "generation_cap": "MAX_3_TOTAL_BASE_B1_B2_NO_RETRIES",
+  "base_precondition_stop": true,
+  "cost_eur": 0,
+  "next_action": "EXECUTE_EXACT_PREREG_BASE_B1_B2_ON_EXISTING_LOCAL_FLUX_STACK_IF_EXECUTION_SURFACE_AVAILABLE",
+  "truth_boundary": "This event repairs a missing preregistration before any output exists. It does not retroactively claim that a complete preregistered artifact existed earlier, and it does not establish FLUX image-edit runtime capability."
+}
