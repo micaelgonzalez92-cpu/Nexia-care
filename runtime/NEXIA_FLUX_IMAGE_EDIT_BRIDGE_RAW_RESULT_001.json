@@ -1,0 +1,30 @@
+{
+    "task_id":  "FLUX-EDIT-BRIDGE-ONESHOT-001",
+    "status":  "STOPPED_FAIL_CLOSED",
+    "prereg_path":  "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md",
+    "prereg_blob_sha":  "8276613aff9ba9aca0eec840fc8e0c2f36bca622",
+    "authorization":  "EXPLICIT_KAEL_ONE_SHOT",
+    "started_at":  "2026-10-16T23:21:00.2751419+02:00",
+    "finished_at":  "2026-10-16T23:22:06.9162274+02:00",
+    "generation_count":  0,
+    "max_generations":  3,
+    "no_retries":  true,
+    "seed":  20261016,
+    "base_resolution":  "1024x1024",
+    "comfyui_version":  "0.39.0",
+    "comfyui_started_by_runner":  true,
+    "browser_started_by_runner":  true,
+    "workflow_commit":  "04a508b31bec1818e48122ca0761c1de4140a234",
+    "variants":  {
+
+                 },
+    "base_human_gate":  "NOT_REACHED",
+    "b1_b2_settings_equivalent_except_prompt":  "NOT_VERIFIED",
+    "visual_qa_b1_b2":  "NOT_VERIFIED_PENDING_CHAT_REVIEW",
+    "local_flux_image_editing":  "NOT_VERIFIED",
+    "prompt_engineering_effect":  "NOT_VERIFIED",
+    "writeback":  "NOT_ATTEMPTED",
+    "error_stage":  "START_COMFYUI_FRONTEND_CDP",
+    "error":  "ComfyUI frontend loaded but window.app/loadGraphData/graphToPrompt did not become ready.",
+    "cost_eur":  0
+}
