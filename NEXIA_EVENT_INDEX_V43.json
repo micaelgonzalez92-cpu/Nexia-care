@@ -1,0 +1,24 @@
+{
+  "schema_version": 43,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V42.json",
+    "verified_blob_sha": "afcf92cc6f47f43c749c15cc827fe2649bb250ca"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001",
+      "path": "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001",
+  "latest_event_path": "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001",
+  "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
+  "latest_material_automation_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V43 preserves V42 history but supersedes its V2 QA score for current truth: V2 is provisional 78/100, professional FAIL, with normal-speed temporal QA and rights provenance still unverified. V3 Unicode-hardened rerender remains the next gate."
+}
