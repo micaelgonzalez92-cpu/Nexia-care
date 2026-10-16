@@ -1,0 +1,29 @@
+{
+  "event_id": "EVT-2026-10-16-TASK-TRIGGERED-RD-001",
+  "date": "2026-10-16",
+  "type": "SYSTEM_PROCESS_IMPROVEMENT",
+  "status": "VERIFIED_INTERNAL_STANDARD_UPDATED_NO_EXTERNAL_EFFECT",
+  "authority": "GREEN_INTERNAL",
+  "trigger": "Kael identified that task-specific R&D was not re-querying the existing intelligence corpus when active work hit a capability gap, and that weekly radar was being over-weighted.",
+  "changes": {
+    "rd_standard": "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
+    "new_rule": "TASK_TRIGGERED_RD_INTERRUPT_MANDATORY",
+    "sequence": "ACTIVE_TASK->EXISTING_CORPUS->CANONICAL_NEXIA->UPSTREAM_VERIFY->MAX3_SHORTLIST->COMPARE->PROPOSE_NO_INSTALL->GATE->POC->CAPTURE->RESUME_TASK",
+    "weekly_radar_role": "SUPPLEMENTAL_ONLY",
+    "install_policy": "PROPOSE_BEFORE_INSTALL_OR_ACTIVATION",
+    "focused_reassessment": "research/NEXIA_TASK_TRIGGERED_RD_UGC_CORPUS_REASSESSMENT_V1_2026-10-16.md"
+  },
+  "ugc_reassessment": {
+    "use_now_no_install": [
+      "LearnPrompt/awesome-seedance prompt structures",
+      "prior preservation-oriented image-edit prompt corpus",
+      "existing ComfyUI + FLUX.2 Klein image-edit gate"
+    ],
+    "candidate_for_later_poc_no_install": "remotion-dev/remotion",
+    "architecture_reference_only": "OpenShorts-style modular shorts pipeline",
+    "paid_cloud_api_priority_now": "DEFERRED_NOT_CURRENT_NEXT_ACTION"
+  },
+  "truth_boundary": "No new software, repo, API, account, model, persistent worker or paid service was installed or activated by this event. FLUX image editing remains runtime NOT_VERIFIED until the Base/B1/B2 benchmark runs.",
+  "cost_eur": 0,
+  "next_action": "RESUME_VETA_AI_UGC_001_AT_EXISTING_FLUX_IMAGE_EDIT_RUNTIME_GATE_USING_UPDATED_PROMPT_COMPILER_KNOWLEDGE"
+}
