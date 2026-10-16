@@ -1,6 +1,6 @@
 {
-  "schema_version": 34,
-  "boot_version": 91,
+  "schema_version": 35,
+  "boot_version": 92,
   "generated_at": "2026-10-16",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,31 +15,35 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "NEXIA_EVENT_INDEX_V34.json",
+    "NEXIA_EVENT_INDEX_V35.json",
+    "events/EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001.json",
+    "research/NEXIA_EXPERIMENT_PORTFOLIO_STRATEGY_V1_2026-10-16.md",
+    "experiments/UGC-VIDEO-002.md",
+    "experiments/UGC-VIDEO-001.md when historical UGC evidence is material",
+    "NEXIA_EXECUTION_CAPABILITIES.json when execution routing is material",
     "events/EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001.json",
     "events/EVT-2026-10-16-NEXIA-WEEKLY-RADAR-AUTOMATION-001.json",
-    "events/EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001.json",
-    "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md when research/tool selection is material",
-    "read V34 base V33/V32/V31 and earlier indexes/events as needed",
+    "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
+    "read V35 base V34/V33/V32/V31 and earlier indexes/events as needed",
     "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md when operational response format is material",
     "commercial/EXP-AUTO-001_CONTRA_KAEL_ACTION_CARD_V1_2026-10-15.md when Contra execution is material",
     "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md when Contra verification is material",
-    "NEXIA_EXECUTION_CAPABILITIES.json when execution truth is material",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "bca47f5281de5e2e9c257985fca6bdfd4b79f626",
+  "live_state_blob_sha": "17512d615d08f25f6a99474bf46c72e8fbca662e",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V34.json",
-    "latest_verified_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001.json",
-    "latest_verified_event_blob_sha": "6b644a2b2976836ce7aa04abd19216926c708c95",
-    "latest_material_business_event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
+    "active_index": "NEXIA_EVENT_INDEX_V35.json",
+    "active_index_blob_sha": "5e20b53543d2bcba2b5bfec63801924d7abf5786",
+    "latest_verified_event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001.json",
+    "latest_verified_event_blob_sha": "f99f763be0c14993205189e80251fad9faa3d7d1",
+    "latest_material_business_event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
     "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
     "latest_material_automation_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001",
-    "base_index": "NEXIA_EVENT_INDEX_V33.json"
+    "base_index": "NEXIA_EVENT_INDEX_V34.json"
   },
   "communication_standard": {
     "default_operational_format": "NEXIA_LIVE_HUD",
@@ -48,28 +52,16 @@
   },
   "research_intelligence_standard": {
     "status": "ACTIVE_READY_FOR_CURRENT_PURPOSE",
-    "artifact": "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
-    "default_method": "SOURCE_AUTHORITY_ROUTER_PLUS_DUAL_PATH_EVIDENCE_PLUS_DETERMINISTIC_FALSIFICATION"
+    "artifact": "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md"
   },
-  "active_automation_summary": {
-    "verified_enabled_count": 5,
-    "weekly_rd_radar": "VERIFIED_ACTIVE_MONDAY_AROUND_08_00_EUROPE_MADRID",
-    "context_drift_repair": "VERIFIED_FOUR_ACTIVE_PROMPTS_CURRENT",
-    "future_run_results": "NOT_YET_OBSERVED"
+  "portfolio_strategy": {
+    "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
+    "lane_1": "EXP-AUTO-001",
+    "lane_2": "VETA-AI-UGC-001_UGC-VIDEO-002_PREPARED",
+    "lane_3": "VETA-AUTO-PRODUCT-001_RESEARCH_OPTION"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — HUD + R&D + WEEKLY RADAR ACTIVE; AUTOMATION DRIFT REPAIRED; CONTRA V4 KAEL GATE",
-  "active_reality_probe": {
-    "id": "EXP-AUTO-001",
-    "status": "CONTRA_V4_INTERNAL_READY_KAEL_IMPLEMENTATION_GATE_WORKANA_PENDING",
-    "contra_personal_instagram_removal_required": true,
-    "contra_portfolio_v4_status": "READY_FOR_CURRENT_PURPOSE_INTERNAL_APPROVED_NOT_APPLIED",
-    "contra_identity_verified": false,
-    "contra_payout_method_completed": false,
-    "contra_applications_submitted": 0,
-    "contra_paid_pilots_verified": 0,
-    "workana_dashboard_state": "PENDING"
-  },
-  "human_gate": "Kael must apply final Contra V4 public profile/media changes and remove the personal Instagram link. Publication, service exposure, KYC/payout and new external accounts remain separately gated.",
-  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V34_PLUS_LIVE_SCHEMA_34_AUTOMATION_DRIFT_REPAIRED_CONTRA_GATE",
-  "next_action": "KAEL_APPLY_CONTRA_V4_THEN_NEXIA_VERIFY_PUBLIC_POSTCONDITION"
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — BOUNDED PORTFOLIO ACTIVE; UGC-VIDEO-002 PREPARED; CONTRA V4 REMAINS SEPARATE RED GATE",
+  "human_gate": "No immediate human action required for UGC pre-execution research/design. Kael remains required for Contra public edits and any new paid/account/publication/install/download action that reaches a material gate.",
+  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V35_PLUS_LIVE_SCHEMA_35_BOUNDED_PORTFOLIO_UGC002_PREPARED",
+  "next_action": "CONTINUE_UGC_VIDEO_002_GREEN_YELLOW_PREEXECUTION_AND_MAINTAIN_BOUNDED_PORTFOLIO"
 }
