@@ -36,7 +36,7 @@
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
     "active_index": "NEXIA_EVENT_INDEX_V66.json",
-    "active_index_blob_sha": "PENDING_READBACK",
+    "active_index_blob_sha": "2df7098e03603ee4c1859215c6ac555eb64312b0",
     "latest_verified_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V07-BASE-ROUTE-MISMATCH-V08-REPAIR-001",
     "latest_verified_event_path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V07-BASE-ROUTE-MISMATCH-V08-REPAIR-001.json",
     "latest_verified_event_blob_sha": "cda2671bea70c8a3e1f9303afb055da267998e40",
