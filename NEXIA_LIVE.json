@@ -1,7 +1,7 @@
 {
-  "schema_version": 52,
+  "schema_version": 53,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / LTX 0.9.8 VISUAL FAIL PRESERVED / VIDEO MODEL HOPPING PAUSED / UGC PROMPT-TASK DECOMPOSITION REOPENED WITH EXISTING FLUX / EXP-AUTO REALITY LOOP PRIORITY / AUTO-PRODUCT RUNTIME VALIDATION ACTIVE / FRAMEPACK DEFERRED",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / TASK-TRIGGERED R&D MANDATORY / EXP-AUTO REALITY LOOP PRIORITY / UGC EXISTING-FLUX IMAGE-EDIT GATE / AUTO-PRODUCT RUNTIME VALIDATION ACTIVE / VIDEO MODEL HOPPING PAUSED / FRAMEPACK DEFERRED",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -17,9 +17,17 @@
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_EXTERNAL_VALIDATION_PRIORITY",
-    "lane_2": "VETA-AI-UGC-001_PROMPT_TASK_DECOMPOSITION_EXISTING_FLUX_IMAGE_EDIT_GATE_NO_NEW_DOWNLOAD",
+    "lane_2": "VETA-AI-UGC-001_EXISTING_FLUX_IMAGE_EDIT_PROMPT_BENCHMARK_WITH_TASK_TRIGGERED_RD_SUPPORT",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_VALIDATION_NEXT",
-    "rule": "Do not activate a fourth material lane unless one lane is promoted, paused, falsified, or displaced by hard precedence."
+    "rule": "Task-triggered R&D is an interrupt supporting an active lane, not a fourth material lane."
+  },
+  "rd_intelligence": {
+    "standard": "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
+    "task_triggered_interrupt": "MANDATORY",
+    "weekly_radar_role": "SUPPLEMENTAL_ONLY",
+    "execution_order": "ACTIVE_TASK->EXISTING_USER_PROJECT_CORPUS->CANONICAL_NEXIA->UPSTREAM_VERIFY->COUNTERCHECK->MAX3_SHORTLIST->COMPARE->PROPOSE_NO_INSTALL->AUTHORITY_GATE->BOUNDED_POC->CAPTURE->RESUME_TASK",
+    "proposal_policy": "NEW_SOFTWARE_API_REPO_MODEL_ACCOUNT_OR_PERSISTENT_SERVICE_IS_PROPOSED_BEFORE_INSTALL_OR_ACTIVATION",
+    "latest_reassessment": "research/NEXIA_TASK_TRIGGERED_RD_UGC_CORPUS_REASSESSMENT_V1_2026-10-16.md"
   },
   "ugc_video": {
     "route_a": {
@@ -56,25 +64,50 @@
     },
     "model_hopping": "PAUSED",
     "experimental_design_reassessment": {
-      "status": "ACTIVE_BOUNDED_RESEARCH",
+      "status": "ACTIVE_BOUNDED_RESEARCH_AND_RUNTIME_GATE",
       "artifact": "research/NEXIA_UGC_PROMPT_TASK_COMPLEXITY_REASSESSMENT_V1_2026-10-16.md",
-      "event": "events/EVT-2026-10-16-UGC-PROMPT-TASK-REASSESS-001.json",
+      "task_triggered_corpus_artifact": "research/NEXIA_TASK_TRIGGERED_RD_UGC_CORPUS_REASSESSMENT_V1_2026-10-16.md",
       "exact_ltx098_test_prompt_in_canonical_artifacts": false,
       "hypothesis": "PROMPT_AND_TASK_COMPLEXITY_MAY_HAVE_MATERIALLY_CONTRIBUTED_TO_FAIL_ROOT_CAUSE_NOT_ISOLATED",
-      "complexity_factors": [
-        "transparent/refractive plastic",
-        "repeated similar boxes",
-        "object-count and geometry preservation",
-        "interaction/occlusion",
-        "reversible motion",
-        "temporal physical continuity"
-      ],
       "existing_image_engine": "ComfyUI + FLUX.2 Klein 4B FP8",
       "canonical_local_image_status": "VERIFIED_BOUNDED_IMAGE_GENERATION",
-      "official_flux_image_edit_support": true,
-      "local_image_edit_status": "NOT_VERIFIED",
-      "next_gate": "VERIFY_EXISTING_FLUX_IMAGE_EDIT_WORKFLOW_WITHOUT_INSTALLING_ANYTHING",
+      "image_edit_components_present_user_verified": true,
+      "local_image_edit_status": "NOT_VERIFIED_RUNTIME",
+      "next_gate": "RUN_PREREGISTERED_FLUX_BASE_B1_B2_IMAGE_EDIT_BENCHMARK",
       "video_reopen_rule": "ONLY_AFTER_SIMPLER_IMAGE_AND_PROMPT_CONTROLS_PROVIDE_NEW_EVIDENCE"
+    },
+    "prompt_compiler": {
+      "status": "ARCHITECTURE_UPDATED_FROM_EXISTING_CORPUS",
+      "use_now_source": "LearnPrompt/awesome-seedance upstream verified plus Kael image-edit prompt packet",
+      "contract_fields": [
+        "SHOT_ID_DURATION_ASPECT",
+        "PERSON_LOCK",
+        "PRODUCT_LOCK",
+        "REFERENCE_TOKENS",
+        "INHERIT_FROM_REFERENCE",
+        "DO_NOT_INHERIT",
+        "INITIAL_STATE_OBJECT_COUNT",
+        "ONE_PRIMARY_ACTION_PER_BEAT",
+        "CAMERA_RULE",
+        "ENVIRONMENT_LIGHT",
+        "INLINE_DIALOGUE",
+        "FINAL_STATE",
+        "POST_ONLY_ELEMENTS",
+        "QA_HARD_FAILS"
+      ],
+      "rules": [
+        "PERSON_AND_PRODUCT_LOCKS_ARE_INDEPENDENT",
+        "DO_NOT_COMBINE_LOCOMOTION_AND_FINE_MANIPULATION_UNTIL_VALIDATED",
+        "GENERATIVE_TYPOGRAPHY_IS_POST_ONLY_BY_DEFAULT",
+        "REFERENCE_FIRST_AND_STORYBOARD_BEFORE_COMPLEX_MOTION",
+        "BACKEND_SPECIFIC_COMPILATION_NOT_ONE_UNIVERSAL_PROMPT"
+      ]
+    },
+    "candidate_tools": {
+      "awesome_seedance": "USE_NOW_AS_KNOWLEDGE_NO_INSTALL",
+      "remotion": "CANDIDATE_FOR_BOUNDED_POC_AFTER_ASSEMBLY_BOTTLENECK_NO_INSTALL",
+      "openshorts_style_pipeline": "RESERVE_ARCHITECTURE_REFERENCE_NO_INSTALL",
+      "paid_ugc_apis": "DEFERRED_NOT_CURRENT_NEXT_ACTION"
     }
   },
   "framepack_capacity": {
@@ -103,11 +136,11 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V52.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V51.json",
-    "latest_verified_event_id": "EVT-2026-10-16-UGC-PROMPT-TASK-REASSESS-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-UGC-PROMPT-TASK-REASSESS-001.json",
-    "latest_verified_event_blob_sha": "ae85649074205c4a82595cde8c2ded667c822ea9"
+    "active_index": "NEXIA_EVENT_INDEX_V53.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V52.json",
+    "latest_verified_event_id": "EVT-2026-10-16-TASK-TRIGGERED-RD-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-TASK-TRIGGERED-RD-001.json",
+    "latest_verified_event_blob_sha": "c5e84feaa0c24a259edec0af801ad3dc5d0bc0f5"
   },
   "economics": {
     "revenue_eur": 0,
@@ -116,19 +149,21 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "ugc_existing_flux_read_only_workflow_check": "GREEN_YELLOW_PREPARE_WITHOUT_INSTALL",
+    "ugc_existing_flux_runtime_benchmark": "GREEN_IF_EXECUTION_SURFACE_AVAILABLE",
+    "remotion_install": "NOT_AUTHORIZED_PROPOSE_BEFORE_INSTALL",
+    "new_ugc_software_api_repo_model": "PROPOSE_BEFORE_INSTALL_OR_ACTIVATION",
     "ugc_new_video_model_or_download": "NOT_AUTHORIZED",
     "framepack_or_pagefile_change": "NOT_AUTHORIZED",
     "contra_v4_public_edit": "KAEL_REQUIRED_SEPARATE_GATE",
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "UGC root-cause attribution was reassessed after Kael identified prompt engineering and scene complexity as unisolated variables. The prior LTX visual FAIL remains valid, but a bounded existing-FLUX image-edit/prompt benchmark is reopened without new downloads or video model hopping.",
+    "last_completed_verified_action": "Task-triggered R&D became mandatory and the existing Kael intelligence corpus was re-queried for the active UGC blocker. Awesome Seedance prompt structures and preservation-oriented image-edit patterns were incorporated into the prompt architecture; Remotion is a no-install candidate for later deterministic assembly POC; paid cloud UGC APIs are deferred.",
     "human_action_required_now": false,
     "pending_human_action": "NONE",
-    "surface": "Chat / internal research and preparation",
-    "resume_from": "Verify whether the existing ComfyUI + FLUX.2 Klein 4B FP8 installation already exposes an image-edit workflow. If yes, design a low-complexity single-reference edit benchmark and an A/B prompt test before any new video model is considered.",
-    "truth_limit": "Do not erase the LTX visual FAIL. Do not claim local FLUX image editing or professional UGC capability until tested."
+    "surface": "Chat / local execution when available",
+    "resume_from": "Run the already-preregistered FLUX Base/B1/B2 image-edit benchmark without changing its acceptance criteria. Then use the updated prompt compiler knowledge to design the next iteration only if evidence requires it.",
+    "truth_limit": "Do not claim FLUX image editing PASS, Remotion installation, professional UGC capability, or any new external service until postconditions are verified."
   },
-  "next_action": "NEXIA_VERIFY_EXISTING_FLUX_IMAGE_EDIT_WORKFLOW_NO_INSTALL"
+  "next_action": "RUN_PREREGISTERED_FLUX_BASE_B1_B2_IMAGE_EDIT_BENCHMARK_THEN_APPLY_TASK_TRIGGERED_RD_IF_BLOCKED"
 }
