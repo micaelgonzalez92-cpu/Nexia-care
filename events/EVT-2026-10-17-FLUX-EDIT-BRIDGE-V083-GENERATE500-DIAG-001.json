@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-FLUX-EDIT-BRIDGE-V083-GENERATE500-DIAG-001",
+  "timestamp": "2026-10-17",
+  "type": "FLUX_ONE_SHOT_V083_GENERATE_BASE_HTTP500_POSTMORTEM_DIAG_PREPARED",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_V083_CONSOLE_PLUS_REMOTE_RAW_RESULT_007_PLUS_RUNNER_SOURCE_REVIEW",
+  "observed": {
+    "wrapper": "tools/nexia_local_flux_edit_gate_v0_8_3.ps1",
+    "failure_stage": "GENERATE_BASE",
+    "failure": "HTTP 500 Internal Server Error from ComfyUI /prompt",
+    "local_generation_count": 0,
+    "base_gate_reached": false,
+    "writeback_console": "PASS_GH_API_READBACK_MATCH",
+    "remote_raw_result": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_007.json",
+    "remote_raw_result_blob_sha": "4c0b3ed20a42025580f7b14f2fbee279f2aec365",
+    "cost_eur": 0
+  },
+  "verified_progress": {
+    "comfy_ready": true,
+    "cdp_target_correct": true,
+    "distilled_base_route": true,
+    "compiled_model_seed_sampler_steps_cfg_prechecks_passed": true,
+    "compiled_effective_resolution_1024x1024": true,
+    "request_reached_generate_base_stage": true
+  },
+  "truth_boundary": "The runner increments generation_count only after /prompt returns a prompt_id, so local count remained zero. This does not by itself prove the backend performed no work before returning HTTP 500. A read-only postmortem must inspect preserved server logs and any BASE output artifact before asserting backend generation_count=0.",
+  "diagnostic": {
+    "path": "tools/nexia_local_flux_generate500_diag_v0_1.ps1",
+    "blob_sha": "4bc4daddc141e1e001ad867d8605c3caec453717",
+    "commit": "73d9c36e13c3df65cbfec98db33059b87fc218a3",
+    "scope": "Read preserved BASE.api_prompt.json and BASE.workflow.json, enumerate key compiled node inputs, search for BASE output files created during the v0.8.3 run window, and tail preserved ComfyUI stdout/stderr logs.",
+    "server_start": false,
+    "prompt_post": false,
+    "queue_mutation": false,
+    "generation": false
+  },
+  "next_action": "KAEL_RUN_PINNED_GENERATE500_READONLY_DIAG_V0_1"
+}
