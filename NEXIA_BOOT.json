@@ -1,6 +1,6 @@
 {
-  "schema_version": 52,
-  "boot_version": 107,
+  "schema_version": 53,
+  "boot_version": 108,
   "generated_at": "2026-10-16",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,33 +15,43 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "NEXIA_EVENT_INDEX_V52.json",
-    "events/EVT-2026-10-16-UGC-PROMPT-TASK-REASSESS-001.json",
+    "NEXIA_EVENT_INDEX_V53.json",
+    "events/EVT-2026-10-16-TASK-TRIGGERED-RD-001.json",
+    "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
+    "research/NEXIA_TASK_TRIGGERED_RD_UGC_CORPUS_REASSESSMENT_V1_2026-10-16.md",
     "research/NEXIA_UGC_PROMPT_TASK_COMPLEXITY_REASSESSMENT_V1_2026-10-16.md",
     "events/EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001.json",
     "research/NEXIA_LOCAL_UGC_VIDEO_CAPABILITY_BOUNDARY_V1_2026-10-16.md",
     "NEXIA_EXECUTION_CAPABILITIES.json when execution routing is material",
     "research/NEXIA_AUTO_PRODUCT_TEST_001_2026-10-16.md",
     "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md when external validation execution is material",
-    "read V52 base V51/V50/V49 and earlier indexes/events as needed",
+    "read V53 base V52 and earlier indexes/events as needed",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "e8cc4617a7caf3556bb6fbc2081869de82539752",
+  "live_state_blob_sha": "2530a66d72ca4d6f68877357a6fe848d1c3caf4e",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V52.json",
-    "latest_verified_event_id": "EVT-2026-10-16-UGC-PROMPT-TASK-REASSESS-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-UGC-PROMPT-TASK-REASSESS-001.json",
-    "latest_verified_event_blob_sha": "ae85649074205c4a82595cde8c2ded667c822ea9",
-    "base_index": "NEXIA_EVENT_INDEX_V51.json"
+    "active_index": "NEXIA_EVENT_INDEX_V53.json",
+    "latest_verified_event_id": "EVT-2026-10-16-TASK-TRIGGERED-RD-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-TASK-TRIGGERED-RD-001.json",
+    "latest_verified_event_blob_sha": "c5e84feaa0c24a259edec0af801ad3dc5d0bc0f5",
+    "base_index": "NEXIA_EVENT_INDEX_V52.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_EXTERNAL_VALIDATION_PRIORITY",
-    "lane_2": "VETA-AI-UGC-001_EXISTING_FLUX_IMAGE_EDIT_PROMPT_BENCHMARK_NO_NEW_DOWNLOAD",
-    "lane_3": "VETA-AUTO-PRODUCT-001_N8N_RUNTIME_VALIDATION_NEXT"
+    "lane_2": "VETA-AI-UGC-001_EXISTING_FLUX_IMAGE_EDIT_PROMPT_BENCHMARK_WITH_TASK_TRIGGERED_RD",
+    "lane_3": "VETA-AUTO-PRODUCT-001_N8N_RUNTIME_VALIDATION_NEXT",
+    "rd_interrupt_rule": "TASK_TRIGGERED_RD_SUPPORTS_ACTIVE_LANE_NOT_FOURTH_WIP"
+  },
+  "rd_checkpoint": {
+    "task_triggered_interrupt": "MANDATORY",
+    "weekly_radar": "SUPPLEMENTAL_ONLY",
+    "existing_corpus_first": true,
+    "max_shortlist": 3,
+    "new_tools_proposed_before_install": true
   },
   "ugc_checkpoint": {
     "ltx_0_9_8_runtime": "PASS_NO_OOM",
@@ -51,11 +61,15 @@
     "prompt_task_root_cause_isolated": false,
     "existing_flux2_klein_4b": "PRESERVED",
     "local_flux_image_generation": "VERIFIED_BOUNDED",
-    "local_flux_image_editing": "NOT_VERIFIED",
-    "next_gate": "VERIFY_EXISTING_FLUX_IMAGE_EDIT_WORKFLOW_NO_INSTALL"
+    "local_flux_image_edit_components": "USER_VERIFIED_PRESENT",
+    "local_flux_image_editing": "NOT_VERIFIED_RUNTIME",
+    "prompt_compiler": "UPDATED_FROM_EXISTING_CORPUS_AWESOME_SEEDANCE_PLUS_IMAGE_EDIT_PATTERNS",
+    "remotion": "CANDIDATE_NO_INSTALL",
+    "paid_cloud_ugc": "DEFERRED",
+    "next_gate": "RUN_PREREGISTERED_FLUX_BASE_B1_B2_IMAGE_EDIT_BENCHMARK"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — LTX FAIL PRESERVED; UGC EXPERIMENT DESIGN REOPENED AT IMAGE-EDIT/PROMPT LEVEL; NO NEW VIDEO MODEL; EXP-AUTO EXTERNAL VALIDATION + AUTO-PRODUCT RUNTIME REMAIN ACTIVE",
-  "human_gate": "No Kael action is required now. Nexia may research/prepare an existing-FLUX image-edit and prompt benchmark without new installation or download. Any new video model/download, FramePack/pagefile change, public edit, publication or external contact remains separately gated.",
-  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V52_PLUS_LIVE_SCHEMA_52_UGC_PROMPT_TASK_REASSESSMENT",
-  "next_action": "NEXIA_VERIFY_EXISTING_FLUX_IMAGE_EDIT_WORKFLOW_NO_INSTALL"
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — TASK-TRIGGERED R&D MANDATORY; UGC PRIOR CORPUS REUSED; EXISTING FLUX IMAGE-EDIT RUNTIME GATE NEXT; PAID CLOUD AND NEW INSTALLS DEFERRED",
+  "human_gate": "No Kael action is required now for research. Any installation, new account/API funding, model download, persistent worker, public edit, publication or external contact remains separately gated.",
+  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V53_PLUS_LIVE_SCHEMA_53_TASK_TRIGGERED_RD",
+  "next_action": "RUN_PREREGISTERED_FLUX_BASE_B1_B2_IMAGE_EDIT_BENCHMARK_THEN_USE_TASK_TRIGGERED_RD_IF_BLOCKED"
 }
