@@ -1,7 +1,7 @@
 {
-  "schema_version": 42,
+  "schema_version": 43,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC-VIDEO-002 ROUTE A V2 PROFESSIONAL FAIL 76/100 / UNICODE-HARDENED V3 RETEST GATE / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC-VIDEO-002 ROUTE A V2 PROFESSIONAL FAIL 78/100 PROVISIONAL / NORMAL-SPEED TEMPORAL QA NOT VERIFIED / UNICODE-HARDENED V3 RETEST GATE / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -38,17 +38,30 @@
       "professional_pass": false
     },
     "v2": {
-      "duration_seconds": 24.033333,
+      "duration_seconds": 24.033,
+      "resolution": "1080x1920",
+      "fps": 30,
+      "frames": 721,
       "wall_seconds": 29.56,
       "size_bytes": 8060583,
-      "professional_qa_score": 76,
-      "delta_vs_v1": 3,
+      "audio_track": false,
+      "professional_qa_score": 78,
+      "score_status": "ESTIMATION_PROVISIONAL",
+      "delta_vs_v1": 5,
       "professional_qa_threshold": 85,
       "professional_pass": false,
+      "normal_speed_playback_completed": false,
+      "severe_temporal_defects_absent": "NOT_VERIFIED",
+      "rights_provenance_audit": "NOT_VERIFIED",
       "verified_improvements": ["smaller captions", "lower safer caption placement", "CTA/SPEC split"],
-      "remaining_blockers": ["Spanish mojibake remains", "two stills repeated across eight shots", "static/repetitive motion grammar", "no audio"]
+      "remaining_blockers": ["Spanish mojibake remains including CTA", "two stills repeated across eight shots", "static/repetitive motion grammar", "no audio"],
+      "decision": "REJECT_FOR_PROFESSIONAL_USE_KEEP_AS_EXPERIMENT_EVIDENCE"
     },
-    "enumerated_hard_fail_found": false,
+    "evidence_correction": {
+      "supersedes_v42_score_for_current_truth": true,
+      "prior_score_preserved_in_history": true,
+      "event": "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json"
+    },
     "unicode_hardening": {
       "status": "PERSISTED_READBACK_VERIFIED_RUNTIME_RETEST_PENDING",
       "runner_commit_sha": "40617054d28021e5c3e52e492ac1689904e647b0",
@@ -56,7 +69,7 @@
       "caption_text_contract": true,
       "mojibake_marker_rejection": true
     },
-    "route_decision": "ONE_FINAL_ENCODING_RETEST_THEN_STOP_ROUTE_A_POLISH_IF_SCORE_REMAINS_BELOW_85_FOR_STRUCTURAL_VARIETY_MOTION_AUDIO_REASONS",
+    "route_decision": "RUN_V3_ENCODING_RETEST; IF_ENCODING_FIXED_BUT_SCORE_STILL_BELOW_85_FOR_STRUCTURAL_VARIETY_MOTION_AUDIO_REASONS_STOP_ROUTE_A_POLISH_AND_COMPARE_NEXT_ARCHITECTURE",
     "historical_integrity": "UGC-VIDEO-001_REMAINS_FINAL_FAIL"
   },
   "auto_product": {
@@ -75,10 +88,10 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V42.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V41.json",
-    "latest_verified_event_id": "EVT-2026-10-16-UGC002-V2-QA-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-V2-QA-001.json"
+    "active_index": "NEXIA_EVENT_INDEX_V43.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V42.json",
+    "latest_verified_event_id": "EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -94,12 +107,12 @@
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "UGC-VIDEO-002 Route A V2 was inspected and scored 76/100, up 3 points from V1 but still below the 85 threshold. Caption layout improved, but Spanish mojibake persisted. Canonical runner was hardened with ASCII-safe Unicode escapes and preflight caption integrity checks; runtime V3 retest remains pending.",
+    "last_completed_verified_action": "V2 evidence was corrected: professional score is 78/100 provisional, not a definitive 76; 16 distributed frames and key enlargements were inspected, but normal-speed playback was not completed. Mojibake persists. Unicode-hardened runner remains prepared for V3.",
     "human_action_required_now": true,
     "pending_human_action": "KAEL_REFRESH_UNICODE_HARDENED_RUNNER_AND_RERENDER_V3",
     "surface": "Windows PC / PowerShell",
-    "resume_from": "Refresh the canonical runner, require caption_text_contract=PASS on dry-run, render V3, upload MP4/report, then re-QA. If encoding is fixed and score remains below 85 because of visual variety/motion/audio, stop Route A polish and compare the next bounded architecture.",
-    "truth_limit": "Do not claim UGC Route A professional PASS, buyer demand, client acceptance, sale, payment or profit without direct evidence and Kael normal-viewing acceptance."
+    "resume_from": "Refresh the canonical runner, require caption_text_contract=PASS on dry-run, render V3, upload MP4/report, then complete normal-speed QA. If encoding is fixed and score remains below 85 because of structural variety/motion/audio, stop Route A polish and compare the next bounded architecture.",
+    "truth_limit": "Do not claim UGC Route A professional PASS, absence of severe temporal defects, rights clearance, buyer demand, client acceptance, sale, payment or profit without direct evidence."
   },
   "next_action": "KAEL_REFRESH_UNICODE_HARDENED_RUNNER_AND_RERENDER_V3"
 }
