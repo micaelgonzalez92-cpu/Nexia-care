@@ -1,0 +1,26 @@
+{
+  "schema_version": 38,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V37.json",
+    "verified_blob_sha": "27aabf2ae9ec30b9a9433932061394536bf4ffe2"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-UGC002-FFMPEG-AUTH-001",
+      "path": "events/EVT-2026-10-16-UGC002-FFMPEG-AUTH-001.json",
+      "verified_blob_sha": "18e6450051811fba028af9045ff143ab632485d8"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-UGC002-FFMPEG-AUTH-001",
+  "latest_event_path": "events/EVT-2026-10-16-UGC002-FFMPEG-AUTH-001.json",
+  "latest_event_blob_sha": "18e6450051811fba028af9045ff143ab632485d8",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-FFMPEG-AUTH-001",
+  "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
+  "latest_material_automation_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V38 records Kael's explicit authorization to install only Gyan.FFmpeg for UGC-VIDEO-002 Route A. Installation remains unverified until local postconditions pass."
+}
