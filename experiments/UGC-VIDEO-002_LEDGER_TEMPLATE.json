@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "experiment": "UGC-VIDEO-002",
+  "route": "A_ANATOMY_MINIMIZED_DETERMINISTIC",
+  "status": "TEMPLATE_NOT_EXECUTED",
+  "source_assets": {
+    "A1": "NEXIA_BENCHMARK_00002_.png",
+    "A2": "NEXIA_BENCHMARK_00003_.png"
+  },
+  "execution": {
+    "dry_run_status": "NOT_EXECUTED",
+    "technical_assembly_status": "NOT_EXECUTED",
+    "output_path": null,
+    "wall_seconds": null,
+    "human_steering_edit_review_minutes": null,
+    "ffmpeg_version": null,
+    "ffprobe_duration_seconds": null,
+    "cash_spend_eur": 0,
+    "cloud_api_used": false,
+    "new_model_downloaded": false,
+    "new_application_installed": false
+  },
+  "qa": {
+    "score_total_100": null,
+    "realism_absence_ai_defects_25": null,
+    "product_identity_fidelity_20": null,
+    "motion_edit_coherence_15": null,
+    "commercial_story_utility_15": null,
+    "social_native_framing_10": null,
+    "audio_caption_quality_5": null,
+    "repeatability_editability_5": null,
+    "brand_policy_safety_5": null,
+    "hard_fail": null,
+    "hard_fail_reason": null,
+    "kael_normal_viewing_acceptance": "NOT_REVIEWED"
+  },
+  "metrics": {
+    "usable_final_seconds": null,
+    "generated_seconds": 0,
+    "accepted_shots": null,
+    "attempts": 1,
+    "anatomy_defect_count": 0,
+    "product_geometry_mutation": null
+  },
+  "decision": {
+    "technical_pass": null,
+    "professional_pass": null,
+    "promotion": "NOT_DECIDED",
+    "next_action": null
+  },
+  "truth_boundary": "Template only. Null means not measured, never zero. Professional PASS requires >=85/100, zero hard fail, >=15 coherent usable seconds, <=90 human minutes and Kael normal-viewing acceptance."
+}
