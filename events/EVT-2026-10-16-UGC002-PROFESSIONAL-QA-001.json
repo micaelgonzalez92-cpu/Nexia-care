@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-UGC002-PROFESSIONAL-QA-001",
+  "timestamp": "2026-10-16",
+  "timestamp_precision": "date_only",
+  "type": "UGC002_PROFESSIONAL_QA",
+  "state_version": 73,
+  "status": "CURRENT_RENDER_FAIL_REMEDIATION_PREPARED",
+  "experiment": "UGC-VIDEO-002",
+  "route": "A_ANATOMY_MINIMIZED_DETERMINISTIC",
+  "evidence_basis": {
+    "uploaded_mp4": "NEXIA_UGC_VIDEO_002_ROUTE_A_SPEC.mp4",
+    "uploaded_report": "NEXIA_UGC_VIDEO_002_ROUTE_A_SPEC.report.json",
+    "frames_inspected": 721,
+    "fps": 30,
+    "duration_seconds": 24.033333,
+    "representative_frames_and_all_shot_boundaries_inspected": true,
+    "normal_speed_kael_acceptance": "NOT_YET_COLLECTED"
+  },
+  "rubric": {
+    "realism": {"score": 21, "max": 25},
+    "product": {"score": 17, "max": 20},
+    "motion_edit": {"score": 8, "max": 15},
+    "commercial": {"score": 10, "max": 15},
+    "social": {"score": 6, "max": 10},
+    "audio_caption": {"score": 1, "max": 5},
+    "repeatability": {"score": 5, "max": 5},
+    "safety": {"score": 5, "max": 5},
+    "total": 73,
+    "threshold": 85
+  },
+  "hard_fail_review": {
+    "obvious_anatomy_defect": false,
+    "material_product_geometry_mutation": false,
+    "invented_readable_real_brand_or_ui": false,
+    "severe_temporal_defect": false,
+    "under_15_seconds": false,
+    "commercial_story_unintelligible": false,
+    "rights_violation_observed": false
+  },
+  "professional_blockers": [
+    "Prominent mojibake/encoding corruption in Spanish captions and final SPEC label.",
+    "Caption size/placement obscures a large part of the visual subject.",
+    "Only two still source images are repeated across eight shots, making motion/editing feel static and repetitive for a portfolio-grade social ad.",
+    "No audio; acceptable for a first proof but lowers portfolio polish in the current cut."
+  ],
+  "classification": {
+    "current_artifact": "PROFESSIONAL_FAIL_SCORE_BELOW_85",
+    "route": "IMPROVE_ONE_BOUNDED_ITERATION",
+    "capability_promotion": false
+  },
+  "remediation": {
+    "runner_path": "tools/run_ugc_video_002_route_a.py",
+    "runner_commit_sha": "668139e55103a307516be33fb2011b44b057526a",
+    "runner_blob_sha": "810f7a480db7cb95d2194fb21fff271028e2b8a2",
+    "changes": [
+      "write captions as UTF-8 with BOM",
+      "force subtitle charenc=UTF-8",
+      "reduce caption font size",
+      "move captions into a lower safe area",
+      "split CTA and SPEC label into separate subtitle cues",
+      "replace em dash in SPEC label with ASCII hyphen"
+    ],
+    "runtime_retest": "PENDING"
+  },
+  "truth_boundary": "The first technical render is rejected for professional use. The route itself is not falsified because the dominant caption defects are directly remediable; a rerender and fresh QA are required. No professional PASS, buyer demand, client acceptance, sale, payment or profit is claimed.",
+  "next_action": "KAEL_REFRESH_PATCHED_RUNNER_AND_RERENDER_ROUTE_A"
+}
