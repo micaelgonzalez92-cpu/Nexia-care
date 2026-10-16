@@ -1,7 +1,7 @@
 {
-  "schema_version": 36,
+  "schema_version": 37,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC-VIDEO-002 ROUTE A READY FOR LOCAL DRY RUN / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC-VIDEO-002 BLOCKED ON FFMPEG INSTALL GATE / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -17,14 +17,12 @@
   },
   "research_intelligence_standard": {
     "status": "ACTIVE_READY_FOR_CURRENT_PURPOSE",
-    "artifact": "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
-    "default_loop": "CLASSIFY->PRIMARY_SOURCE->INDEPENDENT_COUNTERCHECK->REPRODUCE_OR_COMPUTE->LABEL_EVIDENCE->COMPARE_TO_NEXIA->IMPLEMENT_TEST_RESERVE_DISCARD->CAPTURE->REVERIFY"
+    "artifact": "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
-    "artifact": "research/NEXIA_EXPERIMENT_PORTFOLIO_STRATEGY_V1_2026-10-16.md",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_CONTRA_WORKANA_AS_CHANNELS",
-    "lane_2": "VETA-AI-UGC-001_UGC_VIDEO_002_ROUTE_A_READY_FOR_LOCAL_DRY_RUN",
+    "lane_2": "VETA-AI-UGC-001_UGC_VIDEO_002_BLOCKED_ON_FFMPEG_INSTALL_GATE",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED",
     "rule": "Do not activate a fourth material lane unless one lane is promoted, paused, falsified, or displaced by hard precedence."
   },
@@ -33,11 +31,17 @@
     "route_a_preexecution": "experiments/UGC-VIDEO-002_ROUTE_A_PREEXECUTION_V1.md",
     "runner": "tools/run_ugc_video_002_route_a.py",
     "ledger": "experiments/UGC-VIDEO-002_LEDGER_TEMPLATE.json",
-    "local_handoff": "NEXIA_UGC_VIDEO_002_LOCAL_HANDOFF_2026-10-16.json",
-    "status": "READY_FOR_LOCAL_DRY_RUN_NOT_EXECUTED",
+    "status": "BLOCKED_NOT_INSTALLED_NOT_EXPERIMENT_FAIL",
     "cash_budget_eur": 0,
     "source_assets": ["NEXIA_BENCHMARK_00002_.png", "NEXIA_BENCHMARK_00003_.png"],
-    "route_a_architecture": "ACCEPTED_STILLS_PLUS_DETERMINISTIC_PAN_ZOOM_CUTS_CAPTIONS_NO_NEW_GENERATIVE_MOTION",
+    "dry_run_executed": true,
+    "dry_run_result": "FAIL_FFMPEG_NOT_AVAILABLE",
+    "ffmpeg_reusable_copy_located": false,
+    "ffprobe_reusable_copy_located": false,
+    "absence_scope_limit": "No reusable copy located in accessible search scope; absolute absence from inaccessible folders/archives not asserted.",
+    "recommended_dependency": "Gyan.FFmpeg via winget",
+    "proposed_install_command": "winget install --id Gyan.FFmpeg --exact --source winget",
+    "installation_executed": false,
     "route_b_decision": "NO_NATIVE_CURRENT_MODEL_INSTALL_YET",
     "hardware_context": "RTX_3060_12GB_APPROX_16GB_RAM",
     "historical_integrity": "UGC-VIDEO-001_REMAINS_FINAL_FAIL",
@@ -46,9 +50,6 @@
   "auto_product": {
     "competitive_refresh": "research/NEXIA_AUTO_PRODUCT_001_COMPETITIVE_REFRESH_2026-10-16.md",
     "test_artifact": "research/NEXIA_AUTO_PRODUCT_TEST_001_2026-10-16.md",
-    "v01_gap": "NO_EXPLICIT_EXACT_REPLAY_VS_CONFLICTING_REPLAY_CLASSIFICATION",
-    "v02_design": "products/lead-intake-reliability-kit/REPLAY_CONFLICT_V02_DESIGN.md",
-    "reference_test": "products/lead-intake-reliability-kit/test_replay_contract_v02.js",
     "reference_result": "PASS_NODE_REFERENCE_ONLY_NOT_N8N",
     "n8n_runtime": "NOT_EXECUTED",
     "clean_install_time": "NOT_INSTRUMENTED",
@@ -67,12 +68,12 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V36.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V35.json",
-    "latest_verified_event_id": "EVT-2026-10-16-UGC002-PREEXEC-AUTOPRODUCT-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-PREEXEC-AUTOPRODUCT-001.json",
-    "latest_verified_event_blob_sha": "9bd53c99e2b636acc87e046b4c8bdb17fd7c2028",
-    "latest_material_business_event_id": "EVT-2026-10-16-UGC002-PREEXEC-AUTOPRODUCT-001",
+    "active_index": "NEXIA_EVENT_INDEX_V37.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V36.json",
+    "latest_verified_event_id": "EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001.json",
+    "latest_verified_event_blob_sha": "0f001688d4808337f4b3b68bc5f1b723bbcbcc33",
+    "latest_material_business_event_id": "EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001",
     "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
     "latest_material_automation_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001"
   },
@@ -89,7 +90,7 @@
   "execution_truth": {
     "local_gpu_image": "VERIFIED_BOUNDED_COMFYUI_FLUX2_KLEIN_4B_FP8",
     "local_video_old_route": "UGC_VIDEO_001_TECHNICAL_PASS_PROFESSIONAL_FAIL",
-    "ugc_video_002_route_a": "PREPARED_NOT_EXECUTED",
+    "ugc_video_002_route_a": "DRY_RUN_EXECUTED_BLOCKED_FFMPEG_NOT_INSTALLED",
     "local_execution_bridge": "VERIFIED_ONE_SHOT_BOUNDED_PRIOR_AUTHORIZATION_CONSUMED",
     "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
     "client_production_deployment": "NOT_EXECUTED"
@@ -101,30 +102,28 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "ugc_route_a_local_dry_run": "KAEL_WINDOWS_PC_REQUIRED_NOW",
+    "ugc_ffmpeg_install": "RED_KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_NOW",
     "contra_v4_public_edit": "KAEL_REQUIRED_SEPARATE_GATE",
-    "ugc_new_install_or_large_model_download": "STOP_AND_REVIEW_WHEN_REACHED",
+    "ugc_new_model_or_large_download": "STOP_AND_REVIEW_WHEN_REACHED",
     "ugc_paid_api_account_credits_subscription": "RED_KAEL_REQUIRED",
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "UGC-VIDEO-002 Route A runner/preexecution/ledger persisted and read back; current video-model hardware fit screened; Auto-Product competitive refresh completed; replay-conflict reference contract executed PASS in Node reference only and persisted; no external action or spend.",
+    "last_completed_verified_action": "UGC-VIDEO-002 Route A dry-run executed and correctly stopped because FFmpeg was unavailable; accessible search found no reusable ffmpeg/ffprobe copy; no installation executed.",
     "human_action_required_now": true,
-    "pending_human_action": "KAEL_RUN_UGC_VIDEO_002_ROUTE_A_DRY_RUN_ONLY",
-    "surface": "Windows PC / PowerShell or terminal in current Nexia repo",
+    "pending_human_action": "KAEL_EXPLICITLY_AUTHORIZE_OR_REJECT_FFMPEG_INSTALL",
+    "surface": "Windows PC / PowerShell",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V36.json",
-      "events/EVT-2026-10-16-UGC002-PREEXEC-AUTOPRODUCT-001.json",
-      "NEXIA_UGC_VIDEO_002_LOCAL_HANDOFF_2026-10-16.json",
+      "NEXIA_EVENT_INDEX_V37.json",
+      "events/EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001.json",
       "experiments/UGC-VIDEO-002_ROUTE_A_PREEXECUTION_V1.md",
-      "tools/run_ugc_video_002_route_a.py",
-      "research/NEXIA_AUTO_PRODUCT_TEST_001_2026-10-16.md"
+      "tools/run_ugc_video_002_route_a.py"
     ],
-    "resume_from": "Run UGC-VIDEO-002 Route A dry-run only. If DRY_RUN_PASS, classify and then decide/execute deterministic assembly under the existing experiment. If dependency/source failure, do not install; return evidence for next decision. EXP-AUTO-001 stays alive and Contra remains a separate public RED gate.",
-    "truth_limit": "Do not claim UGC Route A executed/passed, professional UGC capability, n8n v0.2 runtime PASS, public Contra implementation, buyer demand, client acceptance, payment or profit without direct evidence."
+    "resume_from": "Await explicit Kael authorization or rejection for installing Gyan.FFmpeg. If authorized, install, verify ffmpeg/ffprobe, rerun dry-run, then proceed only on DRY_RUN_PASS.",
+    "truth_limit": "Do not claim UGC Route A render/professional PASS, n8n v0.2 runtime PASS, public Contra implementation, buyer demand, payment or profit without direct evidence."
   },
-  "next_action": "KAEL_RUN_UGC_VIDEO_002_ROUTE_A_DRY_RUN_ONLY"
+  "next_action": "KAEL_EXPLICITLY_AUTHORIZE_OR_REJECT_FFMPEG_INSTALL"
 }
