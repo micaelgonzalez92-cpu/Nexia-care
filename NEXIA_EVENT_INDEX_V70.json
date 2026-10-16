@@ -1,0 +1,25 @@
+{
+  "schema_version": 70,
+  "updated_at": "2026-10-17",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V69.json",
+    "verified_blob_sha": "e0729490e67f98e9f945f55aa0a8e5d3d8c6be24"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-17-FLUX-BASE-DIM-DIAG-PASS-V083-REPAIR-001",
+      "path": "events/EVT-2026-10-17-FLUX-BASE-DIM-DIAG-PASS-V083-REPAIR-001.json",
+      "verified_blob_sha": "bbdcadfe8d7a58657614eede080c946ae9389ad8"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-17-FLUX-BASE-DIM-DIAG-PASS-V083-REPAIR-001",
+  "latest_event_path": "events/EVT-2026-10-17-FLUX-BASE-DIM-DIAG-PASS-V083-REPAIR-001.json",
+  "latest_event_blob_sha": "bbdcadfe8d7a58657614eede080c946ae9389ad8",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-FLUX-BASE-DIM-DIAG-PASS-V083-REPAIR-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V70 records the compile-only dimension diagnostic: both BASE width/height consumers reference PrimitiveInt nodes 77:84 and 77:85 whose values are exactly 1024. v0.8.3 resolves linked scalars before enforcing the unchanged 1024x1024 rule; all prior benchmark attempts remain zero-generation."
+}
