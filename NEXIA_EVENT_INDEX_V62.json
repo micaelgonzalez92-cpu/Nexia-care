@@ -1,0 +1,25 @@
+{
+  "schema_version": 62,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V61.json",
+    "verified_blob_sha": "72f2679c1fc0606789f6e33b946da96458eecff0"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-FRONTEND-CDP-FAIL-001",
+      "path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-FRONTEND-CDP-FAIL-001.json",
+      "verified_blob_sha": "REQUIRES_READBACK"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-FRONTEND-CDP-FAIL-001",
+  "latest_event_path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-FRONTEND-CDP-FAIL-001.json",
+  "latest_event_blob_sha": "REQUIRES_READBACK",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-FRONTEND-CDP-FAIL-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V62 records v0.4 no-BOM transport success and fail-closed frontend CDP readiness timeout with zero generations. Official current frontend still exposes window.app, loadGraphData and graphToPrompt, so a bounded readiness probe is the next step before any benchmark retry."
+}
