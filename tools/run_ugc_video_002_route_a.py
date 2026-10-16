@@ -6,13 +6,15 @@ A1 = "NEXIA_BENCHMARK_00002_.png"
 A2 = "NEXIA_BENCHMARK_00003_.png"
 DEFAULT_OUT = "NEXIA_UGC_VIDEO_002_ROUTE_A_SPEC.mp4"
 
+# Keep non-ASCII caption characters as Python Unicode escapes so text-mode
+# transport through Windows shells cannot silently mojibake the source file.
 SRT = """1
 00:00:00,000 --> 00:00:02,500
-¿Necesitas más espacio?
+\u00bfNecesitas m\u00e1s espacio?
 
 2
 00:00:02,500 --> 00:00:06,000
-O quizá... mejor orden.
+O quiz\u00e1... mejor orden.
 
 3
 00:00:06,000 --> 00:00:11,000
@@ -28,7 +30,7 @@ Mismo espacio. Menos caos.
 
 6
 00:00:20,500 --> 00:00:22,500
-Empieza por un solo rincón.
+Empieza por un solo rinc\u00f3n.
 
 7
 00:00:22,500 --> 00:00:24,000
@@ -51,6 +53,19 @@ def need(name):
     if not p:
         raise RuntimeError(f"{name.upper()}_NOT_AVAILABLE; no installation attempted.")
     return p
+
+def validate_caption_contract():
+    required = [
+        "\u00bfNecesitas m\u00e1s espacio?",
+        "O quiz\u00e1... mejor orden.",
+        "Empieza por un solo rinc\u00f3n.",
+        "CLEARNEST - SPEC CONCEPT",
+    ]
+    if not all(text in SRT for text in required):
+        raise RuntimeError("CAPTION_TEXT_CONTRACT_FAIL")
+    mojibake_markers = ["\u251c", "\u00c3", "\ufffd"]
+    if any(marker in SRT for marker in mojibake_markers):
+        raise RuntimeError("CAPTION_ENCODING_CORRUPTED_SOURCE")
 
 def find_output(explicit=None):
     if explicit:
@@ -116,6 +131,8 @@ def main():
         "professional_qa": "NOT_YET_PERFORMED",
     }
     try:
+        validate_caption_contract()
+        report["caption_text_contract"] = "PASS"
         ffmpeg, ffprobe = need("ffmpeg"), need("ffprobe")
         source_dir = find_output(args.comfy_output)
         sources = {A1: source_dir/A1, A2: source_dir/A2}
