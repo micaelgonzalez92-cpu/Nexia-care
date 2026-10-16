@@ -1,0 +1,27 @@
+{
+  "event_id": "EVT-2026-10-16-LIVE-HUD-ADOPTED-001",
+  "date": "2026-10-16",
+  "type": "COMMUNICATION_STANDARD_ADOPTION",
+  "status": "VERIFIED_PERSISTED_READBACK_REQUIRED",
+  "authority": "USER_EXPLICIT_APPROVAL",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "artifact": {
+    "path": "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md",
+    "verified_blob_sha": "330d3a6544382c8ad88c7b79a311aa8920815f5b"
+  },
+  "decision": "NEXIA LIVE HUD becomes the default format for operational chat responses; technical detail remains available on demand or when materially required.",
+  "invariants": [
+    "Evidence labels and truth boundaries remain unchanged",
+    "GREEN/YELLOW/RED authority gates remain unchanged",
+    "UNKNOWN_NOT_INSTRUMENTED is never rendered as zero",
+    "No fake continuous animation or background execution claims",
+    "Required final Kael action taxonomy remains unchanged"
+  ],
+  "system_effect": "Communication/readability standard only; mission, economics, authority, Contra gate and external-action permissions are unchanged.",
+  "current_bottleneck": "KAEL_APPLY_FINAL_CONTRA_V4_PROFILE_MEDIA_COPY_AND_REMOVE_PERSONAL_INSTAGRAM",
+  "financial_impact_eur": 0,
+  "external_action_executed": false,
+  "public_contra_v4_implemented": false,
+  "truth_boundary": "Persistence of the HUD standard does not imply Contra implementation, buyer demand, payment, profit, deployment or 24x7 operation."
+}
