@@ -1,6 +1,6 @@
 {
-  "schema_version": 46,
-  "boot_version": 101,
+  "schema_version": 47,
+  "boot_version": 102,
   "generated_at": "2026-10-16",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,7 +15,8 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "NEXIA_EVENT_INDEX_V46.json",
+    "NEXIA_EVENT_INDEX_V47.json",
+    "events/EVT-2026-10-16-FRAMEPACK-PAGEFILE-MEDIA-001.json",
     "events/EVT-2026-10-16-FRAMEPACK-HARDWARE-CAPACITY-001.json",
     "events/EVT-2026-10-16-STORAGE-AUDIT-001.json",
     "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json",
@@ -25,24 +26,25 @@
     "research/NEXIA_AUTO_PRODUCT_001_COMPETITIVE_REFRESH_2026-10-16.md",
     "research/NEXIA_AUTO_PRODUCT_TEST_001_2026-10-16.md",
     "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md when Contra execution is material",
-    "read V46 base V45/V44 and earlier indexes/events as needed",
+    "read V47 base V46/V45/V44 and earlier indexes/events as needed",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "bbf7309b1e6f585797ced547453502ffc1e52634",
+  "live_state_blob_sha": "319256a68e324a810a941cc38fabf1fdbb2a1765",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V46.json",
-    "latest_verified_event_id": "EVT-2026-10-16-FRAMEPACK-HARDWARE-CAPACITY-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-FRAMEPACK-HARDWARE-CAPACITY-001.json",
-    "latest_verified_event_blob_sha": "9f2c10be82861ac76b46396be1d8a06887187f6b",
-    "base_index": "NEXIA_EVENT_INDEX_V45.json"
+    "active_index": "NEXIA_EVENT_INDEX_V47.json",
+    "active_index_blob_sha": "82be3b8b3508d1dfc15f6fb9c03833614df483b8",
+    "latest_verified_event_id": "EVT-2026-10-16-FRAMEPACK-PAGEFILE-MEDIA-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-FRAMEPACK-PAGEFILE-MEDIA-001.json",
+    "latest_verified_event_blob_sha": "dccb3d552a4ca01e813b629569270447b94c2b9a",
+    "base_index": "NEXIA_EVENT_INDEX_V46.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ALIVE",
-    "lane_2": "UGC_ROUTE_A_STOPPED_FRAMEPACK_RAM_PAGEFILE_GATE",
+    "lane_2": "UGC_ROUTE_A_STOPPED_LOW_FOOTPRINT_EXISTING_COMFYUI_I2V_COMPARISON",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED"
   },
   "capacity_checkpoint": {
@@ -50,14 +52,15 @@
     "gpu": "RTX_3060_12GB",
     "vram_nominal_framepack_fit": true,
     "ram_total_gib": 15.96,
-    "virtual_total_gib": 25.46,
-    "approx_pagefile_gib": 9.50,
-    "pagefile_exact": "NOT_VERIFIED",
-    "drive_media_type": "NOT_VERIFIED",
-    "framepack_installed": false
+    "pagefile_path": "C:\\pagefile.sys",
+    "pagefile_exact_gib": 9.50,
+    "C_drive": "CT480BX500SSD1_SSD_SATA",
+    "D_drive": "ST1000DM010_1TB_HDD_SATA",
+    "framepack_installed": false,
+    "framepack_operational_fit": "WEAK_HIGH_THRASH_AND_LATENCY_RISK"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — ROUTE A STOPPED; STORAGE PASS; FRAMEPACK VRAM NOMINAL PASS; RAM/PAGEFILE/MEDIA READ-ONLY GATE",
-  "human_gate": "Kael should run a read-only query for exact pagefile configuration and storage media type. No deletion, pagefile change, FramePack install or large model download is authorized yet.",
-  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V46_PLUS_LIVE_SCHEMA_46_FRAMEPACK_CAPACITY_GATE",
-  "next_action": "KAEL_QUERY_PAGEFILE_AND_STORAGE_MEDIA_READ_ONLY"
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — ROUTE A STOPPED; STORAGE PASS; EXACT PAGEFILE/MEDIA VERIFIED; FRAMEPACK DEFERRED; LOWER-FOOTPRINT EXISTING-COMFYUI I2V COMPARISON",
+  "human_gate": "No Kael action is required now. Nexia should compare lower-footprint I2V routes that reuse the existing ComfyUI stack. No deletion, pagefile change, new model download or FramePack install is authorized yet.",
+  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V47_PLUS_LIVE_SCHEMA_47_FRAMEPACK_DEFERRED_LOW_FOOTPRINT_I2V_RESEARCH",
+  "next_action": "NEXIA_COMPARE_LOW_FOOTPRINT_EXISTING_COMFYUI_I2V"
 }
