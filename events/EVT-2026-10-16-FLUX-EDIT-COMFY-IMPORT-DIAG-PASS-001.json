@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-COMFY-IMPORT-DIAG-PASS-001",
+  "timestamp": "2026-10-16",
+  "type": "FLUX_COMFY_IMPORT_AND_WRITEBACK_ENCODING_DIAGNOSTIC",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_DIAGNOSTIC_CONSOLE_OUTPUT",
+  "observed": {
+    "powershell_version": "5.1.19041.6456",
+    "github_payload_first_bytes_decimal": [239,187,191,123],
+    "github_payload_utf8_bom": "PRESENT_VERIFIED",
+    "sqlalchemy_version": "2.1.1",
+    "sqlalchemy_sqlite_import_seconds": 0.017,
+    "sqlalchemy_sqlite_import_exit": 0,
+    "comfy_db_import_seconds": 0.711,
+    "comfy_db_import_exit": 0,
+    "server_started": false,
+    "generations_executed": 0
+  },
+  "diagnosis": {
+    "persistent_sqlalchemy_import_failure": false,
+    "persistent_comfy_db_import_failure": false,
+    "prior_keyboardinterrupt_classification": "TRANSIENT_OR_EXTERNAL_TO_NORMAL_IMPORT_PATH_SOURCE_NOT_YET_IDENTIFIED",
+    "github_payload_bom_presence": "VERIFIED",
+    "github_http_400_exact_causality": "HIGH_CONFIDENCE_NOT_YET_REPRODUCED_WITH_NO_BOM_WRITEBACK",
+    "experimental_failure": false,
+    "flux_runtime_evidence_changed": false
+  },
+  "truth_boundary": "This diagnostic verifies that the isolated SQLAlchemy SQLite import and ComfyUI database import chain complete normally on the same embedded Python environment, and that the failed GitHub payload file begins with a UTF-8 BOM. It does not yet prove full ComfyUI server startup or FLUX image-edit execution.",
+  "next_action": "RUN_ONE_BOUNDED_COMFY_SERVER_STARTUP_DIAGNOSTIC_NO_GENERATION_THEN_REPAIR_WRITEBACK_TRANSPORT"
+}
