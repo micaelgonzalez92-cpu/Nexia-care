@@ -1,0 +1,25 @@
+{
+  "schema_version": 65,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V64.json",
+    "verified_blob_sha": "00754a729cf9770ff9ac095800a2ffb76a1d83bd"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V06-STRICTMODE-CDP-V07-REPAIR-001",
+      "path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V06-STRICTMODE-CDP-V07-REPAIR-001.json",
+      "verified_blob_sha": "c586141891ac1df1116bb68a263ad5edea91e442"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V06-STRICTMODE-CDP-V07-REPAIR-001",
+  "latest_event_path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V06-STRICTMODE-CDP-V07-REPAIR-001.json",
+  "latest_event_blob_sha": "c586141891ac1df1116bb68a263ad5edea91e442",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V06-STRICTMODE-CDP-V07-REPAIR-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V65 preserves v0.6 as a zero-generation fail-closed attempt with remote raw result _003, falsifies wrong-target selection as sufficient cause, records the strict-mode optional CDP property defect supported by official protocol and PowerShell behavior, and prepares v0.7 with strict-safe CDP parsing while preserving the frozen experiment and all prior raw results."
+}
