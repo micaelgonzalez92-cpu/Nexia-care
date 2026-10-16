@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-UGC002-FFMPEG-AUTH-001",
+  "timestamp": "2026-10-16",
+  "timestamp_precision": "date_only",
+  "type": "UGC002_FFMPEG_INSTALL_AUTHORIZATION",
+  "state_version": 73,
+  "status": "VERIFIED_AUTHORIZATION_GRANTED_INSTALL_NOT_YET_VERIFIED",
+  "authority": "KAEL_EXPLICIT_AUTHORIZATION",
+  "experiment": "UGC-VIDEO-002",
+  "authorized_action": {
+    "package_id": "Gyan.FFmpeg",
+    "installer": "winget",
+    "command": "winget install --id Gyan.FFmpeg --exact --source winget",
+    "expected_cash_cost_eur": 0
+  },
+  "scope_limit": "Authorization applies only to installing Gyan.FFmpeg for UGC-VIDEO-002 Route A. It does not authorize other software, models, accounts, subscriptions, purchases, APIs, publication, external contact, or production activation.",
+  "installation_executed": false,
+  "installation_verified": false,
+  "postconditions_required": [
+    "ffmpeg -version succeeds",
+    "ffprobe -version succeeds",
+    "UGC-VIDEO-002 dry-run returns DRY_RUN_PASS before render"
+  ],
+  "next_action": "KAEL_RUN_AUTHORIZED_WINGET_INSTALL_AND_RETURN_OUTPUT"
+}
