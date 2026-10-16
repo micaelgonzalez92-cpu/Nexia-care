@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V05-TARGET-RACE-V06-REPAIR-001",
+  "timestamp": "2026-10-16",
+  "type": "FLUX_ONE_SHOT_V05_FRONTEND_TARGET_FAIL_V06_REPAIR",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_V05_CONSOLE_PLUS_REMOTE_RAW_RESULT_002_PLUS_PINNED_RUNNER_SOURCE_REVIEW",
+  "observed": {
+    "wrapper": "tools/nexia_local_flux_edit_gate_v0_5.ps1",
+    "patch_verify": "PASS",
+    "failure_stage": "START_COMFYUI_FRONTEND_CDP",
+    "failure": "ComfyUI frontend loaded but window.app/loadGraphData/graphToPrompt did not become ready.",
+    "generation_count": 0,
+    "base_gate_reached": false,
+    "writeback_console": "PASS_GH_API_READBACK_MATCH",
+    "remote_raw_result": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_002.json",
+    "remote_raw_result_blob_sha": "1e0c7dab808073ab8e2c96c3c60d5a9362ff9bcc",
+    "cost_eur": 0
+  },
+  "counterevidence": {
+    "frontend_diag_v02_ready": true,
+    "frontend_first_app_seconds": 1.278,
+    "frontend_first_methods_seconds": 1.287,
+    "api_methods_present": true
+  },
+  "root_cause_hypothesis": {
+    "classification": "HIGH_CONFIDENCE_CDP_TARGET_SELECTION_RACE",
+    "basis": "Pinned base runner breaks target discovery when any CDP target exists, then falls back to the first page if the ComfyUI target is not yet present. The successful v0.2 diagnostic waits specifically for a page whose URL starts with the ComfyUI localhost base. This difference can bind the persistent CDP socket to a non-Comfy page while producing the observed readiness timeout.",
+    "not_yet_runtime_verified": true
+  },
+  "repair": {
+    "runner": "tools/nexia_local_flux_edit_gate_v0_6.ps1",
+    "runner_blob_sha": "86728bcbdacffd39826e9353c2671437f862a048",
+    "runner_commit": "08c27990393f9059d46dc3b4a4478afac6bd909c",
+    "strategy": "Preserve prior 404/no-BOM/ConnectAsync fixes, wait specifically for the ComfyUI page target, remove fallback to arbitrary first page, print selected target URL, preserve prior raw results, and write next attempt to _003.",
+    "experimental_contract_changed": false,
+    "prompts_changed": false,
+    "seed_changed": false,
+    "workflow_refs_changed": false,
+    "generation_cap_changed": false,
+    "qa_changed": false
+  },
+  "truth_boundary": "No Base/B1/B2 generation occurred in v0.5. The target-race diagnosis is high-confidence from source comparison but becomes verified only if v0.6 selects the ComfyUI target and advances beyond frontend readiness.",
+  "next_action": "KAEL_RUN_PINNED_V0_6_SAME_FROZEN_ONESHOT_BENCHMARK"
+}
