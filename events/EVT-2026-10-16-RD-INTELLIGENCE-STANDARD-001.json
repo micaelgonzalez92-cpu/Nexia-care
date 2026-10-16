@@ -1,0 +1,29 @@
+{
+  "event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
+  "date": "2026-10-16",
+  "type": "R_AND_D_OPERATING_STANDARD_ADOPTION",
+  "status": "VERIFIED_PERSISTED",
+  "authority": "GREEN_INTERNAL_USER_REQUESTED_IMPROVEMENT",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "artifact": {
+    "path": "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
+    "verified_blob_sha": "8a4324b0e6e43aef475cb53df77eafdbc2c99685"
+  },
+  "decision": "Adopt source-authority routing, dual-path evidence checks, deterministic falsification, cross-model retesting and trigger-based tool adoption as Nexia's default material R&D method.",
+  "use_now": [
+    "native web research with primary-source preference",
+    "connected GitHub for canonical/project/repository evidence",
+    "Crossref/OpenAlex/Semantic Scholar/arXiv routes for scholarly research",
+    "Hugging Face Hub/API for model and dataset discovery/verification",
+    "Elicit/Consensus/Scite-style synthesis when available",
+    "NotebookLM-style fixed-corpus analysis when useful",
+    "deterministic computation for quantitative falsification"
+  ],
+  "no_new_runtime_installed": true,
+  "financial_impact_eur": 0,
+  "external_action_executed": false,
+  "authority_change": "NONE",
+  "current_reality_gate": "KAEL_APPLY_FINAL_CONTRA_V4_PROFILE_MEDIA_COPY_AND_REMOVE_PERSONAL_INSTAGRAM",
+  "truth_boundary": "Adopting a research method does not prove any candidate tool operational in Nexia, nor does it imply public Contra implementation, buyer demand, payment or profit."
+}
