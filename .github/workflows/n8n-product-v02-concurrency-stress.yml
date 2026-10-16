@@ -28,20 +28,34 @@ jobs:
         with:
           node-version: '24.21.0'
 
-      - name: Verify frozen repair contract
+      - name: Verify frozen repair and observability contracts
         run: |
           set -euo pipefail
           grep -F 'FROZEN_BEFORE_V021_STRESS_OUTPUTS' experiments/auto-product-v021/CONCURRENCY_STRESS_PREREG_2026-10-17.md
+          grep -F 'FROZEN_BEFORE_OBSERVABILITY_REPAIR_RUN_OUTPUTS' experiments/auto-product-v021/OBSERVABILITY_REPAIR_PREREG_2026-10-17.md
           grep -F 'N8N_CONCURRENCY_PRODUCTION_LIMIT=1' experiments/auto-product-v021/SERIALIZED_PROFILE_DESIGN_2026-10-17.md
           node experiments/auto-product-v02/test_static_v02.js
+          node <<'NODE'
+          const fs = require('fs');
+          const assert = require('node:assert/strict');
+          const audit = JSON.parse(fs.readFileSync('experiments/auto-product-v021/audit-all-entries-v021.json','utf8'));
+          const webhook = audit.nodes.find(n => n.name === 'V0.2.1 Audit Webhook');
+          const getRows = audit.nodes.find(n => n.name === 'Get V0.2.1 Rows');
+          assert.equal(audit.active, false);
+          assert.equal(webhook.parameters.responseMode, 'lastNode');
+          assert.equal(webhook.parameters.responseData, 'allEntries');
+          assert.equal(getRows.parameters.operation, 'get');
+          assert.equal(getRows.parameters.returnAll, true);
+          console.log('PASS: V0.2.1 audit instrumentation explicitly returns all entries');
+          NODE
 
       - name: Show pinned n8n version
         run: npx --yes n8n@2.42.6 --version
 
-      - name: Run V0.2.1 serialized stress in real n8n
+      - name: Run V0.2.1 serialized stress with repaired persistence observability
         env:
           N8N_ENABLED_MODULES: 'data-table'
-          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-product-v021-user
+          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-product-v021-observability-user
           N8N_PORT: '5678'
           N8N_HOST: '127.0.0.1'
           N8N_PROTOCOL: 'http'
@@ -50,14 +64,14 @@ jobs:
           N8N_PERSONALIZATION_ENABLED: 'false'
           N8N_CONCURRENCY_PRODUCTION_LIMIT: '1'
           NEXIA_EXPECTED_SERIAL_LIMIT: '1'
-          N8N_LOG: ${{ runner.temp }}/n8n-product-v021.log
+          N8N_LOG: ${{ runner.temp }}/n8n-product-v021-observability.log
           BASE_URL: http://127.0.0.1:5678
           BOOTSTRAP_WORKFLOW_ID: nexia-lead-intake-replay-bootstrap-v02-candidate
           BOOTSTRAP_PATH: lead-intake-replay-bootstrap-v02
           GUARD_WORKFLOW_ID: nexia-lead-intake-replay-conflict-v02-candidate
           GUARD_PATH: lead-intake-replay-conflict-v02
-          AUDIT_WORKFLOW_ID: nexia-lead-intake-replay-audit-v02-candidate
-          AUDIT_PATH: lead-intake-replay-audit-v02
+          AUDIT_WORKFLOW_ID: nexia-lead-intake-replay-audit-v021-all-entries
+          AUDIT_PATH: lead-intake-replay-audit-v021-all-entries
         run: |
           set -euo pipefail
           test "$N8N_CONCURRENCY_PRODUCTION_LIMIT" = '1'
@@ -65,7 +79,7 @@ jobs:
           echo "VERIFIED_TEST_ENV: N8N_CONCURRENCY_PRODUCTION_LIMIT=$N8N_CONCURRENCY_PRODUCTION_LIMIT"
           mkdir -p "$N8N_USER_FOLDER"
 
-          for f in experiments/auto-product-v02/bootstrap-v02.json experiments/auto-product-v02/guard-v02.json experiments/auto-product-v02/audit-v02.json; do
+          for f in experiments/auto-product-v02/bootstrap-v02.json experiments/auto-product-v02/guard-v02.json experiments/auto-product-v021/audit-all-entries-v021.json; do
             npx --yes n8n@2.42.6 import:workflow --input="$f"
           done
           npx --yes n8n@2.42.6 publish:workflow --id="$BOOTSTRAP_WORKFLOW_ID"
@@ -120,9 +134,45 @@ jobs:
           done
           curl --max-time 2 -fsS "$BASE_URL/healthz/readiness" >/dev/null
           all_webhooks_registered
-          echo "PASS: serialized-profile n8n PID=$N8N_PID ready"
+          echo "PASS: serialized-profile n8n PID=$N8N_PID ready with allEntries audit"
 
+          set +e
           node experiments/auto-product-v021/concurrency_stress_v021.js
+          HARNESS_CODE=$?
+          set -e
+
+          AUDIT_FILE="${RUNNER_TEMP}/v021-all-entries-audit.json"
+          curl --max-time 10 -fsS -X POST "$BASE_URL/webhook/$AUDIT_PATH" \
+            -H 'Content-Type: application/json' --data '{}' > "$AUDIT_FILE"
+
+          DB="$DB" AUDIT_FILE="$AUDIT_FILE" python3 <<'PY'
+          import json, os, re, sqlite3
+          db = os.environ['DB']
+          with open(os.environ['AUDIT_FILE'], 'r', encoding='utf-8') as f:
+              audit = json.load(f)
+          if not isinstance(audit, list):
+              raise AssertionError(f'allEntries audit must be an array, got {type(audit).__name__}')
+          con = sqlite3.connect(db)
+          tables = [r[0] for r in con.execute("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE '%data_table_user_%' ORDER BY name")]
+          assert len(tables) == 1, f'expected exactly one physical Data Table, got {tables}'
+          table = tables[0].replace('"', '""')
+          direct = [dict(zip(['eventKey','identityKey','recordId','payloadHash'], row)) for row in con.execute(f'SELECT "eventKey","identityKey","recordId","payloadHash" FROM "{table}" ORDER BY "eventKey"')]
+          projected = [{k: row.get(k) for k in ['eventKey','identityKey','recordId','payloadHash']} for row in audit]
+          projected.sort(key=lambda r: r['eventKey'])
+          assert len(projected) == 4, f'allEntries audit expected 4 rows, got {len(projected)}: {projected}'
+          assert len(direct) == 4, f'direct SQLite expected 4 rows, got {len(direct)}: {direct}'
+          assert len({r['eventKey'] for r in direct}) == 4, f'duplicate eventKey in SQLite: {direct}'
+          assert len({r['identityKey'] for r in direct}) == 4, f'duplicate identityKey in SQLite: {direct}'
+          assert all(re.fullmatch(r'[0-9a-f]{64}', r['payloadHash'] or '') for r in direct), f'invalid SHA-256 hash in SQLite: {direct}'
+          assert projected == direct, f'allEntries audit and direct SQLite mismatch: audit={projected} direct={direct}'
+          print(json.dumps({'pass': True, 'physical_table': tables[0], 'rows': len(direct), 'audit_matches_sqlite': True, 'unique_event_keys': 4, 'unique_identity_keys': 4}))
+          print('PASS: allEntries audit matches direct SQLite persistence state')
+          PY
+
+          if [ "$HARNESS_CODE" -ne 0 ]; then
+            echo "FAIL: stress harness exited $HARNESS_CODE even though independent persistence probe completed"
+            exit "$HARNESS_CODE"
+          fi
 
           cleanup
           trap - EXIT
@@ -136,4 +186,4 @@ jobs:
               connection.settimeout(2)
               assert connection.connect_ex(('127.0.0.1', int(os.environ['N8N_PORT']))) != 0, 'n8n TCP port still open after cleanup'
           PY
-          echo 'PASS: V0.2.1 serialized stress runtime cleaned up'
+          echo 'PASS: V0.2.1 repaired-observability stress runtime cleaned up'
