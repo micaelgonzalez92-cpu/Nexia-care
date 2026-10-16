@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-FLUX-EDIT-BRIDGE-V082-DIM-ARRAY-DIAG-001",
+  "timestamp": "2026-10-17",
+  "type": "FLUX_ONE_SHOT_V082_DIMENSION_ARRAY_PRECHECK_STOP_DIAGNOSTIC_PREPARED",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_V082_CONSOLE_PLUS_REMOTE_RAW_RESULT_006_PLUS_RUNNER_SOURCE_REVIEW",
+  "observed": {
+    "wrapper": "tools/nexia_local_flux_edit_gate_v0_8_2.ps1",
+    "failure_stage": "COMPILE_BASE_PRECHECK",
+    "failure": "Cannot convert System.Object[] to System.Int32",
+    "generation_count": 0,
+    "base_gate_reached": false,
+    "writeback_console": "PASS_GH_API_READBACK_MATCH",
+    "remote_raw_result": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_006.json",
+    "remote_raw_result_blob_sha": "f29951784f8ced4ab7a90280b28ec8775df28acd",
+    "cost_eur": 0
+  },
+  "inference": {
+    "dimension_properties_found": true,
+    "at_least_one_dimension_value_is_array": true,
+    "safe_numeric_resolution_not_yet_verified": true,
+    "distilled_route_prior_sampler_steps_cfg_checks_remain_passed_by_order": true
+  },
+  "diagnostic": {
+    "path": "tools/nexia_local_flux_base_dimension_diag_v0_1.ps1",
+    "blob_sha": "1bbfd71d5920ded20e5ed414475c9c60afde7167",
+    "commit": "d83e0c84d6202a4ea8b270e433173fd004dedca1",
+    "scope": "Compile frozen BASE only and print each width/height candidate type/value plus linked source node when applicable.",
+    "queue_submission": false,
+    "generation": false,
+    "install_download_model_change": false
+  },
+  "truth_boundary": "No Base/B1/B2 image has yet been generated. The Object[] representation must be inspected before changing the 1024x1024 precheck. No coercion or resolution rule is authorized until the compiled prompt structure is observed.",
+  "next_action": "KAEL_RUN_PINNED_BASE_DIMENSION_COMPILE_DIAG_V0_1"
+}
