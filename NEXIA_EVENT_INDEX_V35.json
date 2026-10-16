@@ -12,12 +12,12 @@
     {
       "event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
       "path": "events/EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001.json",
-      "verified_blob_sha": "REPLACE_AFTER_READBACK"
+      "verified_blob_sha": "f99f763be0c14993205189e80251fad9faa3d7d1"
     }
   ],
   "latest_event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
   "latest_event_path": "events/EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001.json",
-  "latest_event_blob_sha": "REPLACE_AFTER_READBACK",
+  "latest_event_blob_sha": "f99f763be0c14993205189e80251fad9faa3d7d1",
   "latest_material_business_event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
   "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
   "latest_material_automation_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001",
