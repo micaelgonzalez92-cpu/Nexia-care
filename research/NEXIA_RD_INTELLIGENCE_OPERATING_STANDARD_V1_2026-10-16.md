@@ -2,7 +2,7 @@
 
 Date: 2026-10-16
 Status: ACTIVE / READY_FOR_CURRENT_PURPOSE / EUR0-FIRST
-Authority: GREEN internal research standard; does not authorize external publication, account creation, spend or sensitive actions.
+Authority: GREEN internal research standard; does not authorize external publication, account creation, spend, installation or sensitive actions.
 
 ## Objective
 Turn external information into verified Nexia capability faster than generic browsing. Optimize for source authority, falsifiability, freshness, reproducibility, cost, privacy and decision value.
@@ -11,6 +11,30 @@ Turn external information into verified Nexia capability faster than generic bro
 `CLASSIFY -> PRIMARY SOURCE -> INDEPENDENT COUNTERCHECK -> REPRODUCE/COMPUTE WHEN POSSIBLE -> LABEL EVIDENCE -> COMPARE TO NEXIA -> IMPLEMENT/TEST/RESERVE/DISCARD -> CAPTURE -> REVERIFY LATER`
 
 Social posts, directories and community discussion are sensors. They do not become HECHO VERIFICADO without stronger evidence when material.
+
+## TASK-TRIGGERED R&D INTERRUPT — MANDATORY
+Research is not only a periodic radar. Whenever an ACTIVE task hits a material blocker, repeated failure, avoidable manual friction, missing capability, questionable tool fit, or a plausible faster/cheaper/more reliable route, Nexia must immediately run a bounded R&D interrupt before continuing to polish the current method.
+
+Mandatory triggers:
+1. a material acceptance criterion fails or root cause remains ambiguous;
+2. an active task is blocked by missing software/API/model/runtime/data/tooling;
+3. repeated human action suggests automation or remote execution leverage;
+4. a proposed install, model download, paid API, new account or material system change becomes likely;
+5. Kael supplies new tool/repo/app/API/social evidence relevant to the active task;
+6. a current method is expensive, fragile, slow or high-maintenance and a materially better alternative may exist;
+7. an upstream release or new evidence may invalidate the current architecture.
+
+Execution order:
+`ACTIVE TASK -> SEARCH EXISTING USER/PROJECT CORPUS -> SEARCH CANONICAL NEXIA ARTIFACTS -> VERIFY PRIMARY/UPSTREAM SOURCES -> COUNTERCHECK FAILURE MODES -> SHORTLIST MAX 3 -> COMPARE WITH CURRENT STACK -> PROPOSE WITHOUT INSTALLING -> AUTHORITY GATE -> BOUNDED POC -> CAPTURE -> RESUME ACTIVE TASK`
+
+Rules:
+- The existing user-provided corpus is searched before broad external discovery when it may contain relevant candidates. Prior screenshots, links and notes are sensors and must be upstream-verified before material adoption.
+- Task-triggered R&D is an interrupt supporting an existing WIP lane, not a fourth material workstream.
+- Weekly/recurring radar is background discovery only. It never substitutes for this interrupt.
+- Prefer EUR0, already-installed and open-source routes before paid APIs when they can answer the decision fast enough.
+- New software, API, repo, account, model or persistent service is PROPOSED first; installation/activation/spend remains separately gated.
+- Stop discovery once one candidate clearly dominates the current decision or after a maximum useful shortlist of three. Capture rejected candidates and reasons to prevent rediscovery loops.
+- After the POC, return to the original active task. Research is successful only if it changes a decision, capability, risk posture or measured outcome.
 
 ## Source Authority Router
 Route every material research question before searching.
@@ -85,6 +109,7 @@ Only after a repeated target is identified: GitHub releases/commits, official ch
 |---|---|---|---|
 | Current public research | Native web search | discovery + current verification | prefer primary/official; add counterevidence for material claims |
 | Project/code truth | GitHub connector + GitHub REST concepts | canonical Nexia files, repos, commits, releases, issues | read before write; material writes require readback |
+| Existing intelligence corpus | Project/conversation files + Nexia retrieval | first-pass candidate recall for active task | search before external discovery; verify upstream before adoption |
 | Scholarly DOI metadata | Crossref REST API | paper/DOI metadata, funders, licenses, updates | strong metadata source; inspect original paper for consequential claims |
 | Academic graph | Semantic Scholar / OpenAlex | papers, authors, citations, related work | discovery/graph layer, not sole truth |
 | Preprints | arXiv | current scientific/technical research | mark peer-review status correctly |
@@ -159,4 +184,4 @@ P6 Pydantic AI first, LangGraph only if needed, when an in-code agent runtime is
 P7 Codync only if repeated desktop dependency can be safely reduced by remote supervision.
 
 ## Stop rule
-Broad tool collecting is stopped. Research resumes around a named decision, capability gap, buyer signal, safety issue or material technology change. The purpose of the research system is better decisions and tested capability, not a larger tool inventory.
+Broad tool collecting is stopped. Task-triggered R&D starts immediately around a named blocker/opportunity and stops when the decision is resolved. Background radar remains supplemental. The purpose of the research system is better decisions and tested capability, not a larger tool inventory.
