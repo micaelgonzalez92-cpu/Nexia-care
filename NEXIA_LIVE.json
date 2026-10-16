@@ -1,7 +1,7 @@
 {
-  "schema_version": 56,
+  "schema_version": 57,
   "updated_at": "2026-10-17",
-  "status": "ACTIVE_MODEL_C_FLUX_ONE_SHOT_CLOSED_VERIFIED_RUNTIME_FUNCTIONAL_PROFESSIONAL_NOT_ESTABLISHED",
+  "status": "ACTIVE_MODEL_C_INTEGRITY_FULL_CHAIN_VERIFIED_WARN4_FLUX_FUNCTIONAL_PROFESSIONAL_NOT_ESTABLISHED",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -148,14 +148,35 @@
     "settled_revenue_eur": 0,
     "additional_internal_polish": "CAPPED_PENDING_EXTERNAL_EVIDENCE"
   },
+  "integrity": {
+    "checker": "tools/nexia_integrity_check.py",
+    "checker_blob_sha": "c8e06a7e9134234e43fdcd654ade8a5f8f9e2da8",
+    "repair_commit": "eef0e99b6fce24b894b263b3d517e17d257fd64e",
+    "max_index_depth": 1024,
+    "full_chain_ci_run_id": 38978651205,
+    "status": "WARN_ZERO_ERRORS_FOUR_HISTORICAL_HASH_BINDING_WARNINGS",
+    "errors": 0,
+    "warnings": 4,
+    "indexes_checked": 74,
+    "events_checked": 149,
+    "artifact_references_checked": 10,
+    "historical_artifact_blobs_checked": 2,
+    "corrected_historical_references": 2,
+    "warnings_preserved": [
+      "NEXIA_EVENT_INDEX_V41.json",
+      "events/EVT-2026-10-16-UGC002-V2-QA-001.json",
+      "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
+      "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json"
+    ]
+  },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V75.json",
-    "active_index_blob_sha": "5f96ad93c30f640fddea632320a09bf40ac10906",
-    "latest_verified_event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
-    "latest_verified_event_blob_sha": "527e1dd7daa6bb5439ef268149b19a843c5bcb3d",
-    "base_index": "NEXIA_EVENT_INDEX_V74.json"
+    "active_index": "NEXIA_EVENT_INDEX_V76.json",
+    "active_index_blob_sha": "77236455def939f666ba78c0d4d0a60abdc7897e",
+    "latest_verified_event_id": "EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001.json",
+    "latest_verified_event_blob_sha": "e1378bd3db65ae69defc09010d9241425b2b3b84",
+    "base_index": "NEXIA_EVENT_INDEX_V75.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -175,22 +196,22 @@
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "ONE-SHOT V1 RAW _008 verified remotely; nine output/API/workflow hashes match; BASE 6/6 and B1/B2 12/12 PASS; B2 superiority not demonstrated; functional image editing VERIFIED_RUNTIME_FUNCTIONAL; professional NOT_ESTABLISHED. No generation in closure task.",
-    "last_user_facing_handoff": "Benchmark closed; no Kael action for this closure. STATE v73 unchanged. Global integrity checker has historical depth/hash-binding debt; no global PASS claimed.",
+    "last_completed_verified_action": "Canonical integrity checker depth repaired from 64 to bounded 1024; CI full-chain audit traversed 74 indexes and 149 events with zero errors and four preserved historical hash-binding warnings.",
+    "last_user_facing_handoff": "Integrity depth blocker closed. Checker status is WARN, not PASS, because four historical REFERENCE_HASH_MISSING warnings remain. FLUX remains closed and is not reopened.",
     "human_action_required_now": false,
     "pending_human_action": null,
-    "scope": "FLUX_QA_CLOSURE_ONLY; other STATE v73 human gates preserved",
+    "scope": "INTEGRITY_DEPTH_REPAIR_CLOSURE; other STATE v73 human gates preserved",
     "resume_required_reads": [
       "NEXIA_STATE.json",
-      "NEXIA_EVENT_INDEX_V75.json",
-      "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
-      "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
-      "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md"
+      "NEXIA_EVENT_INDEX_V76.json",
+      "events/EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001.json",
+      "tools/nexia_integrity_check.py",
+      "NEXIA_EVENT_INDEX_V75.json"
     ],
-    "resume_from": "Do not rerun _008. Use V75 verified functional result when prioritizing subsequent bounded work; keep professional/video claims unestablished.",
-    "truth_limit": "Commit proves persistence only; runtime and QA are supported separately by raw/history/images. No new authority, professional generalization, sales or video capability."
+    "resume_from": "Use V76 integrity closure. Preserve four historical warnings unless exact anchored evidence justifies correction; do not rewrite history. Resume active Reality Loop EXP-AUTO-001 or lane 3 by dynamic priority.",
+    "truth_limit": "Canonical full-chain byte-integrity audit has zero errors but status WARN due four historical missing hash bindings. Blob integrity is not proof of business claims, runtime execution or professional readiness."
   },
-  "next_action": "NO_ACTION_FOR_KAEL_THIS_FLUX_CLOSURE; do not rerun; preserve unrelated canonical gates.",
+  "next_action": "INTEGRITY_DEPTH_REPAIR_CLOSED_WARN4; resume dynamic priority with EXP-AUTO-001 external validation or VETA-AUTO-PRODUCT runtime validation; no Kael action for integrity closure.",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -203,9 +224,9 @@
   },
   "resume_required_reads": [
     "NEXIA_STATE.json",
-    "NEXIA_EVENT_INDEX_V75.json",
-    "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
-    "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
-    "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md"
+    "NEXIA_EVENT_INDEX_V76.json",
+    "events/EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001.json",
+    "tools/nexia_integrity_check.py",
+    "NEXIA_EVENT_INDEX_V75.json"
   ]
 }
