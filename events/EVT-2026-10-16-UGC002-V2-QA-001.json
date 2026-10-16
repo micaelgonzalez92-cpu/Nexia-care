@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-UGC002-V2-QA-001",
+  "timestamp": "2026-10-16",
+  "timestamp_precision": "date_only",
+  "type": "UGC002_V2_PROFESSIONAL_QA",
+  "state_version": 73,
+  "status": "V2_PROFESSIONAL_FAIL_UNICODE_TRANSPORT_ROOT_CAUSE_HARDENED",
+  "experiment": "UGC-VIDEO-002",
+  "route": "A_ANATOMY_MINIMIZED_DETERMINISTIC",
+  "evidence_basis": {
+    "uploaded_mp4": "NEXIA_UGC_VIDEO_002_ROUTE_A_SPEC_V2.mp4",
+    "uploaded_report": "NEXIA_UGC_VIDEO_002_ROUTE_A_SPEC_V2.report.json",
+    "duration_seconds": 24.033333,
+    "wall_seconds": 29.56,
+    "size_bytes": 8060583,
+    "cash_spend_eur": 0,
+    "cloud_api_used": false,
+    "representative_frames_inspected": true
+  },
+  "rubric": {
+    "realism": {"score": 21, "max": 25},
+    "product": {"score": 17, "max": 20},
+    "motion_edit": {"score": 8, "max": 15},
+    "commercial": {"score": 11, "max": 15},
+    "social": {"score": 7, "max": 10},
+    "audio_caption": {"score": 2, "max": 5},
+    "repeatability": {"score": 5, "max": 5},
+    "safety": {"score": 5, "max": 5},
+    "total": 76,
+    "threshold": 85,
+    "delta_vs_v1": 3
+  },
+  "hard_fail_review": {
+    "obvious_anatomy_defect": false,
+    "material_product_geometry_mutation": false,
+    "invented_readable_real_brand_or_ui": false,
+    "severe_temporal_defect": false,
+    "under_15_seconds": false,
+    "commercial_story_unintelligible": false,
+    "rights_violation_observed": false
+  },
+  "verified_improvements": [
+    "captions materially smaller",
+    "captions moved to a lower safer area",
+    "CTA and SPEC label separated"
+  ],
+  "remaining_blockers": [
+    "Spanish accented characters remain mojibaked: mas/quiza/rincon equivalents are visibly corrupted in rendered captions",
+    "two still source images remain repeated across eight shots",
+    "motion grammar remains static/repetitive for portfolio-grade social creative",
+    "no audio"
+  ],
+  "root_cause": {
+    "classification": "STRONG_INFERENCE_FROM_RENDER_PLUS_CANONICAL_SOURCE",
+    "finding": "Canonical GitHub source contains correct Spanish Unicode, while the local render contains mojibake. The prior gh-api-to-Set-Content text pipeline is therefore the likely corruption point before Python executes.",
+    "canonical_source_verified_correct": true
+  },
+  "hardening": {
+    "runner_path": "tools/run_ugc_video_002_route_a.py",
+    "commit_sha": "40617054d28021e5c3e52e492ac1689904e647b0",
+    "blob_sha": "570bf7fdb29d9d32bb08873ca1e283bf87d41d93",
+    "changes": [
+      "represent non-ASCII Spanish characters as ASCII-safe Python Unicode escapes",
+      "add preflight caption text contract",
+      "add mojibake marker rejection",
+      "report caption_text_contract=PASS on successful preflight"
+    ],
+    "runtime_retest": "PENDING"
+  },
+  "classification": {
+    "current_artifact": "PROFESSIONAL_FAIL_SCORE_76_BELOW_85",
+    "route": "ONE_FINAL_ENCODING_RETEST_THEN_STOP_OR_ESCALATE",
+    "capability_promotion": false
+  },
+  "truth_boundary": "V2 improved layout but remains professionally rejected. Unicode hardening is persisted and read back but not runtime verified. If V3 fixes encoding yet remains below 85 because of visual variety/motion/audio, stop Route A polish and compare a stronger bounded architecture.",
+  "next_action": "KAEL_REFRESH_UNICODE_HARDENED_RUNNER_AND_RERENDER_V3"
+}
