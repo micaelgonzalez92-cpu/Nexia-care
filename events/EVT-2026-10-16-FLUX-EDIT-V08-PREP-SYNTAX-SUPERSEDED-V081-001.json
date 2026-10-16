@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-V08-PREP-SYNTAX-SUPERSEDED-V081-001",
+  "timestamp": "2026-10-16",
+  "type": "FLUX_V08_PREP_SYNTAX_DEFECT_SUPERSEDED_BY_V081",
+  "state_version": 73,
+  "observed": {
+    "v08_path": "tools/nexia_local_flux_edit_gate_v0_8.ps1",
+    "v08_executed": false,
+    "v08_status": "SUPERSEDED_NOT_FOR_EXECUTION",
+    "defect": "Nested here-string construction in the meta-wrapper was unsafe before runtime execution."
+  },
+  "replacement": {
+    "path": "tools/nexia_local_flux_edit_gate_v0_8_1.ps1",
+    "blob_sha": "9f8c2bcbcae577ac653c41fc6a03088c36a0775d",
+    "commit": "e42841c1dd735fa4f45a8651125b80f4b5c302f6",
+    "strategy": "Patch two unique BASE route fragments in pinned v0.7 without nested here-strings: node75 to node77 and SaveImage9 to SaveImage78; preserve all prior repairs and frozen prechecks; target raw result _005.",
+    "experimental_contract_changed": false,
+    "generations_executed": 0
+  },
+  "truth_boundary": "The syntax defect was caught before Kael executed v0.8.1. No benchmark generation occurred and no experimental result changed.",
+  "next_action": "KAEL_RUN_PINNED_V0_8_1_SAME_FROZEN_ONESHOT_BENCHMARK"
+}
