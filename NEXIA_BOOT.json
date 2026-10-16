@@ -1,6 +1,6 @@
 {
-  "schema_version": 56,
-  "boot_version": 111,
+  "schema_version": 57,
+  "boot_version": 112,
   "generated_at": "2026-10-16",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,11 +15,12 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "NEXIA_EVENT_INDEX_V56.json",
+    "NEXIA_EVENT_INDEX_V57.json",
+    "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V02-SELFTEST-FAIL-V03-REPAIR-001.json",
     "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-PRECHECK-404-REPAIR-001.json",
     "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-ONESHOT-AUTH-001.json",
     "NEXIA_LOCAL_FLUX_EDIT_ONE_SHOT_TASK.json",
-    "tools/nexia_local_flux_edit_gate_v0_2.ps1 when local execution is material",
+    "tools/nexia_local_flux_edit_gate_v0_3.ps1 when local execution is material",
     "events/EVT-2026-10-16-FLUX-EDIT-PREREG-REPAIR-001.json",
     "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md",
     "events/EVT-2026-10-16-TASK-TRIGGERED-RD-001.json",
@@ -27,7 +28,7 @@
     "research/NEXIA_TASK_TRIGGERED_RD_UGC_CORPUS_REASSESSMENT_V1_2026-10-16.md",
     "events/EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001.json",
     "NEXIA_EXECUTION_CAPABILITIES.json when execution routing is material",
-    "read V56 base V55 and earlier indexes/events as needed",
+    "read V57 base V56 and earlier indexes/events as needed",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
@@ -35,16 +36,16 @@
   "live_state_blob_sha": "0ede475915a7f56da0409aa43752565a0271435e",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V56.json",
-    "latest_verified_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-PRECHECK-404-REPAIR-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-PRECHECK-404-REPAIR-001.json",
-    "latest_verified_event_blob_sha": "6eceaacfac5fb65706fce86d89699f430d7bb83c",
-    "base_index": "NEXIA_EVENT_INDEX_V55.json"
+    "active_index": "NEXIA_EVENT_INDEX_V57.json",
+    "latest_verified_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V02-SELFTEST-FAIL-V03-REPAIR-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V02-SELFTEST-FAIL-V03-REPAIR-001.json",
+    "latest_verified_event_blob_sha": "d6668623b9c1d347b91703774642fd285161cd0f",
+    "base_index": "NEXIA_EVENT_INDEX_V56.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_EXTERNAL_VALIDATION_PRIORITY",
-    "lane_2": "VETA-AI-UGC-001_FLUX_ONE_SHOT_BRIDGE_V0_2_REPAIRED_RETRY_BOOTSTRAP_PENDING",
+    "lane_2": "VETA-AI-UGC-001_FLUX_ONE_SHOT_BRIDGE_V0_3_REPAIRED_RETRY_BOOTSTRAP_PENDING",
     "lane_3": "VETA-AUTO-PRODUCT-001_N8N_RUNTIME_VALIDATION_NEXT",
     "rd_interrupt_rule": "TASK_TRIGGERED_RD_SUPPORTS_ACTIVE_LANE_NOT_FOURTH_WIP"
   },
@@ -67,21 +68,21 @@
     "prereg_blob_sha": "8276613aff9ba9aca0eec840fc8e0c2f36bca622",
     "one_shot_task": "NEXIA_LOCAL_FLUX_EDIT_ONE_SHOT_TASK.json",
     "one_shot_task_blob_sha": "fc3f0a8e6180e5830cd2d97b2493dd1657b5928e",
-    "one_shot_runner": "tools/nexia_local_flux_edit_gate_v0_2.ps1",
-    "one_shot_runner_blob_sha": "97276306b60cd6e05572a91a32aac6ff89368ca8",
-    "one_shot_runner_commit": "a548fc49824104349df62f46017b5388b22892df",
-    "one_shot_status": "AUTHORIZED_PREPARED_V0_1_PRECHECK_FAILED_ZERO_GENERATIONS_V0_2_REPAIRED_RETRY_PENDING",
+    "one_shot_runner": "tools/nexia_local_flux_edit_gate_v0_3.ps1",
+    "one_shot_runner_blob_sha": "fc0c0c27e7a7887b738bc6d823b6ddf7a3245238",
+    "one_shot_runner_commit": "0ea3a3d26d0eb6ee6ca7fca22abd70204deec08b",
+    "one_shot_status": "AUTHORIZED_PREPARED_V0_1_PRECHECK_FAIL_ZERO_GENERATIONS_V0_2_SELFTEST_FAIL_ZERO_GENERATIONS_V0_3_REPAIRED_RETRY_PENDING",
     "previous_attempt_generation_count": 0,
-    "previous_attempt_failure_stage": "PRECHECK",
-    "previous_attempt_failure": "GH_EXPECTED_404_MISHANDLED",
+    "previous_attempt_failure_stage": "WRAPPER_PATCH_SELF_VERIFICATION_BEFORE_INNER_RUNNER",
+    "previous_attempt_failure": "POWERSHELL_SPLIT_OCCURRENCE_COUNTER_FALSE_NONUNIQUE",
     "frozen_seed": 20261016,
     "max_generations": 3,
     "base_b1_b2_generations_executed": 0,
     "expected_raw_result": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_001.json",
-    "next_gate": "KAEL_RUN_PINNED_V0_2_BOOTSTRAP_THEN_VERIFY_RAW_RESULT"
+    "next_gate": "KAEL_RUN_PINNED_V0_3_BOOTSTRAP_THEN_VERIFY_RAW_RESULT"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — FLUX ONE-SHOT BRIDGE CONTROL-PLANE BUG REPAIRED; V0.2 LOCAL BOOTSTRAP REQUIRED; NO WORK/CODEX; NO NEW INSTALLS",
-  "human_gate": "Kael must run one pinned v0.2 PowerShell bootstrap because no persistent listener exists, then answer the BASE visual gate only if reached. The prior v0.1 attempt generated zero images and does not establish FLUX runtime evidence.",
-  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V56_FLUX_BRIDGE_404_REPAIR_BOOT111",
-  "next_action": "KAEL_RUN_PINNED_V0_2_BOOTSTRAP_FOR_FLUX_BRIDGE_ONESHOT"
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — FLUX ONE-SHOT BRIDGE WRAPPER V0.3 REPAIRED; LOCAL BOOTSTRAP REQUIRED; NO WORK/CODEX; NO NEW INSTALLS",
+  "human_gate": "Kael must run one pinned v0.3 PowerShell bootstrap because no persistent listener exists, then answer the BASE visual gate only if reached. Both prior bootstrap attempts generated zero images and do not establish FLUX runtime evidence.",
+  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V57_FLUX_BRIDGE_V03_REPAIR_BOOT112",
+  "next_action": "KAEL_RUN_PINNED_V0_3_BOOTSTRAP_FOR_FLUX_BRIDGE_ONESHOT"
 }
