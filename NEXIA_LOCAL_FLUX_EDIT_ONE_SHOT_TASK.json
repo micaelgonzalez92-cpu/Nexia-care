@@ -1,0 +1,45 @@
+{
+  "task_id": "FLUX-EDIT-BRIDGE-ONESHOT-001",
+  "date": "2026-10-16",
+  "status": "AUTHORIZED_NOT_EXECUTED",
+  "authority": "EXPLICIT_KAEL_ONE_SHOT",
+  "purpose": "Execute exactly the preregistered FLUX Base/B1/B2 benchmark on the existing local ComfyUI stack without Work or Codex.",
+  "prereg": {
+    "path": "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md",
+    "blob_sha": "8276613aff9ba9aca0eec840fc8e0c2f36bca622",
+    "seed": 20261016,
+    "base_resolution": "1024x1024",
+    "max_generations": 3,
+    "no_retries": true
+  },
+  "allowed": [
+    "existing ComfyUI 0.39.0",
+    "existing flux-2-klein-4b-fp8.safetensors",
+    "existing qwen_3_4b.safetensors",
+    "existing flux2-vae.safetensors",
+    "localhost ComfyUI API/UI",
+    "temporary local files required by the bounded run",
+    "pinned official ComfyUI workflow JSON reference data",
+    "sanitized GitHub API result writeback"
+  ],
+  "forbidden": [
+    "Work",
+    "Codex",
+    "software installation",
+    "model download",
+    "runtime update",
+    "new account",
+    "paid API",
+    "pagefile/system configuration change",
+    "publication",
+    "external contact",
+    "recurring scheduler",
+    "polling service",
+    "persistent listener",
+    "more than three generations",
+    "retry or replacement BASE"
+  ],
+  "human_gate": "After BASE is shown locally, Kael must answer SI only if all preregistered BASE preconditions are visually satisfied; otherwise the same one-shot process stops before B1/B2.",
+  "result_writeback": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_001.json",
+  "truth_boundary": "Authorization permits one bounded execution only. It does not itself establish that the benchmark ran or passed."
+}
