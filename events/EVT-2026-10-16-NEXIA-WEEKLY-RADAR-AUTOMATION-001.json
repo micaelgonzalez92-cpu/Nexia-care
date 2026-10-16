@@ -1,0 +1,27 @@
+{
+  "event_id": "EVT-2026-10-16-NEXIA-WEEKLY-RADAR-AUTOMATION-001",
+  "date": "2026-10-16",
+  "type": "AUTOMATION_ACTIVATION",
+  "status": "VERIFIED_ACTIVE",
+  "authority": "USER_EXPLICIT_REQUEST",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "automation": {
+    "title": "Radar Nexia semanal",
+    "enabled": true,
+    "timing_mode": "flexible_schedule",
+    "timezone": "Europe/Madrid",
+    "schedule_summary": "WEEKLY / MONDAY / AROUND 08:00",
+    "last_run_time": null,
+    "notifications_enabled_observed": false,
+    "email_enabled_observed": false
+  },
+  "purpose": "Investigate material new AI models, GitHub repositories, APIs and tools relevant to Nexia using primary-source preference, counterevidence and the active R&D intelligence standard; classify findings as IMPLEMENTAR, PROBAR, INVESTIGAR, RESERVAR or DESCARTAR.",
+  "research_standard": "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
+  "financial_impact_eur": 0,
+  "external_account_created": false,
+  "external_publication_executed": false,
+  "authority_change": "NONE",
+  "current_reality_gate": "KAEL_APPLY_FINAL_CONTRA_V4_PROFILE_MEDIA_COPY_AND_REMOVE_PERSONAL_INSTAGRAM",
+  "truth_boundary": "Automation existence and enabled state are verified. No future run result, alert delivery, model/tool adoption, revenue or external outcome is claimed before observed evidence."
+}
