@@ -1,6 +1,6 @@
 {
-  "schema_version": 41,
-  "boot_version": 96,
+  "schema_version": 42,
+  "boot_version": 97,
   "generated_at": "2026-10-16",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,10 +15,10 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "NEXIA_EVENT_INDEX_V41.json",
+    "NEXIA_EVENT_INDEX_V42.json",
+    "events/EVT-2026-10-16-UGC002-V2-QA-001.json",
     "events/EVT-2026-10-16-UGC002-PROFESSIONAL-QA-001.json",
     "events/EVT-2026-10-16-UGC002-ROUTE-A-TECHNICAL-ASSEMBLY-001.json",
-    "events/EVT-2026-10-16-UGC002-ZOOMPAN-RUNNER-FIX-001.json",
     "tools/run_ugc_video_002_route_a.py",
     "experiments/UGC-VIDEO-002.md",
     "experiments/UGC-VIDEO-002_ROUTE_A_PREEXECUTION_V1.md",
@@ -27,28 +27,27 @@
     "NEXIA_EXECUTION_CAPABILITIES.json when execution routing is material",
     "research/NEXIA_EXPERIMENT_PORTFOLIO_STRATEGY_V1_2026-10-16.md",
     "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md when Contra execution is material",
-    "read V41 base V40/V39/V38 and earlier indexes/events as needed",
+    "read V42 base V41/V40/V39 and earlier indexes/events as needed",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "4e007bfb3d48dbc264fbda335a0ae809394d6129",
+  "live_state_blob_sha": "dc273ae81d9e034b8b604f3eb50c881684027359",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V41.json",
-    "latest_verified_event_id": "EVT-2026-10-16-UGC002-PROFESSIONAL-QA-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-PROFESSIONAL-QA-001.json",
-    "latest_verified_event_blob_sha": "a21d08c9054d17dcd38e9abf7a4b6fc4c448e754",
-    "base_index": "NEXIA_EVENT_INDEX_V40.json"
+    "active_index": "NEXIA_EVENT_INDEX_V42.json",
+    "latest_verified_event_id": "EVT-2026-10-16-UGC002-V2-QA-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-V2-QA-001.json",
+    "base_index": "NEXIA_EVENT_INDEX_V41.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ALIVE",
-    "lane_2": "UGC-VIDEO-002_ROUTE_A_FIRST_RENDER_FAIL_73_REMEDIATION_PREPARED",
+    "lane_2": "UGC-VIDEO-002_ROUTE_A_V2_FAIL_76_V3_ENCODING_RETEST_GATE",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — UGC002 FIRST RENDER PROFESSIONAL FAIL 73/100; BOUNDED REMEDIATION PATCHED; RERENDER GATE; AUTO-PRODUCT ADVANCED; EXP-AUTO-001 ALIVE",
-  "human_gate": "Kael must refresh the patched UGC-VIDEO-002 Route A runner and rerender on the Windows PC. The first render is rejected for professional use at 73/100. Final professional PASS still requires >=85, zero hard fails and Kael normal-viewing acceptance. Contra V4 remains a separate RED public-edit gate.",
-  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V41_PLUS_LIVE_SCHEMA_41_UGC002_QA_REMEDIATION_GATE",
-  "next_action": "KAEL_REFRESH_PATCHED_RUNNER_AND_RERENDER_ROUTE_A"
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — UGC002 V2 PROFESSIONAL FAIL 76/100; UNICODE-HARDENED V3 RETEST GATE; AUTO-PRODUCT ADVANCED; EXP-AUTO-001 ALIVE",
+  "human_gate": "Kael must refresh the Unicode-hardened UGC-VIDEO-002 runner, require caption_text_contract=PASS on dry-run, rerender V3 and upload the MP4/report. If encoding is fixed yet score remains below 85 for structural reasons, stop Route A polish and compare a stronger bounded architecture. Contra V4 remains a separate RED public-edit gate.",
+  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V42_PLUS_LIVE_SCHEMA_42_UGC002_V3_ENCODING_RETEST_GATE",
+  "next_action": "KAEL_REFRESH_UNICODE_HARDENED_RUNNER_AND_RERENDER_V3"
 }
