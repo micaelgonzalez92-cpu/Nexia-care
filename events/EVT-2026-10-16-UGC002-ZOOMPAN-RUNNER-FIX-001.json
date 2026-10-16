@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-UGC002-ZOOMPAN-RUNNER-FIX-001",
+  "timestamp": "2026-10-16",
+  "timestamp_precision": "date_only",
+  "type": "UGC002_RUNNER_BUGFIX",
+  "state_version": 73,
+  "status": "PATCH_PERSISTED_READBACK_VERIFIED_RUNTIME_RETEST_PENDING",
+  "experiment": "UGC-VIDEO-002",
+  "evidence": {
+    "ffmpeg_installation": "USER_REPORTED_AVAILABLE_AFTER_AUTHORIZED_INSTALL",
+    "route_a_dry_run": "PASS_USER_REPORTED",
+    "render_result": "FAIL_BEFORE_OUTPUT",
+    "render_error_class": "FFMPEG_SEGMENT_FAIL",
+    "root_cause": "zoompan x expression referenced d, which FFmpeg did not expose as a valid expression variable in that context"
+  },
+  "fix": {
+    "path": "tools/run_ugc_video_002_route_a.py",
+    "commit_sha": "1490392ed31fcd37939eeda9378abfb2f425951b",
+    "verified_blob_sha": "b0a90cc83d2f4ce852a8ed25630b9806ac043564",
+    "change": "replace d-1 in pan expressions with numeric max(frames-1,1) calculated in Python",
+    "scope_expanded": false
+  },
+  "truth_boundary": "The patch is persisted and read back, but runtime success is not claimed until Kael refreshes the local runner and reruns it successfully.",
+  "next_action": "KAEL_REFRESH_LOCAL_RUNNER_THEN_DRY_RUN_AND_RENDER_RETEST"
+}
