@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001",
+  "timestamp": "2026-10-17",
+  "type": "CANONICAL_INTEGRITY_CHECKER_DEPTH_REPAIR_AND_FULL_CHAIN_REVALIDATION",
+  "evidence_label": "HECHO_VERIFICADO",
+  "canonical_state_version": 73,
+  "state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "authority": "GREEN internal reliability repair; EUR0; no external business action; no historical rewrite",
+  "root_cause": {
+    "classification": "VERIFIED_OBSOLETE_BOUNDED_INDEX_DEPTH",
+    "prior_limit": 64,
+    "chain_depth_before_repair": 74,
+    "failure_commit": "8fbc1ee39e048832c52498700971a423ae26bd4e",
+    "failure_ci_run_id": 38977860999,
+    "failure_finding": "INDEX_DEPTH_LIMIT",
+    "failure_indexes_checked": 64,
+    "failure_events_checked": 0
+  },
+  "repair": {
+    "path": "tools/nexia_integrity_check.py",
+    "verified_blob_sha": "c8e06a7e9134234e43fdcd654ade8a5f8f9e2da8",
+    "commit": "eef0e99b6fce24b894b263b3d517e17d257fd64e",
+    "max_index_depth_before": 64,
+    "max_index_depth_after": 1024,
+    "max_events_unchanged": 10000,
+    "max_file_bytes_unchanged": 2000000,
+    "artifact_nesting_limit_unchanged": 64,
+    "cycle_detection_preserved": true,
+    "unbounded_traversal": false
+  },
+  "verification": {
+    "ci_run_id": 38978651205,
+    "ci_job_id": 117234046036,
+    "ci_conclusion": "SUCCESS",
+    "integrity_regression_tests": "PASS_36_OF_36",
+    "canonical_checker_status": "WARN",
+    "errors": 0,
+    "warnings": 4,
+    "indexes_checked": 74,
+    "events_checked": 149,
+    "artifact_references_checked": 10,
+    "historical_artifact_blobs_checked": 2,
+    "corrected_historical_references": 2
+  },
+  "remaining_warnings": [
+    {
+      "code": "REFERENCE_HASH_MISSING",
+      "path": "NEXIA_EVENT_INDEX_V41.json"
+    },
+    {
+      "code": "REFERENCE_HASH_MISSING",
+      "path": "events/EVT-2026-10-16-UGC002-V2-QA-001.json"
+    },
+    {
+      "code": "REFERENCE_HASH_MISSING",
+      "path": "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json"
+    },
+    {
+      "code": "REFERENCE_HASH_MISSING",
+      "path": "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json"
+    }
+  ],
+  "truth_boundary": "The depth blocker is repaired and the current full canonical chain is traversed with zero integrity errors. Overall checker status remains WARN, not PASS, because four historical hash-binding warnings remain visible. Blob integrity does not prove business claims or runtime execution.",
+  "state_changed": false,
+  "historical_files_rewritten": false,
+  "cost_eur": 0,
+  "next_action": "Preserve four historical warnings as integrity debt; address only with exact anchored evidence if later justified."
+}
