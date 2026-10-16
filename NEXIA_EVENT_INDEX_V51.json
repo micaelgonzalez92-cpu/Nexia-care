@@ -1,0 +1,25 @@
+{
+  "schema_version": 51,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V50.json",
+    "verified_blob_sha": "affa0f95bda1c0acc5361548c4410e2cb0641367"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001",
+      "path": "events/EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001.json",
+      "verified_blob_sha": "7cc3b5f3df9cf71577990e1bedbd77bc8f139f89"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001",
+  "latest_event_path": "events/EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001.json",
+  "latest_event_blob_sha": "7cc3b5f3df9cf71577990e1bedbd77bc8f139f89",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V51 records that the bounded LTX 0.9.8 FP8 runtime completed without OOM but failed severe product-integrity and physical-continuity QA. Both old and test LTX checkpoints are absent at close; shared dependencies and historical evidence were preserved. Stop local UGC model hopping and reprioritize material WIP."
+}
