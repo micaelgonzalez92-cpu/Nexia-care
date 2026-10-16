@@ -12,12 +12,12 @@
     {
       "event_id": "EVT-2026-10-16-FLUX-EDIT-PREREG-REPAIR-001",
       "path": "events/EVT-2026-10-16-FLUX-EDIT-PREREG-REPAIR-001.json",
-      "verified_blob_sha": "PENDING_READBACK"
+      "verified_blob_sha": "7567701df42ffe02e0ab416cb9772fff97b30a97"
     }
   ],
   "latest_event_id": "EVT-2026-10-16-FLUX-EDIT-PREREG-REPAIR-001",
   "latest_event_path": "events/EVT-2026-10-16-FLUX-EDIT-PREREG-REPAIR-001.json",
-  "latest_event_blob_sha": "PENDING_READBACK",
+  "latest_event_blob_sha": "7567701df42ffe02e0ab416cb9772fff97b30a97",
   "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
   "latest_material_system_event_id": "EVT-2026-10-16-FLUX-EDIT-PREREG-REPAIR-001",
   "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
