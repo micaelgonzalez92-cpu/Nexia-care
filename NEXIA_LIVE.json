@@ -1,41 +1,40 @@
 {
-  "schema_version": 30,
-  "updated_at": "2026-10-15",
-  "status": "ACTIVE / MODEL C / INTAKE CLOSED / CONTRA V4 INTERNAL READY / KAEL PUBLIC-EDIT GATE",
+  "schema_version": 31,
+  "updated_at": "2026-10-16",
+  "status": "ACTIVE / MODEL C / LIVE HUD DEFAULT / CONTRA V4 INTERNAL READY / KAEL PUBLIC-EDIT GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
   "constitutional_model": {
     "id": "MODEL-C-SYSTEM-EXCELLENCE-EXTERNAL-REALITY",
-    "status": "ACTIVE_APPROVED_BY_KAEL",
-    "constitution": "governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md",
-    "constitution_blob_sha": "53435e8ecbdd0e45ee17bac250aa6f3df1feec1c",
     "north_star": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
-    "economy_first_superseded": true
+    "status": "ACTIVE_APPROVED_BY_KAEL"
+  },
+  "communication_standard": {
+    "default_operational_format": "NEXIA_LIVE_HUD",
+    "artifact": "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md",
+    "artifact_blob_sha": "330d3a6544382c8ad88c7b79a311aa8920815f5b",
+    "adoption_event": "events/EVT-2026-10-16-LIVE-HUD-ADOPTED-001.json",
+    "detail_policy": "VISUAL_SUMMARY_FIRST_TECHNICAL_DETAIL_ON_DEMAND_OR_WHEN_MATERIAL",
+    "truth_authority_unchanged": true
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V30.json",
-    "active_index_blob_sha": "029d5a5a99294444e8464e7a08383ed73129ba47",
-    "previous_index": "NEXIA_EVENT_INDEX_V29.json",
-    "latest_verified_event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-CONTRA-V4-READY-001.json",
-    "latest_verified_event_blob_sha": "604e580390625e92e33befa424f0023ff967cd0c",
+    "active_index": "NEXIA_EVENT_INDEX_V31.json",
+    "active_index_blob_sha": "e18ec19a9adb0c7d009eb0236962f499f719301a",
+    "previous_index": "NEXIA_EVENT_INDEX_V30.json",
+    "latest_verified_event_id": "EVT-2026-10-16-LIVE-HUD-ADOPTED-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-LIVE-HUD-ADOPTED-001.json",
+    "latest_verified_event_blob_sha": "cd4ed28889af62772d607938f52f12ffd1d8fe3b",
     "latest_material_business_event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
-    "latest_material_governance_event_id": "EVT-2026-10-15-INTEGRITY-REPAIR-001"
+    "latest_material_governance_event_id": "EVT-2026-10-16-LIVE-HUD-ADOPTED-001"
   },
-  "hard_precedence": [
-    "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
-    "TRUTH_EVIDENCE_INTEGRITY",
-    "AUTHORITY_HUMAN_GATE_INTEGRITY",
-    "CONTINUITY_RECOVERABILITY_CORRUPTION_PREVENTION"
-  ],
   "readiness": {
-    "truth": "VERIFIED_BOUND_CURRENT_BINDINGS_INDEXED_EVENTS_AND_SCOPED_ARTIFACT_BLOBS_NOT_GLOBAL_COMPLIANCE",
+    "truth": "ACTIVE_REQUIRES_CONTINUOUS_RECONCILIATION",
     "reliability": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
     "recovery": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
     "observability": "PARTIAL",
-    "quality": "CORE_CONSTITUTIONAL_SURFACES_ALIGNED_PROJECT_WIDE_ITEM_BY_ITEM_RETROFIT_CONTINUES",
+    "quality": "CORE_ACTIVE_SURFACES_ALIGNED_APPLY_ON_TOUCH_CONTINUES",
     "autonomy": "PROACTIVE_TO_BOUNDED_AUTONOMOUS_SUPERVISED",
     "security_authority": "ACTIVE_GATED",
     "reality_validation": "ACTIVE_CONTRA_V4_INTERNAL_READY_EXTERNAL_RESPONSE_NOT_YET_MEASURED",
@@ -43,95 +42,41 @@
   },
   "active_reality_probe": {
     "id": "EXP-AUTO-001",
-    "role": "BOUNDED_REALITY_LOOP_PROBE_AND_POTENTIAL_REVENUE_ENGINE",
-    "stage": "VETA / PRE-VALIDACION COMERCIAL",
+    "name": "Lead Intake Reliability Sprint",
     "status": "CONTRA_V4_INTERNAL_READY_KAEL_IMPLEMENTATION_GATE_WORKANA_PENDING",
     "authorized_price_eur": 300,
     "max_delivery_hours": 4,
-    "contra_microtest_cash_spend_ceiling_eur": 0,
-    "contra_microtest_max_applications": 6,
-    "contra_microtest_window_days": 14,
+    "cash_spend_ceiling_eur": 0,
     "contra_profile_completion_percent_last_visible": 89,
     "contra_personal_instagram_link_last_observed_present": true,
     "contra_personal_instagram_removal_required": true,
     "contra_portfolio_v4_status": "READY_FOR_CURRENT_PURPOSE_INTERNAL_APPROVED_NOT_APPLIED",
-    "contra_visual_system_artifact": "commercial/EXP-AUTO-001_CONTRA_VISUAL_SYSTEM_V4_FINAL_2026-10-15.md",
-    "contra_profile_growth_artifact": "commercial/EXP-AUTO-001_CONTRA_PROFILE_ORGANIC_GROWTH_V1_2026-10-15.md",
-    "contra_implementation_runbook": "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md",
     "contra_identity_verified": false,
     "contra_payout_method_completed": false,
     "contra_applications_submitted": 0,
     "contra_paid_pilots_verified": 0,
-    "contra_setup_attention_elapsed": "UNKNOWN_NOT_INSTRUMENTED",
-    "contra_rate_status": "USER_GUIDED_50_75_USD_PER_HOUR_NOT_POSTCONDITION_VERIFIED",
-    "contra_work_pieces_published_verified": "FOUR_WORK_ITEMS_VISIBLE_WITH_OLDER_COVERS_IN_LATEST_RECORDING_V4_NOT_APPLIED",
     "workana_dashboard_state": "PENDING"
   },
   "resources": {
-    "capital_weekly_hard_cap_eur": 100,
+    "weekly_hard_cap_eur": 100,
     "default_spend_eur": 0,
     "capital_spent_eur": 0,
-    "allocation_model": "EVIDENCE_WEIGHTED_SYSTEM_PLUS_REALITY_VALUE",
-    "kael_weekly_available_hours": "NOT_INSTRUMENTED",
-    "kael_attention_objective": "MAXIMIZE_HUMAN_LEVERAGE_NOT_SACRIFICE",
-    "attention_baseline": "TIMEOS_7_DAY_PROTOCOL_PREPARED_NOT_YET_MEASURED"
+    "kael_weekly_available_hours": "NOT_INSTRUMENTED"
   },
   "economics": {
-    "constitutional_role": "CRITICAL_EXTERNAL_VALIDATION_RESOURCE_AND_SUSTAINABILITY_OUTCOME_NOT_SOLE_TOP_LEVEL_OBJECTIVE",
     "revenue_eur": 0,
     "settled_revenue_eur": 0,
     "profit_eur": 0,
-    "reconciled_net_profit_eur": 0,
-    "o4_first_scalable_engine_milestone": ">1000_EUR_PER_MONTH_SUSTAINABLE_AFTER_TAX_NET"
+    "reconciled_net_profit_eur": 0
   },
-  "constitutional_retrofit": {
-    "status": "CORE_CONSTITUTIONAL_ACTIVE_SURFACES_SUBSTANTIALLY_ALIGNED",
-    "dashboard": "NEXIA_PROGRESS_DASHBOARD.md_V4_3",
-    "scorecard": "NEXIA_OPPORTUNITY_SCORECARD_V3_2026-10-15.md",
-    "operational_rules": "MODEL_C_ALIGNED",
-    "master_operating_order": "MODEL_C_ALIGNED",
-    "autonomous_queue": "MODEL_C_ALIGNED",
-    "timeos": "MODEL_C_ALIGNED_7_DAY_BASELINE_PROTOCOL_PREPARED",
-    "active_automations_model_c_aligned": 4,
-    "legacy_revenue_engine": "DEPRECATED_ARCHIVE",
-    "legacy_parallel_revenue_radar": "SUPERSEDED_FOR_CURRENT_RANKING",
-    "professional_quality_gate": "REVIEWED_COMPATIBLE_NO_MATERIAL_REWRITE",
-    "commands_registry": "REVIEWED_COMPATIBLE_NO_MATERIAL_REWRITE",
-    "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM",
-    "future_rule": "AUDIT_ACTIVE_REUSABLE_ITEMS_WHEN_TOUCHED_OR_SURFACED; DO_NOT_POLISH_DEAD_ARCHIVES",
-    "historical_reference_errata": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
-    "integrity_checker": "VERIFIED_36_LOCAL_REGRESSIONS_AND_COHERENT_CANDIDATE_SNAPSHOT_BOUNDED_SCOPE",
-    "active_repository_mission": "MODEL_C_ALIGNED",
-    "external_ai_intelligence_round": "READY_FOR_CURRENT_PURPOSE_INTAKE_CLOSED",
-    "external_ai_intelligence_synthesis": "research/NEXIA_EXTERNAL_AI_INTELLIGENCE_SYNTHESIS_V1_2026-10-15.md"
-  },
-  "instruction_migration": {
-    "installed_project_ui_baseline": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
-    "installed_baseline_status": "INSTALLED_USER_CONFIRMED_CONTEXT_VERIFIED",
-    "candidate": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
-    "candidate_blob_sha": "ce14c0c5b5dc27857b99398d96fbed0d29d3c136",
-    "candidate_exact_character_count": 7035,
-    "safe_ceiling_characters": 7800,
-    "candidate_status": "INSTALLED_USER_CONFIRMED_CONTEXT_VERIFIED",
-    "human_gate_status": "CLOSED_USER_CONFIRMED_CONTEXT_VERIFIED",
-    "previous_installed_project_ui_baseline": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT.md",
-    "verification": {
-      "status": "INSTALLED_USER_CONFIRMED_CONTEXT_VERIFIED",
-      "evidence_event": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
-      "direct_project_settings_ui_inspection": false,
-      "verification_scope": "KAEL_SAVE_CONFIRMATION_PLUS_CURRENT_PROJECT_CONTEXT_AND_EXACT_V4_CONTENT_MATCH"
-    }
-  },
-  "execution_capabilities": {
-    "snapshot": "NEXIA_EXECUTION_CAPABILITIES.json",
+  "execution_truth": {
     "local_worker_24h_formal_result": "FAIL_MAX_GAP_ONLY",
     "local_worker_24h_operational_evidence": "288_288_PASS_ZERO_FUNCTIONAL_FAILURES_AUTO_SHUTDOWN_VERIFIED",
     "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
     "client_production_deployment": "NOT_EXECUTED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "External AI/tool intelligence Batches 01-07 were closed and synthesized; canonical NEXIA_STATE was reconciled to v73; Contra V4 remains internally ready and not publicly applied.",
-    "last_user_facing_handoff": "The intelligence round is READY_FOR_CURRENT_PURPOSE. Public Contra changes are the current real gate and require Kael; no public implementation is claimed yet.",
+    "last_completed_verified_action": "NEXIA LIVE HUD standard persisted, read back and indexed in V31; intelligence intake remains closed; Contra V4 remains internally ready and not publicly applied.",
     "human_action_required_now": true,
     "pending_human_action": "KAEL_APPLY_FINAL_CONTRA_V4_PROFILE_MEDIA_COPY_AND_REMOVE_PERSONAL_INSTAGRAM",
     "surface": "Contra / desktop recommended",
@@ -139,43 +84,14 @@
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V30.json",
+      "NEXIA_EVENT_INDEX_V31.json",
+      "events/EVT-2026-10-16-LIVE-HUD-ADOPTED-001.json",
       "events/EVT-2026-10-15-CONTRA-V4-READY-001.json",
-      "research/NEXIA_EXTERNAL_AI_INTELLIGENCE_SYNTHESIS_V1_2026-10-15.md",
-      "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md",
-      "commercial/EXP-AUTO-001_CONTRA_VISUAL_SYSTEM_V4_FINAL_2026-10-15.md"
+      "commercial/EXP-AUTO-001_CONTRA_KAEL_ACTION_CARD_V1_2026-10-15.md",
+      "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md"
     ],
-    "resume_from": "Wait for Kael to apply Contra V4 public changes. On return, verify actual public profile against the 15-point runbook before advancing to service exposure, portfolio deployment or organic acquisition.",
-    "truth_limit": "Do not claim V4 public implementation, buyer demand, client acceptance, production deployment, persistent 24x7 operation, payment or profit without direct evidence.",
-    "success_check": "Direct visual read-back of resulting public Contra profile and explicit service/KYC/payout states.",
-    "return_to_nexia": "Kael returns with screen recording or screenshots after the public Contra edit session."
+    "resume_from": "Wait for Kael to apply Contra V4 public changes; then verify the public result against the 15-point runbook before advancing.",
+    "truth_limit": "Do not claim public Contra V4 implementation, buyer demand, client acceptance, production deployment, persistent 24x7 operation, payment or profit without direct evidence."
   },
-  "next_action": "KAEL_APPLY_CONTRA_V4_THEN_NEXIA_VERIFY_PUBLIC_POSTCONDITION",
-  "documentary_reconciliation": {
-    "event": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
-    "audited_commit": "78553e56f9849cb524099f33a130d4e940ed7f92",
-    "incorrect_historical_references_corrected": 6,
-    "original_event_preserved": true,
-    "remaining_control_gap": "REPAIRED_BY_EVT-2026-10-15-INTEGRITY-REPAIR-001_WITH_BOUNDED_VERIFICATION_SCOPE",
-    "other_derived_gate_wording": "QUEUE_STALE_V4_INSTALLATION_TASK_REMOVED"
-  },
-  "integrity_verifier": {
-    "event": "events/EVT-2026-10-15-INTEGRITY-REPAIR-001.json",
-    "report": "quality/NEXIA_INTEGRITY_VERIFIER_REPAIR_2026-10-15.md",
-    "local_regressions_passed": 36,
-    "exact_index_errata": 2,
-    "prior_artifact_errata_preserved": 6,
-    "payload_scope": "PATH_SHA_PAIRS_IN_INDEXED_EVENTS_AT_OR_AFTER_STATE_V72",
-    "offline_history": "FULL_GIT_HISTORY_OR_VERIFIED_BLOB_CACHE",
-    "remote_ci": "INSPECT_ACTUAL_RUN_DO_NOT_INFER_FROM_COMMIT",
-    "candidate_snapshot": {
-      "status": "PASS_LOCAL",
-      "errors": 0,
-      "warnings": 0,
-      "indexes_checked": 28,
-      "events_checked": 102,
-      "artifact_references_checked": 39,
-      "corrected_historical_references": 8
-    }
-  }
+  "next_action": "KAEL_APPLY_CONTRA_V4_THEN_NEXIA_VERIFY_PUBLIC_POSTCONDITION"
 }
