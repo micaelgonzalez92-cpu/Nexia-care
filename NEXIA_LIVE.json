@@ -1,7 +1,7 @@
 {
-  "schema_version": 41,
+  "schema_version": 42,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC-VIDEO-002 ROUTE A FIRST RENDER PROFESSIONAL FAIL 73/100 / ONE BOUNDED REMEDIATION PREPARED / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC-VIDEO-002 ROUTE A V2 PROFESSIONAL FAIL 76/100 / UNICODE-HARDENED V3 RETEST GATE / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -12,48 +12,51 @@
   },
   "communication_standard": {
     "default_operational_format": "NEXIA_LIVE_HUD",
-    "artifact": "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md",
-    "truth_authority_unchanged": true
+    "artifact": "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_CONTRA_WORKANA_AS_CHANNELS",
-    "lane_2": "VETA-AI-UGC-001_UGC_VIDEO_002_ROUTE_A_IMPROVE_ONE_BOUNDED_ITERATION",
+    "lane_2": "VETA-AI-UGC-001_UGC_VIDEO_002_ROUTE_A_V3_ENCODING_RETEST_GATE",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED",
     "rule": "Do not activate a fourth material lane unless one lane is promoted, paused, falsified, or displaced by hard precedence."
   },
   "ugc_video_002": {
     "artifact": "experiments/UGC-VIDEO-002.md",
     "runner": "tools/run_ugc_video_002_route_a.py",
-    "runner_blob_sha": "810f7a480db7cb95d2194fb21fff271028e2b8a2",
-    "status": "CURRENT_RENDER_PROFESSIONAL_FAIL_REMEDIATION_PREPARED",
+    "runner_blob_sha": "570bf7fdb29d9d32bb08873ca1e283bf87d41d93",
+    "status": "V2_PROFESSIONAL_FAIL_V3_UNICODE_HARDENED_RETEST_PENDING",
     "cash_spend_eur": 0,
     "cloud_api_used": false,
     "source_assets": ["NEXIA_BENCHMARK_00002_.png", "NEXIA_BENCHMARK_00003_.png"],
     "ffmpeg_operational": true,
     "ffprobe_operational": true,
     "technical_assembly_status": "PASS",
-    "first_render_duration_seconds": 24.033333,
-    "first_render_wall_seconds": 28.76,
-    "first_render_size_bytes": 7978244,
-    "professional_qa_score": 73,
-    "professional_qa_threshold": 85,
-    "enumerated_hard_fail_found": false,
-    "professional_pass": false,
-    "dominant_blockers": [
-      "caption mojibake/encoding corruption",
-      "caption size/placement obscures visual subject",
-      "two still source images repeated across eight shots",
-      "no audio in first proof"
-    ],
-    "bounded_remediation": {
-      "status": "PATCH_PERSISTED_RUNTIME_RETEST_PENDING",
-      "runner_commit_sha": "668139e55103a307516be33fb2011b44b057526a",
-      "caption_encoding": "UTF8_BOM_PLUS_CHAR_ENC_UTF8",
-      "caption_layout": "SMALLER_LOWER_SAFE_AREA",
-      "cta_spec_split": true
+    "v1": {
+      "professional_qa_score": 73,
+      "professional_qa_threshold": 85,
+      "professional_pass": false
     },
-    "route_b_decision": "NO_NATIVE_CURRENT_MODEL_INSTALL_YET",
+    "v2": {
+      "duration_seconds": 24.033333,
+      "wall_seconds": 29.56,
+      "size_bytes": 8060583,
+      "professional_qa_score": 76,
+      "delta_vs_v1": 3,
+      "professional_qa_threshold": 85,
+      "professional_pass": false,
+      "verified_improvements": ["smaller captions", "lower safer caption placement", "CTA/SPEC split"],
+      "remaining_blockers": ["Spanish mojibake remains", "two stills repeated across eight shots", "static/repetitive motion grammar", "no audio"]
+    },
+    "enumerated_hard_fail_found": false,
+    "unicode_hardening": {
+      "status": "PERSISTED_READBACK_VERIFIED_RUNTIME_RETEST_PENDING",
+      "runner_commit_sha": "40617054d28021e5c3e52e492ac1689904e647b0",
+      "ascii_safe_unicode_escapes": true,
+      "caption_text_contract": true,
+      "mojibake_marker_rejection": true
+    },
+    "route_decision": "ONE_FINAL_ENCODING_RETEST_THEN_STOP_ROUTE_A_POLISH_IF_SCORE_REMAINS_BELOW_85_FOR_STRUCTURAL_VARIETY_MOTION_AUDIO_REASONS",
     "historical_integrity": "UGC-VIDEO-001_REMAINS_FINAL_FAIL"
   },
   "auto_product": {
@@ -72,11 +75,10 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V41.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V40.json",
-    "latest_verified_event_id": "EVT-2026-10-16-UGC002-PROFESSIONAL-QA-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-PROFESSIONAL-QA-001.json",
-    "latest_verified_event_blob_sha": "a21d08c9054d17dcd38e9abf7a4b6fc4c448e754"
+    "active_index": "NEXIA_EVENT_INDEX_V42.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V41.json",
+    "latest_verified_event_id": "EVT-2026-10-16-UGC002-V2-QA-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-V2-QA-001.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -85,19 +87,19 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "ugc_route_a_remediation_rerender": "KAEL_WINDOWS_PC_REQUIRED_NOW",
+    "ugc_route_a_v3_encoding_retest": "KAEL_WINDOWS_PC_REQUIRED_NOW",
     "ugc_final_normal_viewing_acceptance": "KAEL_REQUIRED_BEFORE_PROFESSIONAL_PASS",
     "contra_v4_public_edit": "KAEL_REQUIRED_SEPARATE_GATE",
     "ugc_new_model_or_large_download": "STOP_AND_REVIEW_WHEN_REACHED",
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "First UGC-VIDEO-002 Route A render was inspected and scored 73/100, below the 85 professional threshold. No enumerated hard fail was found. A bounded caption encoding/layout remediation was patched and persisted; runtime rerender remains pending.",
+    "last_completed_verified_action": "UGC-VIDEO-002 Route A V2 was inspected and scored 76/100, up 3 points from V1 but still below the 85 threshold. Caption layout improved, but Spanish mojibake persisted. Canonical runner was hardened with ASCII-safe Unicode escapes and preflight caption integrity checks; runtime V3 retest remains pending.",
     "human_action_required_now": true,
-    "pending_human_action": "KAEL_REFRESH_PATCHED_RUNNER_AND_RERENDER_ROUTE_A",
+    "pending_human_action": "KAEL_REFRESH_UNICODE_HARDENED_RUNNER_AND_RERENDER_V3",
     "surface": "Windows PC / PowerShell",
-    "resume_from": "Refresh the patched runner from GitHub, run dry-run, rerender, upload the replacement MP4/report, then re-QA. If caption defects are fixed but score remains below 85 because of low visual variety, stop Route A polish and compare Route B or a different bounded creative architecture.",
+    "resume_from": "Refresh the canonical runner, require caption_text_contract=PASS on dry-run, render V3, upload MP4/report, then re-QA. If encoding is fixed and score remains below 85 because of visual variety/motion/audio, stop Route A polish and compare the next bounded architecture.",
     "truth_limit": "Do not claim UGC Route A professional PASS, buyer demand, client acceptance, sale, payment or profit without direct evidence and Kael normal-viewing acceptance."
   },
-  "next_action": "KAEL_REFRESH_PATCHED_RUNNER_AND_RERENDER_ROUTE_A"
+  "next_action": "KAEL_REFRESH_UNICODE_HARDENED_RUNNER_AND_RERENDER_V3"
 }
