@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-FLUX-V084-STALE-SELFTEST-V085-REPAIR-001",
+  "timestamp": "2026-10-17",
+  "type": "FLUX_V084_PREBENCHMARK_SELFTEST_STOP_V085_REPAIR",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_V084_CONSOLE_PLUS_PINNED_V083_SOURCE_REVIEW",
+  "observed": {
+    "wrapper": "tools/nexia_local_flux_edit_gate_v0_8_4.ps1",
+    "outer_patch_verify": "PASS",
+    "failure": "New _007 target missing.",
+    "failure_scope": "INNER_WRAPPER_SELFTEST_BEFORE_BENCHMARK_START",
+    "comfy_prompt_post_attempted": false,
+    "generation_count": 0,
+    "base_gate_reached": false,
+    "cost_eur": 0
+  },
+  "root_cause": {
+    "classification": "VERIFIED_STALE_INNER_RAW_TARGET_ASSERTION",
+    "basis": "Pinned v0.8.3 wrapper contains a self-test requiring NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_007.json. v0.8.4 correctly changes the generated raw target to _008 but did not update that inherited self-test, so it aborts before executing the inner benchmark runner."
+  },
+  "repair": {
+    "runner": "tools/nexia_local_flux_edit_gate_v0_8_5.ps1",
+    "runner_blob_sha": "e3fbb4381563914ca340896e45ea0f0f1d4459de",
+    "runner_commit": "d4a2842d7bf3fc7d97a3451e7422cb61ef4c5cac",
+    "strategy": "Build on pinned v0.8.4; update only the inherited _007 self-test and checkpoint text to _008; preserve explicit UTF-8 /prompt transport repair and all frozen experiment invariants.",
+    "experimental_contract_changed": false,
+    "transport_repair_changed": false,
+    "generation_cap_changed": false
+  },
+  "truth_boundary": "v0.8.4 did not reach ComfyUI prompt submission and consumed zero benchmark generations. v0.8.5 is prepared and read back but not executed.",
+  "next_action": "KAEL_RUN_PINNED_V0_8_5_SAME_FROZEN_ONESHOT_BENCHMARK"
+}
