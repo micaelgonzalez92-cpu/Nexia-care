@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-16",
+  "experiment": "UGC-VIDEO-002",
+  "route": "A_ANATOMY_MINIMIZED_DETERMINISTIC",
+  "status": "READY_FOR_LOCAL_DRY_RUN / NOT_EXECUTED",
+  "cash_spend_eur": 0,
+  "purpose": "Verify existing local dependencies and accepted source assets, then assemble a deterministic silent/captioned 24s SPEC cut without new model generation.",
+  "canonical_runner": "tools/run_ugc_video_002_route_a.py",
+  "source_assets": {
+    "A1": "NEXIA_BENCHMARK_00002_.png",
+    "A2": "NEXIA_BENCHMARK_00003_.png"
+  },
+  "human_gate": {
+    "surface": "Kael Windows PC / PowerShell",
+    "device": "desktop",
+    "why_kael": "This chat does not have an authorized live local-computer execution surface. Prior one-shot scheduler authorization was consumed; pre-execution instruction does not silently reactivate local scheduling.",
+    "action_phase_1": "Run the canonical Route A runner in --dry-run mode only.",
+    "preferred_command_if_local_repo_is_current": "python tools/run_ugc_video_002_route_a.py --dry-run",
+    "success_check": "JSON output status DRY_RUN_PASS and source_dir/ffmpeg/ffprobe resolved; no generation/output MP4 is expected from dry-run.",
+    "failure_rule": "If FFMPEG_NOT_AVAILABLE, FFPROBE_NOT_AVAILABLE, COMFY_OUTPUT_NOT_FOUND or MISSING_ACCEPTED_SOURCE_ASSET appears, stop and return the JSON/error to Nexia. Do not install anything yet.",
+    "phase_2": "Only after dry-run PASS, local deterministic assembly can be authorized/executed with the same runner without --dry-run. That output still requires professional QA and Kael normal-viewing acceptance before any capability PASS.",
+    "cost_exposure": "EUR0 expected. No paid service/API/account.",
+    "risk": "Low and reversible for dry-run; it reads local paths/binaries/assets and writes nothing material beyond console output.",
+    "reversibility": "Dry-run has no intended media output. No model/app installation is permitted by this handoff.",
+    "return_to_nexia": "Paste the dry-run JSON or say Hecho and provide the visible result. Nexia will classify the dependency/source gate before any render."
+  },
+  "route_b_status": "NO_NATIVE_CURRENT_MODEL_INSTALL_YET",
+  "auto_product_parallel_status": "REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED",
+  "exp_auto_001_status": "ALIVE_UNCHANGED_SEPARATE_CONTRA_PUBLIC_GATE",
+  "truth_boundary": "Prepared handoff only. No local dry-run, render, professional UGC PASS, buyer validation, sale, payment or profit is claimed."
+}
