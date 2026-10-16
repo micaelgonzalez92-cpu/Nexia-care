@@ -1,0 +1,25 @@
+{
+  "schema_version": 67,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V66.json",
+    "verified_blob_sha": "2df7098e03603ee4c1859215c6ac555eb64312b0"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-FLUX-EDIT-V08-PREP-SYNTAX-SUPERSEDED-V081-001",
+      "path": "events/EVT-2026-10-16-FLUX-EDIT-V08-PREP-SYNTAX-SUPERSEDED-V081-001.json",
+      "verified_blob_sha": "d6deb4a8943a033888652b9ccdc2cfa2e8423963"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-FLUX-EDIT-V08-PREP-SYNTAX-SUPERSEDED-V081-001",
+  "latest_event_path": "events/EVT-2026-10-16-FLUX-EDIT-V08-PREP-SYNTAX-SUPERSEDED-V081-001.json",
+  "latest_event_blob_sha": "d6deb4a8943a033888652b9ccdc2cfa2e8423963",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-16-FLUX-EDIT-V08-PREP-SYNTAX-SUPERSEDED-V081-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V67 supersedes the unexecuted v0.8 preparation with corrected v0.8.1. The verified v0.7 finding remains: BASE was routed through the non-distilled node75 path and stopped at 20-step precheck with zero generations. v0.8.1 selects the official distilled node77/SaveImage78 path while retaining all frozen prechecks and prior evidence."
+}
