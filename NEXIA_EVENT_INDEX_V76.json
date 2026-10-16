@@ -1,0 +1,25 @@
+{
+  "schema_version": 76,
+  "updated_at": "2026-10-17",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V75.json",
+    "verified_blob_sha": "5f96ad93c30f640fddea632320a09bf40ac10906"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001",
+      "path": "events/EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001.json",
+      "verified_blob_sha": "e1378bd3db65ae69defc09010d9241425b2b3b84"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001",
+  "latest_event_path": "events/EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001.json",
+  "latest_event_blob_sha": "e1378bd3db65ae69defc09010d9241425b2b3b84",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V76 records the bounded canonical integrity checker depth repair: full chain traversal verified with zero errors and four preserved historical REFERENCE_HASH_MISSING warnings. STATE v73 and all historical indexes/events remain unchanged."
+}
