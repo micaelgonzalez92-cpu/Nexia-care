@@ -12,12 +12,12 @@
     {
       "event_id": "EVT-2026-10-17-FLUX-EDIT-BRIDGE-V082-DIM-ARRAY-DIAG-001",
       "path": "events/EVT-2026-10-17-FLUX-EDIT-BRIDGE-V082-DIM-ARRAY-DIAG-001.json",
-      "verified_blob_sha": "TO_VERIFY"
+      "verified_blob_sha": "4028a879721f858bed7ef96a52adf1b324bae5cc"
     }
   ],
   "latest_event_id": "EVT-2026-10-17-FLUX-EDIT-BRIDGE-V082-DIM-ARRAY-DIAG-001",
   "latest_event_path": "events/EVT-2026-10-17-FLUX-EDIT-BRIDGE-V082-DIM-ARRAY-DIAG-001.json",
-  "latest_event_blob_sha": "TO_VERIFY",
+  "latest_event_blob_sha": "4028a879721f858bed7ef96a52adf1b324bae5cc",
   "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
   "latest_material_system_event_id": "EVT-2026-10-17-FLUX-EDIT-BRIDGE-V082-DIM-ARRAY-DIAG-001",
   "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
