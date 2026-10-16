@@ -1,7 +1,7 @@
 {
-  "schema_version": 49,
+  "schema_version": 50,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC ROUTE A STOPPED / FRAMEPACK DEFERRED / LTX 2B 0.9.8 FP8 LOCAL COMPATIBILITY PASS / REPLACEMENT AUTHORIZATION GATE / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC ROUTE A STOPPED / LTX 2B 0.9.8 FP8 REPLACEMENT AUTHORIZED / WORK EXECUTION PENDING VERIFICATION / FRAMEPACK DEFERRED / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -17,7 +17,7 @@
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_CONTRA_WORKANA_AS_CHANNELS",
-    "lane_2": "VETA-AI-UGC-001_LTX_2B_0_9_8_FP8_REPLACEMENT_AUTHORIZATION_GATE",
+    "lane_2": "VETA-AI-UGC-001_LTX_2B_0_9_8_FP8_REPLACEMENT_AUTHORIZED_WORK_PENDING",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED",
     "rule": "Do not activate a fourth material lane unless one lane is promoted, paused, falsified, or displaced by hard precedence."
   },
@@ -32,7 +32,6 @@
     "next_architecture_requirement": "ADD_ACTION_VISUAL_CONTINUITY_PRODUCT_DEMONSTRATION_AND_STRONGER_MOTION_WITHOUT_UNCONTROLLED_COST_OR_ANATOMY_RISK"
   },
   "storage_capacity": {
-    "audit_status": "COMPLETE_NO_DELETION_NO_NEW_INSTALL",
     "C_free_gib": 260.91,
     "D_free_gib": 877.45,
     "total_free_gib": 1138.36,
@@ -51,30 +50,24 @@
   },
   "next_video_architecture_research": {
     "artifact": "research/NEXIA_LOW_FOOTPRINT_I2V_COMPARISON_V1_2026-10-16.md",
-    "status": "LOCAL_COMPATIBILITY_PASS_REPLACEMENT_AUTHORIZATION_GATE",
+    "status": "REPLACEMENT_AUTHORIZED_EXECUTION_PENDING_VERIFICATION",
     "selected_candidate": "LTX_VIDEO_2B_0_9_8_DISTILLED_FP8",
     "selected_file": "ltxv-2b-0.9.8-distilled-fp8.safetensors",
     "remote_size_gb": 4.46,
-    "downloaded": false,
-    "installed": false,
-    "runtime_verified": false,
-    "local_compatibility": {
-      "comfyui_version": "0.39.0",
-      "core_file": "comfy_extras/nodes_lt.py",
-      "LTXVImgToVideo": true,
-      "LTXVImgToVideoInplace": true,
-      "LTXVConditioning": true,
-      "ModelSamplingLTXV": true,
-      "old_checkpoint_path_verified": true,
-      "old_checkpoint_size_gib": 5.905,
-      "t5xxl_path_verified": true,
-      "t5xxl_size_gib": 9.116
-    },
-    "dependency_reuse": ["t5xxl_fp16.safetensors", "native ComfyUI LTXV core nodes"],
+    "local_compatibility": "PASS_COMFYUI_0_39_0_NATIVE_LTXV_NODES_PRESENT",
+    "old_checkpoint_path": "C:/Users/User/.codex/.chatgpt-projects/g-p-6ac02e5d5b84819190b29f630d0ff0e5/outputs/creative-benchmark-2026-10-12/ComfyUI_windows_portable/ComfyUI/models/checkpoints/ltx-video-2b-v0.9.5.safetensors",
+    "old_checkpoint_size_gib": 5.905,
+    "t5xxl_path": "C:/Users/User/.codex/.chatgpt-projects/g-p-6ac02e5d5b84819190b29f630d0ff0e5/outputs/creative-benchmark-2026-10-12/ComfyUI_windows_portable/ComfyUI/models/text_encoders/t5xxl_fp16.safetensors",
+    "t5xxl_size_gib": 9.116,
     "keep_t5xxl_fp16": true,
-    "old_ltx_0_9_5": "CANDIDATE_DELETE_ONLY_AFTER_EXPLICIT_KAEL_AUTHORIZATION",
-    "next_gate": "KAEL_AUTHORIZE_LTX098_REPLACEMENT_TEST",
-    "truth_limit": "Compatibility PASS does not prove successful 0.9.8 runtime, speed, memory peaks, anatomy quality or professional quality."
+    "authorization_event": "events/EVT-2026-10-16-LTX098-REPLACEMENT-AUTH-001.json",
+    "execution_surface": "WORK_LOCAL_PC_HANDOFF_CREATED",
+    "downloaded": "NOT_VERIFIED",
+    "old_ltx_deleted": "NOT_VERIFIED",
+    "runtime_verified": false,
+    "bounded_test": "ONE_3_5_SECOND_I2V_ACCEPTED_PHASE_A_STILL",
+    "next_gate": "VERIFY_WORK_POSTCONDITIONS_AND_TEST_RESULT",
+    "truth_limit": "Authorization and handoff are verified. Deletion, download, model load, runtime performance and output quality are not verified until evidence returns."
   },
   "auto_product": {
     "reference_result": "PASS_NODE_REFERENCE_ONLY_NOT_N8N",
@@ -88,11 +81,11 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V49.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V48.json",
-    "latest_verified_event_id": "EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001.json",
-    "latest_verified_event_blob_sha": "62e7876900a6d1efd5b0e0fa7d5376ebc0bcd04d"
+    "active_index": "NEXIA_EVENT_INDEX_V50.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V49.json",
+    "latest_verified_event_id": "EVT-2026-10-16-LTX098-REPLACEMENT-AUTH-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-LTX098-REPLACEMENT-AUTH-001.json",
+    "latest_verified_event_blob_sha": "d4637e385626b9017e3e78ee656f03fd163cc892"
   },
   "economics": {
     "revenue_eur": 0,
@@ -101,20 +94,20 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "ltx098_replacement_test": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_NOW",
-    "local_deletion": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_BEFORE_OLD_CHECKPOINT_DELETE",
-    "new_model_download": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_BEFORE_4_46GB_DOWNLOAD",
-    "pagefile_or_system_configuration_change": "NOT_RECOMMENDED_NOW_SEPARATE_GATE_IF_REOPENED",
+    "ltx098_replacement_test": "AUTHORIZED_FOR_EXACT_BOUNDED_SCOPE",
+    "additional_local_deletion": "NOT_AUTHORIZED",
+    "additional_model_download": "NOT_AUTHORIZED",
+    "framepack_or_pagefile_change": "NOT_AUTHORIZED",
     "contra_v4_public_edit": "KAEL_REQUIRED_SEPARATE_GATE",
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Local compatibility gate passed: ComfyUI 0.39.0 exposes native LTXV image-to-video, conditioning and sampling nodes; old 0.9.5 checkpoint and shared t5xxl locations are verified. No deletion or download occurred.",
-    "human_action_required_now": true,
-    "pending_human_action": "AUTHORIZE_LTX098_REPLACEMENT_TEST",
-    "surface": "Windows PC / PowerShell",
-    "resume_from": "If Kael explicitly authorizes, delete only the verified obsolete ltx-video-2b-v0.9.5.safetensors checkpoint, keep t5xxl_fp16, download the official 4.46GB ltxv-2b-0.9.8-distilled-fp8.safetensors into models/checkpoints, verify hashes/file presence, then run one bounded 3-5s I2V test and measure wall time/RAM/VRAM/quality.",
-    "truth_limit": "Do not claim deletion, download, install, successful generation, professional capability, buyer demand, sale, payment or profit without direct evidence."
+    "last_completed_verified_action": "Kael explicitly authorized replacing only the verified old LTX 0.9.5 checkpoint with the official LTX 2B v0.9.8 distilled FP8 checkpoint and running one bounded 3-5 second local I2V test. A Work local-PC handoff was created. Execution results have not yet been verified in this chat.",
+    "human_action_required_now": false,
+    "pending_human_action": "NONE_IN_THIS_CHAT_AWAIT_WORK_RESULT",
+    "surface": "Work / local PC",
+    "resume_from": "When Work returns, verify old checkpoint absence, new checkpoint presence/size/hash if available, t5xxl preservation, exactly one bounded I2V test, wall time, RAM/VRAM peaks, output duration and visual hard-fail/result evidence before promoting or rejecting the route.",
+    "truth_limit": "Do not claim deletion, download, installation, successful generation or quality PASS until postconditions are directly verified."
   },
-  "next_action": "KAEL_AUTHORIZE_LTX098_REPLACEMENT_TEST"
+  "next_action": "AWAIT_WORK_LTX098_REPLACEMENT_TEST_RESULT_AND_VERIFY"
 }
