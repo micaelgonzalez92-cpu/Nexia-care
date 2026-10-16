@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-COMFY-STARTUP-DIAG-PASS-001",
+  "timestamp": "2026-10-16",
+  "type": "FLUX_COMFY_FULL_SERVER_STARTUP_DIAGNOSTIC_PASS",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_STARTUP_DIAGNOSTIC_CONSOLE_OUTPUT",
+  "observed": {
+    "comfy_startup_ready": true,
+    "startup_ready_seconds": 49.646,
+    "comfyui_version": "0.39.0",
+    "python_version": "3.12.10",
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "vram_mib": 12287,
+    "ram_mib": 16343,
+    "pytorch_version": "2.14.0+cu126",
+    "server_url": "http://127.0.0.1:8188",
+    "browser_started": false,
+    "prompt_submitted": false,
+    "generations_executed": 0,
+    "cleanup_stopped_started_process": true
+  },
+  "warnings_observed": {
+    "windows_single_gpu_mode_forced": true,
+    "cu130_or_higher_recommended_for_optimized_cuda_operations": true,
+    "triton_unavailable": true,
+    "opengl_accelerate_unavailable": true
+  },
+  "diagnosis": {
+    "persistent_comfy_server_startup_failure": false,
+    "persistent_sqlalchemy_import_failure": false,
+    "prior_keyboardinterrupt_classification": "TRANSIENT_OR_EXTERNAL_TO_NORMAL_STARTUP_PATH_SOURCE_NOT_IDENTIFIED",
+    "startup_runtime_now_verified": true,
+    "experimental_failure": false,
+    "flux_image_edit_runtime_verified": false
+  },
+  "truth_boundary": "This verifies the existing ComfyUI 0.39.0 server reaches localhost readiness in the same environment. It does not verify BASE/B1/B2 generation, image editing, prompt-engineering benefit, or visual quality. Zero benchmark generations remain executed.",
+  "next_action": "REPAIR_GITHUB_WRITEBACK_UTF8_BOM_ONLY_THEN_RETRY_SAME_FROZEN_ONESHOT_BENCHMARK"
+}
