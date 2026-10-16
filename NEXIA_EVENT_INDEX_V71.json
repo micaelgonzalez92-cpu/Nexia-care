@@ -1,0 +1,25 @@
+{
+  "schema_version": 71,
+  "updated_at": "2026-10-17",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V70.json",
+    "verified_blob_sha": "a986f4037358d212ee4dd78e35ce8526376f722c"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-17-FLUX-EDIT-BRIDGE-V083-GENERATE500-DIAG-001",
+      "path": "events/EVT-2026-10-17-FLUX-EDIT-BRIDGE-V083-GENERATE500-DIAG-001.json",
+      "verified_blob_sha": "579bfc6499a6c8fe956ed30cda955229e696b647"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-17-FLUX-EDIT-BRIDGE-V083-GENERATE500-DIAG-001",
+  "latest_event_path": "events/EVT-2026-10-17-FLUX-EDIT-BRIDGE-V083-GENERATE500-DIAG-001.json",
+  "latest_event_blob_sha": "579bfc6499a6c8fe956ed30cda955229e696b647",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-FLUX-EDIT-BRIDGE-V083-GENERATE500-DIAG-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V71 preserves v0.8.3 as a fail-closed GENERATE_BASE HTTP500 attempt. All compile-time invariants including effective 1024x1024 passed. Local generation_count remained zero because /prompt returned no prompt_id, but backend execution is not asserted zero until the preserved logs and output directory are inspected. A read-only postmortem is the next gate."
+}
