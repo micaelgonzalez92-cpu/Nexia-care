@@ -1,0 +1,26 @@
+{
+  "schema_version": 33,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V32.json",
+    "verified_blob_sha": "fb3b4738beb734354c26b322882992d7099199a6"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-NEXIA-WEEKLY-RADAR-AUTOMATION-001",
+      "path": "events/EVT-2026-10-16-NEXIA-WEEKLY-RADAR-AUTOMATION-001.json",
+      "verified_blob_sha": "4102f58a941254214cee4c8adc4dc372c8e93b3d"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-NEXIA-WEEKLY-RADAR-AUTOMATION-001",
+  "latest_event_path": "events/EVT-2026-10-16-NEXIA-WEEKLY-RADAR-AUTOMATION-001.json",
+  "latest_event_blob_sha": "4102f58a941254214cee4c8adc4dc372c8e93b3d",
+  "latest_material_business_event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
+  "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
+  "latest_material_automation_event_id": "EVT-2026-10-16-NEXIA-WEEKLY-RADAR-AUTOMATION-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V33 indexes the verified active weekly Nexia R&D radar automation. It preserves STATE v73, the R&D Intelligence standard, and the unchanged Contra V4 human gate. It does not claim any future run result or alert delivery before observation."
+}
