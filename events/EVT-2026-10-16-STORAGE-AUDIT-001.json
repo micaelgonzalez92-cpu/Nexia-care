@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-STORAGE-AUDIT-001",
+  "timestamp": "2026-10-16",
+  "type": "LOCAL_STORAGE_AUDIT",
+  "state_version": 73,
+  "status": "AUDIT_COMPLETE_NO_DELETION_NO_NEW_INSTALL",
+  "authority": "KAEL_REPORTED_WORK_AUDIT",
+  "storage": {
+    "C": {"capacity_gib": 446.52, "used_gib": 185.60, "free_gib": 260.91},
+    "D": {"capacity_gib": 931.51, "used_gib": 54.06, "free_gib": 877.45},
+    "total": {"capacity_gib": 1378.03, "used_gib": 239.67, "free_gib": 1138.36}
+  },
+  "finding": "Storage is not an immediate blocker for a new bounded local video architecture. Cleanup is hygiene and retirement of unused capacity, not emergency reclamation.",
+  "keep": [
+    "ComfyUI installation",
+    "FLUX.2 Klein stack including qwen_3_4b and flux2-vae",
+    "ComfyUI embedded Python",
+    "general Python",
+    "FFmpeg/ffprobe",
+    "GitHub CLI",
+    "Ollama and its active code model dependencies",
+    "V1/V2/V3 experiment originals and evidence"
+  ],
+  "candidate_delete": [
+    {"item": "ltx-video-2b-v0.9.5.safetensors", "size_gib": 5.91, "risk": "MEDIUM", "condition": "Only if LTX capability is intentionally retired"},
+    {"item": "t5xxl_fp16.safetensors", "size_gib": 9.12, "risk": "MEDIUM", "condition": "May serve other workflows; dependency check required before deletion"},
+    {"item": "original ComfyUI .7z archive", "size_gib": 1.77, "risk": "LOW_MEDIUM", "condition": "Deleting removes offline recovery copy"},
+    {"item": "benchmark isolated caches", "size_mib": 109.50, "risk": "LOW", "condition": "Close ComfyUI before cleanup"},
+    {"item": "pip cache", "size_mib": 29.85, "risk": "LOW"},
+    {"item": "12 verified duplicate temporary videos/reports", "size_mib": 45.96, "risk": "LOW", "condition": "Originals preserved and SHA-256 identity already confirmed in audit"},
+    {"item": "Ollama update package", "size_gib": 1.48, "risk": "LOW_MEDIUM", "condition": "Verify no update is in progress"}
+  ],
+  "unknown_to_triage": [
+    {"item": "general user temp", "size_gib": 0.95},
+    {"item": "NVIDIA DXCache", "size_gib": 3.10},
+    {"item": "diagnostic dumps", "size_mib": 187.77},
+    {"item": "Chrome-managed local model", "size_gib": 3.98},
+    {"item": "iTunes iPhone firmware cache", "size_gib": 5.60}
+  ],
+  "estimated_candidate_savings_gib": 18.44,
+  "truth_limits": [
+    "Storage audit does not establish RAM availability.",
+    "Storage audit does not establish VRAM fit for a new model.",
+    "No deletion was executed.",
+    "FramePack was not installed.",
+    "Potential duplicate detection was not exhaustive by content hash."
+  ],
+  "next_action": "PLAN_NEW_VIDEO_ARCHITECTURE_WITH_STORAGE_PLACEMENT_AND_RAM_VRAM_GATES_BEFORE_ANY_INSTALL"
+}
