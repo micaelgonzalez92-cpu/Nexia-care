@@ -1,0 +1,139 @@
+name: n8n Product V0.2.1 Serialized Concurrency Stress
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/auto-product-v021/**'
+      - '.github/workflows/n8n-product-v021-serialized-concurrency-stress.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: n8n-product-v021-serialized-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  serialized-stress:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Set up Node.js 24.21.0
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.21.0'
+
+      - name: Verify frozen repair contract
+        run: |
+          set -euo pipefail
+          grep -F 'FROZEN_BEFORE_V021_STRESS_OUTPUTS' experiments/auto-product-v021/CONCURRENCY_STRESS_PREREG_2026-10-17.md
+          grep -F 'N8N_CONCURRENCY_PRODUCTION_LIMIT=1' experiments/auto-product-v021/SERIALIZED_PROFILE_DESIGN_2026-10-17.md
+          node experiments/auto-product-v02/test_static_v02.js
+
+      - name: Show pinned n8n version
+        run: npx --yes n8n@2.42.6 --version
+
+      - name: Run V0.2.1 serialized stress in real n8n
+        env:
+          N8N_ENABLED_MODULES: 'data-table'
+          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-product-v021-user
+          N8N_PORT: '5678'
+          N8N_HOST: '127.0.0.1'
+          N8N_PROTOCOL: 'http'
+          N8N_SECURE_COOKIE: 'false'
+          N8N_DIAGNOSTICS_ENABLED: 'false'
+          N8N_PERSONALIZATION_ENABLED: 'false'
+          N8N_CONCURRENCY_PRODUCTION_LIMIT: '1'
+          NEXIA_EXPECTED_SERIAL_LIMIT: '1'
+          N8N_LOG: ${{ runner.temp }}/n8n-product-v021.log
+          BASE_URL: http://127.0.0.1:5678
+          BOOTSTRAP_WORKFLOW_ID: nexia-lead-intake-replay-bootstrap-v02-candidate
+          BOOTSTRAP_PATH: lead-intake-replay-bootstrap-v02
+          GUARD_WORKFLOW_ID: nexia-lead-intake-replay-conflict-v02-candidate
+          GUARD_PATH: lead-intake-replay-conflict-v02
+          AUDIT_WORKFLOW_ID: nexia-lead-intake-replay-audit-v02-candidate
+          AUDIT_PATH: lead-intake-replay-audit-v02
+        run: |
+          set -euo pipefail
+          test "$N8N_CONCURRENCY_PRODUCTION_LIMIT" = '1'
+          test "$NEXIA_EXPECTED_SERIAL_LIMIT" = '1'
+          echo "VERIFIED_TEST_ENV: N8N_CONCURRENCY_PRODUCTION_LIMIT=$N8N_CONCURRENCY_PRODUCTION_LIMIT"
+          mkdir -p "$N8N_USER_FOLDER"
+
+          for f in experiments/auto-product-v02/bootstrap-v02.json experiments/auto-product-v02/guard-v02.json experiments/auto-product-v02/audit-v02.json; do
+            npx --yes n8n@2.42.6 import:workflow --input="$f"
+          done
+          npx --yes n8n@2.42.6 publish:workflow --id="$BOOTSTRAP_WORKFLOW_ID"
+          npx --yes n8n@2.42.6 publish:workflow --id="$GUARD_WORKFLOW_ID"
+          npx --yes n8n@2.42.6 publish:workflow --id="$AUDIT_WORKFLOW_ID"
+
+          DB="$N8N_USER_FOLDER/.n8n/database.sqlite"
+          N8N_BIN=$(npx --yes --package=n8n@2.42.6 -c 'command -v n8n')
+          N8N_BIN=$(readlink -f "$N8N_BIN")
+          test -f "$N8N_BIN"
+
+          webhook_registered() {
+            local workflow_id="$1"
+            local webhook_path="$2"
+            DB="$DB" WORKFLOW_ID="$workflow_id" WEBHOOK_PATH="$webhook_path" python3 <<'PY'
+          import os, sqlite3, sys
+          con = sqlite3.connect(os.environ['DB'])
+          row = con.execute(
+              'SELECT workflowId, webhookPath, method FROM webhook_entity WHERE workflowId=? AND webhookPath=? AND method=?',
+              (os.environ['WORKFLOW_ID'], os.environ['WEBHOOK_PATH'], 'POST')
+          ).fetchone()
+          sys.exit(0 if row else 1)
+          PY
+          }
+
+          all_webhooks_registered() {
+            webhook_registered "$BOOTSTRAP_WORKFLOW_ID" "$BOOTSTRAP_PATH" && \
+            webhook_registered "$GUARD_WORKFLOW_ID" "$GUARD_PATH" && \
+            webhook_registered "$AUDIT_WORKFLOW_ID" "$AUDIT_PATH"
+          }
+
+          node "$N8N_BIN" start >> "$N8N_LOG" 2>&1 &
+          N8N_PID=$!
+          cleanup() {
+            if kill -0 "$N8N_PID" >/dev/null 2>&1; then
+              kill "$N8N_PID" || true
+              wait "$N8N_PID" || true
+            fi
+          }
+          trap cleanup EXIT
+
+          for i in $(seq 1 60); do
+            if ! kill -0 "$N8N_PID" >/dev/null 2>&1; then
+              echo 'n8n exited before readiness'
+              cat "$N8N_LOG"
+              exit 1
+            fi
+            if curl --max-time 2 -fsS "$BASE_URL/healthz/readiness" >/dev/null 2>&1 && all_webhooks_registered; then
+              break
+            fi
+            sleep 1
+          done
+          curl --max-time 2 -fsS "$BASE_URL/healthz/readiness" >/dev/null
+          all_webhooks_registered
+          echo "PASS: serialized-profile n8n PID=$N8N_PID ready"
+
+          node experiments/auto-product-v021/concurrency_stress_v021.js
+
+          cleanup
+          trap - EXIT
+          if curl --max-time 2 -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then
+            echo 'FAIL: n8n still responds after cleanup'
+            exit 1
+          fi
+          N8N_PORT="$N8N_PORT" python3 <<'PY'
+          import os, socket
+          with socket.socket() as connection:
+              connection.settimeout(2)
+              assert connection.connect_ex(('127.0.0.1', int(os.environ['N8N_PORT']))) != 0, 'n8n TCP port still open after cleanup'
+          PY
+          echo 'PASS: V0.2.1 serialized stress runtime cleaned up'
