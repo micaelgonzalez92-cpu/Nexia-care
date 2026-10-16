@@ -22,8 +22,8 @@ function Assert-UniqueLiteral {
     if($first -ne $last){throw "$Label signature is not unique; refusing patch."}
 }
 
-$oldRawLine = "$newRaw = Decode-B64 'JG5ld1Jhd1BhdGggPSAnJFJhd1Jlc3VsdFJlcG9QYXRoID0gJydydW50aW1lL05FWElBX0ZMVVhfSU1BR0VfRURJVF9CUklER0VfUkFXX1JFU1VMVF8wMDcuanNvbicnJw=='"
-$newRawLine = "$newRaw = Decode-B64 'JG5ld1Jhd1BhdGggPSAnJFJhd1Jlc3VsdFJlcG9QYXRoID0gJydydW50aW1lL05FWElBX0ZMVVhfSU1BR0VfRURJVF9CUklER0VfUkFXX1JFU1VMVF8wMDguanNvbicnJw=='"
+$oldRawLine = '$newRaw = Decode-B64 ''JG5ld1Jhd1BhdGggPSAnJFJhd1Jlc3VsdFJlcG9QYXRoID0gJydydW50aW1lL05FWElBX0ZMVVhfSU1BR0VfRURJVF9CUklER0VfUkFXX1JFU1VMVF8wMDcuanNvbicnJw=='''
+$newRawLine = '$newRaw = Decode-B64 ''JG5ld1Jhd1BhdGggPSAnJFJhd1Jlc3VsdFJlcG9QYXRoID0gJydydW50aW1lL05FWElBX0ZMVVhfSU1BR0VfRURJVF9CUklER0VfUkFXX1JFU1VMVF8wMDguanNvbicnJw=='''
 
 $oldTail = @'
     '    if ($patched.IndexOf(''Resolve-CompiledScalar'',[System.StringComparison]::Ordinal) -lt 0) { throw ''Compiled scalar resolver missing.'' }'
@@ -58,7 +58,7 @@ try {
     $patched = $patched.Replace('=== END NEXIA FLUX-EDIT BRIDGE REPAIR WRAPPER v0.8.3 ===','=== END NEXIA FLUX-EDIT BRIDGE REPAIR INNER v0.8.4 ===')
 
     if($patched.IndexOf($oldRawLine,[System.StringComparison]::Ordinal) -ge 0){throw 'Old _007 target line remains.'}
-    if($patched.IndexOf('NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json',[System.StringComparison]::Ordinal) -lt 0){throw 'New _008 target missing.'}
+    if($patched.IndexOf('JG5ld1Jhd1BhdGggPSAnJFJhd1Jlc3VsdFJlcG9QYXRoID0gJydydW50aW1lL05FWElBX0ZMVVhfSU1BR0VfRURJVF9CUklER0VfUkFXX1JFU1VMVF8wMDguanNvbicnJw==',[System.StringComparison]::Ordinal) -lt 0){throw 'New _008 target encoding missing.'}
     if($patched.IndexOf('Explicit UTF-8 prompt bytes missing.',[System.StringComparison]::Ordinal) -lt 0){throw 'UTF-8 transport patch injection missing.'}
 
     [System.IO.File]::WriteAllText($V084Path,$patched,[System.Text.UTF8Encoding]::new($false))
