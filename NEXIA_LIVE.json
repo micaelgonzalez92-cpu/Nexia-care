@@ -1,7 +1,7 @@
 {
-  "schema_version": 53,
+  "schema_version": 54,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / TASK-TRIGGERED R&D MANDATORY / EXP-AUTO REALITY LOOP PRIORITY / UGC EXISTING-FLUX IMAGE-EDIT GATE / AUTO-PRODUCT RUNTIME VALIDATION ACTIVE / VIDEO MODEL HOPPING PAUSED / FRAMEPACK DEFERRED",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / TASK-TRIGGERED R&D MANDATORY / FLUX BASE-B1-B2 EXECUTABLE PREREG REPAIRED / EXP-AUTO REALITY LOOP PRIORITY / AUTO-PRODUCT RUNTIME VALIDATION ACTIVE / VIDEO MODEL HOPPING PAUSED / FRAMEPACK DEFERRED",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -17,7 +17,7 @@
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_EXTERNAL_VALIDATION_PRIORITY",
-    "lane_2": "VETA-AI-UGC-001_EXISTING_FLUX_IMAGE_EDIT_PROMPT_BENCHMARK_WITH_TASK_TRIGGERED_RD_SUPPORT",
+    "lane_2": "VETA-AI-UGC-001_FLUX_IMAGE_EDIT_EXECUTABLE_PREREG_READY_FOR_RUNTIME",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_VALIDATION_NEXT",
     "rule": "Task-triggered R&D is an interrupt supporting an active lane, not a fourth material lane."
   },
@@ -64,16 +64,25 @@
     },
     "model_hopping": "PAUSED",
     "experimental_design_reassessment": {
-      "status": "ACTIVE_BOUNDED_RESEARCH_AND_RUNTIME_GATE",
+      "status": "EXECUTABLE_PREREG_READY_RUNTIME_NOT_EXECUTED",
       "artifact": "research/NEXIA_UGC_PROMPT_TASK_COMPLEXITY_REASSESSMENT_V1_2026-10-16.md",
       "task_triggered_corpus_artifact": "research/NEXIA_TASK_TRIGGERED_RD_UGC_CORPUS_REASSESSMENT_V1_2026-10-16.md",
-      "exact_ltx098_test_prompt_in_canonical_artifacts": false,
+      "flux_prereg_artifact": "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md",
+      "flux_prereg_blob_sha": "8276613aff9ba9aca0eec840fc8e0c2f36bca622",
+      "prereg_repair_event": "events/EVT-2026-10-16-FLUX-EDIT-PREREG-REPAIR-001.json",
+      "complete_original_prereg_artifact_existed": false,
+      "literal_prompts_preexisted_in_chat": true,
+      "runtime_seed_and_full_execution_contract_frozen_before_outputs": true,
+      "frozen_seed": 20261016,
+      "base_resolution": "1024x1024",
+      "generation_cap": 3,
+      "base_b1_b2_generations_executed": 0,
       "hypothesis": "PROMPT_AND_TASK_COMPLEXITY_MAY_HAVE_MATERIALLY_CONTRIBUTED_TO_FAIL_ROOT_CAUSE_NOT_ISOLATED",
       "existing_image_engine": "ComfyUI + FLUX.2 Klein 4B FP8",
       "canonical_local_image_status": "VERIFIED_BOUNDED_IMAGE_GENERATION",
       "image_edit_components_present_user_verified": true,
       "local_image_edit_status": "NOT_VERIFIED_RUNTIME",
-      "next_gate": "RUN_PREREGISTERED_FLUX_BASE_B1_B2_IMAGE_EDIT_BENCHMARK",
+      "next_gate": "EXECUTE_EXACT_FLUX_BASE_B1_B2_PREREG_NO_RETRIES",
       "video_reopen_rule": "ONLY_AFTER_SIMPLER_IMAGE_AND_PROMPT_CONTROLS_PROVIDE_NEW_EVIDENCE"
     },
     "prompt_compiler": {
@@ -136,11 +145,11 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V53.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V52.json",
-    "latest_verified_event_id": "EVT-2026-10-16-TASK-TRIGGERED-RD-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-TASK-TRIGGERED-RD-001.json",
-    "latest_verified_event_blob_sha": "c5e84feaa0c24a259edec0af801ad3dc5d0bc0f5"
+    "active_index": "NEXIA_EVENT_INDEX_V54.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V53.json",
+    "latest_verified_event_id": "EVT-2026-10-16-FLUX-EDIT-PREREG-REPAIR-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-FLUX-EDIT-PREREG-REPAIR-001.json",
+    "latest_verified_event_blob_sha": "7567701df42ffe02e0ab416cb9772fff97b30a97"
   },
   "economics": {
     "revenue_eur": 0,
@@ -149,7 +158,7 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "ugc_existing_flux_runtime_benchmark": "GREEN_IF_EXECUTION_SURFACE_AVAILABLE",
+    "ugc_existing_flux_runtime_benchmark": "GREEN_IF_EXECUTION_SURFACE_AVAILABLE_AND_EXACT_PREREG_USED",
     "remotion_install": "NOT_AUTHORIZED_PROPOSE_BEFORE_INSTALL",
     "new_ugc_software_api_repo_model": "PROPOSE_BEFORE_INSTALL_OR_ACTIVATION",
     "ugc_new_video_model_or_download": "NOT_AUTHORIZED",
@@ -158,12 +167,12 @@
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Task-triggered R&D became mandatory and the existing Kael intelligence corpus was re-queried for the active UGC blocker. Awesome Seedance prompt structures and preservation-oriented image-edit patterns were incorporated into the prompt architecture; Remotion is a no-install candidate for later deterministic assembly POC; paid cloud UGC APIs are deferred.",
+    "last_completed_verified_action": "Work preflight correctly stopped because the canonical Base/B1/B2 preregistration was incomplete. Nexia repaired the specification before any generation: literal prompts recovered from prior chat, seed/resolution/runtime/QA contract prospectively frozen, read back and indexed. No result was retroactively invented.",
     "human_action_required_now": false,
     "pending_human_action": "NONE",
     "surface": "Chat / local execution when available",
-    "resume_from": "Run the already-preregistered FLUX Base/B1/B2 image-edit benchmark without changing its acceptance criteria. Then use the updated prompt compiler knowledge to design the next iteration only if evidence requires it.",
-    "truth_limit": "Do not claim FLUX image editing PASS, Remotion installation, professional UGC capability, or any new external service until postconditions are verified."
+    "resume_from": "Execute research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md exactly. Max 3 generations; stop after BASE if base precondition fails; no retries.",
+    "truth_limit": "Do not claim FLUX image-edit runtime PASS or prompt-engineering benefit until Base/B1/B2 postconditions are observed. The old claim that a complete prereg already existed is corrected."
   },
-  "next_action": "RUN_PREREGISTERED_FLUX_BASE_B1_B2_IMAGE_EDIT_BENCHMARK_THEN_APPLY_TASK_TRIGGERED_RD_IF_BLOCKED"
+  "next_action": "EXECUTE_EXACT_FLUX_BASE_B1_B2_PREREG_NO_RETRIES"
 }
