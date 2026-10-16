@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V03-STDERR-DIAG-001",
+  "timestamp": "2026-10-16",
+  "type": "FLUX_ONE_SHOT_V03_COMFY_STDERR_DIAGNOSIS",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_STDERR_STDOUT_RAW_RESULT_PLUS_RUNNER_SOURCE_REVIEW",
+  "observed": {
+    "comfyui_version": "0.39.0",
+    "generation_count": 0,
+    "base_gate_reached": false,
+    "browser_started": false,
+    "error_stage": "START_COMFYUI",
+    "stderr_terminal_exception": "KeyboardInterrupt",
+    "stderr_location": "sqlalchemy.dialects.sqlite.json module file load via importlib get_data",
+    "stdout_empty": true,
+    "raw_result_status": "STOPPED_FAIL_CLOSED",
+    "raw_result_writeback": "FAIL_GH_API_PUT",
+    "cost_eur": 0
+  },
+  "runner_source_review": {
+    "startup_behavior": "Start-Process embedded Python then poll localhost and HasExited for up to 120 seconds",
+    "runner_interrupts_child_during_startup": false,
+    "cleanup_stop_process_occurs_after_try_catch_finally_transition": true,
+    "conclusion": "No runner code path observed that intentionally sends KeyboardInterrupt while startup polling is active."
+  },
+  "diagnosis": {
+    "sqlalchemy_dependency_error_observed": false,
+    "module_not_found_observed": false,
+    "sqlite_configuration_exception_observed": false,
+    "classification": "PYTHON_STARTUP_INTERRUPTED_DURING_IMPORT_SOURCE_UNKNOWN",
+    "interrupt_source": "UNKNOWN_NOT_YET_INSTRUMENTED",
+    "experimental_failure": false,
+    "flux_runtime_evidence_changed": false
+  },
+  "writeback_diagnosis": {
+    "classification": "SEPARATE_TRANSPORT_DEFECT",
+    "hypothesis": "WINDOWS_POWERSHELL_5_1_UTF8_BOM_IN_GH_API_INPUT_JSON",
+    "basis": "Runner Write-JsonFile uses Set-Content -Encoding UTF8 and bootstrap invokes powershell.exe; Windows PowerShell 5.1 UTF8 writes BOM. GitHub returned Problems parsing JSON HTTP 400.",
+    "verification_needed": "Read PowerShell version and first bytes of github-writeback-payload.json before declaring root cause verified."
+  },
+  "truth_boundary": "The traceback does not prove a SQLAlchemy incompatibility. It proves the Python process was interrupted while importing SQLite dialect code. No Base/B1/B2 generation occurred and local FLUX image editing remains NOT_VERIFIED_RUNTIME.",
+  "next_action": "RUN_BOUNDED_IMPORT_AND_PAYLOAD_ENCODING_DIAGNOSTIC_NO_COMFY_SERVER_NO_GENERATION"
+}
