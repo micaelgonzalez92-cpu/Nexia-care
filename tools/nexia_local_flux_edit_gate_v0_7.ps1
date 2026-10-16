@@ -202,9 +202,9 @@ try {
         '[System.Text.UTF8Encoding]::new($false)',
         'FAIL_GH_PAYLOAD_BOM_SELFTEST',
         'COMFY_CDP_TARGET_URL:',
-        "$newRawPath",
-        "$idProp = $msg.PSObject.Properties['id']",
-        "$exceptionProp = $evalResult.PSObject.Properties['exceptionDetails']"
+        $newRawPath,
+        '$idProp = $msg.PSObject.Properties[''id'']',
+        '$exceptionProp = $evalResult.PSObject.Properties[''exceptionDetails'']'
     )) {
         if ($patched.IndexOf($required, [System.StringComparison]::Ordinal) -lt 0) { throw "Required repair missing after patch: $required" }
     }
