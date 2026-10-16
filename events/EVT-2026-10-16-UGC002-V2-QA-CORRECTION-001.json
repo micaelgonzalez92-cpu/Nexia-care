@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001",
+  "timestamp": "2026-10-16",
+  "timestamp_precision": "date_only",
+  "type": "UGC002_V2_QA_EVIDENCE_CORRECTION",
+  "state_version": 73,
+  "status": "VERIFIED_EVIDENCE_CORRECTION_PROVISIONAL_SCORE",
+  "supersedes_for_current_truth": "EVT-2026-10-16-UGC002-V2-QA-001",
+  "preserve_prior_event": true,
+  "experiment": "UGC-VIDEO-002",
+  "route": "A_ANATOMY_MINIMIZED_DETERMINISTIC",
+  "artifact": "NEXIA_UGC_VIDEO_002_ROUTE_A_SPEC_V2.mp4",
+  "file_facts": {
+    "duration_seconds": 24.033,
+    "resolution": "1080x1920",
+    "fps": 30,
+    "frames": 721,
+    "size_bytes": 8060583,
+    "audio_track": false,
+    "full_decode_reported_errors": false,
+    "report_professional_qa": "NOT_YET_PERFORMED"
+  },
+  "review_scope": {
+    "frames_inspected": 16,
+    "expanded_regions": ["opening", "CTA", "SPEC"],
+    "normal_speed_playback_completed": false,
+    "reason": "VLC authorization expired and browser blocked local-file playback",
+    "temporal_severe_defects_absent": "NOT_VERIFIED",
+    "rights_provenance_audit": "NOT_VERIFIED"
+  },
+  "qa": {
+    "score": 78,
+    "score_status": "ESTIMATION_PROVISIONAL",
+    "threshold": 85,
+    "delta_vs_v1": 5,
+    "professional_use": "FAIL",
+    "rubric": {
+      "realism": 21,
+      "product": 18,
+      "motion_edit": 8,
+      "commercial": 11,
+      "social": 7,
+      "audio_caption": 3,
+      "repeatability": 5,
+      "safety": 5
+    }
+  },
+  "verified_visual_changes": {
+    "mojibake_fixed": false,
+    "caption_size_fixed": true,
+    "caption_position_improved": true,
+    "cta_spec_separated": true,
+    "cta_still_corrupted": true
+  },
+  "root_cause_observed": "The local V2 runner already contained corrupted strings inside SRT; BOM and UTF-8 declaration preserved corruption rather than reconstructing original characters.",
+  "hard_fail_status": {
+    "obvious_anatomy_defect_in_sample": false,
+    "material_product_mutation_in_sample": false,
+    "severe_temporal_defect": "NOT_VERIFIED",
+    "rights_violation": "NOT_VERIFIED"
+  },
+  "decision": "REJECT_V2_FOR_PROFESSIONAL_USE_KEEP_AS_EXPERIMENT_EVIDENCE",
+  "next_action": "KAEL_REFRESH_UNICODE_HARDENED_RUNNER_AND_RERENDER_V3",
+  "truth_boundary": "78/100 is provisional because normal-speed playback was not completed. Do not claim absence of severe temporal defects or rights issues. V2 remains professional FAIL below 85."
+}
