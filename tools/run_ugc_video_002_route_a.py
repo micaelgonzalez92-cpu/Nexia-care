@@ -27,9 +27,12 @@ Verlo. Cogerlo. Guardarlo.
 Mismo espacio. Menos caos.
 
 6
-00:00:20,500 --> 00:00:24,000
+00:00:20,500 --> 00:00:22,500
 Empieza por un solo rincón.
-CLEARNEST — SPEC CONCEPT
+
+7
+00:00:22,500 --> 00:00:24,000
+CLEARNEST - SPEC CONCEPT
 """
 
 SHOTS = [
@@ -143,12 +146,12 @@ def main():
             p = run([ffmpeg,"-y","-f","concat","-safe","0","-i",manifest.name,"-c","copy",base.name], cwd=work)
             if p.returncode or not base.exists():
                 raise RuntimeError("FFMPEG_CONCAT_FAIL: " + p.stderr[-1500:])
-            (work/"captions.srt").write_text(SRT, encoding="utf-8")
+            (work/"captions.srt").write_text(SRT, encoding="utf-8-sig")
             final = work/"final.mp4"
-            style = "FontName=Arial,FontSize=18,Outline=2,Shadow=1,Alignment=2,MarginV=120"
+            style = "FontName=Arial,FontSize=11,Outline=2,Shadow=1,Alignment=2,MarginV=38"
             p = run([
                 ffmpeg,"-y","-i",base.name,
-                "-vf",f"subtitles=captions.srt:force_style='{style}'",
+                "-vf",f"subtitles=captions.srt:charenc=UTF-8:force_style='{style}'",
                 "-an","-c:v","libx264","-preset","medium","-crf","18","-pix_fmt","yuv420p",final.name
             ], cwd=work)
             if p.returncode or not final.exists():
