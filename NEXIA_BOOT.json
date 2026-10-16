@@ -1,7 +1,7 @@
 {
-  "schema_version": 30,
-  "boot_version": 87,
-  "generated_at": "2026-10-15",
+  "schema_version": 31,
+  "boot_version": 88,
+  "generated_at": "2026-10-16",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
   "state_version": 73,
@@ -11,55 +11,44 @@
     "id": "MISSION-SYSTEM-EXCELLENCE-REALITY-001",
     "model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY"
   },
-  "constitution": {
-    "path": "governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md",
-    "blob_sha": "53435e8ecbdd0e45ee17bac250aa6f3df1feec1c"
-  },
   "recovery_order": [
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "governance/NEXIA_SYSTEM_EXCELLENCE_EXTERNAL_REALITY_CONSTITUTION_2026-10-15.md",
-    "NEXIA_EVENT_INDEX_V30.json",
-    "read V30 Contra V4 readiness event and Kael public-edit gate",
-    "read V29 verifier repair event and exact historical index reference errata",
-    "read V28 reconciliation event for V27 historical hash errata and Project Instructions V4 installation evidence",
-    "follow V30 base through V29/V28/V27/V26/V25 to V3 as needed",
-    "read post-STATE v73 events if any",
+    "NEXIA_EVENT_INDEX_V31.json",
+    "events/EVT-2026-10-16-LIVE-HUD-ADOPTED-001.json",
+    "read V31 base V30 and earlier indexes/events as needed",
+    "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md when operational response format is material",
     "research/NEXIA_EXTERNAL_AI_INTELLIGENCE_SYNTHESIS_V1_2026-10-15.md when tool/intelligence prioritization is material",
-    "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md when Contra execution/verification is material",
-    "commercial/EXP-AUTO-001_CONTRA_VISUAL_SYSTEM_V4_FINAL_2026-10-15.md when Contra media is material",
+    "commercial/EXP-AUTO-001_CONTRA_KAEL_ACTION_CARD_V1_2026-10-15.md when Contra execution is material",
+    "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md when Contra verification is material",
     "NEXIA_EXECUTION_CAPABILITIES.json when execution truth is material",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "e21cd60295a6648bf50c2a04f39301dec1b655e5",
-  "execution_capabilities": "NEXIA_EXECUTION_CAPABILITIES.json",
+  "live_state_blob_sha": "0cb17813628e8642ca479d9e751759c89db3eeca",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V30.json",
-    "active_index_blob_sha": "029d5a5a99294444e8464e7a08383ed73129ba47",
-    "latest_verified_event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
-    "latest_verified_event_path": "events/EVT-2026-10-15-CONTRA-V4-READY-001.json",
-    "latest_verified_event_blob_sha": "604e580390625e92e33befa424f0023ff967cd0c",
+    "active_index": "NEXIA_EVENT_INDEX_V31.json",
+    "active_index_blob_sha": "e18ec19a9adb0c7d009eb0236962f499f719301a",
+    "latest_verified_event_id": "EVT-2026-10-16-LIVE-HUD-ADOPTED-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-LIVE-HUD-ADOPTED-001.json",
+    "latest_verified_event_blob_sha": "cd4ed28889af62772d607938f52f12ffd1d8fe3b",
     "latest_material_business_event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
-    "latest_material_governance_event_id": "EVT-2026-10-15-INTEGRITY-REPAIR-001",
-    "base_index": "NEXIA_EVENT_INDEX_V29.json"
+    "latest_material_governance_event_id": "EVT-2026-10-16-LIVE-HUD-ADOPTED-001",
+    "base_index": "NEXIA_EVENT_INDEX_V30.json"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONTRA V4 INTERNAL READY; KAEL PUBLIC-EDIT GATE; EXP-AUTO-001 REALITY PROBE ACTIVE",
-  "hard_precedence": [
-    "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
-    "TRUTH_EVIDENCE_INTEGRITY",
-    "AUTHORITY_HUMAN_GATE_INTEGRITY",
-    "CONTINUITY_RECOVERABILITY_CORRUPTION_PREVENTION"
-  ],
+  "communication_standard": {
+    "default_operational_format": "NEXIA_LIVE_HUD",
+    "artifact": "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md",
+    "artifact_blob_sha": "330d3a6544382c8ad88c7b79a311aa8920815f5b",
+    "technical_detail": "ON_DEMAND_OR_WHEN_MATERIAL"
+  },
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — LIVE HUD ACTIVE; CONTRA V4 INTERNAL READY; KAEL PUBLIC-EDIT GATE",
   "active_reality_probe": {
     "id": "EXP-AUTO-001",
-    "role": "BOUNDED_REALITY_LOOP_PROBE_AND_POTENTIAL_REVENUE_ENGINE",
     "status": "CONTRA_V4_INTERNAL_READY_KAEL_IMPLEMENTATION_GATE_WORKANA_PENDING",
-    "contra_profile_completion_percent_last_visible": 89,
-    "contra_personal_instagram_link_last_observed_present": true,
     "contra_personal_instagram_removal_required": true,
     "contra_portfolio_v4_status": "READY_FOR_CURRENT_PURPOSE_INTERNAL_APPROVED_NOT_APPLIED",
     "contra_identity_verified": false,
@@ -68,67 +57,7 @@
     "contra_paid_pilots_verified": 0,
     "workana_dashboard_state": "PENDING"
   },
-  "resources": {
-    "weekly_hard_cap_eur": 100,
-    "default_spend_eur": 0,
-    "kael_weekly_available_hours": "NOT_INSTRUMENTED",
-    "attention_baseline": "TIMEOS_7_DAY_PROTOCOL_PREPARED_NOT_YET_MEASURED"
-  },
-  "economics": {
-    "role": "CRITICAL_VALIDATION_RESOURCE_AND_SUSTAINABILITY_OUTCOME_NOT_SOLE_PROJECT_OBJECTIVE",
-    "capital_spent_eur": 0,
-    "revenue_eur": 0,
-    "settled_revenue_eur": 0,
-    "reconciled_net_profit_eur": 0
-  },
-  "constitutional_retrofit": {
-    "core_active_surfaces": "SUBSTANTIALLY_ALIGNED",
-    "repository_wide_compliance": "NOT_YET_VERIFIED_ITEM_BY_ITEM",
-    "dashboard": "NEXIA_PROGRESS_DASHBOARD.md_V4_3",
-    "scorecard": "NEXIA_OPPORTUNITY_SCORECARD_V3_2026-10-15.md",
-    "active_automations_model_c_aligned": 4,
-    "rule": "Continue item-by-item audit when active/reusable artifacts are touched; do not polish dead archives.",
-    "historical_reference_errata": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
-    "integrity_checker": "VERIFIED_36_LOCAL_REGRESSIONS_AND_COHERENT_CANDIDATE_SNAPSHOT_BOUNDED_SCOPE",
-    "active_repository_mission": "MODEL_C_ALIGNED"
-  },
-  "project_instruction_migration": {
-    "installed_baseline": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
-    "installed_baseline_status": "INSTALLED_USER_CONFIRMED_CONTEXT_VERIFIED",
-    "candidate": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V4_2026-10-15.md",
-    "candidate_blob_sha": "ce14c0c5b5dc27857b99398d96fbed0d29d3c136",
-    "candidate_exact_character_count": 7035,
-    "candidate_safe_ceiling": 7800,
-    "candidate_status": "INSTALLED_USER_CONFIRMED_CONTEXT_VERIFIED",
-    "human_gate": "CLOSED_USER_CONFIRMED_CONTEXT_VERIFIED",
-    "previous_installed_baseline": "NEXIA_PROJECT_INSTRUCTIONS_COMPACT.md",
-    "verification": {
-      "status": "INSTALLED_USER_CONFIRMED_CONTEXT_VERIFIED",
-      "evidence_event": "events/EVT-2026-10-15-MODEL-C-RECONCILIATION-001.json",
-      "direct_project_settings_ui_inspection": false,
-      "verification_scope": "KAEL_SAVE_CONFIRMATION_PLUS_CURRENT_PROJECT_CONTEXT_AND_EXACT_V4_CONTENT_MATCH"
-    }
-  },
-  "human_gate": "Kael must apply the final Contra V4 public profile/media changes and remove the personal Instagram link. Publication, service exposure, KYC/payout and new external accounts remain separately gated. Return with visual evidence for Nexia verification.",
-  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V30_PLUS_LIVE_SCHEMA_30_CONTRA_V4_READY_GATE",
-  "next_action": "KAEL_APPLY_CONTRA_V4_THEN_NEXIA_VERIFY_PUBLIC_POSTCONDITION",
-  "integrity_verifier": {
-    "event": "events/EVT-2026-10-15-INTEGRITY-REPAIR-001.json",
-    "report": "quality/NEXIA_INTEGRITY_VERIFIER_REPAIR_2026-10-15.md",
-    "local_regressions_passed": 36,
-    "exact_index_errata": 2,
-    "prior_artifact_errata_preserved": 6,
-    "payload_scope": "PATH_SHA_PAIRS_IN_INDEXED_EVENTS_AT_OR_AFTER_STATE_V72",
-    "offline_history": "FULL_GIT_HISTORY_OR_VERIFIED_BLOB_CACHE",
-    "remote_ci": "INSPECT_ACTUAL_RUN_DO_NOT_INFER_FROM_COMMIT",
-    "candidate_snapshot": {
-      "status": "PASS_LOCAL",
-      "errors": 0,
-      "warnings": 0,
-      "indexes_checked": 28,
-      "events_checked": 102,
-      "artifact_references_checked": 39,
-      "corrected_historical_references": 8
-    }
-  }
+  "human_gate": "Kael must apply final Contra V4 public profile/media changes and remove the personal Instagram link. Publication, service exposure, KYC/payout and new external accounts remain separately gated.",
+  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V31_PLUS_LIVE_SCHEMA_31_HUD_ACTIVE_CONTRA_GATE",
+  "next_action": "KAEL_APPLY_CONTRA_V4_THEN_NEXIA_VERIFY_PUBLIC_POSTCONDITION"
 }
