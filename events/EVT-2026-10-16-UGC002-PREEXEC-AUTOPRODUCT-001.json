@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-UGC002-PREEXEC-AUTOPRODUCT-001",
+  "timestamp": "2026-10-16",
+  "timestamp_precision": "date_only",
+  "type": "UGC002_PREEXEC_AND_AUTO_PRODUCT_PARALLEL_ADVANCE",
+  "state_version": 73,
+  "status": "VERIFIED_PERSISTED_PREEXECUTION / HUMAN_LOCAL_DRY_RUN_GATE",
+  "authority": "USER_EXPLICIT_CONTINUE_PREEXECUTION_PLUS_GREEN_YELLOW_INTERNAL_WORK",
+  "ugc_video_002": {
+    "route_a": "READY_FOR_LOCAL_DRY_RUN_NOT_EXECUTED",
+    "runner": "tools/run_ugc_video_002_route_a.py",
+    "preexecution": "experiments/UGC-VIDEO-002_ROUTE_A_PREEXECUTION_V1.md",
+    "ledger": "experiments/UGC-VIDEO-002_LEDGER_TEMPLATE.json",
+    "handoff": "NEXIA_UGC_VIDEO_002_LOCAL_HANDOFF_2026-10-16.json",
+    "sources": ["NEXIA_BENCHMARK_00002_.png", "NEXIA_BENCHMARK_00003_.png"],
+    "architecture": "DETERMINISTIC_PAN_ZOOM_CUTS_CAPTIONS_NO_NEW_GENERATIVE_MOTION",
+    "cash_spend_eur": 0,
+    "local_execution": false,
+    "professional_pass": false
+  },
+  "route_b_hardware_fit": {
+    "verified_machine_context": "RTX_3060_12GB_APPROX_16GB_RAM_FROM_PRIOR_PHASE_B",
+    "wan22_official_ti2v_5b": "NATIVE_NO_FIT_OFFICIAL_COMMAND_STATES_AT_LEAST_24GB_VRAM",
+    "ltx25": "DEFER_22B_APPROX_66_GIB_QUICKSTART_NOT_PROVEN_PRACTICAL_ON_MACHINE",
+    "hunyuan15_low_vram": "THIRD_PARTY_CANDIDATE_REQUIRES_SEPARATE_INSTALL_DOWNLOAD_GATE",
+    "decision": "NO_NATIVE_CURRENT_MODEL_INSTALL_YET"
+  },
+  "auto_product": {
+    "competitive_refresh": "research/NEXIA_AUTO_PRODUCT_001_COMPETITIVE_REFRESH_2026-10-16.md",
+    "fresh_finding": "FREE_AND_LOW_COST_COMPETITORS_HAVE_MATERIAL_FEATURE_OVERLAP",
+    "v01_gap": "NO_EXPLICIT_EXACT_REPLAY_VS_CONFLICTING_REPLAY_CLASSIFICATION",
+    "v02_design": "products/lead-intake-reliability-kit/REPLAY_CONFLICT_V02_DESIGN.md",
+    "reference_test": "products/lead-intake-reliability-kit/test_replay_contract_v02.js",
+    "reference_result": "PASS_NODE_REFERENCE_ONLY_NOT_N8N",
+    "n8n_runtime": "NOT_EXECUTED",
+    "publication": false,
+    "new_store_account": false,
+    "cash_spend_eur": 0
+  },
+  "exp_auto_001": {
+    "status": "ALIVE_UNCHANGED",
+    "contra_public_gate": "SEPARATE_RED_GATE_NOT_EXECUTED",
+    "additional_internal_polish": "CAPPED_PENDING_EXTERNAL_EVIDENCE"
+  },
+  "human_gate": {
+    "surface": "KAEL_WINDOWS_PC",
+    "action": "UGC_VIDEO_002_ROUTE_A_DRY_RUN_ONLY",
+    "reason": "NO_AUTHORIZED_LIVE_LOCAL_EXECUTION_SURFACE_IN_CHAT_AND_PRIOR_SCHEDULER_AUTHORIZATION_CONSUMED",
+    "install_allowed": false,
+    "spend_allowed": false,
+    "publication_allowed": false
+  },
+  "truth_boundary": "Preexecution and deterministic reference tests are verified. No UGC Route A local dry-run/render, professional visual PASS, n8n v0.2 runtime PASS, buyer demand, sale, settled payment or profit is claimed."
+}
