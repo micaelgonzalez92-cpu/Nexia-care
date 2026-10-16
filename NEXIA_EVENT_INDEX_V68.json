@@ -1,0 +1,25 @@
+{
+  "schema_version": 68,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V67.json",
+    "verified_blob_sha": "bdb035c1ebef64d82c8602e6e2632f6ee68d84a7"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V081-DIM-STRICTMODE-V082-REPAIR-001",
+      "path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V081-DIM-STRICTMODE-V082-REPAIR-001.json",
+      "verified_blob_sha": "198c6fa01a2f263a17b71d5d065403a3772b09e5"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V081-DIM-STRICTMODE-V082-REPAIR-001",
+  "latest_event_path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V081-DIM-STRICTMODE-V082-REPAIR-001.json",
+  "latest_event_blob_sha": "198c6fa01a2f263a17b71d5d065403a3772b09e5",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V081-DIM-STRICTMODE-V082-REPAIR-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V68 preserves v0.8.1 as a zero-generation compiled-precheck stop at StrictMode-unsafe width discovery. Reaching that point proves the distilled BASE path already passed the frozen model/seed/Euler/4-step/CFG1 checks. v0.8.2 changes only dimension discovery to PSObject.Properties-safe inspection while retaining the 1024x1024 requirement and all other experiment invariants."
+}
