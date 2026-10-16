@@ -1,0 +1,25 @@
+{
+  "schema_version": 75,
+  "updated_at": "2026-10-17",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V74.json",
+    "verified_blob_sha": "d9c6869810ac219362ccb83942074d5b56f774e4"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001",
+      "path": "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
+      "verified_blob_sha": "527e1dd7daa6bb5439ef268149b19a843c5bcb3d"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001",
+  "latest_event_path": "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
+  "latest_event_blob_sha": "527e1dd7daa6bb5439ef268149b19a843c5bcb3d",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V75 closes ONE-SHOT V1 runtime and frozen visual QA from RAW _008; no new generation; STATE v73 and historical chain/raw evidence preserved. B1/B2 both pass, superiority not demonstrated, professional capability not established."
+}

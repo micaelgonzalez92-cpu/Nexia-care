@@ -1,6 +1,6 @@
 {
-  "schema_version": 74,
-  "boot_version": 129,
+  "schema_version": 75,
+  "boot_version": 130,
   "generated_at": "2026-10-17",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -14,7 +14,10 @@
   "recovery_order": [
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
-    "NEXIA_LIVE.json (historical snapshot; reconcile later indexes)",
+    "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V75.json",
+    "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
+    "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
     "NEXIA_EVENT_INDEX_V74.json",
     "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-STATIC-READY-001.json",
     "tools/nexia_flux_base_b1_b2_one_shot_v1.ps1",
@@ -40,28 +43,28 @@
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "0ede475915a7f56da0409aa43752565a0271435e",
-  "live_state_status": "STALE_FOR_FLUX_LANE_SUPERSEDED_BY_EVENT_INDEX_V74",
+  "live_state_blob_sha": "0cbc6569965843976a7ac9188d33c72c3b24894b",
+  "live_state_status": "RECONCILED_FOR_FLUX_QA_CLOSURE_EVENT_INDEX_V75",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V74.json",
-    "active_index_blob_sha": "d9c6869810ac219362ccb83942074d5b56f774e4",
-    "latest_verified_event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-STATIC-READY-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-STATIC-READY-001.json",
-    "latest_verified_event_blob_sha": "35927b1a9d1c5dc71ccc15a8f4975787b52fa4f4",
-    "base_index": "NEXIA_EVENT_INDEX_V73.json"
+    "active_index": "NEXIA_EVENT_INDEX_V75.json",
+    "active_index_blob_sha": "5f96ad93c30f640fddea632320a09bf40ac10906",
+    "latest_verified_event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
+    "latest_verified_event_blob_sha": "527e1dd7daa6bb5439ef268149b19a843c5bcb3d",
+    "base_index": "NEXIA_EVENT_INDEX_V74.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_EXTERNAL_VALIDATION_PRIORITY",
-    "lane_2": "VETA-AI-UGC-001_FLUX_ONE_SHOT_V1_STATIC_READY_NOT_EXECUTED",
+    "lane_2": "VETA-AI-UGC-001_FLUX_IMAGE_EDIT_VERIFIED_RUNTIME_FUNCTIONAL_BOUNDED_PROFESSIONAL_NOT_ESTABLISHED",
     "lane_3": "VETA-AUTO-PRODUCT-001_N8N_RUNTIME_VALIDATION_NEXT",
     "rd_interrupt_rule": "TASK_TRIGGERED_RD_SUPPORTS_ACTIVE_LANE_NOT_FOURTH_WIP"
   },
   "ugc_checkpoint": {
     "existing_flux2_klein_4b": "PRESERVED",
     "local_flux_image_generation": "VERIFIED_BOUNDED_HISTORICAL",
-    "local_flux_image_editing": "NOT_VERIFIED_RUNTIME",
+    "local_flux_image_editing": "VERIFIED_RUNTIME_FUNCTIONAL",
     "comfy_server_startup": "VERIFIED_PASS_49_646_SECONDS_VERSION_0_39_0",
     "github_no_bom_writeback": "VERIFIED_PASS_GH_API_READBACK_MATCH",
     "frontend_ready_methods": "VERIFIED_TRUE",
@@ -80,19 +83,47 @@
     "one_shot_runner": "tools/nexia_flux_base_b1_b2_one_shot_v1.ps1",
     "one_shot_runner_blob_sha": "86f897de2d24e0652e2db89098322f2fc29b9b76",
     "transport_repair": "EXPLICIT_UTF8_NO_BOM_BYTES_PLUS_APPLICATION_JSON_CHARSET_UTF8",
-    "next_remote_raw_result": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
-    "base_b1_b2_generations_executed": 0,
+    "base_b1_b2_generations_executed": 3,
     "frozen_seed": 20261016,
     "max_generations": 3,
-    "next_gate": "SEPARATE_KAEL_EXECUTION_GATE_NOT_REQUESTED_NOW",
+    "next_gate": "NONE_FOR_THIS_CLOSED_BENCHMARK; no new generation authorized",
     "v085_failure_scope": "WRAPPER_SIGNATURE_LOOKUP_BEFORE_BENCHMARK",
     "v085_failure": "STALE_007_INNER_SELFTEST_SIGNATURE_NOT_FOUND_REPORTED_IN_REFERENCED_CHAT",
-    "one_shot_status": "STATIC_VERIFIED_RUNTIME_NOT_VERIFIED",
+    "one_shot_status": "CLOSED_RUNTIME_AND_FROZEN_VISUAL_QA_PASS",
     "static_offline_checks_passed": 25,
-    "generations_executed_this_task": 0
+    "generations_executed_this_task": 0,
+    "raw_result_path": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
+    "raw_result_blob_sha": "9e0cd1005882991788a98d645c2c0f25e5fa9df0",
+    "raw_result_writeback": "PASS_GH_API_READBACK_MATCH",
+    "prompt_post_attempts": 3,
+    "accepted_prompts": 3,
+    "completed_generations": 3,
+    "base_gate": "PASS_6_OF_6_KAEL_CONFIRMED",
+    "b1_fidelity": "PASS_12_OF_12",
+    "b2_fidelity": "PASS_12_OF_12",
+    "b1_target_environment": "PASS",
+    "b2_target_environment": "PASS",
+    "b1_hard_preservation_failures": 0,
+    "b2_hard_preservation_failures": 0,
+    "b2_superiority": "NOT_DEMONSTRATED",
+    "professional_capability": "NOT_ESTABLISHED"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — FLUX ONE-SHOT V1 SELF-CONTAINED STATIC VERIFIED; NO GENERATION",
-  "human_gate": "No execution in the current build task. A future explicit Kael execution invokes -Execute; BASE six-condition visual SI gate must pass before B1/B2. Prior wrapper runners are superseded for future execution, preserved as history.",
-  "sync_status": "STATE_V73_PLUS_INDEX_V74_FLUX_ONE_SHOT_V1_STATIC_READY_BOOT129",
-  "next_action": "NO_ACTION_FOR_KAEL_THIS_TASK; RUNTIME_REMAINS_NOT_VERIFIED"
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — FLUX ONE-SHOT V1 CLOSED; VERIFIED_RUNTIME_FUNCTIONAL; PROFESSIONAL NOT_ESTABLISHED",
+  "human_gate": "FLUX one-shot consumed and BASE gate passed. No action for this closure; new generations and unrelated RED gates remain separately controlled.",
+  "sync_status": "STATE_V73_PLUS_INDEX_V75_FLUX_FUNCTIONAL_QA_CLOSED_BOOT130",
+  "next_action": "NO_ACTION_FOR_KAEL_THIS_FLUX_CLOSURE",
+  "hard_precedence": [
+    "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
+    "TRUTH_EVIDENCE_INTEGRITY",
+    "AUTHORITY_HUMAN_GATE_INTEGRITY",
+    "CONTINUITY_RECOVERABILITY_CORRUPTION_PREVENTION"
+  ],
+  "active_reality_probe": {
+    "id": "EXP-AUTO-001",
+    "status": "CONTRA_V4_INTERNAL_READY_KAEL_IMPLEMENTATION_GATE_WORKANA_PENDING"
+  },
+  "integrity_debt": [
+    "Canonical checker INDEX_DEPTH_LIMIT=64; existing chain V74=73 indexes, V75=74. No global PASS claimed.",
+    "Historical missing V41 and UGC002 hash bindings preserved; not resolved by this closure."
+  ]
 }

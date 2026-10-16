@@ -1,7 +1,7 @@
 {
-  "schema_version": 55,
-  "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / FLUX BASE-B1-B2 ONE-SHOT BRIDGE AUTHORIZED + PREPARED / LOCAL BOOTSTRAP PENDING / TASK-TRIGGERED R&D MANDATORY / EXP-AUTO REALITY LOOP PRIORITY / AUTO-PRODUCT RUNTIME VALIDATION ACTIVE / VIDEO MODEL HOPPING PAUSED / FRAMEPACK DEFERRED",
+  "schema_version": 56,
+  "updated_at": "2026-10-17",
+  "status": "ACTIVE_MODEL_C_FLUX_ONE_SHOT_CLOSED_VERIFIED_RUNTIME_FUNCTIONAL_PROFESSIONAL_NOT_ESTABLISHED",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -17,7 +17,7 @@
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_EXTERNAL_VALIDATION_PRIORITY",
-    "lane_2": "VETA-AI-UGC-001_FLUX_IMAGE_EDIT_ONE_SHOT_BRIDGE_AUTHORIZED_PREPARED_BOOTSTRAP_PENDING",
+    "lane_2": "VETA-AI-UGC-001_FLUX_IMAGE_EDIT_VERIFIED_RUNTIME_FUNCTIONAL_BOUNDED_PROFESSIONAL_NOT_ESTABLISHED",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_VALIDATION_NEXT",
     "rule": "Task-triggered R&D is an interrupt supporting an active lane, not a fourth material lane."
   },
@@ -76,20 +76,35 @@
       "frozen_seed": 20261016,
       "base_resolution": "1024x1024",
       "generation_cap": 3,
-      "base_b1_b2_generations_executed": 0,
+      "base_b1_b2_generations_executed": 3,
       "existing_image_engine": "ComfyUI + FLUX.2 Klein 4B FP8",
-      "canonical_local_image_status": "VERIFIED_BOUNDED_IMAGE_GENERATION",
+      "canonical_local_image_status": "VERIFIED_BOUNDED_IMAGE_GENERATION_PLUS_RUNTIME_FUNCTIONAL_IMAGE_EDITING",
       "image_edit_components_present_user_verified": true,
-      "local_image_edit_status": "NOT_VERIFIED_RUNTIME",
+      "local_image_edit_status": "VERIFIED_RUNTIME_FUNCTIONAL",
       "one_shot_task": "NEXIA_LOCAL_FLUX_EDIT_ONE_SHOT_TASK.json",
       "one_shot_task_blob_sha": "fc3f0a8e6180e5830cd2d97b2493dd1657b5928e",
-      "one_shot_runner": "tools/nexia_local_flux_edit_gate_v0_1.ps1",
-      "one_shot_runner_blob_sha": "c0efc91c5285ec634ba6f1c53aa5aa08d18cb5ba",
+      "one_shot_runner": "tools/nexia_flux_base_b1_b2_one_shot_v1.ps1",
+      "one_shot_runner_blob_sha": "86f897de2d24e0652e2db89098322f2fc29b9b76",
       "one_shot_authorization_event": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-ONESHOT-AUTH-001.json",
-      "one_shot_status": "AUTHORIZED_PREPARED_LOCAL_BOOTSTRAP_REQUIRED_NOT_EXECUTED",
-      "raw_result_expected": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_001.json",
-      "next_gate": "KAEL_START_ONE_SHOT_RUNNER_ON_LOCAL_PC_THEN_VERIFY_RAW_RESULT",
-      "video_reopen_rule": "ONLY_AFTER_SIMPLER_IMAGE_AND_PROMPT CONTROLS PROVIDE NEW EVIDENCE"
+      "one_shot_status": "CLOSED_RUNTIME_AND_FROZEN_VISUAL_QA_PASS",
+      "raw_result_expected": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
+      "next_gate": "NONE_FOR_CLOSED_FLUX_ONE_SHOT; further generation requires separate bounded authorization",
+      "video_reopen_rule": "ONLY_AFTER_SIMPLER_IMAGE_AND_PROMPT CONTROLS PROVIDE NEW EVIDENCE",
+      "result": {
+        "technical_pass": "PASS",
+        "base_gate": "PASS_6_OF_6",
+        "b1_fidelity": "PASS_12_OF_12",
+        "b2_fidelity": "PASS_12_OF_12",
+        "b1_target_environment": "PASS",
+        "b2_target_environment": "PASS",
+        "b1_hard_preservation_failures": 0,
+        "b2_hard_preservation_failures": 0,
+        "prompt_engineering_effect": "B1_EQUALS_B2_ON_FROZEN_HARD_PRESERVATION_METRIC",
+        "b2_superiority_over_b1": "NOT_DEMONSTRATED",
+        "comparison_rule": "B2 must have strictly fewer failures on dimensions 1-9 AND achieve target environment; 0 < 0 is false. Visual richness cannot override frozen rule.",
+        "local_flux_image_editing": "VERIFIED_RUNTIME_FUNCTIONAL",
+        "professional_top_tier_capability": "NOT_ESTABLISHED"
+      }
     },
     "prompt_compiler": {
       "status": "ARCHITECTURE_UPDATED_FROM_EXISTING_CORPUS",
@@ -114,7 +129,7 @@
     "gpu": "NVIDIA GeForce RTX 3060",
     "vram_total_mib": 12288,
     "ram_total_gib": 15.96,
-    "pagefile_allocated_gib": 9.50,
+    "pagefile_allocated_gib": 9.5,
     "operational_fit": "WEAK_HIGH_THRASH_AND_LATENCY_RISK_ON_16GB_RAM",
     "decision": "DEFERRED_NO_CURRENT_JUSTIFICATION"
   },
@@ -135,11 +150,12 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V55.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V54.json",
-    "latest_verified_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-ONESHOT-AUTH-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-ONESHOT-AUTH-001.json",
-    "latest_verified_event_blob_sha": "1c3ad994afa141329d89679c648efb9d22809c8c"
+    "active_index": "NEXIA_EVENT_INDEX_V75.json",
+    "active_index_blob_sha": "5f96ad93c30f640fddea632320a09bf40ac10906",
+    "latest_verified_event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
+    "latest_verified_event_blob_sha": "527e1dd7daa6bb5439ef268149b19a843c5bcb3d",
+    "base_index": "NEXIA_EVENT_INDEX_V74.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -148,9 +164,9 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "ugc_flux_bridge_one_shot": "EXPLICITLY_AUTHORIZED_EXACT_RUN_ONLY",
-    "ugc_flux_bridge_bootstrap": "KAEL_LOCAL_ACTION_REQUIRED_BECAUSE_NO_PERSISTENT_LISTENER_EXISTS",
-    "ugc_base_visual_precondition": "KAEL_SI_REQUIRED_INSIDE_ONE_SHOT_AFTER_BASE",
+    "ugc_flux_bridge_one_shot": "CONSUMED_THREE_OF_THREE_CLOSED",
+    "ugc_flux_bridge_bootstrap": "SATISFIED_HISTORICAL_NO_ACTION_NOW",
+    "ugc_base_visual_precondition": "SATISFIED_PASS_KAEL_CONFIRMED",
     "remotion_install": "NOT_AUTHORIZED_PROPOSE_BEFORE_INSTALL",
     "new_ugc_software_api_repo_model": "PROPOSE_BEFORE_INSTALL_OR_ACTIVATION",
     "ugc_new_video_model_or_download": "NOT_AUTHORIZED",
@@ -159,12 +175,37 @@
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Kael explicitly authorized one local bridge run instead of Work. The exact task and fail-closed PowerShell runner were prepared and read back. No persistent listener exists; GitHub cannot wake the PC. No generation has executed yet.",
-    "human_action_required_now": true,
-    "pending_human_action": "RUN_ONE_PINNED_BOOTSTRAP_COMMAND_ON_PC_AND_ANSWER_BASE_GATE_IF_REACHED",
-    "surface": "Local Windows PowerShell one-shot",
-    "resume_from": "After bootstrap, inspect runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_001.json. If B1/B2 completed, obtain local outputs for visual QA and persist final result. If runner stopped, diagnose only the recorded stage under TASK-TRIGGERED R&D.",
-    "truth_limit": "Authorized/prepared is not executed. Do not claim FLUX image-edit runtime PASS or prompt-engineering benefit until raw postconditions and visual QA are verified."
+    "last_completed_verified_action": "ONE-SHOT V1 RAW _008 verified remotely; nine output/API/workflow hashes match; BASE 6/6 and B1/B2 12/12 PASS; B2 superiority not demonstrated; functional image editing VERIFIED_RUNTIME_FUNCTIONAL; professional NOT_ESTABLISHED. No generation in closure task.",
+    "last_user_facing_handoff": "Benchmark closed; no Kael action for this closure. STATE v73 unchanged. Global integrity checker has historical depth/hash-binding debt; no global PASS claimed.",
+    "human_action_required_now": false,
+    "pending_human_action": null,
+    "scope": "FLUX_QA_CLOSURE_ONLY; other STATE v73 human gates preserved",
+    "resume_required_reads": [
+      "NEXIA_STATE.json",
+      "NEXIA_EVENT_INDEX_V75.json",
+      "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
+      "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
+      "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md"
+    ],
+    "resume_from": "Do not rerun _008. Use V75 verified functional result when prioritizing subsequent bounded work; keep professional/video claims unestablished.",
+    "truth_limit": "Commit proves persistence only; runtime and QA are supported separately by raw/history/images. No new authority, professional generalization, sales or video capability."
   },
-  "next_action": "KAEL_RUN_SINGLE_LOCAL_BOOTSTRAP_COMMAND_FOR_FLUX_BRIDGE_ONESHOT"
+  "next_action": "NO_ACTION_FOR_KAEL_THIS_FLUX_CLOSURE; do not rerun; preserve unrelated canonical gates.",
+  "hard_precedence": [
+    "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
+    "TRUTH_EVIDENCE_INTEGRITY",
+    "AUTHORITY_HUMAN_GATE_INTEGRITY",
+    "CONTINUITY_RECOVERABILITY_CORRUPTION_PREVENTION"
+  ],
+  "active_reality_probe": {
+    "id": "EXP-AUTO-001",
+    "status": "CONTRA_V4_INTERNAL_READY_KAEL_IMPLEMENTATION_GATE_WORKANA_PENDING"
+  },
+  "resume_required_reads": [
+    "NEXIA_STATE.json",
+    "NEXIA_EVENT_INDEX_V75.json",
+    "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
+    "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
+    "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md"
+  ]
 }

@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001",
+  "timestamp": "2026-10-16T22:47:09.781407+00:00",
+  "date": "2026-10-17",
+  "type": "BOUNDED_RUNTIME_AND_FROZEN_VISUAL_QA_CLOSURE",
+  "action": "Verify existing RAW _008 and image evidence; persist closure without generation",
+  "evidence_label": "HECHO_VERIFICADO",
+  "actor": "Codex with connected GitHub and local read-only evidence checks",
+  "canonical_state_version": 73,
+  "state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "previous_state_version": 73,
+  "authority": "Explicit Kael request for verification and canonical persistence only; no new generation, retry, spend or external business action",
+  "status": "READY_FOR_CURRENT_PURPOSE_BOUNDED_FUNCTIONAL_BENCHMARK_CLOSED",
+  "recovery_reference": {
+    "source_commit": "45779346402272477217d5206cf1d701482ceabb",
+    "raw_commit": "ea77b477f2e207a26ebbf90661b3b15a3d95a1c1",
+    "previous_index": "NEXIA_EVENT_INDEX_V74.json",
+    "source_conversation": "6ad290e7-0dc4-83ed-9f80-dea8fd5c06bf"
+  },
+  "raw_result": {
+    "path": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
+    "verified_blob_sha": "9e0cd1005882991788a98d645c2c0f25e5fa9df0",
+    "sha256": "50fd36385206dd8b4c8b976eafe0604676a6edf463b3ce394ca85c2b65756b3f",
+    "original_status": "EXECUTION_COMPLETE_VISUAL_QA_PENDING",
+    "original_visual_qa": "NOT_VERIFIED",
+    "original_writeback": "PAYLOAD_PENDING_VERIFICATION_SEE_SEPARATE_RECEIPT",
+    "writeback_verified": "PASS_GH_API_READBACK_MATCH",
+    "immutable_payload_preserved": true,
+    "note": "Original pending QA/writeback fields remain historical. This event supplies the verified closure."
+  },
+  "preregistration": {
+    "path": "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md",
+    "verified_blob_sha": "8276613aff9ba9aca0eec840fc8e0c2f36bca622",
+    "criteria_changed_after_outputs": false
+  },
+  "runtime": {
+    "runner": "ONE-SHOT V1",
+    "started_at": "2026-10-17T00:35:04.5746450+02:00",
+    "finished_at": "2026-10-17T00:37:21.4387260+02:00",
+    "seed": 20261016,
+    "model": "flux-2-klein-4b-fp8.safetensors",
+    "clip": "qwen_3_4b.safetensors",
+    "vae": "flux2-vae.safetensors",
+    "steps": 4,
+    "cfg": 1,
+    "sampler": "euler",
+    "scheduler": "Flux2Scheduler",
+    "resolution": "1024x1024",
+    "max_generations": 3,
+    "no_retries": true,
+    "prompt_post_attempts": 3,
+    "accepted_prompts": 3,
+    "completed_generations": 3,
+    "uncertain_submission": false,
+    "base_human_gate": "PASS_KAEL_CONFIRMED",
+    "reference_sha256": "c0da60618e036b6bb769bd0e7836ffdbec1118553f28d94bb248b78e8e0f4d55",
+    "variants": {
+      "BASE": {
+        "label": "BASE",
+        "submission": "ACCEPTED",
+        "prompt_id": "0a496816-0499-43bd-86fd-f3b71472e236",
+        "output_path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\BASE.png",
+        "output_sha256": "c0da60618e036b6bb769bd0e7836ffdbec1118553f28d94bb248b78e8e0f4d55",
+        "resolution": "1024x1024",
+        "api_prompt_path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\BASE.api_prompt.json",
+        "api_prompt_sha256": "62341bb0f0021345e14ea77637de2b0519ebc6de97dd4b2a2b85c15f702b3343",
+        "workflow_path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\BASE.workflow.json",
+        "workflow_sha256": "376d15127378e73ecd2055b83fe76acc809da196f8bb432d2a5adc7a8f0d9094",
+        "seed": 20261016,
+        "model": "flux-2-klein-4b-fp8.safetensors",
+        "clip": "qwen_3_4b.safetensors",
+        "vae": "flux2-vae.safetensors",
+        "sampler": "euler",
+        "steps": 4,
+        "cfg": 1,
+        "scheduler": "Flux2Scheduler",
+        "generation_wall_seconds": 42.879,
+        "peak_process_ram_mib_sampled": 6391,
+        "peak_system_ram_mib_sampled": 14302,
+        "peak_gpu_vram_mib_global_sampled": 11595,
+        "memory_sample_scope": "PROCESS_WHEN_RUNNER_STARTED_COMFY_SYSTEM_AND_WHOLE_FIRST_GPU_NOT_ALLOCATION",
+        "runtime_error": "NONE_RECORDED_IN_COMPLETED_HISTORY",
+        "oom": "NONE_RECORDED_IN_COMPLETED_HISTORY"
+      },
+      "B1": {
+        "label": "B1",
+        "submission": "ACCEPTED",
+        "prompt_id": "5e131f1f-a9ee-4f45-a9ba-a3d210ea23f8",
+        "output_path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B1.png",
+        "output_sha256": "93532e40059bc06ad80bfd0d40f9f2a59dbc7dd0f9efdb414748239fc6fd8bd2",
+        "resolution": "1024x1024",
+        "api_prompt_path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B1.api_prompt.json",
+        "api_prompt_sha256": "63a773c0d91674f837f04a82eb46a439aa7006cbbbc2490d68f212f9a6f335bc",
+        "workflow_path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B1.workflow.json",
+        "workflow_sha256": "9ccd0224b70bbb0f8ef719c5739ec81436b96dd9558efc5b22f05e9ced0dc260",
+        "seed": 20261016,
+        "model": "flux-2-klein-4b-fp8.safetensors",
+        "clip": "qwen_3_4b.safetensors",
+        "vae": "flux2-vae.safetensors",
+        "sampler": "euler",
+        "steps": 4,
+        "cfg": 1,
+        "scheduler": "Flux2Scheduler",
+        "generation_wall_seconds": 27.844,
+        "peak_process_ram_mib_sampled": 6244,
+        "peak_system_ram_mib_sampled": 14298,
+        "peak_gpu_vram_mib_global_sampled": 11924,
+        "memory_sample_scope": "PROCESS_WHEN_RUNNER_STARTED_COMFY_SYSTEM_AND_WHOLE_FIRST_GPU_NOT_ALLOCATION",
+        "runtime_error": "NONE_RECORDED_IN_COMPLETED_HISTORY",
+        "oom": "NONE_RECORDED_IN_COMPLETED_HISTORY"
+      },
+      "B2": {
+        "label": "B2",
+        "submission": "ACCEPTED",
+        "prompt_id": "218b2d02-7121-447b-9381-29132b82f252",
+        "output_path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B2.png",
+        "output_sha256": "b484cc8a8690f437c93e4eedd2b232e0777fea063f50399bc83b31d203221162",
+        "resolution": "1024x1024",
+        "api_prompt_path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B2.api_prompt.json",
+        "api_prompt_sha256": "9897df30482039d2c52484c1892b1886a6db851a44e2fc8ef89c316cb9c4acd7",
+        "workflow_path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B2.workflow.json",
+        "workflow_sha256": "dfc57759f8fc00b0688da93caa6a9adde8b14eedd46f928992aa70a158d53efa",
+        "seed": 20261016,
+        "model": "flux-2-klein-4b-fp8.safetensors",
+        "clip": "qwen_3_4b.safetensors",
+        "vae": "flux2-vae.safetensors",
+        "sampler": "euler",
+        "steps": 4,
+        "cfg": 1,
+        "scheduler": "Flux2Scheduler",
+        "generation_wall_seconds": 25.594,
+        "peak_process_ram_mib_sampled": 6333,
+        "peak_system_ram_mib_sampled": 14440,
+        "peak_gpu_vram_mib_global_sampled": 11786,
+        "memory_sample_scope": "PROCESS_WHEN_RUNNER_STARTED_COMFY_SYSTEM_AND_WHOLE_FIRST_GPU_NOT_ALLOCATION",
+        "runtime_error": "NONE_RECORDED_IN_COMPLETED_HISTORY",
+        "oom": "NONE_RECORDED_IN_COMPLETED_HISTORY"
+      }
+    },
+    "technical_pass": "PASS",
+    "artifact_hash_checks": [
+      {
+        "label": "BASE",
+        "kind": "output",
+        "path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\BASE.png",
+        "sha256": "c0da60618e036b6bb769bd0e7836ffdbec1118553f28d94bb248b78e8e0f4d55",
+        "status": "PASS"
+      },
+      {
+        "label": "BASE",
+        "kind": "api_prompt",
+        "path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\BASE.api_prompt.json",
+        "sha256": "62341bb0f0021345e14ea77637de2b0519ebc6de97dd4b2a2b85c15f702b3343",
+        "status": "PASS"
+      },
+      {
+        "label": "BASE",
+        "kind": "workflow",
+        "path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\BASE.workflow.json",
+        "sha256": "376d15127378e73ecd2055b83fe76acc809da196f8bb432d2a5adc7a8f0d9094",
+        "status": "PASS"
+      },
+      {
+        "label": "B1",
+        "kind": "output",
+        "path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B1.png",
+        "sha256": "93532e40059bc06ad80bfd0d40f9f2a59dbc7dd0f9efdb414748239fc6fd8bd2",
+        "status": "PASS"
+      },
+      {
+        "label": "B1",
+        "kind": "api_prompt",
+        "path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B1.api_prompt.json",
+        "sha256": "63a773c0d91674f837f04a82eb46a439aa7006cbbbc2490d68f212f9a6f335bc",
+        "status": "PASS"
+      },
+      {
+        "label": "B1",
+        "kind": "workflow",
+        "path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B1.workflow.json",
+        "sha256": "9ccd0224b70bbb0f8ef719c5739ec81436b96dd9558efc5b22f05e9ced0dc260",
+        "status": "PASS"
+      },
+      {
+        "label": "B2",
+        "kind": "output",
+        "path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B2.png",
+        "sha256": "b484cc8a8690f437c93e4eedd2b232e0777fea063f50399bc83b31d203221162",
+        "status": "PASS"
+      },
+      {
+        "label": "B2",
+        "kind": "api_prompt",
+        "path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B2.api_prompt.json",
+        "sha256": "9897df30482039d2c52484c1892b1886a6db851a44e2fc8ef89c316cb9c4acd7",
+        "status": "PASS"
+      },
+      {
+        "label": "B2",
+        "kind": "workflow",
+        "path": "C:\\Users\\User\\.codex\\.chatgpt-projects\\g-p-6ac02e5d5b84819190b29f630d0ff0e5\\outputs\\flux-edit-one-shot-v1-008\\B2.workflow.json",
+        "sha256": "dfc57759f8fc00b0688da93caa6a9adde8b14eedd46f928992aa70a158d53efa",
+        "status": "PASS"
+      }
+    ],
+    "b1_b2_equivalence": "PASS_EXACT_API_GRAPH_AFTER_REMOVING_ONLY_POSITIVE_PROMPT_TEXT",
+    "shared_reference": "PASS_SAME_LOADIMAGE_FILENAME_AND_BASE_SHA256"
+  },
+  "visual_qa": {
+    "method": "Direct inspection of existing hash-verified local PNGs plus the frozen QA recorded in the referenced conversation; no generation",
+    "base": {
+      "result": "PASS",
+      "passed": 6,
+      "total": 6,
+      "dimensions": {
+        "ONE_STORAGE_BOX": "PASS",
+        "MATTE_DARK_BLUE_BODY": "PASS",
+        "BLACK_LID": "PASS",
+        "NO_PEOPLE_HANDS": "PASS",
+        "NO_EXTRA_PRODUCT": "PASS",
+        "NO_PROMINENT_TEXT": "PASS"
+      }
+    },
+    "variants": {
+      "B1": {
+        "fidelity": "PASS",
+        "passed_dimensions": 12,
+        "total_dimensions": 12,
+        "dimensions": {
+          "OBJECT_COUNT": {
+            "result": "PASS",
+            "evidence": "One main box in each edit."
+          },
+          "BODY_COLOR": {
+            "result": "PASS",
+            "evidence": "Dark-blue matte body materially preserved."
+          },
+          "LID": {
+            "result": "PASS",
+            "evidence": "Black lid and its design materially preserved."
+          },
+          "SHAPE_GEOMETRY": {
+            "result": "PASS",
+            "evidence": "No material box/lid deformation."
+          },
+          "PROPORTIONS": {
+            "result": "PASS",
+            "evidence": "Box proportions materially preserved."
+          },
+          "ORIENTATION": {
+            "result": "PASS",
+            "evidence": "Front three-quarter orientation preserved."
+          },
+          "POSITION_SCALE": {
+            "result": "PASS",
+            "evidence": "Approximately same centered position and scale."
+          },
+          "NO_DUPLICATION": {
+            "result": "PASS",
+            "evidence": "No second box/product."
+          },
+          "NO_UNREQUESTED_PRODUCT_MUTATION": {
+            "result": "PASS",
+            "evidence": "No added handles, contents, openings, logos or structural parts."
+          },
+          "TARGET_ENVIRONMENT": {
+            "result": "PASS",
+            "evidence": "Warm beige background and light wood tabletop achieved in both."
+          },
+          "NO_SPURIOUS_TEXT": {
+            "result": "PASS",
+            "evidence": "No prominent typography or watermark."
+          },
+          "REALISM": {
+            "result": "PASS",
+            "evidence": "No severe artifact making the product still unusable."
+          }
+        },
+        "hard_preservation_failures": 0,
+        "target_environment": "PASS"
+      },
+      "B2": {
+        "fidelity": "PASS",
+        "passed_dimensions": 12,
+        "total_dimensions": 12,
+        "dimensions": {
+          "OBJECT_COUNT": {
+            "result": "PASS",
+            "evidence": "One main box in each edit."
+          },
+          "BODY_COLOR": {
+            "result": "PASS",
+            "evidence": "Dark-blue matte body materially preserved."
+          },
+          "LID": {
+            "result": "PASS",
+            "evidence": "Black lid and its design materially preserved."
+          },
+          "SHAPE_GEOMETRY": {
+            "result": "PASS",
+            "evidence": "No material box/lid deformation."
+          },
+          "PROPORTIONS": {
+            "result": "PASS",
+            "evidence": "Box proportions materially preserved."
+          },
+          "ORIENTATION": {
+            "result": "PASS",
+            "evidence": "Front three-quarter orientation preserved."
+          },
+          "POSITION_SCALE": {
+            "result": "PASS",
+            "evidence": "Approximately same centered position and scale."
+          },
+          "NO_DUPLICATION": {
+            "result": "PASS",
+            "evidence": "No second box/product."
+          },
+          "NO_UNREQUESTED_PRODUCT_MUTATION": {
+            "result": "PASS",
+            "evidence": "No added handles, contents, openings, logos or structural parts."
+          },
+          "TARGET_ENVIRONMENT": {
+            "result": "PASS",
+            "evidence": "Warm beige background and light wood tabletop achieved in both."
+          },
+          "NO_SPURIOUS_TEXT": {
+            "result": "PASS",
+            "evidence": "No prominent typography or watermark."
+          },
+          "REALISM": {
+            "result": "PASS",
+            "evidence": "No severe artifact making the product still unusable."
+          }
+        },
+        "hard_preservation_failures": 0,
+        "target_environment": "PASS"
+      }
+    },
+    "attachment_identity": [
+      {
+        "label": "BASE",
+        "chat_attachment_sha256": "c0da60618e036b6bb769bd0e7836ffdbec1118553f28d94bb248b78e8e0f4d55",
+        "raw_output_sha256": "c0da60618e036b6bb769bd0e7836ffdbec1118553f28d94bb248b78e8e0f4d55",
+        "decoded_rgb_pixels_and_dimensions_match": true
+      },
+      {
+        "label": "B1",
+        "chat_attachment_sha256": "11cbde3ccc68c5d1293759963a1a6d0fc8ba4aa675788bc34d3d2782af329b0e",
+        "raw_output_sha256": "93532e40059bc06ad80bfd0d40f9f2a59dbc7dd0f9efdb414748239fc6fd8bd2",
+        "decoded_rgb_pixels_and_dimensions_match": true
+      },
+      {
+        "label": "B2",
+        "chat_attachment_sha256": "798f48c72e4f16dec7c06972882d6bd999b4f4fba5174866bb6f6d3bfccc2847",
+        "raw_output_sha256": "b484cc8a8690f437c93e4eedd2b232e0777fea063f50399bc83b31d203221162",
+        "decoded_rgb_pixels_and_dimensions_match": true
+      }
+    ],
+    "label_reconciliation": {
+      "BASE": "Neutral gray studio background.",
+      "B1": "RAW B1.png and user-labeled B1 attachment: beige interior with window/architecture and light wood tabletop.",
+      "B2": "RAW B2.png and user-labeled B2 attachment: uniform beige background and light wood tabletop.",
+      "correction": "Last assistant prose in source chat inverted B1/B2 environment descriptions. Preserve raw variant identities proven by hashes and matching PNG image data. Both still pass all frozen dimensions; comparison unchanged."
+    }
+  },
+  "result": {
+    "technical_pass": "PASS",
+    "base_gate": "PASS_6_OF_6",
+    "b1_fidelity": "PASS_12_OF_12",
+    "b2_fidelity": "PASS_12_OF_12",
+    "b1_target_environment": "PASS",
+    "b2_target_environment": "PASS",
+    "b1_hard_preservation_failures": 0,
+    "b2_hard_preservation_failures": 0,
+    "prompt_engineering_effect": "B1_EQUALS_B2_ON_FROZEN_HARD_PRESERVATION_METRIC",
+    "b2_superiority_over_b1": "NOT_DEMONSTRATED",
+    "comparison_rule": "B2 must have strictly fewer failures on dimensions 1-9 AND achieve target environment; 0 < 0 is false. Visual richness cannot override frozen rule.",
+    "local_flux_image_editing": "VERIFIED_RUNTIME_FUNCTIONAL",
+    "professional_top_tier_capability": "NOT_ESTABLISHED"
+  },
+  "financial_impact": {
+    "incremental_cost_eur": 0,
+    "recorded_runtime_cost_eur": 0,
+    "economic_stage_change": false,
+    "note": "EUR0 is recorded cash spend, not a measurement of electricity, hardware depreciation or human time."
+  },
+  "human_gate_effect": {
+    "flux_one_shot_authorization": "CONSUMED_THREE_OF_THREE",
+    "base_gate": "PASS_KAEL_CONFIRMED",
+    "human_action_required_for_this_closure": false,
+    "new_generation_authorized": false,
+    "other_gates": "Unchanged; STATE v73 Contra/publication/spend gates preserved."
+  },
+  "state_decision": {
+    "state_version_before": 73,
+    "state_version_after": 73,
+    "modified": false,
+    "reason": "Frozen preregistration explicitly keeps STATE v73 unless a separate material reason exists. This bounded execution/QA delta belongs in event/index/LIVE/BOOT; no separate mission/economics/authority promotion is required."
+  },
+  "verification_limits": [
+    "Single object, one source image, one seed and one setting configuration; generalization/reliability/professional quality remain NOT_ESTABLISHED.",
+    "No video capability, deployment, client acceptance, demand, sales, payments or profit established.",
+    "Existing global verifier caps composite-chain traversal at 64; V74 already contains 73 indexes. V75 adds one; canonical verifier retains INDEX_DEPTH_LIMIT, without changing its threshold or historical indexes.",
+    "Historical missing hash bindings in V42->V41 and three UGC002 QA event references remain explicit integrity debt."
+  ],
+  "decision": {
+    "optimal_command": "VERIFY_CAPTURE_CLOSE_NO_GENERATION",
+    "why": "Close the gap between proven runtime/visual result and stale continuity without repeating consumed experiment.",
+    "action": "Persist immutable event and composite V75; reconcile LIVE and BOOT.",
+    "cost_eur": 0,
+    "risk": "Overgeneralization controlled by bounded scope and NOT_ESTABLISHED professional status; label drift corrected explicitly.",
+    "alternatives": [
+      "Keep result only in chat: continuity failure.",
+      "Retry or change thresholds: rejected by frozen experiment and current user scope.",
+      "Bump STATE: unnecessary without separate material promotion."
+    ],
+    "kael_control": "No action for this closure; new experiments and all existing RED gates remain separately controlled."
+  },
+  "generations_executed_this_task": 0,
+  "retries_this_task": 0,
+  "history_rewritten": false,
+  "next_action": "NO_ACTION_FOR_KAEL_THIS_CLOSURE; no new generation; future test design must vary one complexity variable under a separate preregistration and authorization."
+}
