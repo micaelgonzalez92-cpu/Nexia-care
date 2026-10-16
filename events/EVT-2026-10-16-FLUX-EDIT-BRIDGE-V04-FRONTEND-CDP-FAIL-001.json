@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-FRONTEND-CDP-FAIL-001",
+  "timestamp": "2026-10-16",
+  "type": "FLUX_ONE_SHOT_V04_FRONTEND_CDP_READINESS_FAIL",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_CONSOLE_PLUS_REMOTE_RAW_RESULT_READBACK",
+  "observed": {
+    "wrapper": "tools/nexia_local_flux_edit_gate_v0_4.ps1",
+    "patch_verify": "PASS",
+    "inner_runner_reached": true,
+    "comfyui_startup_reached": true,
+    "browser_started": true,
+    "failure_stage": "START_COMFYUI_FRONTEND_CDP",
+    "failure": "ComfyUI frontend loaded but window.app/loadGraphData/graphToPrompt did not become ready.",
+    "generation_count": 0,
+    "base_gate_reached": false,
+    "final_status": "STOPPED_FAIL_CLOSED",
+    "cost_eur": 0
+  },
+  "writeback": {
+    "console_result": "PASS_GH_API_READBACK_MATCH",
+    "remote_raw_result_path": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_001.json",
+    "remote_raw_result_blob_sha": "5d985b094a2e3c2b4206f9d9c335a43da28daa9d",
+    "transport_repair_verified_operational": true,
+    "prior_http_400_bom_causality": "SUPPORTED_BY_SUCCESSFUL_NO_BOM_WRITEBACK"
+  },
+  "upstream_countercheck": {
+    "window_app_currently_used_by_official_frontend_tests": true,
+    "loadGraphData_currently_present_on_ComfyApp": true,
+    "graphToPrompt_currently_present_on_ComfyApp": true,
+    "classification": "FRONTEND_INITIALIZATION_READINESS_OR_TARGETING_ISSUE_NOT_API_REMOVAL"
+  },
+  "truth_boundary": "No BASE/B1/B2 generation occurred. The current evidence verifies ComfyUI server startup and GitHub result transport, but not frontend automation readiness, workflow compilation, FLUX image editing, prompt benefit, or visual quality.",
+  "next_action": "RUN_BOUNDED_FRONTEND_CDP_READINESS_PROBE_NO_WORKFLOW_NO_GENERATION"
+}
