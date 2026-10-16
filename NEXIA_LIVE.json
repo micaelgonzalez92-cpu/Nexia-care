@@ -1,7 +1,7 @@
 {
-  "schema_version": 48,
+  "schema_version": 49,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC ROUTE A STOPPED / FRAMEPACK DEFERRED / LTX 2B 0.9.8 FP8 SELECTED / LOCAL COMFYUI COMPATIBILITY GATE / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC ROUTE A STOPPED / FRAMEPACK DEFERRED / LTX 2B 0.9.8 FP8 LOCAL COMPATIBILITY PASS / REPLACEMENT AUTHORIZATION GATE / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -17,7 +17,7 @@
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_CONTRA_WORKANA_AS_CHANNELS",
-    "lane_2": "VETA-AI-UGC-001_LTX_2B_0_9_8_FP8_LOCAL_COMPATIBILITY_GATE",
+    "lane_2": "VETA-AI-UGC-001_LTX_2B_0_9_8_FP8_REPLACEMENT_AUTHORIZATION_GATE",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED",
     "rule": "Do not activate a fourth material lane unless one lane is promoted, paused, falsified, or displaced by hard precedence."
   },
@@ -51,20 +51,30 @@
   },
   "next_video_architecture_research": {
     "artifact": "research/NEXIA_LOW_FOOTPRINT_I2V_COMPARISON_V1_2026-10-16.md",
-    "status": "CANDIDATE_SELECTED_READ_ONLY_COMPATIBILITY_GATE",
+    "status": "LOCAL_COMPATIBILITY_PASS_REPLACEMENT_AUTHORIZATION_GATE",
     "selected_candidate": "LTX_VIDEO_2B_0_9_8_DISTILLED_FP8",
     "selected_file": "ltxv-2b-0.9.8-distilled-fp8.safetensors",
     "remote_size_gb": 4.46,
     "downloaded": false,
     "installed": false,
     "runtime_verified": false,
-    "dependency_reuse": ["t5xxl_fp16.safetensors", "existing ComfyUI LTXV core support if local build is sufficiently current"],
+    "local_compatibility": {
+      "comfyui_version": "0.39.0",
+      "core_file": "comfy_extras/nodes_lt.py",
+      "LTXVImgToVideo": true,
+      "LTXVImgToVideoInplace": true,
+      "LTXVConditioning": true,
+      "ModelSamplingLTXV": true,
+      "old_checkpoint_path_verified": true,
+      "old_checkpoint_size_gib": 5.905,
+      "t5xxl_path_verified": true,
+      "t5xxl_size_gib": 9.116
+    },
+    "dependency_reuse": ["t5xxl_fp16.safetensors", "native ComfyUI LTXV core nodes"],
     "keep_t5xxl_fp16": true,
-    "old_ltx_0_9_5": "CANDIDATE_DELETE_BEFORE_REPLACEMENT_DOWNLOAD_AFTER_EXPLICIT_KAEL_AUTHORIZATION_AND_PATH_RECONFIRMATION",
-    "rejected": ["SVD_CURRENT_OBJECTIVE", "HUNYUAN_COSMOS_LOW_FOOTPRINT_PATH"],
-    "deferred": ["FRAMEPACK"],
-    "next_gate": "READ_LOCAL_COMFYUI_VERSION_AND_NATIVE_LTXV_NODE_SUPPORT",
-    "truth_limit": "Research selection does not prove local 0.9.8 FP8 load, performance or professional quality."
+    "old_ltx_0_9_5": "CANDIDATE_DELETE_ONLY_AFTER_EXPLICIT_KAEL_AUTHORIZATION",
+    "next_gate": "KAEL_AUTHORIZE_LTX098_REPLACEMENT_TEST",
+    "truth_limit": "Compatibility PASS does not prove successful 0.9.8 runtime, speed, memory peaks, anatomy quality or professional quality."
   },
   "auto_product": {
     "reference_result": "PASS_NODE_REFERENCE_ONLY_NOT_N8N",
@@ -78,11 +88,11 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V48.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V47.json",
-    "latest_verified_event_id": "EVT-2026-10-16-LOW-FOOTPRINT-I2V-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-LOW-FOOTPRINT-I2V-001.json",
-    "latest_verified_event_blob_sha": "f7fce63fc84d19cb4c818280293e54612e65f30c"
+    "active_index": "NEXIA_EVENT_INDEX_V49.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V48.json",
+    "latest_verified_event_id": "EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001.json",
+    "latest_verified_event_blob_sha": "62e7876900a6d1efd5b0e0fa7d5376ebc0bcd04d"
   },
   "economics": {
     "revenue_eur": 0,
@@ -91,20 +101,20 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "local_read_only_compatibility_check": "KAEL_WINDOWS_PC_REQUIRED_NOW",
-    "local_deletion": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_BEFORE_ANY_MATERIAL_DELETE",
-    "new_model_download": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_AFTER_COMPATIBILITY_GATE",
+    "ltx098_replacement_test": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_NOW",
+    "local_deletion": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_BEFORE_OLD_CHECKPOINT_DELETE",
+    "new_model_download": "KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_BEFORE_4_46GB_DOWNLOAD",
     "pagefile_or_system_configuration_change": "NOT_RECOMMENDED_NOW_SEPARATE_GATE_IF_REOPENED",
     "contra_v4_public_edit": "KAEL_REQUIRED_SEPARATE_GATE",
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Low-footprint I2V comparison selected official LTX-Video 2B v0.9.8 distilled FP8 (4.46 GB) for a local compatibility gate. SVD is larger and less directionally suitable; Hunyuan/Cosmos are not low-footprint; FramePack remains deferred. No download, deletion or install occurred.",
+    "last_completed_verified_action": "Local compatibility gate passed: ComfyUI 0.39.0 exposes native LTXV image-to-video, conditioning and sampling nodes; old 0.9.5 checkpoint and shared t5xxl locations are verified. No deletion or download occurred.",
     "human_action_required_now": true,
-    "pending_human_action": "READ_LOCAL_COMFYUI_VERSION_AND_NATIVE_LTXV_NODE_SUPPORT",
+    "pending_human_action": "AUTHORIZE_LTX098_REPLACEMENT_TEST",
     "surface": "Windows PC / PowerShell",
-    "resume_from": "Read ComfyUI version and confirm native LTXV core node symbols in the current portable install. If compatible, issue a separate RED replacement gate: reconfirm old 0.9.5 checkpoint path, delete only that obsolete checkpoint, then download the official 4.46 GB 0.9.8 distilled FP8 replacement for one bounded 3-5s I2V test.",
-    "truth_limit": "Do not claim replacement runtime compatibility, successful generation, cleanup, professional UGC capability, buyer demand, sale, payment or profit without direct evidence."
+    "resume_from": "If Kael explicitly authorizes, delete only the verified obsolete ltx-video-2b-v0.9.5.safetensors checkpoint, keep t5xxl_fp16, download the official 4.46GB ltxv-2b-0.9.8-distilled-fp8.safetensors into models/checkpoints, verify hashes/file presence, then run one bounded 3-5s I2V test and measure wall time/RAM/VRAM/quality.",
+    "truth_limit": "Do not claim deletion, download, install, successful generation, professional capability, buyer demand, sale, payment or profit without direct evidence."
   },
-  "next_action": "KAEL_READ_LOCAL_COMFYUI_COMPATIBILITY"
+  "next_action": "KAEL_AUTHORIZE_LTX098_REPLACEMENT_TEST"
 }
