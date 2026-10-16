@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-AUTO-PRODUCT-V021-SERIALIZED-BOUNDED-PASS-001",
+  "timestamp": "2026-10-17",
+  "type": "AUTO_PRODUCT_V021_SERIALIZED_PROFILE_BOUNDED_SYNTHETIC_CONCURRENCY_PASS",
+  "evidence_label": "HECHO_VERIFICADO",
+  "canonical_state_version": 73,
+  "state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "authority": "GREEN internal verification and canonical capture; EUR0; synthetic data only; no credentials, external messaging, publication, production deployment or commercial claim",
+  "predecessor": {
+    "event_id": "EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001",
+    "event_path": "events/EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001.json",
+    "event_blob_sha": "cdbcf9e7727301ae0fae52aeb0bebb894c4712c9",
+    "index": "NEXIA_EVENT_INDEX_V77.json",
+    "index_blob_sha": "806108cdaad56ab9791805de593fb18530c3b9dc",
+    "v02_result": "SEQUENTIAL_RUNTIME_PASS_CONCURRENCY_FAIL"
+  },
+  "candidate_logic": {
+    "bootstrap_path": "experiments/auto-product-v02/bootstrap-v02.json",
+    "bootstrap_blob_sha": "a25d45342d7ead194909d9b94be23617a5e1a3b6",
+    "guard_path": "experiments/auto-product-v02/guard-v02.json",
+    "guard_blob_sha": "d5004a4635022604dc1a48606b0ccca3161aeb98",
+    "payload_fingerprint": "SHA256",
+    "decision_states": [
+      "NEW_ACCEPTED",
+      "EXACT_REPLAY",
+      "CONFLICTING_REPLAY",
+      "DUPLICATE_IDENTITY",
+      "INVALID"
+    ],
+    "autonomous_send": false,
+    "external_action_nodes": 0,
+    "logic_changed_from_v02_for_v021": false
+  },
+  "serialized_profile": {
+    "design_path": "experiments/auto-product-v021/SERIALIZED_PROFILE_DESIGN_2026-10-17.md",
+    "design_blob_sha": "ad3d14997aa6264a1faeb3dc7f93d7b03d28dbfe",
+    "preregistration_path": "experiments/auto-product-v021/CONCURRENCY_STRESS_PREREG_2026-10-17.md",
+    "preregistration_blob_sha": "9bd5c0d8be5c7e2cfdcb7cb85a2b31eafced1b06",
+    "harness_path": "experiments/auto-product-v021/concurrency_stress_v021.js",
+    "harness_blob_sha": "8be155f2164635689b26c35f03e3f53903bf0dad",
+    "runtime_control": "N8N_CONCURRENCY_PRODUCTION_LIMIT=1",
+    "scope": "DEDICATED_OR_SMALL_INSTANCE_PROFILE",
+    "tradeoff": "Instance-wide production serialization can reduce throughput and couple unrelated workflows on a shared n8n instance."
+  },
+  "first_v021_run": {
+    "run_id": 38981880727,
+    "job_id": 117244381857,
+    "head_sha": "5628ea962ec4768050a4cb9abfbaa46565e01a1e",
+    "decision_distribution": "PASS_ALL_FROZEN_BURSTS",
+    "same_event_bursts": [
+      "1_NEW_ACCEPTED_PLUS_11_EXACT_REPLAY",
+      "1_NEW_ACCEPTED_PLUS_11_EXACT_REPLAY",
+      "1_NEW_ACCEPTED_PLUS_11_EXACT_REPLAY"
+    ],
+    "same_identity_burst": "1_NEW_ACCEPTED_PLUS_11_DUPLICATE_IDENTITY",
+    "persistence_cardinality_result": "INCONCLUSIVE_INVALID_MEASUREMENT",
+    "measurement_defect": "The audit Webhook used responseMode=lastNode without responseData, so n8n 2.42.6 defaulted to firstEntryJson and could not expose full Data Table cardinality.",
+    "classification": "DECISION_SERIALIZATION_PASS_PERSISTENCE_CARDINALITY_INCONCLUSIVE"
+  },
+  "observability_repair": {
+    "audit_path": "experiments/auto-product-v021/audit-all-entries-v021.json",
+    "audit_blob_sha": "6e09d5d9fa95b72a18dae39e751cb4a1741206fd",
+    "audit_response_mode": "lastNode",
+    "audit_response_data": "allEntries",
+    "audit_operation": "DataTable_get_returnAll_true",
+    "preregistration_path": "experiments/auto-product-v021/OBSERVABILITY_REPAIR_PREREG_2026-10-17.md",
+    "preregistration_blob_sha": "cd3959a8ef6f865ebdd08a7e766aaa27d641c2d6",
+    "business_logic_changed": false,
+    "independent_crosscheck": "DIRECT_SQLITE_PHYSICAL_DATA_TABLE_READBACK"
+  },
+  "verified_repaired_run": {
+    "workflow": "n8n Product V0.2.1 Serialized Concurrency Stress Carrier",
+    "run_id": 38982463378,
+    "job_id": 117246301131,
+    "head_sha": "41880340b7e95461f9982492404ae01aff97efb8",
+    "conclusion": "SUCCESS",
+    "environment": {
+      "os": "Ubuntu 24.04.5",
+      "node": "24.21.0",
+      "n8n": "2.42.6",
+      "N8N_CONCURRENCY_PRODUCTION_LIMIT": 1
+    },
+    "same_event_burst_1": {
+      "concurrency": 12,
+      "NEW_ACCEPTED": 1,
+      "EXACT_REPLAY": 11
+    },
+    "same_event_burst_2": {
+      "concurrency": 12,
+      "NEW_ACCEPTED": 1,
+      "EXACT_REPLAY": 11
+    },
+    "same_event_burst_3": {
+      "concurrency": 12,
+      "NEW_ACCEPTED": 1,
+      "EXACT_REPLAY": 11
+    },
+    "same_identity_distinct_event_burst": {
+      "concurrency": 12,
+      "NEW_ACCEPTED": 1,
+      "DUPLICATE_IDENTITY": 11
+    },
+    "total_concurrent_requests": 48,
+    "harness_failures": 0,
+    "harness_observed_rows": 4,
+    "harness_pass": true,
+    "all_entries_audit_rows": 4,
+    "direct_sqlite_rows": 4,
+    "audit_matches_sqlite": true,
+    "unique_event_keys": 4,
+    "unique_identity_keys": 4,
+    "payload_hash_format": "LOWERCASE_SHA256_HEX_64",
+    "runtime_cleanup": "PASS_HEALTH_ENDPOINT_AND_PORT_DOWN",
+    "frozen_gate_result": "BOUNDED_SYNTHETIC_CONCURRENCY_PASS_SERIALIZED_PROFILE_12X3_PLUS_12X1"
+  },
+  "classification": "V021_SERIALIZED_PROFILE_BOUNDED_SYNTHETIC_CONCURRENCY_PASS",
+  "capability": {
+    "established": "BOUNDED_SYNTHETIC_REPLAY_CONFLICT_CORRECTNESS_UNDER_DEDICATED_N8N_SERIALIZED_PROFILE",
+    "not_established": [
+      "UNSERIALIZED_CONCURRENCY_SAFETY",
+      "SHARED_INSTANCE_SUITABILITY",
+      "ARBITRARY_SCALE_LINEARIZABILITY",
+      "PRODUCTION_READINESS",
+      "COMMERCIAL_DEMAND_OR_VALUE",
+      "PROFESSIONAL_OR_TOP_TIER_CAPABILITY"
+    ]
+  },
+  "promotion": {
+    "product_v01_replaced": false,
+    "v021_default_promotion": false,
+    "reason": "The verified repair depends on an instance-wide concurrency limit; it should remain an optional bounded deployment profile until a concrete use case justifies packaging/promotion and throughput tradeoffs."
+  },
+  "stop_rationale": "The active lane's material runtime question is answered for current purpose: native n8n replay/conflict behavior is sequentially verified and concurrency is boundedly verified only under a dedicated serialized profile. Further scaling/polish currently has lower information value than the external Reality Loop bottleneck.",
+  "next_priority": "RESUME_EXP_AUTO_001_EXTERNAL_VALIDATION; preserve V0.2.1 as optional bounded internal capability; no further auto-product stress unless a real use case demands higher concurrency or shared-instance operation.",
+  "cost_eur": 0,
+  "state_changed": false,
+  "external_effects": false,
+  "truth_boundary": "This event records one bounded synthetic concurrency pass for exact candidate bytes and a dedicated n8n instance profile with production concurrency limit 1. It does not prove correctness outside that profile, production deployment, customer value, sales, revenue or professional readiness."
+}
