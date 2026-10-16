@@ -1,0 +1,286 @@
+name: n8n Product V0.2 Replay Runtime
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/auto-product-v02/**'
+      - '.github/workflows/n8n-product-v02-runtime-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: n8n-product-v02-runtime-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  replay-runtime:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Set up Node.js 24.21.0
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.21.0'
+
+      - name: Static candidate contract
+        run: node experiments/auto-product-v02/test_static_v02.js
+
+      - name: Show pinned n8n version
+        run: npx --yes n8n@2.42.6 --version
+
+      - name: Import and exercise V0.2 candidate in real n8n runtime
+        env:
+          N8N_ENABLED_MODULES: 'data-table'
+          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-product-v02-user
+          N8N_PORT: '5678'
+          N8N_HOST: '127.0.0.1'
+          N8N_PROTOCOL: 'http'
+          N8N_SECURE_COOKIE: 'false'
+          N8N_DIAGNOSTICS_ENABLED: 'false'
+          N8N_PERSONALIZATION_ENABLED: 'false'
+          N8N_LOG: ${{ runner.temp }}/n8n-product-v02.log
+          BASE_URL: http://127.0.0.1:5678
+          BOOTSTRAP_WORKFLOW_ID: nexia-lead-intake-replay-bootstrap-v02-candidate
+          BOOTSTRAP_PATH: lead-intake-replay-bootstrap-v02
+          GUARD_WORKFLOW_ID: nexia-lead-intake-replay-conflict-v02-candidate
+          GUARD_PATH: lead-intake-replay-conflict-v02
+          AUDIT_WORKFLOW_ID: nexia-lead-intake-replay-audit-v02-candidate
+          AUDIT_PATH: lead-intake-replay-audit-v02
+        run: |
+          set -euo pipefail
+          SMOKE_START=$(date +%s)
+          mkdir -p "$N8N_USER_FOLDER"
+
+          for f in experiments/auto-product-v02/bootstrap-v02.json experiments/auto-product-v02/guard-v02.json experiments/auto-product-v02/audit-v02.json; do
+            npx --yes n8n@2.42.6 import:workflow --input="$f"
+          done
+
+          EXPORT_FILE="${RUNNER_TEMP}/v02-export.json"
+          npx --yes n8n@2.42.6 export:workflow --all --output="$EXPORT_FILE"
+          EXPORT_FILE="$EXPORT_FILE" node <<'NODE'
+          const fs = require('fs');
+          const assert = require('node:assert/strict');
+          const workflows = JSON.parse(fs.readFileSync(process.env.EXPORT_FILE, 'utf8'));
+          const ids = workflows.map(w => w.id).sort();
+          const expected = [
+            'nexia-lead-intake-replay-bootstrap-v02-candidate',
+            'nexia-lead-intake-replay-conflict-v02-candidate',
+            'nexia-lead-intake-replay-audit-v02-candidate',
+          ].sort();
+          assert.deepEqual(ids, expected);
+          assert.ok(workflows.every(w => w.active === false));
+          console.log('PASS: V0.2 candidate imports/exports and is inactive by default');
+          NODE
+
+          npx --yes n8n@2.42.6 publish:workflow --id="$BOOTSTRAP_WORKFLOW_ID"
+          npx --yes n8n@2.42.6 publish:workflow --id="$GUARD_WORKFLOW_ID"
+          npx --yes n8n@2.42.6 publish:workflow --id="$AUDIT_WORKFLOW_ID"
+
+          DB="$N8N_USER_FOLDER/.n8n/database.sqlite"
+          N8N_BIN=$(npx --yes --package=n8n@2.42.6 -c 'command -v n8n')
+          N8N_BIN=$(readlink -f "$N8N_BIN")
+          test -f "$N8N_BIN"
+          echo "Using direct n8n entry point: $N8N_BIN"
+
+          webhook_registered() {
+            local workflow_id="$1"
+            local webhook_path="$2"
+            DB="$DB" WORKFLOW_ID="$workflow_id" WEBHOOK_PATH="$webhook_path" python3 <<'PY'
+          import os, sqlite3, sys
+          con = sqlite3.connect(os.environ['DB'])
+          row = con.execute(
+              'SELECT workflowId, webhookPath, method FROM webhook_entity WHERE workflowId=? AND webhookPath=? AND method=?',
+              (os.environ['WORKFLOW_ID'], os.environ['WEBHOOK_PATH'], 'POST')
+          ).fetchone()
+          if row:
+              print('registered webhook:', row)
+              sys.exit(0)
+          sys.exit(1)
+          PY
+          }
+
+          all_webhooks_registered() {
+            webhook_registered "$BOOTSTRAP_WORKFLOW_ID" "$BOOTSTRAP_PATH" >/dev/null && \
+            webhook_registered "$GUARD_WORKFLOW_ID" "$GUARD_PATH" >/dev/null && \
+            webhook_registered "$AUDIT_WORKFLOW_ID" "$AUDIT_PATH" >/dev/null
+          }
+
+          start_n8n() {
+            echo 'Starting a new n8n server process' >> "$N8N_LOG"
+            node "$N8N_BIN" start >> "$N8N_LOG" 2>&1 &
+            N8N_PID=$!
+            echo "Started direct n8n process PID=$N8N_PID"
+            for i in $(seq 1 60); do
+              if ! kill -0 "$N8N_PID" >/dev/null 2>&1; then
+                echo 'New n8n process exited before becoming ready'
+                cat "$N8N_LOG"
+                return 1
+              fi
+              if curl --max-time 2 -fsS "$BASE_URL/healthz/readiness" >/dev/null 2>&1 && all_webhooks_registered; then
+                break
+              fi
+              sleep 1
+            done
+            curl --max-time 2 -fsS "$BASE_URL/healthz/readiness" >/dev/null
+            all_webhooks_registered
+            echo "PASS: direct n8n PID=$N8N_PID ready with all V0.2 webhooks registered"
+          }
+
+          stop_n8n() {
+            if [ -z "${N8N_PID:-}" ]; then return 0; fi
+            if kill -0 "$N8N_PID" >/dev/null 2>&1; then
+              kill "$N8N_PID"
+              for i in $(seq 1 30); do
+                if ! kill -0 "$N8N_PID" >/dev/null 2>&1; then break; fi
+                sleep 1
+              done
+              if kill -0 "$N8N_PID" >/dev/null 2>&1; then
+                echo "n8n process PID=$N8N_PID did not stop"
+                kill -KILL "$N8N_PID" || true
+                wait "$N8N_PID" || true
+                return 1
+              fi
+            fi
+            wait "$N8N_PID" || true
+            if curl --max-time 2 -fsS "$BASE_URL/healthz" >/dev/null 2>&1; then
+              echo 'An n8n server is still responding after stop'
+              return 1
+            fi
+            N8N_PORT="$N8N_PORT" python3 <<'PY'
+          import os, socket
+          with socket.socket() as connection:
+              connection.settimeout(2)
+              assert connection.connect_ex(('127.0.0.1', int(os.environ['N8N_PORT']))) != 0, 'n8n TCP port still open after stop'
+          PY
+            echo "PASS: direct n8n process PID=$N8N_PID exited; health endpoint and port are down"
+            N8N_PID=''
+          }
+
+          assert_state() {
+            local label="$1"
+            local expected="$2"
+            local fixture="$3"
+            local output="${RUNNER_TEMP}/${label}.json"
+            local status
+            status=$(curl --max-time 10 -sS -o "$output" -w '%{http_code}' \
+              -X POST "$BASE_URL/webhook/$GUARD_PATH" \
+              -H 'Content-Type: application/json' --data @"$fixture")
+            if [ "$status" != '200' ]; then
+              echo "$label returned HTTP $status"
+              cat "$output" "$N8N_LOG"
+              return 1
+            fi
+            LABEL="$label" EXPECTED="$expected" OUTPUT="$output" node <<'NODE'
+          const fs = require('fs');
+          const assert = require('node:assert/strict');
+          const raw = JSON.parse(fs.readFileSync(process.env.OUTPUT, 'utf8'));
+          const item = Array.isArray(raw) ? raw[0] : raw;
+          assert.equal(item.state, process.env.EXPECTED);
+          assert.equal(item.autonomous_send, false);
+          if (item.state === 'INVALID') {
+            const expectedReason = process.env.LABEL === 'missing-event' ? 'missing_event_id' : (process.env.LABEL === 'missing-identity' ? 'missing_identity' : null);
+            if (expectedReason) assert.equal(item.reason, expectedReason);
+          } else {
+            const h = item.payloadHash ?? item.candidatePayloadHash;
+            assert.match(h, /^[0-9a-f]{64}$/);
+          }
+          if (item.state === 'CONFLICTING_REPLAY') {
+            assert.match(item.storedPayloadHash, /^[0-9a-f]{64}$/);
+            assert.notEqual(item.candidatePayloadHash, item.storedPayloadHash);
+          }
+          console.log(`PASS: ${process.env.EXPECTED}`);
+          NODE
+          }
+
+          audit_one_original_row() {
+            local output="$1"
+            local status
+            status=$(curl --max-time 10 -sS -o "$output" -w '%{http_code}' \
+              -X POST "$BASE_URL/webhook/$AUDIT_PATH" \
+              -H 'Content-Type: application/json' --data '{}')
+            if [ "$status" != '200' ]; then
+              echo "Audit returned HTTP $status"
+              cat "$output" "$N8N_LOG"
+              return 1
+            fi
+            AUDIT="$output" BASE_RESULT="${RUNNER_TEMP}/new.json" node <<'NODE'
+          const fs = require('fs');
+          const assert = require('node:assert/strict');
+          const auditRaw = JSON.parse(fs.readFileSync(process.env.AUDIT, 'utf8'));
+          const rows = Array.isArray(auditRaw) ? auditRaw : [auditRaw];
+          const baseRaw = JSON.parse(fs.readFileSync(process.env.BASE_RESULT, 'utf8'));
+          const base = Array.isArray(baseRaw) ? baseRaw[0] : baseRaw;
+          assert.equal(rows.length, 1);
+          const row = rows[0];
+          assert.equal(row.eventKey, 'event:sample-001');
+          assert.equal(row.identityKey, 'email:alex.example@example.com');
+          assert.equal(row.recordId, 'lead:sample-001');
+          assert.equal(row.payloadHash, base.payloadHash);
+          assert.match(row.payloadHash, /^[0-9a-f]{64}$/);
+          console.log('PASS: audit readback contains exactly the immutable original row and matching payloadHash');
+          NODE
+          }
+
+          cat > "${RUNNER_TEMP}/base.json" <<'JSON'
+          {"event_id":"sample-001","name":"Alex Example","email":" Alex.Example@Example.com ","phone":"+34 600 123 456","source":"website-form","service":"consultation","message":"I need help automating inbound enquiries."}
+          JSON
+          cp "${RUNNER_TEMP}/base.json" "${RUNNER_TEMP}/exact.json"
+          cat > "${RUNNER_TEMP}/conflict-email.json" <<'JSON'
+          {"event_id":"sample-001","name":"Alex Example","email":"changed@example.com","phone":"+34 600 123 456","source":"website-form","service":"consultation","message":"I need help automating inbound enquiries."}
+          JSON
+          cat > "${RUNNER_TEMP}/conflict-message.json" <<'JSON'
+          {"event_id":"sample-001","name":"Alex Example","email":" Alex.Example@Example.com ","phone":"+34 699 999 999","source":"website-form","service":"consultation","message":"Changed material request."}
+          JSON
+          cat > "${RUNNER_TEMP}/duplicate-identity.json" <<'JSON'
+          {"event_id":"sample-002","name":"Alex Example","email":"alex.example@example.com","phone":"+34 600 123 456","source":"website-form","service":"consultation","message":"I need help automating inbound enquiries."}
+          JSON
+          cat > "${RUNNER_TEMP}/missing-event.json" <<'JSON'
+          {"event_id":"","name":"Alex Example","email":"alex.example@example.com"}
+          JSON
+          cat > "${RUNNER_TEMP}/missing-identity.json" <<'JSON'
+          {"event_id":"sample-003","name":"No Contact","email":"","phone":""}
+          JSON
+
+          trap 'stop_n8n || true' EXIT
+          start_n8n
+
+          curl --max-time 10 -fsS -X POST "$BASE_URL/webhook/$BOOTSTRAP_PATH" \
+            -H 'Content-Type: application/json' --data '{}' >/dev/null
+          echo 'PASS: V0.2 Data Table bootstrap executed'
+
+          assert_state new NEW_ACCEPTED "${RUNNER_TEMP}/base.json"
+          assert_state exact EXACT_REPLAY "${RUNNER_TEMP}/exact.json"
+          assert_state conflict-email CONFLICTING_REPLAY "${RUNNER_TEMP}/conflict-email.json"
+          assert_state conflict-message CONFLICTING_REPLAY "${RUNNER_TEMP}/conflict-message.json"
+          assert_state duplicate-identity DUPLICATE_IDENTITY "${RUNNER_TEMP}/duplicate-identity.json"
+          assert_state missing-event INVALID "${RUNNER_TEMP}/missing-event.json"
+          assert_state missing-identity INVALID "${RUNNER_TEMP}/missing-identity.json"
+
+          audit_one_original_row "${RUNNER_TEMP}/audit-before-restart.json"
+          echo 'PASS: exact replay, conflicts and duplicate identity did not create or overwrite rows'
+
+          PREVIOUS_N8N_PID="$N8N_PID"
+          stop_n8n
+          start_n8n
+          test "$N8N_PID" != "$PREVIOUS_N8N_PID"
+          echo "PASS: n8n restarted with new PID=$N8N_PID (previous PID=$PREVIOUS_N8N_PID)"
+          audit_one_original_row "${RUNNER_TEMP}/audit-after-restart.json"
+          echo 'PASS: payloadHash persistence survived verified n8n process restart before any new write'
+
+          stop_n8n
+          trap - EXIT
+
+          SMOKE_END=$(date +%s)
+          SMOKE_SECONDS=$((SMOKE_END-SMOKE_START))
+          echo "SETUP_SMOKE_SECONDS=$SMOKE_SECONDS"
+          if [ "$SMOKE_SECONDS" -gt 1800 ]; then
+            echo 'FAIL: clean import + runtime smoke exceeded preregistered 30 minute target'
+            exit 1
+          fi
+          echo 'PASS: clean import + runtime smoke completed within <=30 minute target'
