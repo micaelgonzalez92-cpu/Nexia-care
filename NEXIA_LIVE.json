@@ -1,7 +1,7 @@
 {
-  "schema_version": 34,
+  "schema_version": 35,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / LIVE HUD / R&D INTELLIGENCE / WEEKLY RADAR / AUTOMATION DRIFT REPAIRED / CONTRA V4 KAEL GATE",
+  "status": "ACTIVE / MODEL C / LIVE HUD / R&D INTELLIGENCE / BOUNDED PORTFOLIO / UGC-VIDEO-002 PREPARED / CONTRA V4 KAEL GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -13,48 +13,42 @@
   "communication_standard": {
     "default_operational_format": "NEXIA_LIVE_HUD",
     "artifact": "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md",
-    "artifact_blob_sha": "330d3a6544382c8ad88c7b79a311aa8920815f5b",
-    "detail_policy": "VISUAL_SUMMARY_FIRST_TECHNICAL_DETAIL_ON_DEMAND_OR_WHEN_MATERIAL",
     "truth_authority_unchanged": true
   },
   "research_intelligence_standard": {
     "status": "ACTIVE_READY_FOR_CURRENT_PURPOSE",
     "artifact": "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
-    "artifact_blob_sha": "8a4324b0e6e43aef475cb53df77eafdbc2c99685",
-    "default_loop": "CLASSIFY->PRIMARY_SOURCE->INDEPENDENT_COUNTERCHECK->REPRODUCE_OR_COMPUTE->LABEL_EVIDENCE->COMPARE_TO_NEXIA->IMPLEMENT_TEST_RESERVE_DISCARD->CAPTURE->REVERIFY",
-    "broad_tool_collecting": "STOPPED_UNLESS_NAMED_DECISION_OR_CAPABILITY_GAP"
+    "default_loop": "CLASSIFY->PRIMARY_SOURCE->INDEPENDENT_COUNTERCHECK->REPRODUCE_OR_COMPUTE->LABEL_EVIDENCE->COMPARE_TO_NEXIA->IMPLEMENT_TEST_RESERVE_DISCARD->CAPTURE->REVERIFY"
+  },
+  "portfolio_strategy": {
+    "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
+    "artifact": "research/NEXIA_EXPERIMENT_PORTFOLIO_STRATEGY_V1_2026-10-16.md",
+    "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_CONTRA_WORKANA_AS_CHANNELS",
+    "lane_2": "VETA-AI-UGC-001_REACTIVATED_BOUNDED_UGC_VIDEO_002_PREPARED_NOT_EXECUTED",
+    "lane_3": "VETA-AUTO-PRODUCT-001_ACTIVE_RESEARCH_OPTION_NOT_PUBLIC",
+    "rule": "Do not activate a fourth material lane unless one lane is promoted, paused, falsified, or displaced by hard precedence."
+  },
+  "ugc_video_002": {
+    "artifact": "experiments/UGC-VIDEO-002.md",
+    "status": "PREPARED_NOT_EXECUTED",
+    "cash_budget_eur": 0,
+    "architecture": "HYBRID_STABLE_ASSETS_PLUS_BOUNDED_GENERATIVE_MOTION_PLUS_DETERMINISTIC_EDIT_PLUS_ADVERSARIAL_QA",
+    "first_route": "ANATOMY_MINIMIZED_PRODUCT_FIRST_HYBRID",
+    "historical_integrity": "UGC-VIDEO-001_REMAINS_FINAL_FAIL"
   },
   "active_automations": {
     "verified_enabled_count": 5,
-    "weekly_rd_radar": {
-      "title": "Radar Nexia semanal",
-      "status": "VERIFIED_ACTIVE",
-      "schedule_summary": "MONDAY_AROUND_08_00_EUROPE_MADRID",
-      "last_run_time": null,
-      "notifications_enabled_observed": false,
-      "event": "events/EVT-2026-10-16-NEXIA-WEEKLY-RADAR-AUTOMATION-001.json"
-    },
-    "drift_repair": {
-      "status": "VERIFIED",
-      "event": "events/EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001.json",
-      "updated": [
-        "NEXIA Control Tower",
-        "EXP-AUTO-001 Reality Probe",
-        "NEXIA Reality & Venture Radar",
-        "NEXIA System Evolution"
-      ],
-      "result": "CURRENT_CONTRA_V4_AND_RD_BOUNDARIES_APPLIED_NO_PERMISSION_EXPANSION"
-    },
-    "truth_boundary": "Enabled/current prompt state does not imply successful future runs or alert delivery; verify outputs after execution."
+    "weekly_rd_radar": "VERIFIED_ACTIVE_MONDAY_AROUND_08_00_EUROPE_MADRID",
+    "automation_context_drift_repair": "VERIFIED"
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V34.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V33.json",
-    "latest_verified_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001.json",
-    "latest_verified_event_blob_sha": "6b644a2b2976836ce7aa04abd19216926c708c95",
-    "latest_material_business_event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
+    "active_index": "NEXIA_EVENT_INDEX_V35.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V34.json",
+    "latest_verified_event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001.json",
+    "latest_verified_event_blob_sha": "f99f763be0c14993205189e80251fad9faa3d7d1",
+    "latest_material_business_event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
     "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
     "latest_material_automation_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001"
   },
@@ -63,34 +57,17 @@
     "reliability": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
     "recovery": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
     "observability": "PARTIAL",
-    "quality": "CORE_ACTIVE_SURFACES_ALIGNED_APPLY_ON_TOUCH_CONTINUES",
-    "autonomy": "PROACTIVE_TO_BOUNDED_AUTONOMOUS_SUPERVISED",
+    "quality": "PROFESSIONAL_GATE_ACTIVE_UGC_VIDEO_001_FAIL_PRESERVED",
     "security_authority": "ACTIVE_GATED",
-    "reality_validation": "ACTIVE_CONTRA_V4_INTERNAL_READY_EXTERNAL_RESPONSE_NOT_YET_MEASURED",
+    "reality_validation": "MULTI_LANE_BOUNDED_CONTRA_GATE_PLUS_UGC_CAPABILITY_OPTION",
     "economic_readiness": "NOT_YET_VALIDATED_FOR_SCALING"
   },
-  "active_reality_probe": {
-    "id": "EXP-AUTO-001",
-    "name": "Lead Intake Reliability Sprint",
-    "status": "CONTRA_V4_INTERNAL_READY_KAEL_IMPLEMENTATION_GATE_WORKANA_PENDING",
-    "authorized_price_eur": 300,
-    "max_delivery_hours": 4,
-    "cash_spend_ceiling_eur": 0,
-    "contra_profile_completion_percent_last_visible": 89,
-    "contra_personal_instagram_link_last_observed_present": true,
-    "contra_personal_instagram_removal_required": true,
-    "contra_portfolio_v4_status": "READY_FOR_CURRENT_PURPOSE_INTERNAL_APPROVED_NOT_APPLIED",
-    "contra_identity_verified": false,
-    "contra_payout_method_completed": false,
-    "contra_applications_submitted": 0,
-    "contra_paid_pilots_verified": 0,
-    "workana_dashboard_state": "PENDING"
-  },
-  "resources": {
-    "weekly_hard_cap_eur": 100,
-    "default_spend_eur": 0,
-    "capital_spent_eur": 0,
-    "kael_weekly_available_hours": "NOT_INSTRUMENTED"
+  "execution_truth": {
+    "local_gpu_image": "VERIFIED_BOUNDED_COMFYUI_FLUX2_KLEIN_4B_FP8",
+    "local_video_old_route": "UGC_VIDEO_001_TECHNICAL_PASS_PROFESSIONAL_FAIL",
+    "local_execution_bridge": "VERIFIED_ONE_SHOT_BOUNDED_PRIOR_AUTHORIZATION_CONSUMED",
+    "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
+    "client_production_deployment": "NOT_EXECUTED"
   },
   "economics": {
     "revenue_eur": 0,
@@ -98,31 +75,28 @@
     "profit_eur": 0,
     "reconciled_net_profit_eur": 0
   },
-  "execution_truth": {
-    "local_worker_24h_formal_result": "FAIL_MAX_GAP_ONLY",
-    "local_worker_24h_operational_evidence": "288_288_PASS_ZERO_FUNCTIONAL_FAILURES_AUTO_SHUTDOWN_VERIFIED",
-    "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
-    "client_production_deployment": "NOT_EXECUTED"
+  "human_gates": {
+    "contra_v4_public_edit": "KAEL_REQUIRED",
+    "ugc_new_install_or_large_model_download": "STOP_AND_REVIEW_WHEN_REACHED",
+    "ugc_paid_api_account_credits_subscription": "RED_KAEL_REQUIRED",
+    "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Automation context drift repaired across four active automations; weekly R&D radar verified active and indexed; LIVE HUD and R&D standard active; Contra V4 still not publicly applied.",
-    "human_action_required_now": true,
-    "pending_human_action": "KAEL_APPLY_FINAL_CONTRA_V4_PROFILE_MEDIA_COPY_AND_REMOVE_PERSONAL_INSTAGRAM",
-    "surface": "Contra / desktop recommended",
+    "last_completed_verified_action": "Bounded three-lane portfolio strategy persisted; UGC-VIDEO-002 preregistered and read back; historical UGC-VIDEO-001 FINAL FAIL preserved.",
+    "human_action_required_now": false,
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V34.json",
-      "events/EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001.json",
-      "events/EVT-2026-10-16-NEXIA-WEEKLY-RADAR-AUTOMATION-001.json",
-      "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
-      "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md",
-      "commercial/EXP-AUTO-001_CONTRA_KAEL_ACTION_CARD_V1_2026-10-15.md",
-      "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md"
+      "NEXIA_EVENT_INDEX_V35.json",
+      "events/EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001.json",
+      "research/NEXIA_EXPERIMENT_PORTFOLIO_STRATEGY_V1_2026-10-16.md",
+      "experiments/UGC-VIDEO-002.md",
+      "experiments/UGC-VIDEO-001.md",
+      "NEXIA_EXECUTION_CAPABILITIES.json"
     ],
-    "resume_from": "Use current automation prompts and R&D intelligence standard. Inspect actual radar/automation outputs only after they run. Wait for Kael to apply Contra V4 public changes, then verify against the 15-point runbook.",
-    "truth_limit": "Do not claim future automation runs, alert delivery, candidate tools operational, public Contra V4 implementation, buyer demand, client acceptance, production deployment, persistent 24x7 operation, payment or profit without direct evidence."
+    "resume_from": "Continue GREEN/YELLOW UGC-VIDEO-002 pre-execution work: audit assets/scripts, hardware-fit research, Route A storyboard/edit spec and measurement ledger. Contra V4 remains a separate RED gate, not the sole project blocker.",
+    "truth_limit": "Do not claim UGC-VIDEO-002 executed or passed, professional UGC capability, public Contra implementation, buyer demand, client acceptance, payment or profit without direct evidence."
   },
-  "next_action": "KAEL_APPLY_CONTRA_V4_THEN_NEXIA_VERIFY_PUBLIC_POSTCONDITION"
+  "next_action": "CONTINUE_UGC_VIDEO_002_GREEN_YELLOW_PREEXECUTION_AND_MAINTAIN_BOUNDED_PORTFOLIO"
 }
