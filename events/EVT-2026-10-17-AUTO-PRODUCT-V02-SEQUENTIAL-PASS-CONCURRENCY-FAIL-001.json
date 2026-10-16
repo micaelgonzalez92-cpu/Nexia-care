@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001",
+  "timestamp": "2026-10-17",
+  "type": "AUTO_PRODUCT_V02_SEQUENTIAL_RUNTIME_PASS_CONCURRENCY_STRESS_FAIL",
+  "evidence_label": "HECHO_VERIFICADO",
+  "canonical_state_version": 73,
+  "state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "authority": "GREEN internal verification; EUR0; synthetic data only; no credentials, external messaging, publication or production deployment",
+  "candidate": {
+    "status": "EXPERIMENTAL_NOT_PROMOTED",
+    "bootstrap_path": "experiments/auto-product-v02/bootstrap-v02.json",
+    "bootstrap_blob_sha": "a25d45342d7ead194909d9b94be23617a5e1a3b6",
+    "guard_path": "experiments/auto-product-v02/guard-v02.json",
+    "guard_blob_sha": "d5004a4635022604dc1a48606b0ccca3161aeb98",
+    "audit_path": "experiments/auto-product-v02/audit-v02.json",
+    "audit_blob_sha": "e61ea95fb42184181f6b243455d2644e5738f02d",
+    "static_test_path": "experiments/auto-product-v02/test_static_v02.js",
+    "static_test_blob_sha": "05a8a6ac817d3f41389fc3f313cf65d80458f3f3",
+    "payload_fingerprint": "SHA256",
+    "decision_states": [
+      "NEW_ACCEPTED",
+      "EXACT_REPLAY",
+      "CONFLICTING_REPLAY",
+      "DUPLICATE_IDENTITY",
+      "INVALID"
+    ],
+    "autonomous_send": false,
+    "external_action_nodes": 0
+  },
+  "sequential_runtime_gate": {
+    "status": "PASS_BOUNDED_SEQUENTIAL_SYNTHETIC",
+    "workflow": "n8n Product V0.2 Replay Runtime",
+    "run_id": 38980120485,
+    "job_id": 117238833628,
+    "environment": {
+      "n8n": "2.42.6",
+      "node": "24.21.0",
+      "os": "Ubuntu 24.04"
+    },
+    "verified_checks": [
+      "three candidate workflows imported/exported and inactive by default",
+      "Data Table bootstrap executed",
+      "NEW_ACCEPTED",
+      "EXACT_REPLAY",
+      "CONFLICTING_REPLAY_CHANGED_EMAIL",
+      "CONFLICTING_REPLAY_CHANGED_PHONE_AND_MESSAGE",
+      "DUPLICATE_IDENTITY",
+      "INVALID_MISSING_EVENT",
+      "INVALID_MISSING_IDENTITY",
+      "audit showed exactly one immutable original row with matching payloadHash",
+      "exact replay conflicts and duplicate identity did not create or overwrite rows",
+      "native Data Table payloadHash persistence survived verified n8n process stop and restart",
+      "clean import plus runtime smoke completed in 31 seconds within preregistered <=30 minute target"
+    ],
+    "truth_boundary": "This establishes bounded sequential/synthetic behavior only. It is not concurrency, production, commercial, professional or arbitrary-scale proof."
+  },
+  "concurrency_preregistration": {
+    "path": "experiments/auto-product-v02/CONCURRENCY_STRESS_PREREG_2026-10-17.md",
+    "blob_sha": "fb4f596017370c1fae8ad31f12135f1b282fbfb0",
+    "status": "FROZEN_BEFORE_STRESS_OUTPUTS",
+    "same_event_required_per_12": "1 NEW_ACCEPTED + 11 EXACT_REPLAY",
+    "same_identity_distinct_event_required_per_12": "1 NEW_ACCEPTED + 11 DUPLICATE_IDENTITY",
+    "selective_retry_for_pass": false
+  },
+  "concurrency_stress": {
+    "status": "FAIL_MATERIAL",
+    "workflow": "n8n Product V0.2 Concurrency Stress",
+    "run_id": 38980766252,
+    "job_id": 117240847817,
+    "head_sha": "23cd53fda7414d39b9bca2ca9bd89953e08b1dfa",
+    "harness_path": "experiments/auto-product-v02/concurrency_stress_v02.js",
+    "harness_blob_sha": "03468345d392ae4316631062fdd8b854036305c5",
+    "first_same_event_burst": {
+      "concurrency": 12,
+      "observed_counts": {
+        "NEW_ACCEPTED": 5,
+        "MISSING_STATE": 7
+      },
+      "required_counts": {
+        "NEW_ACCEPTED": 1,
+        "EXACT_REPLAY": 11
+      },
+      "contract_pass": false
+    },
+    "harness_observability_defect": "After recording the failing counts, the harness attempted to read autonomous_send from a null response and raised TypeError. This prevented later burst/final-audit collection but cannot invalidate the already-observed five NEW_ACCEPTED responses for one event.",
+    "falsification": "Five NEW_ACCEPTED responses for the same concurrent event violate the frozen contract and demonstrate that the current check-then-insert candidate is not concurrency-safe under this bounded test.",
+    "rerun_unchanged_candidate_to_seek_pass": false
+  },
+  "classification": "SEQUENTIAL_RUNTIME_PASS_CONCURRENCY_FAIL",
+  "promotion": {
+    "allowed": false,
+    "product_v01_replaced": false,
+    "reason": "Concurrency stress falsified the v0.2 candidate before promotion."
+  },
+  "root_cause_hypothesis": "The candidate uses separate rowNotExists/rowExists decisions and a later insert across independent webhook executions, leaving a check-then-write race window. This is a high-confidence architectural hypothesis supported by the stress outcome, but exact internal interleaving is not yet instrumented.",
+  "next_action": "Investigate a concurrency-safe native/self-contained claim primitive or bounded serialization architecture, create a materially changed repair candidate, fix harness null observability for that new candidate, preregister before new outputs, and stress the repaired candidate. Do not rerun unchanged v0.2 to hunt for a pass.",
+  "cost_eur": 0,
+  "state_changed": false,
+  "external_effects": false
+}
