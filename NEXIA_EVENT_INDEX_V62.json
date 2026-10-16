@@ -12,12 +12,12 @@
     {
       "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-FRONTEND-CDP-FAIL-001",
       "path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-FRONTEND-CDP-FAIL-001.json",
-      "verified_blob_sha": "REQUIRES_READBACK"
+      "verified_blob_sha": "dcd1e7230baa13a86b4981034830adf7cc653ffa"
     }
   ],
   "latest_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-FRONTEND-CDP-FAIL-001",
   "latest_event_path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-FRONTEND-CDP-FAIL-001.json",
-  "latest_event_blob_sha": "REQUIRES_READBACK",
+  "latest_event_blob_sha": "dcd1e7230baa13a86b4981034830adf7cc653ffa",
   "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
   "latest_material_system_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V04-FRONTEND-CDP-FAIL-001",
   "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
