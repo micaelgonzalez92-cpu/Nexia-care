@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V06-STRICTMODE-CDP-V07-REPAIR-001",
+  "timestamp": "2026-10-16",
+  "type": "FLUX_ONE_SHOT_V06_FRONTEND_FAIL_V07_STRICTMODE_CDP_REPAIR",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_V06_CONSOLE_PLUS_REMOTE_RAW_RESULT_003_PLUS_PINNED_RUNNER_SOURCE_PLUS_OFFICIAL_CDP_AND_POWERSHELL_DOCS",
+  "observed": {
+    "wrapper": "tools/nexia_local_flux_edit_gate_v0_6.ps1",
+    "patch_verify": "PASS",
+    "selected_cdp_target": "http://127.0.0.1:8188/",
+    "failure_stage": "START_COMFYUI_FRONTEND_CDP",
+    "generation_count": 0,
+    "base_gate_reached": false,
+    "writeback_console": "PASS_GH_API_READBACK_MATCH",
+    "remote_raw_result": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_003.json",
+    "remote_raw_result_blob_sha": "27e68c0500d78f21b5957654c4f24f571a9d9d22",
+    "cost_eur": 0
+  },
+  "falsified": {
+    "wrong_cdp_target_as_sufficient_cause": true,
+    "frontend_not_ready": true
+  },
+  "root_cause": {
+    "classification": "HIGH_CONFIDENCE_STRICTMODE_OPTIONAL_CDP_PROPERTY_ACCESS",
+    "basis": "Pinned runner uses Set-StrictMode -Version 2.0 and Invoke-Js directly reads $r.result.exceptionDetails. Chrome DevTools Protocol defines Runtime.evaluate exceptionDetails as optional, while PowerShell StrictMode 2.0 throws PropertyNotFoundStrict for a missing property. The readiness loop catches and suppresses all exceptions, producing a false not-ready result. Invoke-Cdp also directly reads optional message id and has the same latent strict-mode defect.",
+    "runtime_causal_confirmation_pending": true
+  },
+  "repair": {
+    "runner": "tools/nexia_local_flux_edit_gate_v0_7.ps1",
+    "runner_blob_sha": "b8f8a684b58bbc406181848d6a8398ddb8682182",
+    "runner_commit": "4ab1656351efc254ef57734201aca0b47db88954",
+    "strategy": "Use PSObject.Properties lookups for optional CDP id and exceptionDetails/value fields; preserve all prior transport, target and output-suppression repairs; preserve raw results _001/_002/_003; write next attempt to _004.",
+    "experimental_contract_changed": false,
+    "prompts_changed": false,
+    "seed_changed": false,
+    "workflow_refs_changed": false,
+    "generation_cap_changed": false,
+    "qa_changed": false
+  },
+  "truth_boundary": "No Base/B1/B2 generation occurred in v0.6. The strict-mode defect is verified in source and specifications; its causal role in the observed v0.6 readiness failure is high-confidence until v0.7 advances beyond frontend readiness.",
+  "next_action": "KAEL_CANCEL_ACCIDENTAL_SET_ITEM_PROMPT_THEN_RUN_PINNED_V0_7"
+}
