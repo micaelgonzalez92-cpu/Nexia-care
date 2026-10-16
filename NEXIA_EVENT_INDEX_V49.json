@@ -1,0 +1,25 @@
+{
+  "schema_version": 49,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V48.json",
+    "verified_blob_sha": "38f6ee55ad86459940d31bb462768b3b98a5995e"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001",
+      "path": "events/EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001.json",
+      "verified_blob_sha": "62e7876900a6d1efd5b0e0fa7d5376ebc0bcd04d"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001",
+  "latest_event_path": "events/EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001.json",
+  "latest_event_blob_sha": "62e7876900a6d1efd5b0e0fa7d5376ebc0bcd04d",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V49 records a local compatibility PASS for LTX-Video 2B v0.9.8 distilled FP8 on ComfyUI 0.39.0 with native LTXV nodes present. Old 0.9.5 checkpoint path and shared t5xxl are verified. No deletion or download occurred; explicit Kael approval is required for the replacement test."
+}
