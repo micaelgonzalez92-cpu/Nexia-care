@@ -1,0 +1,26 @@
+{
+  "schema_version": 35,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V34.json",
+    "verified_blob_sha": "84a2cd670a5126160db165fc57afc995aaea9656"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
+      "path": "events/EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001.json",
+      "verified_blob_sha": "REPLACE_AFTER_READBACK"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
+  "latest_event_path": "events/EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001.json",
+  "latest_event_blob_sha": "REPLACE_AFTER_READBACK",
+  "latest_material_business_event_id": "EVT-2026-10-16-PORTFOLIO-DIVERSIFICATION-001",
+  "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
+  "latest_material_automation_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V35 records bounded portfolio diversification and preparation of UGC-VIDEO-002 while preserving UGC-VIDEO-001 as FINAL FAIL, STATE v73, WIP limits and all RED gates."
+}
