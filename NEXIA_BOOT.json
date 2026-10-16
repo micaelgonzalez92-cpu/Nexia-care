@@ -1,6 +1,6 @@
 {
-  "schema_version": 43,
-  "boot_version": 98,
+  "schema_version": 44,
+  "boot_version": 99,
   "generated_at": "2026-10-16",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,38 +15,38 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "NEXIA_EVENT_INDEX_V43.json",
+    "NEXIA_EVENT_INDEX_V44.json",
+    "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json",
     "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
-    "events/EVT-2026-10-16-UGC002-V2-QA-001.json",
     "events/EVT-2026-10-16-UGC002-PROFESSIONAL-QA-001.json",
     "tools/run_ugc_video_002_route_a.py",
     "experiments/UGC-VIDEO-002.md",
+    "research/NEXIA_EXPERIMENT_PORTFOLIO_STRATEGY_V1_2026-10-16.md",
+    "NEXIA_EXECUTION_CAPABILITIES.json when execution routing is material",
     "research/NEXIA_AUTO_PRODUCT_001_COMPETITIVE_REFRESH_2026-10-16.md",
     "research/NEXIA_AUTO_PRODUCT_TEST_001_2026-10-16.md",
-    "NEXIA_EXECUTION_CAPABILITIES.json when execution routing is material",
-    "research/NEXIA_EXPERIMENT_PORTFOLIO_STRATEGY_V1_2026-10-16.md",
     "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md when Contra execution is material",
-    "read V43 base V42/V41/V40 and earlier indexes/events as needed",
+    "read V44 base V43/V42/V41 and earlier indexes/events as needed",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "3b9cb34505eaac64081d94ae0bbada52e485724c",
+  "live_state_blob_sha": "2f5f60561dbf04ab16ce305c782438651c61c998",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V43.json",
-    "latest_verified_event_id": "EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
-    "base_index": "NEXIA_EVENT_INDEX_V42.json"
+    "active_index": "NEXIA_EVENT_INDEX_V44.json",
+    "latest_verified_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json",
+    "base_index": "NEXIA_EVENT_INDEX_V43.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ALIVE",
-    "lane_2": "UGC-VIDEO-002_ROUTE_A_V2_FAIL_78_PROVISIONAL_V3_ENCODING_RETEST_GATE",
+    "lane_2": "UGC-VIDEO-002_ROUTE_A_STOPPED_COMPARE_NEXT_BOUNDED_ARCHITECTURE",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — UGC002 V2 PROFESSIONAL FAIL 78/100 PROVISIONAL; NORMAL-SPEED TEMPORAL QA NOT VERIFIED; UNICODE-HARDENED V3 RETEST GATE; AUTO-PRODUCT ADVANCED; EXP-AUTO-001 ALIVE",
-  "human_gate": "Kael must refresh the Unicode-hardened UGC-VIDEO-002 runner, require caption_text_contract=PASS on dry-run, rerender V3 and upload the MP4/report. V2 remains professional FAIL at provisional 78/100; severe temporal defects absence and rights provenance are not verified. If V3 fixes encoding but remains below 85 for structural reasons, stop Route A polish and compare a stronger bounded architecture. Contra V4 remains a separate RED public-edit gate.",
-  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V43_PLUS_LIVE_SCHEMA_43_UGC002_V3_ENCODING_RETEST_GATE",
-  "next_action": "KAEL_REFRESH_UNICODE_HARDENED_RUNNER_AND_RERENDER_V3"
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — UGC002 ROUTE A STOPPED AFTER V3 80/100 PROVISIONAL; NEXT UGC ARCHITECTURE COMPARISON; AUTO-PRODUCT ADVANCED; EXP-AUTO-001 ALIVE",
+  "human_gate": "No Kael action is required for the Route A stop decision. Nexia should compare the next bounded UGC architecture internally. Any new model/app install, large download, paid API, publication, external contact or production activation remains separately gated.",
+  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V44_PLUS_LIVE_SCHEMA_44_UGC002_ROUTE_A_STOP",
+  "next_action": "NEXIA_COMPARE_NEXT_BOUNDED_UGC_ARCHITECTURE"
 }
