@@ -1,6 +1,6 @@
 {
-  "schema_version": 48,
-  "boot_version": 103,
+  "schema_version": 49,
+  "boot_version": 104,
   "generated_at": "2026-10-16",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,35 +15,35 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
-    "NEXIA_EVENT_INDEX_V48.json",
+    "NEXIA_EVENT_INDEX_V49.json",
+    "events/EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001.json",
     "events/EVT-2026-10-16-LOW-FOOTPRINT-I2V-001.json",
     "research/NEXIA_LOW_FOOTPRINT_I2V_COMPARISON_V1_2026-10-16.md",
     "events/EVT-2026-10-16-FRAMEPACK-PAGEFILE-MEDIA-001.json",
-    "events/EVT-2026-10-16-FRAMEPACK-HARDWARE-CAPACITY-001.json",
     "events/EVT-2026-10-16-STORAGE-AUDIT-001.json",
     "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json",
     "NEXIA_EXECUTION_CAPABILITIES.json when execution routing is material",
     "experiments/UGC-VIDEO-002.md",
     "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md when Contra execution is material",
-    "read V48 base V47/V46/V45 and earlier indexes/events as needed",
+    "read V49 base V48/V47/V46 and earlier indexes/events as needed",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "52839c208b43ffbfd028a370cc5173347bad492c",
+  "live_state_blob_sha": "fd233589b5741076215c184636a18daf29db7889",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V48.json",
-    "active_index_blob_sha": "38f6ee55ad86459940d31bb462768b3b98a5995e",
-    "latest_verified_event_id": "EVT-2026-10-16-LOW-FOOTPRINT-I2V-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-LOW-FOOTPRINT-I2V-001.json",
-    "latest_verified_event_blob_sha": "f7fce63fc84d19cb4c818280293e54612e65f30c",
-    "base_index": "NEXIA_EVENT_INDEX_V47.json"
+    "active_index": "NEXIA_EVENT_INDEX_V49.json",
+    "active_index_blob_sha": "78de07ecc494fcf72249b8e38c3978c54927eb26",
+    "latest_verified_event_id": "EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-LTX098-LOCAL-COMPATIBILITY-001.json",
+    "latest_verified_event_blob_sha": "62e7876900a6d1efd5b0e0fa7d5376ebc0bcd04d",
+    "base_index": "NEXIA_EVENT_INDEX_V48.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ALIVE",
-    "lane_2": "UGC_LTX_2B_0_9_8_FP8_LOCAL_COMPATIBILITY_GATE",
+    "lane_2": "UGC_LTX_2B_0_9_8_FP8_REPLACEMENT_AUTHORIZATION_GATE",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED"
   },
   "capacity_checkpoint": {
@@ -51,15 +51,16 @@
     "gpu": "RTX_3060_12GB",
     "ram_total_gib": 15.96,
     "pagefile_exact_gib": 9.50,
-    "C_drive": "CT480BX500SSD1_SSD_SATA",
-    "D_drive": "ST1000DM010_1TB_HDD_SATA",
     "framepack_operational_fit": "WEAK_DEFERRED",
     "selected_low_footprint_candidate": "LTX_VIDEO_2B_0_9_8_DISTILLED_FP8_4_46GB",
+    "local_compatibility": "PASS_COMFYUI_0_39_0_NATIVE_LTXV_NODES_PRESENT",
+    "old_checkpoint_size_gib": 5.905,
+    "t5xxl_shared_size_gib": 9.116,
     "candidate_downloaded": false,
     "old_ltx_deleted": false
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — ROUTE A STOPPED; LOW-FOOTPRINT I2V CANDIDATE SELECTED; LOCAL COMFYUI READ-ONLY COMPATIBILITY GATE",
-  "human_gate": "Kael should run a read-only check of the current ComfyUI version and native LTXV core node presence. No model deletion, download, install, pagefile change, spend or publication is authorized yet.",
-  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V48_PLUS_LIVE_SCHEMA_48_LTX098_COMPATIBILITY_GATE",
-  "next_action": "KAEL_READ_LOCAL_COMFYUI_COMPATIBILITY"
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — ROUTE A STOPPED; LTX 0.9.8 FP8 LOCAL COMPATIBILITY PASS; REPLACEMENT TEST AUTHORIZATION GATE",
+  "human_gate": "Explicit Kael authorization is now required before deleting the verified old 0.9.5 checkpoint and downloading the official 4.46GB 0.9.8 distilled FP8 replacement. Keep t5xxl_fp16. No other deletion, installation, spend or publication is authorized.",
+  "sync_status": "STATE_V73_PLUS_EVENT_INDEX_V49_PLUS_LIVE_SCHEMA_49_LTX098_COMPATIBILITY_PASS",
+  "next_action": "KAEL_AUTHORIZE_LTX098_REPLACEMENT_TEST"
 }
