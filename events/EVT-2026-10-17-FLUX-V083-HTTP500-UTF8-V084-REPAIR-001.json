@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-FLUX-V083-HTTP500-UTF8-V084-REPAIR-001",
+  "timestamp": "2026-10-17",
+  "type": "FLUX_V083_HTTP500_UTF8_TRANSPORT_ROOT_CAUSE_V084_REPAIR",
+  "state_version": 73,
+  "evidence_source": "KAEL_READONLY_GENERATE500_DIAG_PLUS_REMOTE_RAW_RESULT_007_PLUS_RUNNER_SOURCE_REVIEW",
+  "observed": {
+    "v083_failure_stage": "GENERATE_BASE",
+    "remote_raw_result": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_007.json",
+    "remote_raw_result_blob_sha": "4c0b3ed20a42025580f7b14f2fbee279f2aec365",
+    "base_api_prompt_exists": true,
+    "base_workflow_exists": true,
+    "base_prompt_node_count": 16,
+    "compiled_sampler": "euler",
+    "compiled_steps": 4,
+    "compiled_cfg": 1,
+    "compiled_width_source_value": 1024,
+    "compiled_height_source_value": 1024,
+    "base_output_file_count_since_run": 0,
+    "server_received_request": true,
+    "server_exception": "UnicodeDecodeError while aiohttp request.json() decoded request body as UTF-8; byte 0xF3 invalid at position 4517",
+    "generation_started": false,
+    "cost_eur": 0
+  },
+  "root_cause": {
+    "classification": "VERIFIED_NON_UTF8_PROMPT_REQUEST_BODY",
+    "basis": "ComfyUI failed inside await request.json() -> request.text() -> bytes_body.decode(encoding), before prompt JSON parsing, validation, queueing or execution. The runner sent a PowerShell string body to POST /prompt without explicit UTF-8 byte encoding.",
+    "backend_generation_count": 0,
+    "backend_generation_count_status": "VERIFIED_NOT_STARTED_BEFORE_JSON_DECODE_FAILURE"
+  },
+  "repair": {
+    "runner": "tools/nexia_local_flux_edit_gate_v0_8_4.ps1",
+    "runner_blob_sha": "614e85fe814098fff32199c3d5f4e91f115a60f2",
+    "runner_commit": "711c2c7c7af92fd0b7b62d0b4f66425bafd1664a",
+    "strategy": "Build on pinned v0.8.3; preserve all existing compile/runtime guards; serialize prompt JSON exactly as before; convert the serialized body to explicit UTF-8 bytes without BOM and POST with application/json; charset=utf-8; preserve raw results _001-_007; write next attempt to _008.",
+    "experimental_contract_changed": false,
+    "prompt_changed": false,
+    "seed_changed": false,
+    "model_changed": false,
+    "workflow_commit_changed": false,
+    "sampler_steps_cfg_resolution_changed": false,
+    "generation_cap_changed": false,
+    "qa_changed": false
+  },
+  "static_patch_verification": {
+    "v083_raw_target_anchor_occurrences": 1,
+    "v083_inject_tail_anchor_occurrences": 1,
+    "v084_readback_verified": true
+  },
+  "truth_boundary": "No BASE/B1/B2 generation has occurred. v0.8.3 reached POST /prompt but failed decoding before prompt parsing or queueing. v0.8.4 is prepared and read back but not yet executed.",
+  "next_action": "KAEL_RUN_PINNED_V0_8_4_SAME_FROZEN_ONESHOT_BENCHMARK"
+}
