@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "timestamp": "2026-10-16",
+  "type": "UGC002_V3_QA_ROUTE_A_STOP",
+  "state_version": 73,
+  "status": "ROUTE_A_STOPPED_FOR_PROFESSIONAL_OBJECTIVE",
+  "experiment": "UGC-VIDEO-002",
+  "route": "A_ANATOMY_MINIMIZED_DETERMINISTIC",
+  "artifact": "NEXIA_UGC_VIDEO_002_ROUTE_A_SPEC_V3.mp4",
+  "qa": {
+    "score": 80,
+    "score_status": "ESTIMATION_PROVISIONAL",
+    "threshold": 85,
+    "delta_vs_v1": 7,
+    "delta_vs_v2_provisional": 2,
+    "professional_use": "FAIL"
+  },
+  "verified": {
+    "duration_seconds": 24.033,
+    "resolution": "1080x1920",
+    "fps": 30,
+    "frames": 721,
+    "size_bytes": 8053281,
+    "audio_track": false,
+    "caption_text_contract": "PASS",
+    "mojibake_fixed": true,
+    "cta_spec_separated": true
+  },
+  "not_verified": [
+    "normal_speed_temporal_quality",
+    "absence_of_severe_temporal_defects",
+    "rights_provenance"
+  ],
+  "structural_blockers": [
+    "two source stills reused across eight segments",
+    "limited pan_zoom motion",
+    "product transformation not directly demonstrated",
+    "no audio"
+  ],
+  "decision": "STOP_ROUTE_A_KEEP_V1_V2_V3_AS_EVIDENCE",
+  "capability_promotion": false,
+  "next_system_action": "COMPARE_NEXT_BOUNDED_UGC_ARCHITECTURE"
+}
