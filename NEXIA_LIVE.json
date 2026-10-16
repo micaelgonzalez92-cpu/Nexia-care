@@ -1,7 +1,7 @@
 {
-  "schema_version": 37,
+  "schema_version": 40,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC-VIDEO-002 BLOCKED ON FFMPEG INSTALL GATE / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC-VIDEO-002 ROUTE A TECHNICAL ASSEMBLY COMPLETE / PROFESSIONAL QA PENDING / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -22,7 +22,7 @@
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_CONTRA_WORKANA_AS_CHANNELS",
-    "lane_2": "VETA-AI-UGC-001_UGC_VIDEO_002_BLOCKED_ON_FFMPEG_INSTALL_GATE",
+    "lane_2": "VETA-AI-UGC-001_UGC_VIDEO_002_ROUTE_A_TECHNICAL_ASSEMBLY_COMPLETE_PROFESSIONAL_QA_PENDING",
     "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED",
     "rule": "Do not activate a fourth material lane unless one lane is promoted, paused, falsified, or displaced by hard precedence."
   },
@@ -30,21 +30,28 @@
     "artifact": "experiments/UGC-VIDEO-002.md",
     "route_a_preexecution": "experiments/UGC-VIDEO-002_ROUTE_A_PREEXECUTION_V1.md",
     "runner": "tools/run_ugc_video_002_route_a.py",
+    "runner_blob_sha": "b0a90cc83d2f4ce852a8ed25630b9806ac043564",
     "ledger": "experiments/UGC-VIDEO-002_LEDGER_TEMPLATE.json",
-    "status": "BLOCKED_NOT_INSTALLED_NOT_EXPERIMENT_FAIL",
-    "cash_budget_eur": 0,
+    "status": "TECHNICAL_ASSEMBLY_COMPLETE_PROFESSIONAL_QA_PENDING",
+    "cash_spend_eur": 0,
+    "cloud_api_used": false,
     "source_assets": ["NEXIA_BENCHMARK_00002_.png", "NEXIA_BENCHMARK_00003_.png"],
+    "ffmpeg_operational": true,
+    "ffprobe_operational": true,
     "dry_run_executed": true,
-    "dry_run_result": "FAIL_FFMPEG_NOT_AVAILABLE",
-    "ffmpeg_reusable_copy_located": false,
-    "ffprobe_reusable_copy_located": false,
-    "absence_scope_limit": "No reusable copy located in accessible search scope; absolute absence from inaccessible folders/archives not asserted.",
-    "recommended_dependency": "Gyan.FFmpeg via winget",
-    "proposed_install_command": "winget install --id Gyan.FFmpeg --exact --source winget",
-    "installation_executed": false,
+    "dry_run_result": "DRY_RUN_PASS",
+    "first_render_attempt": "FAIL_ZOOMPAN_EXPRESSION_RUNNER_BUG_NO_OUTPUT",
+    "runner_fix": "PERSISTED_READBACK_VERIFIED_AND_RUNTIME_RETEST_PASS",
+    "technical_assembly_status": "TECHNICAL_ASSEMBLY_COMPLETE_NOT_PROFESSIONALLY_ADJUDICATED",
+    "wall_seconds": 28.76,
+    "output_local_path": "C:\\Users\\User\\NEXIA_UGC_VIDEO_002_ROUTE_A_SPEC.mp4",
+    "probe_duration_seconds": 24.033333,
+    "probe_size_bytes": 7978244,
+    "audio": "NONE_CAPTIONED_FIRST_PROOF",
     "route_b_decision": "NO_NATIVE_CURRENT_MODEL_INSTALL_YET",
     "hardware_context": "RTX_3060_12GB_APPROX_16GB_RAM",
     "historical_integrity": "UGC-VIDEO-001_REMAINS_FINAL_FAIL",
+    "professional_qa": "PENDING",
     "professional_pass": false
   },
   "auto_product": {
@@ -68,12 +75,12 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V37.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V36.json",
-    "latest_verified_event_id": "EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001.json",
-    "latest_verified_event_blob_sha": "0f001688d4808337f4b3b68bc5f1b723bbcbcc33",
-    "latest_material_business_event_id": "EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001",
+    "active_index": "NEXIA_EVENT_INDEX_V40.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V39.json",
+    "latest_verified_event_id": "EVT-2026-10-16-UGC002-ROUTE-A-TECHNICAL-ASSEMBLY-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-UGC002-ROUTE-A-TECHNICAL-ASSEMBLY-001.json",
+    "latest_verified_event_blob_sha": "864cba1c44e0dba41a5e8d622e2717c9def20821",
+    "latest_material_business_event_id": "EVT-2026-10-16-UGC002-ROUTE-A-TECHNICAL-ASSEMBLY-001",
     "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
     "latest_material_automation_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001"
   },
@@ -82,7 +89,7 @@
     "reliability": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
     "recovery": "PARTIAL_VERIFIED_BY_SUBSYSTEM",
     "observability": "PARTIAL",
-    "quality": "PROFESSIONAL_GATE_ACTIVE_UGC_VIDEO_001_FAIL_PRESERVED",
+    "quality": "UGC002_TECHNICAL_ASSEMBLY_PASS_PROFESSIONAL_GATE_PENDING; UGC001_FAIL_PRESERVED",
     "security_authority": "ACTIVE_GATED",
     "reality_validation": "MULTI_LANE_BOUNDED",
     "economic_readiness": "NOT_YET_VALIDATED_FOR_SCALING"
@@ -90,7 +97,7 @@
   "execution_truth": {
     "local_gpu_image": "VERIFIED_BOUNDED_COMFYUI_FLUX2_KLEIN_4B_FP8",
     "local_video_old_route": "UGC_VIDEO_001_TECHNICAL_PASS_PROFESSIONAL_FAIL",
-    "ugc_video_002_route_a": "DRY_RUN_EXECUTED_BLOCKED_FFMPEG_NOT_INSTALLED",
+    "ugc_video_002_route_a": "TECHNICAL_ASSEMBLY_COMPLETE_PROFESSIONAL_QA_PENDING",
     "local_execution_bridge": "VERIFIED_ONE_SHOT_BOUNDED_PRIOR_AUTHORIZATION_CONSUMED",
     "persistent_24x7": "NOT_AUTHORIZED_NOT_VERIFIED",
     "client_production_deployment": "NOT_EXECUTED"
@@ -102,28 +109,29 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "ugc_ffmpeg_install": "RED_KAEL_EXPLICIT_AUTHORIZATION_REQUIRED_NOW",
+    "ugc_route_a_professional_qa": "KAEL_UPLOAD_OR_ATTACH_LOCAL_MP4_REQUIRED_NOW",
     "contra_v4_public_edit": "KAEL_REQUIRED_SEPARATE_GATE",
     "ugc_new_model_or_large_download": "STOP_AND_REVIEW_WHEN_REACHED",
     "ugc_paid_api_account_credits_subscription": "RED_KAEL_REQUIRED",
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "UGC-VIDEO-002 Route A dry-run executed and correctly stopped because FFmpeg was unavailable; accessible search found no reusable ffmpeg/ffprobe copy; no installation executed.",
+    "last_completed_verified_action": "UGC-VIDEO-002 Route A patched runner passed dry-run and completed a deterministic 24.033333-second local MP4 assembly in 28.76 seconds at EUR0. Professional visual QA has not yet been performed.",
     "human_action_required_now": true,
-    "pending_human_action": "KAEL_EXPLICITLY_AUTHORIZE_OR_REJECT_FFMPEG_INSTALL",
-    "surface": "Windows PC / PowerShell",
+    "pending_human_action": "KAEL_UPLOAD_OR_ATTACH_NEXIA_UGC_VIDEO_002_ROUTE_A_SPEC_MP4_FOR_QA",
+    "surface": "ChatGPT attachment from Windows PC",
     "resume_required_reads": [
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V37.json",
-      "events/EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001.json",
-      "experiments/UGC-VIDEO-002_ROUTE_A_PREEXECUTION_V1.md",
+      "NEXIA_EVENT_INDEX_V40.json",
+      "events/EVT-2026-10-16-UGC002-ROUTE-A-TECHNICAL-ASSEMBLY-001.json",
+      "events/EVT-2026-10-16-UGC002-ZOOMPAN-RUNNER-FIX-001.json",
+      "experiments/UGC-VIDEO-002.md",
       "tools/run_ugc_video_002_route_a.py"
     ],
-    "resume_from": "Await explicit Kael authorization or rejection for installing Gyan.FFmpeg. If authorized, install, verify ffmpeg/ffprobe, rerun dry-run, then proceed only on DRY_RUN_PASS.",
-    "truth_limit": "Do not claim UGC Route A render/professional PASS, n8n v0.2 runtime PASS, public Contra implementation, buyer demand, payment or profit without direct evidence."
+    "resume_from": "Inspect the actual Route A MP4 at normal speed, apply the professional >=85/100 rubric and hard-fail criteria, obtain Kael normal-viewing acceptance, then classify KEEP/IMPROVE/FAIL. Do not infer quality from technical assembly.",
+    "truth_limit": "Do not claim UGC Route A professional PASS, n8n v0.2 runtime PASS, public Contra implementation, buyer demand, client acceptance, payment or profit without direct evidence."
   },
-  "next_action": "KAEL_EXPLICITLY_AUTHORIZE_OR_REJECT_FFMPEG_INSTALL"
+  "next_action": "KAEL_UPLOAD_OR_ATTACH_NEXIA_UGC_VIDEO_002_ROUTE_A_SPEC_MP4_FOR_QA"
 }
