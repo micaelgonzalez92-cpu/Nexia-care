@@ -1,6 +1,6 @@
 {
-  "schema_version": 75,
-  "boot_version": 130,
+  "schema_version": 76,
+  "boot_version": 131,
   "generated_at": "2026-10-17",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,6 +15,9 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V76.json",
+    "events/EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001.json",
+    "tools/nexia_integrity_check.py",
     "NEXIA_EVENT_INDEX_V75.json",
     "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
     "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
@@ -38,21 +41,21 @@
     "NEXIA_LOCAL_FLUX_EDIT_ONE_SHOT_TASK.json",
     "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md",
     "NEXIA_EXECUTION_CAPABILITIES.json when execution routing is material",
-    "read V73 base V72 and earlier indexes/events as needed",
+    "read V76 base V75 and earlier indexes/events as needed",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "0cbc6569965843976a7ac9188d33c72c3b24894b",
-  "live_state_status": "RECONCILED_FOR_FLUX_QA_CLOSURE_EVENT_INDEX_V75",
+  "live_state_blob_sha": "c6967585a7cd211f6c7970b881c60714d2aad7fa",
+  "live_state_status": "RECONCILED_FOR_INTEGRITY_DEPTH_REPAIR_EVENT_INDEX_V76",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V75.json",
-    "active_index_blob_sha": "5f96ad93c30f640fddea632320a09bf40ac10906",
-    "latest_verified_event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-FUNCTIONAL-QA-CLOSE-001.json",
-    "latest_verified_event_blob_sha": "527e1dd7daa6bb5439ef268149b19a843c5bcb3d",
-    "base_index": "NEXIA_EVENT_INDEX_V74.json"
+    "active_index": "NEXIA_EVENT_INDEX_V76.json",
+    "active_index_blob_sha": "77236455def939f666ba78c0d4d0a60abdc7897e",
+    "latest_verified_event_id": "EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001.json",
+    "latest_verified_event_blob_sha": "e1378bd3db65ae69defc09010d9241425b2b3b84",
+    "base_index": "NEXIA_EVENT_INDEX_V75.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
@@ -108,10 +111,35 @@
     "b2_superiority": "NOT_DEMONSTRATED",
     "professional_capability": "NOT_ESTABLISHED"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — FLUX ONE-SHOT V1 CLOSED; VERIFIED_RUNTIME_FUNCTIONAL; PROFESSIONAL NOT_ESTABLISHED",
-  "human_gate": "FLUX one-shot consumed and BASE gate passed. No action for this closure; new generations and unrelated RED gates remain separately controlled.",
-  "sync_status": "STATE_V73_PLUS_INDEX_V75_FLUX_FUNCTIONAL_QA_CLOSED_BOOT130",
-  "next_action": "NO_ACTION_FOR_KAEL_THIS_FLUX_CLOSURE",
+  "integrity_checkpoint": {
+    "checker": "tools/nexia_integrity_check.py",
+    "checker_blob_sha": "c8e06a7e9134234e43fdcd654ade8a5f8f9e2da8",
+    "repair_commit": "eef0e99b6fce24b894b263b3d517e17d257fd64e",
+    "prior_max_index_depth": 64,
+    "max_index_depth": 1024,
+    "bounded": true,
+    "ci_run_id": 38978651205,
+    "ci_job_id": 117234046036,
+    "ci_conclusion": "SUCCESS",
+    "checker_status": "WARN",
+    "errors": 0,
+    "warnings": 4,
+    "indexes_checked": 74,
+    "events_checked": 149,
+    "artifact_references_checked": 10,
+    "historical_artifact_blobs_checked": 2,
+    "corrected_historical_references": 2,
+    "remaining_warning_paths": [
+      "NEXIA_EVENT_INDEX_V41.json",
+      "events/EVT-2026-10-16-UGC002-V2-QA-001.json",
+      "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
+      "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json"
+    ]
+  },
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — INTEGRITY DEPTH BLOCKER CLOSED; FULL CHAIN VERIFIED ZERO ERRORS; FOUR HISTORICAL WARNINGS PRESERVED; FLUX CLOSED FUNCTIONAL",
+  "human_gate": "No action for integrity closure. Four historical warnings remain visible; exact anchored evidence is required before any correction. Other STATE v73 RED gates remain unchanged.",
+  "sync_status": "STATE_V73_PLUS_INDEX_V76_INTEGRITY_DEPTH_REPAIR_BOOT131",
+  "next_action": "RESUME_DYNAMIC_PRIORITY_AFTER_INTEGRITY_REPAIR; EXP-AUTO-001 external validation remains primary Reality Loop; VETA-AUTO-PRODUCT n8n runtime validation remains next GREEN system lane.",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -123,7 +151,7 @@
     "status": "CONTRA_V4_INTERNAL_READY_KAEL_IMPLEMENTATION_GATE_WORKANA_PENDING"
   },
   "integrity_debt": [
-    "Canonical checker INDEX_DEPTH_LIMIT=64; existing chain V74=73 indexes, V75=74. No global PASS claimed.",
-    "Historical missing V41 and UGC002 hash bindings preserved; not resolved by this closure."
+    "Canonical depth blocker repaired: MAX_INDEX_DEPTH 1024 and full current chain traversed with zero errors.",
+    "Overall checker status remains WARN due four historical REFERENCE_HASH_MISSING bindings: V41 plus three UGC002 events. Do not rewrite history; correct only with exact anchored evidence."
   ]
 }
