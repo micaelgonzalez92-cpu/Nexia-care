@@ -1,0 +1,29 @@
+{
+  "event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001",
+  "date": "2026-10-16",
+  "type": "AUTOMATION_CONTEXT_DRIFT_REPAIR",
+  "status": "VERIFIED_ACTIVE_PROMPTS_UPDATED",
+  "authority": "GREEN_INTERNAL_NO_PERMISSION_EXPANSION",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "problem": "Four enabled Nexia automations still referenced stale Contra V2-era state or lacked the new R&D intelligence/radar boundaries.",
+  "updated_automations": [
+    "NEXIA Control Tower",
+    "EXP-AUTO-001 Reality Probe",
+    "NEXIA Reality & Venture Radar",
+    "NEXIA System Evolution"
+  ],
+  "changes": [
+    "Replaced stale Contra V2 assumptions with Contra V4 internal-ready / not-publicly-applied truth",
+    "Added current Instagram removal, applications=0, paid pilots=0, identity/payout not verified boundaries where material",
+    "Referenced active NEXIA R&D Intelligence Operating Standard",
+    "Added explicit non-duplication boundaries relative to Radar Nexia semanal",
+    "Preserved all existing RED gates and EUR0/no-publication/no-contact/no-account/no-spend constraints"
+  ],
+  "verification": "Automation state was re-read after updates and all four target prompts reflected current boundaries.",
+  "financial_impact_eur": 0,
+  "authority_change": "NONE",
+  "external_action_executed": false,
+  "current_reality_gate": "KAEL_APPLY_FINAL_CONTRA_V4_PROFILE_MEDIA_COPY_AND_REMOVE_PERSONAL_INSTAGRAM",
+  "truth_boundary": "Prompt correction does not prove future automation execution quality or any external outcome; future runs require observed evidence."
+}
