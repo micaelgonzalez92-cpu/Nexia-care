@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-STATIC-READY-001",
+  "date": "2026-10-17",
+  "type": "SYSTEM_REPAIR_STATIC_PREPARATION",
+  "evidence_label": "HECHO_VERIFICADO",
+  "authority": "Explicit user request to build, statically verify and persist; no generation",
+  "canonical_state_version": 73,
+  "status": "READY_FOR_CURRENT_PURPOSE_STATIC_PREPARATION_RUNTIME_NOT_VERIFIED",
+  "root_cause": "Chained wrapper source-signature dependencies failed before benchmark; v0.8.5 signature not found reported in referenced conversation.",
+  "runner": {
+    "path": "tools/nexia_flux_base_b1_b2_one_shot_v1.ps1",
+    "git_blob_sha": "86f897de2d24e0652e2db89098322f2fc29b9b76",
+    "sha256": "85a1006e9b517e7f7e141f460c82da30271d8d5cb06a443ca3046bb5a4f6457c",
+    "self_contained": true,
+    "source_patching": false,
+    "nested_runners": false
+  },
+  "verification": {
+    "syntax": "PASS_POWERSHELL_AST",
+    "offline_checks_passed": 25,
+    "runner_executed": false,
+    "generation_calls": 0,
+    "report": "quality/flux-one-shot-v1-2026-10-17/STATIC_REVIEW.md",
+    "test": "quality/flux-one-shot-v1-2026-10-17/verify-offline.ps1"
+  },
+  "invariants": {
+    "seed": 20261016,
+    "model": "FLUX.2 Klein 4B Distilled",
+    "model_file": "flux-2-klein-4b-fp8.safetensors",
+    "sampler": "euler",
+    "scheduler": "Flux2Scheduler",
+    "steps": 4,
+    "cfg": 1,
+    "resolution": "1024x1024",
+    "batch_size": 1,
+    "max_generations": 3,
+    "no_retries": true,
+    "base_human_gate": "SIX_CONDITIONS_SI_ONLY",
+    "cost_eur": 0
+  },
+  "raw_result": {
+    "next_path": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
+    "created": false,
+    "prior_001_through_007": "PRESERVED",
+    "remote_write": "CREATE_ONLY_NO_OVERWRITE",
+    "local_lock": "CreateNew retained; consumed before any POST"
+  },
+  "truth_boundary": {
+    "generations_in_this_task": 0,
+    "historical_benchmark_generations_last_verified": 0,
+    "runtime": "NOT_VERIFIED",
+    "editing_quality": "NOT_VERIFIED",
+    "professional_capability": "NOT_ESTABLISHED",
+    "commit_proves": "PERSISTENCE_ONLY"
+  },
+  "decision": {
+    "optimal_command": "BUILD_VERIFY_PERSIST_STOP_NO_GENERATION",
+    "why": "Remove fragile meta-wrapper dependencies while preserving frozen experiment",
+    "action": "Prepare direct runner and continuity",
+    "cost_eur": 0,
+    "risk": "Static verification cannot prove frontend/model runtime",
+    "alternatives": [
+      "Continue patch chain rejected",
+      "Direct runner with embedded pinned workflow JSON selected"
+    ],
+    "kael_control": "Future explicit execution and six-condition BASE gate; no action requested now"
+  },
+  "next_action": "NO_GENERATION_THIS_TASK; separate future Kael execution gate",
+  "supersedes_runner": "tools/nexia_local_flux_edit_gate_v0_8_5.ps1",
+  "history_rewritten": false
+}

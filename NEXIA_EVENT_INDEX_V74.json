@@ -1,0 +1,25 @@
+{
+  "schema_version": 74,
+  "updated_at": "2026-10-17",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V73.json",
+    "verified_blob_sha": "eb9de52b97522a4337aa47d929a15ded144b6e2c"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-STATIC-READY-001",
+      "path": "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-STATIC-READY-001.json",
+      "verified_blob_sha": "35927b1a9d1c5dc71ccc15a8f4975787b52fa4f4"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-STATIC-READY-001",
+  "latest_event_path": "events/EVT-2026-10-17-FLUX-ONE-SHOT-V1-STATIC-READY-001.json",
+  "latest_event_blob_sha": "35927b1a9d1c5dc71ccc15a8f4975787b52fa4f4",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-FLUX-ONE-SHOT-V1-STATIC-READY-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V74 records direct self-contained ONE-SHOT V1 static readiness only. No generation or runtime validation in this task. Preserve V73 chain, STATE v73 and raw _001-_007. Raw _008 reserved for future actual execution, not created by preparation."
+}
