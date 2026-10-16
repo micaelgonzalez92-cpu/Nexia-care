@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-FLUX-BASE-DIM-DIAG-PASS-V083-REPAIR-001",
+  "timestamp": "2026-10-17",
+  "type": "FLUX_BASE_DIMENSION_COMPILE_DIAG_PASS_V083_REPAIR",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_DIMENSION_DIAG_V01_OUTPUT",
+  "observed": {
+    "comfy_ready": true,
+    "cdp_target": "http://127.0.0.1:8188/",
+    "dimension_candidate_count": 2,
+    "candidates": [
+      {
+        "node_id": "77:83",
+        "class_type": "EmptyFlux2LatentImage",
+        "width_link": ["77:84", 0],
+        "height_link": ["77:85", 0],
+        "width_source_class": "PrimitiveInt",
+        "width_source_value": 1024,
+        "height_source_class": "PrimitiveInt",
+        "height_source_value": 1024
+      },
+      {
+        "node_id": "77:93",
+        "class_type": "Flux2Scheduler",
+        "width_link": ["77:84", 0],
+        "height_link": ["77:85", 0],
+        "width_source_class": "PrimitiveInt",
+        "width_source_value": 1024,
+        "height_source_class": "PrimitiveInt",
+        "height_source_value": 1024
+      }
+    ],
+    "no_queue_submitted": true,
+    "generation_count": 0
+  },
+  "conclusion": {
+    "effective_base_resolution": "1024x1024",
+    "dimension_array_representation": "VERIFIED_COMFY_LINK_ARRAY_TO_PRIMITIVE_INT",
+    "blind_int_cast": "INVALID",
+    "linked_scalar_resolution_required": true
+  },
+  "repair": {
+    "runner": "tools/nexia_local_flux_edit_gate_v0_8_3.ps1",
+    "runner_blob_sha": "529f4a34003525ddf1397d99acb7d2ed4db48010",
+    "runner_commit": "c948b15b0fc41faaf9d6a11d8e79d1f70ce09bee",
+    "strategy": "Resolve compiled width/height link arrays through referenced PrimitiveInt source nodes, then enforce effective 1024x1024. Preserve distilled BASE route, 4-step/CFG1/Euler/model/seed asserts, prompts, workflow commit, generation cap and QA. Preserve raw results _001-_006 and write next attempt to _007.",
+    "experimental_contract_changed": false,
+    "generation_count_before_next_attempt": 0
+  },
+  "truth_boundary": "The compile-only diagnostic proves the effective BASE dimensions are 1024x1024 through linked PrimitiveInt nodes. No BASE/B1/B2 image has yet been generated. v0.8.3 is prepared and read back but not locally executed.",
+  "next_action": "KAEL_RUN_PINNED_V0_8_3_SAME_FROZEN_ONESHOT_BENCHMARK"
+}
