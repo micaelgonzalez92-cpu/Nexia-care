@@ -1,0 +1,25 @@
+{
+  "schema_version": 69,
+  "updated_at": "2026-10-17",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V68.json",
+    "verified_blob_sha": "e63c86876e38a0234d81107ac20583cf16e7f812"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-17-FLUX-EDIT-BRIDGE-V082-DIM-ARRAY-DIAG-001",
+      "path": "events/EVT-2026-10-17-FLUX-EDIT-BRIDGE-V082-DIM-ARRAY-DIAG-001.json",
+      "verified_blob_sha": "TO_VERIFY"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-17-FLUX-EDIT-BRIDGE-V082-DIM-ARRAY-DIAG-001",
+  "latest_event_path": "events/EVT-2026-10-17-FLUX-EDIT-BRIDGE-V082-DIM-ARRAY-DIAG-001.json",
+  "latest_event_blob_sha": "TO_VERIFY",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-FLUX-EDIT-BRIDGE-V082-DIM-ARRAY-DIAG-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V69 preserves v0.8.2 as a zero-generation compiled-precheck stop where width/height candidates are present but at least one effective value is System.Object[]. It forbids blind coercion and routes to a compile-only dimension-structure diagnostic before any further benchmark attempt."
+}
