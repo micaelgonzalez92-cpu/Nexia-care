@@ -1,0 +1,25 @@
+{
+  "schema_version": 60,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V59.json",
+    "verified_blob_sha": "3eb92819477ee441254e5e93f709e0602f6878d4"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-FLUX-EDIT-COMFY-IMPORT-DIAG-PASS-001",
+      "path": "events/EVT-2026-10-16-FLUX-EDIT-COMFY-IMPORT-DIAG-PASS-001.json",
+      "verified_blob_sha": "998fd6a002bc93bd947599f5baeaf1c638fb8810"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-FLUX-EDIT-COMFY-IMPORT-DIAG-PASS-001",
+  "latest_event_path": "events/EVT-2026-10-16-FLUX-EDIT-COMFY-IMPORT-DIAG-PASS-001.json",
+  "latest_event_blob_sha": "998fd6a002bc93bd947599f5baeaf1c638fb8810",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-16-FLUX-EDIT-COMFY-IMPORT-DIAG-PASS-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V60 verifies isolated SQLAlchemy SQLite and Comfy DB imports pass on the same embedded runtime and verifies a UTF-8 BOM in the failed GitHub payload. Full Comfy server startup remains the next bounded diagnostic; zero generations are preserved."
+}
