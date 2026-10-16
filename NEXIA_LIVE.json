@@ -1,7 +1,7 @@
 {
-  "schema_version": 50,
+  "schema_version": 51,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC ROUTE A STOPPED / LTX 2B 0.9.8 FP8 REPLACEMENT AUTHORIZED / WORK EXECUTION PENDING VERIFICATION / FRAMEPACK DEFERRED / AUTO-PRODUCT REFERENCE CONTRACT PASS / CONTRA V4 SEPARATE GATE",
+  "status": "ACTIVE / MODEL C / BOUNDED PORTFOLIO / UGC ROUTE A STOPPED / LTX 0.9.8 RUNTIME PASS VISUAL FAIL / LOCAL UGC MODEL HOPPING PAUSED / EXP-AUTO REALITY LOOP PRIORITY / AUTO-PRODUCT RUNTIME VALIDATION NEXT / FRAMEPACK DEFERRED",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -16,28 +16,63 @@
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
-    "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_CONTRA_WORKANA_AS_CHANNELS",
-    "lane_2": "VETA-AI-UGC-001_LTX_2B_0_9_8_FP8_REPLACEMENT_AUTHORIZED_WORK_PENDING",
-    "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_NOT_EXECUTED",
+    "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_EXTERNAL_VALIDATION_PRIORITY",
+    "lane_2": "VETA-AI-UGC-001_PAUSED_CURRENT_LOCAL_VIDEO_ARCHITECTURE_BOUNDARY_REACHED",
+    "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_VALIDATION_NEXT",
     "rule": "Do not activate a fourth material lane unless one lane is promoted, paused, falsified, or displaced by hard precedence."
   },
-  "ugc_video_002": {
-    "status": "ROUTE_A_STOPPED_FOR_CURRENT_PROFESSIONAL_OBJECTIVE",
-    "v1_score": 73,
-    "v2_score_provisional": 78,
-    "v3_score_provisional": 80,
-    "threshold": 85,
-    "professional_pass": false,
-    "route_decision": "STOP_ROUTE_A_KEEP_V1_V2_V3_AS_EXPERIMENT_EVIDENCE",
-    "next_architecture_requirement": "ADD_ACTION_VISUAL_CONTINUITY_PRODUCT_DEMONSTRATION_AND_STRONGER_MOTION_WITHOUT_UNCONTROLLED_COST_OR_ANATOMY_RISK"
-  },
-  "storage_capacity": {
-    "C_free_gib": 260.91,
-    "D_free_gib": 877.45,
-    "total_free_gib": 1138.36,
-    "C_drive": {"model": "CT480BX500SSD1", "media": "SSD", "bus": "SATA"},
-    "D_drive": {"model": "ST1000DM010-2EP102", "media": "HDD", "bus": "SATA"},
-    "immediate_storage_blocker": false
+  "ugc_video": {
+    "route_a": {
+      "status": "STOPPED_FOR_PROFESSIONAL_OBJECTIVE",
+      "v1_score": 73,
+      "v2_score_provisional": 78,
+      "v3_score_provisional": 80,
+      "threshold": 85,
+      "professional_pass": false
+    },
+    "ltx_0_9_8_gate": {
+      "status": "TECHNICAL_RUNTIME_PASS_VISUAL_FAIL_CLOSED",
+      "event": "events/EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001.json",
+      "artifact": "research/NEXIA_LOCAL_UGC_VIDEO_CAPABILITY_BOUNDARY_V1_2026-10-16.md",
+      "input": "accepted Phase A still A2",
+      "generation_submissions": 1,
+      "retries": 0,
+      "output_resolution": "448x800",
+      "frames": 97,
+      "fps": 24,
+      "duration_seconds": 4.042,
+      "generation_wall_seconds": 53.922,
+      "start_test_shutdown_seconds": 154.672,
+      "process_ram_peak_mib_sampled": 5767,
+      "system_ram_peak_mib_sampled": 14295,
+      "whole_gpu_vram_peak_mib_sampled": 11537,
+      "oom_recorded": false,
+      "runtime_errors_recorded": false,
+      "visual_result": "FAIL_SEVERE_PRODUCT_INTEGRITY_AND_CONTINUITY_PHYSICS",
+      "normal_speed_playback_completed": false,
+      "anatomy_pass": "NOT_VERIFIED",
+      "professional_capability": false
+    },
+    "cleanup": {
+      "old_ltx_0_9_5_final_absent": true,
+      "test_ltx_0_9_8_final_absent": true,
+      "both_ltx_checkpoints_absent": true,
+      "t5xxl_preserved_same_hash": true,
+      "comfyui_preserved": true,
+      "flux_preserved": true,
+      "ollama_modified": false,
+      "v1_v2_v3_evidence_preserved": true,
+      "pagefile_mib": 9728,
+      "pagefile_changed": false
+    },
+    "local_capability_boundary": "Current machine can run tested LTX 2B FP8 without OOM, but bounded output failed product integrity and physical continuity. Do not infer professional UGC capability from runtime feasibility.",
+    "decision": "PAUSE_ADDITIONAL_LOCAL_UGC_VIDEO_MODEL_HOPPING",
+    "reopen_conditions": [
+      "external buyer demand justifies stronger video capability investment",
+      "hardware capacity materially improves",
+      "materially stronger low-footprint model appears with credible product-consistency evidence",
+      "bounded cloud video route becomes available at acceptable cost and authority"
+    ]
   },
   "framepack_capacity": {
     "installation_status": "NOT_INSTALLED_NOT_AUTHORIZED",
@@ -46,46 +81,31 @@
     "ram_total_gib": 15.96,
     "pagefile_allocated_gib": 9.50,
     "operational_fit": "WEAK_HIGH_THRASH_AND_LATENCY_RISK_ON_16GB_RAM",
-    "decision": "DEFER_WHILE_LOWER_FOOTPRINT_LTX_ROUTE_IS_TESTED"
-  },
-  "next_video_architecture_research": {
-    "artifact": "research/NEXIA_LOW_FOOTPRINT_I2V_COMPARISON_V1_2026-10-16.md",
-    "status": "REPLACEMENT_AUTHORIZED_EXECUTION_PENDING_VERIFICATION",
-    "selected_candidate": "LTX_VIDEO_2B_0_9_8_DISTILLED_FP8",
-    "selected_file": "ltxv-2b-0.9.8-distilled-fp8.safetensors",
-    "remote_size_gb": 4.46,
-    "local_compatibility": "PASS_COMFYUI_0_39_0_NATIVE_LTXV_NODES_PRESENT",
-    "old_checkpoint_path": "C:/Users/User/.codex/.chatgpt-projects/g-p-6ac02e5d5b84819190b29f630d0ff0e5/outputs/creative-benchmark-2026-10-12/ComfyUI_windows_portable/ComfyUI/models/checkpoints/ltx-video-2b-v0.9.5.safetensors",
-    "old_checkpoint_size_gib": 5.905,
-    "t5xxl_path": "C:/Users/User/.codex/.chatgpt-projects/g-p-6ac02e5d5b84819190b29f630d0ff0e5/outputs/creative-benchmark-2026-10-12/ComfyUI_windows_portable/ComfyUI/models/text_encoders/t5xxl_fp16.safetensors",
-    "t5xxl_size_gib": 9.116,
-    "keep_t5xxl_fp16": true,
-    "authorization_event": "events/EVT-2026-10-16-LTX098-REPLACEMENT-AUTH-001.json",
-    "execution_surface": "WORK_LOCAL_PC_HANDOFF_CREATED",
-    "downloaded": "NOT_VERIFIED",
-    "old_ltx_deleted": "NOT_VERIFIED",
-    "runtime_verified": false,
-    "bounded_test": "ONE_3_5_SECOND_I2V_ACCEPTED_PHASE_A_STILL",
-    "next_gate": "VERIFY_WORK_POSTCONDITIONS_AND_TEST_RESULT",
-    "truth_limit": "Authorization and handoff are verified. Deletion, download, model load, runtime performance and output quality are not verified until evidence returns."
+    "decision": "DEFERRED_NO_CURRENT_JUSTIFICATION"
   },
   "auto_product": {
+    "status": "ACTIVE_RESEARCH_LANE_NEXT_RUNTIME_GATE",
     "reference_result": "PASS_NODE_REFERENCE_ONLY_NOT_N8N",
     "n8n_runtime": "NOT_EXECUTED",
-    "publication": false
+    "publication": false,
+    "next_action": "RUN_BOUNDED_N8N_RUNTIME_VALIDATION_IF_GREEN_OR_PREPARE_GATE"
   },
   "exp_auto_001": {
-    "status": "ALIVE_UNCHANGED",
+    "status": "ALIVE_EXTERNAL_VALIDATION_PRIORITY",
     "contra_v4": "INTERNAL_READY_PUBLIC_NOT_APPLIED",
-    "workana": "PENDING"
+    "workana": "PENDING",
+    "applications": 0,
+    "paid_pilots": 0,
+    "settled_revenue_eur": 0,
+    "additional_internal_polish": "CAPPED_PENDING_EXTERNAL_EVIDENCE"
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V50.json",
-    "previous_index": "NEXIA_EVENT_INDEX_V49.json",
-    "latest_verified_event_id": "EVT-2026-10-16-LTX098-REPLACEMENT-AUTH-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-LTX098-REPLACEMENT-AUTH-001.json",
-    "latest_verified_event_blob_sha": "d4637e385626b9017e3e78ee656f03fd163cc892"
+    "active_index": "NEXIA_EVENT_INDEX_V51.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V50.json",
+    "latest_verified_event_id": "EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001.json",
+    "latest_verified_event_blob_sha": "7cc3b5f3df9cf71577990e1bedbd77bc8f139f89"
   },
   "economics": {
     "revenue_eur": 0,
@@ -94,20 +114,18 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "ltx098_replacement_test": "AUTHORIZED_FOR_EXACT_BOUNDED_SCOPE",
-    "additional_local_deletion": "NOT_AUTHORIZED",
-    "additional_model_download": "NOT_AUTHORIZED",
+    "ugc_local_video_additional_model_or_download": "NOT_JUSTIFIED_REQUIRES_NEW_EVIDENCE_AND_EXPLICIT_KAEL_GATE",
     "framepack_or_pagefile_change": "NOT_AUTHORIZED",
     "contra_v4_public_edit": "KAEL_REQUIRED_SEPARATE_GATE",
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Kael explicitly authorized replacing only the verified old LTX 0.9.5 checkpoint with the official LTX 2B v0.9.8 distilled FP8 checkpoint and running one bounded 3-5 second local I2V test. A Work local-PC handoff was created. Execution results have not yet been verified in this chat.",
+    "last_completed_verified_action": "Authorized LTX 0.9.8 bounded test completed according to Work result: runtime completed without OOM, but severe product mutation and floating-object continuity failures caused visual FAIL. The test checkpoint was removed; both LTX checkpoints are absent; shared dependencies and evidence were preserved.",
     "human_action_required_now": false,
-    "pending_human_action": "NONE_IN_THIS_CHAT_AWAIT_WORK_RESULT",
-    "surface": "Work / local PC",
-    "resume_from": "When Work returns, verify old checkpoint absence, new checkpoint presence/size/hash if available, t5xxl preservation, exactly one bounded I2V test, wall time, RAM/VRAM peaks, output duration and visual hard-fail/result evidence before promoting or rejecting the route.",
-    "truth_limit": "Do not claim deletion, download, installation, successful generation or quality PASS until postconditions are directly verified."
+    "pending_human_action": "NONE",
+    "surface": "Chat / internal prioritization",
+    "resume_from": "Do not continue local UGC model hopping. Reprioritize WIP toward EXP-AUTO-001 external validation and VETA-AUTO-PRODUCT-001 n8n runtime validation. Reopen UGC only on new material evidence or capacity change.",
+    "truth_limit": "Do not claim professional UGC capability, anatomy PASS, normal-speed temporal PASS, buyer demand, sale, payment or profit without direct evidence."
   },
-  "next_action": "AWAIT_WORK_LTX098_REPLACEMENT_TEST_RESULT_AND_VERIFY"
+  "next_action": "NEXIA_REPRIORITIZE_TO_EXP_AUTO_EXTERNAL_VALIDATION_AND_AUTO_PRODUCT_RUNTIME"
 }
