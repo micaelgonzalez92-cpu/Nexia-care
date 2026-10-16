@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FRAMEPACK-PAGEFILE-MEDIA-001",
+  "timestamp": "2026-10-16",
+  "type": "VIDEO_ARCHITECTURE_PAGEFILE_MEDIA_CHECK",
+  "state_version": 73,
+  "status": "PAGEFILE_EXACT_CONFIRMED_C_SSD_D_HDD_FRAMEPACK_OPERATIONAL_FIT_WEAK",
+  "candidate": "FramePack official",
+  "observed": {
+    "pagefile_path": "C:\\pagefile.sys",
+    "pagefile_allocated_mib": 9728,
+    "pagefile_allocated_gib": 9.50,
+    "pagefile_current_usage_mib": 121,
+    "pagefile_peak_usage_mib": 124,
+    "C_drive_model": "CT480BX500SSD1",
+    "C_bus_type": "SATA",
+    "C_media_type_external_verification": "SSD",
+    "D_drive_model": "ST1000DM010-2EP102",
+    "D_bus_type": "SATA",
+    "D_media_type_external_verification": "HDD"
+  },
+  "assessment": {
+    "C_is_preferred_for_ai_runtime_if_any": true,
+    "D_is_not_preferred_for_framepack_runtime": true,
+    "pagefile_9_5_gib_with_15_96_gib_ram": "LIKELY_INSUFFICIENT_FOR_RELIABLE_FRAMEPACK_RUNTIME",
+    "framepack_technical_possibility": "PLAUSIBLE",
+    "framepack_operational_fit": "WEAK_HIGH_THRASH_AND_LATENCY_RISK",
+    "pagefile_change_executed": false,
+    "framepack_installed": false,
+    "deletion_executed": false
+  },
+  "evidence_boundary": "Community reports in the upstream FramePack repository show multiple 16 GiB RAM systems requiring substantially larger pagefiles to load/generate, including reports around 50 GiB, and a same-class RTX 3060 12GB + 16GB RAM system reporting approximately five hours for a five-second render. These are community observations, not guarantees for this machine.",
+  "decision": "DO_NOT_MODIFY_PAGEFILE_OR_INSTALL_FRAMEPACK_YET; COMPARE_LOWER_FOOTPRINT_EXISTING_COMFYUI_VIDEO_ROUTE_FIRST",
+  "next_action": "COMPARE_CURRENT_LTX_2B_DISTILLED_FP8_MODEL_SWAP_AND_OTHER_LOW_FOOTPRINT_I2V_OPTIONS_BEFORE_ANY_SYSTEM_CHANGE"
+}
