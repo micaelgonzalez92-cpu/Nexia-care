@@ -1,0 +1,26 @@
+{
+  "schema_version": 37,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V36.json",
+    "verified_blob_sha": "43ef540746cfded561b459999c85329f2401b44c"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001",
+      "path": "events/EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001.json",
+      "verified_blob_sha": "0f001688d4808337f4b3b68bc5f1b723bbcbcc33"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001",
+  "latest_event_path": "events/EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001.json",
+  "latest_event_blob_sha": "0f001688d4808337f4b3b68bc5f1b723bbcbcc33",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-FFMPEG-DEPENDENCY-001",
+  "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
+  "latest_material_automation_event_id": "EVT-2026-10-16-AUTOMATION-CONTEXT-DRIFT-REPAIR-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V37 records that UGC-VIDEO-002 Route A is blocked by an uninstalled FFmpeg dependency, not failed; installation remains a separate RED Kael gate."
+}
