@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-LTX098-REPLACEMENT-AUTH-001",
+  "timestamp": "2026-10-16",
+  "type": "LTX098_REPLACEMENT_TEST_AUTHORIZATION",
+  "state_version": 73,
+  "status": "AUTHORIZED_NOT_YET_VERIFIED_EXECUTED",
+  "authorization_source": "KAEL_EXPLICIT_CHAT_APPROVAL",
+  "authorized_scope": {
+    "delete_only": "C:/Users/User/.codex/.chatgpt-projects/g-p-6ac02e5d5b84819190b29f630d0ff0e5/outputs/creative-benchmark-2026-10-12/ComfyUI_windows_portable/ComfyUI/models/checkpoints/ltx-video-2b-v0.9.5.safetensors",
+    "download_only": "official Lightricks LTX-Video 2B v0.9.8 distilled FP8 checkpoint",
+    "target_file": "ltxv-2b-0.9.8-distilled-fp8.safetensors",
+    "bounded_test": "one local 3-5 second image-to-video generation using one already accepted Phase A still",
+    "cash_eur": 0,
+    "publication": false,
+    "external_api": false
+  },
+  "must_keep": [
+    "t5xxl_fp16.safetensors",
+    "ComfyUI",
+    "FLUX stack",
+    "Ollama",
+    "V1/V2/V3 evidence"
+  ],
+  "must_measure": [
+    "model_file_presence_and_size",
+    "wall_time",
+    "RAM_peak",
+    "VRAM_peak",
+    "output_duration",
+    "anatomy_or_product_geometry_hard_fail",
+    "temporal_coherence",
+    "product_action_intelligibility"
+  ],
+  "stop_conditions": [
+    "OOM",
+    "system_instability",
+    "severe anatomy failure",
+    "severe product mutation"
+  ],
+  "out_of_scope": [
+    "FramePack installation",
+    "pagefile changes",
+    "deleting t5xxl",
+    "new assets",
+    "paid APIs",
+    "publication",
+    "external contact"
+  ],
+  "execution_surface": "WORK_LOCAL_PC_HANDOFF_CREATED",
+  "truth_boundary": "Authorization is verified. Deletion, download and test results are not yet verified in this chat and must not be claimed until postconditions are observed.",
+  "next_action": "AWAIT_WORK_RESULT_AND_VERIFY_POSTCONDITIONS"
+}
