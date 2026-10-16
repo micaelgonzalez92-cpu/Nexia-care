@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-UGC002-ROUTE-A-TECHNICAL-ASSEMBLY-001",
+  "timestamp": "2026-10-16",
+  "timestamp_precision": "date_only",
+  "type": "UGC002_ROUTE_A_TECHNICAL_ASSEMBLY",
+  "state_version": 73,
+  "status": "TECHNICAL_ASSEMBLY_COMPLETE_PROFESSIONAL_QA_PENDING",
+  "experiment": "UGC-VIDEO-002",
+  "route": "A_ANATOMY_MINIMIZED_DETERMINISTIC",
+  "authority": "KAEL_LOCAL_EXECUTION_USER_REPORTED_OUTPUT",
+  "evidence": {
+    "patched_runner_marker": "denom = max(frames - 1, 1)",
+    "dry_run_status": "DRY_RUN_PASS",
+    "ffmpeg_path": "C:\\Users\\User\\AppData\\Local\\Microsoft\\WinGet\\Links\\ffmpeg.EXE",
+    "ffprobe_path": "C:\\Users\\User\\AppData\\Local\\Microsoft\\WinGet\\Links\\ffprobe.EXE",
+    "assembly_status": "TECHNICAL_ASSEMBLY_COMPLETE_NOT_PROFESSIONALLY_ADJUDICATED",
+    "wall_seconds": 28.76,
+    "output_path": "C:\\Users\\User\\NEXIA_UGC_VIDEO_002_ROUTE_A_SPEC.mp4",
+    "probe_duration_seconds": 24.033333,
+    "probe_size_bytes": 7978244,
+    "cash_spend_eur": 0,
+    "cloud_api_used": false,
+    "audio": "NONE_CAPTIONED_FIRST_PROOF"
+  },
+  "classification": "TECHNICAL_PASS_ONLY",
+  "professional_qa": "PENDING",
+  "professional_pass": false,
+  "truth_boundary": "Technical assembly success does not establish professional visual quality, buyer demand, client acceptance, sale, payment, contribution, or profit.",
+  "next_action": "KAEL_UPLOAD_OR_ATTACH_RENDER_FOR_NORMAL_SPEED_PROFESSIONAL_QA"
+}
