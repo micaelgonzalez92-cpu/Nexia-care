@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V07-BASE-ROUTE-MISMATCH-V08-REPAIR-001",
+  "timestamp": "2026-10-16",
+  "type": "FLUX_ONE_SHOT_V07_BASE_ROUTE_PRECHECK_STOP_V08_REPAIR",
+  "state_version": 73,
+  "evidence_source": "KAEL_LOCAL_V07_CONSOLE_PLUS_REMOTE_RAW_RESULT_004_PLUS_PINNED_RUNNER_AND_UPSTREAM_TEMPLATE_REVIEW",
+  "observed": {
+    "wrapper": "tools/nexia_local_flux_edit_gate_v0_7.ps1",
+    "patch_verify": "PASS",
+    "selected_cdp_target": "http://127.0.0.1:8188/",
+    "failure_stage": "COMPILE_BASE_PRECHECK",
+    "failure": "Unexpected Flux2Scheduler steps: 20",
+    "generation_count": 0,
+    "base_gate_reached": false,
+    "writeback_console": "PASS_GH_API_READBACK_MATCH",
+    "remote_raw_result": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_004.json",
+    "remote_raw_result_blob_sha": "6597c4aeb1dae4dcb25da8f733063b75f1df79ab",
+    "cost_eur": 0
+  },
+  "prereg_rule": {
+    "expected_distilled_path": "4 steps / CFG 1 / Euler / Flux2Scheduler",
+    "material_difference_stop_before_generation": true,
+    "silent_normalization_forbidden": true
+  },
+  "root_cause": {
+    "classification": "VERIFIED_BASE_SUBGRAPH_SELECTION_MISMATCH",
+    "runner_behavior": "BASE compilation selects top-level node 75 then substitutes model filenames.",
+    "upstream_mapping": {
+      "node_75_subgraph_id": "7b34ab90-36f9-45ba-a665-71d418f0df18",
+      "node_75_subgraph_name": "Text to Image (FLUX.2 Klein 4B)",
+      "node_77_subgraph_id": "a67caa28-5f85-4917-8396-36004960dd30",
+      "node_77_subgraph_name": "Text to Image (FLUX.2 Klein 4B Distilled)"
+    },
+    "interpretation": "The runner used the non-distilled BASE subgraph, whose effective compiled scheduler remained 20 steps, while merely replacing its model widget with the distilled model. The pinned official template already contains a distinct distilled BASE subgraph, so the precheck correctly stopped before generation."
+  },
+  "repair": {
+    "runner": "tools/nexia_local_flux_edit_gate_v0_8.ps1",
+    "runner_blob_sha": "907bffd36e388f0b63d4a4b983a0e6a2a2f78851",
+    "runner_commit": "7833577eae8acfc863176f8d8e4769473117f8cc",
+    "strategy": "Build on v0.7 repairs; disable node75/SaveImage9 for BASE; enable official distilled node77/SaveImage78; leave the frozen 4-step/CFG1/Euler precheck unchanged; preserve raw results _001-_004; write next attempt to _005.",
+    "experimental_contract_changed": false,
+    "prompts_changed": false,
+    "seed_changed": false,
+    "model_names_changed": false,
+    "workflow_commit_changed": false,
+    "generation_cap_changed": false,
+    "qa_changed": false
+  },
+  "truth_boundary": "No Base/B1/B2 image has yet been generated. v0.8 is prepared and read back but not executed. The first actual generation remains gated by the unchanged compiled-prompt precheck.",
+  "next_action": "KAEL_RUN_PINNED_V0_8_SAME_FROZEN_ONESHOT_BENCHMARK"
+}
