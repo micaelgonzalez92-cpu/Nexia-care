@@ -1,0 +1,25 @@
+{
+  "schema_version": 57,
+  "updated_at": "2026-10-16",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V56.json",
+    "verified_blob_sha": "5833872136f54ff503544ff75857f8e3d4666b18"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V02-SELFTEST-FAIL-V03-REPAIR-001",
+      "path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V02-SELFTEST-FAIL-V03-REPAIR-001.json",
+      "verified_blob_sha": "d6668623b9c1d347b91703774642fd285161cd0f"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V02-SELFTEST-FAIL-V03-REPAIR-001",
+  "latest_event_path": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-V02-SELFTEST-FAIL-V03-REPAIR-001.json",
+  "latest_event_blob_sha": "d6668623b9c1d347b91703774642fd285161cd0f",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-16-FLUX-EDIT-BRIDGE-V02-SELFTEST-FAIL-V03-REPAIR-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V57 preserves the v0.2 wrapper self-test failure as zero-generation evidence and promotes only the local bootstrap wrapper to v0.3. The preregistered Base/B1/B2 experiment remains unchanged and not yet executed."
+}
