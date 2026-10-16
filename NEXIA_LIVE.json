@@ -1,7 +1,7 @@
 {
-  "schema_version": 31,
+  "schema_version": 32,
   "updated_at": "2026-10-16",
-  "status": "ACTIVE / MODEL C / LIVE HUD DEFAULT / CONTRA V4 INTERNAL READY / KAEL PUBLIC-EDIT GATE",
+  "status": "ACTIVE / MODEL C / LIVE HUD DEFAULT / R&D INTELLIGENCE STANDARD ACTIVE / CONTRA V4 INTERNAL READY / KAEL PUBLIC-EDIT GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -14,20 +14,26 @@
     "default_operational_format": "NEXIA_LIVE_HUD",
     "artifact": "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md",
     "artifact_blob_sha": "330d3a6544382c8ad88c7b79a311aa8920815f5b",
-    "adoption_event": "events/EVT-2026-10-16-LIVE-HUD-ADOPTED-001.json",
     "detail_policy": "VISUAL_SUMMARY_FIRST_TECHNICAL_DETAIL_ON_DEMAND_OR_WHEN_MATERIAL",
     "truth_authority_unchanged": true
   },
+  "research_intelligence_standard": {
+    "status": "ACTIVE_READY_FOR_CURRENT_PURPOSE",
+    "artifact": "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
+    "artifact_blob_sha": "8a4324b0e6e43aef475cb53df77eafdbc2c99685",
+    "adoption_event": "events/EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001.json",
+    "default_loop": "CLASSIFY->PRIMARY_SOURCE->INDEPENDENT_COUNTERCHECK->REPRODUCE_OR_COMPUTE->LABEL_EVIDENCE->COMPARE_TO_NEXIA->IMPLEMENT_TEST_RESERVE_DISCARD->CAPTURE->REVERIFY",
+    "broad_tool_collecting": "STOPPED_UNLESS_NAMED_DECISION_OR_CAPABILITY_GAP"
+  },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V31.json",
-    "active_index_blob_sha": "e18ec19a9adb0c7d009eb0236962f499f719301a",
-    "previous_index": "NEXIA_EVENT_INDEX_V30.json",
-    "latest_verified_event_id": "EVT-2026-10-16-LIVE-HUD-ADOPTED-001",
-    "latest_verified_event_path": "events/EVT-2026-10-16-LIVE-HUD-ADOPTED-001.json",
-    "latest_verified_event_blob_sha": "cd4ed28889af62772d607938f52f12ffd1d8fe3b",
+    "active_index": "NEXIA_EVENT_INDEX_V32.json",
+    "previous_index": "NEXIA_EVENT_INDEX_V31.json",
+    "latest_verified_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001",
+    "latest_verified_event_path": "events/EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001.json",
+    "latest_verified_event_blob_sha": "a21ad4ba9d4c3138cb02a07ffa5316163704812d",
     "latest_material_business_event_id": "EVT-2026-10-15-CONTRA-V4-READY-001",
-    "latest_material_governance_event_id": "EVT-2026-10-16-LIVE-HUD-ADOPTED-001"
+    "latest_material_governance_event_id": "EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001"
   },
   "readiness": {
     "truth": "ACTIVE_REQUIRES_CONTINUOUS_RECONCILIATION",
@@ -76,7 +82,7 @@
     "client_production_deployment": "NOT_EXECUTED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "NEXIA LIVE HUD standard persisted, read back and indexed in V31; intelligence intake remains closed; Contra V4 remains internally ready and not publicly applied.",
+    "last_completed_verified_action": "NEXIA R&D Intelligence Operating Standard V1 persisted, read back and indexed in V32; LIVE HUD remains default; Contra V4 remains internally ready and not publicly applied.",
     "human_action_required_now": true,
     "pending_human_action": "KAEL_APPLY_FINAL_CONTRA_V4_PROFILE_MEDIA_COPY_AND_REMOVE_PERSONAL_INSTAGRAM",
     "surface": "Contra / desktop recommended",
@@ -84,14 +90,16 @@
       "NEXIA_BOOT.json",
       "NEXIA_STATE.json",
       "NEXIA_LIVE.json",
-      "NEXIA_EVENT_INDEX_V31.json",
-      "events/EVT-2026-10-16-LIVE-HUD-ADOPTED-001.json",
+      "NEXIA_EVENT_INDEX_V32.json",
+      "events/EVT-2026-10-16-RD-INTELLIGENCE-STANDARD-001.json",
+      "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
+      "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md",
       "events/EVT-2026-10-15-CONTRA-V4-READY-001.json",
       "commercial/EXP-AUTO-001_CONTRA_KAEL_ACTION_CARD_V1_2026-10-15.md",
       "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md"
     ],
-    "resume_from": "Wait for Kael to apply Contra V4 public changes; then verify the public result against the 15-point runbook before advancing.",
-    "truth_limit": "Do not claim public Contra V4 implementation, buyer demand, client acceptance, production deployment, persistent 24x7 operation, payment or profit without direct evidence."
+    "resume_from": "Apply the R&D source router to new material research. Wait for Kael to apply Contra V4 public changes; then verify the public result against the 15-point runbook before advancing.",
+    "truth_limit": "Do not claim candidate tools installed/operational, public Contra V4 implementation, buyer demand, client acceptance, production deployment, persistent 24x7 operation, payment or profit without direct evidence."
   },
   "next_action": "KAEL_APPLY_CONTRA_V4_THEN_NEXIA_VERIFY_PUBLIC_POSTCONDITION"
 }
