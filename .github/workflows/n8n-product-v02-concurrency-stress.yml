@@ -1,14 +1,10 @@
-name: n8n Product V0.2 Concurrency Stress
+name: n8n Product V0.2.1 Serialized Concurrency Stress Carrier
 
 on:
   push:
     branches: [main]
     paths:
-      - 'experiments/auto-product-v02/bootstrap-v02.json'
-      - 'experiments/auto-product-v02/guard-v02.json'
-      - 'experiments/auto-product-v02/audit-v02.json'
-      - 'experiments/auto-product-v02/concurrency_stress_v02.js'
-      - 'experiments/auto-product-v02/CONCURRENCY_STRESS_PREREG_2026-10-17.md'
+      - 'experiments/auto-product-v021/**'
       - '.github/workflows/n8n-product-v02-concurrency-stress.yml'
   workflow_dispatch:
 
@@ -16,11 +12,11 @@ permissions:
   contents: read
 
 concurrency:
-  group: n8n-product-v02-concurrency-${{ github.ref }}
+  group: n8n-product-v021-serialized-carrier-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  concurrency-stress:
+  serialized-stress:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
@@ -32,28 +28,29 @@ jobs:
         with:
           node-version: '24.21.0'
 
-      - name: Verify frozen stress contract is present
+      - name: Verify frozen repair contract
         run: |
           set -euo pipefail
-          test -f experiments/auto-product-v02/CONCURRENCY_STRESS_PREREG_2026-10-17.md
-          grep -F 'FROZEN_BEFORE_STRESS_OUTPUTS' experiments/auto-product-v02/CONCURRENCY_STRESS_PREREG_2026-10-17.md
-          grep -F 'Concurrency per burst: 12 requests.' experiments/auto-product-v02/CONCURRENCY_STRESS_PREREG_2026-10-17.md
+          grep -F 'FROZEN_BEFORE_V021_STRESS_OUTPUTS' experiments/auto-product-v021/CONCURRENCY_STRESS_PREREG_2026-10-17.md
+          grep -F 'N8N_CONCURRENCY_PRODUCTION_LIMIT=1' experiments/auto-product-v021/SERIALIZED_PROFILE_DESIGN_2026-10-17.md
           node experiments/auto-product-v02/test_static_v02.js
 
       - name: Show pinned n8n version
         run: npx --yes n8n@2.42.6 --version
 
-      - name: Run bounded concurrent replay/dedup stress in real n8n
+      - name: Run V0.2.1 serialized stress in real n8n
         env:
           N8N_ENABLED_MODULES: 'data-table'
-          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-product-v02-concurrency-user
+          N8N_USER_FOLDER: ${{ runner.temp }}/n8n-product-v021-user
           N8N_PORT: '5678'
           N8N_HOST: '127.0.0.1'
           N8N_PROTOCOL: 'http'
           N8N_SECURE_COOKIE: 'false'
           N8N_DIAGNOSTICS_ENABLED: 'false'
           N8N_PERSONALIZATION_ENABLED: 'false'
-          N8N_LOG: ${{ runner.temp }}/n8n-product-v02-concurrency.log
+          N8N_CONCURRENCY_PRODUCTION_LIMIT: '1'
+          NEXIA_EXPECTED_SERIAL_LIMIT: '1'
+          N8N_LOG: ${{ runner.temp }}/n8n-product-v021.log
           BASE_URL: http://127.0.0.1:5678
           BOOTSTRAP_WORKFLOW_ID: nexia-lead-intake-replay-bootstrap-v02-candidate
           BOOTSTRAP_PATH: lead-intake-replay-bootstrap-v02
@@ -63,6 +60,9 @@ jobs:
           AUDIT_PATH: lead-intake-replay-audit-v02
         run: |
           set -euo pipefail
+          test "$N8N_CONCURRENCY_PRODUCTION_LIMIT" = '1'
+          test "$NEXIA_EXPECTED_SERIAL_LIMIT" = '1'
+          echo "VERIFIED_TEST_ENV: N8N_CONCURRENCY_PRODUCTION_LIMIT=$N8N_CONCURRENCY_PRODUCTION_LIMIT"
           mkdir -p "$N8N_USER_FOLDER"
 
           for f in experiments/auto-product-v02/bootstrap-v02.json experiments/auto-product-v02/guard-v02.json experiments/auto-product-v02/audit-v02.json; do
@@ -120,9 +120,9 @@ jobs:
           done
           curl --max-time 2 -fsS "$BASE_URL/healthz/readiness" >/dev/null
           all_webhooks_registered
-          echo "PASS: n8n PID=$N8N_PID ready with all V0.2 webhooks registered"
+          echo "PASS: serialized-profile n8n PID=$N8N_PID ready"
 
-          node experiments/auto-product-v02/concurrency_stress_v02.js
+          node experiments/auto-product-v021/concurrency_stress_v021.js
 
           cleanup
           trap - EXIT
@@ -136,4 +136,4 @@ jobs:
               connection.settimeout(2)
               assert connection.connect_ex(('127.0.0.1', int(os.environ['N8N_PORT']))) != 0, 'n8n TCP port still open after cleanup'
           PY
-          echo 'PASS: concurrency stress runtime cleaned up'
+          echo 'PASS: V0.2.1 serialized stress runtime cleaned up'
