@@ -1,0 +1,25 @@
+{
+  "schema_version": 77,
+  "updated_at": "2026-10-17",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V76.json",
+    "verified_blob_sha": "77236455def939f666ba78c0d4d0a60abdc7897e"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001",
+      "path": "events/EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001.json",
+      "verified_blob_sha": "cdbcf9e7727301ae0fae52aeb0bebb894c4712c9"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001",
+  "latest_event_path": "events/EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001.json",
+  "latest_event_blob_sha": "cdbcf9e7727301ae0fae52aeb0bebb894c4712c9",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "V77 captures AUTO-PRODUCT V0.2 bounded sequential runtime PASS and frozen concurrency stress FAIL. Candidate remains experimental and is not promoted; product v0.1 and STATE v73 remain unchanged."
+}
