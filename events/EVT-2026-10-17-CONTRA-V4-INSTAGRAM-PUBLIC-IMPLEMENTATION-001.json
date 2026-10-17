@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001",
+  "timestamp": "2026-10-17",
+  "type": "AUTHORIZED_PUBLIC_PROFILE_IMPLEMENTATION",
+  "evidence_label": "HECHO_VERIFICADO",
+  "state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "authorization": {
+    "source": "Explicit user instructions in current conversation",
+    "scope": "Implement Contra V4 works, posts and service; create Nexia Instagram and publish posts related to these works. User completed account registration/authentication and confirmed handle nexia.gram. Keep four languages fluent.",
+    "authority_effect": "TASK_SPECIFIC_ONLY; no broader spending/contact/production/KYC authorization"
+  },
+  "contra": {
+    "profile": "https://contra.com/mica_gr92_yag11irp",
+    "title": "Reliable Lead Intake & CRM Data Quality Automation",
+    "bio": "I build reliable lead-intake and CRM data-quality automations with n8n and JavaScript. My workflows validate, normalize and deduplicate inbound data, route uncertain cases to human review, and add QA checks before sensitive actions. My portfolio shows internal technical proofs for persistent deduplication, fail-safe processing and workflow regression testing.",
+    "cover_and_photo": "Already implemented by user; preserved, visually verified; remote byte identity not established",
+    "rate": "$50–$75/hr",
+    "languages": "English, Spanish, French, Italian — fluent, explicitly confirmed by user",
+    "timezone": "Platform option (GMT+1) Central European Time (CET); DST behavior not verified",
+    "works": [
+      {
+        "order": 1,
+        "title": "n8n Lead Intake & Human Review Workflow",
+        "url": "https://contra.com/p/beg36Mvl-n8n-lead-intake-and-human-review-workflow",
+        "asset": "01_lead_intake.png"
+      },
+      {
+        "order": 2,
+        "title": "Persistent Lead Deduplication with n8n Data Tables",
+        "url": "https://contra.com/p/LRerABqX-persistent-lead-deduplication-with-n8n-data-tables",
+        "asset": "02_persistent_dedup.png"
+      },
+      {
+        "order": 3,
+        "title": "Fail-Safe Lead Processing Engine — Node.js",
+        "url": "https://contra.com/p/k6leM7RM-fail-safe-lead-processing-engine-nodejs",
+        "asset": "03_fail_safe.png"
+      },
+      {
+        "order": 4,
+        "title": "Automated n8n Workflow QA & Regression Checks",
+        "url": "https://contra.com/p/BPZ2EOUL-automated-n8n-workflow-qa-and-regression-checks",
+        "asset": "04_workflow_qa.png"
+      }
+    ],
+    "order_verified_after_reload": true,
+    "service": {
+      "title": "Lead Intake Reliability Sprint",
+      "url": "https://contra.com/s/gOAMEgqW-lead-intake-reliability-sprint",
+      "status": "PUBLISHED_VERIFIED",
+      "price": "Contact for pricing",
+      "duration": "1 week platform display; explicitly indicative; scope/timing/price agreed before starting",
+      "faqs": 3,
+      "examples_linked": 3,
+      "platform_example_limit": 3
+    },
+    "post": {
+      "url": "https://contra.com/community/zdy0E0uW",
+      "status": "PUBLISHED_VERIFIED",
+      "media": "01_lead_intake.png",
+      "featured_as_work": false
+    },
+    "instagram_link": "https://www.instagram.com/nexia.gram/",
+    "personal_instagram": "Absent at first read; not removed by agent this turn",
+    "products": "EMPTY_VERIFIED; no validated packaged product promoted merely to fill tab",
+    "reviews": "EMPTY_VERIFIED; request-first-review UI; no fabricated testimonials or review requests sent",
+    "identity": "About still invites wallet setup for identity verification; completion not established",
+    "payout": "NOT_VERIFIED"
+  },
+  "instagram": {
+    "handle": "nexia.gram",
+    "profile": "https://www.instagram.com/nexia.gram/",
+    "chrome_authentication": "VERIFIED_OWNER_CONTROLS",
+    "display_name": "Nexia | Automatización fiable",
+    "avatar": "Own code-native Nexia N mark, uploaded and verified",
+    "bio": "Automatización fiable · n8n · calidad de datos.\nPruebas internas; revisión humana.\nPortfolio: contra.com/mica_gr92_yag11irp",
+    "posts": [
+      {
+        "work": 1,
+        "url": "https://www.instagram.com/p/DelxVheDG50/"
+      },
+      {
+        "work": 2,
+        "url": "https://www.instagram.com/p/DelxckqDFe_/"
+      },
+      {
+        "work": 3,
+        "url": "https://www.instagram.com/p/DelxoJWjIaB/"
+      },
+      {
+        "work": 4,
+        "url": "https://www.instagram.com/p/DelxwGWDFhW/"
+      }
+    ],
+    "format": "Original 4:3, no crop of proof bars; captions in Spanish; custom alt text",
+    "upload_failure": "First work3 PNG attempt rejected Media type invalid; verified only two posts before retry; JPEG same dimensions/content succeeded. Work4 used JPEG.",
+    "mobile_access": "User reports cannot log in; not in mobile account selector",
+    "clickable_external_link": "PENDING_MOBILE_ONLY_PLATFORM_RESTRICTION; plain portfolio address provided in bio",
+    "professional_account": "NOT_CONFIGURED"
+  },
+  "verification": "Public owner UI after publication and reload; four Instagram post permalinks, four Contra works and stored order; service and FAQs; full Contra post body; social link readback after reload. Local screenshots and text snapshots retained in task outputs.",
+  "financial_impact_eur": 0,
+  "commercial_results": "NO paid pilots, clients, commercial production or settled revenue established by this publication",
+  "truth_limit": "Internal technical proofs with synthetic data; no invented clients, testimonials, production results, concurrency guarantees or SLA.",
+  "next_action": "Resolve mobile access for nexia.gram, then add clickable portfolio link; no need to repeat published works or posts."
+}

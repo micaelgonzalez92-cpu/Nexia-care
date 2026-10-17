@@ -1,7 +1,7 @@
 {
-  "schema_version": 58,
+  "schema_version": 59,
   "updated_at": "2026-10-17",
-  "status": "ACTIVE_MODEL_C_AUTO_PRODUCT_V021_BOUNDED_SERIALIZED_PASS_RECONCILED_CONTRA_HUMAN_GATE",
+  "status": "ACTIVE_MODEL_C_CONTRA_V4_PUBLIC_AND_NEXIA_INSTAGRAM_FOUR_POSTS_VERIFIED",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -151,12 +151,101 @@
   },
   "exp_auto_001": {
     "status": "ALIVE_EXTERNAL_VALIDATION_PRIORITY",
-    "contra_v4": "INTERNAL_READY_PUBLIC_NOT_APPLIED",
+    "contra_v4": "PUBLIC_FOUR_WORKS_SERVICE_AND_POST_VERIFIED",
     "workana": "PENDING",
     "applications": 0,
     "paid_pilots": 0,
     "settled_revenue_eur": 0,
-    "additional_internal_polish": "CAPPED_PENDING_EXTERNAL_EVIDENCE"
+    "additional_internal_polish": "CAPPED_PENDING_EXTERNAL_EVIDENCE",
+    "public_implementation": {
+      "profile": "https://contra.com/mica_gr92_yag11irp",
+      "title": "Reliable Lead Intake & CRM Data Quality Automation",
+      "bio": "I build reliable lead-intake and CRM data-quality automations with n8n and JavaScript. My workflows validate, normalize and deduplicate inbound data, route uncertain cases to human review, and add QA checks before sensitive actions. My portfolio shows internal technical proofs for persistent deduplication, fail-safe processing and workflow regression testing.",
+      "cover_and_photo": "Already implemented by user; preserved, visually verified; remote byte identity not established",
+      "rate": "$50–$75/hr",
+      "languages": "English, Spanish, French, Italian — fluent, explicitly confirmed by user",
+      "timezone": "Platform option (GMT+1) Central European Time (CET); DST behavior not verified",
+      "works": [
+        {
+          "order": 1,
+          "title": "n8n Lead Intake & Human Review Workflow",
+          "url": "https://contra.com/p/beg36Mvl-n8n-lead-intake-and-human-review-workflow",
+          "asset": "01_lead_intake.png"
+        },
+        {
+          "order": 2,
+          "title": "Persistent Lead Deduplication with n8n Data Tables",
+          "url": "https://contra.com/p/LRerABqX-persistent-lead-deduplication-with-n8n-data-tables",
+          "asset": "02_persistent_dedup.png"
+        },
+        {
+          "order": 3,
+          "title": "Fail-Safe Lead Processing Engine — Node.js",
+          "url": "https://contra.com/p/k6leM7RM-fail-safe-lead-processing-engine-nodejs",
+          "asset": "03_fail_safe.png"
+        },
+        {
+          "order": 4,
+          "title": "Automated n8n Workflow QA & Regression Checks",
+          "url": "https://contra.com/p/BPZ2EOUL-automated-n8n-workflow-qa-and-regression-checks",
+          "asset": "04_workflow_qa.png"
+        }
+      ],
+      "order_verified_after_reload": true,
+      "service": {
+        "title": "Lead Intake Reliability Sprint",
+        "url": "https://contra.com/s/gOAMEgqW-lead-intake-reliability-sprint",
+        "status": "PUBLISHED_VERIFIED",
+        "price": "Contact for pricing",
+        "duration": "1 week platform display; explicitly indicative; scope/timing/price agreed before starting",
+        "faqs": 3,
+        "examples_linked": 3,
+        "platform_example_limit": 3
+      },
+      "post": {
+        "url": "https://contra.com/community/zdy0E0uW",
+        "status": "PUBLISHED_VERIFIED",
+        "media": "01_lead_intake.png",
+        "featured_as_work": false
+      },
+      "instagram_link": "https://www.instagram.com/nexia.gram/",
+      "personal_instagram": "Absent at first read; not removed by agent this turn",
+      "products": "EMPTY_VERIFIED; no validated packaged product promoted merely to fill tab",
+      "reviews": "EMPTY_VERIFIED; request-first-review UI; no fabricated testimonials or review requests sent",
+      "identity": "About still invites wallet setup for identity verification; completion not established",
+      "payout": "NOT_VERIFIED"
+    },
+    "instagram": {
+      "handle": "nexia.gram",
+      "profile": "https://www.instagram.com/nexia.gram/",
+      "chrome_authentication": "VERIFIED_OWNER_CONTROLS",
+      "display_name": "Nexia | Automatización fiable",
+      "avatar": "Own code-native Nexia N mark, uploaded and verified",
+      "bio": "Automatización fiable · n8n · calidad de datos.\nPruebas internas; revisión humana.\nPortfolio: contra.com/mica_gr92_yag11irp",
+      "posts": [
+        {
+          "work": 1,
+          "url": "https://www.instagram.com/p/DelxVheDG50/"
+        },
+        {
+          "work": 2,
+          "url": "https://www.instagram.com/p/DelxckqDFe_/"
+        },
+        {
+          "work": 3,
+          "url": "https://www.instagram.com/p/DelxoJWjIaB/"
+        },
+        {
+          "work": 4,
+          "url": "https://www.instagram.com/p/DelxwGWDFhW/"
+        }
+      ],
+      "format": "Original 4:3, no crop of proof bars; captions in Spanish; custom alt text",
+      "upload_failure": "First work3 PNG attempt rejected Media type invalid; verified only two posts before retry; JPEG same dimensions/content succeeded. Work4 used JPEG.",
+      "mobile_access": "User reports cannot log in; not in mobile account selector",
+      "clickable_external_link": "PENDING_MOBILE_ONLY_PLATFORM_RESTRICTION; plain portfolio address provided in bio",
+      "professional_account": "NOT_CONFIGURED"
+    }
   },
   "integrity": {
     "checker": "tools/nexia_integrity_check.py",
@@ -192,12 +281,12 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V78.json",
-    "active_index_blob_sha": "da0abf1a574f2f1d11823a3e4510b4c21513bf85",
-    "latest_verified_event_id": "EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001.json",
-    "latest_verified_event_blob_sha": "0fd872916cbd19d86f290c251dc017dea38df34d",
-    "base_index": "NEXIA_EVENT_INDEX_V77.json"
+    "active_index": "NEXIA_EVENT_INDEX_V79.json",
+    "active_index_blob_sha": "17bfde61fa66229ba66dfced8b20102f1f13e2a6",
+    "latest_verified_event_id": "EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001.json",
+    "latest_verified_event_blob_sha": "f05ec12f718d783e591ef88ffe78279b4bce3779",
+    "base_index": "NEXIA_EVENT_INDEX_V78.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -213,31 +302,28 @@
     "new_ugc_software_api_repo_model": "PROPOSE_BEFORE_INSTALL_OR_ACTIVATION",
     "ugc_new_video_model_or_download": "NOT_AUTHORIZED",
     "framepack_or_pagefile_change": "NOT_AUTHORIZED",
-    "contra_v4_public_edit": "KAEL_REQUIRED_SEPARATE_GATE",
-    "publication_external_contact_production": "RED_KAEL_REQUIRED"
+    "contra_v4_public_edit": "SATISFIED_TASK_SPECIFIC_USER_AUTHORIZATION_AND_PUBLIC_VERIFICATION",
+    "publication_external_contact_production": "RED_KAEL_REQUIRED",
+    "nexia_instagram_mobile_access": "PENDING_USER_LOGIN; CLICKABLE_PORTFOLIO_LINK_MOBILE_ONLY"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Reverified completed stress run 38982463378 and job 117246301131 against logs; anchored existing bounded PASS in V78 and reconciled stale BOOT/LIVE. No stress rerun.",
-    "last_user_facing_handoff": "AUTO-PRODUCT v0.2.1 did execute and passed only under dedicated serialization. Resume EXP-AUTO-001 at existing Contra V4 Kael gate.",
+    "last_completed_verified_action": "Published and verified Contra four V4 works, sprint service, launch post and brand Instagram link; Nexia Instagram owner access, name, avatar, bio and four posts verified.",
+    "last_user_facing_handoff": "Mobile Instagram access remains unresolved; plain portfolio address in bio; clickable external link still pending mobile app.",
     "human_action_required_now": true,
-    "pending_human_action": "Apply prepared Contra V4 profile/media changes, remove personal Instagram, return screenshots/recording for 15-point verification. Service publication, contact, KYC/payout and spending remain separate gates.",
-    "surface": "CONTRA",
-    "device": "COMPUTER_RECOMMENDED",
-    "success_check": "V4 profile/media verified against runbook 15-point checklist; no unsupported client/production claims.",
-    "return_to_nexia": "Return screenshots/recording and explicit service DRAFT/PUBLISHED/NOT_CREATED status.",
+    "pending_human_action": "Add existing nexia.gram in mobile Instagram using exact username. If login fails, identify exact Instagram error before credential changes; no secrets in chat. Then add clickable Contra portfolio link.",
+    "surface": "INSTAGRAM",
+    "device": "MOBILE",
+    "success_check": "Mobile owner profile nexia.gram with four posts and clickable Contra portfolio link",
+    "return_to_nexia": "Confirm mobile Nexia connected or give exact error without credentials",
     "resume_required_reads": [
       "NEXIA_STATE.json",
-      "NEXIA_EVENT_INDEX_V78.json",
-      "events/EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001.json",
-      "events/EVT-2026-10-17-AUTO-PRODUCT-V021-SERIALIZED-BOUNDED-PASS-001.json",
-      "NEXIA_EVENT_INDEX_V77.json",
-      "events/EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001.json",
-      "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md"
+      "NEXIA_EVENT_INDEX_V79.json",
+      "events/EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001.json"
     ],
-    "resume_from": "EXP-AUTO-001 Contra V4 human gate; auto-product runtime gate closed for current bounded purpose.",
-    "truth_limit": "Dedicated serialized synthetic test only; no unsserialized safety, shared-instance suitability, production readiness or commercial demand established. Four historical integrity warnings remain."
+    "resume_from": "Mobile login and clickable portfolio link only; do not duplicate public works/posts.",
+    "truth_limit": "Internal technical proofs with synthetic data; no invented clients, testimonials, production results, concurrency guarantees or SLA."
   },
-  "next_action": "KAEL_CONTRA_V4_IMPLEMENTATION_GATE; no repeat AUTO-PRODUCT stress or closed FLUX benchmark.",
+  "next_action": "KAEL_NEXIA_INSTAGRAM_MOBILE_ACCESS_AND_CLICKABLE_PORTFOLIO_LINK; external commercial response not established; no repeat closed runtime lanes.",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -246,15 +332,12 @@
   ],
   "active_reality_probe": {
     "id": "EXP-AUTO-001",
-    "status": "CONTRA_V4_INTERNAL_READY_KAEL_IMPLEMENTATION_GATE_WORKANA_PENDING"
+    "status": "CONTRA_V4_PUBLIC_VERIFIED_INSTAGRAM_FOUR_POSTS_PUBLIC_MOBILE_LINK_PENDING_WORKANA_PENDING"
   },
   "resume_required_reads": [
     "NEXIA_STATE.json",
-    "NEXIA_EVENT_INDEX_V78.json",
-    "events/EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001.json",
-    "events/EVT-2026-10-17-AUTO-PRODUCT-V021-SERIALIZED-BOUNDED-PASS-001.json",
-    "NEXIA_EVENT_INDEX_V77.json",
-    "events/EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001.json",
-    "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md"
+    "NEXIA_EVENT_INDEX_V79.json",
+    "events/EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001.json",
+    "NEXIA_EVENT_INDEX_V78.json"
   ]
 }

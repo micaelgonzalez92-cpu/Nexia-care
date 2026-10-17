@@ -1,6 +1,6 @@
 {
-  "schema_version": 78,
-  "boot_version": 132,
+  "schema_version": 79,
+  "boot_version": 133,
   "generated_at": "2026-10-17",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,26 +15,24 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V79.json",
+    "events/EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001.json",
     "NEXIA_EVENT_INDEX_V78.json",
-    "events/EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001.json",
-    "events/EVT-2026-10-17-AUTO-PRODUCT-V021-SERIALIZED-BOUNDED-PASS-001.json",
-    "NEXIA_EVENT_INDEX_V77.json",
-    "events/EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001.json",
     "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md",
     "NEXIA_MEMORY.md only when needed",
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "2841b0e3fcee85fb5cdcfd8892997fea9f71bc6c",
-  "live_state_status": "RECONCILED_AUTO_PRODUCT_V021_RUNTIME_PASS_INDEX_V78",
+  "live_state_blob_sha": "567986fa997975c866f07cf5bcb52dd9d1eae5a6",
+  "live_state_status": "RECONCILED_CONTRA_V4_AND_NEXIA_INSTAGRAM_PUBLIC_INDEX_V79",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V78.json",
-    "active_index_blob_sha": "da0abf1a574f2f1d11823a3e4510b4c21513bf85",
-    "latest_verified_event_id": "EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001.json",
-    "latest_verified_event_blob_sha": "0fd872916cbd19d86f290c251dc017dea38df34d",
-    "base_index": "NEXIA_EVENT_INDEX_V77.json"
+    "active_index": "NEXIA_EVENT_INDEX_V79.json",
+    "active_index_blob_sha": "17bfde61fa66229ba66dfced8b20102f1f13e2a6",
+    "latest_verified_event_id": "EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001.json",
+    "latest_verified_event_blob_sha": "f05ec12f718d783e591ef88ffe78279b4bce3779",
+    "base_index": "NEXIA_EVENT_INDEX_V78.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
@@ -115,10 +113,10 @@
       "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json"
     ]
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — AUTO-PRODUCT V021 BOUNDED SERIALIZED PASS; EXP-AUTO-001 CONTRA V4 HUMAN GATE",
-  "human_gate": "Apply prepared Contra V4 profile/media changes, remove personal Instagram, return screenshots/recording for 15-point verification. Service publication, contact, KYC/payout and spending remain separate gates.",
-  "sync_status": "STATE_V73_PLUS_INDEX_V78_AUTO_PRODUCT_RESUME_BOOT132",
-  "next_action": "KAEL_CONTRA_V4_IMPLEMENTATION_GATE; no repeat AUTO-PRODUCT stress or closed FLUX benchmark.",
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONTRA V4 PUBLIC; NEXIA INSTAGRAM FOUR POSTS VERIFIED; MOBILE ACCESS/LINK PENDING",
+  "human_gate": "Resolve nexia.gram mobile access, then add clickable Contra portfolio link. Published Contra/Instagram content already verified; no repeat. Client contact, production, KYC/payout and spending remain separate gates.",
+  "sync_status": "STATE_V73_PLUS_INDEX_V79_CONTRA_INSTAGRAM_BOOT133",
+  "next_action": "KAEL_NEXIA_INSTAGRAM_MOBILE_ACCESS_AND_LINK; no duplicate publication or closed runtime reruns.",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -127,7 +125,7 @@
   ],
   "active_reality_probe": {
     "id": "EXP-AUTO-001",
-    "status": "CONTRA_V4_INTERNAL_READY_KAEL_IMPLEMENTATION_GATE_WORKANA_PENDING"
+    "status": "CONTRA_V4_PUBLIC_VERIFIED_INSTAGRAM_FOUR_POSTS_PUBLIC_MOBILE_LINK_PENDING_WORKANA_PENDING"
   },
   "integrity_debt": [
     "Canonical depth blocker repaired: MAX_INDEX_DEPTH 1024 and full current chain traversed with zero errors.",
