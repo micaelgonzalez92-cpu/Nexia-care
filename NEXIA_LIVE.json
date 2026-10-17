@@ -1,7 +1,7 @@
 {
-  "schema_version": 60,
+  "schema_version": 61,
   "updated_at": "2026-10-17",
-  "status": "ACTIVE_MODEL_C_PROCESS_INTELLIGENCE_V1_VERIFIED_CONTRA_V4_PUBLIC_AND_NEXIA_INSTAGRAM_FOUR_POSTS_VERIFIED",
+  "status": "ACTIVE_MODEL_C_CONTROL_PLANE_V1_RECONCILED_PROCESS_INTELLIGENCE_V1_VERIFIED_EXTERNAL_REALITY_ACTIVE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -10,10 +10,6 @@
     "north_star": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
     "status": "ACTIVE_APPROVED_BY_KAEL"
   },
-  "communication_standard": {
-    "default_operational_format": "NEXIA_LIVE_HUD",
-    "artifact": "design/NEXIA_LIVE_HUD_STANDARD_V1_2026-10-16.md"
-  },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_EXTERNAL_VALIDATION_PRIORITY",
@@ -21,285 +17,39 @@
     "lane_3": "VETA-AUTO-PRODUCT-001_BOUNDED_SERIALIZED_RUNTIME_PASS_OPTIONAL_PROFILE_STOPPED_FOR_CURRENT_PURPOSE",
     "rule": "Task-triggered R&D is an interrupt supporting an active lane, not a fourth material lane."
   },
-  "rd_intelligence": {
-    "standard": "research/NEXIA_RD_INTELLIGENCE_OPERATING_STANDARD_V1_2026-10-16.md",
-    "task_triggered_interrupt": "MANDATORY",
-    "weekly_radar_role": "SUPPLEMENTAL_ONLY",
-    "execution_order": "ACTIVE_TASK->EXISTING_USER_PROJECT_CORPUS->CANONICAL_NEXIA->UPSTREAM_VERIFY->COUNTERCHECK->MAX3_SHORTLIST->COMPARE->PROPOSE_NO_INSTALL->AUTHORITY_GATE->BOUNDED_POC->CAPTURE->RESUME_TASK",
-    "proposal_policy": "NEW_SOFTWARE_API_REPO_MODEL_ACCOUNT_OR_PERSISTENT_SERVICE_IS_PROPOSED_BEFORE_INSTALL_OR_ACTIVATION",
-    "latest_reassessment": "research/NEXIA_TASK_TRIGGERED_RD_UGC_CORPUS_REASSESSMENT_V1_2026-10-16.md"
-  },
   "process_intelligence": {
     "status": "VERIFIED_INTERNAL_DETERMINISTIC_V1",
     "standard": "intelligence/NEXIA_PROCESS_INTELLIGENCE_STANDARD_V1_2026-10-17.md",
     "miner": "tools/nexia_process_miner.py",
-    "implementation_commit": "641d4e7194bcc9bc2b6b848a126a9de4a0df9332",
     "verification_event": "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
     "pre_task_rule": "QUERY_RELEVANT_PROCESS_INTELLIGENCE_BEFORE_MATERIAL_WORK_WHEN_PRIOR_NEXIA_HISTORY_MAY_APPLY",
-    "source_baseline_index": "NEXIA_EVENT_INDEX_V79.json",
-    "baseline_episodes_loaded": 119,
-    "baseline_lessons_count": 6,
     "human_attention": "NOT_INSTRUMENTED",
-    "truth_boundary": "Deterministic derived process intelligence only; not semantic certainty, automatic failure prevention, or proven economic impact."
+    "truth_boundary": "Deterministic derived guidance only; not semantic certainty or proof of economic impact."
   },
-  "ugc_video": {
-    "route_a": {
-      "status": "STOPPED_FOR_PROFESSIONAL_OBJECTIVE",
-      "v1_score": 73,
-      "v2_score_provisional": 78,
-      "v3_score_provisional": 80,
-      "threshold": 85,
-      "professional_pass": false
+  "control_plane_v1": {
+    "status": "INSTALLED_INTEGRATED_TESTED_VERIFIED_ON_MAIN",
+    "promotion_commit": "e72cdf6eaa328ec6776d78f8fe00ba090ac90f91",
+    "atomic_checkpoint": {
+      "helper": "tools/nexia_atomic_checkpoint.py",
+      "contract": "governance/NEXIA_ATOMIC_CHECKPOINT_CONTRACT_V1_2026-10-17.md",
+      "regression": "PASS_9_OF_9"
     },
-    "ltx_0_9_8_gate": {
-      "status": "TECHNICAL_RUNTIME_PASS_VISUAL_FAIL_CLOSED",
-      "event": "events/EVT-2026-10-16-LTX098-TEST-FAIL-CLOSE-001.json",
-      "duration_seconds": 4.042,
-      "generation_wall_seconds": 53.922,
-      "oom_recorded": false,
-      "runtime_errors_recorded": false,
-      "visual_result": "FAIL_SEVERE_PRODUCT_INTEGRITY_AND_CONTINUITY_PHYSICS",
-      "normal_speed_playback_completed": false,
-      "anatomy_pass": "NOT_VERIFIED",
-      "professional_capability": false
+    "adaptive_task_batching": {
+      "helper": "tools/nexia_task_batching.py",
+      "standard": "governance/NEXIA_ADAPTIVE_TASK_BATCHING_STANDARD_V1_2026-10-17.md",
+      "regression": "PASS_9_OF_9",
+      "measured_quota_savings": "NOT_INSTRUMENTED"
     },
-    "cleanup": {
-      "old_ltx_0_9_5_final_absent": true,
-      "test_ltx_0_9_8_final_absent": true,
-      "both_ltx_checkpoints_absent": true,
-      "t5xxl_preserved_same_hash": true,
-      "comfyui_preserved": true,
-      "flux_preserved": true,
-      "ollama_modified": false,
-      "v1_v2_v3_evidence_preserved": true,
-      "pagefile_mib": 9728,
-      "pagefile_changed": false
-    },
-    "model_hopping": "PAUSED",
-    "experimental_design_reassessment": {
-      "status": "EXECUTABLE_PREREG_READY_ONE_SHOT_AUTHORIZED_NOT_EXECUTED",
-      "artifact": "research/NEXIA_UGC_PROMPT_TASK_COMPLEXITY_REASSESSMENT_V1_2026-10-16.md",
-      "task_triggered_corpus_artifact": "research/NEXIA_TASK_TRIGGERED_RD_UGC_CORPUS_REASSESSMENT_V1_2026-10-16.md",
-      "flux_prereg_artifact": "research/NEXIA_FLUX_IMAGE_EDIT_BASE_B1_B2_PREREG_V1_2026-10-16.md",
-      "flux_prereg_blob_sha": "8276613aff9ba9aca0eec840fc8e0c2f36bca622",
-      "prereg_repair_event": "events/EVT-2026-10-16-FLUX-EDIT-PREREG-REPAIR-001.json",
-      "complete_original_prereg_artifact_existed": false,
-      "literal_prompts_preexisted_in_chat": true,
-      "runtime_seed_and_full_execution_contract_frozen_before_outputs": true,
-      "frozen_seed": 20261016,
-      "base_resolution": "1024x1024",
-      "generation_cap": 3,
-      "base_b1_b2_generations_executed": 3,
-      "existing_image_engine": "ComfyUI + FLUX.2 Klein 4B FP8",
-      "canonical_local_image_status": "VERIFIED_BOUNDED_IMAGE_GENERATION_PLUS_RUNTIME_FUNCTIONAL_IMAGE_EDITING",
-      "image_edit_components_present_user_verified": true,
-      "local_image_edit_status": "VERIFIED_RUNTIME_FUNCTIONAL",
-      "one_shot_task": "NEXIA_LOCAL_FLUX_EDIT_ONE_SHOT_TASK.json",
-      "one_shot_task_blob_sha": "fc3f0a8e6180e5830cd2d97b2493dd1657b5928e",
-      "one_shot_runner": "tools/nexia_flux_base_b1_b2_one_shot_v1.ps1",
-      "one_shot_runner_blob_sha": "86f897de2d24e0652e2db89098322f2fc29b9b76",
-      "one_shot_authorization_event": "events/EVT-2026-10-16-FLUX-EDIT-BRIDGE-ONESHOT-AUTH-001.json",
-      "one_shot_status": "CLOSED_RUNTIME_AND_FROZEN_VISUAL_QA_PASS",
-      "raw_result_expected": "runtime/NEXIA_FLUX_IMAGE_EDIT_BRIDGE_RAW_RESULT_008.json",
-      "next_gate": "NONE_FOR_CLOSED_FLUX_ONE_SHOT; further generation requires separate bounded authorization",
-      "video_reopen_rule": "ONLY_AFTER_SIMPLER_IMAGE_AND_PROMPT CONTROLS PROVIDE NEW EVIDENCE",
-      "result": {
-        "technical_pass": "PASS",
-        "base_gate": "PASS_6_OF_6",
-        "b1_fidelity": "PASS_12_OF_12",
-        "b2_fidelity": "PASS_12_OF_12",
-        "b1_target_environment": "PASS",
-        "b2_target_environment": "PASS",
-        "b1_hard_preservation_failures": 0,
-        "b2_hard_preservation_failures": 0,
-        "prompt_engineering_effect": "B1_EQUALS_B2_ON_FROZEN_HARD_PRESERVATION_METRIC",
-        "b2_superiority_over_b1": "NOT_DEMONSTRATED",
-        "comparison_rule": "B2 must have strictly fewer failures on dimensions 1-9 AND achieve target environment; 0 < 0 is false. Visual richness cannot override frozen rule.",
-        "local_flux_image_editing": "VERIFIED_RUNTIME_FUNCTIONAL",
-        "professional_top_tier_capability": "NOT_ESTABLISHED"
-      }
-    },
-    "prompt_compiler": {
-      "status": "ARCHITECTURE_UPDATED_FROM_EXISTING_CORPUS",
-      "use_now_source": "LearnPrompt/awesome-seedance upstream verified plus Kael image-edit prompt packet",
-      "rules": [
-        "PERSON_AND_PRODUCT_LOCKS_ARE_INDEPENDENT",
-        "DO_NOT_COMBINE_LOCOMOTION_AND_FINE_MANIPULATION_UNTIL_VALIDATED",
-        "GENERATIVE_TYPOGRAPHY_IS_POST_ONLY_BY_DEFAULT",
-        "REFERENCE_FIRST_AND_STORYBOARD_BEFORE_COMPLEX_MOTION",
-        "BACKEND_SPECIFIC_COMPILATION_NOT_ONE_UNIVERSAL_PROMPT"
-      ]
-    },
-    "candidate_tools": {
-      "awesome_seedance": "USE_NOW_AS_KNOWLEDGE_NO_INSTALL",
-      "remotion": "CANDIDATE_FOR_BOUNDED_POC_AFTER_ASSEMBLY_BOTTLENECK_NO_INSTALL",
-      "openshorts_style_pipeline": "RESERVE_ARCHITECTURE_REFERENCE_NO_INSTALL",
-      "paid_ugc_apis": "DEFERRED_NOT_CURRENT_NEXT_ACTION"
-    }
-  },
-  "framepack_capacity": {
-    "installation_status": "NOT_INSTALLED_NOT_AUTHORIZED",
-    "gpu": "NVIDIA GeForce RTX 3060",
-    "vram_total_mib": 12288,
-    "ram_total_gib": 15.96,
-    "pagefile_allocated_gib": 9.5,
-    "operational_fit": "WEAK_HIGH_THRASH_AND_LATENCY_RISK_ON_16GB_RAM",
-    "decision": "DEFERRED_NO_CURRENT_JUSTIFICATION"
-  },
-  "auto_product": {
-    "status": "READY_FOR_CURRENT_PURPOSE_BOUNDED_INTERNAL_OPTIONAL_PROFILE",
-    "reference_result": "PASS_NODE_REFERENCE_HISTORICAL",
-    "n8n_runtime": "V02_SEQUENTIAL_PASS_CONCURRENCY_FAIL; V021_SERIALIZED_BOUNDED_SYNTHETIC_PASS",
-    "run_id": 38982463378,
-    "job_id": 117246301131,
-    "production_concurrency_limit": 1,
-    "requests": 48,
-    "failures": 0,
-    "persisted_rows": 4,
-    "audit_matches_sqlite": true,
-    "default_promotion": false,
-    "publication": false,
-    "next_action": "STOP_STRESS_UNLESS_REAL_USE_CASE_REQUIRES_NEW_CAPABILITY",
-    "truth_boundary": "Dedicated serialized synthetic test only; no unsserialized safety, shared-instance suitability, production readiness or commercial demand established. Four historical integrity warnings remain."
-  },
-  "exp_auto_001": {
-    "status": "ALIVE_EXTERNAL_VALIDATION_PRIORITY",
-    "contra_v4": "PUBLIC_FOUR_WORKS_SERVICE_AND_POST_VERIFIED",
-    "workana": "PENDING",
-    "applications": 0,
-    "paid_pilots": 0,
-    "settled_revenue_eur": 0,
-    "additional_internal_polish": "CAPPED_PENDING_EXTERNAL_EVIDENCE",
-    "public_implementation": {
-      "profile": "https://contra.com/mica_gr92_yag11irp",
-      "title": "Reliable Lead Intake & CRM Data Quality Automation",
-      "bio": "I build reliable lead-intake and CRM data-quality automations with n8n and JavaScript. My workflows validate, normalize and deduplicate inbound data, route uncertain cases to human review, and add QA checks before sensitive actions. My portfolio shows internal technical proofs for persistent deduplication, fail-safe processing and workflow regression testing.",
-      "cover_and_photo": "Already implemented by user; preserved, visually verified; remote byte identity not established",
-      "rate": "$50–$75/hr",
-      "languages": "English, Spanish, French, Italian — fluent, explicitly confirmed by user",
-      "timezone": "Platform option (GMT+1) Central European Time (CET); DST behavior not verified",
-      "works": [
-        {
-          "order": 1,
-          "title": "n8n Lead Intake & Human Review Workflow",
-          "url": "https://contra.com/p/beg36Mvl-n8n-lead-intake-and-human-review-workflow",
-          "asset": "01_lead_intake.png"
-        },
-        {
-          "order": 2,
-          "title": "Persistent Lead Deduplication with n8n Data Tables",
-          "url": "https://contra.com/p/LRerABqX-persistent-lead-deduplication-with-n8n-data-tables",
-          "asset": "02_persistent_dedup.png"
-        },
-        {
-          "order": 3,
-          "title": "Fail-Safe Lead Processing Engine — Node.js",
-          "url": "https://contra.com/p/k6leM7RM-fail-safe-lead-processing-engine-nodejs",
-          "asset": "03_fail_safe.png"
-        },
-        {
-          "order": 4,
-          "title": "Automated n8n Workflow QA & Regression Checks",
-          "url": "https://contra.com/p/BPZ2EOUL-automated-n8n-workflow-qa-and-regression-checks",
-          "asset": "04_workflow_qa.png"
-        }
-      ],
-      "order_verified_after_reload": true,
-      "service": {
-        "title": "Lead Intake Reliability Sprint",
-        "url": "https://contra.com/s/gOAMEgqW-lead-intake-reliability-sprint",
-        "status": "PUBLISHED_VERIFIED",
-        "price": "Contact for pricing",
-        "duration": "1 week platform display; explicitly indicative; scope/timing/price agreed before starting",
-        "faqs": 3,
-        "examples_linked": 3,
-        "platform_example_limit": 3
-      },
-      "post": {
-        "url": "https://contra.com/community/zdy0E0uW",
-        "status": "PUBLISHED_VERIFIED",
-        "media": "01_lead_intake.png",
-        "featured_as_work": false
-      },
-      "instagram_link": "https://www.instagram.com/nexia.gram/",
-      "personal_instagram": "Absent at first read; not removed by agent this turn",
-      "products": "EMPTY_VERIFIED; no validated packaged product promoted merely to fill tab",
-      "reviews": "EMPTY_VERIFIED; request-first-review UI; no fabricated testimonials or review requests sent",
-      "identity": "About still invites wallet setup for identity verification; completion not established",
-      "payout": "NOT_VERIFIED"
-    },
-    "instagram": {
-      "handle": "nexia.gram",
-      "profile": "https://www.instagram.com/nexia.gram/",
-      "chrome_authentication": "VERIFIED_OWNER_CONTROLS",
-      "display_name": "Nexia | Automatización fiable",
-      "avatar": "Own code-native Nexia N mark, uploaded and verified",
-      "bio": "Automatización fiable · n8n · calidad de datos.\nPruebas internas; revisión humana.\nPortfolio: contra.com/mica_gr92_yag11irp",
-      "posts": [
-        {
-          "work": 1,
-          "url": "https://www.instagram.com/p/DelxVheDG50/"
-        },
-        {
-          "work": 2,
-          "url": "https://www.instagram.com/p/DelxckqDFe_/"
-        },
-        {
-          "work": 3,
-          "url": "https://www.instagram.com/p/DelxoJWjIaB/"
-        },
-        {
-          "work": 4,
-          "url": "https://www.instagram.com/p/DelxwGWDFhW/"
-        }
-      ],
-      "format": "Original 4:3, no crop of proof bars; captions in Spanish; custom alt text",
-      "upload_failure": "First work3 PNG attempt rejected Media type invalid; verified only two posts before retry; JPEG same dimensions/content succeeded. Work4 used JPEG.",
-      "mobile_access": "User reports cannot log in; not in mobile account selector",
-      "clickable_external_link": "PENDING_MOBILE_ONLY_PLATFORM_RESTRICTION; plain portfolio address provided in bio",
-      "professional_account": "NOT_CONFIGURED"
-    }
-  },
-  "integrity": {
-    "checker": "tools/nexia_integrity_check.py",
-    "checker_blob_sha": "c8e06a7e9134234e43fdcd654ade8a5f8f9e2da8",
-    "repair_commit": "eef0e99b6fce24b894b263b3d517e17d257fd64e",
-    "max_index_depth": 1024,
-    "full_chain_ci_run_id": 38978651205,
-    "status": "WARN_ZERO_ERRORS_FOUR_HISTORICAL_HASH_BINDING_WARNINGS",
-    "errors": 0,
-    "warnings": 4,
-    "indexes_checked": 74,
-    "events_checked": 149,
-    "artifact_references_checked": 10,
-    "historical_artifact_blobs_checked": 2,
-    "corrected_historical_references": 2,
-    "warnings_preserved": [
-      "NEXIA_EVENT_INDEX_V41.json",
-      "events/EVT-2026-10-16-UGC002-V2-QA-001.json",
-      "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
-      "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json"
-    ],
-    "last_local_reverification": {
-      "date": "2026-10-17",
-      "active_index": "NEXIA_EVENT_INDEX_V78.json",
-      "status": "WARN",
-      "errors": 0,
-      "warnings": 4,
-      "indexes_checked": 77,
-      "events_checked": 153,
-      "artifact_references_checked": 22,
-      "scope": "Offline full Git history; CI confirmation awaited after persistence."
-    }
+    "truth_boundary": "Repository integration and bounded regression verification only; no commercial demand, autonomous operation or measured quota savings established."
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V80.json",
-    "active_index_blob_sha": "b00a4aa6c910969530f69fc16b84b9528ff59060",
-    "latest_verified_event_id": "EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
-    "latest_verified_event_blob_sha": "5a0fa3e5c42e6960aaecc110933df55b691164bb",
-    "base_index": "NEXIA_EVENT_INDEX_V79.json"
+    "active_index": "NEXIA_EVENT_INDEX_V81.json",
+    "active_index_blob_sha": "0051a21b8cc4fa5beee54bfe38733f7e493e993b",
+    "latest_verified_event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
+    "latest_verified_event_blob_sha": "29c16ad6ea17527568a98d50d98cc93b1f2d73c4",
+    "base_index": "NEXIA_EVENT_INDEX_V80.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -308,37 +58,31 @@
     "reconciled_net_profit_eur": 0
   },
   "human_gates": {
-    "ugc_flux_bridge_one_shot": "CONSUMED_THREE_OF_THREE_CLOSED",
-    "ugc_flux_bridge_bootstrap": "SATISFIED_HISTORICAL_NO_ACTION_NOW",
-    "ugc_base_visual_precondition": "SATISFIED_PASS_KAEL_CONFIRMED",
-    "remotion_install": "NOT_AUTHORIZED_PROPOSE_BEFORE_INSTALL",
-    "new_ugc_software_api_repo_model": "PROPOSE_BEFORE_INSTALL_OR_ACTIVATION",
-    "ugc_new_video_model_or_download": "NOT_AUTHORIZED",
-    "framepack_or_pagefile_change": "NOT_AUTHORIZED",
-    "contra_v4_public_edit": "SATISFIED_TASK_SPECIFIC_USER_AUTHORIZATION_AND_PUBLIC_VERIFICATION",
     "publication_external_contact_production": "RED_KAEL_REQUIRED",
-    "nexia_instagram_mobile_access": "PENDING_USER_LOGIN; CLICKABLE_PORTFOLIO_LINK_MOBILE_ONLY"
+    "spend_kYC_payment_banking": "RED_KAEL_REQUIRED",
+    "nexia_instagram_mobile_access": "PENDING_USER_LOGIN; CLICKABLE_PORTFOLIO_LINK_MOBILE_ONLY",
+    "github_branch_protection_or_visibility_change": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Implemented and verified deterministic Nexia Process Intelligence V1; previously published and verified Contra four V4 works, sprint service, launch post and Nexia Instagram owner access/name/avatar/bio/four posts.",
-    "last_user_facing_handoff": "Process Intelligence V1 is internal and verified; mobile Instagram access remains unresolved; plain portfolio address in bio; clickable external link still pending mobile app.",
-    "human_action_required_now": true,
-    "pending_human_action": "Add existing nexia.gram in mobile Instagram using exact username. If login fails, identify exact Instagram error before credential changes; no secrets in chat. Then add clickable Contra portfolio link.",
-    "surface": "INSTAGRAM",
-    "device": "MOBILE",
-    "success_check": "Mobile owner profile nexia.gram with four posts and clickable Contra portfolio link",
-    "return_to_nexia": "Confirm mobile Nexia connected or give exact error without credentials",
+    "last_completed_verified_action": "Control Plane V1 was promoted to main at e72cdf6eaa328ec6776d78f8fe00ba090ac90f91 with Atomic Checkpoint V1 and Adaptive Task Batching V1 verified; a recovery drill then found that BOOT/LIVE/index V80 could not expose this newer verified capability.",
+    "last_user_facing_handoff": "Reconcile Control Plane V1 into canonical recovery bindings, then repeat recovery reconstruction before returning to the Reality Loop.",
+    "human_action_required_now": false,
+    "pending_human_action": null,
+    "surface": null,
+    "device": null,
+    "success_check": "BOOT/STATE/LIVE/V81 recovery reconstructs Control Plane V1 plus the existing Reality Loop without chat memory.",
+    "return_to_nexia": "Continue automatically through internal reconciliation and recovery verification; request Kael only at a real RED gate.",
     "resume_required_reads": [
       "NEXIA_STATE.json",
-      "NEXIA_EVENT_INDEX_V80.json",
-      "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
-      "NEXIA_EVENT_INDEX_V79.json",
-      "events/EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001.json"
+      "NEXIA_EVENT_INDEX_V81.json",
+      "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
+      "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_2026-10-17.json",
+      "NEXIA_EVENT_INDEX_V80.json"
     ],
-    "resume_from": "Mobile login and clickable portfolio link only; do not duplicate public works/posts. Query Process Intelligence before materially similar work.",
-    "truth_limit": "Internal technical proofs with synthetic data; no invented clients, testimonials, production results, concurrency guarantees or SLA. Process Intelligence is deterministic derived guidance, not semantic certainty."
+    "resume_from": "Verify atomic V81 reconciliation and recovery; then resume EXP-AUTO-001 external validation. Do not duplicate closed publications or runtime experiments.",
+    "truth_limit": "Control Plane V1 is repository-verified; branch protection is not enabled; measured quota savings and external commercial response remain unestablished."
   },
-  "next_action": "KAEL_NEXIA_INSTAGRAM_MOBILE_ACCESS_AND_CLICKABLE_PORTFOLIO_LINK; external commercial response not established; no repeat closed runtime lanes.",
+  "next_action": "VERIFY_ATOMIC_V81_RECONCILIATION_AND_RECOVERY_THEN_RESUME_EXP_AUTO_001_EXTERNAL_VALIDATION",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -351,10 +95,9 @@
   },
   "resume_required_reads": [
     "NEXIA_STATE.json",
-    "NEXIA_EVENT_INDEX_V80.json",
-    "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
-    "NEXIA_EVENT_INDEX_V79.json",
-    "events/EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001.json",
-    "NEXIA_EVENT_INDEX_V78.json"
+    "NEXIA_EVENT_INDEX_V81.json",
+    "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
+    "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_2026-10-17.json",
+    "NEXIA_EVENT_INDEX_V80.json"
   ]
 }
