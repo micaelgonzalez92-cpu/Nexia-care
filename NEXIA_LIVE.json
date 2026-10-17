@@ -1,7 +1,7 @@
 {
-  "schema_version": 57,
+  "schema_version": 58,
   "updated_at": "2026-10-17",
-  "status": "ACTIVE_MODEL_C_INTEGRITY_FULL_CHAIN_VERIFIED_WARN4_FLUX_FUNCTIONAL_PROFESSIONAL_NOT_ESTABLISHED",
+  "status": "ACTIVE_MODEL_C_AUTO_PRODUCT_V021_BOUNDED_SERIALIZED_PASS_RECONCILED_CONTRA_HUMAN_GATE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -18,7 +18,7 @@
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
     "lane_1": "EXP-AUTO-001_ACTIVE_REALITY_LOOP_EXTERNAL_VALIDATION_PRIORITY",
     "lane_2": "VETA-AI-UGC-001_FLUX_IMAGE_EDIT_VERIFIED_RUNTIME_FUNCTIONAL_BOUNDED_PROFESSIONAL_NOT_ESTABLISHED",
-    "lane_3": "VETA-AUTO-PRODUCT-001_REFERENCE_CONTRACT_PASS_N8N_RUNTIME_VALIDATION_NEXT",
+    "lane_3": "VETA-AUTO-PRODUCT-001_BOUNDED_SERIALIZED_RUNTIME_PASS_OPTIONAL_PROFILE_STOPPED_FOR_CURRENT_PURPOSE",
     "rule": "Task-triggered R&D is an interrupt supporting an active lane, not a fourth material lane."
   },
   "rd_intelligence": {
@@ -134,10 +134,20 @@
     "decision": "DEFERRED_NO_CURRENT_JUSTIFICATION"
   },
   "auto_product": {
-    "status": "ACTIVE_RESEARCH_LANE_NEXT_RUNTIME_GATE",
-    "reference_result": "PASS_NODE_REFERENCE_ONLY_NOT_N8N",
-    "n8n_runtime": "NOT_EXECUTED",
-    "publication": false
+    "status": "READY_FOR_CURRENT_PURPOSE_BOUNDED_INTERNAL_OPTIONAL_PROFILE",
+    "reference_result": "PASS_NODE_REFERENCE_HISTORICAL",
+    "n8n_runtime": "V02_SEQUENTIAL_PASS_CONCURRENCY_FAIL; V021_SERIALIZED_BOUNDED_SYNTHETIC_PASS",
+    "run_id": 38982463378,
+    "job_id": 117246301131,
+    "production_concurrency_limit": 1,
+    "requests": 48,
+    "failures": 0,
+    "persisted_rows": 4,
+    "audit_matches_sqlite": true,
+    "default_promotion": false,
+    "publication": false,
+    "next_action": "STOP_STRESS_UNLESS_REAL_USE_CASE_REQUIRES_NEW_CAPABILITY",
+    "truth_boundary": "Dedicated serialized synthetic test only; no unsserialized safety, shared-instance suitability, production readiness or commercial demand established. Four historical integrity warnings remain."
   },
   "exp_auto_001": {
     "status": "ALIVE_EXTERNAL_VALIDATION_PRIORITY",
@@ -167,16 +177,27 @@
       "events/EVT-2026-10-16-UGC002-V2-QA-001.json",
       "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
       "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json"
-    ]
+    ],
+    "last_local_reverification": {
+      "date": "2026-10-17",
+      "active_index": "NEXIA_EVENT_INDEX_V78.json",
+      "status": "WARN",
+      "errors": 0,
+      "warnings": 4,
+      "indexes_checked": 77,
+      "events_checked": 153,
+      "artifact_references_checked": 22,
+      "scope": "Offline full Git history; CI confirmation awaited after persistence."
+    }
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V76.json",
-    "active_index_blob_sha": "77236455def939f666ba78c0d4d0a60abdc7897e",
-    "latest_verified_event_id": "EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001.json",
-    "latest_verified_event_blob_sha": "e1378bd3db65ae69defc09010d9241425b2b3b84",
-    "base_index": "NEXIA_EVENT_INDEX_V75.json"
+    "active_index": "NEXIA_EVENT_INDEX_V78.json",
+    "active_index_blob_sha": "da0abf1a574f2f1d11823a3e4510b4c21513bf85",
+    "latest_verified_event_id": "EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001.json",
+    "latest_verified_event_blob_sha": "0fd872916cbd19d86f290c251dc017dea38df34d",
+    "base_index": "NEXIA_EVENT_INDEX_V77.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -196,22 +217,27 @@
     "publication_external_contact_production": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Canonical integrity checker depth repaired from 64 to bounded 1024; CI full-chain audit traversed 74 indexes and 149 events with zero errors and four preserved historical hash-binding warnings.",
-    "last_user_facing_handoff": "Integrity depth blocker closed. Checker status is WARN, not PASS, because four historical REFERENCE_HASH_MISSING warnings remain. FLUX remains closed and is not reopened.",
-    "human_action_required_now": false,
-    "pending_human_action": null,
-    "scope": "INTEGRITY_DEPTH_REPAIR_CLOSURE; other STATE v73 human gates preserved",
+    "last_completed_verified_action": "Reverified completed stress run 38982463378 and job 117246301131 against logs; anchored existing bounded PASS in V78 and reconciled stale BOOT/LIVE. No stress rerun.",
+    "last_user_facing_handoff": "AUTO-PRODUCT v0.2.1 did execute and passed only under dedicated serialization. Resume EXP-AUTO-001 at existing Contra V4 Kael gate.",
+    "human_action_required_now": true,
+    "pending_human_action": "Apply prepared Contra V4 profile/media changes, remove personal Instagram, return screenshots/recording for 15-point verification. Service publication, contact, KYC/payout and spending remain separate gates.",
+    "surface": "CONTRA",
+    "device": "COMPUTER_RECOMMENDED",
+    "success_check": "V4 profile/media verified against runbook 15-point checklist; no unsupported client/production claims.",
+    "return_to_nexia": "Return screenshots/recording and explicit service DRAFT/PUBLISHED/NOT_CREATED status.",
     "resume_required_reads": [
       "NEXIA_STATE.json",
-      "NEXIA_EVENT_INDEX_V76.json",
-      "events/EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001.json",
-      "tools/nexia_integrity_check.py",
-      "NEXIA_EVENT_INDEX_V75.json"
+      "NEXIA_EVENT_INDEX_V78.json",
+      "events/EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001.json",
+      "events/EVT-2026-10-17-AUTO-PRODUCT-V021-SERIALIZED-BOUNDED-PASS-001.json",
+      "NEXIA_EVENT_INDEX_V77.json",
+      "events/EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001.json",
+      "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md"
     ],
-    "resume_from": "Use V76 integrity closure. Preserve four historical warnings unless exact anchored evidence justifies correction; do not rewrite history. Resume active Reality Loop EXP-AUTO-001 or lane 3 by dynamic priority.",
-    "truth_limit": "Canonical full-chain byte-integrity audit has zero errors but status WARN due four historical missing hash bindings. Blob integrity is not proof of business claims, runtime execution or professional readiness."
+    "resume_from": "EXP-AUTO-001 Contra V4 human gate; auto-product runtime gate closed for current bounded purpose.",
+    "truth_limit": "Dedicated serialized synthetic test only; no unsserialized safety, shared-instance suitability, production readiness or commercial demand established. Four historical integrity warnings remain."
   },
-  "next_action": "INTEGRITY_DEPTH_REPAIR_CLOSED_WARN4; resume dynamic priority with EXP-AUTO-001 external validation or VETA-AUTO-PRODUCT runtime validation; no Kael action for integrity closure.",
+  "next_action": "KAEL_CONTRA_V4_IMPLEMENTATION_GATE; no repeat AUTO-PRODUCT stress or closed FLUX benchmark.",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -224,9 +250,11 @@
   },
   "resume_required_reads": [
     "NEXIA_STATE.json",
-    "NEXIA_EVENT_INDEX_V76.json",
-    "events/EVT-2026-10-17-INTEGRITY-DEPTH-REPAIR-FULL-CHAIN-001.json",
-    "tools/nexia_integrity_check.py",
-    "NEXIA_EVENT_INDEX_V75.json"
+    "NEXIA_EVENT_INDEX_V78.json",
+    "events/EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001.json",
+    "events/EVT-2026-10-17-AUTO-PRODUCT-V021-SERIALIZED-BOUNDED-PASS-001.json",
+    "NEXIA_EVENT_INDEX_V77.json",
+    "events/EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001.json",
+    "commercial/EXP-AUTO-001_CONTRA_IMPLEMENTATION_RUNBOOK_V1_2026-10-15.md"
   ]
 }

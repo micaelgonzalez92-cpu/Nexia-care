@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001",
+  "timestamp": "2026-10-17",
+  "type": "RECOVERY_RECONCILIATION_FROM_EXISTING_RUNTIME_EVIDENCE",
+  "evidence_label": "HECHO_VERIFICADO",
+  "state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "action": "Re-read completed Actions job and logs; anchor existing v0.2 and v0.2.1 events; reconcile BOOT/LIVE without rerunning stress.",
+  "actor": "Codex GitHub connector plus read-only GitHub CLI and isolated local verification",
+  "evidence": [
+    {
+      "path": "events/EVT-2026-10-17-AUTO-PRODUCT-V02-SEQUENTIAL-PASS-CONCURRENCY-FAIL-001.json",
+      "blob_sha": "cdbcf9e7727301ae0fae52aeb0bebb894c4712c9"
+    },
+    {
+      "path": "events/EVT-2026-10-17-AUTO-PRODUCT-V021-SERIALIZED-BOUNDED-PASS-001.json",
+      "blob_sha": "46ff13f1db401cb03adf04396270f0500b3e2a82"
+    },
+    {
+      "path": "NEXIA_EVENT_INDEX_V77.json",
+      "blob_sha": "3dda28be679fe0f5ca402ef8aef55dee4bcce0b9"
+    },
+    {
+      "path": "experiments/auto-product-v02/bootstrap-v02.json",
+      "blob_sha": "a25d45342d7ead194909d9b94be23617a5e1a3b6"
+    },
+    {
+      "path": "experiments/auto-product-v02/guard-v02.json",
+      "blob_sha": "d5004a4635022604dc1a48606b0ccca3161aeb98"
+    },
+    {
+      "path": "experiments/auto-product-v021/SERIALIZED_PROFILE_DESIGN_2026-10-17.md",
+      "blob_sha": "ad3d14997aa6264a1faeb3dc7f93d7b03d28dbfe"
+    },
+    {
+      "path": "experiments/auto-product-v021/CONCURRENCY_STRESS_PREREG_2026-10-17.md",
+      "blob_sha": "9bd5c0d8be5c7e2cfdcb7cb85a2b31eafced1b06"
+    },
+    {
+      "path": "experiments/auto-product-v021/concurrency_stress_v021.js",
+      "blob_sha": "8be155f2164635689b26c35f03e3f53903bf0dad"
+    },
+    {
+      "path": "experiments/auto-product-v021/audit-all-entries-v021.json",
+      "blob_sha": "6e09d5d9fa95b72a18dae39e751cb4a1741206fd"
+    },
+    {
+      "path": "experiments/auto-product-v021/OBSERVABILITY_REPAIR_PREREG_2026-10-17.md",
+      "blob_sha": "cd3959a8ef6f865ebdd08a7e766aaa27d641c2d6"
+    }
+  ],
+  "runtime": {
+    "run_id": 38982463378,
+    "job_id": 117246301131,
+    "head_sha": "41880340b7e95461f9982492404ae01aff97efb8",
+    "conclusion": "success",
+    "completed_at_utc": "2026-10-16T23:40:57Z",
+    "requests": 48,
+    "failures": 0,
+    "persisted_rows": 4,
+    "audit_matches_sqlite": true,
+    "cleanup": "PASS",
+    "profile": "N8N_CONCURRENCY_PRODUCTION_LIMIT=1"
+  },
+  "reference_clarification": {
+    "source_event": "events/EVT-2026-10-17-AUTO-PRODUCT-V021-SERIALIZED-BOUNDED-PASS-001.json",
+    "field": "predecessor.index_blob_sha",
+    "recorded": "806108cdaad56ab9791805de593fb18530c3b9dc",
+    "verified_current_and_original_git_blob": "3dda28be679fe0f5ca402ef8aef55dee4bcce0b9",
+    "resolution": "Historical event preserved. V78 binds the actual V77 bytes. The recorded predecessor index SHA is not used for recovery."
+  },
+  "result": "V021_BOUNDED_SYNTHETIC_SERIALIZED_PASS_REVERIFIED; STALE_HANDOFF_RECONCILED",
+  "new_stress_executions": 0,
+  "financial_impact_eur": 0,
+  "authority_effect": "NONE; STATE v73 RED gates preserved",
+  "recovery_reference": "NEXIA_EVENT_INDEX_V78.json -> V77 -> V76",
+  "next_action": "EXP-AUTO-001 Contra V4 implementation remains Kael-controlled. No further auto-product stress absent a concrete new requirement.",
+  "truth_limit": "Dedicated serialized synthetic test only; no unsserialized safety, shared-instance suitability, production readiness or commercial demand established. Four historical integrity warnings remain."
+}

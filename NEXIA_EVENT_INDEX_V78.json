@@ -1,0 +1,30 @@
+{
+  "schema_version": 78,
+  "updated_at": "2026-10-17",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V77.json",
+    "verified_blob_sha": "3dda28be679fe0f5ca402ef8aef55dee4bcce0b9"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-17-AUTO-PRODUCT-V021-SERIALIZED-BOUNDED-PASS-001",
+      "path": "events/EVT-2026-10-17-AUTO-PRODUCT-V021-SERIALIZED-BOUNDED-PASS-001.json",
+      "verified_blob_sha": "46ff13f1db401cb03adf04396270f0500b3e2a82"
+    },
+    {
+      "event_id": "EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001",
+      "path": "events/EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001.json",
+      "verified_blob_sha": "0fd872916cbd19d86f290c251dc017dea38df34d"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001",
+  "latest_event_path": "events/EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001.json",
+  "latest_event_blob_sha": "0fd872916cbd19d86f290c251dc017dea38df34d",
+  "latest_material_business_event_id": "EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-AUTO-PRODUCT-RESUME-RECONCILIATION-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "Preserve v0.2 concurrency failure and first v0.2.1 inconclusive persistence measurement. Anchor repaired bounded pass and recovery reconciliation; STATE and product v0.1 unchanged."
+}
