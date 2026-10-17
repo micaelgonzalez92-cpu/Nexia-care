@@ -70,12 +70,16 @@ def test_complex_with_explicit_phases_preserves_boundaries():
                 "objective": "Add compare-and-swap primitive.",
                 "success_condition": "Stale-head test fails closed.",
                 "stop_condition": "Stop if main must be mutated.",
+                "estimated_steps": 5,
+                "uncertainty": "medium",
             },
             {
                 "task_id": "T-1-B",
                 "objective": "Add recovery fault tests.",
                 "success_condition": "Fault suite passes.",
                 "stop_condition": "Stop if destructive remote action is required.",
+                "estimated_steps": 5,
+                "uncertainty": "medium",
             },
         ],
     )
@@ -83,6 +87,31 @@ def test_complex_with_explicit_phases_preserves_boundaries():
     assert [packet["packet_id"] for packet in packets] == ["T-1-A", "T-1-B"]
     assert all(packet["parent_id"] == "T-1" for packet in packets)
     assert all(packet["size"] == "STANDARD" for packet in packets)
+
+
+def test_nested_complex_phase_stops_at_its_own_plan():
+    task = base(
+        objective="Coordinate a broad architecture change.",
+        success_condition="All bounded phases verified.",
+        stop_condition="Stop at any RED gate.",
+        architecture_change=True,
+        phases=[
+            {
+                "task_id": "T-1-A",
+                "objective": "Refactor across two repositories.",
+                "success_condition": "Cross-repo behavior is verified.",
+                "stop_condition": "Stop before implementation until dependencies are bounded.",
+                "cross_repo": True,
+                "estimated_steps": 9,
+                "uncertainty": "high",
+            }
+        ],
+    )
+    packets = decompose_task(task)
+    assert len(packets) == 1
+    assert packets[0]["packet_id"] == "T-1-A-PLAN"
+    assert packets[0]["size"] == "MICRO"
+    assert packets[0]["parent_id"] == "T-1-A"
 
 
 def test_required_fields_fail_closed():
@@ -94,6 +123,16 @@ def test_required_fields_fail_closed():
         assert "stop_condition" in str(exc)
     else:
         raise AssertionError("missing stop condition must fail")
+
+
+def test_invalid_explicit_outcome_fails_closed():
+    task = base(single_verifiable_outcome=None)
+    try:
+        make_packet(task)
+    except ValueError as exc:
+        assert "single_verifiable_outcome" in str(exc)
+    else:
+        raise AssertionError("invalid explicit outcome must fail")
 
 
 def test_unknown_usage_is_not_zero():
@@ -121,7 +160,9 @@ if __name__ == "__main__":
         test_standard,
         test_complex_without_phases_emits_plan_only,
         test_complex_with_explicit_phases_preserves_boundaries,
+        test_nested_complex_phase_stops_at_its_own_plan,
         test_required_fields_fail_closed,
+        test_invalid_explicit_outcome_fails_closed,
         test_unknown_usage_is_not_zero,
         test_handoff_contract,
     ]
