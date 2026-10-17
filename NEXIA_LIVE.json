@@ -1,7 +1,7 @@
 {
-  "schema_version": 61,
+  "schema_version": 62,
   "updated_at": "2026-10-17",
-  "status": "ACTIVE_MODEL_C_CONTROL_PLANE_V1_RECONCILED_PROCESS_INTELLIGENCE_V1_VERIFIED_EXTERNAL_REALITY_ACTIVE",
+  "status": "ACTIVE_MODEL_C_CONTROL_PLANE_V1_RECOVERY_VERIFIED_PROCESS_INTELLIGENCE_V1_VERIFIED_EXTERNAL_REALITY_ACTIVE",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -27,8 +27,11 @@
     "truth_boundary": "Deterministic derived guidance only; not semantic certainty or proof of economic impact."
   },
   "control_plane_v1": {
-    "status": "INSTALLED_INTEGRATED_TESTED_VERIFIED_ON_MAIN",
+    "status": "READY_FOR_CURRENT_PURPOSE_RECOVERY_VERIFIED",
     "promotion_commit": "e72cdf6eaa328ec6776d78f8fe00ba090ac90f91",
+    "v81_reconciliation_commit": "d455752613b9bc84a57bafaaafbc0d179d35c18c",
+    "recovery_result": "PASS_EXACT_RECOVERY_OF_CONTROL_PLANE_V1_AND_EXISTING_REALITY_LOOP",
+    "recovery_evidence": "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_POST_V81_PASS_2026-10-17.json",
     "atomic_checkpoint": {
       "helper": "tools/nexia_atomic_checkpoint.py",
       "contract": "governance/NEXIA_ATOMIC_CHECKPOINT_CONTRACT_V1_2026-10-17.md",
@@ -40,16 +43,16 @@
       "regression": "PASS_9_OF_9",
       "measured_quota_savings": "NOT_INSTRUMENTED"
     },
-    "truth_boundary": "Repository integration and bounded regression verification only; no commercial demand, autonomous operation or measured quota savings established."
+    "truth_boundary": "Repository integration, bounded regression and recovery visibility verified; no commercial demand, autonomous operation or measured quota savings established."
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V81.json",
-    "active_index_blob_sha": "0051a21b8cc4fa5beee54bfe38733f7e493e993b",
-    "latest_verified_event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
-    "latest_verified_event_blob_sha": "29c16ad6ea17527568a98d50d98cc93b1f2d73c4",
-    "base_index": "NEXIA_EVENT_INDEX_V80.json"
+    "active_index": "NEXIA_EVENT_INDEX_V82.json",
+    "active_index_blob_sha": "696e5272e8bc656d2d9b47984303e6c797715561",
+    "latest_verified_event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001.json",
+    "latest_verified_event_blob_sha": "f85cb5e181e68d349bfd7ef9d3df87df2e6bea16",
+    "base_index": "NEXIA_EVENT_INDEX_V81.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -64,25 +67,26 @@
     "github_branch_protection_or_visibility_change": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Control Plane V1 was promoted to main at e72cdf6eaa328ec6776d78f8fe00ba090ac90f91 with Atomic Checkpoint V1 and Adaptive Task Batching V1 verified; a recovery drill then found that BOOT/LIVE/index V80 could not expose this newer verified capability.",
-    "last_user_facing_handoff": "Reconcile Control Plane V1 into canonical recovery bindings, then repeat recovery reconstruction before returning to the Reality Loop.",
+    "last_completed_verified_action": "Control Plane V1 was promoted, atomically reconciled into V81, passed canonical integrity with zero errors and four unchanged historical warnings, and then passed a clean recovery reconstruction that exposed the same mission, authority, WIP, Control Plane capability and Reality Loop.",
+    "last_user_facing_handoff": "Control Plane V1 persistence/recovery is ready for current purpose; resume EXP-AUTO-001 external validation rather than continue internal polishing.",
     "human_action_required_now": false,
     "pending_human_action": null,
     "surface": null,
     "device": null,
-    "success_check": "BOOT/STATE/LIVE/V81 recovery reconstructs Control Plane V1 plus the existing Reality Loop without chat memory.",
-    "return_to_nexia": "Continue automatically through internal reconciliation and recovery verification; request Kael only at a real RED gate.",
+    "success_check": "Use the verified control plane while obtaining new external Reality Loop evidence without duplicating closed work.",
+    "return_to_nexia": "Continue GREEN research/preparation automatically and stop only at a real RED gate.",
     "resume_required_reads": [
       "NEXIA_STATE.json",
+      "NEXIA_EVENT_INDEX_V82.json",
+      "events/EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001.json",
+      "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_POST_V81_PASS_2026-10-17.json",
       "NEXIA_EVENT_INDEX_V81.json",
-      "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
-      "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_2026-10-17.json",
-      "NEXIA_EVENT_INDEX_V80.json"
+      "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json"
     ],
-    "resume_from": "Verify atomic V81 reconciliation and recovery; then resume EXP-AUTO-001 external validation. Do not duplicate closed publications or runtime experiments.",
-    "truth_limit": "Control Plane V1 is repository-verified; branch protection is not enabled; measured quota savings and external commercial response remain unestablished."
+    "resume_from": "Resume EXP-AUTO-001 external validation. Do not duplicate Contra/Instagram publications, closed FLUX benchmark or closed AUTO-PRODUCT stress work.",
+    "truth_limit": "Control Plane V1 recovery is repository-verified; branch protection is not enabled; measured quota savings and external commercial response remain unestablished."
   },
-  "next_action": "VERIFY_ATOMIC_V81_RECONCILIATION_AND_RECOVERY_THEN_RESUME_EXP_AUTO_001_EXTERNAL_VALIDATION",
+  "next_action": "RESUME_EXP_AUTO_001_EXTERNAL_VALIDATION_WITH_EXISTING_CAPABILITIES_AND_PROCESS_INTELLIGENCE",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -95,9 +99,9 @@
   },
   "resume_required_reads": [
     "NEXIA_STATE.json",
-    "NEXIA_EVENT_INDEX_V81.json",
-    "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
-    "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_2026-10-17.json",
-    "NEXIA_EVENT_INDEX_V80.json"
+    "NEXIA_EVENT_INDEX_V82.json",
+    "events/EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001.json",
+    "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_POST_V81_PASS_2026-10-17.json",
+    "NEXIA_EVENT_INDEX_V81.json"
   ]
 }
