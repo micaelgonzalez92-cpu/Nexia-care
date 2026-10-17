@@ -12,6 +12,8 @@ on:
       - 'governance/NEXIA_ADAPTIVE_TASK_BATCHING_STANDARD_V1_2026-10-17.md'
       - 'governance/NEXIA_TASK_PACKET_TEMPLATE_V1.json'
       - 'governance/NEXIA_ATOMIC_CHECKPOINT_CONTRACT_V1_2026-10-17.md'
+      - '.agents/skills/nexia-checkpoint/SKILL.md'
+      - 'NEXIA_PERSISTENCE_PROTOCOL.md'
       - 'AGENTS.md'
       - '.github/workflows/nexia-control-plane-integration.yml'
   workflow_dispatch:
