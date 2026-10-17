@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "drill_id": "NEXIA-RECOVERY-DRILL-CONTROL-PLANE-V1-POST-V81-2026-10-17",
+  "date": "2026-10-17",
+  "evidence_label": "HECHO_VERIFICADO",
+  "status": "DERIVED_NONCANONICAL_EVIDENCE",
+  "checkpoint_commit": "d455752613b9bc84a57bafaaafbc0d179d35c18c",
+  "recovery_order_executed": [
+    "NEXIA_BOOT.json",
+    "NEXIA_STATE.json",
+    "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V81.json",
+    "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
+    "NEXIA_EVENT_INDEX_V80.json"
+  ],
+  "reconstructed": {
+    "mission": "MISSION-SYSTEM-EXCELLENCE-REALITY-001 / SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+    "canonical_state_version": 73,
+    "control_plane_v1": "INSTALLED_INTEGRATED_TESTED_VERIFIED_ON_MAIN",
+    "atomic_checkpoint": "VERIFIED_BOUNDED_REPOSITORY_CAPABILITY",
+    "adaptive_task_batching": "VERIFIED_BOUNDED_REPOSITORY_CAPABILITY",
+    "wip_lane_1": "EXP-AUTO-001_EXTERNAL_VALIDATION_PRIORITY",
+    "wip_lane_2": "VETA-AI-UGC-001_FLUX_IMAGE_EDIT_VERIFIED_RUNTIME_FUNCTIONAL_BOUNDED_PROFESSIONAL_NOT_ESTABLISHED",
+    "wip_lane_3": "VETA-AUTO-PRODUCT-001_BOUNDED_SERIALIZED_RUNTIME_PASS_OPTIONAL_PROFILE_STOPPED_FOR_CURRENT_PURPOSE",
+    "latest_event": "EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001",
+    "economics": "UNCHANGED_ZERO_REVENUE_ZERO_SETTLED_REVENUE_ZERO_PROFIT",
+    "next_action": "RESUME_EXP_AUTO_001_EXTERNAL_VALIDATION_AFTER_RECOVERY_VERIFICATION"
+  },
+  "checkpoint_verification": {
+    "expected_head_before_checkpoint": "e72cdf6eaa328ec6776d78f8fe00ba090ac90f91",
+    "resulting_checkpoint_commit": "d455752613b9bc84a57bafaaafbc0d179d35c18c",
+    "ref_update": "NON_FORCE_EXPECTED_HEAD_MATCH_PASS",
+    "main_readback": "PASS",
+    "boot_readback": "PASS_BLOB_e4054fd59f80d554115d963a191ab6c0e9845a2b",
+    "live_readback": "PASS_BLOB_62a7770e23b63654be746f9199f8f2332e60c7be",
+    "technical_integrity_job_id": 117422745396,
+    "technical_integrity_conclusion": "SUCCESS",
+    "integrity_status": "WARN",
+    "integrity_errors": 0,
+    "integrity_warnings": 4,
+    "indexes_checked": 80,
+    "events_checked": 156,
+    "historical_warnings_unchanged": true
+  },
+  "result": "PASS_EXACT_RECOVERY_OF_CONTROL_PLANE_V1_AND_EXISTING_REALITY_LOOP",
+  "prior_failure_resolved": "FAIL_CANONICAL_RECOVERY_VISIBILITY_GAP",
+  "truth_boundary": "This proves repository recovery visibility, state/index/event bindings and CI integrity for the bounded checkpoint. It does not prove commercial demand, production behavior outside tested boundaries, measured Work/Codex quota savings, payment, profit, or GitHub branch-protection hardening.",
+  "cost_eur": 0,
+  "external_effects": false
+}
