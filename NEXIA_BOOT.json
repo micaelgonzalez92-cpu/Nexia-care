@@ -1,6 +1,6 @@
 {
   "schema_version": 80,
-  "boot_version": 134,
+  "boot_version": 135,
   "generated_at": "2026-10-17",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -26,8 +26,8 @@
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "567986fa997975c866f07cf5bcb52dd9d1eae5a6",
-  "live_state_status": "RECONCILED_CONTRA_V4_AND_NEXIA_INSTAGRAM_PUBLIC_INDEX_V79",
+  "live_state_blob_sha": "177c9b7d695f1a3b8ec902b0ba9b81a6e7466a4b",
+  "live_state_status": "RECONCILED_PROCESS_INTELLIGENCE_V1_AND_CONTRA_PUBLIC_INDEX_V80",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
     "active_index": "NEXIA_EVENT_INDEX_V80.json",
@@ -114,7 +114,8 @@
       "events/EVT-2026-10-16-UGC002-V2-QA-001.json",
       "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
       "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json"
-    ]
+    ],
+    "scope": "PRE_V80_IMPLEMENTATION_BASELINE; final V80 consistency requires post-reconciliation CI."
   },
   "process_intelligence_checkpoint": {
     "status": "VERIFIED_INTERNAL_DETERMINISTIC_V1",
@@ -132,11 +133,12 @@
     "lessons_count": 6,
     "pre_task_rule": "QUERY_RELEVANT_PROCESS_INTELLIGENCE_BEFORE_MATERIAL_WORK_WHEN_PRIOR_NEXIA_HISTORY_MAY_APPLY",
     "human_attention": "NOT_INSTRUMENTED",
-    "truth_boundary": "Deterministic derived process intelligence only; not semantic certainty, automatic failure prevention, or proven economic impact."
+    "truth_boundary": "Deterministic derived process intelligence only; not semantic certainty, automatic failure prevention, or proven economic impact.",
+    "post_checkpoint_reconciliation": "LIVE_EVENT_STORAGE_UPDATED_TO_V80_AFTER_CI_DETECTED_BOOT_LIVE_EVENT_STORAGE_MISMATCH"
   },
   "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — PROCESS INTELLIGENCE V1 VERIFIED INTERNAL; CONTRA V4 PUBLIC; NEXIA INSTAGRAM FOUR POSTS VERIFIED; MOBILE ACCESS/LINK PENDING",
   "human_gate": "Resolve nexia.gram mobile access, then add clickable Contra portfolio link. Published Contra/Instagram content already verified; no repeat. Client contact, production, KYC/payout and spending remain separate gates.",
-  "sync_status": "STATE_V73_PLUS_INDEX_V80_PROCESS_INTELLIGENCE_BOOT134",
+  "sync_status": "STATE_V73_PLUS_INDEX_V80_PROCESS_INTELLIGENCE_BOOT135_LIVE60",
   "next_action": "KAEL_NEXIA_INSTAGRAM_MOBILE_ACCESS_AND_LINK; no duplicate publication, Process Intelligence over-polish, or closed runtime reruns.",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",

@@ -1,7 +1,7 @@
 {
-  "schema_version": 59,
+  "schema_version": 60,
   "updated_at": "2026-10-17",
-  "status": "ACTIVE_MODEL_C_CONTRA_V4_PUBLIC_AND_NEXIA_INSTAGRAM_FOUR_POSTS_VERIFIED",
+  "status": "ACTIVE_MODEL_C_PROCESS_INTELLIGENCE_V1_VERIFIED_CONTRA_V4_PUBLIC_AND_NEXIA_INSTAGRAM_FOUR_POSTS_VERIFIED",
   "state_version": 73,
   "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
   "state_status": "CANONICAL_MODEL_C",
@@ -28,6 +28,19 @@
     "execution_order": "ACTIVE_TASK->EXISTING_USER_PROJECT_CORPUS->CANONICAL_NEXIA->UPSTREAM_VERIFY->COUNTERCHECK->MAX3_SHORTLIST->COMPARE->PROPOSE_NO_INSTALL->AUTHORITY_GATE->BOUNDED_POC->CAPTURE->RESUME_TASK",
     "proposal_policy": "NEW_SOFTWARE_API_REPO_MODEL_ACCOUNT_OR_PERSISTENT_SERVICE_IS_PROPOSED_BEFORE_INSTALL_OR_ACTIVATION",
     "latest_reassessment": "research/NEXIA_TASK_TRIGGERED_RD_UGC_CORPUS_REASSESSMENT_V1_2026-10-16.md"
+  },
+  "process_intelligence": {
+    "status": "VERIFIED_INTERNAL_DETERMINISTIC_V1",
+    "standard": "intelligence/NEXIA_PROCESS_INTELLIGENCE_STANDARD_V1_2026-10-17.md",
+    "miner": "tools/nexia_process_miner.py",
+    "implementation_commit": "641d4e7194bcc9bc2b6b848a126a9de4a0df9332",
+    "verification_event": "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
+    "pre_task_rule": "QUERY_RELEVANT_PROCESS_INTELLIGENCE_BEFORE_MATERIAL_WORK_WHEN_PRIOR_NEXIA_HISTORY_MAY_APPLY",
+    "source_baseline_index": "NEXIA_EVENT_INDEX_V79.json",
+    "baseline_episodes_loaded": 119,
+    "baseline_lessons_count": 6,
+    "human_attention": "NOT_INSTRUMENTED",
+    "truth_boundary": "Deterministic derived process intelligence only; not semantic certainty, automatic failure prevention, or proven economic impact."
   },
   "ugc_video": {
     "route_a": {
@@ -281,12 +294,12 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V79.json",
-    "active_index_blob_sha": "17bfde61fa66229ba66dfced8b20102f1f13e2a6",
-    "latest_verified_event_id": "EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001.json",
-    "latest_verified_event_blob_sha": "f05ec12f718d783e591ef88ffe78279b4bce3779",
-    "base_index": "NEXIA_EVENT_INDEX_V78.json"
+    "active_index": "NEXIA_EVENT_INDEX_V80.json",
+    "active_index_blob_sha": "b00a4aa6c910969530f69fc16b84b9528ff59060",
+    "latest_verified_event_id": "EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
+    "latest_verified_event_blob_sha": "5a0fa3e5c42e6960aaecc110933df55b691164bb",
+    "base_index": "NEXIA_EVENT_INDEX_V79.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -307,8 +320,8 @@
     "nexia_instagram_mobile_access": "PENDING_USER_LOGIN; CLICKABLE_PORTFOLIO_LINK_MOBILE_ONLY"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Published and verified Contra four V4 works, sprint service, launch post and brand Instagram link; Nexia Instagram owner access, name, avatar, bio and four posts verified.",
-    "last_user_facing_handoff": "Mobile Instagram access remains unresolved; plain portfolio address in bio; clickable external link still pending mobile app.",
+    "last_completed_verified_action": "Implemented and verified deterministic Nexia Process Intelligence V1; previously published and verified Contra four V4 works, sprint service, launch post and Nexia Instagram owner access/name/avatar/bio/four posts.",
+    "last_user_facing_handoff": "Process Intelligence V1 is internal and verified; mobile Instagram access remains unresolved; plain portfolio address in bio; clickable external link still pending mobile app.",
     "human_action_required_now": true,
     "pending_human_action": "Add existing nexia.gram in mobile Instagram using exact username. If login fails, identify exact Instagram error before credential changes; no secrets in chat. Then add clickable Contra portfolio link.",
     "surface": "INSTAGRAM",
@@ -317,11 +330,13 @@
     "return_to_nexia": "Confirm mobile Nexia connected or give exact error without credentials",
     "resume_required_reads": [
       "NEXIA_STATE.json",
+      "NEXIA_EVENT_INDEX_V80.json",
+      "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
       "NEXIA_EVENT_INDEX_V79.json",
       "events/EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001.json"
     ],
-    "resume_from": "Mobile login and clickable portfolio link only; do not duplicate public works/posts.",
-    "truth_limit": "Internal technical proofs with synthetic data; no invented clients, testimonials, production results, concurrency guarantees or SLA."
+    "resume_from": "Mobile login and clickable portfolio link only; do not duplicate public works/posts. Query Process Intelligence before materially similar work.",
+    "truth_limit": "Internal technical proofs with synthetic data; no invented clients, testimonials, production results, concurrency guarantees or SLA. Process Intelligence is deterministic derived guidance, not semantic certainty."
   },
   "next_action": "KAEL_NEXIA_INSTAGRAM_MOBILE_ACCESS_AND_CLICKABLE_PORTFOLIO_LINK; external commercial response not established; no repeat closed runtime lanes.",
   "hard_precedence": [
@@ -336,6 +351,8 @@
   },
   "resume_required_reads": [
     "NEXIA_STATE.json",
+    "NEXIA_EVENT_INDEX_V80.json",
+    "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
     "NEXIA_EVENT_INDEX_V79.json",
     "events/EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001.json",
     "NEXIA_EVENT_INDEX_V78.json"
