@@ -1,8 +1,8 @@
 # NEXIA CORE — PERSISTENCE & CHECKPOINT PROTOCOL
 
 Status: ACTIVE
-Protocol version: 2.1
-Effective: 2026-10-12
+Protocol version: 2.2
+Effective: 2026-10-17
 Cost: €0
 
 ## Canonical hierarchy
@@ -50,6 +50,26 @@ A critical operational change follows:
 `OBSERVE → EXECUTE → VERIFY → CHECKPOINT → BACKUP`.
 
 Only VERIFIED work is complete. A commit proves persistence, not deployment, buyer acceptance or economic impact.
+
+### Atomic canonical checkpoint rule
+A checkpoint that changes canonical bindings must be prepared and promoted as one complete Git transaction:
+
+`READ EXPECTED HEAD → BUILD COMPLETE CANDIDATE → VALIDATE CANDIDATE → CREATE ONE COMMIT → NON-FORCE REF UPDATE → REMOTE READBACK → POSTCONDITIONS`.
+
+Requirements:
+- bind the transaction to an explicit expected HEAD SHA;
+- assemble every STATE/BOOT/LIVE/index/event binding that must change together before remote mutation;
+- run the integrity validator against the complete candidate before promotion;
+- use an ordinary fast-forward/non-force update only;
+- fail closed if the branch head changed;
+- reject unsafe candidate paths, Git metadata overlays and incomplete required candidates;
+- require remote ref plus candidate-file readback before declaring `PERSISTED_VERIFIED`;
+- never interpret a successful Git checkpoint as deployment, runtime success, customer acceptance, payment, demand or profit;
+- rollback by a new forward commit restoring a known-good tree unless a different recovery action is explicitly authorized.
+
+`tools/nexia_atomic_checkpoint.py` is the repository helper for this transaction when available. Prepare-only mode is preferred before any remote write. Its `--allow-main` flag is a technical interlock only and never grants authority to modify `main`.
+
+Independent per-file remote writes may still be used for non-critical documentation or derived artifacts when they cannot create an inconsistent canonical checkpoint. They must not be used as the persistence mechanism for a critical multi-file canonical transition.
 
 ## Checkpoint contents
 Every critical checkpoint identifies:
@@ -126,7 +146,7 @@ If any write fails:
 - record a corrective/new event when safe capability exists.
 
 ## Human gates
-Persistence changes never grant business authorization. Spending, external contact, publication, irreversible deletion and material risk remain Kael-controlled.
+Persistence changes never grant business authorization. Spending, external contact, publication, irreversible deletion and material risk remain Kael-controlled. Promotion to a gated branch or surface must have the authority required by the current authority model; a technical CLI flag is never authority.
 
 ## Recovery test
 A fresh session should identify from BOOT + STATE + mandatory LIVE + required post-STATE event/context reads:
