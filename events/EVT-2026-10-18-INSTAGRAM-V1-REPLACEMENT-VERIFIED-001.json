@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001",
+  "timestamp": "2026-10-18",
+  "type": "AUTHORIZED_INSTAGRAM_PUBLIC_REPLACEMENT_POSTCONDITION",
+  "evidence_label": "VERIFIED_PUBLIC_LINKS_PLUS_USER_SUPPLIED_WORK_REPORT",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "canonical_state_version": 73,
+  "authorization": {
+    "scope": "User expressly authorized deleting and re-uploading the four existing Nexia Instagram case-study posts; retained already optimized extra post; account is @nexia.gram.",
+    "authority_effect": "TASK_SPECIFIC_ONLY; no generalized publication/third-party action permission"
+  },
+  "account": "https://www.instagram.com/nexia.gram/",
+  "action_execution": "COMPLETED_IN_WORK_AS_REPORTED_BY_USER; THIS_EVENT_IS_READ_ONLY_RECONCILIATION",
+  "new_posts": [
+    {
+      "case": "01_LEAD_INTAKE",
+      "url": "https://www.instagram.com/p/DenPtrxjE4i/",
+      "public_check": "ACCESSIBLE_WITH_MATCHING_CAPTION"
+    },
+    {
+      "case": "02_PERSISTENT_DEDUP",
+      "url": "https://www.instagram.com/p/DenPkpkjG1i/",
+      "public_check": "ACCESSIBLE_WITH_MATCHING_CAPTION"
+    },
+    {
+      "case": "03_RELIABILITY",
+      "url": "https://www.instagram.com/p/DenPcdPDPHR/",
+      "public_check": "ACCESSIBLE_WITH_MATCHING_CAPTION"
+    },
+    {
+      "case": "04_WORKFLOW_QA",
+      "url": "https://www.instagram.com/p/DenPRGVjAy1/",
+      "public_check": "ACCESSIBLE_WITH_MATCHING_CAPTION"
+    }
+  ],
+  "old_posts": [
+    {
+      "url": "https://www.instagram.com/p/DelxVheDG50/",
+      "public_check": "POST_ISNT_AVAILABLE",
+      "source": "INDEPENDENT_PUBLIC_READ_ONLY_CHECK"
+    },
+    {
+      "url": "https://www.instagram.com/p/DelxckqDFe_/",
+      "public_check": "POST_ISNT_AVAILABLE",
+      "source": "INDEPENDENT_PUBLIC_READ_ONLY_CHECK"
+    },
+    {
+      "url": "https://www.instagram.com/p/DelxoJWjIaB/",
+      "public_check": "POST_ISNT_AVAILABLE",
+      "source": "INDEPENDENT_PUBLIC_READ_ONLY_CHECK"
+    },
+    {
+      "url": "https://www.instagram.com/p/DelxwGWDFhW/",
+      "public_check": "POST_ISNT_AVAILABLE",
+      "source": "INDEPENDENT_PUBLIC_READ_ONLY_CHECK"
+    }
+  ],
+  "preserved_post": {
+    "url": "https://www.instagram.com/p/DelzsVUjCIg/",
+    "public_check": "ACCESSIBLE"
+  },
+  "independent_public_profile_check": {
+    "visible_posts_count": 5,
+    "profile_url": "https://www.instagram.com/nexia.gram/",
+    "observed_after_replacement": true
+  },
+  "report_from_Work": {
+    "avatar": "NEW_NE_AVATAR_CIRCULAR_CROP_VERIFIED_BY_WORK",
+    "images": "FOUR_NEW_4_5_POSTS_CONFIRMED_BY_WORK",
+    "captions": "INTERNAL_SYNTHETIC_DATA_BOUNDARY_PRESENT",
+    "deletion_method": "DELETE_USED_ARCHIVE_OPTION_NOT_AVAILABLE",
+    "external_spend_eur": 0,
+    "local_evidence_reference": "C:/Users/User/.codex/.chatgpt-projects/g-p-6ac02e5d5b84819190b29f630d0ff0e5/outputs/instagram_replacement_v1/RESULTADO_VERIFICADO.json",
+    "local_evidence_materialized_in_this_session": false
+  },
+  "evidence_boundaries": {
+    "public_verification": "New and preserved permalinks accessible; old 4 permalinks unavailable; public profile displays five posts",
+    "private_work_verification": "Reported by user supplied Work completion; local screenshots/JSON not independently inspected from this chat",
+    "not_claimed": [
+      "Independent image bytes comparison",
+      "Authentic internal account session in this chat",
+      "Audience growth",
+      "Revenue",
+      "Commercial demand",
+      "Settled payments"
+    ]
+  },
+  "outstanding": {
+    "instagram_profile_link": "Contra URL present as plain bio text, NOT CLICKABLE; Work did not modify",
+    "contra_identity": "USER_KYC_PENDING; NO ACTION TAKEN",
+    "workana": "PROFILE_UNDER_REVIEW; NO_PROPOSAL_SENT"
+  },
+  "commercial_state": {
+    "paid_clients_verified": 0,
+    "settled_revenue_added_eur": 0,
+    "spend_added_eur": 0
+  },
+  "next_action": "Do not republish or delete completed Instagram posts. Resolve clickable professional portfolio link when user has authenticated Instagram app access; continue bounded commercial validation and LinkedIn personal setup behind its account creation gate."
+}
