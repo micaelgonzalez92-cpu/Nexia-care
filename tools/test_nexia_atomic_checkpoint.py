@@ -139,6 +139,41 @@ def test_symlink_rejected():
         assert "symlink" in result["reason"]
 
 
+def test_git_metadata_path_rejected():
+    with tempfile.TemporaryDirectory() as directory:
+        _bare, work, candidate, base = setup_repo(Path(directory))
+        metadata = candidate / ".git"
+        metadata.mkdir()
+        (metadata / "config").write_text("forbidden\n", encoding="utf-8")
+        result = run_transaction(
+            root=work,
+            candidate_dir=candidate,
+            branch="test",
+            expected_head=base,
+            message="checkpoint",
+            validator=validator_cmd(),
+            push=False,
+        )
+        assert result["status"] == "FAILED_PRECONDITION", result
+        assert "unsafe candidate path" in result["reason"]
+
+
+def test_invalid_git_branch_rejected():
+    with tempfile.TemporaryDirectory() as directory:
+        _bare, work, candidate, base = setup_repo(Path(directory))
+        result = run_transaction(
+            root=work,
+            candidate_dir=candidate,
+            branch="-unsafe",
+            expected_head=base,
+            message="checkpoint",
+            validator=validator_cmd(),
+            push=False,
+        )
+        assert result["status"] == "FAILED_PRECONDITION", result
+        assert "unsafe branch name" in result["reason"]
+
+
 def test_readback_mismatch():
     ok, reason = verify_readback("a" * 40, "b" * 40, {"x": True})
     assert not ok and "remote ref" in reason
@@ -168,6 +203,8 @@ def main():
         test_stale_head_no_overwrite,
         test_required_path_missing,
         test_symlink_rejected,
+        test_git_metadata_path_rejected,
+        test_invalid_git_branch_rejected,
         test_readback_mismatch,
         test_main_guard,
     ]
