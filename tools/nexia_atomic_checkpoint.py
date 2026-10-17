@@ -53,6 +53,7 @@ def _safe_rel(path: Path, base: Path) -> str:
         or "\\" in rel
         or ":" in rel
         or "\x00" in rel
+        or (posix.parts and posix.parts[0] == ".git")
     ):
         raise ValueError(f"unsafe candidate path: {rel!r}")
     return rel
@@ -148,6 +149,7 @@ def run_transaction(
         or ".." in branch
         or branch.startswith("/")
         or branch.endswith("/")
+        or _git(root, "check-ref-format", "--branch", branch).returncode != 0
     ):
         return {
             "status": "FAILED_PRECONDITION",
@@ -169,7 +171,7 @@ def run_transaction(
 
     try:
         files = scan_candidate(candidate_dir)
-    except ValueError as exc:
+    except (ValueError, OSError) as exc:
         return {
             "status": "FAILED_PRECONDITION",
             "reason": str(exc),
@@ -213,17 +215,24 @@ def run_transaction(
             }
 
         digests: dict[str, str] = {}
-        for rel, source in files:
-            target = (worktree / rel).resolve()
-            if not target.is_relative_to(worktree.resolve()):
-                return {
-                    "status": "FAILED_PRECONDITION",
-                    "reason": f"candidate path escapes worktree: {rel}",
-                    "remote_changed": False,
-                }
-            target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(source, target)
-            digests[rel] = _candidate_digest(source)
+        try:
+            for rel, source in files:
+                target = (worktree / rel).resolve()
+                if not target.is_relative_to(worktree.resolve()):
+                    return {
+                        "status": "FAILED_PRECONDITION",
+                        "reason": f"candidate path escapes worktree: {rel}",
+                        "remote_changed": False,
+                    }
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(source, target)
+                digests[rel] = _candidate_digest(source)
+        except OSError as exc:
+            return {
+                "status": "FAILED_PRECONDITION",
+                "reason": f"candidate overlay failed: {exc}",
+                "remote_changed": False,
+            }
 
         validator_cmd = (
             list(validator)
