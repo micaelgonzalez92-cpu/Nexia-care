@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001",
+  "timestamp": "2026-10-17T16:23:00+02:00",
+  "type": "CONTROL_PLANE_V1_PROMOTED_TO_MAIN_VERIFIED",
+  "evidence_label": "HECHO_VERIFICADO",
+  "canonical_state_version": 73,
+  "state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "authority": "Kael explicitly authorized promotion of Control Plane V1 to main. This event records the completed promotion only and does not expand any other permission.",
+  "action": "Promoted Control Plane V1 to main as one forward commit containing Atomic Canonical Checkpoint V1, Adaptive Task Batching V1, AGENTS integration, checkpoint skill adoption and Persistence Protocol 2.2; excluded the temporary integration-only workflow.",
+  "promotion": {
+    "previous_main_head": "393a06455e13c29ae3029a61d5a4eaa474a2e2e0",
+    "promoted_commit": "e72cdf6eaa328ec6776d78f8fe00ba090ac90f91",
+    "promoted_commit_parent": "393a06455e13c29ae3029a61d5a4eaa474a2e2e0",
+    "history_rewrite": false,
+    "force_push": false,
+    "main_readback": "PASS",
+    "temporary_integration_workflow_promoted": false
+  },
+  "capabilities": {
+    "atomic_checkpoint": {
+      "status": "INSTALLED_INTEGRATED_TESTED_VERIFIED_ON_MAIN",
+      "helper": "tools/nexia_atomic_checkpoint.py",
+      "contract": "governance/NEXIA_ATOMIC_CHECKPOINT_CONTRACT_V1_2026-10-17.md",
+      "workflow": ".github/workflows/nexia-atomic-checkpoint.yml",
+      "regression": "PASS_9_OF_9"
+    },
+    "adaptive_task_batching": {
+      "status": "INSTALLED_INTEGRATED_TESTED_VERIFIED_ON_MAIN",
+      "helper": "tools/nexia_task_batching.py",
+      "standard": "governance/NEXIA_ADAPTIVE_TASK_BATCHING_STANDARD_V1_2026-10-17.md",
+      "template": "governance/NEXIA_TASK_PACKET_TEMPLATE_V1.json",
+      "workflow": ".github/workflows/nexia-task-batching.yml",
+      "regression": "PASS_9_OF_9"
+    }
+  },
+  "verification": {
+    "batching_regression_job_id": 117419482206,
+    "batching_regression_conclusion": "SUCCESS",
+    "atomic_checkpoint_regression_job_id": 117419481688,
+    "atomic_checkpoint_regression_conclusion": "SUCCESS",
+    "technical_integrity_job_id": 117419481439,
+    "technical_integrity_conclusion": "SUCCESS",
+    "secret_scan_job_id": 117419481304,
+    "secret_scan_conclusion": "SUCCESS",
+    "pages_build_job_id": 117419482896,
+    "pages_build_conclusion": "SUCCESS",
+    "pages_deploy_job_id": 117419557542,
+    "pages_deploy_conclusion": "SUCCESS",
+    "integrity_checker_status": "WARN",
+    "integrity_errors": 0,
+    "integrity_warnings": 4,
+    "indexes_checked": 79,
+    "events_checked": 155,
+    "historical_warnings_unchanged": true
+  },
+  "economics": {
+    "cost_eur": 0,
+    "revenue_eur_changed": false,
+    "settled_revenue_eur_changed": false,
+    "profit_eur_changed": false
+  },
+  "external_effects": "Repository canonical branch changed as explicitly authorized; no client contact, KYC, payment, production activation or new publication was performed by this control-plane promotion.",
+  "state_changed": false,
+  "authority_changed": false,
+  "truth_boundary": "This event proves repository promotion, readback and CI for Control Plane V1. It does not prove commercial demand, production reliability outside tested boundaries, autonomous operation, measured quota savings, payment, profit, or branch-protection hardening.",
+  "recovery_reference": {
+    "current_state": "NEXIA_STATE.json",
+    "pre_reconciliation_index": "NEXIA_EVENT_INDEX_V80.json",
+    "target_reconciliation_index": "NEXIA_EVENT_INDEX_V81.json",
+    "main_commit": "e72cdf6eaa328ec6776d78f8fe00ba090ac90f91"
+  },
+  "next_action": "Reconcile this event into BOOT/LIVE/index atomically, then run a clean recovery drill before resuming the Reality Loop."
+}

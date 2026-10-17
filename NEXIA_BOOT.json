@@ -1,6 +1,6 @@
 {
-  "schema_version": 80,
-  "boot_version": 135,
+  "schema_version": 81,
+  "boot_version": 136,
   "generated_at": "2026-10-17",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,6 +15,9 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V81.json",
+    "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
+    "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_2026-10-17.json",
     "NEXIA_EVENT_INDEX_V80.json",
     "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
     "NEXIA_EVENT_INDEX_V79.json",
@@ -26,16 +29,16 @@
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "177c9b7d695f1a3b8ec902b0ba9b81a6e7466a4b",
-  "live_state_status": "RECONCILED_PROCESS_INTELLIGENCE_V1_AND_CONTRA_PUBLIC_INDEX_V80",
+  "live_state_blob_sha": "62a7770e23b63654be746f9199f8f2332e60c7be",
+  "live_state_status": "RECONCILED_CONTROL_PLANE_V1_INDEX_V81_EXTERNAL_REALITY_PRESERVED",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V80.json",
-    "active_index_blob_sha": "b00a4aa6c910969530f69fc16b84b9528ff59060",
-    "latest_verified_event_id": "EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
-    "latest_verified_event_blob_sha": "5a0fa3e5c42e6960aaecc110933df55b691164bb",
-    "base_index": "NEXIA_EVENT_INDEX_V79.json"
+    "active_index": "NEXIA_EVENT_INDEX_V81.json",
+    "active_index_blob_sha": "0051a21b8cc4fa5beee54bfe38733f7e493e993b",
+    "latest_verified_event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
+    "latest_verified_event_blob_sha": "29c16ad6ea17527568a98d50d98cc93b1f2d73c4",
+    "base_index": "NEXIA_EVENT_INDEX_V80.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
@@ -115,7 +118,7 @@
       "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
       "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json"
     ],
-    "scope": "PRE_V80_IMPLEMENTATION_BASELINE; final V80 consistency requires post-reconciliation CI."
+    "scope": "PRE_V80_IMPLEMENTATION_BASELINE; final current consistency is always determined by the latest integrity run, not these historical counters."
   },
   "process_intelligence_checkpoint": {
     "status": "VERIFIED_INTERNAL_DETERMINISTIC_V1",
@@ -136,10 +139,22 @@
     "truth_boundary": "Deterministic derived process intelligence only; not semantic certainty, automatic failure prevention, or proven economic impact.",
     "post_checkpoint_reconciliation": "LIVE_EVENT_STORAGE_UPDATED_TO_V80_AFTER_CI_DETECTED_BOOT_LIVE_EVENT_STORAGE_MISMATCH"
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — PROCESS INTELLIGENCE V1 VERIFIED INTERNAL; CONTRA V4 PUBLIC; NEXIA INSTAGRAM FOUR POSTS VERIFIED; MOBILE ACCESS/LINK PENDING",
-  "human_gate": "Resolve nexia.gram mobile access, then add clickable Contra portfolio link. Published Contra/Instagram content already verified; no repeat. Client contact, production, KYC/payout and spending remain separate gates.",
-  "sync_status": "STATE_V73_PLUS_INDEX_V80_PROCESS_INTELLIGENCE_BOOT135_LIVE60",
-  "next_action": "KAEL_NEXIA_INSTAGRAM_MOBILE_ACCESS_AND_LINK; no duplicate publication, Process Intelligence over-polish, or closed runtime reruns.",
+  "control_plane_v1_checkpoint": {
+    "status": "PROMOTED_VERIFIED_ON_MAIN_RECONCILIATION_TO_V81_PREPARED",
+    "promotion_commit": "e72cdf6eaa328ec6776d78f8fe00ba090ac90f91",
+    "promotion_event": "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
+    "atomic_checkpoint_helper": "tools/nexia_atomic_checkpoint.py",
+    "adaptive_task_batching_helper": "tools/nexia_task_batching.py",
+    "atomic_regression": "PASS_9_OF_9",
+    "batching_regression": "PASS_9_OF_9",
+    "quota_savings": "NOT_INSTRUMENTED",
+    "branch_protection": "NOT_ENABLED",
+    "truth_boundary": "Repository integration and bounded regression verification only; no proof of commercial demand, autonomous operation, measured quota savings or branch-protection hardening."
+  },
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONTROL PLANE V1 VERIFIED; RECOVERY RECONCILIATION V81; EXTERNAL REALITY LOOP PRESERVED",
+  "human_gate": "No human action required for this internal reconciliation. After recovery verification, resume EXP-AUTO-001 external validation. Client contact, production, KYC/payout, spending and GitHub governance changes remain separate gates.",
+  "sync_status": "STATE_V73_PLUS_INDEX_V81_CONTROL_PLANE_V1_BOOT136_LIVE61",
+  "next_action": "VERIFY_ATOMIC_V81_RECONCILIATION_AND_RECOVERY_THEN_RESUME_EXP_AUTO_001_EXTERNAL_VALIDATION",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",

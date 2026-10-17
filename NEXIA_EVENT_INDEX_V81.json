@@ -1,0 +1,25 @@
+{
+  "schema_version": 81,
+  "updated_at": "2026-10-17",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V80.json",
+    "verified_blob_sha": "b00a4aa6c910969530f69fc16b84b9528ff59060"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001",
+      "path": "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
+      "verified_blob_sha": "29c16ad6ea17527568a98d50d98cc93b1f2d73c4"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001",
+  "latest_event_path": "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
+  "latest_event_blob_sha": "29c16ad6ea17527568a98d50d98cc93b1f2d73c4",
+  "latest_material_business_event_id": "EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "Preserve V80 Process Intelligence and external-reality evidence; add verified Control Plane V1 promotion. STATE v73, economics and authority remain unchanged."
+}
