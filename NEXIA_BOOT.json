@@ -1,6 +1,6 @@
 {
-  "schema_version": 81,
-  "boot_version": 136,
+  "schema_version": 82,
+  "boot_version": 137,
   "generated_at": "2026-10-17",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,9 +15,11 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V82.json",
+    "events/EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001.json",
+    "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_POST_V81_PASS_2026-10-17.json",
     "NEXIA_EVENT_INDEX_V81.json",
     "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
-    "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_2026-10-17.json",
     "NEXIA_EVENT_INDEX_V80.json",
     "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
     "NEXIA_EVENT_INDEX_V79.json",
@@ -29,16 +31,16 @@
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "62a7770e23b63654be746f9199f8f2332e60c7be",
-  "live_state_status": "RECONCILED_CONTROL_PLANE_V1_INDEX_V81_EXTERNAL_REALITY_PRESERVED",
+  "live_state_blob_sha": "7109ca1ad9ae2957f0b77ebd374cb946d28c5178",
+  "live_state_status": "CONTROL_PLANE_V1_RECOVERY_VERIFIED_REALITY_LOOP_RESUME",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V81.json",
-    "active_index_blob_sha": "0051a21b8cc4fa5beee54bfe38733f7e493e993b",
-    "latest_verified_event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
-    "latest_verified_event_blob_sha": "29c16ad6ea17527568a98d50d98cc93b1f2d73c4",
-    "base_index": "NEXIA_EVENT_INDEX_V80.json"
+    "active_index": "NEXIA_EVENT_INDEX_V82.json",
+    "active_index_blob_sha": "696e5272e8bc656d2d9b47984303e6c797715561",
+    "latest_verified_event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001",
+    "latest_verified_event_path": "events/EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001.json",
+    "latest_verified_event_blob_sha": "f85cb5e181e68d349bfd7ef9d3df87df2e6bea16",
+    "base_index": "NEXIA_EVENT_INDEX_V81.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
@@ -101,14 +103,14 @@
     "prior_max_index_depth": 64,
     "max_index_depth": 1024,
     "bounded": true,
-    "ci_run_id": 39031509043,
-    "ci_job_id": 117392722817,
+    "ci_run_id": 39041841840,
+    "ci_job_id": 117422745396,
     "ci_conclusion": "SUCCESS",
     "checker_status": "WARN",
     "errors": 0,
     "warnings": 4,
-    "indexes_checked": 78,
-    "events_checked": 154,
+    "indexes_checked": 80,
+    "events_checked": 156,
     "artifact_references_checked": 22,
     "historical_artifact_blobs_checked": 2,
     "corrected_historical_references": 2,
@@ -118,7 +120,7 @@
       "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
       "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json"
     ],
-    "scope": "PRE_V80_IMPLEMENTATION_BASELINE; final current consistency is always determined by the latest integrity run, not these historical counters."
+    "scope": "V81_CONTROL_PLANE_RECONCILIATION_FULL_CHAIN_VERIFIED_ZERO_ERRORS; V82 closure requires post-persistence CI."
   },
   "process_intelligence_checkpoint": {
     "status": "VERIFIED_INTERNAL_DETERMINISTIC_V1",
@@ -140,21 +142,25 @@
     "post_checkpoint_reconciliation": "LIVE_EVENT_STORAGE_UPDATED_TO_V80_AFTER_CI_DETECTED_BOOT_LIVE_EVENT_STORAGE_MISMATCH"
   },
   "control_plane_v1_checkpoint": {
-    "status": "PROMOTED_VERIFIED_ON_MAIN_RECONCILIATION_TO_V81_PREPARED",
+    "status": "READY_FOR_CURRENT_PURPOSE_RECOVERY_VERIFIED",
     "promotion_commit": "e72cdf6eaa328ec6776d78f8fe00ba090ac90f91",
+    "v81_reconciliation_commit": "d455752613b9bc84a57bafaaafbc0d179d35c18c",
     "promotion_event": "events/EVT-2026-10-17-CONTROL-PLANE-V1-PROMOTION-001.json",
+    "recovery_event": "events/EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001.json",
+    "recovery_evidence": "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_POST_V81_PASS_2026-10-17.json",
     "atomic_checkpoint_helper": "tools/nexia_atomic_checkpoint.py",
     "adaptive_task_batching_helper": "tools/nexia_task_batching.py",
     "atomic_regression": "PASS_9_OF_9",
     "batching_regression": "PASS_9_OF_9",
+    "recovery_visibility": "VERIFIED",
     "quota_savings": "NOT_INSTRUMENTED",
     "branch_protection": "NOT_ENABLED",
-    "truth_boundary": "Repository integration and bounded regression verification only; no proof of commercial demand, autonomous operation, measured quota savings or branch-protection hardening."
+    "truth_boundary": "Repository integration, bounded regression and recovery visibility verified; no proof of commercial demand, autonomous operation, measured quota savings or branch-protection hardening."
   },
-  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONTROL PLANE V1 VERIFIED; RECOVERY RECONCILIATION V81; EXTERNAL REALITY LOOP PRESERVED",
-  "human_gate": "No human action required for this internal reconciliation. After recovery verification, resume EXP-AUTO-001 external validation. Client contact, production, KYC/payout, spending and GitHub governance changes remain separate gates.",
-  "sync_status": "STATE_V73_PLUS_INDEX_V81_CONTROL_PLANE_V1_BOOT136_LIVE61",
-  "next_action": "VERIFY_ATOMIC_V81_RECONCILIATION_AND_RECOVERY_THEN_RESUME_EXP_AUTO_001_EXTERNAL_VALIDATION",
+  "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONTROL PLANE V1 RECOVERY VERIFIED; RESUME EXTERNAL REALITY LOOP",
+  "human_gate": "No human action required for internal system work now. Continue GREEN external-validation research/preparation until a real RED gate; Instagram mobile access, publication/contact, production, KYC/payout, spending and GitHub governance changes remain separately gated.",
+  "sync_status": "STATE_V73_PLUS_INDEX_V82_CONTROL_PLANE_V1_RECOVERY_BOOT137_LIVE62",
+  "next_action": "RESUME_EXP_AUTO_001_EXTERNAL_VALIDATION_WITH_EXISTING_CAPABILITIES_AND_PROCESS_INTELLIGENCE",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
