@@ -1,0 +1,25 @@
+{
+  "schema_version": 80,
+  "updated_at": "2026-10-17",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V79.json",
+    "verified_blob_sha": "17bfde61fa66229ba66dfced8b20102f1f13e2a6"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001",
+      "path": "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
+      "verified_blob_sha": "5a0fa3e5c42e6960aaecc110933df55b691164bb"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001",
+  "latest_event_path": "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json",
+  "latest_event_blob_sha": "5a0fa3e5c42e6960aaecc110933df55b691164bb",
+  "latest_material_business_event_id": "EVT-2026-10-17-CONTRA-V4-INSTAGRAM-PUBLIC-IMPLEMENTATION-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "Preserve V79 external-reality evidence; add verified internal Process Intelligence V1. STATE, economics and authority remain unchanged."
+}

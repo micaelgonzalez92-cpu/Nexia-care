@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001",
+  "timestamp": "2026-10-17",
+  "type": "PROCESS_INTELLIGENCE_V1_INTERNAL_CAPABILITY_VERIFIED",
+  "evidence_label": "HECHO_VERIFICADO",
+  "canonical_state_version": 73,
+  "state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "authority": "Explicit Kael instruction to implement; GREEN internal, EUR0, no external effects or authority expansion.",
+  "implementation": {
+    "commit": "641d4e7194bcc9bc2b6b848a126a9de4a0df9332",
+    "miner_path": "tools/nexia_process_miner.py",
+    "standard_path": "intelligence/NEXIA_PROCESS_INTELLIGENCE_STANDARD_V1_2026-10-17.md",
+    "tests_path": "tools/test_nexia_process_miner.py",
+    "workflow_path": ".github/workflows/nexia-process-intelligence.yml",
+    "pre_task_integration": "AGENTS.md now requires querying Process Intelligence when prior Nexia execution history may contain relevant lessons.",
+    "runtime_model": "DETERMINISTIC_STANDARD_LIBRARY_ONLY",
+    "generated_outputs": "ON_DEMAND_DERIVED_NOT_CANONICAL"
+  },
+  "verification": {
+    "implementation_commit_readback": "PASS",
+    "python_syntax": "PASS",
+    "regression_tests": "PASS_4_OF_4",
+    "ci_run_id": 39031509043,
+    "ci_job_id": 117392722817,
+    "ci_conclusion": "SUCCESS",
+    "ci_steps": [
+      "CHECKOUT_PASS",
+      "PYTHON_SYNTAX_PASS",
+      "PROCESS_INTELLIGENCE_REGRESSION_TESTS_PASS",
+      "CANONICAL_HISTORY_MINING_CHECK_PASS",
+      "CANONICAL_INTEGRITY_BOUNDARY_PASS_WITH_WARNINGS"
+    ]
+  },
+  "canonical_mining": {
+    "source_active_index": "NEXIA_EVENT_INDEX_V79.json",
+    "indexes_traversed": 78,
+    "event_references": 119,
+    "episodes_loaded": 119,
+    "diagnostics_count": 77,
+    "outcome_counts": {
+      "FAIL": 14,
+      "OTHER": 65,
+      "PASS": 40
+    },
+    "evidence_label_counts": {
+      "HECHO_VERIFICADO": 7,
+      "UNKNOWN": 112
+    },
+    "episodes_with_truth_boundary": 87,
+    "episodes_with_next_action": 42,
+    "episodes_with_failure_signals": 37,
+    "reported_cost_eur_events": 6,
+    "reported_cost_eur_sum": 0,
+    "reported_cost_sum_warning": "Event-level reported costs may overlap across checkpoints; not project cash-spend truth.",
+    "human_attention": "NOT_INSTRUMENTED",
+    "lessons_count": 6,
+    "lesson_category_counts": {
+      "EXPERIMENT_DESIGN": 2,
+      "OBSERVABILITY": 1,
+      "PLATFORM": 1,
+      "RELIABILITY": 1,
+      "TRUTH": 1
+    },
+    "lesson_ids": [
+      "LESSON-STATEFUL-CONCURRENCY-STRESS-001",
+      "LESSON-OBSERVABILITY-CROSSCHECK-001",
+      "LESSON-PREREGISTER-BEFORE-OUTPUTS-001",
+      "LESSON-NO-PASS-HUNTING-001",
+      "LESSON-BOUND-CAPABILITY-CLAIMS-001",
+      "LESSON-PLATFORM-MEDIA-COMPATIBILITY-001"
+    ]
+  },
+  "integrity": {
+    "status": "WARN",
+    "errors": 0,
+    "warnings": 4,
+    "indexes_checked": 78,
+    "events_checked": 154,
+    "artifact_references_checked": 22,
+    "historical_artifact_blobs_checked": 2,
+    "corrected_historical_references": 2,
+    "warning_paths": [
+      "NEXIA_EVENT_INDEX_V41.json",
+      "events/EVT-2026-10-16-UGC002-V2-QA-001.json",
+      "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
+      "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json"
+    ]
+  },
+  "capability": {
+    "established": [
+      "TRAVERSE_CANONICAL_COMPOSITE_EVENT_INDEX_CHAIN",
+      "VERIFY_REFERENCED_EVENT_GIT_BLOB_HASHES_WHEN_PRESENT",
+      "NORMALIZE_HISTORICAL_EVENTS_INTO_PROCESS_EPISODES",
+      "DERIVE_SIX_INITIAL_EVIDENCE_BOUND_REUSABLE_LESSON_CLASSES",
+      "RANK_RELEVANT_LESSONS_FOR_A_NEW_TASK_QUERY",
+      "COMPUTE_BOUNDED_PROCESS_METRICS_WITH_UNKNOWN_PRESERVED",
+      "FAIL_ON_EVENT_HASH_OR_ID_MISMATCH",
+      "CI_VERIFY_MINER_AND_CANONICAL_HISTORY_CHECK"
+    ],
+    "not_established": [
+      "SEMANTIC_UNDERSTANDING_OF_ALL_HISTORICAL_EVENTS",
+      "AUTOMATIC_PREVENTION_OF_FUTURE_FAILURES",
+      "COMPLETE_HUMAN_ATTENTION_MEASUREMENT",
+      "ECONOMIC_IMPACT_OR_REVENUE_LIFT",
+      "VECTOR_OR_ML_RETRIEVAL_SUPERIORITY",
+      "CANONICAL_STATUS_OF_ON_DEMAND_DERIVED_OUTPUT_FILES"
+    ]
+  },
+  "cost_eur": 0,
+  "external_effects": false,
+  "state_changed": false,
+  "authority_changed": false,
+  "truth_boundary": "Process Intelligence V1 is a deterministic derived layer over canonical event history. It provides evidence-bound priors and metrics, not semantic certainty, production readiness, buyer value, revenue, or proof that future errors will be avoided. Historical event schemas are heterogeneous; 112 of 119 normalized episodes lacked an explicit evidence_label and remain UNKNOWN.",
+  "stop_rationale": "V1 answers the current learning-compounding bottleneck with a verified deterministic baseline. Do not add vector/ML infrastructure until measured retrieval quality or corpus scale demonstrates a material gap.",
+  "next_priority": "RESUME_EXP_AUTO_001_EXTERNAL_VALIDATION_AND_NEXIA_INSTAGRAM_MOBILE_ACCESS_LINK; no additional Process Intelligence polish without measured retrieval/process gap."
+}
