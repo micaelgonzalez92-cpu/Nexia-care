@@ -1,0 +1,64 @@
+name: Nexia Control Plane Integration
+
+on:
+  push:
+    branches:
+      - nexia/control-plane-integration-v1
+    paths:
+      - 'tools/nexia_task_batching.py'
+      - 'tools/test_nexia_task_batching.py'
+      - 'tools/nexia_atomic_checkpoint.py'
+      - 'tools/test_nexia_atomic_checkpoint.py'
+      - 'governance/NEXIA_ADAPTIVE_TASK_BATCHING_STANDARD_V1_2026-10-17.md'
+      - 'governance/NEXIA_TASK_PACKET_TEMPLATE_V1.json'
+      - 'governance/NEXIA_ATOMIC_CHECKPOINT_CONTRACT_V1_2026-10-17.md'
+      - 'AGENTS.md'
+      - '.github/workflows/nexia-control-plane-integration.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nexia-control-plane-integration-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  integration-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python syntax
+        run: |
+          python3 -m py_compile tools/nexia_task_batching.py tools/test_nexia_task_batching.py
+          python3 -m py_compile tools/nexia_atomic_checkpoint.py tools/test_nexia_atomic_checkpoint.py
+
+      - name: Adaptive task batching regression
+        run: python3 tools/test_nexia_task_batching.py
+
+      - name: Atomic checkpoint fault-injection regression
+        run: python3 tools/test_nexia_atomic_checkpoint.py
+
+      - name: Task packet template JSON
+        run: python3 -m json.tool governance/NEXIA_TASK_PACKET_TEMPLATE_V1.json > /dev/null
+
+      - name: Canonical integrity remains unchanged
+        shell: bash
+        run: |
+          set +e
+          python3 tools/nexia_integrity_check.py --json
+          code=$?
+          set -e
+          if [ "$code" -eq 1 ]; then
+            echo 'Canonical integrity errors detected.'
+            exit 1
+          fi
+          if [ "$code" -eq 2 ]; then
+            echo 'Canonical integrity has warnings only; existing warnings remain visible.'
+          fi
+          exit 0
