@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001",
+  "timestamp": "2026-10-17T16:43:00+02:00",
+  "type": "CONTROL_PLANE_V1_RECOVERY_DRILL_PASS",
+  "evidence_label": "HECHO_VERIFICADO",
+  "canonical_state_version": 73,
+  "state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "authority": "GREEN internal verification and continuity capture. No authority expansion.",
+  "action": "Repeated recovery reconstruction after atomic V81 reconciliation and verified that canonical recovery now exposes Control Plane V1 together with the existing mission, authority, WIP and Reality Loop.",
+  "recovery_evidence": {
+    "path": "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_POST_V81_PASS_2026-10-17.json",
+    "verified_blob_sha": "4cc09eccb76674bf2b74b3bbfc7776782e0b7c3f"
+  },
+  "checkpoint": {
+    "v81_commit": "d455752613b9bc84a57bafaaafbc0d179d35c18c",
+    "expected_parent": "e72cdf6eaa328ec6776d78f8fe00ba090ac90f91",
+    "ref_update": "NON_FORCE_EXPECTED_HEAD_MATCH_PASS",
+    "main_readback": "PASS",
+    "boot_blob_sha": "e4054fd59f80d554115d963a191ab6c0e9845a2b",
+    "live_blob_sha": "62a7770e23b63654be746f9199f8f2332e60c7be"
+  },
+  "verification": {
+    "technical_integrity_job_id": 117422745396,
+    "technical_integrity_conclusion": "SUCCESS",
+    "integrity_status": "WARN",
+    "integrity_errors": 0,
+    "integrity_warnings": 4,
+    "indexes_checked": 80,
+    "events_checked": 156,
+    "historical_warnings_unchanged": true,
+    "recovery_result": "PASS_EXACT_RECOVERY_OF_CONTROL_PLANE_V1_AND_EXISTING_REALITY_LOOP"
+  },
+  "capability": {
+    "atomic_checkpoint": "VERIFIED_BOUNDED_REPOSITORY_CAPABILITY",
+    "adaptive_task_batching": "VERIFIED_BOUNDED_REPOSITORY_CAPABILITY",
+    "recovery_visibility": "VERIFIED_FOR_CONTROL_PLANE_V1_CHECKPOINT"
+  },
+  "economics": {
+    "cost_eur": 0,
+    "revenue_eur_changed": false,
+    "settled_revenue_eur_changed": false,
+    "profit_eur_changed": false
+  },
+  "external_effects": false,
+  "state_changed": false,
+  "authority_changed": false,
+  "prior_failure_resolved": "FAIL_CANONICAL_RECOVERY_VISIBILITY_GAP",
+  "truth_boundary": "This proves bounded repository recovery visibility and integrity for Control Plane V1. It does not prove commercial demand, production reliability outside tested boundaries, measured Work/Codex quota savings, payment, profit, or GitHub branch-protection hardening.",
+  "stop_rationale": "Control Plane V1 persistence and recovery are ready for current purpose. Further internal polishing has lower expected value than resuming the active external Reality Loop.",
+  "next_priority": "RESUME_EXP_AUTO_001_EXTERNAL_VALIDATION; retain Instagram mobile/link, external contact, production, KYC/payout and spending as explicit Human Gates."
+}
