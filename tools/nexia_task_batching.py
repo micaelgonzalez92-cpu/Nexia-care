@@ -8,8 +8,8 @@ read the network, mutate repositories, or infer unavailable token usage.
 Design:
 - one packet = one verifiable outcome;
 - context starts minimal and expands on demand;
-- COMPLEX work is decomposed into STANDARD packets only when explicit phases
-  or subtasks exist; otherwise a planning packet is emitted first;
+- COMPLEX work is decomposed only when explicit bounded phases/subtasks exist;
+  otherwise a planning packet is emitted first;
 - usage telemetry preserves UNKNOWN instead of inventing token/quota values.
 """
 from __future__ import annotations
@@ -31,6 +31,12 @@ def _as_nonneg_int(value: Any, default: int = 0) -> int:
     except (TypeError, ValueError):
         return default
     return max(0, value)
+
+
+def _require_text(value: Any, field: str) -> str:
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(f"{field} is required and must be a non-empty string")
+    return value.strip()
 
 
 def classify_task_size(task: dict[str, Any]) -> str:
@@ -127,25 +133,23 @@ def make_packet(
 ) -> dict[str, Any]:
     size = size or classify_task_size(task)
     packet_id = packet_id or str(task.get("task_id") or "TASK-UNSPECIFIED")
-    objective = task.get("objective")
-    success = task.get("success_condition")
-    stop = task.get("stop_condition")
-    if not all(isinstance(value, str) and value.strip() for value in (objective, success, stop)):
-        raise ValueError(
-            "objective, success_condition and stop_condition are required non-empty strings"
-        )
+    objective = _require_text(task.get("objective"), "objective")
+    success = _require_text(task.get("success_condition"), "success_condition")
+    stop = _require_text(task.get("stop_condition"), "stop_condition")
+    outcome = _require_text(
+        task.get("single_verifiable_outcome", success),
+        "single_verifiable_outcome",
+    )
 
     return {
         "schema_version": 1,
         "packet_id": packet_id,
         "parent_id": parent_id,
         "size": size,
-        "objective": objective.strip(),
-        "single_verifiable_outcome": task.get(
-            "single_verifiable_outcome", success
-        ).strip(),
-        "success_condition": success.strip(),
-        "stop_condition": stop.strip(),
+        "objective": objective,
+        "single_verifiable_outcome": outcome,
+        "success_condition": success,
+        "stop_condition": stop,
         "authority": task.get("authority", "GREEN_INTERNAL"),
         "effects": list(task.get("effects") or []),
         "cost_ceiling_eur": task.get("cost_ceiling_eur", 0),
@@ -174,6 +178,39 @@ def make_packet(
     }
 
 
+def _planning_packet(task: dict[str, Any], *, parent_id: str) -> dict[str, Any]:
+    planning = deepcopy(task)
+    planning.update(
+        {
+            "objective": f"Plan bounded execution for: {_require_text(task.get('objective'), 'objective')}",
+            "single_verifiable_outcome": (
+                "A dependency-ordered packet plan with explicit acceptance and stop conditions."
+            ),
+            "success_condition": (
+                "A bounded plan exists; no material implementation has started."
+            ),
+            "stop_condition": "Stop before material implementation or any RED gate.",
+            "estimated_steps": 3,
+            "surfaces": 1,
+            "dependencies": 1,
+            "uncertainty": "medium",
+            "architecture_change": False,
+            "cross_repo": False,
+            "multiple_material_outcomes": False,
+            "force_size": "MICRO",
+            "minimum_relevant_checks": [
+                "Validate every proposed packet has one verifiable outcome."
+            ],
+        }
+    )
+    return make_packet(
+        planning,
+        packet_id=f"{parent_id}-PLAN",
+        size="MICRO",
+        parent_id=parent_id,
+    )
+
+
 def decompose_task(task: dict[str, Any]) -> list[dict[str, Any]]:
     """Create packets without inventing arbitrary implementation phases."""
     size = classify_task_size(task)
@@ -183,50 +220,35 @@ def decompose_task(task: dict[str, Any]) -> list[dict[str, Any]]:
 
     phases = task.get("phases") or task.get("subtasks") or []
     if not phases:
-        planning = deepcopy(task)
-        planning.update(
-            {
-                "objective": f"Plan bounded execution for: {task['objective']}",
-                "single_verifiable_outcome": (
-                    "A dependency-ordered packet plan with explicit acceptance and stop conditions."
-                ),
-                "success_condition": (
-                    "A bounded plan exists; no material implementation has started."
-                ),
-                "stop_condition": "Stop before material implementation or any RED gate.",
-                "estimated_steps": 3,
-                "surfaces": 1,
-                "dependencies": 1,
-                "uncertainty": "medium",
-                "force_size": "MICRO",
-                "minimum_relevant_checks": [
-                    "Validate every proposed packet has one verifiable outcome."
-                ],
-            }
-        )
-        return [
-            make_packet(
-                planning,
-                packet_id=f"{parent}-PLAN",
-                size="MICRO",
-                parent_id=parent,
-            )
-        ]
+        return [_planning_packet(task, parent_id=parent)]
 
-    packets = []
+    packets: list[dict[str, Any]] = []
     for index, phase in enumerate(phases, start=1):
         if not isinstance(phase, dict):
             raise ValueError("Each phase/subtask must be an object")
+
+        phase_id = str(phase.get("task_id") or f"{parent}-P{index:02d}")
         merged = deepcopy(task)
         merged.pop("phases", None)
         merged.pop("subtasks", None)
+        merged["architecture_change"] = False
+        merged["cross_repo"] = False
+        merged["multiple_material_outcomes"] = False
+        merged.pop("force_size", None)
         merged.update(phase)
-        merged["force_size"] = phase.get("force_size", "STANDARD")
+        merged["task_id"] = phase_id
+
+        phase_size = classify_task_size(merged)
+        if phase_size == "COMPLEX":
+            nested = decompose_task(merged)
+            packets.extend(nested)
+            continue
+
         packets.append(
             make_packet(
                 merged,
-                packet_id=str(phase.get("task_id") or f"{parent}-P{index:02d}"),
-                size=merged["force_size"],
+                packet_id=phase_id,
+                size=phase_size,
                 parent_id=parent,
             )
         )
