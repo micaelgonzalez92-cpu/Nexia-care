@@ -1,0 +1,66 @@
+name: Nexia Process Intelligence
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/nexia_process_miner.py'
+      - 'tools/test_nexia_process_miner.py'
+      - 'intelligence/**'
+      - 'NEXIA_BOOT.json'
+      - 'NEXIA_EVENT_INDEX*.json'
+      - 'events/**'
+      - '.github/workflows/nexia-process-intelligence.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/nexia_process_miner.py'
+      - 'tools/test_nexia_process_miner.py'
+      - 'intelligence/**'
+      - 'NEXIA_BOOT.json'
+      - 'NEXIA_EVENT_INDEX*.json'
+      - 'events/**'
+      - '.github/workflows/nexia-process-intelligence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nexia-process-intelligence-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  process-intelligence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python syntax
+        run: python3 -m py_compile tools/nexia_process_miner.py tools/test_nexia_process_miner.py
+
+      - name: Process Intelligence regression tests
+        run: python3 tools/test_nexia_process_miner.py
+
+      - name: Mine canonical history without writes
+        run: python3 tools/nexia_process_miner.py --check --json
+
+      - name: Canonical integrity boundary
+        shell: bash
+        run: |
+          set +e
+          python3 tools/nexia_integrity_check.py --json
+          code=$?
+          set -e
+          if [ "$code" -eq 1 ]; then
+            echo 'Canonical integrity check found one or more errors.'
+            exit 1
+          fi
+          if [ "$code" -eq 2 ]; then
+            echo 'Canonical integrity warnings remain visible but do not fail this workflow.'
+          fi
+          exit 0

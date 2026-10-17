@@ -8,12 +8,13 @@ Keep this file short. Detailed policy lives in the canonical Nexia files below.
 2. Read `NEXIA_BOOT.json` and `NEXIA_LIVE.json` to detect drift.
 3. Read `NEXIA_AUTHORITY_MATRIX.md` before any action with external, destructive, publication, account, spend, production or data-access effects.
 4. Read `NEXIA_COMMANDS.md` when handling a Nexia slash command.
-5. If the task changes canonical persistence, use the `$nexia-checkpoint` skill.
-6. If the task changes code, tests, CI or runtime behavior, use the `$nexia-change-verification` skill before handoff.
+5. Query Process Intelligence when prior Nexia execution history may contain relevant lessons: `python3 tools/nexia_process_miner.py --query "<task>" --json`.
+6. If the task changes canonical persistence, use the `$nexia-checkpoint` skill.
+7. If the task changes code, tests, CI or runtime behavior, use the `$nexia-change-verification` skill before handoff.
 
 ## Mission
 
-Follow STATE v72 and the active Model C constitution: System Excellence + External Reality. Prioritize hard constraints, truth, authority and continuity before context-specific system/reality value. Economics is a critical resource, validation and sustainability outcome, not the universal sole priority. Files, commits and tests prove only their stated postconditions.
+Follow the active canonical STATE and Model C constitution: System Excellence + External Reality. Prioritize hard constraints, truth, authority and continuity before context-specific system/reality value. Economics is a critical resource, validation and sustainability outcome, not the universal sole priority. Files, commits and tests prove only their stated postconditions.
 
 ## Execution rules
 
