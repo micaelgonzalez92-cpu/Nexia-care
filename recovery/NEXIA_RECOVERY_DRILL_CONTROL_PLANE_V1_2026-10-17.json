@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "drill_id": "NEXIA-RECOVERY-DRILL-CONTROL-PLANE-V1-2026-10-17",
+  "date": "2026-10-17",
+  "evidence_label": "HECHO_VERIFICADO",
+  "source_main_head": "e72cdf6eaa328ec6776d78f8fe00ba090ac90f91",
+  "recovery_order_executed": [
+    "NEXIA_BOOT.json",
+    "NEXIA_STATE.json",
+    "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V80.json",
+    "events/EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001.json"
+  ],
+  "reconstructed": {
+    "mission": "MISSION-SYSTEM-EXCELLENCE-REALITY-001 / SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+    "canonical_state_version": 73,
+    "authority": "GREEN internal safe reversible EUR0; RED remains Kael-controlled for publication, external contact, spend, KYC/payment, production and material risk",
+    "wip": {
+      "lane_1": "EXP-AUTO-001_EXTERNAL_VALIDATION_PRIORITY",
+      "lane_2": "VETA-AI-UGC-001_FLUX_IMAGE_EDIT_VERIFIED_RUNTIME_FUNCTIONAL_BOUNDED_PROFESSIONAL_NOT_ESTABLISHED",
+      "lane_3": "VETA-AUTO-PRODUCT-001_BOUNDED_SERIALIZED_RUNTIME_PASS_OPTIONAL_PROFILE_STOPPED_FOR_CURRENT_PURPOSE"
+    },
+    "latest_event_from_recovery_chain": "EVT-2026-10-17-PROCESS-INTELLIGENCE-V1-VERIFIED-001",
+    "human_gate_from_live": "NEXIA Instagram mobile access and clickable Contra portfolio link pending",
+    "next_action_from_live": "KAEL_NEXIA_INSTAGRAM_MOBILE_ACCESS_AND_CLICKABLE_PORTFOLIO_LINK"
+  },
+  "actual_newer_verified_repository_fact": {
+    "control_plane_v1_main_commit": "e72cdf6eaa328ec6776d78f8fe00ba090ac90f91",
+    "atomic_checkpoint_on_main": true,
+    "adaptive_task_batching_on_main": true,
+    "ci_verified": true
+  },
+  "result": "FAIL_CANONICAL_RECOVERY_VISIBILITY_GAP",
+  "reason": "BOOT/LIVE/index V80 reconstruct the prior Process Intelligence handoff but do not expose the later verified Control Plane V1 promotion that is already present on main. Recovery therefore cannot yet reproduce the actual latest verified system capability solely from the canonical recovery chain.",
+  "what_still_passes": [
+    "MISSION_RECOVERY",
+    "STATE_VERSION_AND_HASH_BINDING",
+    "AUTHORITY_BOUNDARY_RECOVERY",
+    "WIP_RECOVERY",
+    "EXTERNAL_REALITY_PROBE_RECOVERY",
+    "PRIOR_HUMAN_GATE_RECOVERY"
+  ],
+  "required_remediation": [
+    "Add immutable Control Plane V1 promotion event to the active composite index",
+    "Advance active index from V80 to V81",
+    "Update BOOT to V81 and bind current LIVE blob",
+    "Update LIVE to record Control Plane V1 as verified and preserve the current external Reality Loop handoff",
+    "Persist BOOT/LIVE/index/event as one atomic checkpoint",
+    "Repeat recovery drill from the promoted checkpoint and require exact reconstruction"
+  ],
+  "truth_boundary": "This drill is a read-only reconstruction test. It does not itself modify canonical recovery artifacts or prove the pending remediation has been persisted.",
+  "cost_eur": 0,
+  "external_effects": false
+}
