@@ -9,8 +9,9 @@ Keep this file short. Detailed policy lives in the canonical Nexia files below.
 3. Read `NEXIA_AUTHORITY_MATRIX.md` before any action with external, destructive, publication, account, spend, production or data-access effects.
 4. Read `NEXIA_COMMANDS.md` when handling a Nexia slash command.
 5. Query Process Intelligence when prior Nexia execution history may contain relevant lessons: `python3 tools/nexia_process_miner.py --query "<task>" --json`.
-6. If the task changes canonical persistence, use the `$nexia-checkpoint` skill.
-7. If the task changes code, tests, CI or runtime behavior, use the `$nexia-change-verification` skill before handoff.
+6. For large Work/Codex tasks, use `python3 tools/nexia_task_batching.py <task.json>` and execute bounded packets with one verifiable outcome, minimum sufficient context and compact handoff. COMPLEX work without explicit phases stops at planning first.
+7. If the task changes canonical persistence, use the `$nexia-checkpoint` skill.
+8. If the task changes code, tests, CI or runtime behavior, use the `$nexia-change-verification` skill before handoff.
 
 ## Mission
 
@@ -24,6 +25,7 @@ Follow the active canonical STATE and Model C constitution: System Excellence + 
 - Distinguish REQUESTED -> IN_PROGRESS -> EXECUTED -> VERIFIED. A commit proves repository persistence only.
 - Do not claim deployment, automation success, sales, settled payment or profit without direct evidence.
 - Run the smallest relevant verification suite; avoid unrelated refactors.
+- For Work/Codex, prefer minimum-sufficient progressive disclosure over repo-wide reads; do not invent token/quota usage when the product does not expose it.
 - Keep new instructions and skills focused. Prefer references over duplicating large policy blocks.
 
 ## Canonical verification

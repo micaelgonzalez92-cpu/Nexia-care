@@ -25,24 +25,34 @@ Use this workflow only when operational meaning changed enough to justify a cano
 4. Preserve explicit authority, budget and Human Gates exactly unless Kael changed them.
 5. Unknown stays UNKNOWN/NOT_INSTRUMENTED.
 6. No secret/private data may enter this public repository.
-7. Prefer one coherent checkpoint over a sequence of partially synchronized writes.
+7. A critical checkpoint must be prepared as one complete candidate and promoted as one commit/ref transition; do not persist STATE/BOOT/LIVE/index/event bindings through a sequence of independent remote file writes.
+8. `--allow-main` in the atomic helper is only a technical interlock bypass after the required promotion authority exists; it never grants that authority.
 
 ## Procedure
 
 1. Identify the exact verified delta since the current STATE.
 2. Decide whether it changes operational meaning. If not, keep it in EVENT/LIVE and do not bump STATE merely for activity.
-3. If it does, prepare the next STATE version and derived BOOT/LIVE metadata.
-4. Bind current event-index/latest-event references.
-5. Preserve economics truth: revenue, settled revenue, contribution and profit must remain unchanged unless transaction evidence exists.
-6. Run:
+3. If it does, prepare the complete candidate overlay containing every checkpoint file that must change together.
+4. Bind current event-index/latest-event references and preserve economics truth: revenue, settled revenue, contribution and profit stay unchanged unless transaction evidence exists.
+5. Record the exact expected branch HEAD before candidate creation.
+6. Prepare/validate with the atomic helper when available:
 
 ```bash
-python3 tools/nexia_integrity_check.py --json
+python3 tools/nexia_atomic_checkpoint.py \
+  --candidate-dir <candidate-dir> \
+  --branch <target-branch> \
+  --expected-head <40-char-sha> \
+  --message "<checkpoint message>" \
+  --require-path NEXIA_BOOT.json \
+  --require-path NEXIA_LIVE.json
 ```
 
-7. Treat exit code 1 as failure. Treat warnings as explicit unresolved debt, not success.
-8. Commit coherent files together when technically possible.
-9. Re-read changed files or inspect the resulting commit before saying VERIFIED.
+Add further `--require-path` entries for every file that the checkpoint contract requires. Prepare-only mode must not mutate the remote.
+
+7. Treat helper `FAILED_*`/`BLOCKED_*` states as failure. Treat integrity warnings as explicit unresolved debt, not success.
+8. Only when authority permits the target branch write, repeat with `--push`; `main` additionally requires the explicit technical `--allow-main` interlock.
+9. Require `PERSISTED_VERIFIED` plus remote ref/file readback before saying persistence is VERIFIED.
+10. A successful checkpoint proves repository persistence/integrity only; it does not prove deployment, production behavior, publication, demand, payment or profit.
 
 ## Handoff
 
@@ -50,7 +60,8 @@ Report:
 - STATE version before -> after
 - exact verified operational delta
 - immutable event ID
-- integrity result
+- expected HEAD -> resulting commit
+- integrity/readback result
 - cost/economic impact
 - unresolved warnings/blockers
 - what was NOT proven

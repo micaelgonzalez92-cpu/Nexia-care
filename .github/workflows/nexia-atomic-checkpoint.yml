@@ -1,0 +1,43 @@
+name: Nexia Atomic Checkpoint
+
+on:
+  push:
+    branches:
+      - main
+      - nexia/atomic-checkpoint-v1
+    paths:
+      - 'tools/nexia_atomic_checkpoint.py'
+      - 'tools/test_nexia_atomic_checkpoint.py'
+      - 'governance/NEXIA_ATOMIC_CHECKPOINT_CONTRACT_V1_2026-10-17.md'
+      - '.github/workflows/nexia-atomic-checkpoint.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/nexia_atomic_checkpoint.py'
+      - 'tools/test_nexia_atomic_checkpoint.py'
+      - 'governance/NEXIA_ATOMIC_CHECKPOINT_CONTRACT_V1_2026-10-17.md'
+      - '.github/workflows/nexia-atomic-checkpoint.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nexia-atomic-checkpoint-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  atomic-checkpoint-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python syntax
+        run: python3 -m py_compile tools/nexia_atomic_checkpoint.py tools/test_nexia_atomic_checkpoint.py
+
+      - name: Atomic checkpoint fault-injection tests
+        run: python3 tools/test_nexia_atomic_checkpoint.py

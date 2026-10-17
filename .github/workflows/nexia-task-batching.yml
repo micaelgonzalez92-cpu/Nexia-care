@@ -1,0 +1,48 @@
+name: Nexia Adaptive Task Batching
+
+on:
+  push:
+    branches:
+      - main
+      - nexia/adaptive-task-batching-v1
+    paths:
+      - 'tools/nexia_task_batching.py'
+      - 'tools/test_nexia_task_batching.py'
+      - 'governance/NEXIA_ADAPTIVE_TASK_BATCHING_STANDARD_V1_2026-10-17.md'
+      - 'governance/NEXIA_TASK_PACKET_TEMPLATE_V1.json'
+      - 'AGENTS.md'
+      - '.github/workflows/nexia-task-batching.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tools/nexia_task_batching.py'
+      - 'tools/test_nexia_task_batching.py'
+      - 'governance/NEXIA_ADAPTIVE_TASK_BATCHING_STANDARD_V1_2026-10-17.md'
+      - 'governance/NEXIA_TASK_PACKET_TEMPLATE_V1.json'
+      - 'AGENTS.md'
+      - '.github/workflows/nexia-task-batching.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nexia-task-batching-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  batching-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Python syntax
+        run: python3 -m py_compile tools/nexia_task_batching.py tools/test_nexia_task_batching.py
+
+      - name: Adaptive batching regression tests
+        run: python3 tools/test_nexia_task_batching.py
+
+      - name: Task packet template JSON
+        run: python3 -m json.tool governance/NEXIA_TASK_PACKET_TEMPLATE_V1.json > /dev/null
