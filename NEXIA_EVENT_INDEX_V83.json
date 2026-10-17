@@ -1,0 +1,30 @@
+{
+  "schema_version": 83,
+  "updated_at": "2026-10-18",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V82.json",
+    "verified_blob_sha": "696e5272e8bc656d2d9b47984303e6c797715561"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-17-WORKANA-P1-PROFILE-REVIEW-BLOCK-001",
+      "path": "events/EVT-2026-10-17-WORKANA-P1-PROFILE-REVIEW-BLOCK-001.json",
+      "verified_blob_sha": "55dc5785bbc5b41f0d9569a757a26c15438da987"
+    },
+    {
+      "event_id": "EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001",
+      "path": "events/EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001.json",
+      "verified_blob_sha": "282b779e15eff7c710963f4b7bb05a77f7c1efbc"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001",
+  "latest_event_path": "events/EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001.json",
+  "latest_event_blob_sha": "282b779e15eff7c710963f4b7bb05a77f7c1efbc",
+  "latest_material_business_event_id": "EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "Retain V82 recovery and all prior events; reconcile the previously unindexed Workana P1 moderation blocker and the independently checked Instagram replacement. STATE v73 authority/economics unchanged; do not repeat the completed Instagram replacement."
+}
