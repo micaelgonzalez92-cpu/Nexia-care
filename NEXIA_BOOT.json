@@ -1,7 +1,7 @@
 {
-  "schema_version": 82,
-  "boot_version": 137,
-  "generated_at": "2026-10-17",
+  "schema_version": 83,
+  "boot_version": 138,
+  "generated_at": "2026-10-18",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
   "state_version": 73,
@@ -15,6 +15,9 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V83.json",
+    "events/EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001.json",
+    "events/EVT-2026-10-17-WORKANA-P1-PROFILE-REVIEW-BLOCK-001.json",
     "NEXIA_EVENT_INDEX_V82.json",
     "events/EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001.json",
     "recovery/NEXIA_RECOVERY_DRILL_CONTROL_PLANE_V1_POST_V81_PASS_2026-10-17.json",
@@ -31,16 +34,16 @@
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "7109ca1ad9ae2957f0b77ebd374cb946d28c5178",
-  "live_state_status": "CONTROL_PLANE_V1_RECOVERY_VERIFIED_REALITY_LOOP_RESUME",
+  "live_state_blob_sha": "33abce668f13914b6f2fc25a6a9daa9e6a65f30d",
+  "live_state_status": "CONTROL_PLANE_V1_RECOVERY_VERIFIED_REALITY_LOOP_INSTAGRAM_REPLACEMENT_V83",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V82.json",
-    "active_index_blob_sha": "696e5272e8bc656d2d9b47984303e6c797715561",
-    "latest_verified_event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001",
-    "latest_verified_event_path": "events/EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001.json",
-    "latest_verified_event_blob_sha": "f85cb5e181e68d349bfd7ef9d3df87df2e6bea16",
-    "base_index": "NEXIA_EVENT_INDEX_V81.json"
+    "active_index": "NEXIA_EVENT_INDEX_V83.json",
+    "active_index_blob_sha": "ee1ecb3ae5973fffd285055d54fb11a9d903a541",
+    "latest_verified_event_id": "EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001",
+    "latest_verified_event_path": "events/EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001.json",
+    "latest_verified_event_blob_sha": "282b779e15eff7c710963f4b7bb05a77f7c1efbc",
+    "base_index": "NEXIA_EVENT_INDEX_V82.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
@@ -159,8 +162,8 @@
   },
   "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONTROL PLANE V1 RECOVERY VERIFIED; RESUME EXTERNAL REALITY LOOP",
   "human_gate": "No human action required for internal system work now. Continue GREEN external-validation research/preparation until a real RED gate; Instagram mobile access, publication/contact, production, KYC/payout, spending and GitHub governance changes remain separately gated.",
-  "sync_status": "STATE_V73_PLUS_INDEX_V82_CONTROL_PLANE_V1_RECOVERY_BOOT137_LIVE62",
-  "next_action": "RESUME_EXP_AUTO_001_EXTERNAL_VALIDATION_WITH_EXISTING_CAPABILITIES_AND_PROCESS_INTELLIGENCE",
+  "sync_status": "STATE_V73_PLUS_INDEX_V83_INSTAGRAM_REPLACEMENT_BOOT138_LIVE63",
+  "next_action": "CONTINUE_EXP_AUTO_001_EXTERNAL_VALIDATION_WITHOUT_REPEATING_VERIFIED_INSTAGRAM_PUBLICATION",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -169,7 +172,7 @@
   ],
   "active_reality_probe": {
     "id": "EXP-AUTO-001",
-    "status": "CONTRA_V4_PUBLIC_VERIFIED_INSTAGRAM_FOUR_POSTS_PUBLIC_MOBILE_LINK_PENDING_WORKANA_PENDING"
+    "status": "CONTRA_V4_PUBLIC_INSTAGRAM_FIVE_POSTS_FOUR_UPDATED_CLICKABLE_PORTFOLIO_LINK_PENDING_WORKANA_PROFILE_REVIEW"
   },
   "integrity_debt": [
     "Canonical depth blocker repaired: MAX_INDEX_DEPTH 1024 and full current chain traversed with zero errors.",
