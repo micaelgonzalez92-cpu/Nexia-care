@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-17-WORKANA-P1-PROFILE-REVIEW-BLOCK-001",
+  "timestamp": "2026-10-17T18:12:00+02:00",
+  "type": "WORKANA_PROPOSAL_BLOCKED_BY_PROFILE_REVIEW",
+  "evidence_label": "HECHO_VERIFICADO",
+  "canonical_state_version": 73,
+  "state_changed": false,
+  "authority_changed": false,
+  "external_effects": false,
+  "economics": {
+    "cost_eur": 0,
+    "revenue_changed": false,
+    "settled_revenue_changed": false,
+    "profit_changed": false
+  },
+  "facts": {
+    "project_status": "EVALUATING_PROPOSALS",
+    "proposal_sent": false,
+    "proposal_form_accessible": false,
+    "blocker": "FREELANCER_PROFILE_UNDER_REVIEW",
+    "visible_priority_moderation_price_usd": 9.90,
+    "payment_made": false,
+    "price_or_delivery_commitment_made": false
+  },
+  "recommendation": "WAIT_FOR_ORDINARY_PROFILE_REVIEW_ZERO_SPEND",
+  "truth_boundary": "This records the authenticated Workana blocker observed in Work. It does not prove future approval timing, client demand, acceptance, payment or production capability.",
+  "next_action": "WHEN_PROFILE_APPROVED_RECHECK_PRIORITY_1_PROJECT_AND_RESUME_AUTHORIZED_PROPOSAL_IF_STILL_OPEN"
+}
