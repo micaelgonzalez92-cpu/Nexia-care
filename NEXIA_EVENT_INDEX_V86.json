@@ -1,0 +1,25 @@
+{
+  "schema_version": 86,
+  "updated_at": "2026-10-18",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V85.json",
+    "verified_blob_sha": "a1a2315f42a8e80aa40a845b5a0d3e127fa0d2b1"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001",
+      "path": "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001.json",
+      "verified_blob_sha": "c4de84b7414b2e3a7e3a8daa68d445d76938a23d"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001",
+  "latest_event_path": "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001.json",
+  "latest_event_blob_sha": "c4de84b7414b2e3a7e3a8daa68d445d76938a23d",
+  "latest_material_business_event_id": "EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001",
+  "latest_material_system_event_id": "EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "Preserve immutable V85 candidate and original V41-V44 source history. Record subsequent successful CI at prior branch commit. V86 remains unpromoted on draft PR #14 pending independent CI and Kael main-promotion decision."
+}
