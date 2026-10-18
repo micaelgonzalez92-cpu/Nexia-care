@@ -1,12 +1,7 @@
 name: Nexia Kit Isolated n8n Import Smoke
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'products/lead-intake-reliability-kit/**'
-      - '.github/workflows/nexia-kit-n8n-import-smoke.yml'
-  workflow_dispatch:
+  workflow_call:
 
 permissions:
   contents: read
