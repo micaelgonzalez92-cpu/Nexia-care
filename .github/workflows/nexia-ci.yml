@@ -74,6 +74,9 @@ jobs:
       - name: Integrity checker regression tests
         run: python3 tools/test_nexia_integrity_check.py
 
+      - name: Session recovery and connector preflight regressions
+        run: python3 tools/test_nexia_session_preflight.py
+
       - name: Zero-quota execution router tests
         run: python3 tools/test_nexia_execution_router.py
 
