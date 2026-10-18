@@ -50,11 +50,23 @@ assert(invalidOut[0].json.missing_fields.includes('name'), 'intake: missing name
 assert(invalidOut[0].json.missing_fields.includes('email_or_phone'), 'intake: missing contact not detected');
 assert(invalidOut[0].json.autonomous_send === false, 'intake: invalid path autonomous_send must be false');
 
+// The installation/bootstrap operation must never be remotely invocable.
+// Inactive workflow alone is not sufficient: an owner may activate an imported workflow.
+const bootstrapAllowed = new Set(['n8n-nodes-base.manualTrigger', 'n8n-nodes-base.dataTable']);
+assert(bootstrap.nodes.every(n => bootstrapAllowed.has(n.type)), 'bootstrap: public/outbound trigger or unexpected node');
+const manualBootstrap = bootstrap.nodes.filter(n => n.type === 'n8n-nodes-base.manualTrigger');
+assert(manualBootstrap.length === 1, 'bootstrap: exactly one manual trigger is mandatory');
+assert(bootstrap.nodes.every(n => !Object.prototype.hasOwnProperty.call(n, 'webhookId')),
+  'bootstrap: stale webhook identifier must not be shipped');
+assert(bootstrap.connections[manualBootstrap[0].name]?.main?.[0]?.[0]?.node === 'Create Dedup Table',
+  'bootstrap: manual trigger must connect to Data Table creation');
+
 const bootstrapTable = bootstrap.nodes.find(n => n.type === 'n8n-nodes-base.dataTable');
 assert(bootstrapTable, 'bootstrap: Data Table node missing');
 assert(bootstrapTable.parameters.resource === 'table', 'bootstrap: wrong resource');
 assert(bootstrapTable.parameters.operation === 'create', 'bootstrap: wrong operation');
 assert(bootstrapTable.parameters.tableName === 'lead_intake_reliability_keys', 'bootstrap: wrong table name');
+assert(bootstrapTable.parameters.options?.createIfNotExists === true, 'bootstrap: rerun must be non-destructive');
 const columns = bootstrapTable.parameters.columns.column.map(c => c.name).sort();
 assert(JSON.stringify(columns) === JSON.stringify(['eventKey','identityKey','recordId'].sort()), 'bootstrap: wrong columns');
 
@@ -90,5 +102,7 @@ console.log(JSON.stringify({
   invalid_input_rejected: true,
   normalized_duplicate_identity: true,
   dedup_structure: true,
+  bootstrap_manual_only: true,
+  concurrent_uniqueness_verified: false,
   autonomous_send: false
 }));
