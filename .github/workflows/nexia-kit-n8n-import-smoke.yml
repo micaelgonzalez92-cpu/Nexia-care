@@ -1,0 +1,112 @@
+name: Nexia Kit Isolated n8n Import Smoke
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'products/lead-intake-reliability-kit/**'
+      - '.github/workflows/nexia-kit-n8n-import-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nexia-kit-import-smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  isolated-import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    env:
+      N8N_USER_FOLDER: ${{ runner.temp }}/nexia-kit-isolated-user
+      DB_TYPE: sqlite
+      DB_SQLITE_DATABASE: ${{ runner.temp }}/nexia-kit-isolated-user/database.sqlite
+      N8N_DIAGNOSTICS_ENABLED: 'false'
+      N8N_VERSION_NOTIFICATIONS_ENABLED: 'false'
+      N8N_TEMPLATES_ENABLED: 'false'
+      N8N_COMMUNITY_PACKAGES_ENABLED: 'false'
+      N8N_PERSONALIZATION_ENABLED: 'false'
+    steps:
+      - name: Checkout source snapshot (no credentials)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Install pinned Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify static safety baseline before npm install
+        run: |
+          set -euo pipefail
+          node products/lead-intake-reliability-kit/test_product.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const root = 'products/lead-intake-reliability-kit/workflows/';
+          const names = ['lead-intake-human-review.json','dedup-table-bootstrap.json','persistent-dedup-guard.json'];
+          for (const name of names) {
+            const workflow = JSON.parse(fs.readFileSync(root + name, 'utf8'));
+            if (workflow.active !== false) throw new Error(name + ' must be inactive');
+            if (workflow.credentials && Object.keys(workflow.credentials).length) throw new Error('Unexpected workflow credential data');
+          }
+          NODE
+
+      - name: Install pinned n8n in temporary runner only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/nexia-n8n-cli" "$N8N_USER_FOLDER"
+          chmod 700 "$N8N_USER_FOLDER"
+          npm install --prefix "$RUNNER_TEMP/nexia-n8n-cli" --no-audit --no-fund --no-save n8n@2.42.6
+          "$RUNNER_TEMP/nexia-n8n-cli/node_modules/.bin/n8n" --version
+
+      - name: Import three inactive workflows into ephemeral SQLite only
+        shell: bash
+        run: |
+          set -euo pipefail
+          n8n_bin="$RUNNER_TEMP/nexia-n8n-cli/node_modules/.bin/n8n"
+          input_dir=products/lead-intake-reliability-kit/workflows
+          for file in lead-intake-human-review.json dedup-table-bootstrap.json persistent-dedup-guard.json; do
+            "$n8n_bin" import:workflow --input="$input_dir/$file" --activeState=false
+          done
+          "$n8n_bin" export:workflow --all --output="$RUNNER_TEMP/nexia-kit-import-export.json"
+
+      - name: Assert imported n8n DB workflows remain inactive and bootstrap cannot expose HTTP
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXPORT_PATH="$RUNNER_TEMP/nexia-kit-import-export.json" node - <<'NODE'
+          const fs = require('fs');
+          const a = JSON.parse(fs.readFileSync(process.env.EXPORT_PATH, 'utf8'));
+          const workflows = Array.isArray(a) ? a : (Array.isArray(a?.data) ? a.data : []);
+          const root = 'products/lead-intake-reliability-kit/workflows/';
+          const filenames = ['lead-intake-human-review.json','dedup-table-bootstrap.json','persistent-dedup-guard.json'];
+          if (workflows.length !== filenames.length) throw new Error('Import count mismatch: ' + workflows.length);
+          for (const f of filenames) {
+            const original = JSON.parse(fs.readFileSync(root + f, 'utf8'));
+            const imported = workflows.find(x => x.name === original.name);
+            if (!imported) throw new Error('Missing n8n-imported workflow: ' + original.name);
+            if (imported.active !== false) throw new Error('Imported workflow unexpectedly active: ' + original.name);
+            if (imported.nodes.length !== original.nodes.length) throw new Error('Node count changed: ' + f);
+            if (Object.keys(imported.connections || {}).length !== Object.keys(original.connections || {}).length) {
+              throw new Error('Connection structure changed: ' + f);
+            }
+            if (f === 'dedup-table-bootstrap.json') {
+              if (imported.nodes.some(x => x.type === 'n8n-nodes-base.webhook')) {
+                throw new Error('Bootstrap HTTP entry point reintroduced');
+              }
+              if (imported.nodes.filter(x => x.type === 'n8n-nodes-base.manualTrigger').length !== 1) {
+                throw new Error('Manual bootstrap trigger missing or duplicated');
+              }
+            }
+          }
+          console.log(JSON.stringify({
+            status:'PASS',scope:'ephemeral_n8n_CLI_SQLite_import_export_only',
+            workflows:workflows.length,all_inactive:true,bootstrap_manual_only:true,
+            runtime_execution_of_nodes:false,concurrent_uniqueness_verified:false,
+            public_ingress_tested:false,customer_environment_tested:false
+          }));
+          NODE
