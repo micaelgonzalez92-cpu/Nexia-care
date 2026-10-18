@@ -1,0 +1,25 @@
+{
+  "schema_version": 87,
+  "updated_at": "2026-10-18",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V86.json",
+    "verified_blob_sha": "a7964c0ec86db5b660f688673daa5055cdaf7607"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001",
+      "path": "events/EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001.json",
+      "verified_blob_sha": "46c6929ad38f4d9c15c7cf1b8cfbbaabd61cade7"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001",
+  "latest_event_path": "events/EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001.json",
+  "latest_event_blob_sha": "46c6929ad38f4d9c15c7cf1b8cfbbaabd61cade7",
+  "latest_material_business_event_id": "EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001",
+  "latest_material_system_event_id": "EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "Post-PR14 merge readback: corrected legacy index hashes remain bound; reconcile stale BOOT/LIVE pre-promotion metadata, preserve STATE v73, all immutable prior events and authority. Postmerge CI and final main readback remain separate mandatory checks."
+}
