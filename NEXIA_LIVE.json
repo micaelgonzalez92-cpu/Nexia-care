@@ -1,5 +1,5 @@
 {
-  "schema_version": 64,
+  "schema_version": 65,
   "updated_at": "2026-10-18",
   "status": "ACTIVE_MODEL_C_CONTROL_PLANE_V1_RECOVERY_VERIFIED_PROCESS_INTELLIGENCE_V1_VERIFIED_EXTERNAL_REALITY_ACTIVE",
   "state_version": 73,
@@ -47,12 +47,12 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V86.json",
-    "active_index_blob_sha": "a7964c0ec86db5b660f688673daa5055cdaf7607",
-    "latest_verified_event_id": "EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001",
-    "latest_verified_event_path": "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001.json",
-    "latest_verified_event_blob_sha": "c4de84b7414b2e3a7e3a8daa68d445d76938a23d",
-    "base_index": "NEXIA_EVENT_INDEX_V85.json"
+    "active_index": "NEXIA_EVENT_INDEX_V87.json",
+    "active_index_blob_sha": "2f73d26b981728219515d0c4e6c6aafb19d73a83",
+    "latest_verified_event_id": "EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001",
+    "latest_verified_event_path": "events/EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001.json",
+    "latest_verified_event_blob_sha": "46c6929ad38f4d9c15c7cf1b8cfbbaabd61cade7",
+    "base_index": "NEXIA_EVENT_INDEX_V86.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -67,8 +67,8 @@
     "github_branch_protection_or_visibility_change": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Public read-only Contra audit verified professional URL with four technical projects and Lead Intake Reliability Sprint; competitor benchmarks, Pro and studio information source-grounded; authenticated Contra Jobs not accessed.",
-    "last_user_facing_handoff": "Do not repeat Instagram/Contra V4 work; Contra KYC/W-8/payout user reports complete, needs owner readback if material. Contra Jobs login-gated, requires one bounded Work read-only audit before selecting any live job or Pro trial.",
+    "last_completed_verified_action": "PR14 legacy-hash repair merged at main commit 477da01c8f8765a517cd8c8ae70513522bcc1f78, candidate CI PASS (42 tests, zero integrity warnings); postmerge V87 metadata reconciliation under separate verification. Authenticated Contra Jobs and Pro terms audit still pending.",
+    "last_user_facing_handoff": "Antideriva repair merged on main and original metadata drift corrected in V87 candidate. Complete postmerge checkpoint verification and resume Reality Loop only after canonical recovery passes. Do not repeat Instagram or Contra V4 public work.",
     "human_action_required_now": true,
     "pending_human_action": "OPEN_WORK_IN_AUTHENTICATED_CONTRA_SESSION_FOR_READ_ONLY_JOBS_AND_PRO_TERMS_AUDIT",
     "surface": "Work",
@@ -77,6 +77,9 @@
     "return_to_nexia": "Continue GREEN research/preparation automatically and stop only at a real RED gate.",
     "resume_required_reads": [
       "NEXIA_STATE.json",
+      "NEXIA_EVENT_INDEX_V87.json",
+      "events/EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001.json",
+      "NEXIA_EVENT_INDEX_V86.json",
       "NEXIA_EVENT_INDEX_V84.json",
       "events/EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001.json",
       "commercial/CONTRA_MARKET_AUDIT_V1_2026-10-18.md",
@@ -86,7 +89,7 @@
     "resume_from": "EXP-AUTO-001 commercial validation: use commercial/CONTRA_MARKET_AUDIT_V1_2026-10-18.md, do not repeat Instagram or Contra V4 publications; authenticated Jobs is next gap.",
     "truth_limit": "Control Plane V1 recovery is repository-verified; branch protection is not enabled; measured quota savings and external commercial response remain unestablished."
   },
-  "next_action": "VERIFY_V86_CANDIDATE_IN_CI_THEN_STOP_AT_EXPLICIT_MAIN_PROMOTION_HUMAN_GATE",
+  "next_action": "READ_CURRENT_MAIN_HEAD_AND_CONFIRM_V87_POST_MERGE_RECONCILIATION_IF_PRESENT_THEN_RESUME_EXP_AUTO_001",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -101,6 +104,8 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V87.json",
+    "events/EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001.json",
     "NEXIA_EVENT_INDEX_V86.json",
     "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001.json",
     "NEXIA_EVENT_INDEX_V85.json",
@@ -111,15 +116,17 @@
     "NEXIA_EVENT_INDEX_V83.json",
     "events/EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001.json"
   ],
-  "branch_integrity_candidate": {
-    "pull_request": 14,
-    "promotion": "NOT_AUTHORIZED_OR_PERFORMED",
-    "status": "V85_CI_PASS_V86_POST_VERIFICATION_PENDING",
-    "last_verified_tested_commit": "4f5d5c413f8e583679a401afd8002b23e3a591bf",
-    "ci_run_id": 39087452142,
-    "integrity_zero_errors": true,
-    "integrity_zero_warnings": true,
-    "corrected_legacy_missing_hashes": 4,
-    "main_changed": false
+  "canonical_integrity_promotion": {
+    "id": "LEGACY_HASH_ERRATA_V85_V86_PR14",
+    "promoted_by_pr": 14,
+    "merge_commit_verified": "477da01c8f8765a517cd8c8ae70513522bcc1f78",
+    "merged_at_utc": "2026-10-18T02:11:02Z",
+    "candidate_integrity": "PASS_0_ERRORS_0_WARNINGS",
+    "candidate_python_tests": "PASS_42_OF_42",
+    "merge_tree_vs_candidate_changed_files": 0,
+    "legacy_missing_hash_bindings_corrected": 4,
+    "main_remote_verified_at_event": true,
+    "reconciliation_checkpoint_status": "CANDIDATE_NOT_MAIN_VERIFIED",
+    "truth_boundary": "PR14 merge verified; subsequent V87 reconciliation must be confirmed by canonical remote readback and CI. No proof of production, autonomous background operations, historical provenance, customer response or financial success."
   }
 }
