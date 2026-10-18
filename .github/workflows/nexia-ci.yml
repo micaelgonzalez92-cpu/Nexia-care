@@ -221,3 +221,7 @@ jobs:
             echo 'Canonical integrity check contains warnings only; warnings remain visible and do not fail CI.'
           fi
           exit 0
+
+  kit-isolated-n8n-import:
+    name: Kit isolated n8n CLI import smoke
+    uses: ./.github/workflows/nexia-kit-n8n-import-smoke.yml
