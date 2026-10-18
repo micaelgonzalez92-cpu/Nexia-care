@@ -1,6 +1,6 @@
 {
   "schema_version": 84,
-  "boot_version": 141,
+  "boot_version": 142,
   "generated_at": "2026-10-18",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,6 +15,8 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V87.json",
+    "events/EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001.json",
     "NEXIA_EVENT_INDEX_V86.json",
     "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001.json",
     "NEXIA_EVENT_INDEX_V85.json",
@@ -41,16 +43,16 @@
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "a82f5b09b28a927884d5f3bbd38104f68dc38e1a",
-  "live_state_status": "BRANCH_V85_CI_VERIFIED_V86_CANDIDATE_PENDING_FINAL_VERIFICATION",
+  "live_state_blob_sha": "365d4517176df2c54c6bb69eee8b4992f22ad84c",
+  "live_state_status": "CONTROL_PLANE_V1_VERIFIED_PR14_MERGE_READBACK_LEGACY_HASH_ERRATA_CI_PASS",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V86.json",
-    "active_index_blob_sha": "a7964c0ec86db5b660f688673daa5055cdaf7607",
-    "latest_verified_event_id": "EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001",
-    "latest_verified_event_path": "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001.json",
-    "latest_verified_event_blob_sha": "c4de84b7414b2e3a7e3a8daa68d445d76938a23d",
-    "base_index": "NEXIA_EVENT_INDEX_V85.json"
+    "active_index": "NEXIA_EVENT_INDEX_V87.json",
+    "active_index_blob_sha": "2f73d26b981728219515d0c4e6c6aafb19d73a83",
+    "latest_verified_event_id": "EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001",
+    "latest_verified_event_path": "events/EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001.json",
+    "latest_verified_event_blob_sha": "46c6929ad38f4d9c15c7cf1b8cfbbaabd61cade7",
+    "base_index": "NEXIA_EVENT_INDEX_V86.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
@@ -130,7 +132,16 @@
       "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
       "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json"
     ],
-    "scope": "V81_CONTROL_PLANE_RECONCILIATION_FULL_CHAIN_VERIFIED_ZERO_ERRORS; V82 closure requires post-persistence CI."
+    "scope": "V81_CONTROL_PLANE_RECONCILIATION_FULL_CHAIN_VERIFIED_ZERO_ERRORS; V82 closure requires post-persistence CI.",
+    "pr14_merge_commit": "477da01c8f8765a517cd8c8ae70513522bcc1f78",
+    "pr14_premerge_ci_run": 39088879497,
+    "pr14_premerge_integrity_status": "PASS",
+    "pr14_premerge_integrity_errors": 0,
+    "pr14_premerge_integrity_warnings": 0,
+    "pr14_premerge_indexes_checked": 85,
+    "pr14_premerge_events_checked": 162,
+    "legacy_missing_sha_bindings_corrected": 4,
+    "postmerge_v87_verification": "PENDING_CI_AND_REMOTE_MAIN_CHECKPOINT_READBACK"
   },
   "process_intelligence_checkpoint": {
     "status": "VERIFIED_INTERNAL_DETERMINISTIC_V1",
@@ -169,8 +180,8 @@
   },
   "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONTROL PLANE V1 RECOVERY VERIFIED; RESUME EXTERNAL REALITY LOOP",
   "human_gate": "No human action required for internal system work now. Continue GREEN external-validation research/preparation until a real RED gate; Instagram mobile access, publication/contact, production, KYC/payout, spending and GitHub governance changes remain separately gated.",
-  "sync_status": "STATE_V73_PLUS_INDEX_V86_BRANCH_ONLY_V85_CI_PASS",
-  "next_action": "VERIFY_V86_BRANCH_CI_AND_GET_EXPLICIT_KAEL_MAIN_PROMOTION_DECISION",
+  "sync_status": "STATE_V73_PLUS_INDEX_V87_POST_PR14_MAIN_MERGE_READBACK_CANDIDATE",
+  "next_action": "VERIFY_V87_POST_MERGE_CHECKPOINT_CI_AND_REMOTE_READBACK_THEN_RESUME_EXTERNAL_REALITY_LOOP",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -182,8 +193,8 @@
     "status": "CONTRA_PUBLIC_4_WORKS_SERVICE_KYC_USER_REPORTED_COMPLETE_JOBS_AUTHENTICATED_AUDIT_PENDING"
   },
   "integrity_debt": [
-    "Canonical depth blocker repaired: MAX_INDEX_DEPTH 1024 and full current chain traversed with zero errors.",
-    "Overall checker status remains WARN due four historical REFERENCE_HASH_MISSING bindings: V41 plus three UGC002 events. Do not rewrite history; correct only with exact anchored evidence."
+    "Former 4 legacy REFERENCE_HASH_MISSING bindings reconciled using anchored V85 errata; verification PASS on tested PR14 candidate and exact file-tree match on merged main.",
+    "Postmerge V87 BOOT/LIVE recovery reconciliation remains pending final promotion and readback; do not treat branch-only candidate as canonical."
   ],
   "auto_product_checkpoint": {
     "status": "READY_FOR_CURRENT_PURPOSE_BOUNDED_INTERNAL_OPTIONAL_PROFILE",
