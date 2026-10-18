@@ -4,6 +4,8 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import patch
 
 MODULE_PATH = Path(__file__).with_name("nexia_process_miner.py")
 spec = importlib.util.spec_from_file_location("nexia_process_miner", MODULE_PATH)
@@ -120,6 +122,79 @@ class ProcessMinerTests(unittest.TestCase):
             result = miner.run(root)
             self.assertTrue(any(d["kind"] == "event_blob_mismatch" for d in result["diagnostics"]))
             self.assertTrue(result["errors"])
+
+    def test_tampered_parent_index_fails_instead_of_reporting_pass(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self.build_repo(root)
+            p = root / "NEXIA_EVENT_INDEX_V1.json"
+            previous = p.read_bytes()
+            p.write_bytes(previous + b" ")
+            report = miner.run(root)
+            self.assertTrue(any(d.get("kind") == "base_index" and d.get("match") is False
+                                for d in report["diagnostics"]))
+            self.assertTrue(any("Broken base-index" in e for e in report["errors"]))
+
+    def test_active_index_boot_pin_mismatch_is_error(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self.build_repo(root)
+            boot = root / "NEXIA_BOOT.json"
+            obj = json.loads(boot.read_text(encoding="utf-8"))
+            obj["event_storage"]["active_index_blob_sha"] = "0" * 40
+            write_json(boot, obj)
+            report = miner.run(root)
+            self.assertTrue(any("Active-index BOOT hash mismatch" in e for e in report["errors"]))
+
+    def test_unbound_historical_sha_is_diagnostic_not_invented(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self.build_repo(root)
+            path = root / "NEXIA_EVENT_INDEX_V2.json"
+            obj = json.loads(path.read_text(encoding="utf-8"))
+            obj["base_index"].pop("verified_blob_sha")
+            write_json(path, obj)
+            report = miner.run(root)
+            self.assertEqual(report["errors"], [])
+            self.assertEqual(report["metrics"]["legacy_base_edges_missing_inline_sha"], 1)
+            self.assertTrue(any(d.get("kind") == "base_index"
+                                and d.get("expected_blob_sha") is None
+                                and d.get("match") is None for d in report["diagnostics"]))
+
+    def test_partial_canonical_state_live_fails_closed(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self.build_repo(root)
+            write_json(root / "NEXIA_STATE.json", {"version": 1})
+            with self.assertRaisesRegex(miner.MinerError, "Partial canonical repo"):
+                miner.run(root)
+
+    def test_canonical_checker_warning_blocks_mining(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self.build_repo(root)
+            write_json(root / "NEXIA_STATE.json", {"version": 1})
+            write_json(root / "NEXIA_LIVE.json", {"state_version": 1})
+            fake = SimpleNamespace(returncode=2, stdout=json.dumps(
+                {"status": "WARN", "errors": 0, "warnings": 1}))
+            with patch.object(miner.subprocess, "run", return_value=fake) as mocked:
+                with self.assertRaisesRegex(miner.MinerError, "Canonical integrity not PASS"):
+                    miner.run(root)
+                mocked.assert_called_once()
+
+    def test_canonical_checker_pass_allows_mining(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self.build_repo(root)
+            write_json(root / "NEXIA_STATE.json", {"version": 1})
+            write_json(root / "NEXIA_LIVE.json", {"state_version": 1})
+            fake = SimpleNamespace(returncode=0, stdout=json.dumps(
+                {"status": "PASS", "errors": 0, "warnings": 0}))
+            with patch.object(miner.subprocess, "run", return_value=fake) as mocked:
+                result = miner.run(root)
+                self.assertEqual(result["errors"], [])
+                self.assertEqual(len(result["episodes"]), 2)
+                mocked.assert_called_once()
 
     def test_default_write_outputs(self):
         with tempfile.TemporaryDirectory() as td:
