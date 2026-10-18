@@ -1,5 +1,5 @@
 {
-  "schema_version": 63,
+  "schema_version": 64,
   "updated_at": "2026-10-18",
   "status": "ACTIVE_MODEL_C_CONTROL_PLANE_V1_RECOVERY_VERIFIED_PROCESS_INTELLIGENCE_V1_VERIFIED_EXTERNAL_REALITY_ACTIVE",
   "state_version": 73,
@@ -47,12 +47,12 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V83.json",
-    "active_index_blob_sha": "ee1ecb3ae5973fffd285055d54fb11a9d903a541",
-    "latest_verified_event_id": "EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001",
-    "latest_verified_event_path": "events/EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001.json",
-    "latest_verified_event_blob_sha": "282b779e15eff7c710963f4b7bb05a77f7c1efbc",
-    "base_index": "NEXIA_EVENT_INDEX_V82.json"
+    "active_index": "NEXIA_EVENT_INDEX_V84.json",
+    "active_index_blob_sha": "f3c638de144f0c00097b10dec0370abc859d2286",
+    "latest_verified_event_id": "EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001",
+    "latest_verified_event_path": "events/EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001.json",
+    "latest_verified_event_blob_sha": "0ffc532175088b48d649e3a15389cf4129a37152",
+    "base_index": "NEXIA_EVENT_INDEX_V83.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -67,26 +67,26 @@
     "github_branch_protection_or_visibility_change": "RED_KAEL_REQUIRED"
   },
   "session_handoff": {
-    "last_completed_verified_action": "Work reported four authorized Instagram post replacements and 'ne' avatar update, and public read-only checks confirmed four new case links accessible, four old permalinks unavailable, retained fifth case and total five posts.",
-    "last_user_facing_handoff": "Instagram replacement closed. Do not repeat posts or reset avatar. Live account has five posts, and new four URLs are in V83 latest event. Contra identity verification is user gate; Workana moderation remains blocked.",
-    "human_action_required_now": false,
-    "pending_human_action": null,
-    "surface": null,
-    "device": null,
-    "success_check": "Complete future social-channel and commercial gates without repeating authorized published Instagram replacements. Do not claim business results without evidence.",
+    "last_completed_verified_action": "Public read-only Contra audit verified professional URL with four technical projects and Lead Intake Reliability Sprint; competitor benchmarks, Pro and studio information source-grounded; authenticated Contra Jobs not accessed.",
+    "last_user_facing_handoff": "Do not repeat Instagram/Contra V4 work; Contra KYC/W-8/payout user reports complete, needs owner readback if material. Contra Jobs login-gated, requires one bounded Work read-only audit before selecting any live job or Pro trial.",
+    "human_action_required_now": true,
+    "pending_human_action": "OPEN_WORK_IN_AUTHENTICATED_CONTRA_SESSION_FOR_READ_ONLY_JOBS_AND_PRO_TERMS_AUDIT",
+    "surface": "Work",
+    "device": "MOBILE_OR_DESKTOP",
+    "success_check": "Top 3–6 currently accessible legitimate Contra buyer jobs grounded by URL, budget, date and fit; exact Pro trial auto-billing terms collected; no applications submitted, paid actions or subscription changes.",
     "return_to_nexia": "Continue GREEN research/preparation automatically and stop only at a real RED gate.",
     "resume_required_reads": [
       "NEXIA_STATE.json",
+      "NEXIA_EVENT_INDEX_V84.json",
+      "events/EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001.json",
+      "commercial/CONTRA_MARKET_AUDIT_V1_2026-10-18.md",
       "NEXIA_EVENT_INDEX_V83.json",
-      "events/EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001.json",
-      "events/EVT-2026-10-17-WORKANA-P1-PROFILE-REVIEW-BLOCK-001.json",
-      "NEXIA_EVENT_INDEX_V82.json",
-      "events/EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001.json"
+      "events/EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001.json"
     ],
-    "resume_from": "Start from V83 postconditions: Instagram 4 newly published posts, 4 prior links unavailable, 5 public posts, 'ne' avatar confirmed by Work. Bio link remains plain text and should not be silently treated as fixed. Continue commercial validation and LinkedIn prep.",
+    "resume_from": "EXP-AUTO-001 commercial validation: use commercial/CONTRA_MARKET_AUDIT_V1_2026-10-18.md, do not repeat Instagram or Contra V4 publications; authenticated Jobs is next gap.",
     "truth_limit": "Control Plane V1 recovery is repository-verified; branch protection is not enabled; measured quota savings and external commercial response remain unestablished."
   },
-  "next_action": "CONTINUE_EXP_AUTO_001_EXTERNAL_VALIDATION_AND_PREPARE_LINKEDIN_PROFILE_NO_DUPLICATE_INSTAGRAM_PUBLICATION",
+  "next_action": "AUTHENTICATED_WORK_READ_ONLY_CONTRA_JOBS_PRO_TERMS_AUDIT_THEN_KAEL_PROPOSAL_GATES",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -95,14 +95,14 @@
   ],
   "active_reality_probe": {
     "id": "EXP-AUTO-001",
-    "status": "CONTRA_V4_PUBLIC_INSTAGRAM_4_REPLACEMENTS_5_POSTS_PUBLIC_VERIFIED_LINK_CLICKABILITY_PENDING_WORKANA_PROFILE_REVIEW"
+    "status": "CONTRA_PUBLIC_PROFILE_4_WORKS_SPRINT_VERIFIED_USER_KYC_W8_PAYOUT_REPORTED_COMPLETE_JOBS_AUTH_REQUIRED_IG_V83_COMPLETE"
   },
   "resume_required_reads": [
     "NEXIA_STATE.json",
+    "NEXIA_EVENT_INDEX_V84.json",
+    "events/EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001.json",
+    "commercial/CONTRA_MARKET_AUDIT_V1_2026-10-18.md",
     "NEXIA_EVENT_INDEX_V83.json",
-    "events/EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001.json",
-    "events/EVT-2026-10-17-WORKANA-P1-PROFILE-REVIEW-BLOCK-001.json",
-    "NEXIA_EVENT_INDEX_V82.json",
-    "events/EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001.json"
+    "events/EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001.json"
   ]
 }
