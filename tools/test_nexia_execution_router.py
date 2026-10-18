@@ -13,17 +13,17 @@ class RouterTests(unittest.TestCase):
         self.assertEqual(route_task({"installation_or_system_change": True})["executor"], "HUMAN_GATE")
 
     def test_deterministic_cloud_goes_to_actions(self):
-        out = route_task({"deterministic": True})
+        out = route_task({"deterministic": True}, {"github_actions": True})
         self.assertEqual(out["executor"], "GITHUB_ACTIONS")
         self.assertTrue(out["zero_quota"])
 
     def test_verified_image_generation_goes_local_gpu(self):
-        out = route_task({"requires_gpu": True, "image_generation": True})
+        out = route_task({"requires_gpu": True, "image_generation": True}, {"local_gpu_image": True})
         self.assertEqual(out["executor"], "LOCAL_GPU")
         self.assertTrue(out["zero_quota"])
 
     def test_authenticated_browser_uses_work_until_local_verified(self):
-        self.assertEqual(route_task({"requires_authenticated_browser": True})["executor"], "WORK")
+        self.assertEqual(route_task({"requires_authenticated_browser": True}, {"work": True})["executor"], "WORK")
 
     def test_authenticated_browser_can_move_local_when_verified(self):
         out = route_task({"requires_authenticated_browser": True}, {"local_browser": True})
@@ -36,7 +36,7 @@ class RouterTests(unittest.TestCase):
         self.assertTrue(out["zero_quota"])
 
     def test_code_uses_codex_until_local_ai_verified(self):
-        self.assertEqual(route_task({"code_change": True})["executor"], "CODEX")
+        self.assertEqual(route_task({"code_change": True}, {"codex": True})["executor"], "CODEX")
 
     def test_code_moves_local_when_local_ai_verified(self):
         out = route_task({"code_change": True}, {"local_ai": True})
@@ -44,9 +44,35 @@ class RouterTests(unittest.TestCase):
         self.assertTrue(out["zero_quota"])
 
     def test_secret_deterministic_work_stays_local(self):
-        out = route_task({"requires_secrets": True, "deterministic": True})
+        out = route_task({"requires_secrets": True, "deterministic": True}, {"local_script": True})
         self.assertEqual(out["executor"], "LOCAL_SCRIPT")
         self.assertTrue(out["zero_quota"])
+
+    def test_default_gpu_not_assumed(self):
+        out = route_task({"requires_gpu": True, "image_generation": True})
+        self.assertEqual(out["status"], "BLOCKED")
+
+    def test_default_codex_not_assumed(self):
+        self.assertEqual(route_task({"code_change": True})["status"], "BLOCKED")
+
+    def test_default_actions_not_assumed(self):
+        self.assertEqual(route_task({"deterministic": True})["status"], "BLOCKED")
+
+    def test_project_connector_not_inferred_from_installed_account(self):
+        out = route_task({"project_connectors": ["canva"]}, {"work": True})
+        self.assertEqual(out["status"], "BLOCKED")
+        self.assertIn("unverified_project_connector:canva", out["blocked_by"])
+
+    def test_project_connector_requires_reference_and_approval(self):
+        out = route_task(
+            {"project_connectors": ["canva"], "public_web": True},
+            {"verified_project_connectors": {"canva": {
+                "verified_in_this_session": True,
+                "approved_for_nexia": True,
+                "verification_reference": "documented-live-readback",
+            }}},
+        )
+        self.assertEqual(out["executor"], "CHAT")
 
     def test_secret_authenticated_task_never_routes_public_ci(self):
         out = route_task({
