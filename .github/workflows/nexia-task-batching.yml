@@ -36,7 +36,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Python syntax
         run: python3 -m py_compile tools/nexia_task_batching.py tools/test_nexia_task_batching.py
