@@ -1,0 +1,57 @@
+{
+  "schema_version": 85,
+  "updated_at": "2026-10-18",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V84.json",
+    "verified_blob_sha": "f3c638de144f0c00097b10dec0370abc859d2286"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-18-LEGACY-HASH-ERRATA-PREPARED-001",
+      "path": "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-PREPARED-001.json",
+      "verified_blob_sha": "f297960da290692fab86eee05baddf59abdfcb4a"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-18-LEGACY-HASH-ERRATA-PREPARED-001",
+  "latest_event_path": "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-PREPARED-001.json",
+  "latest_event_blob_sha": "f297960da290692fab86eee05baddf59abdfcb4a",
+  "latest_material_business_event_id": "EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001",
+  "latest_material_system_event_id": "EVT-2026-10-17-CONTROL-PLANE-V1-RECOVERY-PASS-001",
+  "event_reference_errata": [
+    {
+      "source_index": "NEXIA_EVENT_INDEX_V42.json",
+      "source_index_blob_sha": "afcf92cc6f47f43c749c15cc827fe2649bb250ca",
+      "path": "events/EVT-2026-10-16-UGC002-V2-QA-001.json",
+      "declared_blob_sha": null,
+      "verified_blob_sha": "5e0783bb46def768696b7cd0c09a543a9660b0d9"
+    },
+    {
+      "source_index": "NEXIA_EVENT_INDEX_V43.json",
+      "source_index_blob_sha": "3dd315883275e555797f5046df8117a82ac4d665",
+      "path": "events/EVT-2026-10-16-UGC002-V2-QA-CORRECTION-001.json",
+      "declared_blob_sha": null,
+      "verified_blob_sha": "f24a0f7d8fede5865c53056d4b17cad0d8ddbd42"
+    },
+    {
+      "source_index": "NEXIA_EVENT_INDEX_V44.json",
+      "source_index_blob_sha": "0e27b80bd6127f85b94967464fc975d55830e346",
+      "path": "events/EVT-2026-10-16-UGC002-V3-QA-STOP-ROUTE-A-001.json",
+      "declared_blob_sha": null,
+      "verified_blob_sha": "2a5fa51396634bcc092faaab1db92229e01ebd7c"
+    }
+  ],
+  "base_index_reference_errata": [
+    {
+      "source_index": "NEXIA_EVENT_INDEX_V42.json",
+      "source_index_blob_sha": "afcf92cc6f47f43c749c15cc827fe2649bb250ca",
+      "path": "NEXIA_EVENT_INDEX_V41.json",
+      "declared_blob_sha": null,
+      "verified_blob_sha": "8b0e0e8f3332d13b2bb28c00d3e5528c1501bf24"
+    }
+  ],
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "BRANCH CANDIDATE, NOT VERIFIED: preserve historical V41/V42/V43/V44 and bind four null historical SHA claims with anchored, fail-closed errata; no changes to STATE v73, authority or economics."
+}
