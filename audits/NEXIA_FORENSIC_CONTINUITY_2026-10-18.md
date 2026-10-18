@@ -42,7 +42,7 @@ P0 — BRECHA DE PERSISTENCIA: las sesiones de Work posteriores al commit b94c58
 
 P1 — CAPABILITY/CONNECTOR CONFUSION: el acceso a una herramienta en ChatGPT no demuestra que esté configurada, autorizada y verificada para Nexia. Se leyeron búsquedas de Canva/Drive y se planteó P2 sin registro de autorización/configuración específica del proyecto. No se creó o modificó contenido según el registro visible de esa sesión.
 
-P1 — ROUTER FAIL-OPEN: tools/nexia_execution_router.py usa varios valores True por defecto; carece de una comprobación obligatoria de capacidad viva y autorización específica de conector. Esta brecha sigue pendiente en la implementación original de main.
+P1 — ROUTER FAIL-OPEN: main contiene varios valores True por defecto y carece de verificación obligatoria de conectores. La rama forense prepara valores por defecto False, bloqueo cuando no hay ejecutor verificado y exigencia de atestación específica de Nexia; pendiente de suite de regresión/CI y promoción. La atestación declarativa no sustituye la lectura del proveedor.
 
 P1 — DOCUMENTACIÓN HISTÓRICA SUSCEPTIBLE DE CONFUSIÓN: NEXIA_SESSION_BOOTSTRAP.md conserva STATE v39 y misión anterior; NEXIA_EXECUTION_QUEUE.json fue actualizado 2026-10-12 y aún habla de LOCAL_BROWSER_NOT_VERIFIED pese a evidencia posterior. Ambos artefactos son históricos/derivados, y no pueden prevalecer sobre BOOT/STATE/LIVE.
 
@@ -57,15 +57,16 @@ Rama: nexia/forensic-continuity-2026-10-18, creada desde main b94c5813…
 - tools/test_nexia_session_preflight.py: ocho casos de regresión (éxito sintético, modificación de STATE/LIVE, índice ausente, conector sin atestación/no aprobado, atestación positiva solo estructural, ruta insegura).
 - AGENTS.md: obliga a Codex a ejecutar preflight y verificar autorización del conector antes de trabajo material.
 - .github/workflows/nexia-ci.yml: incluye regresiones del preflight para promoción futura.
+- tools/nexia_execution_router.py y tools/test_nexia_execution_router.py: defaults fail-closed y 17 casos de regresión definidos (12 históricos ajustados + 5 nuevos), cambios leídos de vuelta; sin afirmar que la suite completa de 17 casos se haya ejecutado.
 - Este informe forense.
 
 PRUEBA LOCAL: 8/8 para el código preflight; py_compile pasa. GitHub readback comprobado para los ficheros subidos. NO se ha verificado ejecución de CI en la rama ni la integración activa en main.
 
-LIMITACIONES DEL CONTROL NUEVO: no impide por sí mismo a otro chat omitirlo; no prueba un login, no valida por red un proveedor ni comprueba toda la cadena histórica. Una atestación puede ser incorrecta y exige prueba real; se debe pasar una referencia que pueda auditarse. El código de router existente continúa necesitando fail-closed por defecto, revisión de regresiones y promoción específica.
+LIMITACIONES DEL CONTROL NUEVO: no impide por sí mismo a otro chat omitirlo; no prueba un login, no valida por red un proveedor ni comprueba toda la cadena histórica. Una atestación puede ser incorrecta y exige prueba real; se debe pasar una referencia que pueda auditarse. El router ha sido corregido como candidato en rama, pero todavía requiere ejecución real de sus 17 pruebas, CI y promoción específica.
 
 ## 5. Plan de cierre persistente
 
-1. COMPLETAR CANDIDATA: cambiar defaults fail-open de execution_router a BLOCKED cuando no haya evidencia de disponibilidad, y añadir pruebas; etiquetar la atestación de cada conector con alcance y fecha. No inferir autorización por conector instalado.
+1. REVISAR CANDIDATA: los defaults fail-open del execution_router ya se han cambiado en rama a False y hay 17 regresiones definidas. Ejecutarlas realmente, revisar el bloqueo de tareas deterministas y extender atestaciones con alcance y fecha. No inferir autorización por conector instalado.
 2. TESTS: ejecutar local + CI de la rama y prueba de recuperación de un chat fresco; registrar fallos también. No cambiar umbrales retroactivamente.
 3. BACKFILL: recuperar los artefactos locales de Work posteriores a b94c5813…, cotejar contenido, hashes, alcance y clasificar fuente como WORK_LOCAL_EVIDENCE. Preparar evento append-only/candidato checkpoint atómico. No afirmar que los archivos C:\ estén accesibles desde Chat.
 4. PROMOCIÓN CONTROLADA: solicitar a Kael el gate para main y cambios de protección GitHub. Candidato atómico y readback; no sustituir historia.
