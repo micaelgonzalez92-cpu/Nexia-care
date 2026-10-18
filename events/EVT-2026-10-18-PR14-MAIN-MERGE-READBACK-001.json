@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001",
+  "timestamp": "2026-10-18",
+  "timestamp_precision": "DATE_ONLY",
+  "type": "PR14_MAIN_PROMOTION_VERIFICATION_AND_POSTMERGE_RECONCILIATION",
+  "evidence_label": "HECHO_VERIFICADO_BOUNDED",
+  "canonical_state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "observed_merge": {
+    "pull_request": 14,
+    "pr_state": "MERGED",
+    "main_head_sha": "477da01c8f8765a517cd8c8ae70513522bcc1f78",
+    "pr_head_sha": "fa06e1f42345cabf29ac9407e219670303acdb9c",
+    "merge_commit_message": "Merge pull request #14 from micaelgonzalez92-cpu/nexia/legacy-hash-errata-v1-20261018",
+    "merged_at_utc": "2026-10-18T02:11:02Z",
+    "file_diff_merge_vs_verified_branch": 0,
+    "merge_performed_by_this_reconciliation": false
+  },
+  "reference_audit": {
+    "boot_version": 141,
+    "state_version": 73,
+    "active_index_version": 86,
+    "recovered_binding_checks": "PASS_9_OF_9",
+    "historical_hashless_bindings_corrected": 4,
+    "immutable_historical_events_preserved": true
+  },
+  "candidate_ci": {
+    "verified_commit": "fa06e1f42345cabf29ac9407e219670303acdb9c",
+    "nexia_ci_run": 39088879497,
+    "nexia_ci": "SUCCESS",
+    "secret_scan_run": 39088879522,
+    "secret_scan": "SUCCESS",
+    "process_intelligence_run": 39088879552,
+    "process_intelligence": "SUCCESS",
+    "python_regressions_passed": 42,
+    "integrity_status": "PASS",
+    "integrity_errors": 0,
+    "integrity_warnings": 0,
+    "indexes_checked": 85,
+    "events_checked": 162
+  },
+  "discovered_metadata_drift": {
+    "boot_live_state_status": "BRANCH_V85_CI_VERIFIED_V86_CANDIDATE_PENDING_FINAL_VERIFICATION",
+    "boot_sync_status": "STATE_V73_PLUS_INDEX_V86_BRANCH_ONLY_V85_CI_PASS",
+    "live_promotion": "NOT_AUTHORIZED_OR_PERFORMED",
+    "main_head_outcome": "MERGED",
+    "repair": "POST_MERGE_QUIET_RECONCILIATION_IN_NEW_FORWARD_CHECKPOINT"
+  },
+  "authority": {
+    "specific_kael_approval": "Autorizo promocionar la reparación antideriva del PR #14 a main",
+    "scope": "VERIFY_PROMOTION_AND_RECONCILE_DERIVED_BOOT_LIVE_METADATA; NO NEW_CAPABILITIES_OR_AUTHORITY",
+    "scope_change": false
+  },
+  "economics": {
+    "cost_eur": 0,
+    "revenue_changed": false,
+    "settled_revenue_changed": false,
+    "profit_changed": false
+  },
+  "truth_boundary": "The commit and PR merge, branch CI and GitHub blob bindings are confirmed. This event does not claim main push CI completion, independent historical content provenance, or production/24x7/commercial results. The post-merge reconciliation itself is only complete after new atomic main checkpoint and remote readback.",
+  "next_action": "VERIFY_POST_MERGE_RECONCILIATION_CANDIDATE_CI_AND_MAIN_REMOTE_READBACK_THEN_RESUME_EXP_AUTO_001"
+}
