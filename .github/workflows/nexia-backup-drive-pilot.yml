@@ -31,7 +31,10 @@ jobs:
           test "$(git branch --show-current)" = "main"
           git bundle create "$SNAPSHOT/Nexia-care-main-history.bundle" refs/heads/main
           git bundle verify "$SNAPSHOT/Nexia-care-main-history.bundle"
-          git clone --no-local "$SNAPSHOT/Nexia-care-main-history.bundle" "$SNAPSHOT/restore" >/dev/null 2>&1
+          # Git bundle has refs/heads/main but does not guarantee bundle remote HEAD.
+          git init -q "$SNAPSHOT/restore"
+          git -C "$SNAPSHOT/restore" fetch --quiet "$SNAPSHOT/Nexia-care-main-history.bundle" refs/heads/main
+          git -C "$SNAPSHOT/restore" checkout -q -B main FETCH_HEAD
           restored_sha="$(git -C "$SNAPSHOT/restore" rev-parse HEAD)"
           test "$source_sha" = "$restored_sha"
           python3 "$SNAPSHOT/restore/tools/nexia_integrity_check.py" --root "$SNAPSHOT/restore" --json > "$SNAPSHOT/restore-integrity.json"
