@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 18
     env:
-      N8N_USER_FOLDER: ${{ runner.temp }}/nexia-kit-isolated-user
+      N8N_USER_FOLDER: /tmp/nexia-kit-isolated-user
       DB_TYPE: sqlite
-      DB_SQLITE_DATABASE: ${{ runner.temp }}/nexia-kit-isolated-user/database.sqlite
+      DB_SQLITE_DATABASE: /tmp/nexia-kit-isolated-user/database.sqlite
       N8N_DIAGNOSTICS_ENABLED: 'false'
       N8N_VERSION_NOTIFICATIONS_ENABLED: 'false'
       N8N_TEMPLATES_ENABLED: 'false'
