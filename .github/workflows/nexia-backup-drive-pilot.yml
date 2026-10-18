@@ -1,0 +1,77 @@
+name: Nexia Backup Export Candidate
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/nexia-backup-drive-pilot.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  export-main-history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout canonical main without persisted credentials
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Create complete main-history git bundle and test restoration
+        shell: bash
+        run: |
+          set -euo pipefail
+          SNAPSHOT="$RUNNER_TEMP/nexia-backup"
+          mkdir -p "$SNAPSHOT"
+          chmod 700 "$SNAPSHOT"
+          source_sha="$(git rev-parse HEAD)"
+          test "$(git branch --show-current)" = "main"
+          git bundle create "$SNAPSHOT/Nexia-care-main-history.bundle" refs/heads/main
+          git bundle verify "$SNAPSHOT/Nexia-care-main-history.bundle"
+          git clone --no-local "$SNAPSHOT/Nexia-care-main-history.bundle" "$SNAPSHOT/restore" >/dev/null 2>&1
+          restored_sha="$(git -C "$SNAPSHOT/restore" rev-parse HEAD)"
+          test "$source_sha" = "$restored_sha"
+          python3 "$SNAPSHOT/restore/tools/nexia_integrity_check.py" --root "$SNAPSHOT/restore" --json > "$SNAPSHOT/restore-integrity.json"
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, subprocess
+          root = pathlib.Path(os.environ["RUNNER_TEMP"]) / "nexia-backup"
+          bundle = root / "Nexia-care-main-history.bundle"
+          proof = json.loads((root / "restore-integrity.json").read_text())
+          assert proof.get("status") == "PASS" and proof.get("errors") == 0 and proof.get("warnings") == 0, proof
+          source = subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip()
+          restored = subprocess.check_output(["git","-C",str(root/"restore"),"rev-parse","HEAD"],text=True).strip()
+          assert source == restored
+          digest = hashlib.file_digest(bundle.open("rb"),"sha256").hexdigest()
+          manifest = {
+            "schema_version": 1, "result": "GENERATED_AND_RESTORED_ON_CI_RUNNER",
+            "repository": "micaelgonzalez92-cpu/Nexia-care", "branch": "main",
+            "commit_sha": source, "scope": "MAIN_FULL_GIT_HISTORY_ONLY",
+            "bundle_filename": bundle.name, "bundle_sha256": digest,
+            "bundle_bytes": bundle.stat().st_size,
+            "bundle_verified": True, "restored_head_verified": True,
+            "canonical_integrity": {"status": "PASS","errors":0,"warnings":0},
+            "coverage_exclusions": ["other Git branches unless merged into main","Git LFS objects not separately exported","untracked files and external services","private local assets and credentials"],
+            "google_drive_uploaded": False, "google_drive_download_checked": False,
+            "restored_from_drive_bytes": False
+          }
+          (root/"manifest.json").write_text(json.dumps(manifest,indent=2)+"\n")
+          print("BACKUP_MAIN_HISTORY_RUNNER_TEST: PASS")
+          print("SHA256:",digest)
+          print("COMMIT:",source)
+          print("SIZE_BYTES:",bundle.stat().st_size)
+          PY
+
+      - name: Package immutable candidate archive for Drive connector transfer
+        uses: actions/upload-artifact@v4
+        with:
+          name: nexia-main-history-pilot
+          path: |
+            ${{ runner.temp }}/nexia-backup/Nexia-care-main-history.bundle
+            ${{ runner.temp }}/nexia-backup/manifest.json
+            ${{ runner.temp }}/nexia-backup/restore-integrity.json
+          if-no-files-found: error
+          retention-days: 2
+          compression-level: 6
