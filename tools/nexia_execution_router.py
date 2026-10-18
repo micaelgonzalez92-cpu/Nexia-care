@@ -25,16 +25,37 @@ RED_EFFECTS = {
 
 def route_task(task, capabilities=None):
     caps = {
-        "github_actions": True,
-        "local_script": True,
+        "github_actions": False,
+        "local_script": False,
         "local_ai": False,
-        "local_gpu_image": True,
+        "local_gpu_image": False,
         "local_browser": False,
-        "work": True,
-        "codex": True,
+        "work": False,
+        "codex": False,
     }
     if capabilities:
         caps.update(capabilities)
+
+    # A connector being installed in a ChatGPT account is not evidence that
+    # it is approved and verified for use in this Nexia project/session.
+    required = task.get("project_connectors") or []
+    verified = (capabilities or {}).get("verified_project_connectors") or {}
+    missing = [
+        name for name in required
+        if not isinstance(verified, dict)
+        or not isinstance(verified.get(name), dict)
+        or verified[name].get("verified_in_this_session") is not True
+        or verified[name].get("approved_for_nexia") is not True
+        or not verified[name].get("verification_reference")
+    ]
+    if missing:
+        return {
+            "executor": "HUMAN_GATE",
+            "zero_quota": False,
+            "status": "BLOCKED",
+            "reason": "Project connector requires independently checked session evidence and Nexia authorization.",
+            "blocked_by": ["unverified_project_connector:" + str(n) for n in missing],
+        }
 
     effects = list(task.get("effects") or [])
     try:
@@ -81,13 +102,13 @@ def route_task(task, capabilities=None):
             "blocked_by": [],
         }
 
-    if task.get("requires_gpu") and task.get("image_generation") and caps["local_gpu_image"]:
+    if task.get("requires_gpu") and task.get("image_generation"):
         return {
-            "executor": "LOCAL_GPU",
-            "zero_quota": True,
-            "status": "READY",
-            "reason": "Verified local image runtime should handle bounded image generation.",
-            "blocked_by": [],
+            "executor": "LOCAL_GPU" if caps["local_gpu_image"] else "HUMAN_GATE",
+            "zero_quota": bool(caps["local_gpu_image"]),
+            "status": "READY" if caps["local_gpu_image"] else "BLOCKED",
+            "reason": "Local image executor requires evidence of availability in this session.",
+            "blocked_by": [] if caps["local_gpu_image"] else ["local_gpu_image_not_verified"],
         }
 
     if task.get("requires_authenticated_browser") or task.get("requires_gui"):
@@ -136,6 +157,15 @@ def route_task(task, capabilities=None):
                 "blocked_by": [],
             }
 
+    if task.get("deterministic") and not (caps["github_actions"] or caps["local_script"]):
+        return {
+            "executor": "HUMAN_GATE",
+            "zero_quota": False,
+            "status": "BLOCKED",
+            "reason": "No currently verified deterministic executor.",
+            "blocked_by": ["deterministic_executor_not_verified"],
+        }
+
     if task.get("public_web") and str(task.get("reasoning", "medium")).lower() in {"low", "medium"}:
         return {
             "executor": "CHAT",
@@ -155,11 +185,11 @@ def route_task(task, capabilities=None):
                 "blocked_by": [],
             }
         return {
-            "executor": "CODEX" if caps["codex"] else "CHAT",
-            "zero_quota": False if caps["codex"] else True,
-            "status": "READY",
-            "reason": "Complex code work uses Codex until local coding AI is verified.",
-            "blocked_by": [],
+            "executor": "CODEX" if caps["codex"] else "HUMAN_GATE",
+            "zero_quota": False,
+            "status": "READY" if caps["codex"] else "BLOCKED",
+            "reason": "Code execution requires a verified, authorized execution plane.",
+            "blocked_by": [] if caps["codex"] else ["code_executor_not_verified"],
         }
 
     return {
