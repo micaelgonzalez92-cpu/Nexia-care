@@ -4,6 +4,7 @@ Keep this file short. Detailed policy lives in the canonical Nexia files below.
 
 ## Before material work
 
+0. **FAIL-CLOSED PREFLIGHT:** run `python3 tools/nexia_session_preflight.py --root .` before selecting or executing a material task. `BLOCKED` means stop and repair/recover; `PASS_REPOSITORY_BINDINGS_ONLY` proves bound repository bytes, NOT external sessions, credentials, or runtime readiness. Before using any external connector, rerun with `--require-connector <name> --session-manifest <ephemeral-local-evidence.json>`; the manifest must bind an actual session verification and Nexia project authorization, never merely account-wide plugin presence. Do not store tokens or private session data in the repository. This rule must not be bypassed by `/next`.
 1. Read `NEXIA_STATE.json` (canonical state).
 2. Read `NEXIA_BOOT.json` and `NEXIA_LIVE.json` to detect drift.
 3. Read `NEXIA_AUTHORITY_MATRIX.md` before any action with external, destructive, publication, account, spend, production or data-access effects.
