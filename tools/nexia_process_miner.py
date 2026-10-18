@@ -13,6 +13,7 @@ import argparse
 import hashlib
 import json
 import re
+import subprocess
 import sys
 from collections import Counter
 from pathlib import Path
@@ -416,6 +417,7 @@ def build_metrics(active_index: str, indexes: list[dict[str, Any]], refs: list[d
         "event_references": len(refs),
         "episodes_loaded": len(episodes),
         "diagnostics_count": len(diagnostics),
+        "legacy_base_edges_missing_inline_sha": sum(d.get("kind") == "base_index" and d.get("expected_blob_sha") is None for d in diagnostics),
         "outcome_counts": dict(sorted(outcomes.items())),
         "evidence_label_counts": dict(sorted(labels.items())),
         "episodes_with_truth_boundary": sum(bool(e.get("truth_boundary")) for e in episodes),
@@ -441,6 +443,13 @@ def validate_result(active_index: str, indexes: list[dict[str, Any]], refs: list
         errors.append("Duplicate event IDs remain after normalization")
     missing = [d for d in diagnostics if d.get("kind") == "missing_event"]
     mismatches = [d for d in diagnostics if d.get("kind") in {"event_blob_mismatch", "event_id_mismatch"}]
+    broken_base = [d for d in diagnostics if d.get("kind") == "base_index"
+                   and (d.get("match") is False or d.get("actual_blob_sha") is None)]
+    broken_active = [d for d in diagnostics if d.get("kind") == "active_index" and d.get("match") is False]
+    if broken_base:
+        errors.append(f"Broken base-index blob bindings: {len(broken_base)}")
+    if broken_active:
+        errors.append(f"Active-index BOOT hash mismatch: {len(broken_active)}")
     if missing:
         errors.append(f"Missing event files: {len(missing)}")
     if mismatches:
@@ -481,9 +490,54 @@ def rank_lessons(lessons: list[dict[str, Any]], query: str) -> list[dict[str, An
     return [lesson for _, lesson in scored]
 
 
+def _check_canonical_integrity_if_present(repo_root: Path) -> None:
+    """Fail closed for real canonical repos; isolated BOOT-only test fixtures are allowed.
+
+    This reuses the canonical SHA/errata validator instead of inventing an
+    independent interpretation of corrected historical reference hashes.
+    """
+    state = (repo_root / "NEXIA_STATE.json").is_file()
+    live = (repo_root / "NEXIA_LIVE.json").is_file()
+    if state != live:
+        raise MinerError("Partial canonical repo: STATE and LIVE must both be present")
+    if not state:
+        return
+    checker = Path(__file__).resolve().with_name("nexia_integrity_check.py")
+    if not checker.is_file():
+        raise MinerError("Canonical integrity checker unavailable")
+    try:
+        process = subprocess.run(
+            [sys.executable, "-B", str(checker), "--root", str(repo_root), "--json"],
+            capture_output=True, text=True, check=False, timeout=120,
+        )
+        report = json.loads(process.stdout)
+    except (OSError, subprocess.TimeoutExpired, json.JSONDecodeError) as exc:
+        raise MinerError("Canonical integrity checker could not be verified") from exc
+    if (process.returncode != 0 or not isinstance(report, dict)
+            or report.get("status") != "PASS"
+            or report.get("errors") != 0 or report.get("warnings") != 0):
+        raise MinerError(
+            "Canonical integrity not PASS; process lessons blocked "
+            f"(exit={process.returncode}, status={report.get('status') if isinstance(report, dict) else 'INVALID'}, "
+            f"errors={report.get('errors') if isinstance(report, dict) else 'UNKNOWN'}, "
+            f"warnings={report.get('warnings') if isinstance(report, dict) else 'UNKNOWN'})"
+        )
+
+
 def run(repo_root: Path, active_index: str | None = None) -> dict[str, Any]:
+    _check_canonical_integrity_if_present(repo_root)
     active = active_index or discover_active_index(repo_root)
     indexes, diagnostics = traverse_index_chain(repo_root, active)
+    boot = _load_json(repo_root / "NEXIA_BOOT.json")
+    storage = boot.get("event_storage")
+    expected_active = storage.get("active_index_blob_sha") if isinstance(storage, dict) else None
+    stored_path = storage.get("active_index") if isinstance(storage, dict) else None
+    if stored_path == active and expected_active is not None:
+        actual_active = indexes[-1]["blob_sha"]
+        diagnostics.append({
+            "kind": "active_index", "path": active, "expected_blob_sha": expected_active,
+            "actual_blob_sha": actual_active, "match": expected_active == actual_active,
+        })
     refs, ref_diags = event_references(indexes)
     diagnostics.extend(ref_diags)
     episodes, event_diags = load_episodes(repo_root, refs)
