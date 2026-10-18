@@ -225,7 +225,67 @@ class EvidenceAudit:
         else:
             self.add("INDEX_DEPTH_LIMIT", str(MAX_INDEX_DEPTH))
             return
+        self.check_base_index_errata()
         self.check_events(bs)
+
+    def check_base_index_errata(self):
+        """Resolve only *missing* legacy base-index hashes using anchored later claims.
+
+        Never modify a historical index or override an existing SHA claim.
+        Both the source index bytes and the target index bytes must match the
+        declared Git blob hashes. A conflict keeps the reference unresolved.
+        """
+        positions = {p: i for i, (p, _, _) in enumerate(self.indexes)}
+        shas = {p: sha for p, sha, _ in self.indexes}
+        resolved = {}
+        conflicts = set()
+        for issuer_position, (issuer, _, index) in enumerate(self.indexes):
+            rows = index.get("base_index_reference_errata", [])
+            if not isinstance(rows, list):
+                self.add("INVALID_BASE_INDEX_ERRATUM", issuer)
+                continue
+            for row in rows:
+                if not isinstance(row, dict):
+                    self.add("INVALID_BASE_INDEX_ERRATUM", issuer)
+                    continue
+                source = row.get("source_index")
+                target = row.get("path")
+                source_position = positions.get(source) if isinstance(source, str) else None
+                target_position = positions.get(target) if isinstance(target, str) else None
+                corrected = row.get("verified_blob_sha")
+                if (source_position is None or source_position <= issuer_position
+                        or target_position is None or target_position <= source_position
+                        or "declared_blob_sha" not in row
+                        or row.get("declared_blob_sha") is not None
+                        or not isinstance(corrected, str) or not SHA.fullmatch(corrected)):
+                    self.add("INVALID_BASE_INDEX_ERRATUM", issuer)
+                    continue
+                old = self.indexes[source_position][2].get("base_index")
+                if (not isinstance(old, dict) or old.get("path") != target
+                        or old.get("verified_blob_sha") is not None
+                        or shas[source] != row.get("source_index_blob_sha")
+                        or shas[target] != corrected):
+                    self.add("INVALID_BASE_INDEX_ERRATUM", issuer)
+                    continue
+                key = (source, target)
+                if key in resolved:
+                    conflicts.add(key)
+                    self.add("CONFLICTING_BASE_INDEX_ERRATA", f"{issuer}: {source} -> {target}")
+                resolved[key] = corrected
+        for key in conflicts:
+            resolved.pop(key, None)
+        for (source, target), _ in resolved.items():
+            # The traversal is a single chain; only the warning for this
+            # genuinely hashless direct base-index edge may be removed.
+            warning = next((i for i, f in enumerate(self.findings)
+                            if f.severity == "WARNING" and f.code == "REFERENCE_HASH_MISSING"
+                            and f.message == target), None)
+            if warning is None:
+                self.add("INVALID_BASE_INDEX_ERRATUM", f"{source}: warning not present")
+                continue
+            self.findings.pop(warning)
+            self.corrected_count += 1
+            self.add("BASE_INDEX_REFERENCE_CORRECTED", f"{source}: {target}", "INFO")
 
     def check_events(self, storage):
         # Corrections may bind only exact claims in an older index, never a base
