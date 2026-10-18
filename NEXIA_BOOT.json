@@ -1,6 +1,6 @@
 {
   "schema_version": 84,
-  "boot_version": 139,
+  "boot_version": 140,
   "generated_at": "2026-10-18",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
@@ -15,6 +15,8 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V85.json",
+    "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-PREPARED-001.json",
     "NEXIA_EVENT_INDEX_V84.json",
     "events/EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001.json",
     "commercial/CONTRA_MARKET_AUDIT_V1_2026-10-18.md",
@@ -37,16 +39,16 @@
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "bc33817af693506d3f4665c97f1f19ab287755b7",
-  "live_state_status": "CONTROL_PLANE_V1_RECOVERY_VERIFIED_REALITY_LOOP_CONTRA_MARKET_AUDIT_V84",
+  "live_state_blob_sha": "18c681078bbdc500311884029f2816187a37bbd3",
+  "live_state_status": "CONTROL_PLANE_V1_RECOVERY_VERIFIED_LEGACY_HASH_ERRATA_V85_BRANCH_CANDIDATE_PENDING_TESTS",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V84.json",
-    "active_index_blob_sha": "f3c638de144f0c00097b10dec0370abc859d2286",
-    "latest_verified_event_id": "EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001",
-    "latest_verified_event_path": "events/EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001.json",
-    "latest_verified_event_blob_sha": "0ffc532175088b48d649e3a15389cf4129a37152",
-    "base_index": "NEXIA_EVENT_INDEX_V83.json"
+    "active_index": "NEXIA_EVENT_INDEX_V85.json",
+    "active_index_blob_sha": "a1a2315f42a8e80aa40a845b5a0d3e127fa0d2b1",
+    "latest_verified_event_id": "EVT-2026-10-18-LEGACY-HASH-ERRATA-PREPARED-001",
+    "latest_verified_event_path": "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-PREPARED-001.json",
+    "latest_verified_event_blob_sha": "f297960da290692fab86eee05baddf59abdfcb4a",
+    "base_index": "NEXIA_EVENT_INDEX_V84.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
@@ -165,8 +167,8 @@
   },
   "phase": "SYSTEM EXCELLENCE + EXTERNAL REALITY — CONTROL PLANE V1 RECOVERY VERIFIED; RESUME EXTERNAL REALITY LOOP",
   "human_gate": "No human action required for internal system work now. Continue GREEN external-validation research/preparation until a real RED gate; Instagram mobile access, publication/contact, production, KYC/payout, spending and GitHub governance changes remain separately gated.",
-  "sync_status": "STATE_V73_PLUS_INDEX_V84_CONTRA_MARKET_AUDIT_BOOT139_LIVE64",
-  "next_action": "OPEN_WORK_FOR_CONTRA_AUTHENTICATED_JOBS_AND_PRO_TRIAL_TERMS_READ_ONLY_AUDIT",
+  "sync_status": "STATE_V73_PLUS_INDEX_V85_BRANCH_CANDIDATE_NOT_PROMOTED",
+  "next_action": "VERIFY_LEGACY_HASH_ERRATA_V85_BRANCH_CANDIDATE_AND_RESOLVE_WARNINGS_BEFORE_MAIN",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
