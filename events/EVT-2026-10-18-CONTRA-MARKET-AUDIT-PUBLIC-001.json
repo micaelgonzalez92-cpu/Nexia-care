@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001",
+  "timestamp": "2026-10-18",
+  "type": "CONTRA_MARKET_PUBLIC_AUDIT_READ_ONLY",
+  "evidence_label": "PUBLIC_FACTS_VERIFIED_PLUS_USER_REPORTED_ACCOUNT_STATUS",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "state_version": 73,
+  "report": {
+    "path": "commercial/CONTRA_MARKET_AUDIT_V1_2026-10-18.md",
+    "verified_blob_sha": "3b62134e3f432de8406dad25d07ad4d515f6815a"
+  },
+  "observations": {
+    "public_profile": "https://contra.com/micaelgonzalezautomation/work",
+    "public_work_count": 4,
+    "public_service": "Lead Intake Reliability Sprint; Contact for pricing",
+    "jobs_authenticated": "NOT_ACCESSED_FROM_CURRENT_SURFACE",
+    "public_jobs_url": "https://contra.com/jobs",
+    "jobs_public_redirect": "LOGIN_REQUIRED",
+    "user_reported_identity_w8_payout": "COMPLETE_USER_REPORTED_NOT_PROVIDER_READBACK",
+    "user_reported_trial": "ONE_MONTH_FREE_PRO_OFFER_TERMS_UNKNOWN",
+    "pro_standard_usd_per_month": 29,
+    "opportunity_pillars": [
+      "RELIABLE_LEAD_INTAKE_SPRINT",
+      "CRM_DATA_QUALITY_DEDUP_AUDIT",
+      "N8N_WORKFLOW_QA_RELIABILITY",
+      "CONTRA_LABS_OPTION_RESEARCH"
+    ],
+    "verified_studio_eligibility": "NOT_ESTABLISHED; REQUIRES MULTIDISCIPLINARY_TEAM_AND_COMPLETED_CLIENT_RECORD",
+    "profile_metrics": "CONTRA_EARNED_MILESTONES_ARE_CUMULATIVE_NOT_RECENT_MONTHLY_PROFIT",
+    "contra_studio_directory_counters": "DYNAMIC_70_71_STUDIOS_7.3_7.4M_USD_IN_PROJECTS"
+  },
+  "external_effects": false,
+  "financial_impact_eur": 0,
+  "proposals_sent": 0,
+  "truth_limit": "No live authenticated Contra job listings, budgets, costs or Pro free-trial renewal dates verified; no new buyer interest, contract, earnings, deposits or profit claimed.",
+  "next_action": "READ_ONLY_WORK_AUDIT_AUTHENTICATED_CONTRA_JOBS_AND_PRO_CHECKOUT_TERMS_THEN_PREPARE_TOP_3_TO_6_MATCHED_APPLICATIONS_FOR_KAEL_GATE"
+}
