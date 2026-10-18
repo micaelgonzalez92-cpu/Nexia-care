@@ -7,6 +7,7 @@ The kit must not move to `VALIDATION_READY` unless every mandatory item passes.
 ## A. Packaging
 - [ ] All JSON files parse successfully.
 - [ ] All workflows import as inactive.
+- [ ] Bootstrap uses **manual trigger only** and cannot be invoked over an unauthenticated HTTP webhook (static CI + installed n8n confirmation).
 - [ ] No buyer-specific names, IDs or credentials are embedded.
 - [ ] No real customer data exists in samples.
 - [ ] Every sample uses synthetic values.
@@ -22,6 +23,9 @@ The kit must not move to `VALIDATION_READY` unless every mandatory item passes.
 
 ## C. Persistent Dedup Guard
 - [ ] Bootstrap creates `lead_intake_reliability_keys` with `eventKey`, `identityKey`, `recordId`.
+- [ ] Owner manually runs bootstrap once in a fresh isolated n8n environment; subsequent run cannot erase the table or live records.
+- [ ] Dedup under concurrent submissions: NOT VERIFIED; require serialized execution or independently proven atomic guard before production usage.
+- [ ] Intake/dedup webhook authentication, ingress controls and rate limiting tested before activation on any public endpoint.
 - [ ] Dedup guard normalizes email and phone.
 - [ ] Same event ID is blocked from a second insert.
 - [ ] Different event ID with same normalized identity is blocked from a second insert.
