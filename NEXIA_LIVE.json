@@ -47,12 +47,12 @@
   },
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V84.json",
-    "active_index_blob_sha": "f3c638de144f0c00097b10dec0370abc859d2286",
-    "latest_verified_event_id": "EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001",
-    "latest_verified_event_path": "events/EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001.json",
-    "latest_verified_event_blob_sha": "0ffc532175088b48d649e3a15389cf4129a37152",
-    "base_index": "NEXIA_EVENT_INDEX_V83.json"
+    "active_index": "NEXIA_EVENT_INDEX_V86.json",
+    "active_index_blob_sha": "a7964c0ec86db5b660f688673daa5055cdaf7607",
+    "latest_verified_event_id": "EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001",
+    "latest_verified_event_path": "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001.json",
+    "latest_verified_event_blob_sha": "c4de84b7414b2e3a7e3a8daa68d445d76938a23d",
+    "base_index": "NEXIA_EVENT_INDEX_V85.json"
   },
   "economics": {
     "revenue_eur": 0,
@@ -86,7 +86,7 @@
     "resume_from": "EXP-AUTO-001 commercial validation: use commercial/CONTRA_MARKET_AUDIT_V1_2026-10-18.md, do not repeat Instagram or Contra V4 publications; authenticated Jobs is next gap.",
     "truth_limit": "Control Plane V1 recovery is repository-verified; branch protection is not enabled; measured quota savings and external commercial response remain unestablished."
   },
-  "next_action": "AUTHENTICATED_WORK_READ_ONLY_CONTRA_JOBS_PRO_TERMS_AUDIT_THEN_KAEL_PROPOSAL_GATES",
+  "next_action": "VERIFY_V86_CANDIDATE_IN_CI_THEN_STOP_AT_EXPLICIT_MAIN_PROMOTION_HUMAN_GATE",
   "hard_precedence": [
     "SAFETY_LEGAL_SECURITY_PRIVACY_PLATFORM_HARD_CONSTRAINTS",
     "TRUTH_EVIDENCE_INTEGRITY",
@@ -98,11 +98,28 @@
     "status": "CONTRA_PUBLIC_PROFILE_4_WORKS_SPRINT_VERIFIED_USER_KYC_W8_PAYOUT_REPORTED_COMPLETE_JOBS_AUTH_REQUIRED_IG_V83_COMPLETE"
   },
   "resume_required_reads": [
+    "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
+    "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V86.json",
+    "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001.json",
+    "NEXIA_EVENT_INDEX_V85.json",
+    "events/EVT-2026-10-18-LEGACY-HASH-ERRATA-PREPARED-001.json",
     "NEXIA_EVENT_INDEX_V84.json",
     "events/EVT-2026-10-18-CONTRA-MARKET-AUDIT-PUBLIC-001.json",
     "commercial/CONTRA_MARKET_AUDIT_V1_2026-10-18.md",
     "NEXIA_EVENT_INDEX_V83.json",
     "events/EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001.json"
-  ]
+  ],
+  "branch_integrity_candidate": {
+    "pull_request": 14,
+    "promotion": "NOT_AUTHORIZED_OR_PERFORMED",
+    "status": "V85_CI_PASS_V86_POST_VERIFICATION_PENDING",
+    "last_verified_tested_commit": "4f5d5c413f8e583679a401afd8002b23e3a591bf",
+    "ci_run_id": 39087452142,
+    "integrity_zero_errors": true,
+    "integrity_zero_warnings": true,
+    "corrected_legacy_missing_hashes": 4,
+    "main_changed": false
+  }
 }

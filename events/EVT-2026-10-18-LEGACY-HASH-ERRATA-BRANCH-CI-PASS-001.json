@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-18-LEGACY-HASH-ERRATA-BRANCH-CI-PASS-001",
+  "timestamp": "2026-10-18",
+  "timestamp_precision": "date_only",
+  "type": "LEGACY_HASH_ERRATA_FEATURE_BRANCH_CI_VERIFICATION",
+  "evidence_label": "HECHO_VERIFICADO_CI_BOUNDED_BRANCH_ONLY",
+  "canonical_state_version": 73,
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "project": "NEXIA CORE",
+  "branch": "nexia/legacy-hash-errata-v1-20261018",
+  "verified_commit": "4f5d5c413f8e583679a401afd8002b23e3a591bf",
+  "canonical_main_head_at_check": "b94c5813d9300e36c4fc5b755f46ed8ee4d06aeb",
+  "verification": {
+    "github_actions": [
+      {
+        "name": "Nexia CI",
+        "run_id": 39087452142,
+        "job_id": 117556895064,
+        "conclusion": "success"
+      },
+      {
+        "name": "Nexia Process Intelligence",
+        "run_id": 39087452130,
+        "conclusion": "success"
+      },
+      {
+        "name": "Nexia Secret Scan",
+        "run_id": 39087452135,
+        "conclusion": "success"
+      }
+    ],
+    "integrity_checker": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "state_version": 73,
+      "indexes_checked": 84,
+      "events_checked": 161,
+      "artifact_references_checked": 24,
+      "historical_artifact_blobs_checked": 3,
+      "corrected_historical_references_total": 6,
+      "new_legacy_errata": 4
+    },
+    "integrity_regression": {
+      "python_tests": 42,
+      "failed": 0,
+      "conclusion": "OK"
+    },
+    "verification_source": "Github Actions job logs for job 117556895064, including exact JSON checker output and unittest summary",
+    "git_readback": "PR #14 branch files and BOOT/STATE/LIVE/V85/latest event bindings passed"
+  },
+  "scope": {
+    "history_rewritten": false,
+    "original_v41_to_v44_and_events_untouched": true,
+    "main_changed": false,
+    "state_changed": false,
+    "economics_changed": false,
+    "authority_changed": false
+  },
+  "truth_boundary": "CI verifies code regressions and branch file/byte-level reference integrity, not independent historic content provenance, main deployment, external production, customer results, demand, sales or settled profit. New V86 and associated BOOT/LIVE checkpoint have not yet been CI-tested in this event; require independent follow-up verification before promotion.",
+  "next_action": "VERIFY_V86_BRANCH_CI_AND_REQUIRE_EXPLICIT_KAEL_MAIN_PROMOTION_GATE"
+}

@@ -361,6 +361,78 @@ class ModernIntegrityTests(unittest.TestCase):
                                 "verified_blob_sha": mod.git_blob_sha(path.read_bytes())}])
         self.assert_code("CONFLICTING_ARTIFACT_ERRATA")
 
+    def add_legacy_base_index_erratum(self, *, bad_anchor=False, bad_target=False,
+                                     duplicate=False, preexisting_hash=False):
+        old_index = "NEXIA_EVENT_INDEX_V27.json"
+        bind_modern(self.root, index_path=old_index)
+        old_sha = mod.git_blob_sha((self.root / old_index).read_bytes())
+        middle = self.root / "events/EVT-MIDDLE.json"
+        write_json(middle, {"event_id": "EVT-MIDDLE", "canonical_state_version": 61})
+        base = {"path": old_index}
+        if preexisting_hash:
+            base["verified_blob_sha"] = old_sha
+        bind_modern(self.root,
+                    [{"event_id": "EVT-MIDDLE", "path": "events/EVT-MIDDLE.json",
+                      "verified_blob_sha": mod.git_blob_sha(middle.read_bytes())}],
+                    index_path="NEXIA_EVENT_INDEX_V28.json", base=base)
+        source_sha = mod.git_blob_sha((self.root / "NEXIA_EVENT_INDEX_V28.json").read_bytes())
+        latest = self.root / "events/EVT-LATEST.json"
+        write_json(latest, {"event_id": "EVT-LATEST", "canonical_state_version": 61})
+        bind_modern(self.root,
+                    [{"event_id": "EVT-LATEST", "path": "events/EVT-LATEST.json",
+                      "verified_blob_sha": mod.git_blob_sha(latest.read_bytes())}],
+                    index_path="NEXIA_EVENT_INDEX_V29.json",
+                    base={"path": "NEXIA_EVENT_INDEX_V28.json", "verified_blob_sha": source_sha})
+        row = {"source_index": "NEXIA_EVENT_INDEX_V28.json",
+               "source_index_blob_sha": "0" * 40 if bad_anchor else source_sha,
+               "path": old_index, "declared_blob_sha": None,
+               "verified_blob_sha": "1" * 40 if bad_target else old_sha}
+        index_path = self.root / "NEXIA_EVENT_INDEX_V29.json"
+        index = read_json(index_path)
+        index["base_index_reference_errata"] = [row, dict(row)] if duplicate else [row]
+        write_json(index_path, index)
+        index_sha = mod.git_blob_sha(index_path.read_bytes())
+        live_path = self.root / "NEXIA_LIVE.json"
+        live = read_json(live_path)
+        live["event_storage"]["active_index_blob_sha"] = index_sha
+        write_json(live_path, live)
+        boot_path = self.root / "NEXIA_BOOT.json"
+        boot = read_json(boot_path)
+        boot["event_storage"]["active_index_blob_sha"] = index_sha
+        boot["live_state_blob_sha"] = mod.git_blob_sha(live_path.read_bytes())
+        write_json(boot_path, boot)
+        return old_index
+
+    def test_bounded_legacy_base_index_erratum_passes_without_history_rewrite(self):
+        old_index = self.add_legacy_base_index_erratum()
+        before = (self.root / old_index).read_bytes()
+        report = self.report()
+        self.assertEqual(report["status"], "PASS", report)
+        self.assertEqual(report["corrected_historical_references"], 1, report)
+        self.assertEqual((self.root / old_index).read_bytes(), before)
+
+    def test_legacy_base_index_erratum_wrong_source_anchor_fails(self):
+        self.add_legacy_base_index_erratum(bad_anchor=True)
+        self.assert_code("INVALID_BASE_INDEX_ERRATUM")
+
+    def test_legacy_base_index_erratum_wrong_target_hash_fails(self):
+        self.add_legacy_base_index_erratum(bad_target=True)
+        self.assert_code("INVALID_BASE_INDEX_ERRATUM")
+
+    def test_legacy_base_index_erratum_cannot_override_existing_hash(self):
+        self.add_legacy_base_index_erratum(preexisting_hash=True)
+        self.assert_code("INVALID_BASE_INDEX_ERRATUM")
+
+    def test_legacy_base_index_erratum_duplicate_is_conflict(self):
+        self.add_legacy_base_index_erratum(duplicate=True)
+        self.assert_code("CONFLICTING_BASE_INDEX_ERRATA")
+
+    def test_legacy_base_index_erratum_source_tamper_fails(self):
+        self.add_legacy_base_index_erratum()
+        path = self.root / "NEXIA_EVENT_INDEX_V28.json"
+        path.write_bytes(path.read_bytes() + b" \\n")
+        self.assert_code("INDEX_HASH_MISMATCH")
+
     def test_read_only_audit_does_not_change_input_files(self):
         before = {p.relative_to(self.root): p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
         self.assertEqual(self.report()["status"], "PASS")
