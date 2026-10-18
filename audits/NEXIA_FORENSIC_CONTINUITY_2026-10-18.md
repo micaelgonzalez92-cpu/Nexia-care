@@ -87,3 +87,11 @@ LIMITACIONES DEL CONTROL NUEVO: no impide por sí mismo a otro chat omitirlo; no
 No se ha demostrado: pérdida de bytes Git; fallo de GitHub Actions del HEAD actual; compromiso de secretos; eliminación de clientes; ejecución accidental de publicaciones desde Canva o Drive; funcionamiento 24x7; restauración completa del estado local de Work.
 
 Resultado: REPARACIÓN TÉCNICA PARCIAL PREPARADA Y PERSISTIDA EN RAMA, NO SOLUCIÓN SISTÉMICA FINAL.
+
+## 8. Candidata de instrucciones Project UI (NO INSTALADA)
+
+- Archivo: NEXIA_PROJECT_INSTRUCTIONS_COMPACT_V5_CANDIDATE_2026-10-18.md.
+- Conteo de caracteres Unicode: 7692; límite de generación seguro 7800; baseline V4 verificada 7035.
+- Fuentes previas leídas: NEXIA_PROJECT_INSTRUCTION_CONTRACT.json, baseline V4, NEXIA_INSTRUCTION_EVOLUTION.md, evento de reconciliación MODEL-C de 2026-10-15 y último evento INSTRUCTIONS-004.
+- Cambio: añadir un gate explícito antideriva antes de /next o nueva tarea material; bloquear actuación sin lectura GitHub y verificación de conectores autorizados para Nexia; etiquetar PERSISTENCE_PENDING los resultados no guardados.
+- Estado: PREPARED_REPO_BRANCH_ONLY, NOT_INSTALLED. Instalación por Kael y validación en un chat nuevo obligatorias. El código y la instrucción se complementan; ninguno prueba por sí solo que cada sesión los obedecerá.
