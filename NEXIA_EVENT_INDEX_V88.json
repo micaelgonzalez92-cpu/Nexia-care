@@ -1,0 +1,25 @@
+{
+  "schema_version": 88,
+  "updated_at": "2026-10-19",
+  "mode": "COMPOSITE_INDEX_CHAIN",
+  "canonical_state_version": 73,
+  "canonical_state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "base_index": {
+    "path": "NEXIA_EVENT_INDEX_V87.json",
+    "verified_blob_sha": "2f73d26b981728219515d0c4e6c6aafb19d73a83"
+  },
+  "delta_events": [
+    {
+      "event_id": "EVT-2026-10-19-LOCAL-BACKUP-49-DOCUMENTARY-CLOSURE-001",
+      "path": "events/EVT-2026-10-19-LOCAL-BACKUP-49-DOCUMENTARY-CLOSURE-001.json",
+      "verified_blob_sha": "93439e8bd17b3bec3734d46c4ecc8df5c6115727"
+    }
+  ],
+  "latest_event_id": "EVT-2026-10-19-LOCAL-BACKUP-49-DOCUMENTARY-CLOSURE-001",
+  "latest_event_path": "events/EVT-2026-10-19-LOCAL-BACKUP-49-DOCUMENTARY-CLOSURE-001.json",
+  "latest_event_blob_sha": "93439e8bd17b3bec3734d46c4ecc8df5c6115727",
+  "latest_material_business_event_id": "EVT-2026-10-18-INSTAGRAM-V1-REPLACEMENT-VERIFIED-001",
+  "latest_material_system_event_id": "EVT-2026-10-19-LOCAL-BACKUP-49-DOCUMENTARY-CLOSURE-001",
+  "constitutional_model": "SYSTEM_EXCELLENCE_PLUS_EXTERNAL_REALITY",
+  "rule": "Document existing private backup closure only; preserve STATE v73, prior immutable events, economics and authority. Branch persistence and main promotion remain distinct."
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 84,
-  "boot_version": 142,
-  "generated_at": "2026-10-18",
+  "boot_version": 143,
+  "generated_at": "2026-10-19",
   "project": "NEXIA CORE",
   "canonical_state": "NEXIA_STATE.json",
   "state_version": 73,
@@ -15,6 +15,8 @@
     "NEXIA_BOOT.json",
     "NEXIA_STATE.json",
     "NEXIA_LIVE.json",
+    "NEXIA_EVENT_INDEX_V88.json",
+    "events/EVT-2026-10-19-LOCAL-BACKUP-49-DOCUMENTARY-CLOSURE-001.json",
     "NEXIA_EVENT_INDEX_V87.json",
     "events/EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001.json",
     "NEXIA_EVENT_INDEX_V86.json",
@@ -43,16 +45,16 @@
     "NEXIA_MASTER_BACKUP.md only when needed"
   ],
   "live_state": "NEXIA_LIVE.json",
-  "live_state_blob_sha": "365d4517176df2c54c6bb69eee8b4992f22ad84c",
+  "live_state_blob_sha": "e0be470929f13905886fc88d4b414c3dc1f8d6be",
   "live_state_status": "CONTROL_PLANE_V1_VERIFIED_PR14_MERGE_READBACK_LEGACY_HASH_ERRATA_CI_PASS",
   "event_storage": {
     "mode": "COMPOSITE_INDEX_CHAIN",
-    "active_index": "NEXIA_EVENT_INDEX_V87.json",
-    "active_index_blob_sha": "2f73d26b981728219515d0c4e6c6aafb19d73a83",
-    "latest_verified_event_id": "EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001",
-    "latest_verified_event_path": "events/EVT-2026-10-18-PR14-MAIN-MERGE-READBACK-001.json",
-    "latest_verified_event_blob_sha": "46c6929ad38f4d9c15c7cf1b8cfbbaabd61cade7",
-    "base_index": "NEXIA_EVENT_INDEX_V86.json"
+    "active_index": "NEXIA_EVENT_INDEX_V88.json",
+    "active_index_blob_sha": "337437ac8a071e4604c2f53274559b64d8e4c55a",
+    "latest_verified_event_id": "EVT-2026-10-19-LOCAL-BACKUP-49-DOCUMENTARY-CLOSURE-001",
+    "latest_verified_event_path": "events/EVT-2026-10-19-LOCAL-BACKUP-49-DOCUMENTARY-CLOSURE-001.json",
+    "latest_verified_event_blob_sha": "93439e8bd17b3bec3734d46c4ecc8df5c6115727",
+    "base_index": "NEXIA_EVENT_INDEX_V87.json"
   },
   "portfolio_strategy": {
     "status": "ACTIVE_BOUNDED_MAX_3_MATERIAL_LANES",
@@ -211,5 +213,13 @@
     "publication": false,
     "next_action": "STOP_STRESS_UNLESS_REAL_USE_CASE_REQUIRES_NEW_CAPABILITY",
     "truth_boundary": "Dedicated serialized synthetic test only; no unsserialized safety, shared-instance suitability, production readiness or commercial demand established. Four historical integrity warnings remain."
+  },
+  "private_backup_documentary_checkpoint": {
+    "event": "events/EVT-2026-10-19-LOCAL-BACKUP-49-DOCUMENTARY-CLOSURE-001.json",
+    "status": "49_PATHS_PRIVATE_BACKUP_DOCUMENTED_BRANCH_CANDIDATE",
+    "comfy_runtime_verified_by_this_checkpoint": false,
+    "full_installation_backup_verified": false,
+    "main_promotion": "PENDING_SPECIFIC_KAEL_AUTHORIZATION",
+    "cost_eur": 0
   }
 }
