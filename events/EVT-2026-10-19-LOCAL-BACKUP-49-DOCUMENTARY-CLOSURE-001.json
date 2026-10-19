@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "event_id": "EVT-2026-10-19-LOCAL-BACKUP-49-DOCUMENTARY-CLOSURE-001",
+  "timestamp": "2026-10-19T14:49:57.657469+00:00",
+  "type": "PRIVATE_LOCAL_BACKUP_CERTIFICATE_DOCUMENTARY_CHECKPOINT",
+  "evidence_label": "HECHO_VERIFICADO_BOUNDED",
+  "canonical_state_version": 73,
+  "state_blob_sha": "421e38c02f4e9be7dbb3449c92dc2e07c2e7b2d9",
+  "source_main_commit": "e6ecd44af92c653311819e81b045c7948184d9fb",
+  "verified_delta": {
+    "backup_status": "PROTECTED_PRIVATE_BACKUP_DOCUMENTED",
+    "file_paths_total": 49,
+    "count_scope": "User-requested documentary total; not a claim of unique byte contents.",
+    "evidence_basis": "Existing private certificates consulted; previous backup checks not repeated.",
+    "privacy_boundary": "Private evidence, identifiers, names, manifests, contents, sizes and backup/certificate hashes remain outside this public repository."
+  },
+  "pre_checkpoint_verification": {
+    "integrity": "PASS",
+    "errors": 0,
+    "warnings": 0,
+    "indexes_checked": 86,
+    "events_checked": 163,
+    "main_ci_run_id": 39116610118,
+    "main_ci_conclusion": "success",
+    "main_secret_scan_run_id": 39116610110,
+    "main_secret_scan_conclusion": "success"
+  },
+  "limits": [
+    "No ComfyUI execution, installation restore, model coverage, full installation copy or production readiness tested by this backup closure.",
+    "Historical runtime evidence in earlier events is preserved; this checkpoint grants no fresh runtime verification.",
+    "No private file contents, manifests, personal information, Drive access links or credentials copied into the public repository.",
+    "Candidate checkpoint CI and remote readback are separate postconditions; this event does not claim its own persistence or main promotion."
+  ],
+  "authority": {
+    "scope": "User-authorized documentary checkpoint via safe branch/PR; cost EUR0.",
+    "main_promotion": "REQUIRES_SEPARATE_SPECIFIC_KAEL_AUTHORIZATION_UNDER_CURRENT_CHECKPOINT_CONTRACT",
+    "authority_changed": false,
+    "external_business_publication_contact_spend_production_authorized": false
+  },
+  "financial_impact_eur": 0,
+  "economics_changed": false,
+  "next_action": "VERIFY_BRANCH_PR_CI_AND_REMOTE_READBACK; REQUEST_SPECIFIC_MAIN_PROMOTION_ONLY_AFTER_REVIEWABLE_RESULT"
+}
